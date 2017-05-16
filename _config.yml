@@ -32,3 +32,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+ github:
+   username: heykarthikwithu
+ disqus:
+   id: heykarthikwithu
