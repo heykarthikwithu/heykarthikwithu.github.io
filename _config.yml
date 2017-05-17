@@ -1,39 +1,18 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: "heykarthikwithu"
-email: "heykarthikwithu@gmail.com"
-description: > # this means to ignore newlines until "baseurl:"
-  "Techie guy, Interested at programming,
-  Java, Php my working world speaking languages.
-  Interested in open source. Currently working on Drupal."
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://heykarthikwithu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: "heykarthikwithu"
-github_username: "heykarthikwithu"
-
-# Build settings
-markdown: "kramdown"
-theme: "minima"
+title: git-wiki-demo
+description: This is a demo of git-wiki theme for jekyll
+show_downloads: true
+comments: true
+logo_url: https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png
+google_analytics:
+git_branch: gh-pages
+theme: 
+use_github_wiki: false
+use_prose_io: true
+google_cse_token: 007197903287787072094:8rbvkeqo6qw
+custom_sidebar: true
 gems:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
-
- github:
-   username: "heykarthikwithu"
- disqus:
-   id: "heykarthikwithu"
