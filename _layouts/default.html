@@ -71,27 +71,27 @@
         <span class="tools-element"><a target="_blank" href="https://www.youtube.com/c/karthikkumardk">Youtube Channel</a></span>
         <span class="tools-element"><a target="_blank" href="https://www.paypal.me/heykarthikwithu">Paypal</a></span>
 
-        <!--{% if site.google_cse_token %}-->
-          <!--<script>-->
-          <!--(function() {-->
-            <!--var cx = "{{site.google_cse_token}}";-->
-            <!--var gcse = document.createElement('script');-->
-            <!--gcse.type = 'text/javascript';-->
-            <!--gcse.async = true;-->
-            <!--gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;-->
-            <!--var s = document.getElementsByTagName('script')[0];-->
-            <!--s.parentNode.insertBefore(gcse, s);-->
-          <!--})();-->
-          <!--</script>-->
-          <!--<gcse:search></gcse:search>-->
-        <!--{% else %}-->
-          <!--<form method="GET" action="{{ site.github.repository_url }}/search">-->
-            <!--{% if site.use_github_wiki %}-->
-              <!--<input type="hidden" name="type" value="Wikis">-->
-            <!--{% endif %}-->
-            <!--<input type="text" name="q" placeholder="Text to search"><input type="submit" value="Search">-->
-          <!--</form>-->
-        <!--{% endif %}-->
+        {% if site.google_cse_token %}
+          <script>
+          (function() {
+            var cx = "{{site.google_cse_token}}";
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+          </script>
+          <gcse:search></gcse:search>
+        {% else %}
+          <form method="GET" action="{{ site.github.repository_url }}/search">
+            {% if site.use_github_wiki %}
+              <input type="hidden" name="type" value="Wikis">
+            {% endif %}
+            <input type="text" name="q" placeholder="Text to search"><input type="submit" value="Search">
+          </form>
+        {% endif %}
       </div>
         
 
