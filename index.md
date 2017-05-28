@@ -1,4 +1,4 @@
-# Welcome to git-wiki demo
+# I'm Karthik Kumar D K
 
 This is a [demo](wiki/Demo.md) of git-wiki theme for jekyll.
 
