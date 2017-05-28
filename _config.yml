@@ -10,6 +10,7 @@ use_github_wiki: false
 use_prose_io: true
 google_cse_token:
 custom_sidebar: true
+custom_footer: true
 gems:
   - jekyll-sitemap
   - jekyll-mentions
