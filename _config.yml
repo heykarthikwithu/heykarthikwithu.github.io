@@ -18,4 +18,3 @@ gems:
   - jemoji
   - jekyll-redirect-from
   - jekyll-feed
-plugins: ['jsonball']
