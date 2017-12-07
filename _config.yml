@@ -18,3 +18,6 @@ gems:
   - jemoji
   - jekyll-redirect-from
   - jekyll-feed
+jekyll_get:
+  data: team
+  json: 'https://18f.gsa.gov/hub/api/team/'
