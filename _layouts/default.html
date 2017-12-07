@@ -5,26 +5,13 @@
     {% capture url %}{% if lchar == "/" %}{{page.url}}index.html{% else %}{{ page.url | default: 'index.html' }}{% endif %}{% endcapture %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title | default: site.github.repository_name }}, Techie guy</title>
+    <title>{{ site.title | default: site.github.repository_name }} | Karthik Kumar D K | Drupal | Techie guy</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     {% if site.custom_head %}
         {% include head.html %}
     {% endif %}
-
-    <meta charset="utf-8">
-    <meta name="title" content="heykarthikwithu | Karthik Kumar D K | Drupal">
-    <link rel="canonical" href="https://heykarthikwithu.github.io/">
-    <link rel="shortlink" href="https://heykarthikwithu.github.io/">
-    <meta name="Generator" content="Jekyll">
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
     <div class="wrapper">
