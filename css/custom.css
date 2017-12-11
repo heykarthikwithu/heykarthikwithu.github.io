@@ -9,6 +9,20 @@ html, body {
     font-weight: 400;
 }
 
+.logo h1 {
+    font-size: 36px;
+}
+.logo form {
+    margin-top: 45px;
+}
+.logo form .form-group > input {
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+}
+
 /* common style's */
 a {
   color: #7447ae;
