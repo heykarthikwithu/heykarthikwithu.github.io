@@ -84,8 +84,10 @@ Software programmer / Drupal Developer having experience in web applications dev
                   <!-- Tab panes -->
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="blogs">
-                      <div>
-                        <div id="filter-records"></div>
+                      <!--<div>-->
+                        <div class="row">
+                            <div id="filter-records"></div>
+                        </div>
                         <script>
                           window.onload = search;
                           function search() {
@@ -97,28 +99,22 @@ Software programmer / Drupal Developer having experience in web applications dev
                                       return;
                                   }
                                   var regex = new RegExp(searchField, "i");
-                                  var output = '';
-                                  var count = 1;
+                                  var output = '<div class="col-md-12">';
                                   $.each(data, function(key, val){
                                       if (val.title.search(regex) != -1) {
-                                          output += '<div class="row">';
-                                          output += '<div class="col-md-6">';
                                           output += '<div class="ticketBox" data-ticket-price="50000">';
                                           output += '<div class="ticket-description">';
-                                          output += '<h5>' + val.title + '</h5>';
                                           output += '<p><strong>' + val.created + '</strong><br>' + val.title + '</p>';
-                                          output += '</div>';
-                                          output += '</div>';
                                           output += '</div>';
                                           output += '</div>';
                                       }
                                   });
-//                                  output += '</div>';
-                                  $('#filter-records').html(output);
+                                  output += '</div>';
+                                  $('#filter-records').innerHTML = output;
                               });
                           }
                         </script>
-                      </div>
+                      <!--</div>-->
 
                     	<div class="row">
                         	<div class="col-md-6">
@@ -127,7 +123,7 @@ Software programmer / Drupal Developer having experience in web applications dev
                                     <div class="ticket-description">
                                     	<p><strong>Please refer Venue Plan:</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                                     </div>
-                                            
+
                                 </div>
                             </div>
                         </div>
