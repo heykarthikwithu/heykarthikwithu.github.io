@@ -97,20 +97,23 @@ Software programmer / Drupal Developer having experience in web applications dev
                                       return;
                                   }
                                   var regex = new RegExp(searchField, "i");
-                                  var output = '<div>';
+                                  var output = '';
                                   var count = 1;
                                   $.each(data, function(key, val){
                                       if (val.title.search(regex) != -1) {
-                                          output += '<div class="">';
+                                          output += '<div class="row">';
+                                          output += '<div class="col-md-6">';
+                                          output += '<div class="ticketBox" data-ticket-price="50000">';
+                                          output += '<div class="ticket-description">';
                                           output += '<h5>' + val.title + '</h5>';
+                                          output += '<p><strong>' + val.created + '</strong><br>' + val.title + '</p>';
                                           output += '</div>';
-//                                          if(count%2 == 0){
-//                                              output += '</div><div class="">'
-//                                          }
-//                                          count++;
+                                          output += '</div>';
+                                          output += '</div>';
+                                          output += '</div>';
                                       }
                                   });
-                                  output += '</div>';
+//                                  output += '</div>';
                                   $('#filter-records').html(output);
                               });
                           }
@@ -121,39 +124,6 @@ Software programmer / Drupal Developer having experience in web applications dev
                         	<div class="col-md-6">
                             	<div class="ticketBox" data-ticket-price="50000">
                                 	<div class="inactiveStatus"></div>
-                                    
-                                    <!--<div class="row">-->
- 			                       	<!--<div class="col-xs-6">-->
-            							<!--<div class="ticket-name">-->
-                                        	<!--Platinum-->
-                                            <!--<span>Standing<br>-->
-                                        	<!--1 Ticket for 1 person</span>-->
-                                        <!--</div>-->
-            						<!--</div>-->
-                                    <!---->
-                                    <!--<div class="col-xs-6">-->
-            							<!--<div class="ticket-price-count-box">-->
-                                            <!--<div class="ticket-control">-->
-                                                <!--<div class="input-group">-->
-                                                  <!--<span class="input-group-btn">-->
-                                                      <!--<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">-->
-                                                          <!--<span class="glyphicon glyphicon-minus"></span>-->
-                                                      <!--</button>-->
-                                                  <!--</span>-->
-                                                  <!--<input type="text" name="quant[1]" class="form-control input-number" value="0" min="0" max="10">-->
-                                                  <!--<span class="input-group-btn">-->
-                                                      <!--<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">-->
-                                                          <!--<span class="glyphicon glyphicon-plus"></span>-->
-                                                      <!--</button>-->
-                                                  <!--</span>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                            <!--<p class="price">Rs.50000</p>-->
-                                        <!--</div>-->
-            						<!--</div>-->
-                                    <!--</div>-->
-                                	
-                                    
                                     <div class="ticket-description">
                                     	<p><strong>Please refer Venue Plan:</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                                     </div>
@@ -161,6 +131,7 @@ Software programmer / Drupal Developer having experience in web applications dev
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="about-me">
                     	<!--<h4> Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit,<br> sed do eiusmod<br> Pune 411058</h4><br>-->
