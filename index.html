@@ -80,7 +80,7 @@ Software programmer / Drupal Developer having experience in web applications dev
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="blogs">
                       <div>
-                          <div class="container" style="padding:50px 250px;">
+                          <div>
                               <form role="form">
                                   <div class="form-group">
                                       <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search character">
@@ -105,14 +105,14 @@ Software programmer / Drupal Developer having experience in web applications dev
                                   var output = '<div class="row">';
                                   var count = 1;
                                   $.each(data, function(key, val){
-                                      if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
-                                          output += '<div class="col-md-6 well">';
-                                          output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
-                                          output += '<div class="col-md-7">';
-                                          output += '<h5>' + val.employee_name + '</h5>';
-                                          output += '<p>' + val.employee_salary + '</p>'
+                                      if (val.title.search(regex) != -1) {
+                                          output += '<div class="">';
+//                                          output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
+//                                          output += '<div class="col-md-7">';
+                                          output += '<h5>' + val.title + '</h5>';
+//                                          output += '<p>' + val.employee_salary + '</p>'
                                           output += '</div>';
-                                          output += '</div>';
+//                                          output += '</div>';
                                           if(count%2 == 0){
                                               output += '</div><div class="row">'
                                           }
