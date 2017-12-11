@@ -51,8 +51,13 @@ Software programmer / Drupal Developer having experience in web applications dev
             	<div class="event-banner-wrapper">
                 	<div class="logo">
                         <h1>heykarthikwithu</h1>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search character">
+                            </div>
+                        </form>
                     </div>
-                
+
                 	<h2>
                     Karthik Kumar D K
                     <span>Software Professional</span>
@@ -80,16 +85,7 @@ Software programmer / Drupal Developer having experience in web applications dev
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="blogs">
                       <div>
-                          <div>
-                              <form role="form">
-                                  <div class="form-group">
-                                      <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search character">
-                                  </div>
-                              </form>
-                              <div id="filter-records"></div>
-                          </div>
-                        <!--<input class="form-control" type="text" id="tv_search" />-->
-                        <!--<div id="t"></div>-->
+                        <div id="filter-records"></div>
                         <script>
                           window.onload = search;
                           function search() {
@@ -100,50 +96,26 @@ Software programmer / Drupal Developer having experience in web applications dev
                                       $('#filter-records').html('');
                                       return;
                                   }
-
                                   var regex = new RegExp(searchField, "i");
                                   var output = '<div>';
                                   var count = 1;
                                   $.each(data, function(key, val){
                                       if (val.title.search(regex) != -1) {
                                           output += '<div class="">';
-//                                          output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
-//                                          output += '<div class="col-md-7">';
                                           output += '<h5>' + val.title + '</h5>';
-//                                          output += '<p>' + val.employee_salary + '</p>'
                                           output += '</div>';
-//                                          output += '</div>';
-                                          if(count%2 == 0){
-                                              output += '</div><div class="row">'
-                                          }
-                                          count++;
+//                                          if(count%2 == 0){
+//                                              output += '</div><div class="">'
+//                                          }
+//                                          count++;
                                       }
                                   });
                                   output += '</div>';
                                   $('#filter-records').html(output);
                               });
-//                            document.getElementById('t').innerHTML = 'Search here';
-//                            $('#tv_search').on('keyup', function() {
-//                              clearTimeout($(this).data('timer'));
-//                              var search = this.value;
-//                              if (search.length >= 3) {
-//                                $(this).data('timer', setTimeout(function() {
-//                                  $.ajax({
-//                                    type: "GET",
-//                                    url: "https://heykarthikwithu.github.io/data.json",
-//                                    data: {
-//                                      keys: 'karthik kumar'
-//                                    }
-//                                  }).done(function(msg) {
-//                                    alert(msg);
-//                                  });
-//                                }, 1000));
-//                              }
-//                            });
                           }
                         </script>
                       </div>
-
 
                     	<div class="row">
                         	<div class="col-md-6">
