@@ -80,29 +80,95 @@ Software programmer / Drupal Developer having experience in web applications dev
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="blogs">
                       <div>
-                        <input class="form-control" type="text" id="tv_search" />
-                        <div id="t"></div>
+                          <div class="container" style="padding:50px 250px;">
+                              <form role="form">
+                                  <div class="form-group">
+                                      <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search character">
+                                  </div>
+                              </form>
+                              <div id="filter-records"></div>
+                          </div>
+                        <!--<input class="form-control" type="text" id="tv_search" />-->
+                        <!--<div id="t"></div>-->
                         <script>
                           window.onload = search;
                           function search() {
-                            document.getElementById('t').innerHTML = 'Search here';
-                            $('#tv_search').on('keyup', function() {
-                              clearTimeout($(this).data('timer'));
-                              var search = this.value;
-                              if (search.length >= 3) {
-                                $(this).data('timer', setTimeout(function() {
-                                  $.ajax({
-                                    type: "GET",
-                                    url: "https://heykarthikwithu.github.io/data.json",
-                                    data: {
-                                      keys: search
-                                    }
-                                  }).done(function(msg) {
-                                    $('#t').html(msg);
+                              var data = [
+                                  {
+                                      "id":"1",
+                                      "employee_name":"Tiger Nixon",
+                                      "employee_salary":"320800",
+                                      "employee_age":"61",
+                                      "profile_image":"default_profile.png"
+                                  },
+                                  {
+                                      "id":"2",
+                                      "employee_name":"Garrett Winters",
+                                      "employee_salary":"434343",
+                                      "employee_age":"63",
+                                      "profile_image":"default_profile.png"
+                                  },
+                                  {
+                                      "id":"3",
+                                      "employee_name":"Ashton Cox",
+                                      "employee_salary":"86000",
+                                      "employee_age":"66",
+                                      "profile_image":"default_profile.png"
+                                  },
+                                  {
+                                      "id":"4",
+                                      "employee_name":"Cedric Kelly",
+                                      "employee_salary":"433060",
+                                      "employee_age":"22",
+                                      "profile_image":"default_profile.png"
+                                  }
+                              ];
+                              $('#txt-search').keyup(function(){
+                                  var searchField = $(this).val();
+                                  if(searchField === '')  {
+                                      $('#filter-records').html('');
+                                      return;
+                                  }
+
+                                  var regex = new RegExp(searchField, "i");
+                                  var output = '<div class="row">';
+                                  var count = 1;
+                                  $.each(data, function(key, val){
+                                      if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+                                          output += '<div class="col-md-6 well">';
+                                          output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
+                                          output += '<div class="col-md-7">';
+                                          output += '<h5>' + val.employee_name + '</h5>';
+                                          output += '<p>' + val.employee_salary + '</p>'
+                                          output += '</div>';
+                                          output += '</div>';
+                                          if(count%2 == 0){
+                                              output += '</div><div class="row">'
+                                          }
+                                          count++;
+                                      }
                                   });
-                                }, 1000));
-                              }
-                            });
+                                  output += '</div>';
+                                  $('#filter-records').html(output);
+                              });
+//                            document.getElementById('t').innerHTML = 'Search here';
+//                            $('#tv_search').on('keyup', function() {
+//                              clearTimeout($(this).data('timer'));
+//                              var search = this.value;
+//                              if (search.length >= 3) {
+//                                $(this).data('timer', setTimeout(function() {
+//                                  $.ajax({
+//                                    type: "GET",
+//                                    url: "https://heykarthikwithu.github.io/data.json",
+//                                    data: {
+//                                      keys: 'karthik kumar'
+//                                    }
+//                                  }).done(function(msg) {
+//                                    alert(msg);
+//                                  });
+//                                }, 1000));
+//                              }
+//                            });
                           }
                         </script>
                       </div>
