@@ -9,6 +9,14 @@ html, body {
     font-weight: 400;
 }
 
+body {
+    background-image: url(../images/wall1.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+}
+
 .logo h1 {
     font-size: 36px;
 }
