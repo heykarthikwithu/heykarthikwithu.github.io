@@ -26,10 +26,6 @@ Software programmer / Drupal Developer having experience in web applications dev
       });
       $('#search').keyup(function(){
         var searchField = $(this).val();
-        if(searchField === '')  {
-          $('#filter-records').html('');
-          return;
-        }
         var regex = new RegExp(searchField, "i");
         var output = '';
         $.each(search_data, function(key, val){
