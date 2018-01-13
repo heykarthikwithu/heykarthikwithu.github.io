@@ -10,10 +10,10 @@ gems: [jekyll-paginate]
 permalink:        /blog/:year/:month/:day/:title
 
 # Setup
-title:            'Jekyll Metro'
-tagline:          'A Metro theme for Jekyll'
-description:      'A Sample blog using Jekyll Metro'
-url:              'http://192.168.1.11:4000'
+title:            'heykarthikwithu'
+tagline:          'Drupal Expert | Techie Guy'
+description:      ''
+url:              ''
 baseurl:          ''
 
 # Navigation
@@ -33,33 +33,33 @@ navigation:
 
 
 # Author Details
-author:         'Abdel Raoof Olakara'
+author:         'Karthik Kumar D K'
 
 #Social Media links (Use complete URL except for email)
 dribbble:
-email:
-facebook:       'https://www.facebook.com/olakara'
+email:          'heykarthikwithu@gmail.com'
+facebook:       'https://www.facebook.com/karthikkumardk'
 flickr:
-github:         'https://github.com/olakara'
-gplus:          'https://plus.google.com/100425464897246255887/'
-instagram:
+github:         'https://github.com/heykarthikwithu'
+gplus:          'https://plus.google.com/+KarthikKumarDK'
+instagram:      'https://www.instagram.com/heykarthikwithu/'
 pinterest:
-linkedin:       'https://ae.linkedin.com/in/olakara/'
+linkedin:       'https://in.linkedin.com/in/karthikkumardk'
 rss:
-stackoverflow:  'http://stackoverflow.com/users/185655/abdel-raoof'
-twitter:        'https://twitter.com/olakara'
+stackoverflow:  'https://drupal.stackexchange.com/users/36960/heykarthikwithu'
+twitter:        'https://twitter.com/heykarthikwithu'
 
 # Google Analytics
-gahandler: 'UA-52149651-1'
+gahandler: ''
 
 #if footersvg is 'true' the social media links will be shown top on the copy right in the footer
 footersvg: 'true'
 
 # Disqus
-disqushandler: 'testingblogo'
+disqushandler: ''
 
 # txtpen
-txtpenhandler: 'testingblogo'
+txtpenhandler: ''
 
 # Blog Configurations
 paginate: 10 # Posts per page on the blog index
