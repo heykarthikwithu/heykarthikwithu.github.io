@@ -5,35 +5,45 @@ description: Search for Jekyll Metro
 ---
 <form class="searh-form" role="form">
 <div id="search-form">
-	<input class="search form-control" name="q" placeholder="Search..." type="text">
+  <input type="text" class="search form-control" id="search" placeholder="Search...">
 </div>
 </form>
-<div class="search-message"></div>
-<div id="results">
-  <h2 class="results-title"></h2>
-  <ul class="results-list"></ul>
-</div>
+<div class="row" id="search-results"></div>
+
 <script>
-$(document).ready(function() {
-    var qry = GetURLParameter('q');
-		var data = [{% for post in site.posts %}{
-		"title"    : "{{ post.title | escape }}",
-		"category" : "{{ post.category }}",
-		"tags"	   : "{{post.tags | array_to_sentence_string}}",
-		"url"      : "{{ post.url }}",
-		"date"     : "{{ post.date | date: "%B %d, %Y" }}"}{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
-
-    var x = $(".search").jekyllSearch({
-			      jsonData            : null,
-            template            : '<li><h4><a href="{url}" title="{title}">{title}</a></h4>Posted on {date}<br>Tags: {tags} </li>',
-            searchResults       : '#results',
-            searchResultsTitle  : '<h3>Search Results</h3>',
-            limit               : '10',
-            noResults           : '<h3>Your search did not match any documents.</h3>Suggestions:<ul><li>Make sure that all words are spelled correctly.</li><li>Try different keywords.</li><li>Try more general keywords.</li><li>Try fewer keywords.</li></ul>'
-     });
-
-     if(qry) {
-			$(".search").val(qry).trigger('keyup').focus();
-     }
-});
+  window.onload = search;
+  function search() {
+    $.getJSON( "data.json", function( data ) {
+      var default_output = '';
+      $.each( data.items, function( key, val ) {
+        default_output += '' +
+          '<div class="item col-md-4 col-sm-6 col-xs-12">' +
+          '<div class="title">' + val.title + '</div>' +
+          '<div class="created">' + val.created + '</div>' +
+          '<div class="view">' + val.view_node + '</div>' +
+          '</div>';
+      });
+      $('#search-results').html(default_output);
+    });
+    var search_data = '';
+    $.getJSON( "data.json", function( data ) {
+      search_data = data.items;
+    });
+    $('#search').keyup(function(){
+      var searchField = $(this).val();
+      var regex = new RegExp(searchField, "i");
+      var output = '';
+      $.each(search_data, function(key, val){
+        if (val.title.search(regex) != -1) {
+          output += '' +
+            '<div class="item col-md-4 col-sm-6 col-xs-12">' +
+            '<div class="title">' + val.title + '</div>' +
+            '<div class="created">' + val.created + '</div>' +
+            '<div class="view">' + val.view_node + '</div>' +
+            '</div>';
+        }
+      });
+      $('#search-results').html(output);
+    });
+  }
 </script>
