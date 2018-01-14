@@ -22,12 +22,12 @@ navigation:
   url: /about/
 - text: Resume
   url: /resume/
-- text: Blog
-  url: /blog/
-- text: Tags
-  url: /tags/
-- text: Archive
-  url : /archive/
+#- text: Blog
+#  url: /blog/
+#- text: Tags
+#  url: /tags/
+#- text: Archive
+#  url : /archive/
 - text: Search
   url: /search/
 
