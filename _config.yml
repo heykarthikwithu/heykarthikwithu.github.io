@@ -12,8 +12,8 @@ permalink:        /blog/:year/:month/:day/:title
 # Setup
 title:            'heykarthikwithu'
 tagline:          'Drupal Expert | Techie Guy'
-description:      ''
-url:              ''
+description:      'Techie guy, Interested at programming, Java, Php my working world speaking languages. Interested in open source. Currently working on Drupal. Software programmer / Drupal Developer having experience in web applications development, implementation and having strong knowledge of technical specifications, workflow development and deploying.'
+url:              'https://heykarthikwithu.github.io'
 baseurl:          ''
 
 # Navigation
@@ -68,3 +68,6 @@ destination: ./_site
 
 # Custom vars
 version:          0.9x beta 2
+
+#gems:
+#  - jekyll-seo-tag
