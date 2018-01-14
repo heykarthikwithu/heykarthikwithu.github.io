@@ -50,7 +50,7 @@ stackoverflow:  'https://drupal.stackexchange.com/users/36960/heykarthikwithu'
 twitter:        'https://twitter.com/heykarthikwithu'
 
 # Google Analytics
-gahandler: ''
+gahandler: 'UA-93645678-2'
 
 #if footersvg is 'true' the social media links will be shown top on the copy right in the footer
 footersvg: 'true'
