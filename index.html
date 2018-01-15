@@ -15,14 +15,14 @@ description: Home Page for Jekyll Metro Theme
 		<div class="row">
  			<div class="col-md-6 col-sm-6 col-xs-12">
 				<a href="about/" title="About Me">
-					<div class="tile purple profile">
+					<div class="tile orange profile">
 						<h2 class="title">About Me</h2>
 						<p>Hello World, I am {{site.author}}.</p>
 					</div>
 				</a>
 		  </div>
 			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="resume/" title="Resume" class="tile red">
+				<a href="resume/" title="Resume" class="tile yellow">
 					<i class="icon-rems" style="font-size:8em"></i>
 				</a>
 			</div>
@@ -37,8 +37,13 @@ description: Home Page for Jekyll Metro Theme
 				<!--</a>-->
 			<!--</div>-->
       <div class="col-md-2 col-sm-3 col-xs-6">
-        <a href="{{site.stackoverflow}}" title="StackOverflow" class="tile darken" >
-          <i class="icon-skow" style="font-size:8em;color:white"></i>
+        <a href="{{site.paypal}}" title="Paypal" class="tile drk-green" target="_blank" style="background: url(https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png) white no-repeat center center/contain;">
+          <i class="icon-paypal" style="font-size:8em"></i>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-6">
+        <a href="{{site.drupal}}" title="Drupal" class="tile blue"  target="_blank" style="background: url({{site.url}}/assets/images/karthik-drupal.png) white no-repeat center center/contain;">
+          <i class="icon-drupal" style="font-size:8em;color:white"></i>
         </a>
       </div>
 		</div>
@@ -90,7 +95,7 @@ description: Home Page for Jekyll Metro Theme
 					<!--{% endif %}-->
 				<!--{% endfor %}-->
 			<!--</div>-->
-      <div class="col-md-10 col-sm-10 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
         <a href="search/" title="Search">
           <div class="tile green search">
             <h2 class="title">Search</h2>
@@ -102,36 +107,44 @@ description: Home Page for Jekyll Metro Theme
 		<div class="row" style="margin-bottom:25px">
 
 			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.twitter}}" title="Twitter" class="tile blue">
+				<a href="{{site.twitter}}" title="Twitter" class="tile blue" target="_blank">
 					<i class="icon-twtr" style="font-size:8em"></i>
 				</a>
 			</div>
 
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.gplus}}" title="Google Plus"  class="tile orange">
-					<i class="icon-gpls" style="font-size:8em"></i>
-				</a>
-			</div>
+			<!--<div class="col-md-2 col-sm-3 col-xs-6">-->
+				<!--<a href="{{site.gplus}}" title="Google Plus"  class="tile orange">-->
+					<!--<i class="icon-gpls" style="font-size:8em"></i>-->
+				<!--</a>-->
+			<!--</div>-->
 
 			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.facebook}}" class="tile blue">
+				<a href="{{site.facebook}}" class="tile drk-blue" target="_blank">
 					<i class="icon-fcbk" style="font-size:8em"></i>
 				</a>
 			</div>
 
 			<div class="col-md-2 col-sm-3 col-xs-6">
-
-				<a href="{{site.github}}" title="Github" class="tile purple">
-					<i class="icon-gthb" style="font-size:8em"></i>
-				</a>
-
-			</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.linkedin}}" title="LinkedIn" class="tile blue">
+				<a href="{{site.linkedin}}" title="LinkedIn" class="tile blue" target="_blank">
 					<i class="icon-lkin" style="font-size:8em"></i>
 				</a>
 			</div>
+      <div class="col-md-2 col-sm-3 col-xs-6">
+        <a href="{{site.github}}" title="Github" class="tile darken" target="_blank">
+          <i class="icon-gthb" style="font-size:8em"></i>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-6">
+        <a href="{{site.stackoverflow}}" title="StackOverflow" class="tile darken"  target="_blank">
+          <i class="icon-skow" style="font-size:8em;color:white"></i>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-6">
+        <a href="{{site.personal}}" title="Personal website" class="tile accent" target="_blank"
+           style="background: url({{site.url}}/assets/images/personal-website-heykarthkwithu.png) white no-repeat center center/contain;">
+          <i class="icon-personal" style="font-size:8em"></i>
+        </a>
+      </div>
 		</div>
 	</nav>
 </div>
