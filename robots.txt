@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /index.html
-Allow: /about
-Allow: /resume
-Allow: /search
