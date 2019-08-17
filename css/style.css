@@ -219,12 +219,12 @@ ol {
 }
 
 .accordion-area .panel-header.active .panel-link:after {
-  content: "-";
+  content: "";
   color: #000;
 }
 
 .accordion-area .panel-header.active .panel-link.collapsed:after {
-  content: "+";
+  content: "";
 }
 
 .accordion-area .panel-link {
@@ -232,7 +232,7 @@ ol {
   right: 0;
   top: 0;
   height: 100%;
-  width: 50px;
+  width: 100%;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -249,7 +249,7 @@ ol {
 }
 
 .accordion-area .panel-link:after {
-  content: "+";
+  content: "";
   position: absolute;
   left: 50%;
   font-size: 16px;
