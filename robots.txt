@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Allow: /about
 Allow: /contact
-Sitemap: https://heykarthikwithu.github.io/sitemap.xml
+Sitemap: https://karthikkumardk.co.in/sitemap.xml
