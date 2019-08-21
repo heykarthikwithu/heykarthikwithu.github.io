@@ -754,3 +754,25 @@ ol {
     font-size: 30px;
   }
 }
+
+.blog-content h2 {
+  font-size: 24px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+.blog-content h2:hover {
+  display: block;
+  overflow: visible;
+  white-space: normal;
+}
+.blog-content p {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
