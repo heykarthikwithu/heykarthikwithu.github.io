@@ -1,0 +1,7 @@
+<script>
+    window.onload = function() {
+        var getUrl = window.location;
+        var blogUrl = "http://dev-karthikkumardk.pantheonsite.io/" + getUrl.pathname.split('/')[1] +"/"+ getUrl.pathname.split('/')[2];
+        window.location.href = blogUrl;
+    }
+</script>
