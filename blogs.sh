@@ -49,6 +49,6 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     <loc>https://karthikkumardk.co.in$(_jq '.view_node')</loc>
     <lastmod>$(date +"%Y-%m-%d-")</lastmod>
     <changefreq>daily</changefreq>
-    <priority>.5</priority>
+    <priority>0.9</priority>
   </url>"
 done
