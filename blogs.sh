@@ -12,3 +12,24 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     }
 </script>" > $(echo $(_jq '.view_node').html | cut -c 2-)
 done
+
+echo "Robots.txt"
+for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
+    _jq() {
+     echo ${row} | base64 --decode | jq -r ${1}
+    }
+    echo "Allow: "$(_jq '.view_node')
+done
+
+echo "Sitemap.xml"
+for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
+    _jq() {
+     echo ${row} | base64 --decode | jq -r ${1}
+    }
+    echo "  <url>
+    <loc>https://karthikkumardk.co.in$(_jq '.view_node')</loc>
+    <lastmod>$(date +"%Y-%m-%d-")</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>.5</priority>
+  </url>"
+done
