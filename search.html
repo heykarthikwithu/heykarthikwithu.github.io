@@ -100,6 +100,7 @@ Hey KarthiK,
                         <input type="text" class="search form-control" id="search" placeholder="Search...">
                     </div>
                 </form>
+                <br>
                 <div class="row" id="search-results"></div>
                 <script>
                     window.onload = search;
@@ -108,10 +109,15 @@ Hey KarthiK,
                             var default_output = '';
                             $.each( data.items, function( key, val ) {
                                 default_output += '' +
-                                    '<div class="item col-md-4 col-sm-6 col-xs-12">' +
-                                    '<div class="title">' + val.title + '</div>' +
-                                    '<div class="created">' + val.created + '</div>' +
-                                    '<div class="view">' + val.view_node + '</div>' +
+                                    '<div class="col-md-6">' +
+                                    '<div class="blog-item">' +
+                                    '<article class="blog-content">' +
+                                    '<h2>' + val.title + '</h2>' +
+                                    '<div class="blog-meta">' + val.created + '</div>' +
+                                    '<p>' + val.field_search_description + '</p>' +
+                                    '<a href="' + val.view_node + '" class="read-more" target="_blank">Read More</a>' +
+                                    '</article>' +
+                                    '</div>' +
                                     '</div>';
                             });
                             $('#search-results').html(default_output);
@@ -127,10 +133,15 @@ Hey KarthiK,
                             $.each(search_data, function(key, val){
                                 if (val.title.search(regex) != -1) {
                                     output += '' +
-                                        '<div class="item col-md-4 col-sm-6 col-xs-12">' +
-                                        '<div class="title">' + val.title + '</div>' +
-                                        '<div class="created">' + val.created + '</div>' +
-                                        '<div class="view">' + val.view_node + '</div>' +
+                                        '<div class="col-md-6">' +
+                                        '<div class="blog-item">' +
+                                        '<article class="blog-content">' +
+                                        '<h2>' + val.title + '</h2>' +
+                                        '<div class="blog-meta">' + val.created + '</div>' +
+                                        '<p>' + val.field_search_description + '</p>' +
+                                        '<a href="' + val.view_node + '" class="read-more" target="_blank">Read More</a>' +
+                                        '</article>' +
+                                        '</div>' +
                                         '</div>';
                                 }
                             });
