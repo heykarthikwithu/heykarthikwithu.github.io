@@ -16,13 +16,22 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<meta property='og:title' content='$(_jq '.title') | KarthiK | Bangalore' />
 	<meta property='og:description' content='$(_jq '.field_search_description')' />
 	<meta property='og:url' content='https://karthikkumardk.co.in/$(_jq '.view_node')' />
-   <script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-93645678-2');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = \"http://dev-karthikkumardk.pantheonsite.io/\" + getUrl.pathname.split('/')[1] +\"/\"+ getUrl.pathname.split('/')[2];
         window.location.href = blogUrl;
     }
-</script>
+  </script>
 </head>
 <body>
 <!-- Page Preloder -->
