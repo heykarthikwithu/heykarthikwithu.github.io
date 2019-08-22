@@ -70,7 +70,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     <div class='blog-item'>
       <article class='blog-content'>
         <h2>$(_jq '.title')</h2>
-        <div class='blog-meta'>$(date +"%Y-%m-%d")</div>
+        <div class='blog-meta'>$(_jq '.created')</div>
         <p>$(_jq '.field_search_description')</p>
         <a href='$(_jq '.view_node')' class='read-more' target='_blank'>Read More</a>
       </article>
