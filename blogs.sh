@@ -56,8 +56,24 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     }
     echo "  <url>
     <loc>https://karthikkumardk.co.in$(_jq '.view_node')</loc>
-    <lastmod>$(date +"%Y-%m-%d-")</lastmod>
+    <lastmod>$(date +"%Y-%m-%d")</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>"
+done
+
+for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
+    _jq() {
+     echo ${row} | base64 --decode | jq -r ${1}
+    }
+    echo "  <div class='col-md-6'>
+    <div class='blog-item'>
+      <article class='blog-content'>
+        <h2>$(_jq '.title')</h2>
+        <div class='blog-meta'>$(date +"%Y-%m-%d")</div>
+        <p>$(_jq '.field_search_description')</p>
+        <a href='$(_jq '.view_node')' class='read-more' target='_blank'>Read More</a>
+      </article>
+    </div>
+  </div>"
 done

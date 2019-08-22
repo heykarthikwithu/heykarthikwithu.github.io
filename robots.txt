@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /about
+Allow: /search
 Allow: /contact
 Allow: /blog/modules-can-now-declare-their-drupal-8-upgrade-status
 Allow: /blog/store-drupal-logs-amazon-s3
