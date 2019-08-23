@@ -8,7 +8,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 <html lang='en'>
 <head>
 	<meta charset='UTF-8'>
-	<title>$(_jq '.title') | KarthiK | Bangalore</title>
+	<title>$(_jq '.title') from KarthiK, Bangalore</title>
 	<meta name='description' content='$(_jq '.field_search_description')'>
 	<link rel='canonical' href='https://karthikkumardk.co.in/$(_jq '.view_node')' />
 	<meta name='robots' content='index, follow'>
@@ -38,6 +38,10 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<div id='preloder'>
 		<div class='loader'></div>
 	</div>
+	<h1>$(_jq '.title') from KarthiK, Bangalore</h1>
+	<div>$(_jq '.created')</div>
+	<p>$(_jq '.field_search_description')</p>
+	<p>Original source: <a href='https://karthikkumardk.co.in/$(_jq '.view_node')'>View</a></p>
 </body>" > $(echo $(_jq '.view_node').html | cut -c 2-)
 done
 
