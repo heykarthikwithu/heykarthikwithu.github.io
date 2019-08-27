@@ -10,7 +10,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<meta charset='UTF-8'>
 	<title>$(_jq '.title') from KarthiK, Bangalore</title>
 	<meta name='description' content='$(_jq '.field_search_description')'>
-	<link rel='canonical' href='https://karthikkumardk.co.in/$(_jq '.view_node')' />
+	<link rel='canonical' href='https://karthikkumardk.co.in$(_jq '.view_node')' />
 	<meta name='robots' content='index, follow'>
 	<meta property='og:type' content='profile' />
 	<meta property='og:title' content='$(_jq '.title') | KarthiK | Bangalore' />
