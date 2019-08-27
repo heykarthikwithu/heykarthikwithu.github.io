@@ -8,14 +8,14 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 <html lang='en'>
 <head>
 	<meta charset='UTF-8'>
-	<title>$(_jq '.title') from KarthiK, Bangalore</title>
+	<title>$(_jq '.title')</title>
 	<meta name='description' content='$(_jq '.field_search_description')'>
 	<link rel='canonical' href='https://karthikkumardk.co.in$(_jq '.view_node')' />
 	<meta name='robots' content='index, follow'>
-	<meta property='og:type' content='profile' />
-	<meta property='og:title' content='$(_jq '.title') | KarthiK | Bangalore' />
+	<meta property='og:type' content='article' />
+	<meta property='og:title' content='$(_jq '.title')' />
 	<meta property='og:description' content='$(_jq '.field_search_description')' />
-	<meta property='og:url' content='https://karthikkumardk.co.in/$(_jq '.view_node')' />
+	<meta property='og:url' content='https://karthikkumardk.co.in$(_jq '.view_node')' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -38,10 +38,10 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<div id='preloder'>
 		<div class='loader'></div>
 	</div>
-	<h1>$(_jq '.title') from KarthiK, Bangalore</h1>
+	<h1>$(_jq '.title')</h1>
 	<div>$(_jq '.created')</div>
 	<p>$(_jq '.field_search_description')</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in/$(_jq '.view_node')'>View</a></p>
+	<p>Original source: <a href='https://karthikkumardk.co.in$(_jq '.view_node')'>View</a></p>
 </body>" > $(echo $(_jq '.view_node').html | cut -c 2-)
 done
 
