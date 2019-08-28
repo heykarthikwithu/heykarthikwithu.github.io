@@ -10,12 +10,12 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<meta charset='UTF-8'>
 	<title>$(_jq '.title')</title>
 	<meta name='description' content='$(_jq '.field_search_description')'>
-	<link rel='canonical' href='https://karthikkumardk.co.in$(_jq '.view_node')' />
+	<link rel='canonical' href='https://karthikkumardk.co.in$(_jq '.view_node').html' />
 	<meta name='robots' content='index, follow'>
 	<meta property='og:type' content='article' />
 	<meta property='og:title' content='$(_jq '.title')' />
 	<meta property='og:description' content='$(_jq '.field_search_description')' />
-	<meta property='og:url' content='https://karthikkumardk.co.in$(_jq '.view_node')' />
+	<meta property='og:url' content='https://karthikkumardk.co.in$(_jq '.view_node').html' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -28,7 +28,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
   <script>
     window.onload = function() {
         var getUrl = window.location;
-        var blogUrl = \"http://dev-karthikkumardk.pantheonsite.io/\" + getUrl.pathname.split('/')[1] +\"/\"+ getUrl.pathname.split('/')[2];
+        var blogUrl = (\"http://dev-karthikkumardk.pantheonsite.io/\" + getUrl.pathname.split('/')[1] +\"/\"+ getUrl.pathname.split('/')[2]).replace('.html','');
         window.location.href = blogUrl;
     }
   </script>
@@ -41,7 +41,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<h1>$(_jq '.title')</h1>
 	<div>$(_jq '.created')</div>
 	<p>$(_jq '.field_search_description')</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in$(_jq '.view_node')'>View</a></p>
+	<p>Original source: <a href='https://karthikkumardk.co.in$(_jq '.view_node').html'>View</a></p>
 </body>" > $(echo $(_jq '.view_node').html | cut -c 2-)
 done
 
@@ -50,7 +50,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     _jq() {
      echo ${row} | base64 --decode | jq -r ${1}
     }
-    echo "Allow: "$(_jq '.view_node')
+    echo "Allow: "$(_jq '.view_node')".html"
 done
 
 echo "Sitemap.xml"
@@ -58,7 +58,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     _jq() {
      echo ${row} | base64 --decode | jq -r ${1}
     }
-    echo "  <url><loc>https://karthikkumardk.co.in$(_jq '.view_node')</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>daily</changefreq><priority>0.69</priority></url>"
+    echo "  <url><loc>https://karthikkumardk.co.in$(_jq '.view_node').html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>daily</changefreq><priority>0.69</priority></url>"
 done
 #<lastmod>$(date +"%Y-%m-%d")</lastmod>
 
@@ -73,7 +73,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
         <h2>$(_jq '.title')</h2>
         <div class='blog-meta'>$(_jq '.created')</div>
         <p>$(_jq '.field_search_description')</p>
-        <a href='$(_jq '.view_node')' class='read-more' target='_blank'>Read More</a>
+        <a href='$(_jq '.view_node').html' class='read-more' target='_blank'>Read More</a>
       </article>
     </div>
   </div>"
