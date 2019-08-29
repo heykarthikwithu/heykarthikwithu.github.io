@@ -606,7 +606,7 @@ ol {
 .blog-content .blog-meta {
   font-size: 13px;
   color: #979797;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .blog-content p {
@@ -769,7 +769,7 @@ ol {
   white-space: normal;
 }
 .blog-content p {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
