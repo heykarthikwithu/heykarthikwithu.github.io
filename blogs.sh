@@ -41,7 +41,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<h1>$(_jq '.title')</h1>
 	<div>$(_jq '.created')</div>
 	<p>$(_jq '.field_search_description')</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in$(_jq '.view_node').html'>View</a></p>
+	<p>Original source: <a href='https://karthikkumardk.co.in$(_jq '.view_node').html'>https://karthikkumardk.co.in$(_jq '.view_node').html</a></p>
 </body>" > $(echo $(_jq '.view_node').html | cut -c 2-)
 done
 
