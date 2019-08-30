@@ -3,9 +3,21 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-xl-10 offset-xl-1">
-                <h1 class="section-title">I’m a <span>Drupal Developer</span>, with +8 years of experience</h1>
+                <h1 id="KKDK-exp" class="section-title">I’m a <span>Drupal Developer</span>, with +8 years of experience</h1>
             </div>
         </div>
     </div>
 </section>
+<script>
+    var calculateAge = function(birthday) {
+        var now = new Date();
+        var past = new Date(birthday);
+        var nowYear = now.getFullYear();
+        var pastYear = past.getFullYear();
+        return nowYear - pastYear;
+    };
+    $(function(){
+        $("#KKDK-exp").replaceWith("<h1 id=\"KKDK-exp\" class=\"section-title\">I’m a <span>Drupal Developer</span>, with +"+calculateAge('2011-06-01')+" years of experience</h1>");
+    });
+</script>
 <!-- intro section end -->
