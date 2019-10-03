@@ -58,7 +58,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     _jq() {
      echo ${row} | base64 --decode | jq -r ${1}
     }
-    echo "  <url><loc>https://karthikkumardk.co.in$(_jq '.view_node').html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>daily</changefreq><priority>0.69</priority></url>"
+    echo "  <url><loc>https://karthikkumardk.co.in$(_jq '.view_node').html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>"
 done
 #<lastmod>$(date +"%Y-%m-%d")</lastmod>
 
