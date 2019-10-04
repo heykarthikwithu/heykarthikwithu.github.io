@@ -8,7 +8,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 <html lang='en'>
 <head>
 	<meta charset='UTF-8'>
-	<title>$(_jq '.title')</title>
+	<title>$(_jq '.title') | Karthik Kumar D K</title>
 	<meta name='description' content='$(_jq '.field_search_description')'>
 	<link rel='canonical' href='https://karthikkumardk.co.in$(_jq '.view_node').html' />
 	<meta name='robots' content='index, follow'>
@@ -16,6 +16,16 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<meta property='og:title' content='$(_jq '.title')' />
 	<meta property='og:description' content='$(_jq '.field_search_description')' />
 	<meta property='og:url' content='https://karthikkumardk.co.in$(_jq '.view_node').html' />
+	<meta name='icbm' content='13.1071,77.5931' />
+	<meta name='geo.region' content='IN' />
+	<meta name='geo.placename' content='Bangalore' />
+	<meta name='geo.position' content='13.1071,77.5931' />
+	<meta http-equiv='content-language' content='en' />
+	<meta name='Generator' content='heykarthikwithu (https://karthikkumardk.co.in)' />
+	<meta name='MobileOptimized' content='width' />
+	<meta name='HandheldFriendly' content='true' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
