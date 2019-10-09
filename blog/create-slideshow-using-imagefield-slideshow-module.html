@@ -24,6 +24,7 @@ For more details check out the Imagefield Slideshow��project page.' />
 	<meta name='HandheldFriendly' content='true' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
+	<link rel='stylesheet' href='../css/style.css' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -37,19 +38,23 @@ For more details check out the Imagefield Slideshow��project page.' />
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = ("http://dev-karthikkumardk.pantheonsite.io/" + getUrl.pathname.split('/')[1] +"/"+ getUrl.pathname.split('/')[2]).replace('.html','');
-        window.location.href = blogUrl;
+        setTimeout(function () {
+          window.location.href = blogUrl;
+        }, 2000);
     }
   </script>
 </head>
 <body>
 <!-- Page Preloder -->
-	<div id='preloder'>
+	<!-- div id='preloder'>
 		<div class='loader'></div>
-	</div>
-	<h1>Create a slideshow using the ImageField Slideshow module</h1>
-	<div>Thursday, April 6, 2017 - 13:00</div>
-	<p>The Imagefield Slidesh�� makes it easy to create a slideshow from just an image field.
+	</div -->
+	<div class='pre-article'>
+    <h1>Create a slideshow using the ImageField Slideshow module</h1>
+    <div>Thursday, April 6, 2017 - 13:00</div>
+    <p>The Imagefield Slidesh�� makes it easy to create a slideshow from just an image field.
 Imagefield Slideshow module will provide a field formatter for image fields, so that if multiple images are uploaded to that particular image field and thi���formatter helps you to render those images as a slideshow.
 For more details check out the Imagefield Slideshow��project page.</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in/blog/create-slideshow-using-imagefield-slideshow-module.html'>https://karthikkumardk.co.in/blog/create-slideshow-using-imagefield-slideshow-module.html</a></p>
+	</div>
+	<p>Please <a href='https://karthikkumardk.co.in/blog/create-slideshow-using-imagefield-slideshow-module.html'>click here</a> if you are not redirected within 5 seconds.</p>
 </body>

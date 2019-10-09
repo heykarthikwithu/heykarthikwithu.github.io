@@ -20,6 +20,7 @@
 	<meta name='HandheldFriendly' content='true' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
+	<link rel='stylesheet' href='../css/style.css' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -33,17 +34,21 @@
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = ("http://dev-karthikkumardk.pantheonsite.io/" + getUrl.pathname.split('/')[1] +"/"+ getUrl.pathname.split('/')[2]).replace('.html','');
-        window.location.href = blogUrl;
+        setTimeout(function () {
+          window.location.href = blogUrl;
+        }, 2000);
     }
   </script>
 </head>
 <body>
 <!-- Page Preloder -->
-	<div id='preloder'>
+	<!-- div id='preloder'>
 		<div class='loader'></div>
+	</div -->
+	<div class='pre-article'>
+    <h1>Drupal 7 Performance Optimization Options and Checklist</h1>
+    <div>Saturday, July 4, 2015 - 09:44</div>
+    <p>As great as Drupal 7 core can be, it doesn't scale well for Web sites with a lot of content and/or a lot of users. To make it perform better under these scenarios, it's necessary to make use of several strategies, tools and techniques.</p>
 	</div>
-	<h1>Drupal 7 Performance Optimization Options and Checklist</h1>
-	<div>Saturday, July 4, 2015 - 09:44</div>
-	<p>As great as Drupal 7 core can be, it doesn't scale well for Web sites with a lot of content and/or a lot of users. To make it perform better under these scenarios, it's necessary to make use of several strategies, tools and techniques.</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in/blog/drupal-7-performance-optimization-options-and-checklist.html'>https://karthikkumardk.co.in/blog/drupal-7-performance-optimization-options-and-checklist.html</a></p>
+	<p>Please <a href='https://karthikkumardk.co.in/blog/drupal-7-performance-optimization-options-and-checklist.html'>click here</a> if you are not redirected within 5 seconds.</p>
 </body>

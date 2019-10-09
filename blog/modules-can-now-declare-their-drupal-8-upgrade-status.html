@@ -20,6 +20,7 @@
 	<meta name='HandheldFriendly' content='true' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
+	<link rel='stylesheet' href='../css/style.css' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -33,17 +34,21 @@
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = ("http://dev-karthikkumardk.pantheonsite.io/" + getUrl.pathname.split('/')[1] +"/"+ getUrl.pathname.split('/')[2]).replace('.html','');
-        window.location.href = blogUrl;
+        setTimeout(function () {
+          window.location.href = blogUrl;
+        }, 2000);
     }
   </script>
 </head>
 <body>
 <!-- Page Preloder -->
-	<div id='preloder'>
+	<!-- div id='preloder'>
 		<div class='loader'></div>
+	</div -->
+	<div class='pre-article'>
+    <h1>Modules can now declare their Drupal 8 upgrade status</h1>
+    <div>Wednesday, July 17, 2019 - 17:06</div>
+    <p>The Migrate Drupal UI module provides a web browser user interface for upgrading from Drupal 6 / 7 to Drupal 8. There is a pre-upgrade analysis which displays a list of legacy modules that will be upgraded and will not be upgraded. Included in those that will be upgraded are modules that do not need an upgrade, such as the Help module. In order for this analysis to be correct, some Drupal 8 modules must provide information in a MODULE_NAME.migrate_drupal.yml file in the module's migrations/state directory.</p>
 	</div>
-	<h1>Modules can now declare their Drupal 8 upgrade status</h1>
-	<div>Wednesday, July 17, 2019 - 17:06</div>
-	<p>The Migrate Drupal UI module provides a web browser user interface for upgrading from Drupal 6 / 7 to Drupal 8. There is a pre-upgrade analysis which displays a list of legacy modules that will be upgraded and will not be upgraded. Included in those that will be upgraded are modules that do not need an upgrade, such as the Help module. In order for this analysis to be correct, some Drupal 8 modules must provide information in a MODULE_NAME.migrate_drupal.yml file in the module's migrations/state directory.</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in/blog/modules-can-now-declare-their-drupal-8-upgrade-status.html'>https://karthikkumardk.co.in/blog/modules-can-now-declare-their-drupal-8-upgrade-status.html</a></p>
+	<p>Please <a href='https://karthikkumardk.co.in/blog/modules-can-now-declare-their-drupal-8-upgrade-status.html'>click here</a> if you are not redirected within 5 seconds.</p>
 </body>

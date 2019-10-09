@@ -26,6 +26,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
 	<meta name='HandheldFriendly' content='true' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
+	<link rel='stylesheet' href='../css/style.css' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -39,19 +40,23 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = (\"http://dev-karthikkumardk.pantheonsite.io/\" + getUrl.pathname.split('/')[1] +\"/\"+ getUrl.pathname.split('/')[2]).replace('.html','');
-        window.location.href = blogUrl;
+        setTimeout(function () {
+          window.location.href = blogUrl;
+        }, 2000);
     }
   </script>
 </head>
 <body>
 <!-- Page Preloder -->
-	<div id='preloder'>
+	<!-- div id='preloder'>
 		<div class='loader'></div>
+	</div -->
+	<div class='pre-article'>
+    <h1>$(_jq '.title')</h1>
+    <div>$(_jq '.created')</div>
+    <p>$(_jq '.field_search_description')</p>
 	</div>
-	<h1>$(_jq '.title')</h1>
-	<div>$(_jq '.created')</div>
-	<p>$(_jq '.field_search_description')</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in$(_jq '.view_node').html'>https://karthikkumardk.co.in$(_jq '.view_node').html</a></p>
+	<p>Please <a href='https://karthikkumardk.co.in$(_jq '.view_node').html'>click here</a> if you are not redirected within 5 seconds.</p>
 </body>" > $(echo $(_jq '.view_node').html | cut -c 2-)
 done
 

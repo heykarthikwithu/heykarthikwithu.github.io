@@ -20,6 +20,7 @@
 	<meta name='HandheldFriendly' content='true' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
+	<link rel='stylesheet' href='../css/style.css' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -33,17 +34,21 @@
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = ("http://dev-karthikkumardk.pantheonsite.io/" + getUrl.pathname.split('/')[1] +"/"+ getUrl.pathname.split('/')[2]).replace('.html','');
-        window.location.href = blogUrl;
+        setTimeout(function () {
+          window.location.href = blogUrl;
+        }, 2000);
     }
   </script>
 </head>
 <body>
 <!-- Page Preloder -->
-	<div id='preloder'>
+	<!-- div id='preloder'>
 		<div class='loader'></div>
+	</div -->
+	<div class='pre-article'>
+    <h1>Auto Tagging of Taxonomy terms in Drupal7</h1>
+    <div>Sunday, September 27, 2015 - 19:54</div>
+    <p>This article help you to create the way to implement the autotagging of the taxonomy terms based on the other field of the node page.</p>
 	</div>
-	<h1>Auto Tagging of Taxonomy terms in Drupal7</h1>
-	<div>Sunday, September 27, 2015 - 19:54</div>
-	<p>This article help you to create the way to implement the autotagging of the taxonomy terms based on the other field of the node page.</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in/blog/auto-tagging-taxonomy-terms-drupal7.html'>https://karthikkumardk.co.in/blog/auto-tagging-taxonomy-terms-drupal7.html</a></p>
+	<p>Please <a href='https://karthikkumardk.co.in/blog/auto-tagging-taxonomy-terms-drupal7.html'>click here</a> if you are not redirected within 5 seconds.</p>
 </body>

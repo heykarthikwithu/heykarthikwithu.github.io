@@ -20,6 +20,7 @@
 	<meta name='HandheldFriendly' content='true' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<meta name='google-site-verification' content='0x3fHjbLfA41Z5loXt5Fb42MgxQ2ZzvRRkbvCTmlzN0' />
+	<link rel='stylesheet' href='../css/style.css' />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src='https://www.googletagmanager.com/gtag/js?id=UA-93645678-2'></script>
 	<script>
@@ -33,17 +34,21 @@
     window.onload = function() {
         var getUrl = window.location;
         var blogUrl = ("http://dev-karthikkumardk.pantheonsite.io/" + getUrl.pathname.split('/')[1] +"/"+ getUrl.pathname.split('/')[2]).replace('.html','');
-        window.location.href = blogUrl;
+        setTimeout(function () {
+          window.location.href = blogUrl;
+        }, 2000);
     }
   </script>
 </head>
 <body>
 <!-- Page Preloder -->
-	<div id='preloder'>
+	<!-- div id='preloder'>
 		<div class='loader'></div>
+	</div -->
+	<div class='pre-article'>
+    <h1>Simple Redirect upon Registration and Login in Drupal8</h1>
+    <div>Thursday, March 16, 2017 - 08:02</div>
+    <p>A light weight Module provide us simple redirection feature upon Registration and Login.</p>
 	</div>
-	<h1>Simple Redirect upon Registration and Login in Drupal8</h1>
-	<div>Thursday, March 16, 2017 - 08:02</div>
-	<p>A light weight Module provide us simple redirection feature upon Registration and Login.</p>
-	<p>Original source: <a href='https://karthikkumardk.co.in/blog/simple-redirect-upon-registration-and-login-drupal8.html'>https://karthikkumardk.co.in/blog/simple-redirect-upon-registration-and-login-drupal8.html</a></p>
+	<p>Please <a href='https://karthikkumardk.co.in/blog/simple-redirect-upon-registration-and-login-drupal8.html'>click here</a> if you are not redirected within 5 seconds.</p>
 </body>

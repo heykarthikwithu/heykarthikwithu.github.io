@@ -776,3 +776,7 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.pre-article {
+  display: none;
+}
