@@ -1,15 +1,7 @@
+User-agent: Googlebot
+Allow: /
+
 User-agent: *
-Disallow: /content
-Disallow: /css
-Disallow: /icon-fonts
-Disallow: /img
-Disallow: /js
-Disallow: /blog.html
-Disallow: /CNAME
-Disallow: /data.json
-Disallow: /elements.html
-Disallow: /generate.sh
-Disallow: /home-2.html
-Disallow: /jq
+Allow: /
 
 Sitemap: https://karthikkumardk.co.in/sitemap.xml
