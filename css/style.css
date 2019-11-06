@@ -780,3 +780,10 @@ ol {
 .pre-article {
   display: none;
 }
+
+.read-more-external {
+  font-size: 36px;
+}
+.blog-article-content {
+  filter: blur(3px);
+}
