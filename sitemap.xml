@@ -4,6 +4,8 @@
   <url><loc>https://karthikkumardk.co.in/about.html</loc><lastmod>2019-08-27T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
   <url><loc>https://karthikkumardk.co.in/blogs.html</loc><lastmod>2019-08-27T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
   <url><loc>https://karthikkumardk.co.in/contact.html</loc><lastmod>2019-08-27T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://karthikkumardk.co.in/blog/drupal-jsonapi-get-post-patch-and-delete-samples.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
+  <url><loc>https://karthikkumardk.co.in/blog/create-slideshow-using-imagefield-slideshow-module.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/reverse-proxy-setup-nginx-reverse-proxy.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/courtship-time-make-it-memorable-ways-add-some-spice.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/api-security.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
@@ -36,7 +38,6 @@
   <url><loc>https://karthikkumardk.co.in/blog/drupal-8-form-api-options-we-have-states.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/drupal-8-simple-redirect-module-redirect-one-url-another-url.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/why-devops-important-how-can-be-done-drupal.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
-  <url><loc>https://karthikkumardk.co.in/blog/create-slideshow-using-imagefield-slideshow-module.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/integrating-codeception-drupal-have-added-support-tdd.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/drupal-7-performance-optimization-options-and-checklist.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/install-apache-mysql-php-stack-ubuntu-14.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
@@ -48,10 +49,10 @@
   <url><loc>https://karthikkumardk.co.in/blog/security-checklist-drupal.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/simple-redirect-upon-registration-and-login-drupal8.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/creating-twitter-share-block-programmatically-drupal-8.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
-  <url><loc>https://karthikkumardk.co.in/blog/custom-field-formatter-drupal-7.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/configuring-debugging-drupal-7-phpstorm-xdebug-ubuntu14.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/creating-drupal-7-hooks.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/start-migrating-drupal-6-drupal-7-migrate-module.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
+  <url><loc>https://karthikkumardk.co.in/blog/custom-field-formatter-drupal-7.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/creating-simple-headless-drupal-7-site-headless-drupal.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/drush-commands-drupal-developers.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>
   <url><loc>https://karthikkumardk.co.in/blog/drupal7-simple-test-case-custom-module.html</loc><lastmod>2019-08-28T04:54:45+00:00</lastmod><changefreq>yearly</changefreq><priority>0.69</priority></url>

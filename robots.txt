@@ -7,6 +7,8 @@ Allow: /contact.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
+Allow: /blog/drupal-jsonapi-get-post-patch-and-delete-samples.html
+Allow: /blog/create-slideshow-using-imagefield-slideshow-module.html
 Allow: /blog/reverse-proxy-setup-nginx-reverse-proxy.html
 Allow: /blog/courtship-time-make-it-memorable-ways-add-some-spice.html
 Allow: /blog/api-security.html
@@ -39,7 +41,6 @@ Allow: /blog/drupal-7-apache-solr-search-how-setup-and-how-index.html
 Allow: /blog/drupal-8-form-api-options-we-have-states.html
 Allow: /blog/drupal-8-simple-redirect-module-redirect-one-url-another-url.html
 Allow: /blog/why-devops-important-how-can-be-done-drupal.html
-Allow: /blog/create-slideshow-using-imagefield-slideshow-module.html
 Allow: /blog/integrating-codeception-drupal-have-added-support-tdd.html
 Allow: /blog/drupal-7-performance-optimization-options-and-checklist.html
 Allow: /blog/install-apache-mysql-php-stack-ubuntu-14.html
@@ -51,10 +52,10 @@ Allow: /blog/filter-content-between-date-ranges-drupal7.html
 Allow: /blog/security-checklist-drupal.html
 Allow: /blog/simple-redirect-upon-registration-and-login-drupal8.html
 Allow: /blog/creating-twitter-share-block-programmatically-drupal-8.html
-Allow: /blog/custom-field-formatter-drupal-7.html
 Allow: /blog/configuring-debugging-drupal-7-phpstorm-xdebug-ubuntu14.html
 Allow: /blog/creating-drupal-7-hooks.html
 Allow: /blog/start-migrating-drupal-6-drupal-7-migrate-module.html
+Allow: /blog/custom-field-formatter-drupal-7.html
 Allow: /blog/creating-simple-headless-drupal-7-site-headless-drupal.html
 Allow: /blog/drush-commands-drupal-developers.html
 Allow: /blog/drupal7-simple-test-case-custom-module.html
@@ -70,6 +71,8 @@ Allow: /contact.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
+Allow: /blog/drupal-jsonapi-get-post-patch-and-delete-samples.html
+Allow: /blog/create-slideshow-using-imagefield-slideshow-module.html
 Allow: /blog/reverse-proxy-setup-nginx-reverse-proxy.html
 Allow: /blog/courtship-time-make-it-memorable-ways-add-some-spice.html
 Allow: /blog/api-security.html
@@ -102,7 +105,6 @@ Allow: /blog/drupal-7-apache-solr-search-how-setup-and-how-index.html
 Allow: /blog/drupal-8-form-api-options-we-have-states.html
 Allow: /blog/drupal-8-simple-redirect-module-redirect-one-url-another-url.html
 Allow: /blog/why-devops-important-how-can-be-done-drupal.html
-Allow: /blog/create-slideshow-using-imagefield-slideshow-module.html
 Allow: /blog/integrating-codeception-drupal-have-added-support-tdd.html
 Allow: /blog/drupal-7-performance-optimization-options-and-checklist.html
 Allow: /blog/install-apache-mysql-php-stack-ubuntu-14.html
@@ -114,10 +116,10 @@ Allow: /blog/filter-content-between-date-ranges-drupal7.html
 Allow: /blog/security-checklist-drupal.html
 Allow: /blog/simple-redirect-upon-registration-and-login-drupal8.html
 Allow: /blog/creating-twitter-share-block-programmatically-drupal-8.html
-Allow: /blog/custom-field-formatter-drupal-7.html
 Allow: /blog/configuring-debugging-drupal-7-phpstorm-xdebug-ubuntu14.html
 Allow: /blog/creating-drupal-7-hooks.html
 Allow: /blog/start-migrating-drupal-6-drupal-7-migrate-module.html
+Allow: /blog/custom-field-formatter-drupal-7.html
 Allow: /blog/creating-simple-headless-drupal-7-site-headless-drupal.html
 Allow: /blog/drush-commands-drupal-developers.html
 Allow: /blog/drupal7-simple-test-case-custom-module.html
