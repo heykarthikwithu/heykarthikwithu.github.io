@@ -103,7 +103,7 @@ Hey KarthiK,
 	<div class='container'>
     <div>$(_jq '.created')</div>
     <p class='blog-article-content'>$(_jq '.field_search_description') $(_jq '.field_search_description')</p>
-    <div class='read-more-external text-center'><a href='https://dev-karthikkumardk.pantheonsite.io$(_jq '.view_node')' target='_blank'>Click here to Read More</a></div>
+    <div class='read-more-external text-center'><a href='https://dev-karthikkumardk.pantheonsite.io$(_jq '.view_node')' target='_blank'>Continue Reading</a></div>
   </div>
 </section>
 <!-- footer section start -->
