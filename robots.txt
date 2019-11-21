@@ -7,6 +7,7 @@ Allow: /contact.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
+Allow: /blog/install-jekyll-ubuntu-1804-debian-10-linux.html
 Allow: /blog/drupal-core-simpletest-module-deprecated.html
 Allow: /blog/drupal-jsonapi-get-post-patch-and-delete-samples.html
 Allow: /blog/create-slideshow-using-imagefield-slideshow-module.html
@@ -72,6 +73,7 @@ Allow: /contact.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
+Allow: /blog/install-jekyll-ubuntu-1804-debian-10-linux.html
 Allow: /blog/drupal-core-simpletest-module-deprecated.html
 Allow: /blog/drupal-jsonapi-get-post-patch-and-delete-samples.html
 Allow: /blog/create-slideshow-using-imagefield-slideshow-module.html
