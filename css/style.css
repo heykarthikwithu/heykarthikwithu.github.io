@@ -787,3 +787,16 @@ ol {
 .blog-article-content {
   filter: blur(3px);
 }
+
+.further-action {
+  padding-right: 15px;
+}
+.further-action > a:nth-child(1),
+.further-action > a:nth-child(2),
+.further-action > a:nth-child(3) {
+  padding-right: 6px;
+  color: #000;
+}
+.further-action > a:last-child {
+  float: right;
+}
