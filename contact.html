@@ -101,7 +101,31 @@ Hey KarthiK,
 	</header>
 	<!-- header section end -->
 
-    <div id="intro-section"></div>
+<!--    <div id="intro-section"></div>-->
+	<script src="js/leaflet/leaflet.js"></script> <!-- https://unpkg.com/leaflet@1.0.1/dist/leaflet.js -->
+	<link href="js/leaflet/leaflet.css" rel="stylesheet"/> <!-- https://unpkg.com/leaflet@1.0.1/dist/leaflet.css -->
+	<div class="contact-map">
+		<div id="osm-map" style="height: 100px; width: 100px;"></div>
+	</div>
+	<script type="text/javascript">
+		// Where you want to render the map.
+		var element = document.getElementById('osm-map');
+		// Height has to be set. You can do this in CSS too.
+		element.style = 'height:300px;';
+		// Create Leaflet map on map element.
+		var map = L.map(element);
+		// Add OSM tile leayer to the Leaflet map.
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors ' +
+					'| By <a href="https://karthikkumardk.co.in" target="_blank">Karthik Kumar D K</a>'
+		}).addTo(map);
+		// Target's GPS coordinates.
+		var target = L.latLng('13.0920001', '77.6020673');
+		// Set map's center to target with zoom 14.
+		map.setView(target, 14);
+		// Place a marker on the same location.
+		L.marker(target).addTo(map).bindPopup("<b>Karthik Kumar D K</b><br/>Drupal Expert<br/>Bengaluru, Karnataka 560064").openPopup();;
+	</script>
 
 	<section class="page-section">
 		<div class="container">

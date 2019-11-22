@@ -800,3 +800,7 @@ ol {
 .further-action > a:last-child {
   float: right;
 }
+
+.contact-map {
+  padding-bottom: 110px;
+}
