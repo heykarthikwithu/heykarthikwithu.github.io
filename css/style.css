@@ -891,3 +891,20 @@ ol {
   border: none;
   background: #888
 }
+
+.main-menu ul li a.active,
+.main-menu ul li a:hover {
+  color: #5dadec;
+  border-bottom: 2px solid #5dadec;
+  padding-bottom: 0;
+}
+.further-action > a:hover {
+  color: #5dadec;
+}
+.further-action > a:last-child:hover {
+  border-bottom: 2px solid #5dadec;
+  padding-bottom: 3px;
+}
+.further-action > a:last-child:hover:after {
+  background: none;
+}
