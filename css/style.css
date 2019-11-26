@@ -908,3 +908,10 @@ ol {
 .further-action > a:last-child:hover:after {
   background: none;
 }
+
+.project-slider {
+  padding-top: 25px;
+}
+.project-slider .carousel {
+  padding-bottom: 0;
+}
