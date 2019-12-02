@@ -942,6 +942,22 @@ ol {
   margin-top: 8px;
   font-size: 29px;
 }
+.common-people-detail .further-action {
+  position: fixed;
+  bottom: 12%;
+  left: 2%;
+}
+.common-people-detail .further-action > a {
+  float: left;
+  width: 100%;
+  padding-bottom: 4px;
+  padding-left: 16px;
+}
+.common-people-detail .further-action > a:last-child,
+.common-people-detail .further-action > a:last-child:hover {
+  border: none;
+}
+
 
 .project-slider {
   padding-top: 25px;
