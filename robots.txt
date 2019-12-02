@@ -4,6 +4,10 @@ Allow: /index.html
 Allow: /blogs.html
 Allow: /about.html
 Allow: /contact.html
+Allow: /common-people
+Allow: /common-people/
+Allow: /common-people/*
+Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
@@ -70,6 +74,10 @@ Allow: /index.html
 Allow: /blogs.html
 Allow: /about.html
 Allow: /contact.html
+Allow: /common-people
+Allow: /common-people/
+Allow: /common-people/*
+Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
