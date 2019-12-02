@@ -685,6 +685,10 @@ ol {
   .portfolio-item {
     height: 450px;
   }
+  .page-section .common-people .blog-content h2 {
+    width: 100% !important;
+    float: none !important;
+  }
 }
 
 /* Tablet :768px. */
@@ -694,6 +698,10 @@ ol {
   }
   .portfolio-item {
     height: 350px;
+  }
+  .page-section .common-people .blog-content h2 {
+    width: 100%;
+    float: none;
   }
 }
 
@@ -746,12 +754,20 @@ ol {
   .portfolio-filter {
     text-align: center;
   }
+  .page-section .common-people .blog-content h2 {
+    width: 100%;
+    float: none;
+  }
 }
 
 /* small Mobile :320px. */
 @media only screen and (max-width: 479px) {
   .section-title {
     font-size: 30px;
+  }
+  .page-section .common-people .blog-content h2 {
+    width: 100%;
+    float: none;
   }
 }
 
@@ -907,6 +923,24 @@ ol {
 }
 .further-action > a:last-child:hover:after {
   background: none;
+}
+
+.common-people .blog-item {
+  /*border-bottom: 1px solid #000;*/
+  margin-bottom: 0;
+}
+.common-people .blog-content h2 {
+  width: 70%;
+  display: block;
+  float: left;
+}
+.common-people .further-action {
+  float: right;
+}
+.common-people .further-action a:last-child {
+  margin-left: 8px;
+  margin-top: 8px;
+  font-size: 29px;
 }
 
 .project-slider {
