@@ -957,6 +957,9 @@ ol {
 .common-people-detail .further-action > a:last-child:hover {
   border: none;
 }
+.common-people-hide {
+  filter: blur(3px);
+}
 
 
 .project-slider {
