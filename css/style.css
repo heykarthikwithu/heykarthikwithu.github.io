@@ -961,10 +961,37 @@ ol {
   filter: blur(3px);
 }
 
+.common-people .main-menu {
+  float: right;
+}
+
 
 .project-slider {
   padding-top: 25px;
 }
 .project-slider .carousel {
   padding-bottom: 0;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
 }
