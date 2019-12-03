@@ -7,7 +7,8 @@ Allow: /contact.html
 Allow: /common-people
 Allow: /common-people/
 Allow: /common-people/*
-Allow: /common-people.html
+Allow: /common-people/index.html
+Allow: /common-people/about.html
 Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
 Allow: /blog
 Allow: /blog/
@@ -78,7 +79,8 @@ Allow: /contact.html
 Allow: /common-people
 Allow: /common-people/
 Allow: /common-people/*
-Allow: /common-people.html
+Allow: /common-people/index.html
+Allow: /common-people/about.html
 Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
 Allow: /blog
 Allow: /blog/
