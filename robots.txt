@@ -10,6 +10,7 @@ Allow: /common-people/*
 Allow: /common-people/index.html
 Allow: /common-people/about.html
 Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
+Allow: /common-people/caste-conflict-and-dress-change-channar-revolt.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
@@ -82,6 +83,7 @@ Allow: /common-people/*
 Allow: /common-people/index.html
 Allow: /common-people/about.html
 Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
+Allow: /common-people/caste-conflict-and-dress-change-channar-revolt.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*

@@ -995,3 +995,10 @@ ol {
   top: -25px;
   left: 50px;
 }
+
+.common-people-about .project-slider {
+  padding-bottom: 25px;
+}
+.common-people-about .project-slider .d-block.w-100 {
+  max-height: 250px;
+}
