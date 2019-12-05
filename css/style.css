@@ -376,7 +376,7 @@ ol {
   color: #001418;
   margin-left: 15px;
   margin-right: 10px;
-  padding: 20px 0 5px;
+  padding: 20px 0 0px;
 }
 
 .header-btn {
@@ -944,8 +944,10 @@ ol {
 }
 .common-people-detail .further-action {
   position: fixed;
-  bottom: 12%;
-  left: 2%;
+  bottom: 20%;
+  right: 0;
+  width: 85px;
+  padding: 0;
 }
 .common-people-detail .further-action > a {
   float: left;
