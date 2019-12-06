@@ -927,7 +927,8 @@ ol {
 
 .common-people .blog-item {
   /*border-bottom: 1px solid #000;*/
-  margin-bottom: 0;
+  margin-bottom: 4px;
+  padding: 9px 2px 42px 6px;
 }
 .common-people .blog-content h2 {
   width: 70%;
