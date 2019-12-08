@@ -36,7 +36,7 @@
 	<link href="img/heykarthikwithu.jpg" rel="shortcut icon"/>
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+	<link href="css/fonts-googleapis.css" rel="stylesheet">
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -46,12 +46,12 @@
 
 
 	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <script src="js/html5shiv.min.js"></script>
+	  <script src="js/respond.min.js"></script>
 	<![endif]-->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93645678-2"></script>
+	<script async src="js/google-analytics/gtag.js"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -102,7 +102,29 @@ Hey KarthiK,
 	</header>
 	<!-- header section end -->
 
-	<div id="intro-section"></div>
+	<!-- intro section start -->
+	<section class="intro-section">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<h1 id="KKDK-exp" class="section-title">I’m a <span>Drupal Developer</span>, with +8 years of experience</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		var calculateAge = function(birthday) {
+			var now = new Date();
+			var past = new Date(birthday);
+			var nowYear = now.getFullYear();
+			var pastYear = past.getFullYear();
+			return nowYear - pastYear;
+		};
+		$(function(){
+			$("#KKDK-exp").replaceWith("<h1 id=\"KKDK-exp\" class=\"section-title\">I’m a <span>Drupal Developer</span>, with +"+calculateAge('2011-06-01')+" years of experience</h1>");
+		});
+	</script>
+	<!-- intro section end -->
 
 	<!-- portfolio section start -->
 	<div class="col-lg-12">
@@ -235,7 +257,7 @@ Hey KarthiK,
 <!--				<div class="section-title mb-5">Worked with</div>-->
 <!--			</div>-->
 <!--			<div class="row mt-5 text-center">-->
-<!--				<div class="col-md-4">-->
+<!--				https://karthikkumardk.co.in/index.html<div class="col-md-4">-->
 <!--					<div class="milestone">-->
 <!--						<h2>12<span>Clients</span></h2>-->
 <!--					</div>-->
