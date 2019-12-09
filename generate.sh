@@ -157,7 +157,7 @@ for row in $(echo "${sample}" | jq -r '.[] | @base64'); do
             <a href='https://twitter.com/share?text=$(_jq '.title')&url=https://karthikkumardk.co.in$(_jq '.view_node').html&hashtags=drupal&via=heykarthikwithu' target='_blank'><i class='fab fa-twitter fa-2x'></i></a>
             <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://karthikkumardk.co.in$(_jq '.view_node').html&title=$(_jq '.title')' target='_blank'><i class='fab fa-linkedin fa-2x'></i></a>
             <a href='http://www.facebook.com/sharer.php?u=https://karthikkumardk.co.in$(_jq '.view_node').html' target='_blank'><i class='fab fa-facebook fa-2x'></i></a>
-            <a href='/blog/install-jekyll-ubuntu-1804-debian-10-linux.html' class='read-more'>Read More</a>
+            <a href='$(_jq '.view_node').html' class='read-more'>Read More</a>
         </div>
       </article>
     </div>
