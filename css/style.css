@@ -1009,3 +1009,10 @@ ol {
 body p {
   color: #001418 !important;
 }
+.icon-box-content a {
+  color: #001418;
+}
+.icon-box-content a:hover {
+  color: #5dadec;
+  border-bottom: 2px solid #5dadec;
+}
