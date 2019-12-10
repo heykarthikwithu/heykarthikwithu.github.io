@@ -11,6 +11,12 @@ Allow: /common-people/index.html
 Allow: /common-people/about.html
 Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
 Allow: /common-people/caste-conflict-and-dress-change-channar-revolt.html
+Allow: /common-people/on-remembering-ambedkar-on-63rd-death-aniversity-in-india.html
+Allow: /products
+Allow: /products/
+Allow: /products/*
+Allow: /products/index.html
+Allow: /products/about.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
@@ -84,6 +90,12 @@ Allow: /common-people/index.html
 Allow: /common-people/about.html
 Allow: /common-people/punish-rapists-in-the-public-from-now-on-in-india.html
 Allow: /common-people/caste-conflict-and-dress-change-channar-revolt.html
+Allow: /common-people/on-remembering-ambedkar-on-63rd-death-aniversity-in-india.html
+Allow: /products
+Allow: /products/
+Allow: /products/*
+Allow: /products/index.html
+Allow: /products/about.html
 Allow: /blog
 Allow: /blog/
 Allow: /blog/*
