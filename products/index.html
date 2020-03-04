@@ -107,41 +107,60 @@
                     </div>
                 </form>
                 <br>
-                <div class="row products" id="search-results">
+                <div class="row products">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="box wow animated" style="visibility: visible;"> <!-- fadeInLeft -->
+                            <div class="price-filters">
+                                <div class="price-filter">
+                                    <label for="price-500"> ₹0 - ₹500</label>
+                                    <input type="checkbox" id="price-500" name="price-500">
+                                </div>
+                                <div class="price-filter">
+                                    <label for="price-1000"> ₹500 - ₹1000</label>
+                                    <input type="checkbox" id="price-1000" name="price-1000">
+                                </div>
+                                <div class="price-filter">
+                                    <label for="price-2000"> ₹1000 - ₹2000</label>
+                                    <input type="checkbox" id="price-2000" name="price-2000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10" id="search-results"></div>
                     <!-- blogs start -->
-                    <div class="col-md-2 col-sm-4">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="https://amzn.to/2E1dTs2" target="_blank"><img class="pic-1 lazy" src="../img/blank.png" data-src="https://images-na.ssl-images-amazon.com/images/I/61ImzlIQ3IL._SX679_.jpg" alt="" /></a>
-                                <ul class="social"><li><a href="https://amzn.to/2E1dTs2" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="https://amzn.to/2E1dTs2" target="_blank">GrandPitstop Bike Mobile Holder with Charger</a></h3><div class="price">₹ 367.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="https://amzn.to/349itPE" target="_blank"><img class="pic-1 lazy" src="../img/blank.png" data-src="https://images-na.ssl-images-amazon.com/images/I/71dzmbxhKhL._SY879_.jpg" alt="" /></a>
-                                <ul class="social"><li><a href="https://amzn.to/349itPE" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="https://amzn.to/349itPE" target="_blank">Chevik X-Grip Bike Mobile Holder with Charger Waterproof</a></h3><div class="price">₹ 999.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <div class="product-grid">
-                            <div class="product-image">
-                                <a href="https://amzn.to/38qaVLG" target="_blank"><img class="pic-1 lazy" src="../img/blank.png" data-src="https://images-na.ssl-images-amazon.com/images/I/51F5%2BNiGOxL._SX569_.jpg" alt="" /></a>
-                                <ul class="social"><li><a href="https://amzn.to/38qaVLG" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="https://amzn.to/38qaVLG" target="_blank">realme Earbuds 2 in-Ear Wired with mic (Black)</a></h3><div class="price">₹ 598.00</div>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-md-2 col-sm-4">-->
+<!--                        <div class="product-grid">-->
+<!--                            <div class="product-image">-->
+<!--                                <a href="https://amzn.to/2E1dTs2" target="_blank"><img class="pic-1 lazy" src="../img/blank.png" data-src="https://images-na.ssl-images-amazon.com/images/I/61ImzlIQ3IL._SX679_.jpg" alt="" /></a>-->
+<!--                                <ul class="social"><li><a href="https://amzn.to/2E1dTs2" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>-->
+<!--                            </div>-->
+<!--                            <div class="product-content">-->
+<!--                                <h3 class="title"><a href="https://amzn.to/2E1dTs2" target="_blank">GrandPitstop Bike Mobile Holder with Charger</a></h3><div class="price">₹ 367.00</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-2 col-sm-4">-->
+<!--                        <div class="product-grid">-->
+<!--                            <div class="product-image">-->
+<!--                                <a href="https://amzn.to/349itPE" target="_blank"><img class="pic-1 lazy" src="../img/blank.png" data-src="https://images-na.ssl-images-amazon.com/images/I/71dzmbxhKhL._SY879_.jpg" alt="" /></a>-->
+<!--                                <ul class="social"><li><a href="https://amzn.to/349itPE" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>-->
+<!--                            </div>-->
+<!--                            <div class="product-content">-->
+<!--                                <h3 class="title"><a href="https://amzn.to/349itPE" target="_blank">Chevik X-Grip Bike Mobile Holder with Charger Waterproof</a></h3><div class="price">₹ 999.00</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-2 col-sm-4">-->
+<!--                        <div class="product-grid">-->
+<!--                            <div class="product-image">-->
+<!--                                <a href="https://amzn.to/38qaVLG" target="_blank"><img class="pic-1 lazy" src="../img/blank.png" data-src="https://images-na.ssl-images-amazon.com/images/I/51F5%2BNiGOxL._SX569_.jpg" alt="" /></a>-->
+<!--                                <ul class="social"><li><a href="https://amzn.to/38qaVLG" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>-->
+<!--                            </div>-->
+<!--                            <div class="product-content">-->
+<!--                                <h3 class="title"><a href="https://amzn.to/38qaVLG" target="_blank">realme Earbuds 2 in-Ear Wired with mic (Black)</a></h3><div class="price">₹ 598.00</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!-- blogs end -->
                 </div>
                 <script>
@@ -157,18 +176,47 @@
                             var output = '';
                             $.each(search_data, function(key, val){
                                 if (val.title.search(regex) != -1) {
+                                    var result = val.price.split(" ");
+                                    var price_class = '';
+                                    var price = result[1].split(".");
+                                    if (price[0] <= 500) {
+                                        price_class = "price-500";
+                                    }
+                                    else if (price[0] > 500 && price[0] <= 1000) {
+                                        price_class = "price-1000";
+                                    }
+                                    else if (price[0] > 1000 && price[0] <= 2000) {
+                                        price_class = "price-2000";
+                                    }
                                     output += '' +
-                                        '<div class="col-md-2 col-sm-4">' +
-                                        '<div class="product-grid">' +
-                                        '<div class="product-image">' +
-                                        '<a href="' + val.link + '" target="_blank"><img class="pic-1" src="' + val.image + '" alt="" /></a>' +
-                                        '<ul class="social"><li><a href="' + val.link + '" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>' +
-                                        '</div>' +
-                                        '<div class="product-content">' +
-                                        '<h3 class="title"><a href="' + val.link + '" target="_blank">' + val.title + '</a></h3><div class="price">' + val.price + '</div>' +
-                                        '</div>' +
-                                        '</div>' +
-                                        '</div>';
+                                        // '<div class="col-md-2 col-sm-4">' +
+                                        // '<div class="product-grid">' +
+                                        // '<div class="product-image">' +
+                                        // '<a href="' + val.link + '" target="_blank"><img class="pic-1" src="' + val.image + '" alt="" /></a>' +
+                                        // '<ul class="social"><li><a href="' + val.link + '" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a></li></ul>' +
+                                        // '</div>' +
+                                        // '<div class="product-content">' +
+                                        // '<h3 class="title"><a href="' + val.link + '" target="_blank">' + val.title + '</a></h3><div class="price">' + val.price + '</div>' +
+                                        // '</div>' +
+                                        // '</div>' +
+                                        // '</div>';
+                                    '<div class="col-lg-12 col-sm-12 ' + price_class + '">' +
+                                    '<div class="box wow animated" style="visibility: visible;"> <!-- fadeInLeft -->' +
+                                        '<div class="row">' +
+                                        '<div class="col-md-3">' +
+                                        '<div class="icon"><a href="' + val.link + '" target="_blank"><img src="' + val.image + '" alt=""></a></div>' +
+                                    '</div>' +
+                                    '<div class="col-md-9">' +
+                                        '<h4 class="title"><a href="' + val.link + '" target="_blank">' + val.title + ' <span><i class="ion-medkit"></i></span></a></h4>' +
+                                    '<div class="content">' +
+                                        '<span class="price">' + val.price + '</span>' +
+                                    '<a href="' + val.link + '" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a>' +
+                                    '</div>' +
+                                    '<p class="description">' + val.desc + '</p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>';
                                 }
                             });
                             $('#search-results').html(output);

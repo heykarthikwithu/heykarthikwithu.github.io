@@ -1090,3 +1090,72 @@ body p {
 .products-about .project-slider .d-block.w-100 {
   max-height: 250px;
 }
+
+.products .box {
+  padding: 30px;
+  margin-bottom: 10px;
+  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+  background: #fff;
+  transition: 0.4s;
+}
+.products .box .content {
+  margin-bottom: 6px;
+}
+.products .box .content > a {
+  font-size: 30px;
+}
+.products .box .icon {
+  float: left;
+}
+.products .box .icon img {
+  /*vertical-align: middle;*/
+  /*border-style: none;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  transition: 0.3s
+}
+.products .box .icon img:hover {
+  width: 100%;
+  transition: 0.3s
+}
+.products .box h4,
+.products .box h4 > a, .products .box h4 > a:hover {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #5f6368;
+  font-family: 'GoogleSans-Local',Roboto,Arial,Sans-Serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+.products .box h4 > span {
+  color: #50d8af;
+}
+.products .box p {
+  margin-bottom: 10px;
+  height: 4.5em;
+  overflow: hidden;
+  color: #5f6368;
+  font-family: Roboto,Arial,Sans-Serif;
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: none;
+}
+.products .box .price {
+  color: #212121;
+  font-family: 'GoogleSans-Local-Bold','Roboto-Bold','HelveticaNeue-Bold',HelveticaNeue,Sans-Serif-Bold,Arial,Sans-Serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 12px;
+}
+.products .price-filters {
+  font-size: 11px;
+}
+.products .price-filters .price-filter {
+  padding-top: 6px;
+}
+.products .price-filters .price-filter input {
+  margin: 0;
+  float: right;
+}
