@@ -103,7 +103,7 @@
                 <br>
                 <form class="searh-form" role="form">
                     <div id="search-form">
-                        <input type="text" class="search form-control" id="search" placeholder="Search..." />
+                        <input type="text" class="search form-control" id="search" placeholder="Search here... to buy products online in India, buy at Best Prices" />
                     </div>
                 </form>
                 <br>
@@ -155,7 +155,11 @@
 <!--                            </div>-->
                         </div>
                     </div>
-                    <div class="col-md-10" id="search-results"></div>
+                    <div class="col-md-10" id="search-results">
+                        <div class="col-lg-12 col-sm-12">
+                            <img id="search-banner" class="search-banner" src="../img/products-search.png" />
+                        </div>
+                    </div>
                     <!-- blogs start -->
 <!--                    <div class="col-md-2 col-sm-4">-->
 <!--                        <div class="product-grid">-->
@@ -201,7 +205,13 @@
                             search_data = data.items;
                         });
                         $('#search').keyup(function(){
-                            var searchField = $(this).val();
+                            searchData(this);
+                        });
+                        document.getElementById("search-banner").onmouseover = function(e) {
+                            searchData(this);
+                        };
+                        function searchData(data) {
+                            var searchField = $(data).val();
                             var regex = new RegExp(searchField, "i");
                             var output = '';
                             $.each(search_data, function(key, val){
@@ -218,24 +228,24 @@
                                     else if (price[0] > 20000 && price[0] <= 50000) { price_class = "price-50000"; }
                                     // var cat_class = "cat-" + val.category.replace(/\s+/g, '-');
                                     output += '' +
-                                    '<div class="col-lg-12 col-sm-12 ' + price_class + '">' +
-                                    '<div class="box wow animated" style="visibility: visible;"> <!-- fadeInLeft -->' +
+                                        '<div class="col-lg-12 col-sm-12 ' + price_class + '">' +
+                                        '<div class="box wow animated" style="visibility: visible;"> <!-- fadeInLeft -->' +
                                         '<div class="row">' +
                                         '<div class="col-md-3">' +
                                         '<div class="icon"><a href="' + val.link + '" target="_blank"><img src="' + val.image + '" alt=""></a></div>' +
-                                    '</div>' +
-                                    '<div class="col-md-9">' +
+                                        '</div>' +
+                                        '<div class="col-md-9">' +
                                         '<h4 class="title"><a href="' + val.link + '" target="_blank">' + val.title + ' <span><i class="ion-medkit"></i></span></a></h4>' +
-                                    '<div class="content">' +
+                                        '<div class="content">' +
                                         '<span class="price">' + val.price + '</span>' +
-                                    '<a href="' + val.link + '" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a>' +
+                                        '<a href="' + val.link + '" target="_blank" data-tip="View more"><i class="fa fa-shopping-cart"></i></a>' +
                                         '<p class="description">' + val.desc + '</p>' +
                                         '<div class="category">' + val.category + '</div>' +
                                         '</div>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>';
+                                        '</div>' +
+                                        '</div>' +
+                                        '</div>' +
+                                        '</div>';
                                 }
                             });
                             $('#search-results').html(output);
@@ -246,7 +256,7 @@
                             $("#price-10000").prop("checked", false);
                             $("#price-20000").prop("checked", false);
                             $("#price-50000").prop("checked", false);
-                        });
+                        }
                     }
                 </script>
             </div>
