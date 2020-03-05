@@ -1092,7 +1092,7 @@ body p {
 }
 
 .products .box {
-  padding: 30px;
+  padding: 20px;
   margin-bottom: 10px;
   box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
   background: #fff;
@@ -1113,7 +1113,7 @@ body p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
   transition: 0.3s
 }
 .products .box .icon img:hover {
@@ -1129,18 +1129,27 @@ body p {
   font-size: 18px;
   line-height: 25px;
 }
+.products .box h4 > a:hover {
+  border-bottom: 1px solid #212121;
+  color: #212121;
+}
 .products .box h4 > span {
   color: #50d8af;
 }
-.products .box p {
+.products .box p.description {
   margin-bottom: 10px;
   height: 4.5em;
   overflow: hidden;
-  color: #5f6368;
-  font-family: Roboto,Arial,Sans-Serif;
+  color: #5f6368 !important;
+  font-family: arial,sans-serif;
   font-size: 14px;
   line-height: 22px;
   text-decoration: none;
+  transition: 0.3s;
+}
+.products .box p.description:hover {
+  height: auto;
+  transition: 0.3s;
 }
 .products .box .price {
   color: #212121;
@@ -1148,6 +1157,13 @@ body p {
   font-size: 18px;
   font-weight: bold;
   padding-right: 12px;
+}
+.products .box .category {
+  color: #5f6368;
+}
+.products .box .category:hover {
+  font-weight: bold;
+  color: #212121;
 }
 .products .price-filters {
   font-size: 11px;
