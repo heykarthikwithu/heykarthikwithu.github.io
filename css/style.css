@@ -818,7 +818,7 @@ ol {
 }
 
 .contact-map {
-  padding-bottom: 110px;
+  padding-bottom: 70px;
 }
 
 .carousel {
@@ -1184,4 +1184,30 @@ body p {
   margin-left: auto;
   margin-right: auto;
   transition: 0.3s
+}
+.site-logo a {
+  color: #001418;
+}
+span.featured-title {
+  border-bottom: 1px solid #001418;
+}
+.achievements-block div strong {
+  border-bottom: 1px solid #001418;
+}
+.achievements-block div strong a {
+  color: #001418;
+}
+.lets-talk-block {
+  margin-bottom: 0;
+}
+.lets-talk-block strong {
+  color: #001418;
+  font-style: normal !important;
+  font-weight: bold !important;
+}
+.lets-talk-block p {
+  text-align: left;
+}
+.about-image img {
+  width: 70%;
 }
