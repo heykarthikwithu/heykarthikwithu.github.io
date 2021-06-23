@@ -368,6 +368,7 @@ ol {
 
 .main-menu ul li {
   display: inline;
+  padding: 0 15px;
 }
 
 .main-menu ul li a {
