@@ -1,17 +1,5 @@
-User-agent: Googlebot
-Allow: /
-Allow: /index.html
-Allow: /about.html
-Allow: /contact.html
-Disallow: /content
-Disallow: /content/
-
 User-agent: *
 Allow: /
 Allow: /index.html
-Allow: /about.html
-Allow: /contact.html
-Disallow: /content
-Disallow: /content/
 
-Sitemap: https://karthikkumardk.co.in/sitemap.xml
+Sitemap: https://karthikkumardk.peoplesblog.co.in/sitemap.xml

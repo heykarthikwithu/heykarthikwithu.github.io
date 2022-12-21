@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  heykarthikwithu_web:
+    build: ./docker-utils/web/
+    ports:
+      - "8085:443"
+    hostname: heykarthikwithu.local
+    volumes:
+      - ./:/var/www/html
