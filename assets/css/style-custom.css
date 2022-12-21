@@ -88,4 +88,5 @@
 #about p.p,
 #contact p.p {
     font-size: var(--bs-body-font-size);
+    margin-bottom: 1rem;
 }
