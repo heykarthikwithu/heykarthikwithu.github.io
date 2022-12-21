@@ -85,3 +85,7 @@
 .lets-talk-block {
     margin: 30px auto;
 }
+#about p.p,
+#contact p.p {
+    font-size: var(--bs-body-font-size);
+}
