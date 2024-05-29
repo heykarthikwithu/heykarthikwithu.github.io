@@ -102,3 +102,71 @@
 #contact .section-title {
     padding-bottom: 0;
 }
+
+
+#hero .container {
+    padding-top: 15px;
+}
+#hero .icon-boxes {
+    margin-top: 30px;
+}
+#hero .icon-box {
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+    margin-bottom: 15px;
+}
+#hero .icon-box .icon {
+    margin-bottom: 15px;
+    padding: unset;
+    transition: all 0.3s ease-in-out;
+    font-size: 36px;
+    line-height: 1;
+    color: #292b2c;
+}
+#hero .icon-box .title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.services .icon-box {
+    padding: 15px;
+}
+section.contact {
+    padding-bottom: unset;
+}
+
+@media (min-width: 768px) {
+
+    #hero .container {
+        padding-top: 80px;
+    }
+    #hero .icon-boxes {
+        margin-top: 100px;
+    }
+    #hero .icon-box {
+        padding: 50px 30px;
+        margin-bottom: unset;
+    }
+    #hero .icon-box .icon {
+        margin-bottom: 20px;
+        padding: unset;
+        padding-top: 10px;
+    }
+    #hero .icon-box .title {
+        margin-bottom: 15px;
+    }
+    .services .icon-box {
+        padding: 70px 30px 80px 30px;
+    }
+    section.contact {
+        padding: 80px 0;
+    }
+    
+    
+}
