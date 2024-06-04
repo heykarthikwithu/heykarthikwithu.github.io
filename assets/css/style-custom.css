@@ -24,7 +24,8 @@
 .about .content p {
     margin-bottom: 1.2rem;
 }
-.about .content a {
+.about .content a,
+.services .services-details a {
     text-decoration-line: underline;
     text-decoration-color: #019cde;
     text-underline-offset: 4px;
@@ -140,6 +141,12 @@
 }
 section.contact {
     padding-bottom: unset;
+}
+section.services {
+    padding-bottom: 40px;
+}
+section.drupal-training {
+    padding-top: 0;
 }
 
 @media (min-width: 768px) {
