@@ -60,6 +60,7 @@
 }
 .services .icon-box {
     padding: 70px 30px 80px 30px;
+    margin-bottom: 15px;
 }
 .services .icon-box .icon {
     margin: unset;
