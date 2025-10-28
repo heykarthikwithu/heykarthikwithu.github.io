@@ -1,10 +1,30 @@
-# The Docker image that will be used to build your app
 image: node:lts
+
+# Define stages
+stages:
+  - build
+  - deploy
+
+# Job to build the app
+build:
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - public/
+  only:
+    - $CI_DEFAULT_BRANCH
+
+# Job to publish to GitLab Pages
 create-pages:
-  pages:
-    # The folder that contains the files to be exposed at the Page URL
-    publish: public
+  stage: deploy
+  script:
+    - echo "Deploying GitLab Pages..."
+  artifacts:
+    paths:
+      - public
   rules:
-    # This ensures that only pushes to the default branch will trigger
-    # a pages deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  publish: public
