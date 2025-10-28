@@ -1,11 +1,10 @@
 image: node:lts
 
-# Define stages
 stages:
   - build
   - deploy
 
-# Job to build the app
+# 1️⃣ Build your app
 build:
   stage: build
   script:
@@ -17,14 +16,14 @@ build:
   only:
     - $CI_DEFAULT_BRANCH
 
-# Job to publish to GitLab Pages
-create-pages:
+# 2️⃣ Deploy to GitLab Pages
+pages:
   stage: deploy
   script:
     - echo "Deploying GitLab Pages..."
   artifacts:
     paths:
       - public
+  publish: public
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-  publish: public
