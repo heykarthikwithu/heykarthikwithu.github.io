@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>node_get_recent() is deprecated in Drupal 10.1.x</title>
+    <meta name="description" content="node_get_recent() is unused in core and is now deprecated, developers can use views or EntityQuery to get the nodes which are recently modified or add" />
+    <link rel="canonical" href="https://peoplesblog.co.in/articles/node-get-recent-is-deprecated-in-drupal-ten.html" />
+    <meta property="og:title" content="node_get_recent() is deprecated in Drupal 10.1.x" />
+    <meta property="og:description" content="node_get_recent() is unused in core and is now deprecated, developers can use views or EntityQuery to get the nodes which are recently modified or add" />
+    <meta property="og:url" content="https://peoplesblog.co.in/articles/node-get-recent-is-deprecated-in-drupal-ten.html" />
+    <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/node-get-recent-is-deprecated-in-drupal-ten.jpg" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:title" content="node_get_recent() is deprecated in Drupal 10.1.x" />
+    <meta name="twitter:description" content="node_get_recent() is unused in core and is now deprecated, developers can use views or EntityQuery to get the nodes which are recently modified or add" />
+    <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/node-get-recent-is-deprecated-in-drupal-ten.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow" />
+    <meta name="Generator" content="Peoples BLOG (https://peoplesblog.co.in)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="google-site-verification" content="oIpwGHdguWnER2N8lKSljpYFSSUvg8A-sFzQkn-xLnU" />
+    <meta name="msvalidate.01" content="9DAE9598E7C9A8CA5C08940C17D62C9B" />
+    <meta name="yandex-verification" content="9407d632c1eaecc4" />
+    <meta name="ahrefs-site-verification" content="db517e36f10b2fd4cd50caabba01509f1a6deced5f75483daee17f3190b6c2cc">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RSZRK91SH"></script>
+    <script>
+        var host = window.location.host;
+        if (host == "peoplesblog.co.in") {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+            gtag("config", "G-3RSZRK91SH");
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Ad -->
+    <script data-ad-client="ca-pub-2683569506254139" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Google Ad -->
+    <link rel="shortcut icon" href="/upload/favicon.webp" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/upload/favicon.webp">
+    <link href="/css/public.min.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "/articles/node-get-recent-is-deprecated-in-drupal-ten.html"
+        },
+        "headline": "node_get_recent() is deprecated in Drupal 10.1.x",
+        "description": "node_get_recent() is unused in core and is now deprecated, developers can use views or EntityQuery to get the nodes which are recently modified or add",
+        "image": "https://peoplesblog.co.in/upload/banners/node-get-recent-is-deprecated-in-drupal-ten.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Karthik Kumar D K"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Peoples BLOG",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+          }
+        },
+        "datePublished": "9th May 2023",
+        "dateModified": "2025-10-28T09:41:41+05:30"
+      }
+    </script>
+</head>
+<body>
+    <div class="global-progress-bar-on-scroll-wrapper">
+        <div class="global-progress-bar-on-scroll" id="globalProgressBarOnScroll"></div>
+    </div>
+    <div id="wrapper">
+        <header class="tech-header header">
+        <div class="container">
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- span class="navbar-toggler-icon"></span -->
+                    <span class=""></span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                  <img src="/upload/logo.png" title="Peoples BLOG" alt="Peoples BLOG" />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item"><a class="nav-link" href="/articles/sci-tech.html" title="Science & Technology">Sci & Tech</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/articles/travel.html" title="Travel">Travel</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/articles/lifestyle.html" title="Lifestyle">Lifestyle</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/articles/food.html" title="Food">Food</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/articles/health.html" title="Health">Health</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/articles/unsolved-mysteries.html" title="Unsolved Mysteries">Unsolved Mysteries</a></li>
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/drupal.html" title="Drupal">Drupal</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/social-media.html" title="Social Media">Social Media</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/coronavirus.html" title="Coronavirus">Coronavirus</a></li -->
+                        </ul>
+                        <ul class="navbar-nav">
+                           <li class="nav-item"><a class="nav-link" href="/articles/index.html" title="Articles">Articles</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/great-people/index.html" title="Great People">Great People</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/quick-read/index.html" title="Quick Read">Quick Read</a></li>
+                           <!-- li class="nav-item"><a target="_blank" class="nav-link" href="/bestproducts/index.html" title="Best Products">Best Products</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/dentofacts/index.html" title="Dentofacts">Dentofacts</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/news/index.html" title="News">News</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/quotes/index.html" title="Quotes">Quotes</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/videos/index.html" title="Videos">Videos</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/about.html" title="About">About</a></li -->
+                           <li class="nav-item"><a class="nav-link search" href="/search.html" title="Search"><i class="fa fa-search"></i><span>Search</span></a></li>
+                        </ul>
+                </div>
+            </nav>
+        </div><!-- end container-fluid -->
+        </header>
+        <section class="section single-wrapper single-article">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-title-area">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/articles/index.html">Articles</a></li>
+                                    <li class="breadcrumb-item"><a href="/articles/drupal.html">Drupal</a></li>
+                                    <li class="breadcrumb-item active">node_get_recent() is deprecated in Drupal 10.1.x</li>
+                                </ol>
+                                <div class="single-post-media">
+                                    <img alt="node_get_recent() is deprecated in Drupal 10.1.x" data-src="/upload/banners/node-get-recent-is-deprecated-in-drupal-ten.jpg" src="/upload/cursor.jpg" class="img-fluid lazy" title="node_get_recent() is deprecated in Drupal 10.1.x" />
+                                </div>
+                                <h1 class="read-article-title">node_get_recent() is deprecated in Drupal 10.1.x</h1>
+                                <div class="blog-meta big-meta">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <small class="articles-author d-none">
+                                                <em class="pl-0">On</em><span>9th May 2023</span>, <span class="last-updated">2025-10-28T09:41:41+05:30</span>
+                                            </small>
+                                            <small class="articles-author">
+                                                <em>By</em><a class="author_item" href="/authors/karthik-kumar-d-k.html">Karthik Kumar D K</a> | <span id="reading-time"></span> read
+                                            </small>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <small class="read-article-section">
+                                                <i class="fa fa-play read-article"> <span>Listen</span></i>
+                                                <i class="fa fa-pause read-article-pause"> <span>Pause</span></i>
+                                                <i class="fa fa-play read-article-resume"> <span>Resume</span></i>
+                                                <i class="fa fa-stop read-article-stop"> <span>Stop</span></i>
+                                            </small>
+                                            <small class="post-sharing-top post-sharing"></small>
+                                        </div>
+                                    </div>
+                                </div><!-- end meta -->
+                            </div><!-- end title -->
+                            <div id="read-article-content" class="blog-content read-article-content">
+                                <div><p><code>node_get_recent()</code> is unused in core and is now deprecated, developers can use views or EntityQuery to get the nodes which are recently modified or added.</p>  <p>Earlier drupal developers used to use the function&nbsp;<code>node_get_recent()</code> to get the recently changed nodes like seen in below example</p>  <p><code>$latest_updated_nodes = node_get_recent(10);</code></p>  <p>Now from Drupal 10.1.x onwards, developers need to use entity query to fetch the recently changed nodes like seen in below example</p>  <div class='google-ad'>     <ins class='adsbygoogle'             style='display:block; text-align:center;'             data-ad-layout='in-article'             data-ad-format='fluid'             data-ad-client='ca-pub-2683569506254139'             data-ad-slot='4812668708'></ins>     <script>         (adsbygoogle = window.adsbygoogle || []).push({});     </script> </div>  <p><code>$nids = \Drupal::entityQuery(&#39;node&#39;)<br /> &nbsp; -&gt;accessCheck(TRUE)<br /> &nbsp; -&gt;condition(&#39;status&#39;, NodeInterface::PUBLISHED)<br /> &nbsp; -&gt;sort(&#39;changed&#39;, &#39;DESC&#39;)<br /> &nbsp; -&gt;range(0, 10)<br /> &nbsp; -&gt;addTag(&#39;node_access&#39;)<br /> &nbsp; -&gt;execute();<br /> $latest_updated_nodes = !empty($nids) ? Node::loadMultiple($nids) : [];</code></p>  <p>Or Drupal Developers can use Views, where you create a View and add sort criteria with the latest updated date and fetch expected number of records.</p>  <p>Thanks for reading the article,&nbsp;<a href='/articles/drupal.html'>for more drupal related articles</a>&nbsp;<a href='/articles/index.html'>read and subscribe to peoples blog articles</a>.</p></div>
+                            </div><!-- end content -->
+                            <div class="blog-title-area tag">
+                                <h4>Labels</h4>
+                                <div class="tag-cloud-single">
+                                    <span><a href="/articles/drupal.html">Drupal</a></span><span><a href="/articles/sci-tech.html">Sci & Tech</a></span>                    </div><!-- end meta -->
+                                <br/>
+                            </div><!-- end title -->
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Uexpsy" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71c3EH8FoWL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7W9R1HM.html" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4542HqY" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71vwtBCsr8L._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSBRDRDV.html" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" class="shop-title-value">Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,040</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,350</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ahotvz" title="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/711rRUziI5L._SX679_.jpg" class="img-fluid lazy" alt="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" title="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CY2QL1JR.html" title="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" class="shop-title-value">HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="article-author-wrapper"><h4>About Author</h4><div class="author peoplesblog-author">                      
+                      <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center author-image-wrapper">
+                            <img data-src="/upload/authors/karthikkumardk.jpeg" alt="Karthik Kumar D K" class="img-fluid rounded-circle lazy" title="Karthik Kumar D K" src="/upload/cursor.jpg" />
+                        </div><!-- end col -->
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 author-content-wrapper">
+                          <h4>Karthik Kumar D K</h4>
+                          <p>Hey, I’m Karthik — a software engineer who enjoys writing about tech, travel, and the world around us. I contribute to PeoplesBLOG to share honest takes on everything from gadgets and digital tools to social issues and everyday experiences.</p><p>I’m curious by nature, detail-driven, and someone who likes to question things that don’t sit right. When I’m not writing or coding, you’ll probably find me on a motorcycle trip or working on a side project.</p>
+                        <div class="topsocial"><a target="_blank" href="https://www.linkedin.com/in/karthikkumardk" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Linkedin"><i class="fa fa-linkedin"></i></a><a target="_blank" href="https://twitter.com/heykarthikwithu" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a><a target="_blank" href="https://www.facebook.com/karthikkumardk" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a target="_blank" href="https://www.instagram.com/kakumdk" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Instagram"><i class="fa fa-instagram"></i></a><a target="_blank" href="https://www.youtube.com/c/karthikkumardk" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Youtube"><i class="fa fa-youtube"></i></a><a target="_blank" href="/karthikkumardk/index.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Website"><i class="fa fa-link"></i></a></div><!-- end social -->
+                        </div><!-- end col -->
+                    </div>
+                  </div></div><div class="google-ad"><!-- Sample Display ad (Horizontal) -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="3399514688"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+                            <!-- div class="custombox clearfix">
+                                <h4 class="">Comments</h4>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="comments-list">
+                                            <div id="disqus_thread"></div>
+                                            <script>
+                                                (function() { // DONT EDIT BELOW THIS LINE
+                                                    var d = document, s = d.createElement("script");
+                                                    s.src = "https://peoplesblog.disqus.com/embed.js";
+                                                    s.setAttribute("data-timestamp", +new Date());
+                                                    (d.head || d.body).appendChild(s);
+                                                })();
+                                            </script>
+                                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                            <script id="dsq-count-scr" src="//peoplesblog.disqus.com/count.js" async></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div --><div class="prevnext-articles">
+              <div class="row"><div class="col-md-6">                      
+                        <div class="row">
+                          <div class="col-md-4">
+                            <a href="/articles/best-way-to-add-additional-estimates-upon-the-original-estimate-for-a-story-in-a-sprint.html" title="Best way to add additional estimates upon the original estimate for a Story in a Sprint?">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/best-way-to-add-additional-estimates-upon-the-original-estimate-for-a-story-in-a-sprint.jpg" alt="Best way to add additional estimates upon the original estimate for a Story in a Sprint?" title="Best way to add additional estimates upon the original estimate for a Story in a Sprint?" src="/upload/cursor.jpg" />
+                            </a>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="prev">
+                              <span>Previous Article</span>
+                              <a href="/articles/best-way-to-add-additional-estimates-upon-the-original-estimate-for-a-story-in-a-sprint.html" title="Best way to add additional estimates upon the original estimate for a Story in a Sprint?">
+                                <span class="title">Best way to add additional estimates upon the original estimate for a Story in a Sprint?</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                    </div><div class="col-md-6">                      
+                        <div class="row">
+                          <div class="col-md-8">
+                            <div class="next">
+                              <span>Next Article</span>
+                              <a href="/articles/why-do-people-use-shortcut-words-like-afk-etc.html" title="Why do people use shortcut words like AFK etc?">
+                                <span class="title">Why do people use shortcut words like AFK etc?</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <a href="/articles/why-do-people-use-shortcut-words-like-afk-etc.html" title="Why do people use shortcut words like AFK etc?">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/why-do-people-use-shortcut-words-like-afk-etc.jpg" alt="Why do people use shortcut words like AFK etc?" title="Why do people use shortcut words like AFK etc?" src="/upload/cursor.jpg" />
+                            </a>
+                          </div>
+                        </div>
+                    </div></div>
+            </div><div class="prevnext-articles-fixed"><a href="/articles/best-way-to-add-additional-estimates-upon-the-original-estimate-for-a-story-in-a-sprint.html" class="prev"><i class="fa fa-angle-left"></i><span>PREV</span></a><a href="/articles/why-do-people-use-shortcut-words-like-afk-etc.html" class="next"><i class="fa fa-angle-right"></i> <span>NEXT</span></a></div>
+                             
+                        </div><!-- end page-wrapper -->
+                    </div><!-- end col -->
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="ads-article sidebar"><div class="google-ad"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ht"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="6687011248"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+        <h2>Related Articles</h2>
+        <div class="popular-articles"><div class="article">
+                <a href="/articles/why-choose-drupal-for-your-blogging-website-in-.html">
+                  Why Choose Drupal for your Blogging Website in 2025?
+                </a>
+              </div><div class="article">
+                <a href="/articles/create-a-custom-drupal-service-and-use-as-a-helper.html">
+                  Create a custom Drupal Service and Use as a Helper
+                </a>
+              </div><div class="article">
+                <a href="/articles/imagefield-slideshow-module-to-render-slideshow-on-drupal-website.html">
+                  Imagefield Slideshow module to render Slideshow on Drupal website
+                </a>
+              </div><div class="article">
+                <a href="/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html">
+                  Unable to install Update Manager, update.settings already exists in active configuration
+                </a>
+              </div><div class="article">
+                <a href="/articles/how-to-run-phpunit-test-cases-on-your-local-machine-for-drupal.html">
+                  How to run PHPUnit test cases on your local machine for Drupal
+                </a>
+              </div></div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">25% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45gVRPW" title="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71ntQ416CTL._SX679_.jpg" class="img-fluid lazy" alt="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" title="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DJS9ZK73.html" title="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" class="shop-title-value">Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,228</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,995</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="google-ad"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ht"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="1110077470"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+    <h2 class="popular-title">Popular Articles</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/articles/dharmasthala-mass-burial-case-sit-seeks-custody-extension-villagers-step-forward-ed-begins-probe.html">
+            Dharmasthala Mass Burial Case: SIT Seeks Custody Extension, Villagers Step Forward, ED Begins Probe
+          </a>
+        </div><div class="article">
+          <a href="/articles/ant-farm-observation-discovering-the-secret-life-of-ants.html">
+            Ant Farm Observation, science experiment for children
+          </a>
+        </div><div class="article">
+          <a href="/articles/dharmasthala-mass-burial-case-sit-investigation-s-latest-developments-augustseptember--.html">
+            Dharmasthala Mass Burial Case: SIT Investigations Latest Developments (August 31, 2025 – September 1, 2025)
+          </a>
+        </div><div class="article">
+          <a href="/articles/defiance-of-gravity-at-lepakshi-temple-andhra-pradesh.html">
+            Defiance of Gravity at Lepakshi Temple, Andhra Pradesh
+          </a>
+        </div><div class="article">
+          <a href="/articles/how-to-introduce-more-joy-into-your-everyday-life.html">
+            How to Introduce More Joy into Your Everyday Life
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">54% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CjRHe9" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619uqfCV8uL._SX679_.jpg" class="img-fluid lazy" alt="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68KM7F5.html" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" class="shop-title-value">AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,649</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,999</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="google-ad"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ht"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="3562170360"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+    <h2>Recent Articles</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/articles/the-sugali-preethi-case-eight-years-of-pain-politics-and-the-unending-wait-for-justice.html">
+            The Sugali Preethi Case: Eight Years of Pain, Politics, and the Unending Wait for Justice
+          </a>
+        </div><div class="article">
+          <a href="/articles/abhaya-kshethram-a-shelter-of-hope-and-dignity.html">
+            Abhaya Kshethram: A Shelter of Hope and Dignity
+          </a>
+        </div><div class="article">
+          <a href="/articles/ufo-sighting-over-kanchenjunga-mystery-above-the-himalayas.html">
+            UFO Sighting Over Kanchenjunga – Mystery Above the Himalayas
+          </a>
+        </div><div class="article">
+          <a href="/articles/the-magnetic-hill-illusion-of-ladakh.html">
+            The Magnetic Hill Illusion of Ladakh
+          </a>
+        </div><div class="article">
+          <a href="/articles/ugrappa-committee-report-on-unnatural-deaths-in-and-around-dharmasthala-belthangady-taluk-dakshina-kannada.html">
+            Ugrappa Committee Report, on Unnatural Deaths in and around Dharmasthala (Belthangady taluk, Dakshina Kannada)
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48kMGOw" title="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/618cNlDLyZL._SX679_.jpg" class="img-fluid lazy" alt="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" title="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZ12FPM1.html" title="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" class="shop-title-value">Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,01,990</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+    <h2>Recent Quick Read</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/quick-read/the-pig-and-the-sheep.html">
+            The Pig and the Sheep
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/the-goose-that-laid-the-golden-eggs.html">
+            The Goose That Laid the Golden Eggs
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/the-three-little-pigs.html">
+            The Three Little Pigs
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/cinderella.html">
+            Cinderella
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/snow-white.html">
+            Snow White
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">50% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40lZDUH" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" class="img-fluid lazy" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSKDPF9N.html" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" class="shop-title-value">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,997</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,995</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+    <h2>Recent Great People</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/great-people/verghese-kurien.html">
+            Verghese Kurien
+          </a>
+        </div><div class="article">
+          <a href="/great-people/vikram-batra.html">
+            Vikram Batra
+          </a>
+        </div><div class="article">
+          <a href="/great-people/nisargadatta-maharaj.html">
+            Nisargadatta Maharaj
+          </a>
+        </div><div class="article">
+          <a href="/great-people/asha-bhosle.html">
+            Asha Bhosle
+          </a>
+        </div><div class="article">
+          <a href="/great-people/paul-chater.html">
+            Paul Chater
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">58% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41PackK" title="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81+Csy-WQwL._SX679_.jpg" class="img-fluid lazy" alt="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" title="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07MNNH484.html" title="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" class="shop-title-value">VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,199</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">93% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3JxMFLP" title="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61fTfbdaszL._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" title="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C497MSQN.html" title="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" class="shop-title-value">Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,099</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">15% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4afwxuP" title="OnePlus Pad Go 28.85cm (11.35 inch) 2.4K 7:5 Ratio ReadFit Eye Care LCD Display, Dolby Atmos Quad Speakers,Wi-Fi Only, 8GB RAM 128 GB ROM Expandable Up-to 1TB, Twin Mint Colour" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51oj5gE7P+L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad Go 28.85cm (11.35 inch) 2.4K 7:5 Ratio ReadFit Eye Care LCD Display, Dolby Atmos Quad Speakers,Wi-Fi Only, 8GB RAM 128 GB ROM Expandable Up-to 1TB, Twin Mint Colour" title="OnePlus Pad Go 28.85cm (11.35 inch) 2.4K 7:5 Ratio ReadFit Eye Care LCD Display, Dolby Atmos Quad Speakers,Wi-Fi Only, 8GB RAM 128 GB ROM Expandable Up-to 1TB, Twin Mint Colour" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CJ94X1NV.html" title="OnePlus Pad Go 28.85cm (11.35 inch) 2.4K 7:5 Ratio ReadFit Eye Care LCD Display, Dolby Atmos Quad Speakers,Wi-Fi Only, 8GB RAM 128 GB ROM Expandable Up-to 1TB, Twin Mint Colour" class="shop-title-value">OnePlus Pad Go 28.85cm (11.35 inch) 2.4K 7:5 Ratio ReadFit Eye Care LCD Display, Dolby Atmos Quad Speakers,Wi-Fi Only, 8GB RAM 128 GB ROM Expandable Up-to 1TB, Twin Mint Colour</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3SddOrB" title="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BGKLI+cWL._SX679_.jpg" class="img-fluid lazy" alt="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" title="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DLW427YG.html" title="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" class="shop-title-value">Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,498</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3JMAI86" title="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619FbHGS4rL._SX679_.jpg" class="img-fluid lazy" alt="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" title="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F8VHRFBX.html" title="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" class="shop-title-value">Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>69,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,18,490</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="google-ad"><!-- Sample Display ad (Horizontal Home 3) -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="4899516730"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+            </div><!-- end container -->
+        </section><footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-2 col-half-offset" id="p6">
+                      <div class="widget">
+                          <h2 class="widget-title">Diverse</h2>
+                          <div class="link-widget">
+                              <ul class="mobile">
+                                <li><a target="_blank" title="News" href="/news/index.html">News</a></li>
+                                <li><a target="_blank" title="Shopping" href="/shopping/index.html">Shopping</a></li>
+                                <li><a target="_blank" title="Dentofacts" href="/dentofacts/index.html">Dentofacts</a></li>
+                                <!-- li><a title="Quotes" href="/quotes/index.html">Quotes</a></li -->
+                                <!-- li><a title="Videos" href="/videos/index.html">Videos</a></li -->
+                                <li><a target="_blank" title="Alcohol" href="/alcohol/index.html">Alcohol</a></li>
+                                <li><a target="_blank" title="Seeadler Tech" href="/seeadlertech/index.html">Seeadler Tech</a></li>
+                                <!-- li><a target="_blank" title="Best Products" href="/bestproducts/index.html">Best Products</a></li -->
+                                <li><a target="_blank" title="Sri Vedanta Swarajya Sangam" href="/sri-vedanta-swarajya-sangam/index.html">Sri Vedanta Swarajya Sangam</a></li>  
+                                <li><a title="Website Development Services" href="/software/index.html">Website Development Services</a></li>                                  
+                              </ul>
+                          </div><!-- end link-widget -->
+                      </div><!-- end widget -->
+                    </div>
+                    <div class="col-md-2 col-xs-2 col-half-offset" id="p5">
+                      <div class="widget">
+                          <h2 class="widget-title">Misc</h2>
+                          <div class="link-widget">
+                              <ul class="mobile">
+                                <li><a title="About" href="/about.html">About</a></li>
+                                <li><a title="Contact" href="/contact.html">Contact</a></li>
+                                <li><a title="Privacy" href="/privacy.html">Privacy</a></li>
+                                <li><a title="T & C" href="/terms-and-conditions.html">T & C</a></li>
+                                <li><a title="Authors" href="/authors/index.html">Authors</a></li>
+                                <li><a title="Site Links" href="/site-links.html">Site Links</a></li>
+                                <li><a title="SoftTools" href="/software/softtools.html">SoftTools</a></li>
+                              </ul>
+                          </div><!-- end link-widget -->
+                      </div><!-- end widget -->
+                    </div>
+                    <div class="col-md-2 col-xs-2 col-half-offset" id="p3">
+                        <div class="widget">
+                            <h2 class="widget-title">Recent</h2>
+                            <div class="link-widget">
+                                <ul class="blog-list-homepage-footer mobile">
+<li><a href="/articles/crime.html" title="Crime" aria-label="Crime">Crime</a></li><li><a href="/articles/children.html" title="Children" aria-label="Children">Children</a></li><li><a href="/articles/india.html" title="India" aria-label="India">India</a></li><li><a href="/articles/ladakh.html" title="Ladakh" aria-label="Ladakh">Ladakh</a></li><li><a href="/articles/dharmasthala.html" title="Dharmasthala" aria-label="Dharmasthala">Dharmasthala</a></li><li><a href="/articles/self.html" title="Self" aria-label="Self">Self</a></li><li><a href="/articles/medical.html" title="Medical" aria-label="Medical">Medical</a></li>
+                                </ul>
+                            </div><!-- end link-widget -->
+                        </div><!-- end widget -->
+                    </div>
+                    <div class="col-md-5 col-xs-2" id="p1">
+                        <div class="widget first">
+                            <div class="footer-text text-left">
+                                <h2 class="widget-title">Stay Connected</h2>
+                                <div class="post-sharing-footer social">
+                                  <a rel="noreferrer" href="https://www.linkedin.com/company/peoples-blog" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Linkedin"><i class="fa fa-linkedin"></i> <span>Linkedin</span></a>    
+                                  <a rel="noreferrer" href="https://twitter.com/_PeoplesBLOG" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a>  
+                                  <!-- a rel="noreferrer" href="https://peoplesblog.quora.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Quora"><i class="fa fa-quora"></i> <span>Quora</span></a -->
+                                  <a rel="noreferrer" href="https://www.facebook.com/peoplesblog1989" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+                                  <!-- a rel="noreferrer" href="https://t.me/PeoplesBLOG" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Join us on Telegram"><i class="fa fa-telegram"></i> <span>Telegram</span></a -->
+                                  <!-- a rel="noreferrer" href="https://www.whatsapp.com/channel/0029Va53IROAO7RH6S0fPv1x" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Join us on WhatsApp"><i class="fa fa-whatsapp"></i><span>WhatsApp</span></a -->
+                                  <!-- a rel="noreferrer" href="https://www.instagram.com/_PeoplesBLOG" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i> <span>Instagram</span></a -->
+                                  <!-- a rel="noreferrer" href="https://in.pinterest.com/heykarthikwithu/peoples-blog" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a -->
+	                              </div>
+                                <h2 class="widget-title subscribe">Subscribe to latest Articles</h2>
+                                <div class="newsletter-widget-subscribe newsletter-widget text-left">
+                                    <form name="subscribe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse" class="form-inline" target="_blank"><input type="text" class="form-control" placeholder="Enter your email address" name="entry.1045781291" required=""><button type="submit" class="newsletter-widget-subscribe-button btn btn-primary">Subscribe</button></form>
+                                </div>
+                            </div><!-- end footer-text -->
+                        </div><!-- end widget -->
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div class="widget utilities-wrapper">
+                      <div class="link-widget">
+                        <ul class="mobile utilities">
+                          <li><a title="Feeds" href="/feeds/index.html">Feeds</a></li>
+                          <li><a title="Sitemaps" href="/sitemaps/index.html">Sitemaps</a></li>
+                          <li><a title="RSS" href="/feeds/index.xml">RSS</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright">
+                            <span class="_copyright">Copyright <i class="fa fa-copyright"></i> 2014 - 2025, peoplesblog.co.in</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </footer>
+  <div id="site-fixed-ad-container">
+      <div class="container-fluid">
+        <span class="x d-none"><i class="fa fa-close"></i></span>
+        <div class="google-ad"><!-- Fixed 1 -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-2683569506254139"
+        data-ad-slot="6876537913"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script></div>
+      </div>
+  </div>
+  
+    <!-- Sticky Announcement -->
+    <div id="sticky-announcement-container" class="sticky-announcement-container d-none">
+      <a href="/bestproducts/products/reviews/index.html" target="_blank">  
+        <div class="left">  
+          <img class="img-fluid mb-4" data-src="/bestproducts/assets/img/home-banner-1.svg" src="/bestproducts/assets/img/home-banner-1.svg" alt="Shop Smarter with Our Reviews!">
+          <h3>Shop Smarter with Our Reviews!</h3>
+          <p>We sift through the noise to bring you only the best products. Read our in-depth reviews and make your shopping experience seamless!</p>
+          <div class="cta">Read the Reviews</div>
+        </div>
+      </a>
+      <a href="/bestproducts/products/index.html" target="_blank">
+        <div class="right">
+          <img class="img-fluid mb-4" data-src="/bestproducts/assets/img/home-banner-2.png" src="/bestproducts/assets/img/home-banner-2.png" alt="">
+          <h3>Discounts Just for You!</h3>
+          <p>Don't miss out on our exclusive offers! Browse our collection of discounted products and find great deals before they are gone</p>
+          <div class="cta">Grab your Discount</div>
+        </div>
+      </a>
+      <div class="close">X</div>
+    </div><!-- div class="dmtop">Scroll to Top</div -->
+    </div><!-- end wrapper -->
+    <!-- JS -->
+    <script src="/js/public.min.js"></script>
+    <!-- Policy -->
+    <div id="policy-container">
+       <div class="container-fluid policy-container">
+          <div class="title">
+              <span>We Need Your Consent</span>
+              <span class="x"><i class="fa fa-close"></i></span>
+          </div>
+          <div class="desc">
+             <span>By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance your site navigation experience.</span>
+          </div>
+          <div class="policy-button">I Accept Cookies</div>
+       </div>
+    </div>
+    <!-- Google Translate -->
+    <!-- script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: "es"}, "google_translate_element");
+        }
+    </script -->
+    <!-- script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script -->
+    <script type="text/javascript">
+      var cId =  "200482";
+      (function(d, t) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://cdn0.cuelinks.com/js/" : "http://cdn0.cuelinks.com/js/")  + "cuelinksv2.js";
+        document.getElementsByTagName("body")[0].appendChild(s);
+      }());
+    </script>
+</body>
+</html>

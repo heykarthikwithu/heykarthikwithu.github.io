@@ -1,0 +1,28 @@
+
+        <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Redirecting...</title>
+                <script>
+                    // Immediately redirect before rendering
+                    (function() {
+                        const url = window.location.href;
+                        if (url.includes("/bestproducts/products/index.html")) {
+                            window.location.replace(url.replace("/bestproducts/products/index.html", "/shopping/reviews/index.html"));
+                        }
+                        if (url.includes("/bestproducts/products/")) {
+                            window.location.replace(url.replace("/bestproducts/products/", "/shopping/reviews/"));
+                        }
+                        if (url.includes("/bestproducts/products")) {
+                            window.location.replace(url.replace("/bestproducts/products", "/shopping/reviews"));
+                        }
+                    })();
+                </script>
+            </head>
+            <body>
+            </body>
+        </html>    
+    
