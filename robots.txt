@@ -11,7 +11,6 @@ Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /search.html
 Allow: /feeds/index.html
-Allow: /quotes/index.html
 Allow: /software/index.html
 Allow: /software/softtools.html
 Allow: /software/world-clock.html
@@ -1234,14 +1233,6 @@ Allow: /articles/webops.html
 Allow: /articles/work.html
 Allow: /articles/world.html
 Allow: /articles/yercaud.html
-Allow: /news/index.html
-Allow: /news/privacy-policy.html
-Allow: /news/terms-and-conditions.html
-Allow: /news/about.html
-Allow: /alcohol/index.html
-Allow: /alcohol/privacy-policy.html
-Allow: /alcohol/terms-and-conditions.html
-Allow: /alcohol/about.html
 Allow: /dentofacts/index.html
 Allow: /dentofacts/privacy-policy.html
 Allow: /dentofacts/terms-and-conditions.html
@@ -1345,26 +1336,6 @@ Allow: /sri-vedanta-swarajya-sangam/books/veda-rahashamulu.html
 Allow: /sri-vedanta-swarajya-sangam/books/divya-jeevana-jyoti.html
 Allow: /sri-vedanta-swarajya-sangam/spiritual-practices/index.html
 Allow: /karthikkumardk/index.html
-Allow: /seeadlertech/index.html
-Allow: /seeadlertech/hire-us.html
-Allow: /seeadlertech/drupal-services/index.html
-Allow: /seeadlertech/drupal-services/drupal-consulting.html
-Allow: /seeadlertech/drupal-services/drupal-support-maintenance.html
-Allow: /seeadlertech/drupal-services/drupal-seo-optimization.html
-Allow: /seeadlertech/drupal-services/drupal-theming.html
-Allow: /seeadlertech/drupal-services/drupal-development.html
-Allow: /seeadlertech/drupal-training/index.html
-Allow: /seeadlertech/drupal-training/courses/index.html
-Allow: /seeadlertech/drupal-training/courses/content-types-media-views.html
-Allow: /seeadlertech/drupal-training/courses/git-fundamentals-for-drupal.html
-Allow: /seeadlertech/drupal-training/courses/introduction-to-drupal.html
-Allow: /seeadlertech/drupal-training/courses/module-development-beginner.html
-Allow: /seeadlertech/drupal-training/courses/module-development-intermediate.html
-Allow: /seeadlertech/drupal-training/courses/php-fundamentals-for-drupal.html
-Allow: /seeadlertech/drupal-training/courses/theme-development-fundamentals.html
-Allow: /seeadlertech/drupal-training/courses/theme-development-in-practice.html
-Allow: /seeadlertech/drupal-training/webinars/index.html
-Allow: /seeadlertech/drupal-training/webinars/introduction-to-drupal.html
 Allow: /shopping/faq.html
 Allow: /shopping/comparisons/1755262825.html
 Allow: /shopping/comparisons/1758515437.html
@@ -2105,7 +2076,6 @@ Allow: /shopping/index.html
 
 Sitemap: https://peoplesblog.co.in/sitemaps/articles.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/quick-read.xml
-Sitemap: https://peoplesblog.co.in/sitemaps/quotes.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/authors.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/labels.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/pages.xml
