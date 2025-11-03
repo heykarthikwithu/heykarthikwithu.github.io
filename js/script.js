@@ -218,12 +218,15 @@ function getStoredValue(key) {
 function writeSocialShareLinks() {
     var title = $(document).find("title").text().replaceAll("|", "-");
     var url = window.location.href;
-    var hashtags = 'People&#039;sBlog'
-    var linkedin = 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + url;
-    var twitter = 'https://twitter.com/share?url=' + url + '&amp;text=' + title + '&amp;hashtags=' + hashtags;
-    var facebook = 'http://www.facebook.com/sharer.php?u=' + url;
-    var whatsapp = 'https://web.whatsapp.com/send?text=' + url;
-    var whatsapp_phone = 'https://api.whatsapp.com/send?text=' + url;
+    var hashtags = 'PeoplesBLOG';
+    // var linkedin = 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + url;
+    var linkedin = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
+    // var twitter = 'https://twitter.com/share?url='+url+'&amp;text='+title+'&amp;hashtags='+hashtags;
+    var twitter = 'https://twitter.com/intent/tweet?url='+url+'&text='+title;
+    var facebook = 'http://www.facebook.com/sharer/sharer.php?u='+url;
+    var whatsapp = 'https://web.whatsapp.com/send?text='+url;
+    // var whatsapp_phone = 'https://api.whatsapp.com/send?text='+url;
+    var whatsapp_phone = 'https://api.whatsapp.com/send?text='+title+'%20'+url+'%20'+hashtags;
     var mail = 'mailto:?Subject=' + title + '&amp;Body=' + title + ' ' + url + '';
     var output = '' +
         '<ul class="list-inline">' +
