@@ -278,6 +278,33 @@
         document.getElementsByTagName("body")[0].appendChild(s);
       }());
     </script>
+    <script>
+      (function() {
+        const item = sessionStorage.getItem("human_verified");
+        const validHours = 6;
+        const now = Date.now();
+
+        let verified = false;
+
+        if (item) {
+          try {
+            const data = JSON.parse(item);
+            if (now - data.ts < validHours * 60 * 60 * 1000) {
+              verified = true;
+            } else {
+              sessionStorage.removeItem("human_verified"); // expired
+            }
+          } catch (e) {
+            sessionStorage.removeItem("human_verified");
+          }
+        }
+        if (!verified) {
+          const next = encodeURIComponent(location.pathname + location.search);
+          location.href = `/verify.html?next=${next}`;
+        }
+      })();
+    </script>
+  
     </body>
 </html>
   
