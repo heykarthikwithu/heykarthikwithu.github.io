@@ -1879,6 +1879,7 @@ Allow: /shopping/reviews/B09JZ2SJVL.html
 Allow: /shopping/reviews/B0CXPG97DD.html
 Allow: /shopping/reviews/B00HVXS7WC.html
 Allow: /shopping/index.html
+Disallow: /verify.html
 
 Sitemap: https://peoplesblog.co.in/sitemaps/articles.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/quick-read.xml
