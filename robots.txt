@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-manali-solo-trip-plan.html
 Allow: /articles/abhaya-kshethram-a-shelter-of-hope-and-dignity.html
 Allow: /articles/ufo-sighting-over-kanchenjunga-mystery-above-the-himalayas.html
 Allow: /articles/the-magnetic-hill-illusion-of-ladakh.html
