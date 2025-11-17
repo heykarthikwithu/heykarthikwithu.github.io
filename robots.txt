@@ -582,7 +582,6 @@ Allow: /articles/tips-to-live-a-happy-life-how-to-be-happy.html
 Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
 Allow: /articles/if-farmers-have-greater-choice-to-sell-to-whoever-and-wherever.html
 Allow: /articles/world-cancer-day-february-th.html
-Allow: /articles/benefits-of-reading-why-you-should-read.html
 Allow: /articles/send-mail-with-custom-email-template-and-with-dynamic-values-via-drupal-mail-service.html
 Allow: /articles/api-docs-drupal-module-simple-way-to-show-oas-api-docs-on-drupal-portal.html
 Allow: /articles/saving-vegetable-seeds-for-your-backyard-gardening.html
