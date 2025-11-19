@@ -9,6 +9,10 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
+Allow: /articles/bangalore-to-kudremukh-solo-trip-plan.html
+Allow: /articles/be-aware-of-chain-snatchers-tips-to-prevent-chain-snatching.html
+Allow: /articles/is-life-worth-living-without-marriage.html
 Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
 Allow: /articles/bangalore-to-horanadu-solo-trip-plan.html
 Allow: /articles/the-importance-of-the-vedas-in-modern-hinduism.html
@@ -19,7 +23,6 @@ Allow: /articles/get-more-pleasure-from-lotus-position.html
 Allow: /articles/growing-enough-food-to-feed-a-family.html
 Allow: /articles/dealing-with-uncertainty-to-be-happier-and-less-anxious.html
 Allow: /articles/courtship-time-make-it-memorable-ways-to-add-some-spice.html
-Allow: /articles/is-life-worth-living-without-marriage.html
 Allow: /articles/bangalore-to-kukke-subramanya-trip-plan.html
 Allow: /articles/bangalore-to-dharmasthala-solo-trip-plan.html
 Allow: /articles/abhaya-kshethram-a-shelter-of-hope-and-dignity.html
@@ -81,7 +84,6 @@ Allow: /articles/the-importance-of-post-surgical-rehabilitation-programs.html
 Allow: /articles/how-to-prepare-kesar-pista-milkshake.html
 Allow: /articles/building-a-healthy-work-culture-overcoming-office-politics-in-the-tech-sector.html
 Allow: /articles/bangalore-to-mekedatu-gorge-adventure-solo-trip-plan.html
-Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
 Allow: /articles/vedic-philosophy-the-foundation-of-indian-thought.html
 Allow: /articles/why-choose-drupal-for-your-blogging-website-in-.html
 Allow: /articles/diy-geodesic-dome-science-experiment-for-children.html
@@ -372,7 +374,6 @@ Allow: /articles/drupal-jsonapi-deep-dive-part-one.html
 Allow: /articles/lines-worth-reading.html
 Allow: /articles/covid--vaccination-in-india.html
 Allow: /articles/custom-batch-processing-drupal--update-nodes-batch-api.html
-Allow: /articles/be-aware-of-chain-snatchers-tips-to-prevent-chain-snatching.html
 Allow: /articles/world-wildlife-day.html
 Allow: /articles/things-to-know-about-proofreading.html
 Allow: /articles/reduce-the-risk-of-becoming-a-sexual-assault-victim.html
@@ -435,7 +436,6 @@ Allow: /articles/three-days-trip-from-bangalore-to-ooty.html
 Allow: /articles/bangalore-murdeshwar-gokarna-goa-dandeli.html
 Allow: /articles/two-days-trip-from-bangalore-to-mysore.html
 Allow: /articles/solo-travel-to-gokarna-for-three-nights-and-four-days.html
-Allow: /articles/bangalore-to-kudremukh-solo-trip-plan.html
 Allow: /articles/create-a-volcanic-eruption-with-baking-soda-and-vinegar.html
 Allow: /articles/imagefield-slideshow-module-to-render-slideshow-on-drupal-website.html
 Allow: /articles/carrot-fried-rice-recipe-andhra-style.html
