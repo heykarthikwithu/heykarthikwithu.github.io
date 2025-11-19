@@ -9,14 +9,16 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
+Allow: /articles/bangalore-to-horanadu-solo-trip-plan.html
+Allow: /articles/the-importance-of-the-vedas-in-modern-hinduism.html
+Allow: /articles/bangalore-to-srisailam-solo-trip-plan.html
 Allow: /articles/bangalore-to-manali-solo-trip-plan.html
 Allow: /articles/things-that-a-teacher-should-tell-their-students.html
 Allow: /articles/get-more-pleasure-from-lotus-position.html
 Allow: /articles/growing-enough-food-to-feed-a-family.html
 Allow: /articles/dealing-with-uncertainty-to-be-happier-and-less-anxious.html
 Allow: /articles/courtship-time-make-it-memorable-ways-to-add-some-spice.html
-Allow: /articles/bangalore-to-srisailam-solo-trip-plan.html
-Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
 Allow: /articles/is-life-worth-living-without-marriage.html
 Allow: /articles/bangalore-to-kukke-subramanya-trip-plan.html
 Allow: /articles/bangalore-to-dharmasthala-solo-trip-plan.html
@@ -106,7 +108,6 @@ Allow: /articles/understanding-azure-key-vault-key-concepts-and-best-practices.h
 Allow: /articles/ahmedabad-to-shamlaji-temple-pilgrimage.html
 Allow: /articles/tesselation-art-science-experiment-for-children.html
 Allow: /articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html
-Allow: /articles/the-importance-of-the-vedas-in-modern-hinduism.html
 Allow: /articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html
 Allow: /articles/how-community-health-campaigns-save-lives.html
 Allow: /articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html
@@ -449,7 +450,6 @@ Allow: /articles/look-deep-into-the-nature-and-then-you-will-understand-everythi
 Allow: /articles/technical-information-to-know-about-the-solar-energy-setup-for-your-home.html
 Allow: /articles/why-is-spinach-called-a-superfood.html
 Allow: /articles/is-it-true-that-peace-begins-with-a-smile.html
-Allow: /articles/bangalore-to-horanadu-solo-trip-plan.html
 Allow: /articles/ways-to-understand-the-tricks-played-by-people-around-you.html
 Allow: /articles/how-to-setup-solar-power-for-you-home.html
 Allow: /articles/how-to-be-selfish-and-focus-more-on-self.html
@@ -759,6 +759,7 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/u-r-ananthamurthy.html
 Allow: /great-people/rg-bhandarkar.html
 Allow: /great-people/nilakantha-somayaji.html
 Allow: /great-people/verghese-kurien.html
@@ -818,7 +819,6 @@ Allow: /great-people/raghunath-panigrahi.html
 Allow: /great-people/om-prakash-munjal.html
 Allow: /great-people/radha-gobinda-kar.html
 Allow: /great-people/krishna-reddy.html
-Allow: /great-people/u-r-ananthamurthy.html
 Allow: /great-people/chiranjeevi.html
 Allow: /great-people/harishankar-parsai.html
 Allow: /great-people/bismillah-khan.html
