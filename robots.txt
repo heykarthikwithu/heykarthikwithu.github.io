@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html
 Allow: /articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html
 Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
 Allow: /articles/bangalore-to-kudremukh-solo-trip-plan.html

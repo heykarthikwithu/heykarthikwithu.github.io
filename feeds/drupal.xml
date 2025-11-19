@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
+			<link>https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</link>
+			<description>If you&amp;rsquo;ve been hearing people in the Drupal world talk about &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;Canvas,&amp;rdquo; you might think it&amp;rsquo;s some complicated feature only developers care about. Honestly, that&amp;rsquo;s what I assumed at first too. But the more I tried these things, the more I realised they&amp;rsquo;re not really built for developers &amp;mdash; they&amp;rsquo;re built for the people who actually u</description>
+			<pubDate>Wed, 19 Nov 2025 20:23:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</guid>
+    </item><item>
 			<title>Why Choose Drupal for your Blogging Website in 2025?</title>
 			<link>https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</link>
 			<description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.  If you&amp;rsquo;re serious about blogging and need a powerful, future-proo</description>
@@ -348,13 +355,6 @@
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/configuration-management-via-quicksilver-on-pantheon.html</guid>
-    </item><item>
-			<title>Drupal Configuration management (Local, Dev, Test and Live)</title>
-			<link>https://peoplesblog.co.in/articles/drupal-configuration-management-local-dev-test-and-live.html</link>
-			<description>In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contributed modules and version control.  Drupal 8 onwards configuration has been saved in the yml files in a consistent manner, which includes all the enabled modules, all the content types, vocabularies, fields &amp;amp; views.  Making the configurations direct</description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-configuration-management-local-dev-test-and-live.html</guid>
     </item>
 </channel>
 </rss>

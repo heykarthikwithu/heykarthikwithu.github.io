@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
+    <meta name="description" content="If you&rsquo;ve been hearing people in the Drupal world talk about &ldquo;AI&rdquo; and &ldquo;Canvas,&rdquo; you might think it&rsquo;s some complica" />
+    <link rel="canonical" href="https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html" />
+    <meta property="og:title" content="AI + Canvas in Drupal — From a Normal Person’s Point of View" />
+    <meta property="og:description" content="If you&rsquo;ve been hearing people in the Drupal world talk about &ldquo;AI&rdquo; and &ldquo;Canvas,&rdquo; you might think it&rsquo;s some complica" />
+    <meta property="og:url" content="https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html" />
+    <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.jpeg" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:title" content="AI + Canvas in Drupal — From a Normal Person’s Point of View" />
+    <meta name="twitter:description" content="If you&rsquo;ve been hearing people in the Drupal world talk about &ldquo;AI&rdquo; and &ldquo;Canvas,&rdquo; you might think it&rsquo;s some complica" />
+    <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow" />
+    <meta name="Generator" content="Peoples BLOG (https://peoplesblog.co.in)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="google-site-verification" content="oIpwGHdguWnER2N8lKSljpYFSSUvg8A-sFzQkn-xLnU" />
+    <meta name="msvalidate.01" content="9DAE9598E7C9A8CA5C08940C17D62C9B" />
+    <meta name="yandex-verification" content="9407d632c1eaecc4" />
+    <meta name="ahrefs-site-verification" content="db517e36f10b2fd4cd50caabba01509f1a6deced5f75483daee17f3190b6c2cc">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RSZRK91SH"></script>
+    <script>
+        var host = window.location.host;
+        if (host == "peoplesblog.co.in") {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+            gtag("config", "G-3RSZRK91SH");
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Ad -->
+    <script data-ad-client="ca-pub-2683569506254139" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Google Ad -->
+    <link rel="shortcut icon" href="/upload/favicon.webp" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/upload/favicon.webp">
+    <link href="/css/public.min.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html"
+        },
+        "headline": "AI + Canvas in Drupal — From a Normal Person’s Point of View",
+        "description": "If you&rsquo;ve been hearing people in the Drupal world talk about &ldquo;AI&rdquo; and &ldquo;Canvas,&rdquo; you might think it&rsquo;s some complica",
+        "image": "https://peoplesblog.co.in/upload/banners/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.jpeg",
+        "author": {
+          "@type": "Person",
+          "name": "Karthik Kumar D K"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Peoples BLOG",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+          }
+        },
+        "datePublished": "19th Nov 2025",
+        "dateModified": "2025-11-19T20:26:10+05:30"
+      }
+    </script>
+</head>
+<body>
+    <div class="global-progress-bar-on-scroll-wrapper">
+        <div class="global-progress-bar-on-scroll" id="globalProgressBarOnScroll"></div>
+    </div>
+    <div id="wrapper">
+        <header class="tech-header header">
+        <div class="container">
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- span class="navbar-toggler-icon"></span -->
+                    <span class=""></span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                  <img src="/upload/logo.png" title="Peoples BLOG" alt="Peoples BLOG" />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/sci-tech.html" title="Science & Technology">Sci & Tech</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/travel.html" title="Travel">Travel</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/lifestyle.html" title="Lifestyle">Lifestyle</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/food.html" title="Food">Food</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/health.html" title="Health">Health</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/unsolved-mysteries.html" title="Unsolved Mysteries">Unsolved Mysteries</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/drupal.html" title="Drupal">Drupal</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/social-media.html" title="Social Media">Social Media</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/articles/coronavirus.html" title="Coronavirus">Coronavirus</a></li -->
+                        </ul>
+                        <ul class="navbar-nav">
+                           <li class="nav-item"><a class="nav-link" href="/articles/index.html" title="Articles">Articles</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/great-people/index.html" title="Great People">Great People</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/quick-read/index.html" title="Quick Read">Quick Read</a></li>
+                           <li class="nav-item"><a target="_blank" class="nav-link" href="/shopping/index.html" title="Shopping">Shopping</a></li>
+                           <!-- li class="nav-item"><a class="nav-link" href="/dentofacts/index.html" title="Dentofacts">Dentofacts</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/news/index.html" title="News">News</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/quotes/index.html" title="Quotes">Quotes</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/videos/index.html" title="Videos">Videos</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link" href="/about.html" title="About">About</a></li -->
+                           <!-- li class="nav-item"><a class="nav-link search" href="/search.html" title="Search"><i class="fa fa-search"></i><span>Search</span></a></li -->
+                        </ul>
+                </div>
+            </nav>
+        </div><!-- end container-fluid -->
+        </header>
+        <section class="section single-wrapper single-article">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-title-area">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/articles/index.html">Articles</a></li>
+                                    <li class="breadcrumb-item"><a href="/articles/drupal.html">Drupal</a></li>
+                                    <li class="breadcrumb-item active">AI + Canvas in Drupal — From a Normal Person’s Point of View</li>
+                                </ol>
+                                <div class="single-post-media">
+                                    <img alt="AI + Canvas in Drupal — From a Normal Person’s Point of View" data-src="/upload/banners/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.jpeg" src="/upload/cursor.jpg" class="img-fluid lazy" title="AI + Canvas in Drupal — From a Normal Person’s Point of View" />
+                                </div>
+                                <h1 class="read-article-title">AI + Canvas in Drupal — From a Normal Person’s Point of View</h1>
+                                <div class="blog-meta big-meta">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <small class="articles-author d-none">
+                                                <em class="pl-0">On</em><span>19th Nov 2025</span>, <span class="last-updated">2025-11-19T20:26:10+05:30</span>
+                                            </small>
+                                            <!-- small class="articles-author">
+                                                <em>By</em><a class="author_item" href="/authors/karthik-kumar-d-k.html">Karthik Kumar D K</a> | <span id="reading-time"></span> read
+                                            </small -->
+                                            <small class="articles-author">
+                                                <em>By</em>Karthik Kumar D K | <span id="reading-time"></span> read
+                                            </small>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <small class="read-article-section">
+                                                <i class="fa fa-play read-article"> <span>Listen</span></i>
+                                                <i class="fa fa-pause read-article-pause"> <span>Pause</span></i>
+                                                <i class="fa fa-play read-article-resume"> <span>Resume</span></i>
+                                                <i class="fa fa-stop read-article-stop"> <span>Stop</span></i>
+                                            </small>
+                                            <small class="post-sharing-top post-sharing"></small>
+                                        </div>
+                                    </div>
+                                </div><!-- end meta -->
+                            </div><!-- end title -->
+                            <div id="read-article-content" class="blog-content read-article-content">
+                                <div><p>If you&rsquo;ve been hearing people in the Drupal world talk about &ldquo;AI&rdquo; and &ldquo;Canvas,&rdquo; you might think it&rsquo;s some complicated feature only developers care about. Honestly, that&rsquo;s what I assumed at first too. But the more I tried these things, the more I realised they&rsquo;re not really built <em>for</em> developers &mdash; they&rsquo;re built for the people who actually use the website daily.</p>  <p>I&rsquo;m talking about the editors, the content writers, the marketing folks, and even small business owners who just want to update a page without calling their developer or agency every single time.</p>  <p>Let me try to explain this in simple English and without any technical jargon.</p>  <h2>So what is this &ldquo;Canvas&rdquo; thing anyway?</h2>  <p>Think of Canvas as the &ldquo;whiteboard mode&rdquo; of your website.</p>  <p>Earlier, making or editing a page in Drupal felt a bit like filling a long form:</p>  <ul> <li>enter title</li> <li>choose layout</li> <li>fill fields</li> <li>save</li> <li>preview</li> <li>then go back and adjust</li> </ul>  <p>It worked, but it didn&rsquo;t feel natural. Almost like you&rsquo;re operating a machine instead of writing a page.</p>  <p>Canvas flips this.</p>  <p>You literally <em>see</em> the page as you create it. You can drag things, move them, create new blocks directly in place &mdash; almost like playing with building blocks. No jumping screens. No waiting.</p>  <p>For a normal user, this is the difference between:</p>  <ul> <li>editing a PDF form<br /> vs</li> <li>writing directly on the page</li> </ul>  <p>One feels mechanical. The other feels free.</p>  <h2>And where does AI come in?</h2>  <p>This is the interesting part.</p>  <p>If Canvas is the whiteboard, then AI is like the smart friend leaning over your shoulder and saying,<br /> &ldquo;Hey, want me to finish that paragraph?&rdquo;<br /> or<br /> &ldquo;Should I create a clean layout for this page?&rdquo;<br /> or<br /> &ldquo;Do you want an image for this section?&rdquo;</p>  <p>You don&rsquo;t have to know design.<br /> You don&rsquo;t need to know how blocks work.<br /> You don&rsquo;t need to know CSS or layouts.</p>  <p>You just tell it what you want.</p>  <p>Something like:</p>  <blockquote> <p>&ldquo;Create a simple About Us section with two photos and a small intro paragraph.&rdquo;</p> </blockquote>  <p>And it does the boring layout work.</p>  <p>You then just tweak things.</p>  <h2>Why this actually matters to normal website owners</h2>  <p>Most small businesses and bloggers I know struggle with one thing:<br /> <strong>content updates</strong>.</p>  <p>Not content writing&hellip;<br /> but <strong>updating the website itself</strong>.</p>  <p>Even adding a simple section becomes a mini project:</p>  <ul> <li>ask developer</li> <li>developer is busy</li> <li>wait 2&ndash;3 days</li> <li>multiple revisions</li> <li>bill at the end</li> </ul>  <p>With Canvas + AI, the work becomes:</p>  <ul> <li>open page</li> <li>type &ldquo;Add a services section with three boxes&rdquo;</li> <li>adjust the text manually</li> <li>done</li> </ul>  <p>You won&rsquo;t build a whole website with AI (thankfully), but it removes all the small time-consuming steps.</p>  <h2>Is it perfect? No. But it&rsquo;s evolving fast.</h2>  <p>Right now, it&rsquo;s not 100% smooth.<br /> Sometimes the AI gets too creative.<br /> Sometimes it over-simplifies.</p>  <p>But compared to how Drupal used to be 5&ndash;6 years ago, this is a huge shift.<br /> You can see the direction clearly&hellip; Drupal wants normal people to feel comfortable editing their websites.</p>  <p>And I honestly like that shift.</p>  <h2>What this means for the future</h2>  <p>This is just my personal opinion &mdash; but the entire web is moving in this direction:</p>  <ul> <li>People want to create pages like they&rsquo;re writing in Google Docs.</li> <li>They want to drag things where they want them.</li> <li>They don&rsquo;t want to open a ticket for small edits.</li> <li>They don&rsquo;t want to learn &ldquo;how Drupal works.&rdquo;</li> </ul>  <p>Canvas + AI is Drupal&rsquo;s way of saying:<br /> &ldquo;Okay, we hear you. Here&rsquo;s a simpler way.&rdquo;</p>  <p>And if they continue refining this, I think non-technical users will finally feel that Drupal is <em>their</em> tool too, not just something developers enjoy.</p>  <h2>Final thoughts</h2>  <p>Every time I try the new Canvas tools, I notice one thing &mdash; this is the first time in a long time that Drupal feels genuinely excited about the editing experience.</p>  <p>Not the backend, not the code &mdash; but the simple act of building a page.</p>  <p>And that&rsquo;s a good sign for everyone who uses a website but doesn&rsquo;t want to become a developer.</p>  <p>If Drupal manages to blend AI and Canvas smoothly, it will make life easier for thousands of website owners who are tired of complicated CMS systems.</p>  <p>And honestly&hellip; that&rsquo;s long overdue.</p>  <p>Thanks for reading the article,&nbsp;<a href='/articles/drupal.html'>for more drupal related articles</a>&nbsp;<a href='/articles/index.html'>read and subscribe to peoples blog articles</a>.</p> </div>
+                            </div><!-- end content -->
+                            <div class="blog-title-area tag">
+                                <h4>Labels</h4>
+                                <div class="tag-cloud-single">
+                                    <span><a href="/articles/drupal.html">Drupal</a></span><span><a href="/articles/sci-tech.html">Sci & Tech</a></span>                    </div><!-- end meta -->
+                                <br/>
+                            </div><!-- end title -->
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">69% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pLc5ZR" title="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71sRBqqrOpL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" title="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CCV8DBFH.html" title="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" class="shop-title-value">Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">52% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gQqQXB" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nhlYFnOhL._SX679_.jpg" class="img-fluid lazy" alt="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09X1P3J6G.html" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" class="shop-title-value">Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,500</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Uexpsy" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71c3EH8FoWL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7W9R1HM.html" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="article-author-wrapper"><h4>About Author</h4><div class="author peoplesblog-author">                      
+                      <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center author-image-wrapper">
+                            <img data-src="/upload/authors/karthikkumardk.jpeg" alt="Karthik Kumar D K" class="img-fluid rounded-circle lazy" title="Karthik Kumar D K" src="/upload/cursor.jpg" />
+                        </div><!-- end col -->
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 author-content-wrapper">
+                          <h4>Karthik Kumar D K</h4>
+                          <p>Hey, I’m Karthik — a software engineer who enjoys writing about tech, travel, and the world around us. I contribute to PeoplesBLOG to share honest takes on everything from gadgets and digital tools to social issues and everyday experiences.</p><p>I’m curious by nature, detail-driven, and someone who likes to question things that don’t sit right. When I’m not writing or coding, you’ll probably find me on a motorcycle trip or working on a side project.</p>
+                        <div class="topsocial"><a target="_blank" href="https://www.linkedin.com/in/karthikkumardk" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Linkedin"><i class="fa fa-linkedin"></i></a><a target="_blank" href="/karthikkumardk/index.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Website"><i class="fa fa-link"></i></a></div><!-- end social -->
+                        </div><!-- end col -->
+                    </div>
+                  </div></div><div class="google-ad"><!-- Sample Display ad (Horizontal) -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="3399514688"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+                            <!-- div class="custombox clearfix">
+                                <h4 class="">Comments</h4>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="comments-list">
+                                            <div id="disqus_thread"></div>
+                                            <script>
+                                                (function() { // DONT EDIT BELOW THIS LINE
+                                                    var d = document, s = d.createElement("script");
+                                                    s.src = "https://peoplesblog.disqus.com/embed.js";
+                                                    s.setAttribute("data-timestamp", +new Date());
+                                                    (d.head || d.body).appendChild(s);
+                                                })();
+                                            </script>
+                                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                            <script id="dsq-count-scr" src="//peoplesblog.disqus.com/count.js" async></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div --><div class="prevnext-articles">
+              <div class="row"><div class="col-md-6">                      
+                        <div class="row">
+                          <div class="col-md-4">
+                            <a href="/articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html" title="Why Madanapalle Deserves to Be the Headquarters of the Proposed Annamayya District?">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/Madanapalle-should-be-the-headquarters-of-the-proposed-Annamayya-District.png" alt="Why Madanapalle Deserves to Be the Headquarters of the Proposed Annamayya District?" title="Why Madanapalle Deserves to Be the Headquarters of the Proposed Annamayya District?" src="/upload/cursor.jpg" />
+                            </a>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="prev">
+                              <span>Previous Article</span>
+                              <a href="/articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html" title="Why Madanapalle Deserves to Be the Headquarters of the Proposed Annamayya District?">
+                                <span class="title">Why Madanapalle Deserves to Be the Headquarters of the Proposed Annamayya District?</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                    </div></div>
+            </div><div class="prevnext-articles-fixed"><a href="/articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html" class="prev"><i class="fa fa-angle-left"></i><span>PREV</span></a></div>
+                             
+                        </div><!-- end page-wrapper -->
+                    </div><!-- end col -->
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="ads-article sidebar"><div class="google-ad"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ht"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="6687011248"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+        <h2>Related Articles</h2>
+        <div class="popular-articles"><div class="article">
+                <a href="/articles/why-choose-drupal-for-your-blogging-website-in-.html">
+                  Why Choose Drupal for your Blogging Website in 2025?
+                </a>
+              </div><div class="article">
+                <a href="/articles/filter-content-between-date-ranges-drupal.html">
+                  Filter content between Date ranges in Drupal 7
+                </a>
+              </div><div class="article">
+                <a href="/articles/create-related-content-different-content-types-through-taxonomy-drupal.html">
+                  Create Related Content of Different Content Types through Taxonomy in Drupal7
+                </a>
+              </div><div class="article">
+                <a href="/articles/drupal-jsonapi-get-post-patch-and-delete-samples.html">
+                  Drupal JSON:API GET, POST, PATCH and DELETE Samples
+                </a>
+              </div><div class="article">
+                <a href="/articles/secure-website-running-apache-lets-encrypt-linux.html">
+                  Secure Website running on Apache with Let's Encrypt on Linux
+                </a>
+              </div></div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">0% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3sE37F3" title="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/7135keEf6AL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" title="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BKKPRMM6.html" title="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" class="shop-title-value">Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,500</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,500</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="google-ad"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ht"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="1110077470"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+    <h2 class="popular-title">Popular Articles</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/articles/things-that-a-teacher-should-tell-their-students.html">
+            Things That a Teacher Should Tell Their Students
+          </a>
+        </div><div class="article">
+          <a href="/articles/get-more-pleasure-from-lotus-position.html">
+            Get more Pleasure from Lotus position!
+          </a>
+        </div><div class="article">
+          <a href="/articles/growing-enough-food-to-feed-a-family.html">
+            Growing Enough Food to Feed a Family Year-Round by Yourself
+          </a>
+        </div><div class="article">
+          <a href="/articles/dealing-with-uncertainty-to-be-happier-and-less-anxious.html">
+            Dealing with Uncertainty, To Be Happier and Less Anxious
+          </a>
+        </div><div class="article">
+          <a href="/articles/courtship-time-make-it-memorable-ways-to-add-some-spice.html">
+            Courtship time, Make it memorable, ways to add some spice
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dNp2vh" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/512J3gqzLuL._SX679_.jpg" class="img-fluid lazy" alt="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSG412HD.html" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" class="shop-title-value">Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>34,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>67,790</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="google-ad"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-ht"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="3562170360"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+    <h2>Recent Articles</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html">
+            AI + Canvas in Drupal — From a Normal Person’s Point of View
+          </a>
+        </div><div class="article">
+          <a href="/articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html">
+            Why Madanapalle Deserves to Be the Headquarters of the Proposed Annamayya District?
+          </a>
+        </div><div class="article">
+          <a href="/articles/the-mysterious-death-of-actress-divya-bharti.html">
+            The Mysterious Death of Actress Divya Bharti – A Detailed and Realistic Look
+          </a>
+        </div><div class="article">
+          <a href="/articles/bangalore-to-kudremukh-solo-trip-plan.html">
+            Bangalore to Kudremukh Solo Trip Plan
+          </a>
+        </div><div class="article">
+          <a href="/articles/be-aware-of-chain-snatchers-tips-to-prevent-chain-snatching.html">
+            Be Aware of Chain Snatchers: Complete Guide & Practical Safety Tips to Prevent Chain Snatching in India
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">17% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4aiqbuu" title="Apple iPhone 15 (128 GB) - Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 15 (128 GB) - Black" title="Apple iPhone 15 (128 GB) - Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHX1W1XY.html" title="Apple iPhone 15 (128 GB) - Black" class="shop-title-value">Apple iPhone 15 (128 GB) - Black</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,900</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+    <h2>Recent Quick Read</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/quick-read/the-pig-and-the-sheep.html">
+            The Pig and the Sheep
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/the-goose-that-laid-the-golden-eggs.html">
+            The Goose That Laid the Golden Eggs
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/the-three-little-pigs.html">
+            The Three Little Pigs
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/cinderella.html">
+            Cinderella
+          </a>
+        </div><div class="article">
+          <a href="/quick-read/snow-white.html">
+            Snow White
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">37% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ye4DtA" title="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81srIkdAHcL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" title="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D9P28RCV.html" title="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>49,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>78,900</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+    <h2>Recent Great People</h2>
+    <div class="popular-articles"><div class="article">
+          <a href="/great-people/u-r-ananthamurthy.html">
+            U. R. Ananthamurthy
+          </a>
+        </div><div class="article">
+          <a href="/great-people/rg-bhandarkar.html">
+            R. G. Bhandarkar – Life, Contributions, Works and Legacy
+          </a>
+        </div><div class="article">
+          <a href="/great-people/nilakantha-somayaji.html">
+            Nilakantha Somayaji – Life, Works, Discoveries and Legacy of the Kerala Genius
+          </a>
+        </div><div class="article">
+          <a href="/great-people/verghese-kurien.html">
+            Verghese Kurien
+          </a>
+        </div><div class="article">
+          <a href="/great-people/vikram-batra.html">
+            Vikram Batra
+          </a>
+        </div>
+    </div>
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-12 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41XuCbQ" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lfG3UaigL._SX679_.jpg" class="img-fluid lazy" alt="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CNRNH49R.html" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" class="shop-title-value">GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,290</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,998</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+      <div class="shop-data amazon-ad">
+      <div class="shop-data-results">
+      <div class="row"><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">49% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gti7bO" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vc14MtETL._SX679_.jpg" class="img-fluid lazy" alt="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BSXMR5TG.html" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" class="shop-title-value">JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3O980xf" title="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/810SJkiwLZL._SX679_.jpg" class="img-fluid lazy" alt="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" title="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09MVT1NDJ.html" title="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" class="shop-title-value">BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,237</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,485</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">29% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/43R6f0x" title="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71bYFsyEFFL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" title="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BR4176V7.html" title="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" class="shop-title-value">Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,390</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">24% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XfoR75" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71VW8LmqqPL._SX679_.jpg" class="img-fluid lazy" alt="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQPGG8KG.html" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" class="shop-title-value">Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,999</span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  <div class="google-ad"><!-- Sample Display ad (Horizontal Home 3) -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2683569506254139"
+     data-ad-slot="4899516730"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+            </div><!-- end container -->
+        </section><footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-2 col-half-offset d-none" id="p6">
+                      <div class="widget">
+                          <h2 class="widget-title">Diverse</h2>
+                          <div class="link-widget">
+                              <ul class="mobile">
+                                <!-- li><a target="_blank" title="News" href="/news/index.html">News</a></li -->
+                                <li><a target="_blank" title="Shopping" href="/shopping/index.html">Shopping</a></li>
+                                <!-- li><a target="_blank" title="Dentofacts" href="/dentofacts/index.html">Dentofacts</a></li -->
+                                <!-- li><a title="Quotes" href="/quotes/index.html">Quotes</a></li -->
+                                <!-- li><a title="Videos" href="/videos/index.html">Videos</a></li -->
+                                <!-- li><a target="_blank" title="Alcohol" href="/alcohol/index.html">Alcohol</a></li -->
+                                <!-- li><a target="_blank" title="Best Products" href="/bestproducts/index.html">Best Products</a></li -->
+                                <!-- li><a target="_blank" title="Sri Vedanta Swarajya Sangam" href="/sri-vedanta-swarajya-sangam/index.html">Sri Vedanta Swarajya Sangam</a></li -->  
+                                <!-- li><a target="_blank" title="Seeadler Tech" href="/seeadlertech/index.html">Seeadler Tech</a></li -->
+                                <!-- li><a target="_blank" title="SoftTools" href="/software/softtools.html">SoftTools</a></li -->
+                                <!-- li><a title="Website Development Services" href="/software/index.html">Website Development Services</a></li -->                                  
+                              </ul>
+                          </div><!-- end link-widget -->
+                      </div><!-- end widget -->
+                    </div>
+                    <div class="col-md-3 col-xs-2 col-half-offset" id="p5">
+                      <div class="widget">
+                          <h2 class="widget-title">Misc</h2>
+                          <div class="link-widget">
+                              <ul class="mobile">
+                                <li><a title="About" href="/about.html">About</a></li>
+                                <li><a title="Contact" href="/contact.html">Contact</a></li>
+                                <li><a title="Privacy" href="/privacy.html">Privacy</a></li>
+                                <li><a title="T & C" href="/terms-and-conditions.html">T & C</a></li>
+                                <!-- li><a title="Authors" href="/authors/index.html">Authors</a></li -->
+                                <li><a title="Site Links" href="/site-links.html">Site Links</a></li>
+                                <!-- li><a title="SoftTools" href="/software/softtools.html">SoftTools</a></li -->
+                              </ul>
+                          </div><!-- end link-widget -->
+                      </div><!-- end widget -->
+                    </div>
+                    <div class="col-md-3 col-xs-2 col-half-offset" id="p3">
+                        <div class="widget">
+                            <h2 class="widget-title">Recent</h2>
+                            <div class="link-widget">
+                                <ul class="blog-list-homepage-footer mobile">
+<li><a href="/articles/drupal.html" title="Drupal" aria-label="Drupal">Drupal</a></li><li><a href="/articles/social-media.html" title="Social Media" aria-label="Social Media">Social Media</a></li><li><a href="/articles/movie.html" title="Movie" aria-label="Movie">Movie</a></li><li><a href="/articles/solo.html" title="Solo" aria-label="Solo">Solo</a></li><li><a href="/articles/india.html" title="India" aria-label="India">India</a></li>
+                                </ul>
+                            </div><!-- end link-widget -->
+                        </div><!-- end widget -->
+                    </div>
+                    <div class="col-md-6 col-xs-2" id="p1">
+                        <div class="widget first">
+                            <div class="footer-text text-left">
+                                <h2 class="widget-title">Stay Connected</h2>
+                                <div class="post-sharing-footer social">
+                                  <a rel="noreferrer" href="https://www.linkedin.com/company/peoples-blog" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Linkedin"><i class="fa fa-linkedin"></i> <span>Linkedin</span></a>    
+                                  <a rel="noreferrer" href="https://twitter.com/_PeoplesBLOG" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a>  
+                                  <!-- a rel="noreferrer" href="https://peoplesblog.quora.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Quora"><i class="fa fa-quora"></i> <span>Quora</span></a -->
+                                  <a rel="noreferrer" href="https://www.facebook.com/peoplesblog1989" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Follow us on Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+                                  <!-- a rel="noreferrer" href="https://t.me/PeoplesBLOG" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Join us on Telegram"><i class="fa fa-telegram"></i> <span>Telegram</span></a -->
+                                  <!-- a rel="noreferrer" href="https://www.whatsapp.com/channel/0029Va53IROAO7RH6S0fPv1x" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Join us on WhatsApp"><i class="fa fa-whatsapp"></i><span>WhatsApp</span></a -->
+                                  <!-- a rel="noreferrer" href="https://www.instagram.com/_PeoplesBLOG" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i> <span>Instagram</span></a -->
+                                  <!-- a rel="noreferrer" href="https://in.pinterest.com/heykarthikwithu/peoples-blog" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a -->
+	                              </div>
+                                <h2 class="widget-title subscribe">Subscribe to latest Articles</h2>
+                                <div class="newsletter-widget-subscribe newsletter-widget text-left">
+                                    <form name="subscribe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse" class="form-inline" target="_blank"><input type="text" class="form-control" placeholder="Enter your email address" name="entry.1045781291" required=""><button type="submit" class="newsletter-widget-subscribe-button btn btn-primary">Subscribe</button></form>
+                                </div>
+                            </div><!-- end footer-text -->
+                        </div><!-- end widget -->
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div class="widget utilities-wrapper">
+                      <div class="link-widget">
+                        <ul class="mobile utilities">
+                          <li><a title="Feeds" href="/feeds/index.html">Feeds</a></li>
+                          <li><a title="Sitemaps" href="/sitemaps/index.html">Sitemaps</a></li>
+                          <li><a title="RSS" href="/feeds/index.xml">RSS</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright">
+                            <span class="_copyright">Copyright <i class="fa fa-copyright"></i> 2014 - 2025, peoplesblog.co.in</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </footer>
+  <div id="site-fixed-ad-container">
+      <div class="container-fluid">
+        <span class="x d-none"><i class="fa fa-close"></i></span>
+        <div class="google-ad"><!-- Fixed 1 -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-2683569506254139"
+        data-ad-slot="6876537913"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script></div>
+      </div>
+  </div>
+  <!-- div class="dmtop">Scroll to Top</div -->
+    </div><!-- end wrapper -->
+    <!-- JS -->
+    <script src="/js/public.min.js"></script>
+    <!-- Policy -->
+    <div id="policy-container">
+       <div class="container-fluid policy-container">
+          <div class="title">
+              <span>We Need Your Consent</span>
+              <span class="x"><i class="fa fa-close"></i></span>
+          </div>
+          <div class="desc">
+             <span>By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance your site navigation experience.</span>
+          </div>
+          <div class="policy-button">I Accept Cookies</div>
+       </div>
+    </div>
+    <!-- Google Translate -->
+    <!-- script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: "es"}, "google_translate_element");
+        }
+    </script -->
+    <!-- script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script -->
+    <script type="text/javascript">
+      var cId =  "200482";
+      (function(d, t) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://cdn0.cuelinks.com/js/" : "http://cdn0.cuelinks.com/js/")  + "cuelinksv2.js";
+        document.getElementsByTagName("body")[0].appendChild(s);
+      }());
+    </script>
+</body>
+</html>
