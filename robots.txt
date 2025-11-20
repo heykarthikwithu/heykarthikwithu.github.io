@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html
 Allow: /articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html
 Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
@@ -305,7 +306,6 @@ Allow: /articles/what-are-the-types-of-unconscious-bias-that-people-make.html
 Allow: /articles/bangalore-to-anamudi-solo-trip-plan.html
 Allow: /articles/how-to-maintain-solar-panel-setup-at-your-home-to-get-the-best-results.html
 Allow: /articles/best-food-to-have-for-better-bowel-movement.html
-Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/how-to-set-up-a-monitoring-system-for-the-solar-panel-at-your-home.html
 Allow: /articles/colima-similar-tool-like-docker-desktop-for-drupal-development.html
 Allow: /articles/eight-vegetables-that-can-be-grown-at-home.html
@@ -760,6 +760,7 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/bhagwati-charan-verma.html
 Allow: /great-people/u-r-ananthamurthy.html
 Allow: /great-people/rg-bhandarkar.html
@@ -931,7 +932,6 @@ Allow: /great-people/nargis.html
 Allow: /great-people/francis-younghusband.html
 Allow: /great-people/charan-singh.html
 Allow: /great-people/tenzing-norgay.html
-Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/k-satchidanandan.html
 Allow: /great-people/nt-rama-rao.html
 Allow: /great-people/dv-paluskar.html
