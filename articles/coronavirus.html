@@ -40,7 +40,8 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- Google Ad -->
-    <script data-ad-client="ca-pub-2683569506254139" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
     <!-- Google Ad -->
     <link rel="shortcut icon" href="/upload/favicon.webp" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/upload/favicon.webp">
@@ -342,5 +343,20 @@
         document.getElementsByTagName("body")[0].appendChild(s);
       }());
     </script>
+    <!-- Google Ad -->
+    <!-- script data-ad-client="ca-pub-2683569506254139" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script -->
+    <script>
+      window.addEventListener("load", function() {
+        setTimeout(function() {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+          s.setAttribute("data-ad-client", "ca-pub-2683569506254139");
+          document.body.appendChild(s);
+        }, 1500); // delay by 1.5 seconds
+      });
+    </script>
+    <!-- Google Ad -->
+    
   </body>
   </html>
