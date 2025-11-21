@@ -1781,11 +1781,12 @@ h3.author-articles-heading::after {
     padding: 5px;
 }
 #policy-container .policy-container {
-    margin: 15px auto;
+    margin: 10px auto;
 }
 #policy-container .policy-container .title {
     font-size: 20px;
-    margin: 15px auto;
+    /* margin: 15px auto; */
+    margin: 0 auto;
 }
 #policy-container .policy-container .title .x {
     position: absolute;
@@ -1795,7 +1796,8 @@ h3.author-articles-heading::after {
     cursor: pointer;
 }
 #policy-container .policy-container .desc {
-    margin: 15px auto;
+    /* margin: 15px auto; */
+    margin: 5px auto;
     font-size: 14px;
 }
 #policy-container .policy-container .policy-button {
@@ -1807,7 +1809,8 @@ h3.author-articles-heading::after {
     padding: 6px;
     text-align: center;
     /* width: 50%; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-top: 10px;
 }
 #policy-container .policy-container .policy-button:hover {
     cursor: pointer;
