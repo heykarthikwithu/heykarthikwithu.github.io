@@ -9,6 +9,8 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-varkala-solo-trip-plan.html
+Allow: /articles/short-trip-from-bangalore-to-ghati.html
 Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html
 Allow: /articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html
@@ -286,7 +288,6 @@ Allow: /articles/few-relationship-events-in-life-those-change-peoples-personalit
 Allow: /articles/bangalore-to-tiruttani-solo-travel-plan.html
 Allow: /articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html
 Allow: /articles/how-to-deal-with-people-who-talk-too-much.html
-Allow: /articles/short-trip-from-bangalore-to-ghati.html
 Allow: /articles/bangalore-to-jog-falls-solo-trip-plan.html
 Allow: /articles/bangalore-to-kanyakumari-solo-trip-plan.html
 Allow: /articles/why-is-corporate-life-so-challenging-and-difficult.html
@@ -508,7 +509,6 @@ Allow: /articles/harsh-truth-of-life-that-you-learn-from-your-bad-time.html
 Allow: /articles/film-canister-rocket-science-experiment-for-children.html
 Allow: /articles/api-docs-drupal-contributed-module-for-your-developer-portal.html
 Allow: /articles/hoop-and-straw-airplane-kids-science-experiment.html
-Allow: /articles/bangalore-to-varkala-solo-trip-plan.html
 Allow: /articles/leaf-breathing-science-experiment-for-children.html
 Allow: /articles/how-can-you-identify-intelligent-people.html
 Allow: /articles/marshmallow-catapult-science-experiment-for-children.html
@@ -760,6 +760,9 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/amrish-puri.html
+Allow: /great-people/satyendranath-dutta.html
+Allow: /great-people/ng-chandavarkar.html
 Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/bhagwati-charan-verma.html
 Allow: /great-people/u-r-ananthamurthy.html
@@ -904,7 +907,6 @@ Allow: /great-people/anita-desai.html
 Allow: /great-people/norman-pritchard.html
 Allow: /great-people/rama-narayanan.html
 Allow: /great-people/tom-alter.html
-Allow: /great-people/amrish-puri.html
 Allow: /great-people/abid-hussain.html
 Allow: /great-people/vishnu-prabhakar.html
 Allow: /great-people/ramakant-desai.html
@@ -960,7 +962,6 @@ Allow: /great-people/manik-bandopadhyay.html
 Allow: /great-people/obaidullah-aleem.html
 Allow: /great-people/sukhdev-thapar.html
 Allow: /great-people/debendranath-tagore.html
-Allow: /great-people/ng-chandavarkar.html
 Allow: /great-people/sambhaji.html
 Allow: /great-people/sukanta-bhattacharya.html
 Allow: /great-people/balasaraswati.html
@@ -1007,7 +1008,6 @@ Allow: /great-people/prasanta-chandra-mahalanobis.html
 Allow: /great-people/pv-narasimha-rao.html
 Allow: /great-people/bankim-chandra-chattopadhyay.html
 Allow: /great-people/mahendra-bhatnagar.html
-Allow: /great-people/satyendranath-dutta.html
 Allow: /great-people/harindranath-chattopadhyay.html
 Allow: /great-people/bhaktivinoda-thakur.html
 Allow: /great-people/john-hunt-baron-hunt.html
