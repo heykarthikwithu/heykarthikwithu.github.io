@@ -9,6 +9,10 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/how-to-increase-breast-size-naturally.html
+Allow: /articles/south-indian-hindu-marriage-andhra-style.html
+Allow: /articles/vedic-philosophy-the-foundation-of-indian-thought.html
+Allow: /articles/bangalore-to-tiruttani-solo-travel-plan.html
 Allow: /articles/bangalore-to-kukke-subramanya-trip-plan.html
 Allow: /articles/bangalore-to-manali-solo-trip-plan.html
 Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
@@ -72,7 +76,6 @@ Allow: /articles/instant-hot-ice-science-experiment-for-children.html
 Allow: /articles/how-to-prepare-pasta-at-home.html
 Allow: /articles/how-to-cook-onion-rava-dosa-at-home-onion-rava-dosa-recipe.html
 Allow: /articles/using-indexes-to-speed-up-sql-queries.html
-Allow: /articles/how-to-increase-breast-size-naturally.html
 Allow: /articles/how-to-prepare-paneer-tikka.html
 Allow: /articles/egg-in-a-bottle-science-experiment-for-children.html
 Allow: /articles/india-stands-tall-navigating-geopolitical-tensions-without-bowing-to-pressure.html
@@ -90,7 +93,6 @@ Allow: /articles/the-importance-of-post-surgical-rehabilitation-programs.html
 Allow: /articles/how-to-prepare-kesar-pista-milkshake.html
 Allow: /articles/building-a-healthy-work-culture-overcoming-office-politics-in-the-tech-sector.html
 Allow: /articles/bangalore-to-mekedatu-gorge-adventure-solo-trip-plan.html
-Allow: /articles/vedic-philosophy-the-foundation-of-indian-thought.html
 Allow: /articles/why-choose-drupal-for-your-blogging-website-in-.html
 Allow: /articles/diy-geodesic-dome-science-experiment-for-children.html
 Allow: /articles/time-travel-possibilities-in-quantum-physics.html
@@ -286,7 +288,6 @@ Allow: /articles/best-places-in-karnataka-to-travel-solo-in-hot-summer.html
 Allow: /articles/gummy-bear-osmosis-science-experiment-for-children.html
 Allow: /articles/what-percentage-of-indians-are-vegetarian.html
 Allow: /articles/few-relationship-events-in-life-those-change-peoples-personality.html
-Allow: /articles/bangalore-to-tiruttani-solo-travel-plan.html
 Allow: /articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html
 Allow: /articles/how-to-deal-with-people-who-talk-too-much.html
 Allow: /articles/bangalore-to-jog-falls-solo-trip-plan.html
@@ -357,7 +358,6 @@ Allow: /articles/what-to-know-for-estimating-projects.html
 Allow: /articles/studies-estimate-long-covid-has-over-two-hundred-symptoms.html
 Allow: /articles/local-environment-setup-with-lando-and-drupal.html
 Allow: /articles/fix-ssl-error-in-citrix-web-receiver-on-ubuntu.html
-Allow: /articles/south-indian-hindu-marriage-andhra-style.html
 Allow: /articles/security-hardening-nginx-response-headers.html
 Allow: /articles/black-fungus-detected-in-coronavirus-patients.html
 Allow: /articles/is-feedback-really-necessary-in-persons-life.html
