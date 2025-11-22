@@ -9,6 +9,8 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/why-is-corporate-life-so-challenging-and-difficult.html
+Allow: /articles/bangalore-to-thekkady-solo-trip-plan.html
 Allow: /articles/how-to-increase-breast-size-naturally.html
 Allow: /articles/south-indian-hindu-marriage-andhra-style.html
 Allow: /articles/vedic-philosophy-the-foundation-of-indian-thought.html
@@ -292,7 +294,6 @@ Allow: /articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-we
 Allow: /articles/how-to-deal-with-people-who-talk-too-much.html
 Allow: /articles/bangalore-to-jog-falls-solo-trip-plan.html
 Allow: /articles/bangalore-to-kanyakumari-solo-trip-plan.html
-Allow: /articles/why-is-corporate-life-so-challenging-and-difficult.html
 Allow: /articles/create-a-custom-drupal-service-and-use-as-a-helper.html
 Allow: /articles/leaf-chromatography-science-experiment-for-children.html
 Allow: /articles/bangalore-to-udupi-solo-trip-plan.html
@@ -487,7 +488,6 @@ Allow: /articles/lava-lamp-science-experiment-for-children.html
 Allow: /articles/horrible-secrets-that-you-should-share-with-your-partner-and-how.html
 Allow: /articles/self-inflating-balloon-science-experiment-for-children.html
 Allow: /articles/vankaya-pappu-recipe-andhra-style.html
-Allow: /articles/bangalore-to-thekkady-solo-trip-plan.html
 Allow: /articles/horrible-secrets-that-you-cannot-share-with-your-partner-and-why.html
 Allow: /articles/best-things-for-a-person-to-do-after-forty-years-of-age.html
 Allow: /articles/bangalore-to-alleppey-solo-trip-plan.html
