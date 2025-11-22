@@ -9,6 +9,9 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-hampi-solo-trip-plan.html
+Allow: /articles/bangalore-to-trivandrum-solo-travel-plan.html
+Allow: /articles/is-it-true-that-the-truth-always-comes-out.html
 Allow: /articles/why-is-corporate-life-so-challenging-and-difficult.html
 Allow: /articles/bangalore-to-thekkady-solo-trip-plan.html
 Allow: /articles/how-to-increase-breast-size-naturally.html
@@ -229,7 +232,6 @@ Allow: /articles/configuring-debugging-drupal--phpstorm-xdebug-ubuntu.html
 Allow: /articles/unsaid-confessions.html
 Allow: /articles/oranges-let-us-know-how-to-peel-off-eat-along-with-its-benefits.html
 Allow: /articles/what-is-some-good-advice-and-tips-for-traveling-alone.html
-Allow: /articles/is-it-true-that-the-truth-always-comes-out.html
 Allow: /articles/how-to-prepare-jaljeera.html
 Allow: /articles/diy-potato-battery-science-experiment-for-children.html
 Allow: /articles/pcos-symptoms-causes-diagnosis-treatment-recovery.html
@@ -265,7 +267,6 @@ Allow: /articles/aegir-docker-develop-test-easier-deployment.html
 Allow: /articles/ten-best-beaches-to-travel-solo-in-india.html
 Allow: /articles/how-to-tackle-emotional-resilience.html
 Allow: /articles/how-to-prepare-methi-thepla.html
-Allow: /articles/bangalore-to-trivandrum-solo-travel-plan.html
 Allow: /articles/creativity-boosting-activities-to-have-a-peaceful-life.html
 Allow: /articles/bangalore-to-dandeli-solo-trip-plan.html
 Allow: /articles/finding-joy-in-everyday-moments.html
@@ -503,7 +504,6 @@ Allow: /articles/how-to-prepare-paneer-kulcha-at-home-paneer-kulcha-recipe.html
 Allow: /articles/how-to-keep-an-eye-on-social-commitments-to-avoid-overloading-your-schedule-around-deadlines.html
 Allow: /articles/coffee-ground-fossils-science-experiment-for-children.html
 Allow: /articles/four-vedas-heart-of-hinduism.html
-Allow: /articles/bangalore-to-hampi-solo-trip-plan.html
 Allow: /articles/coin-inertia-science-experiment-for-children.html
 Allow: /articles/harsh-truth-of-life-that-you-learn-from-your-bad-time.html
 Allow: /articles/film-canister-rocket-science-experiment-for-children.html
