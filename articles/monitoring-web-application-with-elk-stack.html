@@ -5,15 +5,15 @@
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Monitoring Web Application with ELK Stack</title>
-    <meta name="description" content="For Auditing & Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will" />
+    <meta name="description" content="For Auditing &amp; Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool w" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/monitoring-web-application-with-elk-stack.html" />
     <meta property="og:title" content="Monitoring Web Application with ELK Stack" />
-    <meta property="og:description" content="For Auditing & Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will" />
+    <meta property="og:description" content="For Auditing &amp; Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool w" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/monitoring-web-application-with-elk-stack.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/1_PwUaKl5gRp-V5I1QptJ1mw.png" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="Monitoring Web Application with ELK Stack" />
-    <meta name="twitter:description" content="For Auditing & Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will" />
+    <meta name="twitter:description" content="For Auditing &amp; Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool w" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/1_PwUaKl5gRp-V5I1QptJ1mw.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -52,7 +52,7 @@
           "@id": "/articles/monitoring-web-application-with-elk-stack.html"
         },
         "headline": "Monitoring Web Application with ELK Stack",
-        "description": "For Auditing & Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will",
+        "description": "For Auditing &amp; Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool w",
         "image": "https://peoplesblog.co.in/upload/banners/1_PwUaKl5gRp-V5I1QptJ1mw.png",
         "author": {
           "@type": "Person",
@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>For <strong>Auditing & Troubleshooting issues</strong> in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will make developers & maintainers happy. However, not all the log data for any event is not needed to be stored in the log record. Means, Each <strong>log record should have only the information needed</strong> for further notice or further debugging. Strictly all sensitive data should be not logged for any application.</p>                                <h3>What data to Log</h3>                                <p>In case of Drupal 8 application, which had the database logging feature within the core. Also has a logging class to write any custom logs to the database. Logging to database & querying from database is not an efficient way if we are talking about mid-sized or large applications.</p>                                <p>A <strong>better and more efficient way</strong> to write and read logs would be <strong>using ELK stack</strong>, where <strong>Logstash</strong> ingests data from a multitude of sources in our case apache & php logs, transforms it and then sends <strong>Elastic search</strong>. And <strong>Kibana (UI)</strong> provides an interface to search logs and also create visualizations.</p>                                <p>Create two streams of logs, one for apache logs and other of php logs, where logs are in these locations in docker containers.</p>                                <ul class="check1">                                    <li>Apache logs /var/logs/apache2/error.log</li>                                    <li>Php logs /var/log/php.log</li>                                </ul>                                <p>Tweak <code>php.ini</code> file and add <code>error_log=/var/log/php.log</code>. So that logs will get stored to <code>php.log</code> file inside the docker container.</p>                                <p>For logging the data in a readable format, use the following line formatter.</p>                                <script src="https://gist.github.com/heykarthikwithu/c20215aef41db463189281afbc2a9b09.js"></script>                                <p>Whatever data you are processing to the context variable, will be in the readable format. And it's logged in as audit logs and error logs.</p>                                <h3>Send logs via Filebeat to Logstash or Elasticsearch</h3>                                <p>Use Filebeat, to move the logs created by Elastic which will tail the log file data and further send to logstash or Elasticsearch. Install the filebeat and configure it to track the log files.</p>                                <script src="https://gist.github.com/heykarthikwithu/15db86cae55946b400d960b5e7a185f8.js"></script>                                <p>In the output configuration section, the logstash host with port number is mentioned. By this the logs should be showing up on the Kibana.. If not, make sure the filebeat agent is running.</p>                                <h3>Monitoring the Logs via Kibana</h3>                                <p>On Kibana, Available fields are the indexed items which can be used as columns and also in search. You can filter logs by fields USER-ID. And <strong>each log record can be seens as a json value by expanding the _source</strong>.</p>                                <p>You can also create Dashboards & Visualizations which can have specific data logs & also filter by fields.</p></div>
+                                <div><p>For <strong>Auditing &amp; Troubleshooting issues</strong> in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will make developers &amp; maintainers happy. However, not all the log data for any event is not needed to be stored in the log record. Means, Each <strong>log record should have only the information needed</strong> for further notice or further debugging. Strictly all sensitive data should be not logged for any application.</p>                                <h3>What data to Log</h3>                                <p>In case of Drupal 8 application, which had the database logging feature within the core. Also has a logging class to write any custom logs to the database. Logging to database &amp; querying from database is not an efficient way if we are talking about mid-sized or large <a href="/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html" title="Read about Usage Of Phpcs On Github Via Pull Request For Drupal Applications">applications</a>.</p>                                <p>A <strong>better and more efficient way</strong> to write and read logs would be <strong>using ELK stack</strong>, where <strong>Logstash</strong> ingests data from a multitude of sources in our case apache &amp; php logs, transforms it and then sends <strong>Elastic search</strong>. And <strong>Kibana (UI)</strong> provides an interface to search logs and also create visualizations.</p>                                <p>Create two streams of logs, one for apache logs and other of php logs, where logs are in these locations in docker containers.</p>                                <ul class="check1">                                    <li>Apache logs /var/logs/apache2/error.log</li>                                    <li>Php logs /var/log/php.log</li>                                </ul>                                <p>Tweak <code>php.ini</code> file and add <code>error_log=/var/log/php.log</code>. So that logs will get stored to <code>php.log</code> file inside the docker container.</p>                                <p>For logging the data in a readable format, use the following line formatter.</p>                                <script src="https://gist.github.com/heykarthikwithu/c20215aef41db463189281afbc2a9b09.js"></script>                                <p>Whatever data you are <a href="/articles/custom-batch-processing-drupal--update-nodes-batch-api.html" title="Read about Custom Batch Processing Drupal Update Nodes Batch Api">processing</a> to the context variable, will be in the readable format. And it's logged in as audit logs and error logs.</p>                                <h3>Send logs via Filebeat to Logstash or Elasticsearch</h3>                                <p>Use Filebeat, to move the logs created by Elastic which will tail the log file data and further send to logstash or Elasticsearch. Install the filebeat and <a href="/articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html" title="Read about How To Create A Document Library In Sharepoint And Configure Content Types Terms User Groups And Permissions">configure</a> it to track the log files.</p>                                <script src="https://gist.github.com/heykarthikwithu/15db86cae55946b400d960b5e7a185f8.js"></script>                                <p>In the output configuration section, the logstash host with port number is mentioned. By this the logs should be showing up on the Kibana.. If not, make sure the filebeat agent is running.</p>                                <h3>Monitoring the Logs via Kibana</h3>                                <p>On Kibana, Available fields are the indexed items which can be used as columns and also in search. You can filter logs by fields USER-ID. And <strong>each log record can be seens as a json value by expanding the _source</strong>.</p>                                <p>You can also create Dashboards &amp; Visualizations which can have specific data logs &amp; also filter by fields.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">75% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ZgxFsJ" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81oFv22OmQS._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08QT7FH84.html" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" class="shop-title-value">Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)</a></h4>
+                  <div class="discount"><span class="main">30% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ajg0I8" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71oIjjNm+nL._SY879_.jpg" class="img-fluid lazy" alt="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CDXHYHZ6.html" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" class="shop-title-value">Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,499</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">7% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fxtKzm" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/616wnQmPQ-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VH5RL6.html" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)</a></h4>
+                  <div class="discount"><span class="main">49% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3LUiHmr" title="Redmi Xiaomi 108 cm (43 inches) 4K Ultra HD Smart LED Fire TV L43R8-FVIN (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71soVCm1bcL._SX679_.jpg" class="img-fluid lazy" alt="Redmi Xiaomi 108 cm (43 inches) 4K Ultra HD Smart LED Fire TV L43R8-FVIN (Black)" title="Redmi Xiaomi 108 cm (43 inches) 4K Ultra HD Smart LED Fire TV L43R8-FVIN (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CG5STQFQ.html" title="Redmi Xiaomi 108 cm (43 inches) 4K Ultra HD Smart LED Fire TV L43R8-FVIN (Black)" class="shop-title-value">Redmi Xiaomi 108 cm (43 inches) 4K Ultra HD Smart LED Fire TV L43R8-FVIN (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">40% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41Dn1xI" title="Wakefit Mattress | 10 Years Warranty | ErgoTech EcoLatex Classic Mattress, Mattress Double Bed, Natural Latex Mattress, 6-Inch Bed Mattress, Mattress Queen Size (75x60x6 Inches, Firm, 7-Zone)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Z8-YhYwpL._SX679_.jpg" class="img-fluid lazy" alt="Wakefit Mattress | 10 Years Warranty | ErgoTech EcoLatex Classic Mattress, Mattress Double Bed, Natural Latex Mattress, 6-Inch Bed Mattress, Mattress Queen Size (75x60x6 Inches, Firm, 7-Zone)" title="Wakefit Mattress | 10 Years Warranty | ErgoTech EcoLatex Classic Mattress, Mattress Double Bed, Natural Latex Mattress, 6-Inch Bed Mattress, Mattress Queen Size (75x60x6 Inches, Firm, 7-Zone)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08X9TZTHZ.html" title="Wakefit Mattress | 10 Years Warranty | ErgoTech EcoLatex Classic Mattress, Mattress Double Bed, Natural Latex Mattress, 6-Inch Bed Mattress, Mattress Queen Size (75x60x6 Inches, Firm, 7-Zone)" class="shop-title-value">Wakefit Mattress | 10 Years Warranty | ErgoTech EcoLatex Classic Mattress, Mattress Double Bed, Natural Latex Mattress, 6-Inch Bed Mattress, Mattress Queen Size (75x60x6 Inches, Firm, 7-Zone)</a></h4>
+                  <div class="discount"><span class="main">71% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47pfUNV" title="Cockatoo SmartRun3.5 3.5HP Peak DC Motorized Treadmill for Home, with 3 Level Manual Incline, Max Speed 16 Km/Hr, Max User Weight 120Kg,(DIY, Do It Yourself Installation),Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71u-d9nzD5L._SX679_.jpg" class="img-fluid lazy" alt="Cockatoo SmartRun3.5 3.5HP Peak DC Motorized Treadmill for Home, with 3 Level Manual Incline, Max Speed 16 Km/Hr, Max User Weight 120Kg,(DIY, Do It Yourself Installation),Black" title="Cockatoo SmartRun3.5 3.5HP Peak DC Motorized Treadmill for Home, with 3 Level Manual Incline, Max Speed 16 Km/Hr, Max User Weight 120Kg,(DIY, Do It Yourself Installation),Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DDHJNFVS.html" title="Cockatoo SmartRun3.5 3.5HP Peak DC Motorized Treadmill for Home, with 3 Level Manual Incline, Max Speed 16 Km/Hr, Max User Weight 120Kg,(DIY, Do It Yourself Installation),Black" class="shop-title-value">Cockatoo SmartRun3.5 3.5HP Peak DC Motorized Treadmill for Home, with 3 Level Manual Incline, Max Speed 16 Km/Hr, Max User Weight 120Kg,(DIY, Do It Yourself Installation),Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>14,218</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,699</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>54,999</span></span>
                   </div>
               </div>
           </div>
@@ -289,12 +289,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CDr70g" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71wx0o6ZF9L._SX679_.jpg" class="img-fluid lazy" alt="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBLLXZW4.html" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" class="shop-title-value">VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)</a></h4>
+                  <div class="discount"><span class="main">7% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4kGSGFP" title="Vivo X200 Pro 5G (Titanium Grey, 16GB RAM, 512GB Storage) with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71chuQByj0L._SX679_.jpg" class="img-fluid lazy" alt="Vivo X200 Pro 5G (Titanium Grey, 16GB RAM, 512GB Storage) with No Cost EMI/Additional Exchange Offers" title="Vivo X200 Pro 5G (Titanium Grey, 16GB RAM, 512GB Storage) with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WDJMX16.html" title="Vivo X200 Pro 5G (Titanium Grey, 16GB RAM, 512GB Storage) with No Cost EMI/Additional Exchange Offers" class="shop-title-value">Vivo X200 Pro 5G (Titanium Grey, 16GB RAM, 512GB Storage) with No Cost EMI/Additional Exchange Offers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>94,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,01,999</span></span>
                   </div>
               </div>
           </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y0MMI4" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811ssp-s+ZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5F443W.html" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)</a></h4>
+                  <div class="discount"><span class="main">13% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3LRqukD" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81YtQzdFkIL._SX679_.jpg" class="img-fluid lazy" alt="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6R9XCXX.html" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>41,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>64,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
                   </div>
               </div>
           </div>
@@ -385,12 +385,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4aiqbuu" title="Apple iPhone 15 (128 GB) - Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 15 (128 GB) - Black" title="Apple iPhone 15 (128 GB) - Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHX1W1XY.html" title="Apple iPhone 15 (128 GB) - Black" class="shop-title-value">Apple iPhone 15 (128 GB) - Black</a></h4>
+                  <div class="discount"><span class="main">53% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41b65jc" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lE8kU0+eL._SX679_PIbundle-5,TopRight,0,0_AA679SH20_.jpg" class="img-fluid lazy" alt="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3THTZRZ.html" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" class="shop-title-value">Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,540</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,995</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">44% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IPm7YW" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Vh6xPNA-L._SX679_.jpg" class="img-fluid lazy" alt="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCZMPRXC.html" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" class="shop-title-value">VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)</a></h4>
+                  <div class="discount"><span class="main">29% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/43R6f0x" title="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71bYFsyEFFL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" title="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BR4176V7.html" title="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)" class="shop-title-value">Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,390</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Z1o36y" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91+5r30glVL._SX679_.jpg" class="img-fluid lazy" alt="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09F9QNWBV.html" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" class="shop-title-value">BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories</a></h4>
+                  <div class="discount"><span class="main">18% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45jK6Xv" title="Redmi Note 13 Pro+ (Fusion Purple, 8GB RAM, 256GB Storage) | World&#039;s First Mediatek 7200 Ultra 5G | 200MP Hi-Res Camera | 1.5K Curved AMOLED | 120W HyperCharge" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/819sWoSDFRL._SX679_.jpg" class="img-fluid lazy" alt="Redmi Note 13 Pro+ (Fusion Purple, 8GB RAM, 256GB Storage) | World&#039;s First Mediatek 7200 Ultra 5G | 200MP Hi-Res Camera | 1.5K Curved AMOLED | 120W HyperCharge" title="Redmi Note 13 Pro+ (Fusion Purple, 8GB RAM, 256GB Storage) | World&#039;s First Mediatek 7200 Ultra 5G | 200MP Hi-Res Camera | 1.5K Curved AMOLED | 120W HyperCharge" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CRQ8Q3QP.html" title="Redmi Note 13 Pro+ (Fusion Purple, 8GB RAM, 256GB Storage) | World&#039;s First Mediatek 7200 Ultra 5G | 200MP Hi-Res Camera | 1.5K Curved AMOLED | 120W HyperCharge" class="shop-title-value">Redmi Note 13 Pro+ (Fusion Purple, 8GB RAM, 256GB Storage) | World&#039;s First Mediatek 7200 Ultra 5G | 200MP Hi-Res Camera | 1.5K Curved AMOLED | 120W HyperCharge</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,164</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,999</span></span>
                   </div>
               </div>
           </div>
@@ -485,42 +485,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">67% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ChDyyC" title="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Q4OK+05TL._SX679_.jpg" class="img-fluid lazy" alt="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" title="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B086PK9J9S.html" title="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" class="shop-title-value">BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008</a></h4>
+                  <div class="discount"><span class="main">44% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45KwMMt" title="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811mGaSrijL._SX679_.jpg" class="img-fluid lazy" alt="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" title="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F7X5FC43.html" title="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" class="shop-title-value">Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,285</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>55,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">34% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46M7ygl" title="LG 7 Kg, 5 Star, Direct Drive Technology, Steam Wash, 6 Motion DD, Smart Diagnosis, Fully-Automatic Front Load Washing Machine (FHM1207SDM, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71HjkfkIjEL._SX679_.jpg" class="img-fluid lazy" alt="LG 7 Kg, 5 Star, Direct Drive Technology, Steam Wash, 6 Motion DD, Smart Diagnosis, Fully-Automatic Front Load Washing Machine (FHM1207SDM, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" title="LG 7 Kg, 5 Star, Direct Drive Technology, Steam Wash, 6 Motion DD, Smart Diagnosis, Fully-Automatic Front Load Washing Machine (FHM1207SDM, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BMGD9Y2X.html" title="LG 7 Kg, 5 Star, Direct Drive Technology, Steam Wash, 6 Motion DD, Smart Diagnosis, Fully-Automatic Front Load Washing Machine (FHM1207SDM, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" class="shop-title-value">LG 7 Kg, 5 Star, Direct Drive Technology, Steam Wash, 6 Motion DD, Smart Diagnosis, Fully-Automatic Front Load Washing Machine (FHM1207SDM, Allergy Care, In-Built Heater, Touch Panel, Middle Black)</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46tUpdN" title="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51vNMv6Ua-L._SX679_.jpg" class="img-fluid lazy" alt="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" title="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09TB2YC13.html" title="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" class="shop-title-value">Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>43,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,299</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">71% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3KGeJjE" title="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71fQptqHNrL._SX679_.jpg" class="img-fluid lazy" alt="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" title="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FP8XT52S.html" title="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" class="shop-title-value">PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity</a></h4>
+                  <div class="discount"><span class="main">79% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3VRfxV5" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61YQ754bpRL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CTT6K6JS.html" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" class="shop-title-value">AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,800</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>3,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">52% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gQqQXB" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nhlYFnOhL._SX679_.jpg" class="img-fluid lazy" alt="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09X1P3J6G.html" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" class="shop-title-value">Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black</a></h4>
+                  <div class="discount"><span class="main">44% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IPm7YW" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Vh6xPNA-L._SX679_.jpg" class="img-fluid lazy" alt="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCZMPRXC.html" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" class="shop-title-value">VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
                   </div>
               </div>
           </div>

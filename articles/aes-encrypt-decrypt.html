@@ -5,15 +5,15 @@
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>AES Encrypt & Decrypt</title>
-    <meta name="description" content="Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is &#39;Cipher Block Chaining" />
+    <meta name="description" content="Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is 'Cipher Block Chaining' me" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/aes-encrypt-decrypt.html" />
     <meta property="og:title" content="AES Encrypt & Decrypt" />
-    <meta property="og:description" content="Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is &#39;Cipher Block Chaining" />
+    <meta property="og:description" content="Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is 'Cipher Block Chaining' me" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/aes-encrypt-decrypt.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/1_4BDmgHbEkjYDUtEK-ntr6Q.png" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="AES Encrypt & Decrypt" />
-    <meta name="twitter:description" content="Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is &#39;Cipher Block Chaining" />
+    <meta name="twitter:description" content="Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is 'Cipher Block Chaining' me" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/1_4BDmgHbEkjYDUtEK-ntr6Q.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -52,7 +52,7 @@
           "@id": "/articles/aes-encrypt-decrypt.html"
         },
         "headline": "AES Encrypt & Decrypt",
-        "description": "Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is &#39;Cipher Block Chaining",
+        "description": "Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp; Decrypt approach taken is 'Cipher Block Chaining' me",
         "image": "https://peoplesblog.co.in/upload/banners/1_4BDmgHbEkjYDUtEK-ntr6Q.png",
         "author": {
           "@type": "Person",
@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p dir='ltr'>Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher.<strong> </strong>Encrypt &amp; Decrypt approach taken is &#39;Cipher Block Chaining&#39; method &#39;AES-256-CBC&#39;.</p>  <h3 dir='ltr'>AES Encrypt</h3>  <ul dir='ltr'> <li>We would have the &#39;Secret&#39; stored in a file which is other than the web root.</li> </ul>  <pre> $key = hash(&#39;sha256&#39;, $secret, true);</pre>  <ul dir='ltr'> <li>Hash the &#39;Secret&#39; with sha256, this gives you the &#39;Key&#39; which will be used to openssl encrypt.</li> <li>And Generate the pseudo random bytes as &#39;IV&#39;, so that it would be used during encryption and also be attached to the encrypted data.</li> </ul>  <pre> $iv = openssl_random_pseudo_bytes(16);</pre>  <ul dir='ltr'> <li>Now encrypt the &#39;String&#39; with openssl encrypt by passing the &#39;AES-256-CBC&#39; method, &#39;Key&#39; and &#39;IV&#39;</li> </ul>  <pre> $ciphertext = openssl_encrypt($plaintext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre>  <ul> <li>&#39;openssl_encrypt&#39; will Encrypt given data with given method and key, returns a raw or base64 encoded string.</li> <li>&#39;Hash&#39; the returned &#39;Cipher&#39; text with sha256 hmac method</li> </ul>  <pre> $hash = hash_hmac(&#39;sha256&#39;, $ciphertext, $key, true);</pre>  <ul dir='ltr'> <li>Now concatenate the &#39;IV&#39; &amp; &#39;Hash&#39; &amp; &#39;Cipher&#39; and store in the DB as the encrypted value.</li> </ul>  <h3 dir='ltr'>AES Decrypt</h3>  <ul dir='ltr'> <li>Hash the &#39;Secret&#39; with sha256, this gives you the &#39;Key&#39; which will be used to openssl encrypt.</li> </ul>  <pre> $key = hash(&#39;sha256&#39;, $password, true);</pre>  <ul dir='ltr'> <li>Explode the concatenated string to &#39;IV&#39; &amp; &#39;Hash&#39; &amp; &#39;Cipher&#39;</li> </ul>  <pre> $iv = substr($ivHashCiphertext, 0, 16);$hash = substr($ivHashCiphertext, 16, 32);$ciphertext = substr($ivHashCiphertext, 48);</pre>  <ul> <li>&#39;openssl_decrypt&#39; will take a raw or base64 encoded string and decrypts it using a given method and key.</li> <li>Now decrypt the &#39;Cipher&#39; with &#39;AES-256-CBC&#39; method, &#39;Key&#39; and &#39;IV&#39;</li> </ul>  <pre> openssl_decrypt($ciphertext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre>  <ul dir='ltr'> <li>Return the decrypted &#39;String&#39;. it is ok, or do i need to change it to excel.</li> </ul>  <p>Thanks for reading the article,&nbsp;<a href='/articles/drupal.html'>for more drupal related articles</a>&nbsp;<a href='/articles/index.html'>read and subscribe to peoples blog articles</a>.</p> </div>
+                                <div><p dir="ltr"><a href="/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">Advanced</a> Encryption Standard, where we use AES-256 to encrypt the data with Cipher.<strong> </strong>Encrypt &amp; Decrypt <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people.html" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> taken is 'Cipher Block Chaining' method 'AES-256-CBC'.</p>  <h3 dir="ltr">AES Encrypt</h3>  <ul dir="ltr"> <li>We would have the 'Secret' stored in a file which is other than the web root.</li> </ul>  <pre> $key = hash('sha256', $secret, true);</pre>  <ul dir="ltr"> <li>Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</li> <li>And Generate the pseudo random bytes as 'IV', so that it would be used during encryption and also be attached to the encrypted data.</li> </ul>  <pre> $iv = openssl_random_pseudo_bytes(16);</pre>  <ul dir="ltr"> <li>Now encrypt the 'String' with openssl encrypt by passing the 'AES-256-CBC' method, 'Key' and 'IV'</li> </ul>  <pre> $ciphertext = openssl_encrypt($plaintext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre>  <ul> <li>'openssl_encrypt' will Encrypt given data with given method and key, returns a raw or base64 encoded string.</li> <li>'Hash' the returned 'Cipher' text with sha256 hmac method</li> </ul>  <pre> $hash = hash_hmac('sha256', $ciphertext, $key, true);</pre>  <ul dir="ltr"> <li>Now concatenate the 'IV' &amp; 'Hash' &amp; 'Cipher' and store in the DB as the encrypted value.</li> </ul>  <h3 dir="ltr">AES Decrypt</h3>  <ul dir="ltr"> <li>Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</li> </ul>  <pre> $key = hash('sha256', $password, true);</pre>  <ul dir="ltr"> <li>Explode the concatenated string to 'IV' &amp; 'Hash' &amp; 'Cipher'</li> </ul>  <pre> $iv = substr($ivHashCiphertext, 0, 16);$hash = substr($ivHashCiphertext, 16, 32);$ciphertext = substr($ivHashCiphertext, 48);</pre>  <ul> <li>'openssl_decrypt' will take a raw or base64 encoded string and decrypts it using a given method and key.</li> <li>Now decrypt the 'Cipher' with 'AES-256-CBC' method, 'Key' and 'IV'</li> </ul>  <pre> openssl_decrypt($ciphertext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre>  <ul dir="ltr"> <li>Return the decrypted 'String'. it is ok, or do i need to change it to excel.</li> </ul>  <p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">41% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gRmrng" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81P2YOHSQRL._SX679_.jpg" class="img-fluid lazy" alt="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F835K3HL.html" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" class="shop-title-value">LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA</a></h4>
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XoXiaI" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61NbiB1GU-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VKMLGD.html" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>26,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,090</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,998</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">72% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4m0TZAn" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91N52mFPgGL._SX679_.jpg" class="img-fluid lazy" alt="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKT8R1H.html" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" class="shop-title-value">boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47kSpmS" title="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/7113xg1N46L._SY879_.jpg" class="img-fluid lazy" alt="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" title="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09T6XD839.html" title="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" class="shop-title-value">Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>40,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>61,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">29% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jxXpcB" title="Samsung 653 L, 3 Star, Frost Free, Double Door, Convertible 5-in-1 Digital Inverter, Side By Side AI Enabled Smart Refrigerator with WiFi (RS76CG8003S9HL, Silver, Refined Inox)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/7198g563o-L._SX679_.jpg" class="img-fluid lazy" alt="Samsung 653 L, 3 Star, Frost Free, Double Door, Convertible 5-in-1 Digital Inverter, Side By Side AI Enabled Smart Refrigerator with WiFi (RS76CG8003S9HL, Silver, Refined Inox)" title="Samsung 653 L, 3 Star, Frost Free, Double Door, Convertible 5-in-1 Digital Inverter, Side By Side AI Enabled Smart Refrigerator with WiFi (RS76CG8003S9HL, Silver, Refined Inox)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BQC4Y4TP.html" title="Samsung 653 L, 3 Star, Frost Free, Double Door, Convertible 5-in-1 Digital Inverter, Side By Side AI Enabled Smart Refrigerator with WiFi (RS76CG8003S9HL, Silver, Refined Inox)" class="shop-title-value">Samsung 653 L, 3 Star, Frost Free, Double Door, Convertible 5-in-1 Digital Inverter, Side By Side AI Enabled Smart Refrigerator with WiFi (RS76CG8003S9HL, Silver, Refined Inox)</a></h4>
+                  <div class="discount"><span class="main">63% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4h5qMU1" title="TCL 139 cm (55 inches) 4K UHD Smart QD-Mini LED Google TV 55Q6C" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81PLRd3HtUL._SX679_.jpg" class="img-fluid lazy" alt="TCL 139 cm (55 inches) 4K UHD Smart QD-Mini LED Google TV 55Q6C" title="TCL 139 cm (55 inches) 4K UHD Smart QD-Mini LED Google TV 55Q6C" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F3HWNTR1.html" title="TCL 139 cm (55 inches) 4K UHD Smart QD-Mini LED Google TV 55Q6C" class="shop-title-value">TCL 139 cm (55 inches) 4K UHD Smart QD-Mini LED Google TV 55Q6C</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>79,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,13,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>43,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,19,990</span></span>
                   </div>
               </div>
           </div>
@@ -289,12 +289,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/488MCBu" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lIE9MYV3L._SX679_.jpg" class="img-fluid lazy" alt="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B4N6JVMW.html" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" class="shop-title-value">HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU</a></h4>
+                  <div class="discount"><span class="main">44% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45KwMMt" title="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811mGaSrijL._SX679_.jpg" class="img-fluid lazy" alt="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" title="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F7X5FC43.html" title="Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2" class="shop-title-value">Sony 139 cm (55 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-55S25BM2</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,300</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>49,557</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>55,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
                   </div>
               </div>
           </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/456tgwN" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61v0diOacHL._SX679_.jpg" class="img-fluid lazy" alt="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BTDVHW6Q.html" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" class="shop-title-value">Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour</a></h4>
+                  <div class="discount"><span class="main">53% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41b65jc" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lE8kU0+eL._SX679_PIbundle-5,TopRight,0,0_AA679SH20_.jpg" class="img-fluid lazy" alt="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3THTZRZ.html" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" class="shop-title-value">Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,540</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,995</span></span>
                   </div>
               </div>
           </div>
@@ -385,12 +385,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">7% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3AhYpAG" title="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71XNeka-BRL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" title="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQYNM3ZF.html" title="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4e0k6mG" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51bTCAnwZIL._SX679_.jpg" class="img-fluid lazy" alt="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSCRBZ43.html" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" class="shop-title-value">Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>45,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>55,400</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">7% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3AhYpAG" title="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71XNeka-BRL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" title="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQYNM3ZF.html" title="OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">32% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46GzAfn" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61zuR3UMnWL._SY879_.jpg" class="img-fluid lazy" alt="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08GTYFC37.html" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" class="shop-title-value">SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>45,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,800</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">91% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46hydE5" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vk-Npjs-L._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BY2QJJ8J.html" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" class="shop-title-value">Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)</a></h4>
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Uexpsy" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71c3EH8FoWL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7W9R1HM.html" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,099</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
                   </div>
               </div>
           </div>
@@ -485,42 +485,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dfc9uQ" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71uOoXevxwL._SX679_.jpg" class="img-fluid lazy" alt="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHM729GT.html" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" class="shop-title-value">Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM</a></h4>
+                  <div class="discount"><span class="main">71% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YNORWj" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61mfqrETVOL._SX679_.jpg" class="img-fluid lazy" alt="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CLYG2R1H.html" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" class="shop-title-value">MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,784</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">41% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/44AUKaj" title="Sleepyhead Flip - Premium Dual Sided High Density Foam Mattress with Firm &amp; Medium Soft Sides | 7- Year Warranty | 6-Inch Bed Mattress | 78x72x6 inches (King Size Mattress)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61YDnioHy8L._SX679_.jpg" class="img-fluid lazy" alt="Sleepyhead Flip - Premium Dual Sided High Density Foam Mattress with Firm &amp; Medium Soft Sides | 7- Year Warranty | 6-Inch Bed Mattress | 78x72x6 inches (King Size Mattress)" title="Sleepyhead Flip - Premium Dual Sided High Density Foam Mattress with Firm &amp; Medium Soft Sides | 7- Year Warranty | 6-Inch Bed Mattress | 78x72x6 inches (King Size Mattress)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08H1Q9WRZ.html" title="Sleepyhead Flip - Premium Dual Sided High Density Foam Mattress with Firm &amp; Medium Soft Sides | 7- Year Warranty | 6-Inch Bed Mattress | 78x72x6 inches (King Size Mattress)" class="shop-title-value">Sleepyhead Flip - Premium Dual Sided High Density Foam Mattress with Firm &amp; Medium Soft Sides | 7- Year Warranty | 6-Inch Bed Mattress | 78x72x6 inches (King Size Mattress)</a></h4>
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4nREgWl" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71cadtXNcBL._SX679_.jpg" class="img-fluid lazy" alt="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FDKPZHB7.html" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" class="shop-title-value">HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,099</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,399</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,09,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,24,319</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">21% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3FjZj2e" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71tTmhEkDUL._SY879_.jpg" class="img-fluid lazy" alt="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BRQBVYVB.html" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" class="shop-title-value">LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)</a></h4>
+                  <div class="discount"><span class="main">47% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YyMO9N" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6131fzwXapL._SX679_.jpg" class="img-fluid lazy" alt="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B1DDZZ7K.html" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" class="shop-title-value">V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,199</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,639</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,500</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">13% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3LRqukD" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81YtQzdFkIL._SX679_.jpg" class="img-fluid lazy" alt="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6R9XCXX.html" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers</a></h4>
+                  <div class="discount"><span class="main">9% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDuO9X" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vxWpPpgNL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQYGF1QY.html" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" class="shop-title-value">Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,31,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,44,999</span></span>
                   </div>
               </div>
           </div>

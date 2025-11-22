@@ -5,15 +5,15 @@
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Usage of PHPCS on Github via Pull Request for Drupal Applications</title>
-    <meta name="description" content="In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development &amp; code review proce" />
+    <meta name="description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development &amp; code review process." />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html" />
     <meta property="og:title" content="Usage of PHPCS on Github via Pull Request for Drupal Applications" />
-    <meta property="og:description" content="In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development &amp; code review proce" />
+    <meta property="og:description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development &amp; code review process." />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.png" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="Usage of PHPCS on Github via Pull Request for Drupal Applications" />
-    <meta name="twitter:description" content="In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development &amp; code review proce" />
+    <meta name="twitter:description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development &amp; code review process." />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -52,7 +52,7 @@
           "@id": "/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html"
         },
         "headline": "Usage of PHPCS on Github via Pull Request for Drupal Applications",
-        "description": "In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development &amp; code review proce",
+        "description": "In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development &amp; code review process.",
         "image": "https://peoplesblog.co.in/upload/banners/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.png",
         "author": {
           "@type": "Person",
@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development &amp; code review process.</p>  <p>And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.</p>  <p>If you are maintaining your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>It&#39;s pretty simple, if we already know PHPCS and PHPCBF libraries are used to do the code reviews and checks on your local machines and the same thing can be done once the pull request is raised by the developer.</p>  <p>Having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br /> on: [pull_request]<br /> jobs:<br /> &nbsp; &nbsp; check-drupal-code-standards:<br /> &nbsp; &nbsp; &nbsp; &nbsp; runs-on: ubuntu-latest<br /> &nbsp; &nbsp; &nbsp; &nbsp; steps:<br /> &nbsp; &nbsp; &nbsp; &nbsp; - name: Install PHPCS<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: composer global require &ndash;dev drupal/coder dealerdirect/php codesniffer-composer-installer<br /> &nbsp; &nbsp; &nbsp; &nbsp; - name: Clone code<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: actions/checkout@v3<br /> &nbsp; &nbsp; &nbsp; &nbsp; - name: Check drupal coding standards<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: ~/.composer/vendor/bin/phpcs &ndash;standard=&rdquo;Drupal,DrupalPractice&rdquo; &ndash;extensions=&rdquo;php,module,inc,install,test,profile,theme,css,info&rdquo;</code></p> <div class='google-ad'>     <ins class='adsbygoogle'          style='display:block; text-align:center;'          data-ad-layout='in-article'          data-ad-format='fluid'          data-ad-client='ca-pub-2683569506254139'          data-ad-slot='4812668708'></ins>     <script>         (adsbygoogle = window.adsbygoogle || []).push({});     </script> </div> <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ul> <li>Where this job run&rsquo;s on the Ubuntu machine.</li> <li>This job has 3 steps <ul> <li>To install PHPCS</li> <li>To clone the code</li> <li>To run the phpcs checks (like we run locally)</li> </ul> </li> </ul>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
+                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development &amp; code review process.</p>  <p>And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.</p>  <p>If you are maintaining your code in Github, then Github is providing continuous <a href="/articles/discovering-wellness-through-work-life-integration.html" title="Read about Discovering Wellness Through Work Life Integration">integration</a> support within their workflows.</p>  <p>It's pretty simple, if we already know PHPCS and PHPCBF libraries are used to do the code reviews and checks on your local <a href="/articles/vimanas-in-ancient-india-were-they-real-flying-machines.html" title="Read about Vimanas In Ancient India Were They Real Flying Machines">machines</a> and the same thing can be done once the pull request is raised by the developer.</p>  <p>Having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br>     check-drupal-code-standards:<br>         runs-on: ubuntu-latest<br>         steps:<br>         - name: Install PHPCS<br>           run: composer global require –dev drupal/coder dealerdirect/php codesniffer-composer-installer<br>         - name: Clone code<br>           run: actions/checkout@v3<br>         - name: Check drupal coding standards<br>           run: ~/.composer/vendor/bin/phpcs –standard=”Drupal,DrupalPractice” –extensions=”php,module,inc,install,test,profile,theme,css,info”</code></p> <div class="google-ad">     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2683569506254139" data-ad-slot="4812668708"></ins>     <script>         (adsbygoogle = window.adsbygoogle || []).push({});     </script> </div> <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ul> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 3 steps <ul> <li>To install PHPCS</li> <li>To clone the code</li> <li>To run the phpcs checks (like we run locally)</li> </ul> </li> </ul>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4de5TD1" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BENnbPpuL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DZ1SPM.html" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" class="shop-title-value">Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)</a></h4>
+                  <div class="discount"><span class="main">68% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40GpMz3" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/8145KzfUFxL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LBHRDY8.html" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,995</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">40% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3BVRRZG" title="HONOR 200 5G (Black, 8GB + 256GB) | 6.7-inch AMOLED Quad-Curved Display | Dual OIS 50MP + 50MP + 12MP Camera | 50MP Selfie Camera | AI-Powered MagicOS 8.0 | Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71yVqjq0aeL._SX679_.jpg" class="img-fluid lazy" alt="HONOR 200 5G (Black, 8GB + 256GB) | 6.7-inch AMOLED Quad-Curved Display | Dual OIS 50MP + 50MP + 12MP Camera | 50MP Selfie Camera | AI-Powered MagicOS 8.0 | Without Charger" title="HONOR 200 5G (Black, 8GB + 256GB) | 6.7-inch AMOLED Quad-Curved Display | Dual OIS 50MP + 50MP + 12MP Camera | 50MP Selfie Camera | AI-Powered MagicOS 8.0 | Without Charger" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6VJ6FYG.html" title="HONOR 200 5G (Black, 8GB + 256GB) | 6.7-inch AMOLED Quad-Curved Display | Dual OIS 50MP + 50MP + 12MP Camera | 50MP Selfie Camera | AI-Powered MagicOS 8.0 | Without Charger" class="shop-title-value">HONOR 200 5G (Black, 8GB + 256GB) | 6.7-inch AMOLED Quad-Curved Display | Dual OIS 50MP + 50MP + 12MP Camera | 50MP Selfie Camera | AI-Powered MagicOS 8.0 | Without Charger</a></h4>
+                  <div class="discount"><span class="main">71% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3KGeJjE" title="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71fQptqHNrL._SX679_.jpg" class="img-fluid lazy" alt="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" title="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FP8XT52S.html" title="PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity" class="shop-title-value">PowerMax Fitness Walkpad-2 Under-Desk Treadmill for Home Use | 3.0 HP Motor, 2% Manual Incline, Shock Absorption 110kg Weight Capacity</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>23,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,800</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">54% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CjRHe9" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619uqfCV8uL._SX679_.jpg" class="img-fluid lazy" alt="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68KM7F5.html" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" class="shop-title-value">AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa</a></h4>
+                  <div class="discount"><span class="main">31% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3k4xZKf" title="BenQ TH575 4K Compatible Full HD Home Cinema Projector 3800 ANSI lumens, Excellent 1.07 Billion Colors, Upto 200inches Screen Size,16ms Low Input Lag,10W Chamber Speaker, HDMI" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/417QMVQJPtL._SX385_.jpg" class="img-fluid lazy" alt="BenQ TH575 4K Compatible Full HD Home Cinema Projector 3800 ANSI lumens, Excellent 1.07 Billion Colors, Upto 200inches Screen Size,16ms Low Input Lag,10W Chamber Speaker, HDMI" title="BenQ TH575 4K Compatible Full HD Home Cinema Projector 3800 ANSI lumens, Excellent 1.07 Billion Colors, Upto 200inches Screen Size,16ms Low Input Lag,10W Chamber Speaker, HDMI" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B4J28NTR.html" title="BenQ TH575 4K Compatible Full HD Home Cinema Projector 3800 ANSI lumens, Excellent 1.07 Billion Colors, Upto 200inches Screen Size,16ms Low Input Lag,10W Chamber Speaker, HDMI" class="shop-title-value">BenQ TH575 4K Compatible Full HD Home Cinema Projector 3800 ANSI lumens, Excellent 1.07 Billion Colors, Upto 200inches Screen Size,16ms Low Input Lag,10W Chamber Speaker, HDMI</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,649</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>68,980</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,990</span></span>
                   </div>
               </div>
           </div>
@@ -289,12 +289,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">4% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42NvvEJ" title="OnePlus 13R | Smarter with OnePlus AI (12GB RAM, 256GB Storage Astral Trail)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61++T836jiL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 13R | Smarter with OnePlus AI (12GB RAM, 256GB Storage Astral Trail)" title="OnePlus 13R | Smarter with OnePlus AI (12GB RAM, 256GB Storage Astral Trail)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQ8S38R8.html" title="OnePlus 13R | Smarter with OnePlus AI (12GB RAM, 256GB Storage Astral Trail)" class="shop-title-value">OnePlus 13R | Smarter with OnePlus AI (12GB RAM, 256GB Storage Astral Trail)</a></h4>
+                  <div class="discount"><span class="main">29% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46oztBR" title="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71zWZo78JqL._SX679_.jpg" class="img-fluid lazy" alt="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" title="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B072J83V9W.html" title="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" class="shop-title-value">Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>42,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>44,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,199</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,995</span></span>
                   </div>
               </div>
           </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">76% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45AAMxy" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BRcToMOpL._SX679_.jpg" class="img-fluid lazy" alt="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07FKD34D6.html" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" class="shop-title-value">Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black</a></h4>
+                  <div class="discount"><span class="main">37% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ye4DtA" title="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81srIkdAHcL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" title="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D9P28RCV.html" title="Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Brighter Crystal 4K Dynamic Ultra HD Smart LED TV UA55DUE80AKLXL (Titan Gray)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,299</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,705</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>49,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>78,900</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">41% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gPmNc6" title="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81h-r-3hioL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" title="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DW7C39.html" title="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" class="shop-title-value">Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)</a></h4>
+                  <div class="discount"><span class="main">15% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3M1rX7X" title="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61tslaYWLjL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" title="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7N23QKD.html" title="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" class="shop-title-value">OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>96,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,64,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>40,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,999</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">38% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3MG20v8" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/81QGKn2LCfL._SX679_.jpg" class="img-fluid lazy" alt="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BK1KS6ZD.html" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" class="shop-title-value">Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3UGaK98" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61yHIxBZ6iL._SX679_.jpg" class="img-fluid lazy" alt="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGMQB5RG.html" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" class="shop-title-value">TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>58,400</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
                   </div>
               </div>
           </div>
@@ -485,42 +485,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">25% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YkM9sJ" title="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71-oDkPIB8L._SX679_.jpg" class="img-fluid lazy" alt="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" title="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C8NW342B.html" title="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" class="shop-title-value">LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)</a></h4>
+                  <div class="discount"><span class="main">70% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4ch8E6U" title="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81wHA8+P09L._SX679_.jpg" class="img-fluid lazy" alt="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)" title="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CG5XTL1R.html" title="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)" class="shop-title-value">boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,799</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-3 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">54% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ab7ZVU" title="Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71MwDnn-ZaL._SX679_.jpg" class="img-fluid lazy" alt="Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)" title="Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D4LJ9WVW.html" title="Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)" class="shop-title-value">Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
                   <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CX0p2E" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71SpdMLBi6L._SX679_.jpg" class="img-fluid lazy" alt="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CXLDSHSH.html" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" class="shop-title-value">JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dfc9uQ" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71uOoXevxwL._SX679_.jpg" class="img-fluid lazy" alt="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHM729GT.html" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" class="shop-title-value">Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4e0k6mG" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51bTCAnwZIL._SX679_.jpg" class="img-fluid lazy" alt="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSCRBZ43.html" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" class="shop-title-value">Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)</a></h4>
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Pj2QzC" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61pt59LW-lL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPBNTC.html" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" class="shop-title-value">iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>55,400</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>18,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">79% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40gAsCV" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qEhDtYkRL._SX679_.jpg" class="img-fluid lazy" alt="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZPJQ2X2.html" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" class="shop-title-value">Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
                   </div>
               </div>
           </div>

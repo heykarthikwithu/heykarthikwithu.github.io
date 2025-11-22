@@ -8,7 +8,7 @@
     <item>
 			<title>Create a custom Drupal Service and Use as a Helper</title>
 			<link>https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</link>
-			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module&amp;rsq</description>
+			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module’s</description>
 			<pubDate>Fri, 22 Mar 2024 15:20:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</guid>
@@ -36,21 +36,21 @@
     </item><item>
 			<title>Usage of Constraints (Validations) on Media Entities in Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-constraints-validations-on-media-entities-in-drupal-application.html</link>
-			<description>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.  Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony&amp;rsquo;s validator and extends with Symfony&amp;rsquo;s Typed Data API for validating specific Entity field definitions.  These constraint validators can be used in different w</description>
+			<description>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.  Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony’s validator and extends with Symfony’s Typed Data API for validating specific Entity field definitions.  These constraint validators can be used in different ways   Us</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-constraints-validations-on-media-entities-in-drupal-application.html</guid>
     </item><item>
 			<title>Quick reference of Code Reviews for Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</link>
-			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It&amp;rsquo;s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organis</description>
+			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It’s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organised b</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</guid>
     </item><item>
 			<title>Unable to install Update Manager, update.settings already exists in active configuration</title>
 			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
-			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
+			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which wil</description>
 			<pubDate>Fri, 08 Sep 2023 09:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>

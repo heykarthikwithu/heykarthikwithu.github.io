@@ -22,14 +22,14 @@
     </item><item>
 			<title>Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases</title>
 			<link>https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.html</link>
-			<description>When working with SharePoint, a robust collaboration and document management platform, it&amp;#39;s important to understand the different ways you can organize and manage your files. Two key features for managing files in SharePoint are Documents and Document Sets. Although they may seem similar at first glance, they serve different purposes and offer distinct features to help you manage your content </description>
+			<description>When working with SharePoint, a robust collaboration and document management platform, it's important to understand the different ways you can organize and manage your files. Two key features for managing files in SharePoint are Documents and Document Sets. Although they may seem similar at first glance, they serve different purposes and offer distinct features to help you manage your content more</description>
 			<pubDate>Fri, 29 Nov 2024 07:12:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.html</guid>
     </item><item>
 			<title>Create a custom Drupal Service and Use as a Helper</title>
 			<link>https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</link>
-			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module&amp;rsq</description>
+			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module’s</description>
 			<pubDate>Fri, 22 Mar 2024 15:20:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</guid>
@@ -43,7 +43,7 @@
     </item><item>
 			<title>How to improve drupal website performance</title>
 			<link>https://peoplesblog.co.in/articles/how-to-improve-drupal-website-performance.html</link>
-			<description>Improving the performance of a Drupal website involves optimizing various aspects of its configuration and content. There are several ways to overall complex performance related problems and improve Drupal website performance to load it quicker.  Here are some tips to enhance the performance of your Drupal website:  Enable Caching:   Enable Drupal&amp;#39;s built-in caching mechanisms to store pre-gen</description>
+			<description>Improving the performance of a Drupal website involves optimizing various aspects of its configuration and content. There are several ways to overall complex performance related problems and improve Drupal website performance to load it quicker.  Here are some tips to enhance the performance of your Drupal website:  Enable Caching:   Enable Drupal's built-in caching mechanisms to store pre-generat</description>
 			<pubDate>Tue, 05 Dec 2023 14:50:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-improve-drupal-website-performance.html</guid>
@@ -57,7 +57,7 @@
     </item><item>
 			<title>Unable to install Update Manager, update.settings already exists in active configuration</title>
 			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
-			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
+			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which wil</description>
 			<pubDate>Fri, 08 Sep 2023 09:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
@@ -71,7 +71,7 @@
     </item><item>
 			<title>API Docs, Drupal contributed module for your Developer Portal</title>
 			<link>https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html</link>
-			<description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters &amp;amp; views.  Here&amp;#39;s a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.  Download &amp;amp; Enable the Module:   Visit the Drupal.org website and navigate to the API Docs module&amp;#39;s page that you want to download, her</description>
+			<description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters &amp;amp; views.  Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.  Download &amp;amp; Enable the Module:   Visit the Drupal.org website and navigate to the API Docs module's page that you want to download, here’s th</description>
 			<pubDate>Sat, 29 Jul 2023 17:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html</guid>
@@ -85,7 +85,7 @@
     </item><item>
 			<title>Security Checklist for Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/security-checklist-for-drupal-application.html</link>
-			<description>Securing your Drupal website is crucial to protect your data, users and overall website integrity. Here&amp;#39;s a security checklist for a Drupal website:   Keep Drupal Core and Modules Up to Date: Regularly update Drupal core and contributed modules to ensure you have the latest security patches. Enable update notifications to stay informed about available updates. Use Strong and Unique Passwords: </description>
+			<description>Securing your Drupal website is crucial to protect your data, users and overall website integrity. Here's a security checklist for a Drupal website:   Keep Drupal Core and Modules Up to Date: Regularly update Drupal core and contributed modules to ensure you have the latest security patches. Enable update notifications to stay informed about available updates. Use Strong and Unique Passwords: Ensu</description>
 			<pubDate>Tue, 13 Jun 2023 09:30:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/security-checklist-for-drupal-application.html</guid>
@@ -99,7 +99,7 @@
     </item><item>
 			<title>Drupal LMS Features for Your Education Business</title>
 			<link>https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</link>
-			<description>If you&amp;#39;re running an education business and considering Drupal as the platform for your Learning Management System (LMS), there are several features and capabilities you should look for to ensure a robust and effective solution.  Here are some key Drupal LMS features to consider:   Course Management: A Drupal LMS should provide comprehensive course management capabilities. This includes the ab</description>
+			<description>If you're running an education business and considering Drupal as the platform for your Learning Management System (LMS), there are several features and capabilities you should look for to ensure a robust and effective solution.  Here are some key Drupal LMS features to consider:   Course Management: A Drupal LMS should provide comprehensive course management capabilities. This includes the abilit</description>
 			<pubDate>Tue, 30 May 2023 09:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</guid>

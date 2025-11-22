@@ -5,15 +5,15 @@
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Usage of PhpStan on Github via Pull Request for Drupal Applications</title>
-    <meta name="description" content="In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development and code review process" />
+    <meta name="description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html" />
     <meta property="og:title" content="Usage of PhpStan on Github via Pull Request for Drupal Applications" />
-    <meta property="og:description" content="In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development and code review process" />
+    <meta property="og:description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="Usage of PhpStan on Github via Pull Request for Drupal Applications" />
-    <meta name="twitter:description" content="In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development and code review process" />
+    <meta name="twitter:description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -52,7 +52,7 @@
           "@id": "/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html"
         },
         "headline": "Usage of PhpStan on Github via Pull Request for Drupal Applications",
-        "description": "In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development and code review process",
+        "description": "In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We",
         "image": "https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg",
         "author": {
           "@type": "Person",
@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people&#39;s lives easier during the development and code review process. We have a <a href='/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html'>similar helpful article related to Phpcs, have a check of this</a>.</p>  <p>To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PhpStan, a static analysing tool which primarily focuses on finding errors in your code without actually running.</p>  <p>If you are maintaining your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>We could run this locally as well by having the PhpStan library, which will help developers to make sure none of the issues will go to the higher environment.</p>  <p>Also, having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p> <div class='google-ad'>     <ins class='adsbygoogle'          style='display:block; text-align:center;'          data-ad-layout='in-article'          data-ad-format='fluid'          data-ad-client='ca-pub-2683569506254139'          data-ad-slot='4812668708'></ins>     <script>         (adsbygoogle = window.adsbygoogle || []).push({});     </script> </div> <p><code>name: pr-review<br /> on: [pull_request]<br /> jobs:<br /> &nbsp;&nbsp;phpstan-report:<br /> &nbsp;&nbsp;&nbsp;&nbsp;runs-on: ubuntu-latest<br /> &nbsp;&nbsp;&nbsp;&nbsp;steps:<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: Clone the code<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uses: actions/checkout@v3<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: Setup PHP 7.4<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uses: shivamathur/setup-php@v2<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with:<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;php-version: 7.4<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: Composer install<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;run: composer install<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name: Analyse codebase<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run: ./vendor/bin/phpstan analyse ./web/modules/custom</code></p>  <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run&rsquo;s on the Ubuntu machine.</li> <li>This job has 4 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To run the phpstan checks (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
+                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.</p>  <p>To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PhpStan, a static analysing tool which primarily focuses on finding errors in your code without actually running.</p>  <p>If you are <a href="/articles/tips-for-maintaining-motivation-during-tough-times.html" title="Read about Tips For Maintaining Motivation During Tough Times">maintaining</a> your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>We could run this locally as well by having the PhpStan library, which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">environment</a>.</p>  <p>Also, having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p> <div class="google-ad">     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2683569506254139" data-ad-slot="4812668708"></ins>     <script>         (adsbygoogle = window.adsbygoogle || []).push({});     </script> </div> <p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br>   phpstan-report:<br>     runs-on: ubuntu-latest<br>     steps:<br>      - name: Clone the code<br>        uses: actions/checkout@v3<br>      - name: Setup PHP 7.4<br>        uses: shivamathur/setup-php@v2<br>        with:<br>           php-version: 7.4<br>      - name: Composer install<br>        run: composer install<br>      - name: Analyse codebase<br>        run: ./vendor/bin/phpstan analyse ./web/modules/custom</code></p>  <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 4 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To run the phpstan checks (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">12% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fQ71gF" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/616wnQmPQ-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VGZS69.html" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">44% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jgiOrQ" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OmhFfS-hL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5DW4WT.html" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" class="shop-title-value">Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,980</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">62% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3DZIA3g" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41M3JHvOckL.jpg" class="img-fluid lazy" alt="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKXRXVH.html" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" class="shop-title-value">ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235</a></h4>
+                  <div class="discount"><span class="main">49% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3tImsp6" title="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41m3+K+NJpL._SY300_SX300_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" title="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09SH8P4H8.html" title="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" class="shop-title-value">Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,879</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>66,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,31,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">50% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40lZDUH" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" class="img-fluid lazy" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSKDPF9N.html" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" class="shop-title-value">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a></h4>
+                  <div class="discount"><span class="main">68% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/49dU0fu" title="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/816xumK6oUL._SX679_.jpg" class="img-fluid lazy" alt="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" title="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07QY4HF8W.html" title="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" class="shop-title-value">K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,997</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,814</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,990</span></span>
                   </div>
               </div>
           </div>
@@ -289,12 +289,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">56% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4n2Ih8u" title="KODAK Mini 2 Retro 4PASS Portable Photo Printer (2.1x3.4 inches) + 68 Sheets Bundle, Yellow" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71Y70F5flWL._SX679_.jpg" class="img-fluid lazy" alt="KODAK Mini 2 Retro 4PASS Portable Photo Printer (2.1x3.4 inches) + 68 Sheets Bundle, Yellow" title="KODAK Mini 2 Retro 4PASS Portable Photo Printer (2.1x3.4 inches) + 68 Sheets Bundle, Yellow" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08FSR61BV.html" title="KODAK Mini 2 Retro 4PASS Portable Photo Printer (2.1x3.4 inches) + 68 Sheets Bundle, Yellow" class="shop-title-value">KODAK Mini 2 Retro 4PASS Portable Photo Printer (2.1x3.4 inches) + 68 Sheets Bundle, Yellow</a></h4>
+                  <div class="discount"><span class="main">67% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42hdKx1" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71S6jCCRkzL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07P57MJ44.html" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,959</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,299</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,664</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,995</span></span>
                   </div>
               </div>
           </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">20% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47LPVQL" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BpNVo+McL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FHWWDRRM.html" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" class="shop-title-value">OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue</a></h4>
+                  <div class="discount"><span class="main">30% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pbY1so" title="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/617SNrJ2qhL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" title="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FBWV9LR8.html" title="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" class="shop-title-value">Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>58,400</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>82,990</span></span>
                   </div>
               </div>
           </div>
@@ -385,12 +385,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">66% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Nv8r4z" title="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/614cFlQ5hAL._SX679_.jpg" class="img-fluid lazy" alt="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" title="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQK9JPMT.html" title="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" class="shop-title-value">WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)</a></h4>
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3tA16Ko" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71hKcWCFoCL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LBXVH4L.html" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" class="shop-title-value">Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,489</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,529</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">50% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40jq913" title="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61fzU3GoerL._SX679_.jpg" class="img-fluid lazy" alt="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" title="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C6FC1GSN.html" title="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" class="shop-title-value">Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV</a></h4>
+                  <div class="discount"><span class="main">65% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ed3snB" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51CM1oCgyYL._SX679_.jpg" class="img-fluid lazy" alt="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGGMWNLC.html" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" class="shop-title-value">ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,250</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40Oil8t" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51J9yKE61vL._SX679_.jpg" class="img-fluid lazy" alt="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F5PXXWM9.html" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" class="shop-title-value">Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier</a></h4>
+                  <div class="discount"><span class="main">58% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4112bbf" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71RTL1vn6TL._SX679_.jpg" class="img-fluid lazy" alt="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D9BYN6RJ.html" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" class="shop-title-value">acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,983</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>72,999</span></span>
                   </div>
               </div>
           </div>
@@ -485,16 +485,6 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">44% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jgiOrQ" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OmhFfS-hL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5DW4WT.html" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" class="shop-title-value">Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,980</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,000</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-3 shop-item-wrapper">
-              <div class="shop-item">
                   <div class="discount"><span class="main">79% OFF</span></div>
                   <div class="shop-image"><a target="_blank" href="https://amzn.to/4bVgGlY" title="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81s-f2I27lL._SX679_.jpg" class="img-fluid lazy" alt="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" title="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" src="/upload/cursor.jpg" /></a></div>
                   <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DC6FB622.html" title="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" class="shop-title-value">Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey</a></h4>
@@ -505,22 +495,32 @@
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40QwyRC" title="Hidesign Women&#039;s Satchel (Brown)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61B48BuhiaL._SY695_.jpg" class="img-fluid lazy" alt="Hidesign Women&#039;s Satchel (Brown)" title="Hidesign Women&#039;s Satchel (Brown)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B084PQY1WN.html" title="Hidesign Women&#039;s Satchel (Brown)" class="shop-title-value">Hidesign Women&#039;s Satchel (Brown)</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y0MMI4" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811ssp-s+ZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5F443W.html" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,896.29</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,595</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>41,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>64,900</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">45% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IUQ8aa" title="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61XhwNKrUlL._SX679_.jpg" class="img-fluid lazy" alt="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" title="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D62NZYJM.html" title="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" class="shop-title-value">Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3UGaK98" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61yHIxBZ6iL._SX679_.jpg" class="img-fluid lazy" alt="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGMQB5RG.html" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" class="shop-title-value">TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,249</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,200</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42D7EXZ" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61sY8BGOyEL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WFPMJBH.html" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" class="shop-title-value">iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
                   </div>
               </div>
           </div>

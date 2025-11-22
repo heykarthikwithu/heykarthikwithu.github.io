@@ -8,35 +8,35 @@
     <item>
 			<title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
 			<link>https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</link>
-			<description>If you&amp;rsquo;ve been hearing people in the Drupal world talk about &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;Canvas,&amp;rdquo; you might think it&amp;rsquo;s some complicated feature only developers care about. Honestly, that&amp;rsquo;s what I assumed at first too. But the more I tried these things, the more I realised they&amp;rsquo;re not really built for developers &amp;mdash; they&amp;rsquo;re built for the people who actually u</description>
+			<description>If you’ve been hearing people in the Drupal world talk about “AI” and “Canvas,” you might think it’s some complicated feature only developers care about. Honestly, that’s what I assumed at first too. But the more I tried these things, the more I realised they’re not really built for developers — they’re built for the people who actually use the website daily.  I’m talking abo</description>
 			<pubDate>Wed, 19 Nov 2025 20:23:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</guid>
     </item><item>
 			<title>Ant Farm Observation, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/ant-farm-observation-discovering-the-secret-life-of-ants.html</link>
-			<description>Have you ever wondered what ants do underground, where we cannot see them? By making a simple DIY ant farm, you can peek into their busy little world and learn how they live, work, and build amazing colonies. This experiment is not only fun but also teaches us about teamwork, survival, and nature&amp;rsquo;s tiny engineers.  Materials You Will Need   A clear glass jar or plastic container Clean sand o</description>
+			<description>Have you ever wondered what ants do underground, where we cannot see them? By making a simple DIY ant farm, you can peek into their busy little world and learn how they live, work, and build amazing colonies. This experiment is not only fun but also teaches us about teamwork, survival, and nature’s tiny engineers.  Materials You Will Need   A clear glass jar or plastic container Clean sand or so</description>
 			<pubDate>Wed, 03 Sep 2025 10:48:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/ant-farm-observation-discovering-the-secret-life-of-ants.html</guid>
     </item><item>
 			<title>Nature Scavenger Hunt, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/nature-scavenger-hunt-science-experiment-for-children.html</link>
-			<description>A nature scavenger hunt is a delightful and educational science experiment that encourages children to explore the outdoors while learning about their natural environment. This activity combines adventure with observation, helping children develop their understanding of nature, enhance their observational skills and foster a sense of curiosity. Here&amp;rsquo;s a step-by-step guide to organizing a nat</description>
+			<description>A nature scavenger hunt is a delightful and educational science experiment that encourages children to explore the outdoors while learning about their natural environment. This activity combines adventure with observation, helping children develop their understanding of nature, enhance their observational skills and foster a sense of curiosity. Here’s a step-by-step guide to organizing a nature </description>
 			<pubDate>Fri, 22 Aug 2025 10:36:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/nature-scavenger-hunt-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Rain Gauge, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/rain-gauge-science-experiment-for-children.html</link>
-			<description>Creating a DIY rain gauge is a fantastic science experiment for children to understand meteorology and hydrology. A rain gauge measures the amount of precipitation that falls over a period of time. This simple project allows children to observe and record rainfall, helping them learn about weather patterns and data collection. Here&amp;rsquo;s a step-by-step guide to making a basic rain gauge.  Materi</description>
+			<description>Creating a DIY rain gauge is a fantastic science experiment for children to understand meteorology and hydrology. A rain gauge measures the amount of precipitation that falls over a period of time. This simple project allows children to observe and record rainfall, helping them learn about weather patterns and data collection. Here’s a step-by-step guide to making a basic rain gauge.  Materials </description>
 			<pubDate>Sun, 10 Aug 2025 15:33:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/rain-gauge-science-experiment-for-children.html</guid>
     </item><item>
 			<title>How to charge a Mobile phone with Solar power?</title>
 			<link>https://peoplesblog.co.in/articles/how-to-charge-a-mobile-phone-with-solar-power.html</link>
-			<description>As the world shifts toward renewable energy, solar power is becoming an increasingly practical and eco-friendly way to charge everyday devices&amp;mdash;especially mobile phones. Whether you&amp;#39;re off the grid, on a camping trip, or simply looking to reduce your environmental impact, solar charging offers a convenient solution.  This article will walk you through how to charge your phone using solar </description>
+			<description>As the world shifts toward renewable energy, solar power is becoming an increasingly practical and eco-friendly way to charge everyday devices—especially mobile phones. Whether you're off the grid, on a camping trip, or simply looking to reduce your environmental impact, solar charging offers a convenient solution.  This article will walk you through how to charge your phone using solar energy. </description>
 			<pubDate>Sun, 27 Jul 2025 19:29:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-charge-a-mobile-phone-with-solar-power.html</guid>
@@ -50,42 +50,42 @@
     </item><item>
 			<title>Using Indexes to Speed Up SQL Queries</title>
 			<link>https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html</link>
-			<description>Using indexes to speed up SQL queries is an essential technique in database optimization. Here&amp;rsquo;s a concise guide on how to effectively use indexes:  What Are Indexes?  An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.  Types of Indexes   Single-Column Index: I</description>
+			<description>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:  What Are Indexes?  An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.  Types of Indexes   Single-Column Index: Index</description>
 			<pubDate>Sun, 27 Jul 2025 11:37:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html</guid>
     </item><item>
 			<title>Egg in a Bottle, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/egg-in-a-bottle-science-experiment-for-children.html</link>
-			<description>The Egg in a Bottle experiment is a classic demonstration of the principles of air pressure.  Here&amp;#39;s a simple guide for conducting this experiment:  Materials:   Hard-boiled egg (peeled) Glass bottle with a narrow neck (a milk bottle works well) Sheet of paper Matches or lighter   Procedure:   Peel the hard-boiled egg so that it easily fits through the neck of the bottle. Ensure that the bottl</description>
+			<description>The Egg in a Bottle experiment is a classic demonstration of the principles of air pressure.  Here's a simple guide for conducting this experiment:  Materials:   Hard-boiled egg (peeled) Glass bottle with a narrow neck (a milk bottle works well) Sheet of paper Matches or lighter   Procedure:   Peel the hard-boiled egg so that it easily fits through the neck of the bottle. Ensure that the bottle ha</description>
 			<pubDate>Sun, 27 Jul 2025 11:30:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/egg-in-a-bottle-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Shadow Tracing, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/shadow-tracing-science-experiment-for-children.html</link>
-			<description>Shadow tracing is an excellent way for children to explore concepts related to the Earth&amp;#39;s rotation, the position of the sun and how these factors affect shadow length and direction. This simple science experiment demonstrates how the position of the sun in the sky changes throughout the day and how this affects the shadows cast by objects. Here&amp;rsquo;s a detailed guide on how to conduct this </description>
+			<description>Shadow tracing is an excellent way for children to explore concepts related to the Earth's rotation, the position of the sun and how these factors affect shadow length and direction. This simple science experiment demonstrates how the position of the sun in the sky changes throughout the day and how this affects the shadows cast by objects. Here’s a detailed guide on how to conduct this experime</description>
 			<pubDate>Fri, 23 May 2025 17:46:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/shadow-tracing-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Why Choose Drupal for your Blogging Website in 2025?</title>
 			<link>https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</link>
-			<description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.  If you&amp;rsquo;re serious about blogging and need a powerful, future-proo</description>
+			<description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.  If you’re serious about blogging and need a powerful, future-proof CM</description>
 			<pubDate>Thu, 20 Mar 2025 12:09:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</guid>
     </item><item>
 			<title>DIY Geodesic Dome, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/diy-geodesic-dome-science-experiment-for-children.html</link>
-			<description>Building a geodesic dome is an exciting and educational science experiment that helps children understand geometric principles, engineering concepts and structural design. A geodesic dome is a spherical structure composed of interconnected triangles, which provides a strong and stable framework.  Here&amp;rsquo;s a step-by-step guide for creating a DIY geodesic dome using paper or straws.  Materials N</description>
+			<description>Building a geodesic dome is an exciting and educational science experiment that helps children understand geometric principles, engineering concepts and structural design. A geodesic dome is a spherical structure composed of interconnected triangles, which provides a strong and stable framework.  Here’s a step-by-step guide for creating a DIY geodesic dome using paper or straws.  Materials Neede</description>
 			<pubDate>Thu, 20 Mar 2025 09:11:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-geodesic-dome-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Pi Day Celebration, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/pi-day-celebration-science-experiment-for-children.html</link>
-			<description>Pi Day, celebrated on March 14th (3/14, reflecting the first three digits of pi, 3.14), is a perfect opportunity to engage children in learning about the mathematical constant pi (&amp;pi;). This activity involves measuring the circumference and diameter of circles to understand how pi relates to these measurements.  Here&amp;rsquo;s a fun and educational science experiment to celebrate Pi Day and explore</description>
+			<description>Pi Day, celebrated on March 14th (3/14, reflecting the first three digits of pi, 3.14), is a perfect opportunity to engage children in learning about the mathematical constant pi (π). This activity involves measuring the circumference and diameter of circles to understand how pi relates to these measurements.  Here’s a fun and educational science experiment to celebrate Pi Day and explore the c</description>
 			<pubDate>Fri, 17 Jan 2025 08:07:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/pi-day-celebration-science-experiment-for-children.html</guid>
@@ -106,7 +106,7 @@
     </item><item>
 			<title>Tesselation Art, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/tesselation-art-science-experiment-for-children.html</link>
-			<description>Tessellation art is a wonderful way for children to explore geometry and symmetry through creative expression. Tessellations involve creating patterns that cover a surface without any gaps or overlaps using geometric shapes. This activity helps children understand concepts such as shape, symmetry and repetition in a fun and engaging way.  Here&amp;rsquo;s a step-by-step guide to creating tessellation </description>
+			<description>Tessellation art is a wonderful way for children to explore geometry and symmetry through creative expression. Tessellations involve creating patterns that cover a surface without any gaps or overlaps using geometric shapes. This activity helps children understand concepts such as shape, symmetry and repetition in a fun and engaging way.  Here’s a step-by-step guide to creating tessellation art:</description>
 			<pubDate>Tue, 07 Jan 2025 08:13:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/tesselation-art-science-experiment-for-children.html</guid>
@@ -120,7 +120,7 @@
     </item><item>
 			<title>Understanding Azure Front Door and CDN Profiles: Key Concepts and Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</link>
-			<description>In today&amp;rsquo;s cloud-first world, providing fast, reliable, and secure access to web applications is critical for a positive user experience. With users across different geographic regions, ensuring low-latency content delivery and application optimization is key to improving performance. Azure Front Door and Azure Content Delivery Network (CDN) are two essential services in Azure that help orga</description>
+			<description>In today’s cloud-first world, providing fast, reliable, and secure access to web applications is critical for a positive user experience. With users across different geographic regions, ensuring low-latency content delivery and application optimization is key to improving performance. Azure Front Door and Azure Content Delivery Network (CDN) are two essential services in Azure that help organiza</description>
 			<pubDate>Sun, 29 Dec 2024 09:16:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</guid>
@@ -134,14 +134,14 @@
     </item><item>
 			<title>Understanding Azure Kubernetes Service (AKS): Key Concepts and Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</link>
-			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft&amp;#39;s managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes&amp;#39; robust fea</description>
+			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft's managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes' robust features, s</description>
 			<pubDate>Fri, 13 Dec 2024 08:49:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</guid>
     </item><item>
 			<title>Migrating from JSStream to Vimeo Using Drupal Migration API</title>
 			<link>https://peoplesblog.co.in/articles/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.html</link>
-			<description>Migrating video content from JSStream (a custom video streaming platform) to Vimeo can be a crucial task if you&amp;#39;re looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal&amp;rsquo;s Migration API can save significant time and reduce errors, especially for larger video libraries</description>
+			<description>Migrating video content from JSStream (a custom video streaming platform) to Vimeo can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s Migration API can save significant time and reduce errors, especially for larger video libraries.  In th</description>
 			<pubDate>Fri, 13 Dec 2024 08:43:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.html</guid>
@@ -162,84 +162,84 @@
     </item><item>
 			<title>Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases</title>
 			<link>https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.html</link>
-			<description>When working with SharePoint, a robust collaboration and document management platform, it&amp;#39;s important to understand the different ways you can organize and manage your files. Two key features for managing files in SharePoint are Documents and Document Sets. Although they may seem similar at first glance, they serve different purposes and offer distinct features to help you manage your content </description>
+			<description>When working with SharePoint, a robust collaboration and document management platform, it's important to understand the different ways you can organize and manage your files. Two key features for managing files in SharePoint are Documents and Document Sets. Although they may seem similar at first glance, they serve different purposes and offer distinct features to help you manage your content more</description>
 			<pubDate>Fri, 29 Nov 2024 07:12:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.html</guid>
     </item><item>
 			<title>Mini Wind Turbine, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/mini-wind-turbine-science-experiment-for-children.html</link>
-			<description>Building a mini wind turbine is a great science experiment for children that demonstrates the principles of wind energy and how it can be converted into electricity.  Here&amp;rsquo;s a step-by-step guide to creating a simple mini wind turbine using easily available materials:  Materials Needed:   Plastic Bottle: For the turbine&amp;#39;s body. Cardboard or Plastic Sheets: For the turbine blades. Wooden D</description>
+			<description>Building a mini wind turbine is a great science experiment for children that demonstrates the principles of wind energy and how it can be converted into electricity.  Here’s a step-by-step guide to creating a simple mini wind turbine using easily available materials:  Materials Needed:   Plastic Bottle: For the turbine's body. Cardboard or Plastic Sheets: For the turbine blades. Wooden Dowels or</description>
 			<pubDate>Thu, 28 Nov 2024 20:52:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/mini-wind-turbine-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Solar Oven Cooking, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</link>
-			<description>Building and using a DIY solar oven is a fantastic way to explore solar energy and understand the principles of cooking with sunlight. A solar oven harnesses solar energy to heat and cook food, providing a practical demonstration of renewable energy in action.  Here&amp;rsquo;s a step-by-step guide to creating and using a simple solar oven:  Materials Needed:   Cardboard Box: A large, clean cardboard </description>
+			<description>Building and using a DIY solar oven is a fantastic way to explore solar energy and understand the principles of cooking with sunlight. A solar oven harnesses solar energy to heat and cook food, providing a practical demonstration of renewable energy in action.  Here’s a step-by-step guide to creating and using a simple solar oven:  Materials Needed:   Cardboard Box: A large, clean cardboard box </description>
 			<pubDate>Thu, 28 Nov 2024 20:51:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Hydropower Experiment, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/hydropower-experiment-science-experiment-for-children.html</link>
-			<description>Creating a simple water wheel is an excellent hands-on experiment to understand the principles of hydropower. A waterwheel converts the kinetic energy of flowing water into mechanical energy, which can then be used to perform work or generate electricity.  Here&amp;#39;s a step-by-step guide to building a basic waterwheel to explore the fundamentals of hydropower:  Materials Needed:   Plastic or Cardb</description>
+			<description>Creating a simple water wheel is an excellent hands-on experiment to understand the principles of hydropower. A waterwheel converts the kinetic energy of flowing water into mechanical energy, which can then be used to perform work or generate electricity.  Here's a step-by-step guide to building a basic waterwheel to explore the fundamentals of hydropower:  Materials Needed:   Plastic or Cardboard</description>
 			<pubDate>Thu, 28 Nov 2024 20:48:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/hydropower-experiment-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Solar Still Experiment, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/solar-still-experiment-science-experiment-for-children.html</link>
-			<description>Solar still is a simple yet effective device for purifying water using solar energy. It works on the principle of evaporation and condensation to separate clean water from impurities.  Here&amp;#39;s a step-by-step guide to conducting a solar still experiment to demonstrate the process of water purification:  Materials Needed:   Clear Plastic Sheet: To cover the solar still and capture the evaporated </description>
+			<description>Solar still is a simple yet effective device for purifying water using solar energy. It works on the principle of evaporation and condensation to separate clean water from impurities.  Here's a step-by-step guide to conducting a solar still experiment to demonstrate the process of water purification:  Materials Needed:   Clear Plastic Sheet: To cover the solar still and capture the evaporated wate</description>
 			<pubDate>Thu, 28 Nov 2024 20:45:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/solar-still-experiment-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Borax Crystal Snowflakes, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/borax-crystal-snowflakes-science-experiment-for-children.html</link>
-			<description>Creating Borax crystal snowflakes is a captivating and educational science experiment that allows children to observe crystal formation and learn about solubility, saturation and crystallization. Here&amp;#39;s a step-by-step guide:  Materials:   Borax powder (available in the laundry aisle of most supermarkets) Pipe cleaners (white or blue works well for snowflakes) String or yarn Pencil or stick Sci</description>
+			<description>Creating Borax crystal snowflakes is a captivating and educational science experiment that allows children to observe crystal formation and learn about solubility, saturation and crystallization. Here's a step-by-step guide:  Materials:   Borax powder (available in the laundry aisle of most supermarkets) Pipe cleaners (white or blue works well for snowflakes) String or yarn Pencil or stick Scissor</description>
 			<pubDate>Thu, 28 Nov 2024 19:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/borax-crystal-snowflakes-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Alum Crystal Geodes, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/alum-crystal-geodes-science-experiment-for-children.html</link>
-			<description>Creating alum crystal geodes is a captivating and educational science experiment that allows children to observe crystal formation and learn about solubility, saturation and crystallization.  Here&amp;#39;s a step-by-step guide:  Materials:   Alum powder (aluminum potassium sulfate) Eggshells or small hollow egg-shaped molds Water Food coloring (optional) String or fishing line Scissors Stirring spoon</description>
+			<description>Creating alum crystal geodes is a captivating and educational science experiment that allows children to observe crystal formation and learn about solubility, saturation and crystallization.  Here's a step-by-step guide:  Materials:   Alum powder (aluminum potassium sulfate) Eggshells or small hollow egg-shaped molds Water Food coloring (optional) String or fishing line Scissors Stirring spoon Sau</description>
 			<pubDate>Thu, 28 Nov 2024 19:14:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/alum-crystal-geodes-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Rock Candy Crystal Sticks, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/rock-candy-crystal-sticks-science-experiment-for-children.html</link>
-			<description>Creating rock candy crystal sticks is a fun and educational science experiment that allows children to observe crystal formation and learn about solubility and saturation.  Here&amp;#39;s a step-by-step guide:  Materials:   Granulated sugar Water Glass or plastic jars or cups Wooden skewers or bamboo sticks Clothespins Food coloring (optional) Flavor extracts (optional) Saucepan Stirring spoon Scissor</description>
+			<description>Creating rock candy crystal sticks is a fun and educational science experiment that allows children to observe crystal formation and learn about solubility and saturation.  Here's a step-by-step guide:  Materials:   Granulated sugar Water Glass or plastic jars or cups Wooden skewers or bamboo sticks Clothespins Food coloring (optional) Flavor extracts (optional) Saucepan Stirring spoon Scissors   </description>
 			<pubDate>Thu, 28 Nov 2024 19:11:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/rock-candy-crystal-sticks-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Epsom Salt Crystal Shapes, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/epsom-salt-crystal-shapes-science-experiment-for-children.html</link>
-			<description>Creating Epsom salt crystal shapes is a captivating and educational science experiment that allows children to observe crystal formation and learn about crystal structures.  Here&amp;#39;s a step-by-step guide:  Materials:   Epsom salt (magnesium sulfate) Water Heat source (stove or microwave) Glass or plastic containers (jars, bowls, or cups) String or pipe cleaners Pencil or stick Food coloring (opt</description>
+			<description>Creating Epsom salt crystal shapes is a captivating and educational science experiment that allows children to observe crystal formation and learn about crystal structures.  Here's a step-by-step guide:  Materials:   Epsom salt (magnesium sulfate) Water Heat source (stove or microwave) Glass or plastic containers (jars, bowls, or cups) String or pipe cleaners Pencil or stick Food coloring (optiona</description>
 			<pubDate>Thu, 28 Nov 2024 19:08:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/epsom-salt-crystal-shapes-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Crushing Can Experiment, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/crushing-can-experiment-science-experiment-for-children.html</link>
-			<description>The crushing can experiment is a fascinating demonstration of air pressure in action.  Here&amp;#39;s how to conduct the experiment:  Materials Needed:   Empty aluminum soda can Heat-resistant tongs or a pair of pliers Stovetop or hot plate Bowl or container of cold water Safety goggles (optional but recommended)    Google Ad 1   Instructions:    Prepare the Can:   Begin by rinsing out the empty alumi</description>
+			<description>The crushing can experiment is a fascinating demonstration of air pressure in action.  Here's how to conduct the experiment:  Materials Needed:   Empty aluminum soda can Heat-resistant tongs or a pair of pliers Stovetop or hot plate Bowl or container of cold water Safety goggles (optional but recommended)    Google Ad 1   Instructions:    Prepare the Can:   Begin by rinsing out the empty aluminum </description>
 			<pubDate>Thu, 28 Nov 2024 19:07:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/crushing-can-experiment-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Cartesian Diver, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/cartesian-diver-science-experiment-for-children.html</link>
-			<description>Creating a Cartesian diver is a simple and fun science experiment that allows children to explore the concepts of buoyancy and pressure.  Here&amp;#39;s how to make one:  Materials Needed:   Clear plastic bottle with a screw-on cap Small plastic eye dropper or pipette Water Optional: Food coloring    Google Ad 1   Instructions:   Fill the plastic bottle with water almost to the top. Leave a small air </description>
+			<description>Creating a Cartesian diver is a simple and fun science experiment that allows children to explore the concepts of buoyancy and pressure.  Here's how to make one:  Materials Needed:   Clear plastic bottle with a screw-on cap Small plastic eye dropper or pipette Water Optional: Food coloring    Google Ad 1   Instructions:   Fill the plastic bottle with water almost to the top. Leave a small air gap </description>
 			<pubDate>Thu, 28 Nov 2024 19:06:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/cartesian-diver-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Ping Pong Ball Hovercraft, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/ping-pong-ball-hovercraft-science-experiment-for-children.html</link>
-			<description>Creating a ping pong ball hovercraft is a fun and educational science experiment that children can enjoy while learning about the principles of air pressure and friction.  Here&amp;#39;s how to make a simple ping pong ball hovercraft:  Materials Needed:   A sturdy, smooth-surfaced CD or DVD A large balloon (preferably round) A hot glue gun and glue sticks A bottle cap (with a flat bottom) A ping pong </description>
+			<description>Creating a ping pong ball hovercraft is a fun and educational science experiment that children can enjoy while learning about the principles of air pressure and friction.  Here's how to make a simple ping pong ball hovercraft:  Materials Needed:   A sturdy, smooth-surfaced CD or DVD A large balloon (preferably round) A hot glue gun and glue sticks A bottle cap (with a flat bottom) A ping pong ball</description>
 			<pubDate>Thu, 28 Nov 2024 19:03:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/ping-pong-ball-hovercraft-science-experiment-for-children.html</guid>
@@ -253,7 +253,7 @@
     </item><item>
 			<title>Filter content between Date ranges in Drupal 7</title>
 			<link>https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal.html</link>
-			<description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.  This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an &amp;#39;end date&amp;#39; for the event, only a date field with the &amp;#39;Collect an end date&amp;#39;  This part </description>
+			<description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.  This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an 'end date' for the event, only a date field with the 'Collect an end date'  This part (which seems 'lo</description>
 			<pubDate>Thu, 28 Nov 2024 18:57:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal.html</guid>
@@ -274,14 +274,14 @@
     </item><item>
 			<title>DIY Math Board Games, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/diy-math-board-games-science-experiment-for-children.html</link>
-			<description>Creating and playing math-based board games is a fantastic way for children to learn math concepts while having fun. These DIY games can be tailored to various age groups and skill levels, making math practice engaging and interactive.  Here&amp;rsquo;s a step-by-step guide to designing and playing your own math board games.  Materials Needed:   Cardboard or Poster Board: For the game board. Markers o</description>
+			<description>Creating and playing math-based board games is a fantastic way for children to learn math concepts while having fun. These DIY games can be tailored to various age groups and skill levels, making math practice engaging and interactive.  Here’s a step-by-step guide to designing and playing your own math board games.  Materials Needed:   Cardboard or Poster Board: For the game board. Markers or Cr</description>
 			<pubDate>Tue, 26 Nov 2024 08:07:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-math-board-games-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Advanced Sorting and Searching Algorithms in PHP: Quick Sort, Merge Sort, Heap Sort, and Binary Search Trees</title>
 			<link>https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</link>
-			<description>Sorting and searching are foundational operations in computer science. Understanding the efficient algorithms for these tasks can significantly enhance the performance of your applications.  In this article, we&amp;rsquo;ll explore three advanced sorting algorithms &amp;mdash; Quick Sort, Merge Sort, and Heap Sort &amp;mdash; and dive into implementing Binary Search Trees (BST) in PHP 8.  We&amp;rsquo;ll include </description>
+			<description>Sorting and searching are foundational operations in computer science. Understanding the efficient algorithms for these tasks can significantly enhance the performance of your applications.  In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.  We’ll include clear explanatio</description>
 			<pubDate>Tue, 26 Nov 2024 07:53:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</guid>
@@ -323,7 +323,7 @@
     </item><item>
 			<title>Implementing a Redis Cache for Product Catalog Data in PHP</title>
 			<link>https://peoplesblog.co.in/articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html</link>
-			<description>Caching is a vital technique for improving application performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.  In this article, we&amp;rsquo;ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.  </description>
+			<description>Caching is a vital technique for improving application performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.  In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.  What</description>
 			<pubDate>Fri, 08 Nov 2024 09:32:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html</guid>
@@ -337,14 +337,14 @@
     </item><item>
 			<title>Origami Geometry, science experiment for children</title>
 			<link>https://peoplesblog.co.in/articles/origami-geometry-science-experiment-for-children.html</link>
-			<description>Origami is a fantastic way to explore and understand geometric concepts through hands-on activity. By folding paper to create different shapes and structures, children can visualize and learn about various geometric principles.  Here&amp;rsquo;s a detailed article to a &amp;quot;Origami Geometry&amp;quot; science experiment for children, focusing on basic geometric shapes and concepts.  Materials Needed:   Or</description>
+			<description>Origami is a fantastic way to explore and understand geometric concepts through hands-on activity. By folding paper to create different shapes and structures, children can visualize and learn about various geometric principles.  Here’s a detailed article to a "Origami Geometry" science experiment for children, focusing on basic geometric shapes and concepts.  Materials Needed:   Origami Paper: S</description>
 			<pubDate>Mon, 04 Nov 2024 14:05:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/origami-geometry-science-experiment-for-children.html</guid>
     </item><item>
 			<title>When and How to Use Each Design Pattern in PHP</title>
 			<link>https://peoplesblog.co.in/articles/when-and-how-to-use-each-design-pattern-in-php.html</link>
-			<description>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.  In this article, we&amp;rsquo;ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.  1. Singleton Pattern  When to Use   Use the Singleton pattern when you need to ensure that a class has </description>
+			<description>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.  In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.  1. Singleton Pattern  When to Use   Use the Singleton pattern when you need to ensure that a class has only</description>
 			<pubDate>Mon, 04 Nov 2024 06:51:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/when-and-how-to-use-each-design-pattern-in-php.html</guid>

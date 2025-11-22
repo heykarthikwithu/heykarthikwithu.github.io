@@ -15,7 +15,7 @@
     </item><item>
 			<title>Read Data to Paragraph Template in Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/read-data-to-paragraph-template-in-drupal-application.html</link>
-			<description>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.  Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here&amp;rsquo;s the article wh</description>
+			<description>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.  Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which </description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/read-data-to-paragraph-template-in-drupal-application.html</guid>

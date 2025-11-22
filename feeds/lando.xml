@@ -22,14 +22,14 @@
     </item><item>
 			<title>Improve Drupal Search with Solr, Locally configured via Lando</title>
 			<link>https://peoplesblog.co.in/articles/improve-drupal-search-with-solr-locally-configured-via-lando.html</link>
-			<description>In this article, we are going to learn how Drupal search can be improved with Solr which provides great performance and is suitable even for use on large commercial websites. And along with this using the search_api &amp; search_api_solr modules, helps to configure the Facets &amp; Multilingual content can be handled in an improved manner. And let's see how we can configure this locally with the help of L</description>
+			<description>In this article, we are going to learn how Drupal search can be improved with Solr which provides great performance and is suitable even for use on large commercial websites. And along with this using the search_api &amp;amp; search_api_solr modules, helps to configure the Facets &amp;amp; Multilingual content can be handled in an improved manner. And let's see how we can configure this locally with the h</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/improve-drupal-search-with-solr-locally-configured-via-lando.html</guid>
     </item><item>
 			<title>Multisite Local environment setup with Lando &amp; Drupal</title>
 			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-lando-and-drupal.html</link>
-			<description>As we have seen in the earlier article to setup the Local environment with Lando &amp; Drupal, Now let's see how we set up the multisite with the lando.                            And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection</description>
+			<description>As we have seen in the earlier article to setup the Local environment with Lando &amp;amp; Drupal, Now let's see how we set up the multisite with the lando.                            And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collec</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-lando-and-drupal.html</guid>

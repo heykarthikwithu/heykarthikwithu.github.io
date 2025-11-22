@@ -5,15 +5,15 @@
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Secure Website running on Apache with Let's Encrypt on Linux</title>
-    <meta name="description" content="Website security is generally most complicated and expensive task for every Linux admin. Let&#39;s Encrypt is a free, automated and open certificate a" />
+    <meta name="description" content="Website security is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate autho" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/secure-website-running-apache-lets-encrypt-linux.html" />
     <meta property="og:title" content="Secure Website running on Apache with Let's Encrypt on Linux" />
-    <meta property="og:description" content="Website security is generally most complicated and expensive task for every Linux admin. Let&#39;s Encrypt is a free, automated and open certificate a" />
+    <meta property="og:description" content="Website security is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate autho" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/secure-website-running-apache-lets-encrypt-linux.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/letsencrypt_bpic.jpg" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="Secure Website running on Apache with Let's Encrypt on Linux" />
-    <meta name="twitter:description" content="Website security is generally most complicated and expensive task for every Linux admin. Let&#39;s Encrypt is a free, automated and open certificate a" />
+    <meta name="twitter:description" content="Website security is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate autho" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/letsencrypt_bpic.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -52,7 +52,7 @@
           "@id": "/articles/secure-website-running-apache-lets-encrypt-linux.html"
         },
         "headline": "Secure Website running on Apache with Let's Encrypt on Linux",
-        "description": "Website security is generally most complicated and expensive task for every Linux admin. Let&#39;s Encrypt is a free, automated and open certificate a",
+        "description": "Website security is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate autho",
         "image": "https://peoplesblog.co.in/upload/banners/letsencrypt_bpic.jpg",
         "author": {
           "@type": "Person",
@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>Website security is generally most complicated and expensive task for every Linux admin. Let&#39;s Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It&#39;s very complex process to install and add SSL certificate to a web server.</p>  <p>Let&#39;s make it easier with the help of Let&#39;s Encrypt. One can easily encrypt data of your website free of charge using Let&#39;s Encrypt.</p>  <ul> <li>If your Site is running on Apache, run this below one to enable ssl..</li> </ul>  <pre> <code>sudo a2enmode ssl</code></pre>  <pre> <code>sudo a2ensite default-ssl</code></pre>  <ul> <li>Next restart the apache webserver</li> </ul>  <pre> <code>sudo systemctl restart apache2</code></pre>  <ul> <li>If you hit your domain, you will see</li> </ul>  <p><code>Your Connection is not Secured</code></p>  <ul> <li>Download and Install Let&#39;s Encrypt</li> </ul>  <pre> <code>sudo git clone <a class='vglnk' href='https://github.com/letsencrypt/letsencrypt' rel='nofollow'>https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</code></pre>  <ul> <li>Next generate the Certificate</li> </ul>  <pre> <code>cd /opt/letsencrypt</code></pre>  <pre> <code>sudo ./letsencrypt-auto --apache -d http://kkk.com</code></pre>  <ul> <li>During installation you will need to specify your E-mail address and also agree to the terms of service.</li> <li>Once completed, One can see&nbsp;list all of&nbsp;certificate files at&nbsp;<code>/etc/letsencrypt/live</code>&nbsp;directory..</li> <li>And you can access <code>https://kkk.com</code></li> <li>You can also verify the status of your SSL certificate by visiting the URL&nbsp;<code><a class='vglnk' href='https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest' rel='nofollow'>https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest</a></code></li> </ul>  <h3>How to Renew Lets Encrypt Certificates</h3>  <ul> <li>By default, SSL certificates issued by Let&#39;s Encrypt are valid for 90 days. So it is recommended to renew the certificate before the expiration date.</li> <li>You can renew the SSL certificates manually</li> </ul>  <pre> <code>cd /opt/letsencrypt</code></pre>  <pre> <code>sudo ./letsencrypt-auto certonly --renew-by-default -d <a class='vglnk' href='http://kkk.com' rel='nofollow'>kkk.com</a></code></pre>  <ul> <li>to Automate this process, lets have the Cron job for this to do..</li> </ul>  <pre> <code>sudo nano /etc/crontab</code><code> @monthly root /opt/letsencrypt/letsencrypt-auto certonly --renew-by-default -d <a class='vglnk' href='http://kkk.com' rel='nofollow'>kkk.com</a></code></pre>  <ul> <li>Save this file and Every month, this cron job would run..</li> <li>Upgrade Let&#39;s Encrypt</li> </ul>  <pre> <code>cd /opt/letsencrypt</code></pre>  <ul> <li>Pull the latest changes from the git repository..</li> </ul>  <p>Thanks for reading the article,&nbsp;<a href='/articles/drupal.html'>for more drupal related articles</a>&nbsp;<a href='/articles/index.html'>read and subscribe to peoples blog articles</a>.</p> </div>
+                                <div><p>Website <a href="/articles/usage-of-local-php-security-checker-for-drupal-applications.html" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a> is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It's very complex process to install and add SSL certificate to a web server.</p>  <p>Let's make it easier with the help of Let's Encrypt. One can easily encrypt data of your website free of charge using Let's Encrypt.</p>  <ul> <li>If your Site is running on Apache, run this below one to enable ssl..</li> </ul>  <pre> <code>sudo a2enmode ssl</code></pre>  <pre> <code>sudo a2ensite default-ssl</code></pre>  <ul> <li>Next restart the apache webserver</li> </ul>  <pre> <code>sudo systemctl restart apache2</code></pre>  <ul> <li>If you hit your domain, you will see</li> </ul>  <p><code>Your Connection is not Secured</code></p>  <ul> <li>Download and Install Let's Encrypt</li> </ul>  <pre> <code>sudo git clone <a class="vglnk" href="https://github.com/letsencrypt/letsencrypt" rel="nofollow">https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</code></pre>  <ul> <li>Next generate the Certificate</li> </ul>  <pre> <code>cd /opt/letsencrypt</code></pre>  <pre> <code>sudo ./letsencrypt-auto --apache -d http://kkk.com</code></pre>  <ul> <li>During installation you will need to specify your E-mail address and also agree to the terms of service.</li> <li>Once completed, One can see list all of certificate files at <code>/etc/letsencrypt/live</code> <a href="/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html" title="Read about Understanding Azure Active Directory Azure App Registrations Key Concepts And Best Practices">directory</a>..</li> <li>And you can access <code>https://kkk.com</code></li> <li>You can also verify the status of your SSL certificate by visiting the URL <code><a class="vglnk" href="https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest" rel="nofollow">https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest</a></code></li> </ul>  <h3>How to Renew Lets Encrypt Certificates</h3>  <ul> <li>By default, SSL certificates issued by Let's Encrypt are valid for 90 days. So it is recommended to renew the certificate before the expiration date.</li> <li>You can renew the SSL certificates manually</li> </ul>  <pre> <code>cd /opt/letsencrypt</code></pre>  <pre> <code>sudo ./letsencrypt-auto certonly --renew-by-default -d <a class="vglnk" href="http://kkk.com" rel="nofollow">kkk.com</a></code></pre>  <ul> <li>to Automate this process, lets have the Cron job for this to do..</li> </ul>  <pre> <code>sudo nano /etc/crontab</code><code> @monthly root /opt/letsencrypt/letsencrypt-auto certonly --renew-by-default -d <a class="vglnk" href="http://kkk.com" rel="nofollow">kkk.com</a></code></pre>  <ul> <li>Save this file and Every month, this cron job would run..</li> <li>Upgrade Let's Encrypt</li> </ul>  <pre> <code>cd /opt/letsencrypt</code></pre>  <ul> <li>Pull the latest changes from the git repository..</li> </ul>  <p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">45% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4g7UwOh" title="Nature&#039;s Blend Premium Whole Almond Mamra Selected 500 G Jar (Pack Of 5)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91iPNkdihUL._SX679_PIbundle-5,TopRight,0,0_AA679SH20_.jpg" class="img-fluid lazy" alt="Nature&#039;s Blend Premium Whole Almond Mamra Selected 500 G Jar (Pack Of 5)" title="Nature&#039;s Blend Premium Whole Almond Mamra Selected 500 G Jar (Pack Of 5)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B099FCJQDS.html" title="Nature&#039;s Blend Premium Whole Almond Mamra Selected 500 G Jar (Pack Of 5)" class="shop-title-value">Nature&#039;s Blend Premium Whole Almond Mamra Selected 500 G Jar (Pack Of 5)</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hv26Ux" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61E7yk7f0vL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHZ2X647.html" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" class="shop-title-value">Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,911</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,250</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>44,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">21% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bwZVgI" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ABEU, Blue Euphoria, Base stand with drawer)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71Q46li47mL._SX679_.jpg" class="img-fluid lazy" alt="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ABEU, Blue Euphoria, Base stand with drawer)" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ABEU, Blue Euphoria, Base stand with drawer)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0041XZS54.html" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ABEU, Blue Euphoria, Base stand with drawer)" class="shop-title-value">LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ABEU, Blue Euphoria, Base stand with drawer)</a></h4>
+                  <div class="discount"><span class="main">42% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y5kIBt" title="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81zPuf-0ETL._SX679_.jpg" class="img-fluid lazy" alt="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" title="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DWFY54.html" title="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" class="shop-title-value">Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,199</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">39% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eH0XY8" title="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51fpGSYjWnL._SX679_.jpg" class="img-fluid lazy" alt="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" title="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSSSPZSS.html" title="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" class="shop-title-value">Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)</a></h4>
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41fdayC" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BmLjte2HL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9MBP7DJ.html" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" class="shop-title-value">Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>32,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>54,300</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,000</span></span>
                   </div>
               </div>
           </div>
@@ -289,12 +289,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">18% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CVQCcL" title="Anveshan A2 Cow Ghee 5L Combo(1Liter x 5 Jars) | Glass Jar | Bilona Method | Curd-Churned | Pure, Natural &amp; Healthy | Lab Tested" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81hOF9srxfL._SX679_PIbundle-5,TopRight,0,0_AA679SH20_.jpg" class="img-fluid lazy" alt="Anveshan A2 Cow Ghee 5L Combo(1Liter x 5 Jars) | Glass Jar | Bilona Method | Curd-Churned | Pure, Natural &amp; Healthy | Lab Tested" title="Anveshan A2 Cow Ghee 5L Combo(1Liter x 5 Jars) | Glass Jar | Bilona Method | Curd-Churned | Pure, Natural &amp; Healthy | Lab Tested" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BW8WYGRV.html" title="Anveshan A2 Cow Ghee 5L Combo(1Liter x 5 Jars) | Glass Jar | Bilona Method | Curd-Churned | Pure, Natural &amp; Healthy | Lab Tested" class="shop-title-value">Anveshan A2 Cow Ghee 5L Combo(1Liter x 5 Jars) | Glass Jar | Bilona Method | Curd-Churned | Pure, Natural &amp; Healthy | Lab Tested</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46tUpdN" title="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51vNMv6Ua-L._SX679_.jpg" class="img-fluid lazy" alt="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" title="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09TB2YC13.html" title="Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers" class="shop-title-value">Aquaguard Sure Delight NXT RO+UV Water Purifier | Free Service Plan worth ₹2000 | India’s #1 Water Purifier | Suitable for Borewell, Tanker &amp; Municipal Water | 30x Impurity Removal vs Local Purifiers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,834.05</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,800</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,299</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,000</span></span>
                   </div>
               </div>
           </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">55% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dVZtIM" title="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51fWpRMV-dL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White" title="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D54294K9.html" title="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White" class="shop-title-value">Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White</a></h4>
+                  <div class="discount"><span class="main">54% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3NV2w9h" title="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61p8i0azkvL._SX679_.jpg" class="img-fluid lazy" alt="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" title="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09CGQ6FCK.html" title="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" class="shop-title-value">KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,000</span></span>
                   </div>
               </div>
           </div>
@@ -385,12 +385,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3RcA30X" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61zByLjZFnL._SY879_.jpg" class="img-fluid lazy" alt="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3MHB63Q.html" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" class="shop-title-value">Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)</a></h4>
+                  <div class="discount"><span class="main">8% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gs8aLZ" title="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61JOYUJbhcL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VJ72XK.html" title="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,600</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>32,998</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,999</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3VRfxV5" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61YQ754bpRL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CTT6K6JS.html" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" class="shop-title-value">AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)</a></h4>
+                  <div class="discount"><span class="main">49% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ps4jDx" title="EOX E2 Electric Scooter for Adults | Non RTO EV Vehicle with 60-80Km Range, Waterproof Motor, 32AH 60V Lead Acid Battery, Tubeless Tyre, Reverse Mode (Red)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51p2MaI7tXL._SX679_.jpg" class="img-fluid lazy" alt="EOX E2 Electric Scooter for Adults | Non RTO EV Vehicle with 60-80Km Range, Waterproof Motor, 32AH 60V Lead Acid Battery, Tubeless Tyre, Reverse Mode (Red)" title="EOX E2 Electric Scooter for Adults | Non RTO EV Vehicle with 60-80Km Range, Waterproof Motor, 32AH 60V Lead Acid Battery, Tubeless Tyre, Reverse Mode (Red)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CVGZQ3RR.html" title="EOX E2 Electric Scooter for Adults | Non RTO EV Vehicle with 60-80Km Range, Waterproof Motor, 32AH 60V Lead Acid Battery, Tubeless Tyre, Reverse Mode (Red)" class="shop-title-value">EOX E2 Electric Scooter for Adults | Non RTO EV Vehicle with 60-80Km Range, Waterproof Motor, 32AH 60V Lead Acid Battery, Tubeless Tyre, Reverse Mode (Red)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>3,599</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>51,498</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,999</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Kh737v" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6181iXAgMjL._SX679_.jpg" class="img-fluid lazy" alt="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBQ2L8XY.html" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" class="shop-title-value">ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gRmrng" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81P2YOHSQRL._SX679_.jpg" class="img-fluid lazy" alt="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F835K3HL.html" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" class="shop-title-value">LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>51,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>26,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,090</span></span>
                   </div>
               </div>
           </div>
@@ -485,42 +485,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">62% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3DZIA3g" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41M3JHvOckL.jpg" class="img-fluid lazy" alt="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKXRXVH.html" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" class="shop-title-value">ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235</a></h4>
+                  <div class="discount"><span class="main">65% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jpOXNp" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/813i7KmyReL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LB71H8M.html" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,879</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,903</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,995</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">13% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3LRqukD" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81YtQzdFkIL._SX679_.jpg" class="img-fluid lazy" alt="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6R9XCXX.html" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40Oil8t" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51J9yKE61vL._SX679_.jpg" class="img-fluid lazy" alt="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F5PXXWM9.html" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" class="shop-title-value">Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,983</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">15% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3M1rX7X" title="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61tslaYWLjL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" title="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7N23QKD.html" title="OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]" class="shop-title-value">OnePlus Pad 2(12.1 Inch)LCD Display,12GB RAM, 256GB Storage,Snapdragon 8 Gen 3,144Hz Refresh Rate,Dolby Vision &amp; Atmos,Open Canvas,AI features,6 speakers,Wi-Fi with Cellular Data Sharing [Nimbus Gray]</a></h4>
+                  <div class="discount"><span class="main">7% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41Hkcwo" title="Samsung Galaxy S25 5G Smartphone with Galaxy AI (Silver Shadow, 12GB RAM, 256GB Storage), Snapdragon 8 Elite, 50 MP Camera with ProVisual Engine and 4000mAh Battery" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61D3EdXKG5L._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25 5G Smartphone with Galaxy AI (Silver Shadow, 12GB RAM, 256GB Storage), Snapdragon 8 Elite, 50 MP Camera with ProVisual Engine and 4000mAh Battery" title="Samsung Galaxy S25 5G Smartphone with Galaxy AI (Silver Shadow, 12GB RAM, 256GB Storage), Snapdragon 8 Elite, 50 MP Camera with ProVisual Engine and 4000mAh Battery" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKNLFBG.html" title="Samsung Galaxy S25 5G Smartphone with Galaxy AI (Silver Shadow, 12GB RAM, 256GB Storage), Snapdragon 8 Elite, 50 MP Camera with ProVisual Engine and 4000mAh Battery" class="shop-title-value">Samsung Galaxy S25 5G Smartphone with Galaxy AI (Silver Shadow, 12GB RAM, 256GB Storage), Snapdragon 8 Elite, 50 MP Camera with ProVisual Engine and 4000mAh Battery</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>40,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>74,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>80,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">12% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XoXiaI" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61NbiB1GU-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VKMLGD.html" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">6% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Rm7D4t" title="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nxQ62qglL._SX679_.jpg" class="img-fluid lazy" alt="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" title="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX59SD6C.html" title="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" class="shop-title-value">Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
                   </div>
               </div>
           </div>

@@ -8,21 +8,21 @@
     <item>
 			<title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
 			<link>https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</link>
-			<description>If you&amp;rsquo;ve been hearing people in the Drupal world talk about &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;Canvas,&amp;rdquo; you might think it&amp;rsquo;s some complicated feature only developers care about. Honestly, that&amp;rsquo;s what I assumed at first too. But the more I tried these things, the more I realised they&amp;rsquo;re not really built for developers &amp;mdash; they&amp;rsquo;re built for the people who actually u</description>
+			<description>If you’ve been hearing people in the Drupal world talk about “AI” and “Canvas,” you might think it’s some complicated feature only developers care about. Honestly, that’s what I assumed at first too. But the more I tried these things, the more I realised they’re not really built for developers — they’re built for the people who actually use the website daily.  I’m talking abo</description>
 			<pubDate>Wed, 19 Nov 2025 20:23:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</guid>
     </item><item>
 			<title>Why Choose Drupal for your Blogging Website in 2025?</title>
 			<link>https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</link>
-			<description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.  If you&amp;rsquo;re serious about blogging and need a powerful, future-proo</description>
+			<description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.  If you’re serious about blogging and need a powerful, future-proof CM</description>
 			<pubDate>Thu, 20 Mar 2025 12:09:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</guid>
     </item><item>
 			<title>Filter content between Date ranges in Drupal 7</title>
 			<link>https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal.html</link>
-			<description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.  This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an &amp;#39;end date&amp;#39; for the event, only a date field with the &amp;#39;Collect an end date&amp;#39;  This part </description>
+			<description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.  This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an 'end date' for the event, only a date field with the 'Collect an end date'  This part (which seems 'lo</description>
 			<pubDate>Thu, 28 Nov 2024 18:57:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal.html</guid>
@@ -36,14 +36,14 @@
     </item><item>
 			<title>Drupal JSON:API GET, POST, PATCH and DELETE Samples</title>
 			<link>https://peoplesblog.co.in/articles/drupal-jsonapi-get-post-patch-and-delete-samples.html</link>
-			<description>The API that the JSON:API module makes available is centered on Drupal&amp;#39;s entity types and bundles. Every bundle receives its own, unique URL path, which all follow a shared pattern  HTTP Methods  JSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.   GET - Retrieve data, can be a collection of resources or an individual resource </description>
+			<description>The API that the JSON:API module makes available is centered on Drupal's entity types and bundles. Every bundle receives its own, unique URL path, which all follow a shared pattern  HTTP Methods  JSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.   GET - Retrieve data, can be a collection of resources or an individual resource POST</description>
 			<pubDate>Thu, 15 Aug 2024 12:34:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-jsonapi-get-post-patch-and-delete-samples.html</guid>
     </item><item>
 			<title>Secure Website running on Apache with Let's Encrypt on Linux</title>
 			<link>https://peoplesblog.co.in/articles/secure-website-running-apache-lets-encrypt-linux.html</link>
-			<description>Website security is generally most complicated and expensive task for every Linux admin. Let&amp;#39;s Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It&amp;#39;s very complex process to install and add SSL certificate to a web server.  Let&amp;#39;s make it easier with the help of Let&amp;#39;s En</description>
+			<description>Website security is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It's very complex process to install and add SSL certificate to a web server.  Let's make it easier with the help of Let's Encrypt. One can e</description>
 			<pubDate>Thu, 15 Aug 2024 11:48:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-website-running-apache-lets-encrypt-linux.html</guid>
@@ -78,14 +78,14 @@
     </item><item>
 			<title>Aegir on Docker - Develop, Test, With Easier Deployment</title>
 			<link>https://peoplesblog.co.in/articles/aegir-docker-develop-test-easier-deployment.html</link>
-			<description>Aegir with Docker would be one of the brilliant option for Better Drupal Development and Faster Deployments.  Docker, which solves the overhead of virtualization layer. And Aegir, which gives the best possible approach for Drupal Multisite hosting.  Here you go???   Better Task Queue..! This process is usually handled by &amp;quot;Supervisor&amp;quot; The &amp;quot;task queue runner&amp;quot; is just a continuous</description>
+			<description>Aegir with Docker would be one of the brilliant option for Better Drupal Development and Faster Deployments.  Docker, which solves the overhead of virtualization layer. And Aegir, which gives the best possible approach for Drupal Multisite hosting.  Here you go???   Better Task Queue..! This process is usually handled by "Supervisor" The "task queue runner" is just a continuous process that aegir </description>
 			<pubDate>Mon, 20 May 2024 17:27:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/aegir-docker-develop-test-easier-deployment.html</guid>
     </item><item>
 			<title>Create a custom Drupal Service and Use as a Helper</title>
 			<link>https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</link>
-			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module&amp;rsq</description>
+			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module’s</description>
 			<pubDate>Fri, 22 Mar 2024 15:20:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</guid>
@@ -113,7 +113,7 @@
     </item><item>
 			<title>How to improve drupal website performance</title>
 			<link>https://peoplesblog.co.in/articles/how-to-improve-drupal-website-performance.html</link>
-			<description>Improving the performance of a Drupal website involves optimizing various aspects of its configuration and content. There are several ways to overall complex performance related problems and improve Drupal website performance to load it quicker.  Here are some tips to enhance the performance of your Drupal website:  Enable Caching:   Enable Drupal&amp;#39;s built-in caching mechanisms to store pre-gen</description>
+			<description>Improving the performance of a Drupal website involves optimizing various aspects of its configuration and content. There are several ways to overall complex performance related problems and improve Drupal website performance to load it quicker.  Here are some tips to enhance the performance of your Drupal website:  Enable Caching:   Enable Drupal's built-in caching mechanisms to store pre-generat</description>
 			<pubDate>Tue, 05 Dec 2023 14:50:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-improve-drupal-website-performance.html</guid>
@@ -127,14 +127,14 @@
     </item><item>
 			<title>Migrate your site from Drupal 7 To Drupal 9?</title>
 			<link>https://peoplesblog.co.in/articles/migrate-your-site-from-drupal-seven-to-drupal-nine.html</link>
-			<description>In this article, we are going to see what are the important things you need to understand for the migration of your Drupal 7 site to the Drupal 9 site. And if you see from your Business perspective, Drupal 7 was launched nine years ago and this is the perfect time for some reassessment of the needs of site users &amp; content managers. And if you see from Drupal’s end, Initially, Drupal 7 end of lif</description>
+			<description>In this article, we are going to see what are the important things you need to understand for the migration of your Drupal 7 site to the Drupal 9 site. And if you see from your Business perspective, Drupal 7 was launched nine years ago and this is the perfect time for some reassessment of the needs of site users &amp;amp; content managers. And if you see from Drupal’s end, Initially, Drupal 7 end of</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/migrate-your-site-from-drupal-seven-to-drupal-nine.html</guid>
     </item><item>
 			<title>Improve Drupal Search with Solr, Locally configured via Lando</title>
 			<link>https://peoplesblog.co.in/articles/improve-drupal-search-with-solr-locally-configured-via-lando.html</link>
-			<description>In this article, we are going to learn how Drupal search can be improved with Solr which provides great performance and is suitable even for use on large commercial websites. And along with this using the search_api &amp; search_api_solr modules, helps to configure the Facets &amp; Multilingual content can be handled in an improved manner. And let's see how we can configure this locally with the help of L</description>
+			<description>In this article, we are going to learn how Drupal search can be improved with Solr which provides great performance and is suitable even for use on large commercial websites. And along with this using the search_api &amp;amp; search_api_solr modules, helps to configure the Facets &amp;amp; Multilingual content can be handled in an improved manner. And let's see how we can configure this locally with the h</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/improve-drupal-search-with-solr-locally-configured-via-lando.html</guid>
@@ -155,14 +155,14 @@
     </item><item>
 			<title>Improvements for Editor Experience in Drupal</title>
 			<link>https://peoplesblog.co.in/articles/improvements-for-editor-experience-in-drupal.html</link>
-			<description>In this article, we are going to learn what Drupal offers for text editors or content managers as a content management framework within Drupal Core &amp; Contributed modules. Earlier versions of Drupal have several useful features to help content editors to manage their content on a daily basis. And in the newer versions of Drupal (from when Symfony was introduced), there are a few more improvements i</description>
+			<description>In this article, we are going to learn what Drupal offers for text editors or content managers as a content management framework within Drupal Core &amp;amp; Contributed modules. Earlier versions of Drupal have several useful features to help content editors to manage their content on a daily basis. And in the newer versions of Drupal (from when Symfony was introduced), there are a few more improvemen</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/improvements-for-editor-experience-in-drupal.html</guid>
     </item><item>
 			<title>What Drupal offers as Responsive Web Design within Core</title>
 			<link>https://peoplesblog.co.in/articles/what-drupal-offers-as-responsive-web-design-within-core.html</link>
-			<description>In this article, we gonna see What Drupal offers as Responsive Web Design within Drupal Core for developers. While Drupal 8 was out and it had a buzz of being responsive, mobile friendly. And yes, the Internet is on the verge of being dominated by smartphones &amp; Drupal needs to be prepared.Mobile friendly will also mean the content is first. From a big screen to a little screen, elements would look</description>
+			<description>In this article, we gonna see What Drupal offers as Responsive Web Design within Drupal Core for developers. While Drupal 8 was out and it had a buzz of being responsive, mobile friendly. And yes, the Internet is on the verge of being dominated by smartphones &amp;amp; Drupal needs to be prepared.Mobile friendly will also mean the content is first. From a big screen to a little screen, elements would </description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/what-drupal-offers-as-responsive-web-design-within-core.html</guid>
@@ -197,7 +197,7 @@
     </item><item>
 			<title>Multisite Local environment setup with Lando &amp; Drupal</title>
 			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-lando-and-drupal.html</link>
-			<description>As we have seen in the earlier article to setup the Local environment with Lando &amp; Drupal, Now let's see how we set up the multisite with the lando.                            And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection</description>
+			<description>As we have seen in the earlier article to setup the Local environment with Lando &amp;amp; Drupal, Now let's see how we set up the multisite with the lando.                            And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collec</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-lando-and-drupal.html</guid>
@@ -232,14 +232,14 @@
     </item><item>
 			<title>Monitoring Web Application with ELK Stack</title>
 			<link>https://peoplesblog.co.in/articles/monitoring-web-application-with-elk-stack.html</link>
-			<description>For Auditing &amp; Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will make developers &amp; maintainers happy. However, not all the log data for any event is not needed to be stored in the log record. Means, Each log record should have only the information needed for further notice or further debugging. Strictly all sensit</description>
+			<description>For Auditing &amp;amp; Troubleshooting issues in an application, log data is very useful. And to make it easy to read the log data via some kind of tool will make developers &amp;amp; maintainers happy. However, not all the log data for any event is not needed to be stored in the log record. Means, Each log record should have only the information needed for further notice or further debugging. Strictly al</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/monitoring-web-application-with-elk-stack.html</guid>
     </item><item>
 			<title>Drupal JSON API, Deep Dive - Part 1</title>
 			<link>https://peoplesblog.co.in/articles/drupal-jsonapi-deep-dive-part-one.html</link>
-			<description>JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, &amp; also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients &amp; servers. And such efficiency is achieved without compromi</description>
+			<description>JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, &amp;amp; also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients &amp;amp; servers. And such efficiency is achieved without </description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-jsonapi-deep-dive-part-one.html</guid>
@@ -260,7 +260,7 @@
     </item><item>
 			<title>Send Mail with Custom Email Template &amp; with Dynamic values via Drupal Mail Service</title>
 			<link>https://peoplesblog.co.in/articles/send-mail-with-custom-email-template-and-with-dynamic-values-via-drupal-mail-service.html</link>
-			<description>Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email. Any module can modify the composed email message array using hook_mail_alter(). Finally \Drupal::service('plugin.manager.mail')->mail</description>
+			<description>Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email. Any module can modify the composed email message array using hook_mail_alter(). Finally \Drupal::service('plugin.manager.mail')-&amp;gt;m</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/send-mail-with-custom-email-template-and-with-dynamic-values-via-drupal-mail-service.html</guid>
@@ -288,35 +288,35 @@
     </item><item>
 			<title>Usage of Constraints (Validations) on Media Entities in Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-constraints-validations-on-media-entities-in-drupal-application.html</link>
-			<description>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.  Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony&amp;rsquo;s validator and extends with Symfony&amp;rsquo;s Typed Data API for validating specific Entity field definitions.  These constraint validators can be used in different w</description>
+			<description>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.  Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony’s validator and extends with Symfony’s Typed Data API for validating specific Entity field definitions.  These constraint validators can be used in different ways   Us</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-constraints-validations-on-media-entities-in-drupal-application.html</guid>
     </item><item>
 			<title>Usage of Local Php Security Checker for Drupal Applications</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how the Local PHP Security Checker library will make people&amp;#39;s lives easier during the development &amp;amp; code review process.  To make developer life easier, developers look for tools or libraries which can automated security review. Here comes the Local PHP Security Checker library, which checks for any known vulnerabilities in the package dependencies.  Th</description>
+			<description>In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development &amp;amp; code review process.  To make developer life easier, developers look for tools or libraries which can automated security review. Here comes the Local PHP Security Checker library, which checks for any known vulnerabilities in the package dependencies.  This c</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html</guid>
     </item><item>
 			<title>Read Data to Paragraph Template in Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/read-data-to-paragraph-template-in-drupal-application.html</link>
-			<description>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.  Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here&amp;rsquo;s the article wh</description>
+			<description>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.  Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which </description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/read-data-to-paragraph-template-in-drupal-application.html</guid>
     </item><item>
 			<title>How to work with Drupal Paragraphs?</title>
 			<link>https://peoplesblog.co.in/articles/how-to-work-with-drupal-paragraphs.html</link>
-			<description>Paragraphs can be used as a way for Content Creation in Drupal. It actually allows the site builders to do their stuff a bit cleanly and for the end users this will be pretty easy to manage the content, meaning people get more control on the Editing side.  Paragraphs is one of the&amp;nbsp; popular modules in Drupal, for handling content. It is more or less very similar to the fields and will provide </description>
+			<description>Paragraphs can be used as a way for Content Creation in Drupal. It actually allows the site builders to do their stuff a bit cleanly and for the end users this will be pretty easy to manage the content, meaning people get more control on the Editing side.  Paragraphs is one of the  popular modules in Drupal, for handling content. It is more or less very similar to the fields and will provide a wi</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-work-with-drupal-paragraphs.html</guid>
     </item><item>
 			<title>Usage of PhpStan on Github via Pull Request for Drupal Applications</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people&amp;#39;s lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.  To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here come</description>
+			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.  To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes th</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html</guid>
@@ -330,14 +330,14 @@
     </item><item>
 			<title>Quick reference of Code Reviews for Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</link>
-			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It&amp;rsquo;s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organis</description>
+			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It’s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organised b</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</guid>
     </item><item>
 			<title>Usage of PHPCS on Github via Pull Request for Drupal Applications</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people&amp;#39;s lives easier during the development &amp;amp; code review process.  And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.  If you are maintaini</description>
+			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people's lives easier during the development &amp;amp; code review process.  And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.  If you are maintaining y</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html</guid>
@@ -351,7 +351,7 @@
     </item><item>
 			<title>Configuration management via Quicksilver on Pantheon</title>
 			<link>https://peoplesblog.co.in/articles/configuration-management-via-quicksilver-on-pantheon.html</link>
-			<description>As we saw in the earlier article, like how we manage the configuration across the environments.  In this article we are going to see how Drupal configurations can be deployed or imported across the environments with the help of Quicksilver which hooks into platform workflows to automate your Pantheon WebOps workflow across the environments.  In the pantheon environment&amp;rsquo;s drupal code base, yo</description>
+			<description>As we saw in the earlier article, like how we manage the configuration across the environments.  In this article we are going to see how Drupal configurations can be deployed or imported across the environments with the help of Quicksilver which hooks into platform workflows to automate your Pantheon WebOps workflow across the environments.  In the pantheon environment’s drupal code base, you ca</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/configuration-management-via-quicksilver-on-pantheon.html</guid>

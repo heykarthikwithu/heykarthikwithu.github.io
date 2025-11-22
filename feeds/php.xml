@@ -22,7 +22,7 @@
     </item><item>
 			<title>Advanced Sorting and Searching Algorithms in PHP: Quick Sort, Merge Sort, Heap Sort, and Binary Search Trees</title>
 			<link>https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</link>
-			<description>Sorting and searching are foundational operations in computer science. Understanding the efficient algorithms for these tasks can significantly enhance the performance of your applications.  In this article, we&amp;rsquo;ll explore three advanced sorting algorithms &amp;mdash; Quick Sort, Merge Sort, and Heap Sort &amp;mdash; and dive into implementing Binary Search Trees (BST) in PHP 8.  We&amp;rsquo;ll include </description>
+			<description>Sorting and searching are foundational operations in computer science. Understanding the efficient algorithms for these tasks can significantly enhance the performance of your applications.  In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.  We’ll include clear explanatio</description>
 			<pubDate>Tue, 26 Nov 2024 07:53:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</guid>
@@ -64,7 +64,7 @@
     </item><item>
 			<title>Implementing a Redis Cache for Product Catalog Data in PHP</title>
 			<link>https://peoplesblog.co.in/articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html</link>
-			<description>Caching is a vital technique for improving application performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.  In this article, we&amp;rsquo;ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.  </description>
+			<description>Caching is a vital technique for improving application performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.  In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.  What</description>
 			<pubDate>Fri, 08 Nov 2024 09:32:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html</guid>
@@ -78,7 +78,7 @@
     </item><item>
 			<title>When and How to Use Each Design Pattern in PHP</title>
 			<link>https://peoplesblog.co.in/articles/when-and-how-to-use-each-design-pattern-in-php.html</link>
-			<description>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.  In this article, we&amp;rsquo;ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.  1. Singleton Pattern  When to Use   Use the Singleton pattern when you need to ensure that a class has </description>
+			<description>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.  In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.  1. Singleton Pattern  When to Use   Use the Singleton pattern when you need to ensure that a class has only</description>
 			<pubDate>Mon, 04 Nov 2024 06:51:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/when-and-how-to-use-each-design-pattern-in-php.html</guid>
@@ -92,14 +92,14 @@
     </item><item>
 			<title>Implementing a Logger System Using the Singleton Pattern in PHP</title>
 			<link>https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</link>
-			<description>In this article, we&amp;#39;ll create a simple logger system using the Singleton Pattern in PHP.  This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your application.  Step-by-Step Implementation  Step 1: Create the Logger Class  We&amp;#39;ll start by defining a Logger class that follows the Singleton Pattern. This class will have metho</description>
+			<description>In this article, we'll create a simple logger system using the Singleton Pattern in PHP.  This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your application.  Step-by-Step Implementation  Step 1: Create the Logger Class  We'll start by defining a Logger class that follows the Singleton Pattern. This class will have methods for l</description>
 			<pubDate>Mon, 28 Oct 2024 08:04:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</guid>
     </item><item>
 			<title>Implementing Design Patterns in Real-World PHP Applications</title>
 			<link>https://peoplesblog.co.in/articles/implementing-design-patterns-in-real-world-php-applications.html</link>
-			<description>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.  In this article, we&amp;#39;ll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP applications using PHP 8.  1. Factory Pattern  Scenario  Imagine you&amp;rsquo;re developing an e-</description>
+			<description>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.  In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP applications using PHP 8.  1. Factory Pattern  Scenario  Imagine you’re developing an e-commerce</description>
 			<pubDate>Sun, 27 Oct 2024 20:39:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-design-patterns-in-real-world-php-applications.html</guid>
@@ -120,7 +120,7 @@
     </item><item>
 			<title>Understanding the SOLID Principles in PHP</title>
 			<link>https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</link>
-			<description>The SOLID principles are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.  Let&amp;#39;s dive into each principle, exploring its meaning and how it can be applied effectively in PHP.  1. S</description>
+			<description>The SOLID principles are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.  Let's dive into each principle, exploring its meaning and how it can be applied effectively in PHP.  1. Singl</description>
 			<pubDate>Mon, 14 Oct 2024 10:02:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</guid>
@@ -134,7 +134,7 @@
     </item><item>
 			<title>AES Encrypt &amp; Decrypt</title>
 			<link>https://peoplesblog.co.in/articles/aes-encrypt-decrypt.html</link>
-			<description>Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp;amp; Decrypt approach taken is &amp;#39;Cipher Block Chaining&amp;#39; method &amp;#39;AES-256-CBC&amp;#39;.  AES Encrypt   We would have the &amp;#39;Secret&amp;#39; stored in a file which is other than the web root.    $key = hash(&amp;#39;sha256&amp;#39;, $secret, true);   Hash the &amp;#39;Secret&amp;#39; with sha256, this gives you the &amp;#39</description>
+			<description>Advanced Encryption Standard, where we use AES-256 to encrypt the data with Cipher. Encrypt &amp;amp; Decrypt approach taken is 'Cipher Block Chaining' method 'AES-256-CBC'.  AES Encrypt   We would have the 'Secret' stored in a file which is other than the web root.    $key = hash('sha256', $secret, true);   Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</description>
 			<pubDate>Thu, 15 Aug 2024 12:33:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/aes-encrypt-decrypt.html</guid>
@@ -148,7 +148,7 @@
     </item><item>
 			<title>What Drupal offers as Responsive Web Design within Core</title>
 			<link>https://peoplesblog.co.in/articles/what-drupal-offers-as-responsive-web-design-within-core.html</link>
-			<description>In this article, we gonna see What Drupal offers as Responsive Web Design within Drupal Core for developers. While Drupal 8 was out and it had a buzz of being responsive, mobile friendly. And yes, the Internet is on the verge of being dominated by smartphones &amp; Drupal needs to be prepared.Mobile friendly will also mean the content is first. From a big screen to a little screen, elements would look</description>
+			<description>In this article, we gonna see What Drupal offers as Responsive Web Design within Drupal Core for developers. While Drupal 8 was out and it had a buzz of being responsive, mobile friendly. And yes, the Internet is on the verge of being dominated by smartphones &amp;amp; Drupal needs to be prepared.Mobile friendly will also mean the content is first. From a big screen to a little screen, elements would </description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/what-drupal-offers-as-responsive-web-design-within-core.html</guid>
@@ -169,14 +169,14 @@
     </item><item>
 			<title>Usage of Local Php Security Checker for Drupal Applications</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how the Local PHP Security Checker library will make people&amp;#39;s lives easier during the development &amp;amp; code review process.  To make developer life easier, developers look for tools or libraries which can automated security review. Here comes the Local PHP Security Checker library, which checks for any known vulnerabilities in the package dependencies.  Th</description>
+			<description>In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development &amp;amp; code review process.  To make developer life easier, developers look for tools or libraries which can automated security review. Here comes the Local PHP Security Checker library, which checks for any known vulnerabilities in the package dependencies.  This c</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html</guid>
     </item><item>
 			<title>Usage of PhpStan on Github via Pull Request for Drupal Applications</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people&amp;#39;s lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.  To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here come</description>
+			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.  To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes th</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html</guid>
@@ -190,14 +190,14 @@
     </item><item>
 			<title>Quick reference of Code Reviews for Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</link>
-			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It&amp;rsquo;s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organis</description>
+			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It’s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organised b</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</guid>
     </item><item>
 			<title>Usage of PHPCS on Github via Pull Request for Drupal Applications</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people&amp;#39;s lives easier during the development &amp;amp; code review process.  And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.  If you are maintaini</description>
+			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people's lives easier during the development &amp;amp; code review process.  And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.  If you are maintaining y</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html</guid>
@@ -211,7 +211,7 @@
     </item><item>
 			<title>How to run PHPUnit test cases on your local machine for Drupal</title>
 			<link>https://peoplesblog.co.in/articles/how-to-run-phpunit-test-cases-on-your-local-machine-for-drupal.html</link>
-			<description>Running PHPUnit tests helps ensure that your Drupal module behaves as expected and provides a reliable way to identify and fix issues during development.  To run PHPUnit test cases on your local machine for Drupal, follow these steps:  Install PHPUnit and its dependency:   Make sure you have PHP and Composer installed on your local machine. If you don&amp;#39;t have PHPUnit installed, you can install </description>
+			<description>Running PHPUnit tests helps ensure that your Drupal module behaves as expected and provides a reliable way to identify and fix issues during development.  To run PHPUnit test cases on your local machine for Drupal, follow these steps:  Install PHPUnit and its dependency:   Make sure you have PHP and Composer installed on your local machine. If you don't have PHPUnit installed, you can install it u</description>
 			<pubDate>Sun, 27 Aug 2023 11:30:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-run-phpunit-test-cases-on-your-local-machine-for-drupal.html</guid>

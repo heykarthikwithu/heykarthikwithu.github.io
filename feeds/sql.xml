@@ -8,7 +8,7 @@
     <item>
 			<title>Using Indexes to Speed Up SQL Queries</title>
 			<link>https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html</link>
-			<description>Using indexes to speed up SQL queries is an essential technique in database optimization. Here&amp;rsquo;s a concise guide on how to effectively use indexes:  What Are Indexes?  An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.  Types of Indexes   Single-Column Index: I</description>
+			<description>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:  What Are Indexes?  An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.  Types of Indexes   Single-Column Index: Index</description>
 			<pubDate>Sun, 27 Jul 2025 11:37:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html</guid>
@@ -22,21 +22,21 @@
     </item><item>
 			<title>SQL Transactions for Atomic Operations: Ensuring Data Integrity and Consistency</title>
 			<link>https://peoplesblog.co.in/articles/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.html</link>
-			<description>Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.  Here&amp;rsquo;s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.  Key Concepts   Atomicity: Ensures that a series of operations either complete entirely or have no effect at all. If any</description>
+			<description>Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.  Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.  Key Concepts   Atomicity: Ensures that a series of operations either complete entirely or have no effect at all. If any ope</description>
 			<pubDate>Thu, 24 Oct 2024 08:47:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.html</guid>
     </item><item>
 			<title>Writing Secure SQL Queries Using Prepared Statements</title>
 			<link>https://peoplesblog.co.in/articles/writing-secure-sql-queries-using-prepared-statements.html</link>
-			<description>Writing secure SQL queries is crucial to prevent vulnerabilities such as SQL injection. Using prepared statements is one of the best practices to ensure that your SQL queries are safe.  Here&amp;rsquo;s a guide on how to do this effectively.  What are Prepared Statements?  Prepared statements are a feature of many database management systems (DBMS) that allow you to define a SQL query template and the</description>
+			<description>Writing secure SQL queries is crucial to prevent vulnerabilities such as SQL injection. Using prepared statements is one of the best practices to ensure that your SQL queries are safe.  Here’s a guide on how to do this effectively.  What are Prepared Statements?  Prepared statements are a feature of many database management systems (DBMS) that allow you to define a SQL query template and then ex</description>
 			<pubDate>Wed, 23 Oct 2024 08:17:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/writing-secure-sql-queries-using-prepared-statements.html</guid>
     </item><item>
 			<title>Implementing One-to-Many and Many-to-Many Relationships</title>
 			<link>https://peoplesblog.co.in/articles/implementing-one-to-many-and-many-to-many-relationships.html</link>
-			<description>Implementing one-to-many and many-to-many relationships in a database is essential for accurately modeling real-world scenarios.  Here&amp;rsquo;s a detailed look at how to set up these relationships in a relational database.  One-to-Many Relationship  A one-to-many relationship occurs when a single record in one table can relate to multiple records in another table.  Example Scenario: Consider a User</description>
+			<description>Implementing one-to-many and many-to-many relationships in a database is essential for accurately modeling real-world scenarios.  Here’s a detailed look at how to set up these relationships in a relational database.  One-to-Many Relationship  A one-to-many relationship occurs when a single record in one table can relate to multiple records in another table.  Example Scenario: Consider a Users ta</description>
 			<pubDate>Tue, 22 Oct 2024 18:46:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-one-to-many-and-many-to-many-relationships.html</guid>
@@ -50,7 +50,7 @@
     </item><item>
 			<title>Basics of Database Design: Normalization, Relationships and ER Diagrams</title>
 			<link>https://peoplesblog.co.in/articles/basics-of-database-design-normalization-relationships-and-er-diagrams.html</link>
-			<description>Database design is a critical phase in creating a robust, scalable and efficient database system. It involves structuring data in a way that ensures it can be stored, retrieved and managed effectively. Some key concepts fundamental to database design are Normalization, Relationships and Entity-Relationship (ER) Diagrams.  Let&amp;#39;s explore these concepts in detail.  1. Normalization  Normalization</description>
+			<description>Database design is a critical phase in creating a robust, scalable and efficient database system. It involves structuring data in a way that ensures it can be stored, retrieved and managed effectively. Some key concepts fundamental to database design are Normalization, Relationships and Entity-Relationship (ER) Diagrams.  Let's explore these concepts in detail.  1. Normalization  Normalization is </description>
 			<pubDate>Mon, 21 Oct 2024 12:32:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/basics-of-database-design-normalization-relationships-and-er-diagrams.html</guid>
