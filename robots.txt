@@ -9,6 +9,11 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-srikalahasti-solo-trip-plan.html
+Allow: /articles/bangalore-to-srisailam-solo-trip-plan.html
+Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
+Allow: /articles/bangalore-to-horanadu-solo-trip-plan.html
+Allow: /articles/bangalore-to-dharmasthala-solo-trip-plan.html
 Allow: /articles/leaf-breathing-science-experiment-for-children.html
 Allow: /articles/bangalore-to-bheemeshwari-solo-trip-plan.html
 Allow: /articles/rainforest-in-a-jar-science-experiment-for-children.html
@@ -131,7 +136,6 @@ Allow: /articles/bangalore-to-varkala-solo-trip-plan.html
 Allow: /articles/is-life-worth-living-without-marriage.html
 Allow: /articles/ahmedabad-to-shamlaji-temple-pilgrimage.html
 Allow: /articles/natural-home-remedies-for-constipation.html
-Allow: /articles/bangalore-to-srikalahasti-solo-trip-plan.html
 Allow: /articles/cloud-in-a-bottle-science-experiment-for-children.html
 Allow: /articles/things-that-a-teacher-should-tell-their-students.html
 Allow: /articles/the-importance-of-the-vedas-in-modern-hinduism.html
@@ -154,15 +158,11 @@ Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/pachi-chintakaya-pachadi-recipe-andhra-style.html
 Allow: /articles/short-trip-from-bangalore-to-ghati.html
 Allow: /articles/deploying-drupal-on-azure-kubernetes-service-aks.html
-Allow: /articles/bangalore-to-dharmasthala-solo-trip-plan.html
 Allow: /articles/south-indian-hindu-marriage-andhra-style.html
 Allow: /articles/be-aware-of-chain-snatchers-tips-to-prevent-chain-snatching.html
 Allow: /articles/bangalore-to-agumbe-solo-trip-plan.html
 Allow: /articles/how-can-a-husband-manage-two-wives-and-be-happy.html
-Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
-Allow: /articles/bangalore-to-horanadu-solo-trip-plan.html
 Allow: /articles/bangalore-to-kukke-subramanya-trip-plan.html
-Allow: /articles/bangalore-to-srisailam-solo-trip-plan.html
 Allow: /articles/get-more-pleasure-from-lotus-position.html
 Allow: /articles/bangalore-to-manali-solo-trip-plan.html
 Allow: /articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html
