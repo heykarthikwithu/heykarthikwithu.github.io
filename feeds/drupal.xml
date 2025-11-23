@@ -6,6 +6,41 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Secure Application Password Reset Flow: Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</link>
+			<description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so that user can reset the password on their own.  This is a default or general flow that any application framework provides, but developers or architec</description>
+			<pubDate>Sun, 23 Nov 2025 10:52:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</guid>
+    </item><item>
+			<title>Store Drupal Logs on AWS: A Practical Logging Guide</title>
+			<link>https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</link>
+			<description>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.  For this todo on Drupal   You should use the &amp;quot;hook_watchdog&amp;quot; hook, where this hook allows modules to route log events to custom destinations. In our case, our custom destination will be S3. Initially we need to get the access to AWS and appropri</description>
+			<pubDate>Sun, 23 Nov 2025 10:34:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</guid>
+    </item><item>
+			<title>Fix Colima Connection Refused Error on Mac: Step-by-Step</title>
+			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
+			<description>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp;amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.  While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and de</description>
+			<pubDate>Sun, 23 Nov 2025 10:00:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</guid>
+    </item><item>
+			<title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
+			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</link>
+			<description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.  As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, her</description>
+			<pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</guid>
+    </item><item>
+			<title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
+			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
+			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
+			<pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
+    </item><item>
 			<title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
 			<link>https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</link>
 			<description>If you’ve been hearing people in the Drupal world talk about “AI” and “Canvas,” you might think it’s some complicated feature only developers care about. Honestly, that’s what I assumed at first too. But the more I tried these things, the more I realised they’re not really built for developers — they’re built for the people who actually use the website daily.  I’m talking abo</description>
@@ -279,13 +314,6 @@
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/cache-set-get-and-invalidate-user-drupal-.html</guid>
     </item><item>
-			<title>Store Drupal logs on Amazon S3</title>
-			<link>https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</link>
-			<description>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.                                For this todo on Drupal                                                                    You should use the "hook_watchdog" hook, where this hook allows modules to route log events to custom destinations.                   </description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</guid>
-    </item><item>
 			<title>Usage of Constraints (Validations) on Media Entities in Drupal Application</title>
 			<link>https://peoplesblog.co.in/articles/usage-of-constraints-validations-on-media-entities-in-drupal-application.html</link>
 			<description>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.  Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony’s validator and extends with Symfony’s Typed Data API for validating specific Entity field definitions.  These constraint validators can be used in different ways   Us</description>
@@ -327,34 +355,6 @@
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-work-with-twig-templates-in-drupal.html</guid>
-    </item><item>
-			<title>Quick reference of Code Reviews for Drupal Application</title>
-			<link>https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</link>
-			<description>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.  It’s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.  Firstly, for the code reviews to be at their best, the committed code should be more organised b</description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/quick-reference-of-code-reviews-for-drupal-application.html</guid>
-    </item><item>
-			<title>Usage of PHPCS on Github via Pull Request for Drupal Applications</title>
-			<link>https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html</link>
-			<description>In this article, we are going to see how some tools &amp;amp; libraries will make people's lives easier during the development &amp;amp; code review process.  And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.  If you are maintaining y</description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.html</guid>
-    </item><item>
-			<title>Store Secrets Securely on Pantheon for Drupal Application</title>
-			<link>https://peoplesblog.co.in/articles/store-secrets-securely-on-pantheon-for-drupal-application.html</link>
-			<description>In this article, we are going to see how people can store access keys and tokens securely, in the case of your drupal application that is managed on pantheon.  Generally, all the Access keys or Tokens or any Secret third party auth information should not be stored in the database or within the project web root, Its safe to store it encrypted and within a file and keep the file outside of the proje</description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/store-secrets-securely-on-pantheon-for-drupal-application.html</guid>
-    </item><item>
-			<title>Configuration management via Quicksilver on Pantheon</title>
-			<link>https://peoplesblog.co.in/articles/configuration-management-via-quicksilver-on-pantheon.html</link>
-			<description>As we saw in the earlier article, like how we manage the configuration across the environments.  In this article we are going to see how Drupal configurations can be deployed or imported across the environments with the help of Quicksilver which hooks into platform workflows to automate your Pantheon WebOps workflow across the environments.  In the pantheon environment’s drupal code base, you ca</description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/configuration-management-via-quicksilver-on-pantheon.html</guid>
     </item>
 </channel>
 </rss>

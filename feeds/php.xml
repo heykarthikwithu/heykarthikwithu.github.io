@@ -6,6 +6,34 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Implementing a Logger System Using the Singleton Pattern in PHP</title>
+			<link>https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</link>
+			<description>In this article, we&amp;#39;ll create a simple logger system using the Singleton Pattern in PHP.  This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your application.  Step-by-Step Implementation  Step 1: Create the Logger Class  We&amp;#39;ll start by defining a Logger class that follows the Singleton Pattern. This class will have metho</description>
+			<pubDate>Sun, 23 Nov 2025 10:49:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</guid>
+    </item><item>
+			<title>Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL</title>
+			<link>https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</link>
+			<description>Data structures are an integral part of programming, offering efficient ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like Stacks, Queues, and Linked Lists will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high pe</description>
+			<pubDate>Sun, 23 Nov 2025 10:26:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</guid>
+    </item><item>
+			<title>SOLID Principles in PHP: A Developer’s Guide to Clean Code</title>
+			<link>https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</link>
+			<description>The SOLID principles are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.  Let&amp;#39;s dive into each principle, exploring its meaning and how it can be applied effectively in PHP.  1. S</description>
+			<pubDate>Sun, 23 Nov 2025 10:23:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</guid>
+    </item><item>
+			<title>Mastering Dynamic Programming in PHP: A Deep Dive into Classic Algorithms</title>
+			<link>https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</link>
+			<description>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in algorithms that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculati</description>
+			<pubDate>Sun, 23 Nov 2025 09:46:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</guid>
+    </item><item>
 			<title>Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms</title>
 			<link>https://peoplesblog.co.in/articles/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.html</link>
 			<description>Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.  In this article, we will explore graph data structures, common graph traversals, an</description>
@@ -13,26 +41,12 @@
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.html</guid>
     </item><item>
-			<title>Mastering Dynamic Programming in PHP: A Deep Dive into Classic Algorithms</title>
-			<link>https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</link>
-			<description>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in algorithms that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculati</description>
-			<pubDate>Wed, 27 Nov 2024 07:25:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</guid>
-    </item><item>
 			<title>Advanced Sorting and Searching Algorithms in PHP: Quick Sort, Merge Sort, Heap Sort, and Binary Search Trees</title>
 			<link>https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</link>
 			<description>Sorting and searching are foundational operations in computer science. Understanding the efficient algorithms for these tasks can significantly enhance the performance of your applications.  In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.  We’ll include clear explanatio</description>
 			<pubDate>Tue, 26 Nov 2024 07:53:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</guid>
-    </item><item>
-			<title>Data Structures in PHP: Implementing Stacks, Queues, Linked Lists, and SPL Classes</title>
-			<link>https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</link>
-			<description>Data structures are an integral part of programming, offering efficient ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like Stacks, Queues, and Linked Lists will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high pe</description>
-			<pubDate>Thu, 21 Nov 2024 07:59:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</guid>
     </item><item>
 			<title>Optimizing a Product Catalog Microservice with Profiling Tools in PHP Using DDEV and Visual Studio Code</title>
 			<link>https://peoplesblog.co.in/articles/optimizing-a-product-catalog-microservice-with-profiling-tools-in-php-using-ddev-and-visual-studio-code.html</link>
@@ -90,13 +104,6 @@
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/exploring-design-patterns-in-php--strategy-observer-and-decorator.html</guid>
     </item><item>
-			<title>Implementing a Logger System Using the Singleton Pattern in PHP</title>
-			<link>https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</link>
-			<description>In this article, we'll create a simple logger system using the Singleton Pattern in PHP.  This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your application.  Step-by-Step Implementation  Step 1: Create the Logger Class  We'll start by defining a Logger class that follows the Singleton Pattern. This class will have methods for l</description>
-			<pubDate>Mon, 28 Oct 2024 08:04:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</guid>
-    </item><item>
 			<title>Implementing Design Patterns in Real-World PHP Applications</title>
 			<link>https://peoplesblog.co.in/articles/implementing-design-patterns-in-real-world-php-applications.html</link>
 			<description>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.  In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP applications using PHP 8.  1. Factory Pattern  Scenario  Imagine you’re developing an e-commerce</description>
@@ -117,13 +124,6 @@
 			<pubDate>Tue, 22 Oct 2024 08:09:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/designing-efficient-schemas-for-web-applications.html</guid>
-    </item><item>
-			<title>Understanding the SOLID Principles in PHP</title>
-			<link>https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</link>
-			<description>The SOLID principles are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.  Let's dive into each principle, exploring its meaning and how it can be applied effectively in PHP.  1. Singl</description>
-			<pubDate>Mon, 14 Oct 2024 10:02:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</guid>
     </item><item>
 			<title>Introduction to PHP 8 and Key Differences from PHP 7</title>
 			<link>https://peoplesblog.co.in/articles/introduction-to-php--and-key-differences-from-php-.html</link>

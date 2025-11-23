@@ -6,47 +6,47 @@
     <description/>
     <language>en</language>
     <item>
-			<title>Deploying Drupal on Azure Kubernetes Service (AKS)</title>
-			<link>https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</link>
-			<description>Azure Kubernetes Service (AKS), offered by Microsoft Azure, is a fully managed container orchestration service that leverages Kubernetes to manage, deploy, and scale applications in containers. Kubernetes is the go-to platform for automating the deployment, scaling, and management of containerized applications, making it an ideal choice for running complex web applications like Drupal.  Drupal, an</description>
-			<pubDate>Thu, 16 Jan 2025 19:24:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</guid>
-    </item><item>
-			<title>Understanding Azure Key Vault: Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</link>
-			<description>In the modern cloud-driven world, security is more critical than ever. Organizations are increasingly migrating their data, applications, and infrastructure to the cloud, but with this transition comes the need to protect sensitive information such as secrets, keys, certificates, and passwords. Azure Key Vault is a cloud service provided by Microsoft Azure designed specifically to safeguard and ma</description>
-			<pubDate>Tue, 14 Jan 2025 07:53:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Understanding Azure Active Directory &amp; Azure App Registrations: Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</link>
-			<description>In the modern world of cloud computing, managing identity and access is crucial to securing enterprise applications and data. Microsoft Azure provides a comprehensive identity and access management solution through Azure Active Directory (Azure AD). Whether you are managing an enterprise IT environment or building cloud-based applications, understanding Azure AD and Azure App Registrations is foun</description>
-			<pubDate>Mon, 06 Jan 2025 13:06:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Understanding Azure Front Door and CDN Profiles: Key Concepts and Best Practices</title>
+			<title>Azure Front Door &amp; CDN Profiles: Concepts &amp; Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</link>
-			<description>In today’s cloud-first world, providing fast, reliable, and secure access to web applications is critical for a positive user experience. With users across different geographic regions, ensuring low-latency content delivery and application optimization is key to improving performance. Azure Front Door and Azure Content Delivery Network (CDN) are two essential services in Azure that help organiza</description>
-			<pubDate>Sun, 29 Dec 2024 09:16:00 +0530</pubDate>
+			<description>In today&amp;rsquo;s cloud-first world, providing fast, reliable, and secure access to web applications is critical for a positive user experience. With users across different geographic regions, ensuring low-latency content delivery and application optimization is key to improving performance. Azure Front Door and Azure Content Delivery Network (CDN) are two essential services in Azure that help orga</description>
+			<pubDate>Sun, 23 Nov 2025 10:37:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</guid>
     </item><item>
-			<title>Understanding Azure Storage Accounts: Key Concepts and Best Practices</title>
+			<title>Azure Key Vault: Key Concepts &amp; Security Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</link>
+			<description>In the modern cloud-driven world, security is more critical than ever. Organizations are increasingly migrating their data, applications, and infrastructure to the cloud, but with this transition comes the need to protect sensitive information such as secrets, keys, certificates, and passwords. Azure Key Vault is a cloud service provided by Microsoft Azure designed specifically to safeguard and ma</description>
+			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Azure Active Directory &amp; App Registrations: Complete Guide</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</link>
+			<description>In the modern world of cloud computing, managing identity and access is crucial to securing enterprise applications and data. Microsoft Azure provides a comprehensive identity and access management solution through Azure Active Directory (Azure AD). Whether you are managing an enterprise IT environment or building cloud-based applications, understanding Azure AD and Azure App Registrations is foun</description>
+			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Azure Storage Accounts: Concepts, Setup &amp; Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</link>
 			<description>Azure Storage is a cloud service provided by Microsoft Azure that allows users to store and manage data in a highly scalable, secure, and cost-effective manner. One of the core components of Azure Storage is the Azure Storage Account. An Azure Storage Account provides a unique namespace for storing data in Azure and serves as the container for different types of storage services, such as Blob Stor</description>
-			<pubDate>Fri, 20 Dec 2024 08:31:00 +0530</pubDate>
+			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</guid>
     </item><item>
-			<title>Understanding Azure Kubernetes Service (AKS): Key Concepts and Best Practices</title>
+			<title>Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</link>
-			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft's managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes' robust features, s</description>
-			<pubDate>Fri, 13 Dec 2024 08:49:00 +0530</pubDate>
+			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft&amp;#39;s managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes&amp;#39; robust fea</description>
+			<pubDate>Sun, 23 Nov 2025 09:57:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Deploy Drupal on Azure Kubernetes Service (AKS): Step-by-Step Guide</title>
+			<link>https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</link>
+			<description>Azure Kubernetes Service (AKS), offered by Microsoft Azure, is a fully managed container orchestration service that leverages Kubernetes to manage, deploy, and scale applications in containers. Kubernetes is the go-to platform for automating the deployment, scaling, and management of containerized applications, making it an ideal choice for running complex web applications like Drupal.  Drupal, an</description>
+			<pubDate>Sun, 23 Nov 2025 09:39:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</guid>
     </item>
 </channel>
 </rss>

@@ -6,6 +6,335 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Rainforest in a Jar: Create a Mini Ecosystem With Kids</title>
+			<link>https://peoplesblog.co.in/articles/rainforest-in-a-jar-science-experiment-for-children.html</link>
+			<description>Creating a &amp;quot;Rainforest in a Jar&amp;quot; is a fun science project that helps kids learn about the water cycle and how rainforests work. This mini ecosystem shows how water evaporates, condenses and rains, just like in nature.  Here&amp;rsquo;s a simple guide to make your own rainforest in a jar:  Materials Needed:   Clear Glass Jar or Large Bowl: This will hold your mini rainforest. Plastic Wrap: To</description>
+			<pubDate>Sun, 23 Nov 2025 10:56:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/rainforest-in-a-jar-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Make Invisible Ink That Changes Color: Kids Science Activity</title>
+			<link>https://peoplesblog.co.in/articles/color-changing-invisible-ink-kids-science-experiment.html</link>
+			<description>Title: Color-Changing Invisible Ink - Chemical Reaction Experiment  Objective: To create and reveal color-changing invisible ink using a simple chemical reaction.  Materials:   Lemon juice or white vinegar Water White paper or a blank sheet of paper Cotton swabs or small paintbrushes Heat source (hairdryer or iron) Optional: Food coloring for additional color effects   Procedure:   Create the invi</description>
+			<pubDate>Sun, 23 Nov 2025 10:56:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/color-changing-invisible-ink-kids-science-experiment.html</guid>
+    </item><item>
+			<title>Shadow Tracing Experiment: Learn Light &amp; Movement With Kids</title>
+			<link>https://peoplesblog.co.in/articles/shadow-tracing-science-experiment-for-children.html</link>
+			<description>Shadow tracing is an excellent way for children to explore concepts related to the Earth&amp;#39;s rotation, the position of the sun and how these factors affect shadow length and direction. This simple science experiment demonstrates how the position of the sun in the sky changes throughout the day and how this affects the shadows cast by objects. Here&amp;rsquo;s a detailed guide on how to conduct this </description>
+			<pubDate>Sun, 23 Nov 2025 10:54:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/shadow-tracing-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Build a Solar Still: Water Purification Science Project for Kids</title>
+			<link>https://peoplesblog.co.in/articles/solar-still-experiment-science-experiment-for-children.html</link>
+			<description>Solar still is a simple yet effective device for purifying water using solar energy. It works on the principle of evaporation and condensation to separate clean water from impurities.  Here&amp;#39;s a step-by-step guide to conducting a solar still experiment to demonstrate the process of water purification:  Materials Needed:   Clear Plastic Sheet: To cover the solar still and capture the evaporated </description>
+			<pubDate>Sun, 23 Nov 2025 10:54:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/solar-still-experiment-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>How to Set Up Solar Power at Home: Step-by-Step Guide</title>
+			<link>https://peoplesblog.co.in/articles/how-to-setup-solar-power-for-you-home.html</link>
+			<description>Setting up a solar power system for a family of four in India involves several steps. Please note that the costs provided are approximate and can vary based on factors like location, system size, quality of components and labor costs.  Additionally, government incentives and rebates can affect the final cost.  Step-by-Step Guide:  Step 1: Assess Your Energy Needs   Determine Your Energy Consumptio</description>
+			<pubDate>Sun, 23 Nov 2025 10:52:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-setup-solar-power-for-you-home.html</guid>
+    </item><item>
+			<title>Secure Application Password Reset Flow: Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</link>
+			<description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so that user can reset the password on their own.  This is a default or general flow that any application framework provides, but developers or architec</description>
+			<pubDate>Sun, 23 Nov 2025 10:52:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</guid>
+    </item><item>
+			<title>DIY Mini Wind Turbine: Science Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/mini-wind-turbine-science-experiment-for-children.html</link>
+			<description>Building a mini wind turbine is a great science experiment for children that demonstrates the principles of wind energy and how it can be converted into electricity.  Here&amp;rsquo;s a step-by-step guide to creating a simple mini wind turbine using easily available materials:  Materials Needed:   Plastic Bottle: For the turbine&amp;#39;s body. Cardboard or Plastic Sheets: For the turbine blades. Wooden D</description>
+			<pubDate>Sun, 23 Nov 2025 10:50:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/mini-wind-turbine-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Implementing a Logger System Using the Singleton Pattern in PHP</title>
+			<link>https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</link>
+			<description>In this article, we&amp;#39;ll create a simple logger system using the Singleton Pattern in PHP.  This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your application.  Step-by-Step Implementation  Step 1: Create the Logger Class  We&amp;#39;ll start by defining a Logger class that follows the Singleton Pattern. This class will have metho</description>
+			<pubDate>Sun, 23 Nov 2025 10:49:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html</guid>
+    </item><item>
+			<title>Build a Geodesic Dome: DIY Geometry Project for Kids</title>
+			<link>https://peoplesblog.co.in/articles/diy-geodesic-dome-science-experiment-for-children.html</link>
+			<description>Building a geodesic dome is an exciting and educational science experiment that helps children understand geometric principles, engineering concepts and structural design. A geodesic dome is a spherical structure composed of interconnected triangles, which provides a strong and stable framework.  Here&amp;rsquo;s a step-by-step guide for creating a DIY geodesic dome using paper or straws.  Materials N</description>
+			<pubDate>Sun, 23 Nov 2025 10:48:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-geodesic-dome-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>DIY Math Board Games: Educational Fun for Kids</title>
+			<link>https://peoplesblog.co.in/articles/diy-math-board-games-science-experiment-for-children.html</link>
+			<description>Creating and playing math-based board games is a fantastic way for children to learn math concepts while having fun. These DIY games can be tailored to various age groups and skill levels, making math practice engaging and interactive.  Here&amp;rsquo;s a step-by-step guide to designing and playing your own math board games.  Materials Needed:   Cardboard or Poster Board: For the game board. Markers o</description>
+			<pubDate>Sun, 23 Nov 2025 10:44:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-math-board-games-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>DIY Pulley System: Science Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/do-it-yourself-pulley-system-science-experiment-for-children.html</link>
+			<description>Creating a simple DIY pulley system is a great way to introduce children to basic physics concepts like force and mechanical advantage.  Here&amp;#39;s how you can conduct a pulley system science experiment for children:  Materials:   Two sturdy hooks or fixed points (e.g., a door frame, tree branches, or any secure anchor points) String or rope Small bucket or container Objects with varying weights (</description>
+			<pubDate>Sun, 23 Nov 2025 10:43:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/do-it-yourself-pulley-system-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>How to Charge Your Phone With Solar Power at Home</title>
+			<link>https://peoplesblog.co.in/articles/how-to-charge-a-mobile-phone-with-solar-power.html</link>
+			<description>As the world shifts toward renewable energy, solar power is becoming an increasingly practical and eco-friendly way to charge everyday devices&amp;mdash;especially mobile phones. Whether you&amp;#39;re off the grid, on a camping trip, or simply looking to reduce your environmental impact, solar charging offers a convenient solution.  This article will walk you through how to charge your phone using solar </description>
+			<pubDate>Sun, 23 Nov 2025 10:43:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-charge-a-mobile-phone-with-solar-power.html</guid>
+    </item><item>
+			<title>Leaf Breathing Experiment: Teach Kids About Photosynthesis</title>
+			<link>https://peoplesblog.co.in/articles/leaf-breathing-science-experiment-for-children.html</link>
+			<description>Title: Leaf Breathing - Investigating Transpiration Experiment  Objective: To explore the process of transpiration in plants by observing &amp;quot;leaf breathing&amp;quot; through the movement of water in a plant stem.  Materials:   Freshly cut leafy plant stem (e.g., a leafy branch from a tree or a herbaceous plant) Clear glass or container Water Food coloring (optional) Optional: Plastic wrap or transp</description>
+			<pubDate>Sun, 23 Nov 2025 10:42:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/leaf-breathing-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>How to Cook Using Solar Power at Home: DIY Solar Cooking Guide</title>
+			<link>https://peoplesblog.co.in/articles/cooking-food-with-solar-power-at-home.html</link>
+			<description>On PeoplesBLOG, we were writing articles related to Eco friendly homes and how to use Solar energy and along the same lines, in this article we are going to see how people can cook their food with Solar energy.  Generally majority of the people nowadays use Gas stoves for Cooking at home and Solar is one of the best case of the replacement for this. People can make a major change on the Environmen</description>
+			<pubDate>Sun, 23 Nov 2025 10:42:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/cooking-food-with-solar-power-at-home.html</guid>
+    </item><item>
+			<title>Solar Panel Setup Guide: Installation, Usage &amp; Efficiency Tips</title>
+			<link>https://peoplesblog.co.in/articles/complete-guide-to-setup-and-usage-solar-panels-at-home.html</link>
+			<description>Going green is the best of the environment and if you are planning to go green, then we all know Sun is the non-renewable energy and we could use this energy for people&amp;#39;s survival. We have a few articles at PeoplesBLOG related to the Environment and going green, have a check of them.  Using the Electricity from Solar energy is one of the best combinations, because there is not much waste out o</description>
+			<pubDate>Sun, 23 Nov 2025 10:40:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/complete-guide-to-setup-and-usage-solar-panels-at-home.html</guid>
+    </item><item>
+			<title>Marshmallow Catapult: Fun STEM Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</link>
+			<description>Title: Marshmallow Catapult - Exploring Projectile Motion Experiment  Objective: To build and test a marshmallow catapult, exploring principles of force, motion and projectile trajectory.  Materials:   Popsicle sticks or craft sticks Rubber bands Plastic spoon Small marshmallows or soft projectiles Tape Optional: Decorative materials (markers, stickers) for customization   Procedure:   Begin by di</description>
+			<pubDate>Sun, 23 Nov 2025 10:38:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Azure Front Door &amp; CDN Profiles: Concepts &amp; Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</link>
+			<description>In today&amp;rsquo;s cloud-first world, providing fast, reliable, and secure access to web applications is critical for a positive user experience. With users across different geographic regions, ensuring low-latency content delivery and application optimization is key to improving performance. Azure Front Door and Azure Content Delivery Network (CDN) are two essential services in Azure that help orga</description>
+			<pubDate>Sun, 23 Nov 2025 10:37:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>What Is a Solar Charge Controller? Guide for Home Solar Systems</title>
+			<link>https://peoplesblog.co.in/articles/what-is-charge-controller-and-how-to-use-it-with-a-solar-panel-setup-at-home.html</link>
+			<description>A charge controller, also known as a charge regulator, is a crucial component in a solar panel system. Its primary function is to regulate the voltage and current coming from the solar panels and going to the battery bank.  Here&amp;#39;s how to use a charge controller in a home solar panel setup:  Purpose of a Charge Controller:   Prevents Overcharging: Charge controllers prevent overcharging of batt</description>
+			<pubDate>Sun, 23 Nov 2025 10:35:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/what-is-charge-controller-and-how-to-use-it-with-a-solar-panel-setup-at-home.html</guid>
+    </item><item>
+			<title>Store Drupal Logs on AWS: A Practical Logging Guide</title>
+			<link>https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</link>
+			<description>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.  For this todo on Drupal   You should use the &amp;quot;hook_watchdog&amp;quot; hook, where this hook allows modules to route log events to custom destinations. In our case, our custom destination will be S3. Initially we need to get the access to AWS and appropri</description>
+			<pubDate>Sun, 23 Nov 2025 10:34:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</guid>
+    </item><item>
+			<title>SQL Transactions Explained: Atomic Operations &amp; Data Integrity</title>
+			<link>https://peoplesblog.co.in/articles/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.html</link>
+			<description>Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.  Here&amp;rsquo;s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.  Key Concepts   Atomicity: Ensures that a series of operations either complete entirely or have no effect at all. If any</description>
+			<pubDate>Sun, 23 Nov 2025 10:30:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.html</guid>
+    </item><item>
+			<title>Writing Secure SQL Queries: Use Prepared Statements in PHP</title>
+			<link>https://peoplesblog.co.in/articles/writing-secure-sql-queries-using-prepared-statements.html</link>
+			<description>Writing secure SQL queries is crucial to prevent vulnerabilities such as SQL injection. Using prepared statements is one of the best practices to ensure that your SQL queries are safe.  Here&amp;rsquo;s a guide on how to do this effectively.  What are Prepared Statements?  Prepared statements are a feature of many database management systems (DBMS) that allow you to define a SQL query template and the</description>
+			<pubDate>Sun, 23 Nov 2025 10:28:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/writing-secure-sql-queries-using-prepared-statements.html</guid>
+    </item><item>
+			<title>Solar Oven Experiment: Cook With Sunlight – A Kid’s Science Project</title>
+			<link>https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</link>
+			<description>Building and using a DIY solar oven is a fantastic way to explore solar energy and understand the principles of cooking with sunlight. A solar oven harnesses solar energy to heat and cook food, providing a practical demonstration of renewable energy in action.  Here&amp;rsquo;s a step-by-step guide to creating and using a simple solar oven:  Materials Needed:   Cardboard Box: A large, clean cardboard </description>
+			<pubDate>Sun, 23 Nov 2025 10:28:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL</title>
+			<link>https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</link>
+			<description>Data structures are an integral part of programming, offering efficient ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like Stacks, Queues, and Linked Lists will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high pe</description>
+			<pubDate>Sun, 23 Nov 2025 10:26:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</guid>
+    </item><item>
+			<title>Balloon Rocket Experiment: Launch Science for Kids</title>
+			<link>https://peoplesblog.co.in/articles/balloon-rocket-science-experiment-for-children.html</link>
+			<description>The balloon rocket experiment is a simple and exciting way to explore the principles of action and reaction, or Newton&amp;#39;s Third Law of Motion.  Here&amp;#39;s how you can conduct the balloon rocket science experiment for children:  Materials:   Balloon String or thread (about 10-15 feet) Drinking straw Tape Scissors   Procedure:   Prepare the &amp;quot;Rocket&amp;quot; Assembly:   Cut a piece of string or </description>
+			<pubDate>Sun, 23 Nov 2025 10:25:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/balloon-rocket-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>DIY Water Fountain: Fun Science Experiment Using Air Pressure</title>
+			<link>https://peoplesblog.co.in/articles/create-a-water-fountain-using-air-pressure-science-experiment-for-children.html</link>
+			<description>Creating a water fountain using air pressure can be an engaging and educational project.  Here&amp;#39;s a simple way to make a small-scale water fountain using air pressure:  Materials Needed:   Plastic bottle Drinking straw Hot glue gun and glue sticks Scissors Tape Water Optional: Food coloring (for colored water)   Instructions:   Prepare the Bottle:   Take a plastic bottle and remove the cap. Use</description>
+			<pubDate>Sun, 23 Nov 2025 10:24:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/create-a-water-fountain-using-air-pressure-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>SOLID Principles in PHP: A Developer’s Guide to Clean Code</title>
+			<link>https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</link>
+			<description>The SOLID principles are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.  Let&amp;#39;s dive into each principle, exploring its meaning and how it can be applied effectively in PHP.  1. S</description>
+			<pubDate>Sun, 23 Nov 2025 10:23:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-the-solid-principles-in-php.html</guid>
+    </item><item>
+			<title>Best Batteries for Home Solar Panels: Types &amp; Buying Guide</title>
+			<link>https://peoplesblog.co.in/articles/best-batteries-to-use-with-the-solar-panels-for-home.html</link>
+			<description>When it comes to choosing batteries for a solar panel system, several options are available. The best battery for your home will depend on factors like budget, energy requirements, available space and desired lifespan.  Here are some of the most common types:   Lithium-Ion Batteries:   Advantages:   High energy density, which means they can store a lot of energy in a relatively small space. Long l</description>
+			<pubDate>Sun, 23 Nov 2025 10:23:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/best-batteries-to-use-with-the-solar-panels-for-home.html</guid>
+    </item><item>
+			<title>DIY Potato Battery: Build a Homemade Power Source with Kids</title>
+			<link>https://peoplesblog.co.in/articles/diy-potato-battery-science-experiment-for-children.html</link>
+			<description>Creating a DIY potato battery is a fascinating and educational experiment that demonstrates the basics of electrochemical cells and how chemical energy can be converted into electrical energy.  Here&amp;#39;s a step-by-step guide to building a potato battery using zinc and copper electrodes:  Materials Needed:   Potatoes: 2-3 medium-sized potatoes (or more if you want to create a battery with higher v</description>
+			<pubDate>Sun, 23 Nov 2025 10:22:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-potato-battery-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Balloon &amp; Bottle Experiment: Fun Physics Activity for Kids</title>
+			<link>https://peoplesblog.co.in/articles/balloon-and-bottle-experiment-science-experiment-for-children.html</link>
+			<description>The balloon and bottle experiment is a simple yet effective way to demonstrate the effects of air pressure.  Here&amp;#39;s how to conduct the experiment:  Materials Needed:   Empty plastic bottle with a narrow neck (such as a soda bottle) Balloon Scissors Tape (optional)   Instructions:   Start by removing the cap from the plastic bottle. If the bottle has any labels or stickers on it, remove them to</description>
+			<pubDate>Sun, 23 Nov 2025 10:22:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/balloon-and-bottle-experiment-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>DIY Volcano Experiment: Baking Soda &amp; Vinegar Fun for Kids</title>
+			<link>https://peoplesblog.co.in/articles/create-a-volcanic-eruption-with-baking-soda-and-vinegar.html</link>
+			<description>Creating a volcanic eruption with baking soda and vinegar is a classic and safe science experiment that demonstrates the reaction between an acid (vinegar) and a base (baking soda) to produce carbon dioxide gas.  Here&amp;#39;s a simple step-by-step guide:  Materials:   Baking soda Vinegar Dish soap (optional) Red food coloring (optional) Container or plastic bottle Modeling clay or playdough Tray or </description>
+			<pubDate>Sun, 23 Nov 2025 10:21:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/create-a-volcanic-eruption-with-baking-soda-and-vinegar.html</guid>
+    </item><item>
+			<title>Build an Anemometer: Wind Speed Science Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/anemometer-science-experiment-for-children.html</link>
+			<description>Building a simple anemometer is a fun and educational science experiment that allows children to measure the wind speed and understand how wind speed is quantified. By defination, an anemometer is a device that measures wind velocity by counting number of times its blades spin in a given time period.  Here&amp;#39;s a step-by-step process for creating a basic anemometer using everyday materials:  Mate</description>
+			<pubDate>Sun, 23 Nov 2025 10:19:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/anemometer-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Database Design Basics: Normalization, Relationships &amp; ER Diagrams</title>
+			<link>https://peoplesblog.co.in/articles/basics-of-database-design-normalization-relationships-and-er-diagrams.html</link>
+			<description>Database design is a critical phase in creating a robust, scalable and efficient database system. It involves structuring data in a way that ensures it can be stored, retrieved and managed effectively. Some key concepts fundamental to database design are Normalization, Relationships and Entity-Relationship (ER) Diagrams.  Let&amp;#39;s explore these concepts in detail.  1. Normalization  Normalization</description>
+			<pubDate>Sun, 23 Nov 2025 10:17:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/basics-of-database-design-normalization-relationships-and-er-diagrams.html</guid>
+    </item><item>
+			<title>Build a Wind Vane: Easy Science Project for Kids</title>
+			<link>https://peoplesblog.co.in/articles/wind-vane-science-experiment-for-children.html</link>
+			<description>Creating a simple wind vane is a fun and educational science experiment for children that helps them understand wind direction and meteorological concepts. A wind vane, or weather vane, indicates the direction from which the wind is blowing.  Here&amp;rsquo;s a step-by-step guide to building a basic wind vane using common materials:  Materials Needed:   Plastic Straw or Wooden Dowel: For the central a</description>
+			<pubDate>Sun, 23 Nov 2025 10:15:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/wind-vane-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Milk Bottle Xylophone: Colorful &amp; Fun Music Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/milk-bottle-xylophone-science-experiment-for-children.html</link>
+			<description>Title: Milk Bottle Xylophone - Sound and Pitch Experiment  Objective: To explore sound and pitch by creating a milk bottle xylophone.  Materials:   Empty glass milk bottles (varying sizes) Water Wooden sticks or metal spoons (for striking the bottles) Optional: Food coloring or colored tape (for visual effect)   Procedure:   Gather a set of empty glass milk bottles. You can use bottles of differen</description>
+			<pubDate>Sun, 23 Nov 2025 10:14:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/milk-bottle-xylophone-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Leaf Chromatography: Easy Science Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/leaf-chromatography-science-experiment-for-children.html</link>
+			<description>Leaf chromatography is a simple and fascinating experiment that introduces children to the concept of chromatography, which separates different pigments in leaves.  Here&amp;#39;s a step-by-step guide:  Materials:   Fresh green leaves (different types if possible) Coffee filters or chromatography paper Pencil Small glasses or jars Rubbing alcohol or isopropyl alcohol Water Tape Small weights or paperc</description>
+			<pubDate>Sun, 23 Nov 2025 10:10:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/leaf-chromatography-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Floating Fish Experiment: Fun Science Activity for Kids</title>
+			<link>https://peoplesblog.co.in/articles/floating-fish-science-experiment-for-children.html</link>
+			<description>Title: Floating Fish - Density and Buoyancy Experiment  Objective: To explore the concepts of density and buoyancy by creating a floating fish.  Materials:   Clay or playdough Plasticine or modeling clay Plastic toy fish or small plastic object A basin, tub, or container filled with water   Procedure:   Start by shaping the plasticine or modeling clay into a small ball or disc shape. This will ser</description>
+			<pubDate>Sun, 23 Nov 2025 10:09:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/floating-fish-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Azure Key Vault: Key Concepts &amp; Security Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</link>
+			<description>In the modern cloud-driven world, security is more critical than ever. Organizations are increasingly migrating their data, applications, and infrastructure to the cloud, but with this transition comes the need to protect sensitive information such as secrets, keys, certificates, and passwords. Azure Key Vault is a cloud service provided by Microsoft Azure designed specifically to safeguard and ma</description>
+			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Azure Active Directory &amp; App Registrations: Complete Guide</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</link>
+			<description>In the modern world of cloud computing, managing identity and access is crucial to securing enterprise applications and data. Microsoft Azure provides a comprehensive identity and access management solution through Azure Active Directory (Azure AD). Whether you are managing an enterprise IT environment or building cloud-based applications, understanding Azure AD and Azure App Registrations is foun</description>
+			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Azure Storage Accounts: Concepts, Setup &amp; Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</link>
+			<description>Azure Storage is a cloud service provided by Microsoft Azure that allows users to store and manage data in a highly scalable, secure, and cost-effective manner. One of the core components of Azure Storage is the Azure Storage Account. An Azure Storage Account provides a unique namespace for storing data in Azure and serves as the container for different types of storage services, such as Blob Stor</description>
+			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Fix Colima Connection Refused Error on Mac: Step-by-Step</title>
+			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
+			<description>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp;amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.  While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and de</description>
+			<pubDate>Sun, 23 Nov 2025 10:00:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</guid>
+    </item><item>
+			<title>Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</link>
+			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft&amp;#39;s managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes&amp;#39; robust fea</description>
+			<pubDate>Sun, 23 Nov 2025 09:57:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</guid>
+    </item><item>
+			<title>Implement One-to-Many &amp; Many-to-Many Relationships in PHP</title>
+			<link>https://peoplesblog.co.in/articles/implementing-one-to-many-and-many-to-many-relationships.html</link>
+			<description>Implementing one-to-many and many-to-many relationships in a database is essential for accurately modeling real-world scenarios.  Here&amp;rsquo;s a detailed look at how to set up these relationships in a relational database.  One-to-Many Relationship  A one-to-many relationship occurs when a single record in one table can relate to multiple records in another table.  Example Scenario: Consider a User</description>
+			<pubDate>Sun, 23 Nov 2025 09:55:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-one-to-many-and-many-to-many-relationships.html</guid>
+    </item><item>
+			<title>Cloud in a Bottle: Fun Science Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/cloud-in-a-bottle-science-experiment-for-children.html</link>
+			<description>Creating a cloud in a bottle is a fantastic and visually engaging science experiment that demonstrates the basic principles of cloud formation. This simple experiment uses everyday materials to mimic the process of cloud formation in a controlled environment.  Here&amp;rsquo;s a step-by-step guide to performing the &amp;ldquo;Cloud in a Bottle&amp;rdquo; experiment:  Materials Needed:   Plastic Bottle: A clea</description>
+			<pubDate>Sun, 23 Nov 2025 09:50:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/cloud-in-a-bottle-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
+			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</link>
+			<description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.  As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, her</description>
+			<pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</guid>
+    </item><item>
+			<title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
+			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
+			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
+			<pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
+    </item><item>
+			<title>Mastering Dynamic Programming in PHP: A Deep Dive into Classic Algorithms</title>
+			<link>https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</link>
+			<description>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in algorithms that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculati</description>
+			<pubDate>Sun, 23 Nov 2025 09:46:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</guid>
+    </item><item>
+			<title>Deploy Drupal on Azure Kubernetes Service (AKS): Step-by-Step Guide</title>
+			<link>https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</link>
+			<description>Azure Kubernetes Service (AKS), offered by Microsoft Azure, is a fully managed container orchestration service that leverages Kubernetes to manage, deploy, and scale applications in containers. Kubernetes is the go-to platform for automating the deployment, scaling, and management of containerized applications, making it an ideal choice for running complex web applications like Drupal.  Drupal, an</description>
+			<pubDate>Sun, 23 Nov 2025 09:39:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</guid>
+    </item><item>
 			<title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
 			<link>https://peoplesblog.co.in/articles/ai-canvas-in-drupal-from-a-normal-person-s-point-of-view.html</link>
 			<description>If you’ve been hearing people in the Drupal world talk about “AI” and “Canvas,” you might think it’s some complicated feature only developers care about. Honestly, that’s what I assumed at first too. But the more I tried these things, the more I realised they’re not really built for developers — they’re built for the people who actually use the website daily.  I’m talking abo</description>
@@ -26,335 +355,6 @@
 			<pubDate>Fri, 22 Aug 2025 10:36:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/nature-scavenger-hunt-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Rain Gauge, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/rain-gauge-science-experiment-for-children.html</link>
-			<description>Creating a DIY rain gauge is a fantastic science experiment for children to understand meteorology and hydrology. A rain gauge measures the amount of precipitation that falls over a period of time. This simple project allows children to observe and record rainfall, helping them learn about weather patterns and data collection. Here’s a step-by-step guide to making a basic rain gauge.  Materials </description>
-			<pubDate>Sun, 10 Aug 2025 15:33:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/rain-gauge-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>How to charge a Mobile phone with Solar power?</title>
-			<link>https://peoplesblog.co.in/articles/how-to-charge-a-mobile-phone-with-solar-power.html</link>
-			<description>As the world shifts toward renewable energy, solar power is becoming an increasingly practical and eco-friendly way to charge everyday devices—especially mobile phones. Whether you're off the grid, on a camping trip, or simply looking to reduce your environmental impact, solar charging offers a convenient solution.  This article will walk you through how to charge your phone using solar energy. </description>
-			<pubDate>Sun, 27 Jul 2025 19:29:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-charge-a-mobile-phone-with-solar-power.html</guid>
-    </item><item>
-			<title>Instant hot ice, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/instant-hot-ice-science-experiment-for-children.html</link>
-			<description>To create a fascinating instant hot ice reaction and explore the concept of exothermic reactions.  Materials:   Sodium acetate trihydrate (available online or in some specialty stores) Heat-resistant container or beaker Spoon or stirring rod Hot plate or stove Optional: Food coloring for visual effect Optional: Safety goggles and gloves (recommended when handling chemicals)   Procedure:   Begin by</description>
-			<pubDate>Sun, 27 Jul 2025 11:42:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/instant-hot-ice-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Using Indexes to Speed Up SQL Queries</title>
-			<link>https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html</link>
-			<description>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:  What Are Indexes?  An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.  Types of Indexes   Single-Column Index: Index</description>
-			<pubDate>Sun, 27 Jul 2025 11:37:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html</guid>
-    </item><item>
-			<title>Egg in a Bottle, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/egg-in-a-bottle-science-experiment-for-children.html</link>
-			<description>The Egg in a Bottle experiment is a classic demonstration of the principles of air pressure.  Here's a simple guide for conducting this experiment:  Materials:   Hard-boiled egg (peeled) Glass bottle with a narrow neck (a milk bottle works well) Sheet of paper Matches or lighter   Procedure:   Peel the hard-boiled egg so that it easily fits through the neck of the bottle. Ensure that the bottle ha</description>
-			<pubDate>Sun, 27 Jul 2025 11:30:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/egg-in-a-bottle-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Shadow Tracing, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/shadow-tracing-science-experiment-for-children.html</link>
-			<description>Shadow tracing is an excellent way for children to explore concepts related to the Earth's rotation, the position of the sun and how these factors affect shadow length and direction. This simple science experiment demonstrates how the position of the sun in the sky changes throughout the day and how this affects the shadows cast by objects. Here’s a detailed guide on how to conduct this experime</description>
-			<pubDate>Fri, 23 May 2025 17:46:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/shadow-tracing-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Why Choose Drupal for your Blogging Website in 2025?</title>
-			<link>https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</link>
-			<description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.  If you’re serious about blogging and need a powerful, future-proof CM</description>
-			<pubDate>Thu, 20 Mar 2025 12:09:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/why-choose-drupal-for-your-blogging-website-in-.html</guid>
-    </item><item>
-			<title>DIY Geodesic Dome, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/diy-geodesic-dome-science-experiment-for-children.html</link>
-			<description>Building a geodesic dome is an exciting and educational science experiment that helps children understand geometric principles, engineering concepts and structural design. A geodesic dome is a spherical structure composed of interconnected triangles, which provides a strong and stable framework.  Here’s a step-by-step guide for creating a DIY geodesic dome using paper or straws.  Materials Neede</description>
-			<pubDate>Thu, 20 Mar 2025 09:11:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-geodesic-dome-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Pi Day Celebration, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/pi-day-celebration-science-experiment-for-children.html</link>
-			<description>Pi Day, celebrated on March 14th (3/14, reflecting the first three digits of pi, 3.14), is a perfect opportunity to engage children in learning about the mathematical constant pi (π). This activity involves measuring the circumference and diameter of circles to understand how pi relates to these measurements.  Here’s a fun and educational science experiment to celebrate Pi Day and explore the c</description>
-			<pubDate>Fri, 17 Jan 2025 08:07:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/pi-day-celebration-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Deploying Drupal on Azure Kubernetes Service (AKS)</title>
-			<link>https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</link>
-			<description>Azure Kubernetes Service (AKS), offered by Microsoft Azure, is a fully managed container orchestration service that leverages Kubernetes to manage, deploy, and scale applications in containers. Kubernetes is the go-to platform for automating the deployment, scaling, and management of containerized applications, making it an ideal choice for running complex web applications like Drupal.  Drupal, an</description>
-			<pubDate>Thu, 16 Jan 2025 19:24:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/deploying-drupal-on-azure-kubernetes-service-aks.html</guid>
-    </item><item>
-			<title>Understanding Azure Key Vault: Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</link>
-			<description>In the modern cloud-driven world, security is more critical than ever. Organizations are increasingly migrating their data, applications, and infrastructure to the cloud, but with this transition comes the need to protect sensitive information such as secrets, keys, certificates, and passwords. Azure Key Vault is a cloud service provided by Microsoft Azure designed specifically to safeguard and ma</description>
-			<pubDate>Tue, 14 Jan 2025 07:53:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-key-vault-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Tesselation Art, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/tesselation-art-science-experiment-for-children.html</link>
-			<description>Tessellation art is a wonderful way for children to explore geometry and symmetry through creative expression. Tessellations involve creating patterns that cover a surface without any gaps or overlaps using geometric shapes. This activity helps children understand concepts such as shape, symmetry and repetition in a fun and engaging way.  Here’s a step-by-step guide to creating tessellation art:</description>
-			<pubDate>Tue, 07 Jan 2025 08:13:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/tesselation-art-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Understanding Azure Active Directory &amp; Azure App Registrations: Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</link>
-			<description>In the modern world of cloud computing, managing identity and access is crucial to securing enterprise applications and data. Microsoft Azure provides a comprehensive identity and access management solution through Azure Active Directory (Azure AD). Whether you are managing an enterprise IT environment or building cloud-based applications, understanding Azure AD and Azure App Registrations is foun</description>
-			<pubDate>Mon, 06 Jan 2025 13:06:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Understanding Azure Front Door and CDN Profiles: Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</link>
-			<description>In today’s cloud-first world, providing fast, reliable, and secure access to web applications is critical for a positive user experience. With users across different geographic regions, ensuring low-latency content delivery and application optimization is key to improving performance. Azure Front Door and Azure Content Delivery Network (CDN) are two essential services in Azure that help organiza</description>
-			<pubDate>Sun, 29 Dec 2024 09:16:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Understanding Azure Storage Accounts: Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</link>
-			<description>Azure Storage is a cloud service provided by Microsoft Azure that allows users to store and manage data in a highly scalable, secure, and cost-effective manner. One of the core components of Azure Storage is the Azure Storage Account. An Azure Storage Account provides a unique namespace for storing data in Azure and serves as the container for different types of storage services, such as Blob Stor</description>
-			<pubDate>Fri, 20 Dec 2024 08:31:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Understanding Azure Kubernetes Service (AKS): Key Concepts and Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</link>
-			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft's managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes' robust features, s</description>
-			<pubDate>Fri, 13 Dec 2024 08:49:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Migrating from JSStream to Vimeo Using Drupal Migration API</title>
-			<link>https://peoplesblog.co.in/articles/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.html</link>
-			<description>Migrating video content from JSStream (a custom video streaming platform) to Vimeo can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s Migration API can save significant time and reduce errors, especially for larger video libraries.  In th</description>
-			<pubDate>Fri, 13 Dec 2024 08:43:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.html</guid>
-    </item><item>
-			<title>How to Create a Document Library in SharePoint and Configure Content Types, Terms, User Groups, and Permissions</title>
-			<link>https://peoplesblog.co.in/articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html</link>
-			<description>SharePoint is a robust collaboration platform that helps organizations manage and share documents and other content. One of the key features of SharePoint is the ability to create Document Libraries, which serve as centralized repositories for storing, organizing, and managing documents. These libraries can be highly customized with features like Content Types, Managed Metadata (Terms), User Group</description>
-			<pubDate>Tue, 03 Dec 2024 08:49:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html</guid>
-    </item><item>
-			<title>Understanding SharePoint Document Libraries, Content Types, Terms, User Groups and Permissions</title>
-			<link>https://peoplesblog.co.in/articles/understanding-sharepoint-document-libraries-content-types-terms-user-groups-and-permissions.html</link>
-			<description>SharePoint is a powerful collaboration platform that allows organizations to store, manage, and share content efficiently. One of the core features of SharePoint is the Document Library, which provides a centralized location for storing files and documents. To enhance document management, SharePoint allows for a range of customization options, including Content Types, Managed Metadata (Terms), Use</description>
-			<pubDate>Mon, 02 Dec 2024 08:29:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-sharepoint-document-libraries-content-types-terms-user-groups-and-permissions.html</guid>
-    </item><item>
-			<title>Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases</title>
-			<link>https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.html</link>
-			<description>When working with SharePoint, a robust collaboration and document management platform, it's important to understand the different ways you can organize and manage your files. Two key features for managing files in SharePoint are Documents and Document Sets. Although they may seem similar at first glance, they serve different purposes and offer distinct features to help you manage your content more</description>
-			<pubDate>Fri, 29 Nov 2024 07:12:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.html</guid>
-    </item><item>
-			<title>Mini Wind Turbine, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/mini-wind-turbine-science-experiment-for-children.html</link>
-			<description>Building a mini wind turbine is a great science experiment for children that demonstrates the principles of wind energy and how it can be converted into electricity.  Here’s a step-by-step guide to creating a simple mini wind turbine using easily available materials:  Materials Needed:   Plastic Bottle: For the turbine's body. Cardboard or Plastic Sheets: For the turbine blades. Wooden Dowels or</description>
-			<pubDate>Thu, 28 Nov 2024 20:52:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/mini-wind-turbine-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Solar Oven Cooking, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</link>
-			<description>Building and using a DIY solar oven is a fantastic way to explore solar energy and understand the principles of cooking with sunlight. A solar oven harnesses solar energy to heat and cook food, providing a practical demonstration of renewable energy in action.  Here’s a step-by-step guide to creating and using a simple solar oven:  Materials Needed:   Cardboard Box: A large, clean cardboard box </description>
-			<pubDate>Thu, 28 Nov 2024 20:51:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Hydropower Experiment, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/hydropower-experiment-science-experiment-for-children.html</link>
-			<description>Creating a simple water wheel is an excellent hands-on experiment to understand the principles of hydropower. A waterwheel converts the kinetic energy of flowing water into mechanical energy, which can then be used to perform work or generate electricity.  Here's a step-by-step guide to building a basic waterwheel to explore the fundamentals of hydropower:  Materials Needed:   Plastic or Cardboard</description>
-			<pubDate>Thu, 28 Nov 2024 20:48:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/hydropower-experiment-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Solar Still Experiment, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/solar-still-experiment-science-experiment-for-children.html</link>
-			<description>Solar still is a simple yet effective device for purifying water using solar energy. It works on the principle of evaporation and condensation to separate clean water from impurities.  Here's a step-by-step guide to conducting a solar still experiment to demonstrate the process of water purification:  Materials Needed:   Clear Plastic Sheet: To cover the solar still and capture the evaporated wate</description>
-			<pubDate>Thu, 28 Nov 2024 20:45:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/solar-still-experiment-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Borax Crystal Snowflakes, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/borax-crystal-snowflakes-science-experiment-for-children.html</link>
-			<description>Creating Borax crystal snowflakes is a captivating and educational science experiment that allows children to observe crystal formation and learn about solubility, saturation and crystallization. Here's a step-by-step guide:  Materials:   Borax powder (available in the laundry aisle of most supermarkets) Pipe cleaners (white or blue works well for snowflakes) String or yarn Pencil or stick Scissor</description>
-			<pubDate>Thu, 28 Nov 2024 19:15:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/borax-crystal-snowflakes-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Alum Crystal Geodes, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/alum-crystal-geodes-science-experiment-for-children.html</link>
-			<description>Creating alum crystal geodes is a captivating and educational science experiment that allows children to observe crystal formation and learn about solubility, saturation and crystallization.  Here's a step-by-step guide:  Materials:   Alum powder (aluminum potassium sulfate) Eggshells or small hollow egg-shaped molds Water Food coloring (optional) String or fishing line Scissors Stirring spoon Sau</description>
-			<pubDate>Thu, 28 Nov 2024 19:14:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/alum-crystal-geodes-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Rock Candy Crystal Sticks, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/rock-candy-crystal-sticks-science-experiment-for-children.html</link>
-			<description>Creating rock candy crystal sticks is a fun and educational science experiment that allows children to observe crystal formation and learn about solubility and saturation.  Here's a step-by-step guide:  Materials:   Granulated sugar Water Glass or plastic jars or cups Wooden skewers or bamboo sticks Clothespins Food coloring (optional) Flavor extracts (optional) Saucepan Stirring spoon Scissors   </description>
-			<pubDate>Thu, 28 Nov 2024 19:11:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/rock-candy-crystal-sticks-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Epsom Salt Crystal Shapes, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/epsom-salt-crystal-shapes-science-experiment-for-children.html</link>
-			<description>Creating Epsom salt crystal shapes is a captivating and educational science experiment that allows children to observe crystal formation and learn about crystal structures.  Here's a step-by-step guide:  Materials:   Epsom salt (magnesium sulfate) Water Heat source (stove or microwave) Glass or plastic containers (jars, bowls, or cups) String or pipe cleaners Pencil or stick Food coloring (optiona</description>
-			<pubDate>Thu, 28 Nov 2024 19:08:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/epsom-salt-crystal-shapes-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Crushing Can Experiment, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/crushing-can-experiment-science-experiment-for-children.html</link>
-			<description>The crushing can experiment is a fascinating demonstration of air pressure in action.  Here's how to conduct the experiment:  Materials Needed:   Empty aluminum soda can Heat-resistant tongs or a pair of pliers Stovetop or hot plate Bowl or container of cold water Safety goggles (optional but recommended)     Instructions:    Prepare the Can:   Begin by rinsing out the empty aluminum soda can to r</description>
-			<pubDate>Thu, 28 Nov 2024 19:07:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/crushing-can-experiment-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Cartesian Diver, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/cartesian-diver-science-experiment-for-children.html</link>
-			<description>Creating a Cartesian diver is a simple and fun science experiment that allows children to explore the concepts of buoyancy and pressure.  Here's how to make one:  Materials Needed:   Clear plastic bottle with a screw-on cap Small plastic eye dropper or pipette Water Optional: Food coloring     Instructions:   Fill the plastic bottle with water almost to the top. Leave a small air gap at the top of</description>
-			<pubDate>Thu, 28 Nov 2024 19:06:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/cartesian-diver-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Ping Pong Ball Hovercraft, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/ping-pong-ball-hovercraft-science-experiment-for-children.html</link>
-			<description>Creating a ping pong ball hovercraft is a fun and educational science experiment that children can enjoy while learning about the principles of air pressure and friction.  Here's how to make a simple ping pong ball hovercraft:  Materials Needed:   A sturdy, smooth-surfaced CD or DVD A large balloon (preferably round) A hot glue gun and glue sticks A bottle cap (with a flat bottom) A ping pong ball</description>
-			<pubDate>Thu, 28 Nov 2024 19:03:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/ping-pong-ball-hovercraft-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Construction materials for Thermal Resistance Walls, Earth Bricks</title>
-			<link>https://peoplesblog.co.in/articles/construction-materials-for-thermal-resistant-walls.html</link>
-			<description>Construction process can be tedious, time consuming and expensive. To overcome this during construction, varied methods of construction is being considered and developed. Also, materials and equipment used for construction are also being fabricated to enhance the quality of construction and furthermore minimize the time and cost. Interlocking bricks are one such advancement in construction industr</description>
-			<pubDate>Thu, 28 Nov 2024 18:59:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/construction-materials-for-thermal-resistant-walls.html</guid>
-    </item><item>
-			<title>Filter content between Date ranges in Drupal 7</title>
-			<link>https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal.html</link>
-			<description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.  This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an 'end date' for the event, only a date field with the 'Collect an end date'  This part (which seems 'lo</description>
-			<pubDate>Thu, 28 Nov 2024 18:57:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal.html</guid>
-    </item><item>
-			<title>Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms</title>
-			<link>https://peoplesblog.co.in/articles/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.html</link>
-			<description>Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.  In this article, we will explore graph data structures, common graph traversals, an</description>
-			<pubDate>Thu, 28 Nov 2024 07:44:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.html</guid>
-    </item><item>
-			<title>Mastering Dynamic Programming in PHP: A Deep Dive into Classic Algorithms</title>
-			<link>https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</link>
-			<description>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in algorithms that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculati</description>
-			<pubDate>Wed, 27 Nov 2024 07:25:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html</guid>
-    </item><item>
-			<title>DIY Math Board Games, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/diy-math-board-games-science-experiment-for-children.html</link>
-			<description>Creating and playing math-based board games is a fantastic way for children to learn math concepts while having fun. These DIY games can be tailored to various age groups and skill levels, making math practice engaging and interactive.  Here’s a step-by-step guide to designing and playing your own math board games.  Materials Needed:   Cardboard or Poster Board: For the game board. Markers or Cr</description>
-			<pubDate>Tue, 26 Nov 2024 08:07:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/diy-math-board-games-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Advanced Sorting and Searching Algorithms in PHP: Quick Sort, Merge Sort, Heap Sort, and Binary Search Trees</title>
-			<link>https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</link>
-			<description>Sorting and searching are foundational operations in computer science. Understanding the efficient algorithms for these tasks can significantly enhance the performance of your applications.  In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.  We’ll include clear explanatio</description>
-			<pubDate>Tue, 26 Nov 2024 07:53:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.html</guid>
-    </item><item>
-			<title>Data Structures in PHP: Implementing Stacks, Queues, Linked Lists, and SPL Classes</title>
-			<link>https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</link>
-			<description>Data structures are an integral part of programming, offering efficient ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like Stacks, Queues, and Linked Lists will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high pe</description>
-			<pubDate>Thu, 21 Nov 2024 07:59:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html</guid>
-    </item><item>
-			<title>Optimizing a Product Catalog Microservice with Profiling Tools in PHP Using DDEV and Visual Studio Code</title>
-			<link>https://peoplesblog.co.in/articles/optimizing-a-product-catalog-microservice-with-profiling-tools-in-php-using-ddev-and-visual-studio-code.html</link>
-			<description>In this article, we will enhance the product catalog microservice we built earlier by integrating Xdebug for profiling, specifically tailored for development in Visual Studio Code (VS Code). We will include detailed setup instructions, ensuring a smooth experience while profiling your application.  Overview  Key Components   PHP 8: The programming language for our microservice. MySQL: The database</description>
-			<pubDate>Sun, 17 Nov 2024 08:12:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/optimizing-a-product-catalog-microservice-with-profiling-tools-in-php-using-ddev-and-visual-studio-code.html</guid>
-    </item><item>
-			<title>Code Profiling and Performance Optimization of an Existing PHP Project</title>
-			<link>https://peoplesblog.co.in/articles/code-profiling-and-performance-optimization-of-an-existing-php-project.html</link>
-			<description>As applications grow in complexity, ensuring optimal performance becomes critical. Code profiling and performance optimization are essential practices that help developers identify bottlenecks and improve the efficiency of their PHP applications.  In this article, we will explore the tools and techniques for code profiling and performance optimization in PHP 8.  What is Code Profiling?  Code profi</description>
-			<pubDate>Wed, 13 Nov 2024 08:36:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/code-profiling-and-performance-optimization-of-an-existing-php-project.html</guid>
-    </item><item>
-			<title>Advanced OOP Features in PHP: Final Classes, Magic Methods, and Late Static Binding</title>
-			<link>https://peoplesblog.co.in/articles/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.html</link>
-			<description>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest iteration, PHP 8, provides several advanced OOP features that enhance its capabilities and allow for more robust and maintainable code.  In this article, we will explore three advanced OOP features in PHP 8: final classes, magic methods, and late sta</description>
-			<pubDate>Mon, 11 Nov 2024 08:15:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.html</guid>
-    </item><item>
-			<title>Introduction to Caching and Setting Up Redis in PHP 8</title>
-			<link>https://peoplesblog.co.in/articles/introduction-to-caching-and-setting-up-redis-in-php-.html</link>
-			<description>Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer. In PHP 8, caching can significantly reduce load times and improve the overall user experience of web applications.  This article will provide an overview of caching, its benefits, and common use cases.  What is Caching?  Caching inv</description>
-			<pubDate>Fri, 08 Nov 2024 10:01:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/introduction-to-caching-and-setting-up-redis-in-php-.html</guid>
-    </item><item>
-			<title>Implementing a Redis Cache for Product Catalog Data in PHP</title>
-			<link>https://peoplesblog.co.in/articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html</link>
-			<description>Caching is a vital technique for improving application performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.  In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.  What</description>
-			<pubDate>Fri, 08 Nov 2024 09:32:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html</guid>
-    </item><item>
-			<title>Implementing a Notification System Using the Observer Pattern in PHP</title>
-			<link>https://peoplesblog.co.in/articles/implementing-a-notification-system-using-the-observer-pattern-in-php.html</link>
-			<description>The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).  In this </description>
-			<pubDate>Tue, 05 Nov 2024 15:52:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/implementing-a-notification-system-using-the-observer-pattern-in-php.html</guid>
-    </item><item>
-			<title>Origami Geometry, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/origami-geometry-science-experiment-for-children.html</link>
-			<description>Origami is a fantastic way to explore and understand geometric concepts through hands-on activity. By folding paper to create different shapes and structures, children can visualize and learn about various geometric principles.  Here’s a detailed article to a "Origami Geometry" science experiment for children, focusing on basic geometric shapes and concepts.  Materials Needed:   Origami Paper: S</description>
-			<pubDate>Mon, 04 Nov 2024 14:05:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/origami-geometry-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>When and How to Use Each Design Pattern in PHP</title>
-			<link>https://peoplesblog.co.in/articles/when-and-how-to-use-each-design-pattern-in-php.html</link>
-			<description>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.  In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.  1. Singleton Pattern  When to Use   Use the Singleton pattern when you need to ensure that a class has only</description>
-			<pubDate>Mon, 04 Nov 2024 06:51:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/when-and-how-to-use-each-design-pattern-in-php.html</guid>
-    </item><item>
-			<title>Exploring Design Patterns in PHP 8: Strategy, Observer and Decorator</title>
-			<link>https://peoplesblog.co.in/articles/exploring-design-patterns-in-php--strategy-observer-and-decorator.html</link>
-			<description>Design patterns are essential tools for software developers, providing proven solutions to common problems. In PHP 8, leveraging design patterns can lead to more maintainable, scalable and flexible code.  This article will explore three key design patterns: Strategy, Observer and Decorator. We will delve into their principles and provide practical examples to illustrate how they can be implemented</description>
-			<pubDate>Mon, 28 Oct 2024 16:46:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/exploring-design-patterns-in-php--strategy-observer-and-decorator.html</guid>
     </item>
 </channel>
 </rss>

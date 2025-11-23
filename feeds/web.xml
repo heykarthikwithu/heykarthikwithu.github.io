@@ -6,6 +6,27 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Secure Application Password Reset Flow: Best Practices</title>
+			<link>https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</link>
+			<description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so that user can reset the password on their own.  This is a default or general flow that any application framework provides, but developers or architec</description>
+			<pubDate>Sun, 23 Nov 2025 10:52:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</guid>
+    </item><item>
+			<title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
+			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</link>
+			<description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.  As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, her</description>
+			<pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</guid>
+    </item><item>
+			<title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
+			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
+			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
+			<pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
+    </item><item>
 			<title>Create a custom Drupal Service and Use as a Helper</title>
 			<link>https://peoplesblog.co.in/articles/create-a-custom-drupal-service-and-use-as-a-helper.html</link>
 			<description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.  In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.  Step 1: Define the Service  Create a new custom module or use an existing one. Define your service in the module’s</description>
@@ -111,13 +132,6 @@
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/imagefield-slideshow-module-to-render-slideshow-on-drupal-website.html</guid>
     </item><item>
-			<title>Unable to install Update Manager, update.settings already exists in active configuration</title>
-			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
-			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which wil</description>
-			<pubDate>Fri, 08 Sep 2023 09:15:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
-    </item><item>
 			<title>What is a Customer Data Platform and which one is best for your Business?</title>
 			<link>https://peoplesblog.co.in/articles/what-is-a-customer-data-platform-and-which-one-is-best-for-your-business.html</link>
 			<description>Customer Data Platform (CDP) is a sophisticated software system that aggregates and manages customer data across various touchpoints and channels. Its primary purpose is to create a unified and comprehensive view of individual customers or segments of customers. This centralized data is then made accessible to other systems and tools for marketing, analytics and customer engagement.  Key features </description>
@@ -215,20 +229,6 @@
 			<pubDate>Wed, 26 Apr 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-secure-the-passwords-of-users-in-web-applications.html</guid>
-    </item><item>
-			<title>Multisite Local environment setup with DDEV and Drupal</title>
-			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</link>
-			<description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.  As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, her</description>
-			<pubDate>Thu, 26 Jan 2023 09:30:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</guid>
-    </item><item>
-			<title>Secure your Web Application's Reset Password flow</title>
-			<link>https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</link>
-			<description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so that user can reset the password on their own.  This is a default or general flow that any application framework provides, but developers or architec</description>
-			<pubDate>Sun, 22 Jan 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</guid>
     </item><item>
 			<title>How does Captcha know that I'm not a Robot?</title>
 			<link>https://peoplesblog.co.in/articles/how-does-captcha-know-that-iam-not-robot.html</link>

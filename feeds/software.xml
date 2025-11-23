@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
+			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
+			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
+			<pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
+    </item><item>
 			<title>How to Create a Document Library in SharePoint and Configure Content Types, Terms, User Groups, and Permissions</title>
 			<link>https://peoplesblog.co.in/articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html</link>
 			<description>SharePoint is a robust collaboration platform that helps organizations manage and share documents and other content. One of the key features of SharePoint is the ability to create Document Libraries, which serve as centralized repositories for storing, organizing, and managing documents. These libraries can be highly customized with features like Content Types, Managed Metadata (Terms), User Group</description>
@@ -54,13 +61,6 @@
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/what-to-know-for-estimating-projects.html</guid>
-    </item><item>
-			<title>Unable to install Update Manager, update.settings already exists in active configuration</title>
-			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
-			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which wil</description>
-			<pubDate>Fri, 08 Sep 2023 09:15:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
     </item><item>
 			<title>What is a Customer Data Platform and which one is best for your Business?</title>
 			<link>https://peoplesblog.co.in/articles/what-is-a-customer-data-platform-and-which-one-is-best-for-your-business.html</link>

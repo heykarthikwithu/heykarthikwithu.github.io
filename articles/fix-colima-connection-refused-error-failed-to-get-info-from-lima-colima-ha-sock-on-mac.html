@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Fix Colima connection refused error: failed to get Info from .lima/col</title>
+    <title>Fix Colima Connection Refused Error on Mac: Step-by-Step</title>
     <meta name="description" content="This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html" />
-    <meta property="og:title" content="Fix Colima connection refused error: failed to get Info from .lima/col" />
+    <meta property="og:title" content="Fix Colima Connection Refused Error on Mac: Step-by-Step" />
     <meta property="og:description" content="This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" />
     <meta property="og:type" content="article" />
-    <meta name="twitter:title" content="Fix Colima connection refused error: failed to get Info from .lima/col" />
+    <meta name="twitter:title" content="Fix Colima Connection Refused Error on Mac: Step-by-Step" />
     <meta name="twitter:description" content="This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,7 +51,7 @@
           "@type": "WebPage",
           "@id": "/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html"
         },
-        "headline": "Fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac",
+        "headline": "Fix Colima Connection Refused Error on Mac: Step-by-Step",
         "description": "This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh",
         "image": "https://peoplesblog.co.in/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg",
         "author": {
@@ -124,12 +124,12 @@
                                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                                     <li class="breadcrumb-item"><a href="/articles/index.html">Articles</a></li>
                                     <li class="breadcrumb-item"><a href="/articles/colima.html">Colima</a></li>
-                                    <li class="breadcrumb-item active">Fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac</li>
+                                    <li class="breadcrumb-item active">Fix Colima Connection Refused Error on Mac: Step-by-Step</li>
                                 </ol>
                                 <div class="single-post-media">
-                                    <img alt="Fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac" src="/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" class="img-fluid" title="Fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac" />
+                                    <img alt="Fix Colima Connection Refused Error on Mac: Step-by-Step" src="/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" class="img-fluid" title="Fix Colima Connection Refused Error on Mac: Step-by-Step" />
                                 </div>
-                                <h1 class="read-article-title">Fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac</h1>
+                                <h1 class="read-article-title">Fix Colima Connection Refused Error on Mac: Step-by-Step</h1>
                                 <div class="blog-meta big-meta">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.</p>  <p>While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and dependent services like ddev etc)</p>  <p>Lima is a service which launches Linux virtual machines with automatic file sharing and port forwarding on Mac machines and Colima uses Lima for working with Containers.</p>  <p>So, while you see an error like <code>.lima/colima/ha.sock: connect: connection refused</code></p>  <p>Check the list of colima profiles on your mac machine, you can notice the status as <code>Broken</code>.</p>    <p><code>% colima list<br> PROFILE    STATUS    ARCH      CPUS    MEMORY    DISK     RUNTIME    ADDRESS<br> default    Broken    x86_64    4       4GiB      60GiB</code></p>  <p>To stop the colima properly, use the below command</p>  <p><code>% limactl stop -f colima<br> INFO[0000] The qemu driver process seems already stopped<br> INFO[0000] Sending SIGKILL to the host agent process 1223<br> ERRO[0000] operation not permitted<br> INFO[0000] Removing *.pid *.sock under "/Users/karthik.dk/.lima/colima"<br> INFO[0000] Removing "/Users/karthik.dk/.lima/colima/ga.sock"<br> INFO[0000] Removing "/Users/karthik.dk/.lima/colima/ha.pid"<br> INFO[0000] Removing "/Users/karthik.dk/.lima/colima/ha.sock"</code></p>    <p>Later, you can start the colima as usual</p>  <p><code>% colima start<br> INFO[0000] starting colima<br> INFO[0000] runtime: docker<br> INFO[0000] preparing network ...                         context=vm<br> INFO[0001] starting ...                                  context=vm<br> INFO[0032] provisioning ...                              context=docker<br> INFO[0033] starting ...                                  context=docker<br> INFO[0039] done</code></p>  <p>You can see your Colima up and running properly.</p>    <p>Other notes</p>  <ul> <li>Sometime because of the Lima upgrade also such issues show up, in such cases, upgrading the Lima to the latest version.</li> <li>Colima has a command stop where you can run <code>colima stop -f</code>, to kill the process. If you are not able to stop, then you are having a <a href="/articles/different-spices-are-used-to-make-a-garam-masala-mix.html" title="Read about Different Spices Are Used To Make A Garam Masala Mix">different</a> issue.</li> </ul>  <p>This way you can fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac. </p>  <p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p></div>
+                                <div><p>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.</p>  <p>While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and dependent services like ddev etc)</p>  <p>Lima is a service which launches Linux virtual machines with automatic file sharing and port forwarding on Mac machines and Colima uses Lima for working with Containers.</p>  <p>So, while you see an error like <code>.lima/colima/ha.sock: connect: connection refused</code></p>  <p>Check the list of colima profiles on your mac machine, you can notice the status as <code>Broken</code>.</p>  <p><code>% colima list<br /> PROFILE&nbsp; &nbsp; STATUS&nbsp; &nbsp; ARCH&nbsp; &nbsp; &nbsp; CPUS&nbsp; &nbsp; MEMORY&nbsp; &nbsp; DISK &nbsp; &nbsp; RUNTIME&nbsp; &nbsp; ADDRESS<br /> default&nbsp; &nbsp; Broken&nbsp; &nbsp; x86_64&nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 4GiB&nbsp; &nbsp; &nbsp; 60GiB</code></p>  <p>To stop the colima properly, use the below command</p>  <p><code>% limactl stop -f colima<br /> INFO[0000] The qemu driver process seems already stopped<br /> INFO[0000] Sending SIGKILL to the host agent process 1223<br /> ERRO[0000] operation not permitted<br /> INFO[0000] Removing *.pid *.sock under &quot;/Users/karthik.dk/.lima/colima&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ga.sock&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ha.pid&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ha.sock&quot;</code></p>  <p>Later, you can start the colima as usual</p>  <p><code>% colima start<br /> INFO[0000] starting colima<br /> INFO[0000] runtime: docker<br /> INFO[0000] preparing network ... &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=vm<br /> INFO[0001] starting ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=vm<br /> INFO[0032] provisioning ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=docker<br /> INFO[0033] starting ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=docker<br /> INFO[0039] done</code></p>  <p>You can see your Colima up and running properly.</p>  <p>Other notes</p>  <ul> <li>Sometime because of the Lima upgrade also such issues show up, in such cases, upgrading the Lima to the latest version.</li> <li>Colima has a command stop where you can run&nbsp;<code>colima stop -f</code>, to kill the process. If you are not able to stop, then you are having a <a href='/articles/different-spices-are-used-to-make-a-garam-masala-mix.html' title='Read about Different Spices Are Used To Make A Garam Masala Mix'>different</a> issue.</li> </ul>  <p>This way you can fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac.&nbsp;</p>  <p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p> </div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4aiqbuu" title="Apple iPhone 15 (128 GB) - Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 15 (128 GB) - Black" title="Apple iPhone 15 (128 GB) - Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHX1W1XY.html" title="Apple iPhone 15 (128 GB) - Black" class="shop-title-value">Apple iPhone 15 (128 GB) - Black</a></h4>
+                  <div class="discount"><span class="main">34% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41vL7KM" title="iQOO Z9x 5G (Storm Grey, 6GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61sY8BGOyEL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9x 5G (Storm Grey, 6GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" title="iQOO Z9x 5G (Storm Grey, 6GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WHRHBLH.html" title="iQOO Z9x 5G (Storm Grey, 6GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" class="shop-title-value">iQOO Z9x 5G (Storm Grey, 6GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">57% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/480M9AE" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OTEKiXIML._UY879_.jpg" class="img-fluid lazy" alt="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B00J4JKOX6.html" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" class="shop-title-value">Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band</a></h4>
+                  <div class="discount"><span class="main">32% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eNuWO4" title="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71VG3azYMjL._SX679_.jpg" class="img-fluid lazy" alt="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" title="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CV9S9VTD.html" title="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" class="shop-title-value">MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>47,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>70,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">20% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47LPVQL" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BpNVo+McL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FHWWDRRM.html" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" class="shop-title-value">OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XWpAKY" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Tfy967TKL._SX679_.jpg" class="img-fluid lazy" alt="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08DPLCM6T.html" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" class="shop-title-value">LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,990</span></span>
                   </div>
               </div>
           </div>
@@ -219,15 +219,15 @@
               <div class="row"><div class="col-md-6">                      
                         <div class="row">
                           <div class="col-md-4">
-                            <a href="/articles/everest-base-camp-trek-what-should-you-know-before-you-start.html" title="Everest Base Camp Trek - What should you know before you start?">
-                              <img class="img-fluid logo lazy" data-src="/upload/banners/everest-base-camp-trek-what-should-you-know-before-you-start.jpeg" alt="Everest Base Camp Trek - What should you know before you start?" title="Everest Base Camp Trek - What should you know before you start?" src="/upload/cursor.jpg" />
+                            <a href="/articles/vedic-philosophy-the-foundation-of-indian-thought.html" title="Vedic Philosophy: Foundation of Indian Thought">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/vedic-philosophy-the-foundation-of-indian-thought.jpg" alt="Vedic Philosophy: Foundation of Indian Thought" title="Vedic Philosophy: Foundation of Indian Thought" src="/upload/cursor.jpg" />
                             </a>
                           </div>
                           <div class="col-md-8">
                             <div class="prev">
                               <span>Previous Article</span>
-                              <a href="/articles/everest-base-camp-trek-what-should-you-know-before-you-start.html" title="Everest Base Camp Trek - What should you know before you start?">
-                                <span class="title">Everest Base Camp Trek - What should you know before you start?</span>
+                              <a href="/articles/vedic-philosophy-the-foundation-of-indian-thought.html" title="Vedic Philosophy: Foundation of Indian Thought">
+                                <span class="title">Vedic Philosophy: Foundation of Indian Thought</span>
                               </a>
                             </div>
                           </div>
@@ -237,19 +237,19 @@
                           <div class="col-md-8">
                             <div class="next">
                               <span>Next Article</span>
-                              <a href="/articles/how-to-secure-the-passwords-of-users-in-web-applications.html" title="How to secure the Passwords of Users in Web Applications?">
-                                <span class="title">How to secure the Passwords of Users in Web Applications?</span>
+                              <a href="/articles/bangalore-to-kanipakam-solo-trip-plan.html" title="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide">
+                                <span class="title">Bangalore to Kanipakam Solo Trip: Temple & Travel Guide</span>
                               </a>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <a href="/articles/how-to-secure-the-passwords-of-users-in-web-applications.html" title="How to secure the Passwords of Users in Web Applications?">
-                              <img class="img-fluid logo lazy" data-src="/upload/banners/how-to-secure-the-passwords-of-users-in-web-applications.jpeg" alt="How to secure the Passwords of Users in Web Applications?" title="How to secure the Passwords of Users in Web Applications?" src="/upload/cursor.jpg" />
+                            <a href="/articles/bangalore-to-kanipakam-solo-trip-plan.html" title="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/bangalore-to-kanipakam-solo-trip-plan.jpg" alt="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide" title="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide" src="/upload/cursor.jpg" />
                             </a>
                           </div>
                         </div>
                     </div></div>
-            </div><div class="prevnext-articles-fixed"><a href="/articles/everest-base-camp-trek-what-should-you-know-before-you-start.html" class="prev"><i class="fa fa-angle-left"></i><span>PREV</span></a><a href="/articles/how-to-secure-the-passwords-of-users-in-web-applications.html" class="next"><i class="fa fa-angle-right"></i> <span>NEXT</span></a></div>
+            </div><div class="prevnext-articles-fixed"><a href="/articles/vedic-philosophy-the-foundation-of-indian-thought.html" class="prev"><i class="fa fa-angle-left"></i><span>PREV</span></a><a href="/articles/bangalore-to-kanipakam-solo-trip-plan.html" class="next"><i class="fa fa-angle-right"></i> <span>NEXT</span></a></div>
                              
                         </div><!-- end page-wrapper -->
                     </div><!-- end col -->
@@ -265,8 +265,12 @@
 </script></div>
         <h2>Related Articles</h2>
         <div class="popular-articles"><div class="article">
+                <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html">
+                  Setup Multisite Local Environment with DDEV & Drupal
+                </a>
+              </div><div class="article">
                 <a href="/articles/deploying-drupal-on-azure-kubernetes-service-aks.html">
-                  Deploying Drupal on Azure Kubernetes Service (AKS)
+                  Deploy Drupal on Azure Kubernetes Service (AKS): Step-by-Step Guide
                 </a>
               </div><div class="article">
                 <a href="/articles/colima-similar-tool-like-docker-desktop-for-drupal-development.html">
@@ -280,21 +284,17 @@
                 <a href="/articles/multisite-local-environment-setup-with-lando-and-drupal.html">
                   Multisite Local environment setup with Lando & Drupal
                 </a>
-              </div><div class="article">
-                <a href="/articles/local-environment-setup-with-lando-and-drupal.html">
-                  Local environment setup with Lando & Drupal
-                </a>
               </div></div>
       <div class="shop-data amazon-ad">
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eXDQts" title="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61KpX1j3fpL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" title="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHZ23M74.html" title="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" class="shop-title-value">Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray</a></h4>
+                  <div class="discount"><span class="main">17% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48QVZEp" title="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619lW2YtVhL._SX679_.jpg" class="img-fluid lazy" alt="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" title="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGMXVFK.html" title="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" class="shop-title-value">iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>53,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>49,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,999</span></span>
                   </div>
               </div>
           </div>
@@ -312,24 +312,24 @@
 </script></div>
     <h2 class="popular-title">Popular Articles</h2>
     <div class="popular-articles"><div class="article">
-          <a href="/articles/the-mysterious-death-of-actress-divya-bharti.html">
-            The Mysterious Death of Actress Divya Bharti – A Detailed and Realistic Look
+          <a href="/articles/how-to-introduce-more-joy-into-your-everyday-life.html">
+            How to Bring More Joy Into Everyday Life: Practical Tips
           </a>
         </div><div class="article">
-          <a href="/articles/pachi-chintakaya-pachadi-recipe-andhra-style.html">
-            Andhra Style Pachi Chintakaya Pachadi – Authentic Raw Tamarind Pickle Recipe
+          <a href="/articles/why-don-t-introverts-fall-in-love-easily.html">
+            Why Don’t Introverts Fall in Love Easily? Psychological Perspectives
           </a>
         </div><div class="article">
-          <a href="/articles/bangalore-to-varkala-solo-trip-plan.html">
-            Bangalore to Varkala Solo Trip Plan - Ultimate 3-Day Itinerary
+          <a href="/articles/bangalore-to-mekedatu-gorge-adventure-solo-trip-plan.html">
+            Bangalore to Mekedatu Gorge: Solo Adventure Trip Guide
           </a>
         </div><div class="article">
-          <a href="/articles/short-trip-from-bangalore-to-ghati.html">
-            One Day Trip from Bangalore to Ghati Subramanya – Solo or Family Plan
+          <a href="/articles/mini-wind-turbine-science-experiment-for-children.html">
+            DIY Mini Wind Turbine: Science Experiment for Kids
           </a>
         </div><div class="article">
-          <a href="/articles/bangalore-to-chitradurga-solo-trip-plan.html">
-            Bangalore to Chitradurga Solo Trip Plan
+          <a href="/articles/difference-between-an-indian-husband-and-foreign-husband.html">
+            Indian Husband vs Foreign Husband: Key Cultural Differences
           </a>
         </div>
     </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46Ozm3E" title="Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg" class="img-fluid lazy" alt="Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey" title="Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08N5W4NNB.html" title="Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey" class="shop-title-value">Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey</a></h4>
+                  <div class="discount"><span class="main">14% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hFi6CG" title="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51KJE22BKrL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" title="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D5YDJ5QM.html" title="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>59,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>92,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,998</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,999</span></span>
                   </div>
               </div>
           </div>
@@ -360,24 +360,24 @@
 </script></div>
     <h2>Recent Articles</h2>
     <div class="popular-articles"><div class="article">
-          <a href="/articles/bangalore-to-hampi-solo-trip-plan.html">
-            Bangalore to Hampi Solo Trip Plan
+          <a href="/articles/bangalore-to-bheemeshwari-solo-trip-plan.html">
+            Bangalore to Bheemeshwari: Solo Nature Trip & Fishing Guide
           </a>
         </div><div class="article">
-          <a href="/articles/bangalore-to-trivandrum-solo-travel-plan.html">
-            Bangalore to Trivandrum Solo Travel Plan
+          <a href="/articles/rainforest-in-a-jar-science-experiment-for-children.html">
+            Rainforest in a Jar: Create a Mini Ecosystem With Kids
           </a>
         </div><div class="article">
-          <a href="/articles/is-it-true-that-the-truth-always-comes-out.html">
-            Does the Truth Always Come Out? A Realistic Look at a Popular Saying
+          <a href="/articles/color-changing-invisible-ink-kids-science-experiment.html">
+            Make Invisible Ink That Changes Color: Kids Science Activity
           </a>
         </div><div class="article">
-          <a href="/articles/why-is-corporate-life-so-challenging-and-difficult.html">
-            Why Corporate Life Feels So Hard: A Simple and Honest Explanation
+          <a href="/articles/what-happened-at-a-wedding-that-made-you-feel-horrible-in-india.html">
+            What Happened at That Wedding? Real Stories & Emotional Reflections
           </a>
         </div><div class="article">
-          <a href="/articles/bangalore-to-thekkady-solo-trip-plan.html">
-            Bangalore to Thekkady Solo Trip Plan
+          <a href="/articles/do-you-feel-suffocated-with-no-interest-in-life.html">
+            Feeling Stuck & Disconnected? Understanding Life Without Interest
           </a>
         </div>
     </div>
@@ -385,12 +385,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y0MMI4" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811ssp-s+ZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5F443W.html" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)</a></h4>
+                  <div class="discount"><span class="main">69% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4kIECgn" title="AQUA LIBRA WITH DEVICE ISI MARK COPPER Water Purifier Multiple Purification Process | RO + UF + Copper + TDSControl + UV LED 10 LITER STORAJE TENK" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/714Czv2sAOL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE ISI MARK COPPER Water Purifier Multiple Purification Process | RO + UF + Copper + TDSControl + UV LED 10 LITER STORAJE TENK" title="AQUA LIBRA WITH DEVICE ISI MARK COPPER Water Purifier Multiple Purification Process | RO + UF + Copper + TDSControl + UV LED 10 LITER STORAJE TENK" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DZHGX9XJ.html" title="AQUA LIBRA WITH DEVICE ISI MARK COPPER Water Purifier Multiple Purification Process | RO + UF + Copper + TDSControl + UV LED 10 LITER STORAJE TENK" class="shop-title-value">AQUA LIBRA WITH DEVICE ISI MARK COPPER Water Purifier Multiple Purification Process | RO + UF + Copper + TDSControl + UV LED 10 LITER STORAJE TENK</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>41,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>64,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,199</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/488MCBu" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lIE9MYV3L._SX679_.jpg" class="img-fluid lazy" alt="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B4N6JVMW.html" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" class="shop-title-value">HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU</a></h4>
+                  <div class="discount"><span class="main">34% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Q4vPXM" title="HP 15S AMD Ryzen 5000 (16GB Ram/512GB SSD/Fhd/Windows 11/Ms Office 21/Backlit Keyboard/ 15.6&quot; (39.6 Cm)/Silver/2.21 Kg) Eq2305Au/Eq2182Au Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71phX67q6zL._SX679_.jpg" class="img-fluid lazy" alt="HP 15S AMD Ryzen 5000 (16GB Ram/512GB SSD/Fhd/Windows 11/Ms Office 21/Backlit Keyboard/ 15.6&quot; (39.6 Cm)/Silver/2.21 Kg) Eq2305Au/Eq2182Au Laptop" title="HP 15S AMD Ryzen 5000 (16GB Ram/512GB SSD/Fhd/Windows 11/Ms Office 21/Backlit Keyboard/ 15.6&quot; (39.6 Cm)/Silver/2.21 Kg) Eq2305Au/Eq2182Au Laptop" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B4N77Y34.html" title="HP 15S AMD Ryzen 5000 (16GB Ram/512GB SSD/Fhd/Windows 11/Ms Office 21/Backlit Keyboard/ 15.6&quot; (39.6 Cm)/Silver/2.21 Kg) Eq2305Au/Eq2182Au Laptop" class="shop-title-value">HP 15S AMD Ryzen 5000 (16GB Ram/512GB SSD/Fhd/Windows 11/Ms Office 21/Backlit Keyboard/ 15.6&quot; (39.6 Cm)/Silver/2.21 Kg) Eq2305Au/Eq2182Au Laptop</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,300</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>49,557</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,109</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">9% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/44VYFkm" title="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71rs4Aer71L._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" title="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKMV3ZC.html" title="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" class="shop-title-value">Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dfc9uQ" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71uOoXevxwL._SX679_.jpg" class="img-fluid lazy" alt="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHM729GT.html" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" class="shop-title-value">Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,17,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
                   </div>
               </div>
           </div>
@@ -485,42 +485,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">3% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IElj9j" title="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/715k0WQtg9L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" title="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQ8MPQFF.html" title="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" class="shop-title-value">OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)</a></h4>
+                  <div class="discount"><span class="main">75% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46qd4qW" title="WZATCO Yuva Go Plus, Full HD 1080p Native, Android 13.0 Smart Home Projector 4k Ultra HD, Rotatable Design, Auto &amp; 4D Keystone with Netflix, Prime etc, WiFi 6 &amp; BT, Screen Mirroring, ARC, White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/617lZziJniL._SX679_.jpg" class="img-fluid lazy" alt="WZATCO Yuva Go Plus, Full HD 1080p Native, Android 13.0 Smart Home Projector 4k Ultra HD, Rotatable Design, Auto &amp; 4D Keystone with Netflix, Prime etc, WiFi 6 &amp; BT, Screen Mirroring, ARC, White" title="WZATCO Yuva Go Plus, Full HD 1080p Native, Android 13.0 Smart Home Projector 4k Ultra HD, Rotatable Design, Auto &amp; 4D Keystone with Netflix, Prime etc, WiFi 6 &amp; BT, Screen Mirroring, ARC, White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F8N74NVN.html" title="WZATCO Yuva Go Plus, Full HD 1080p Native, Android 13.0 Smart Home Projector 4k Ultra HD, Rotatable Design, Auto &amp; 4D Keystone with Netflix, Prime etc, WiFi 6 &amp; BT, Screen Mirroring, ARC, White" class="shop-title-value">WZATCO Yuva Go Plus, Full HD 1080p Native, Android 13.0 Smart Home Projector 4k Ultra HD, Rotatable Design, Auto &amp; 4D Keystone with Netflix, Prime etc, WiFi 6 &amp; BT, Screen Mirroring, ARC, White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>89,997</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>92,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">50% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4g4O1eW" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51P0kGaUQ2L._SX679_.jpg" class="img-fluid lazy" alt="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07SGFSMXN.html" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" class="shop-title-value">JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer</a></h4>
+                  <div class="discount"><span class="main">58% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eTPVya" title="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61XpKxA8nkL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" title="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CXPG97DD.html" title="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" class="shop-title-value">Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">56% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40n7JMI" title="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/515uY4BSuYL._SX679_.jpg" class="img-fluid lazy" alt="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" title="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3VDRPTW.html" title="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" class="shop-title-value">XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon</a></h4>
+                  <div class="discount"><span class="main">54% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CjRHe9" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619uqfCV8uL._SX679_.jpg" class="img-fluid lazy" alt="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68KM7F5.html" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" class="shop-title-value">AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,599</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,649</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3BMDqGQ" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61dVOVxHn3L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBHYTM2X.html" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" class="shop-title-value">OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]</a></h4>
+                  <div class="discount"><span class="main">57% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bDuuBn" title="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51naBIaCpXL.jpg" class="img-fluid lazy" alt="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" title="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CFYFMQN2.html" title="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" class="shop-title-value">Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,989</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,171</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,998</span></span>
                   </div>
               </div>
           </div>
@@ -582,7 +582,7 @@
                             <h2 class="widget-title">Recent</h2>
                             <div class="link-widget">
                                 <ul class="blog-list-homepage-footer mobile">
-<li><a href="/articles/bangalore.html" title="Bangalore" aria-label="Bangalore">Bangalore</a></li><li><a href="/articles/life.html" title="Life" aria-label="Life">Life</a></li><li><a href="/articles/sexual-health.html" title="Sexual Health" aria-label="Sexual Health">Sexual Health</a></li><li><a href="/articles/relationship.html" title="Relationship" aria-label="Relationship">Relationship</a></li><li><a href="/articles/vedas.html" title="Vedas" aria-label="Vedas">Vedas</a></li>
+<li><a href="/articles/bangalore.html" title="Bangalore" aria-label="Bangalore">Bangalore</a></li><li><a href="/articles/experiment.html" title="Experiment" aria-label="Experiment">Experiment</a></li><li><a href="/articles/marriage.html" title="Marriage" aria-label="Marriage">Marriage</a></li><li><a href="/articles/life.html" title="Life" aria-label="Life">Life</a></li><li><a href="/articles/children.html" title="Children" aria-label="Children">Children</a></li>
                                 </ul>
                             </div><!-- end link-widget -->
                         </div><!-- end widget -->
