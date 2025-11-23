@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/leaf-breathing-science-experiment-for-children.html
 Allow: /articles/bangalore-to-bheemeshwari-solo-trip-plan.html
 Allow: /articles/rainforest-in-a-jar-science-experiment-for-children.html
 Allow: /articles/color-changing-invisible-ink-kids-science-experiment.html
@@ -36,7 +37,6 @@ Allow: /articles/the-concept-of-dharma-in-the-vedas.html
 Allow: /articles/do-it-yourself-pulley-system-science-experiment-for-children.html
 Allow: /articles/what-is-the-best-age-to-get-married-and-why.html
 Allow: /articles/how-to-charge-a-mobile-phone-with-solar-power.html
-Allow: /articles/leaf-breathing-science-experiment-for-children.html
 Allow: /articles/cooking-food-with-solar-power-at-home.html
 Allow: /articles/vegetable-biryani-recipe-andhra-style.html
 Allow: /articles/what-happens-in-counseling-sessions.html
