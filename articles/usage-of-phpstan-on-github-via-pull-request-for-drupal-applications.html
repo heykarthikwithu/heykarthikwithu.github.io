@@ -150,7 +150,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.</p>  <p>To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PhpStan, a static analysing tool which primarily focuses on finding errors in your code without actually running.</p>  <p>If you are <a href="/articles/tips-for-maintaining-motivation-during-tough-times.html" title="Read about Tips For Maintaining Motivation During Tough Times">maintaining</a> your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>We could run this locally as well by having the PhpStan library, which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">environment</a>.</p>  <p>Also, having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p> <div class="google-ad">     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2683569506254139" data-ad-slot="4812668708"></ins>     <script>         (adsbygoogle = window.adsbygoogle || []).push({});     </script> </div> <p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br>   phpstan-report:<br>     runs-on: ubuntu-latest<br>     steps:<br>      - name: Clone the code<br>        uses: actions/checkout@v3<br>      - name: Setup PHP 7.4<br>        uses: shivamathur/setup-php@v2<br>        with:<br>           php-version: 7.4<br>      - name: Composer install<br>        run: composer install<br>      - name: Analyse codebase<br>        run: ./vendor/bin/phpstan analyse ./web/modules/custom</code></p>  <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 4 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To run the phpstan checks (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
+                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.</p>  <p>To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PhpStan, a static analysing tool which primarily focuses on finding errors in your code without actually running.</p>  <p>If you are <a href="/articles/tips-for-maintaining-motivation-during-tough-times.html" title="Read about Tips For Maintaining Motivation During Tough Times">maintaining</a> your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>We could run this locally as well by having the PhpStan library, which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">environment</a>.</p>  <p>Also, having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br>   phpstan-report:<br>     runs-on: ubuntu-latest<br>     steps:<br>      - name: Clone the code<br>        uses: actions/checkout@v3<br>      - name: Setup PHP 7.4<br>        uses: shivamathur/setup-php@v2<br>        with:<br>           php-version: 7.4<br>      - name: Composer install<br>        run: composer install<br>      - name: Analyse codebase<br>        run: ./vendor/bin/phpstan analyse ./web/modules/custom</code></p>  <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 4 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To run the phpstan checks (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -162,32 +162,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">44% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jgiOrQ" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OmhFfS-hL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5DW4WT.html" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" class="shop-title-value">Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)</a></h4>
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3K9B2v8" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vDZyJQ-4L._SY879_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08VB57558.html" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" class="shop-title-value">Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,980</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,250</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>74,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">49% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3tImsp6" title="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41m3+K+NJpL._SY300_SX300_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" title="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09SH8P4H8.html" title="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer" class="shop-title-value">Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer</a></h4>
+                  <div class="discount"><span class="main">47% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3GX63no" title="Dell Inspiron 3530 Laptop, 13th Generation Intel Core i7-1355U Processor, 16GB, 512GB, 15.6&quot; (39.62cm) FHD 120Hz Display, Backlit KB, Windows 11 + MSO&#039;21, 15 Month McAfee, Silver, Thin &amp; Light-1.62kg" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81QCRdxIRLL._SX679_.jpg" class="img-fluid lazy" alt="Dell Inspiron 3530 Laptop, 13th Generation Intel Core i7-1355U Processor, 16GB, 512GB, 15.6&quot; (39.62cm) FHD 120Hz Display, Backlit KB, Windows 11 + MSO&#039;21, 15 Month McAfee, Silver, Thin &amp; Light-1.62kg" title="Dell Inspiron 3530 Laptop, 13th Generation Intel Core i7-1355U Processor, 16GB, 512GB, 15.6&quot; (39.62cm) FHD 120Hz Display, Backlit KB, Windows 11 + MSO&#039;21, 15 Month McAfee, Silver, Thin &amp; Light-1.62kg" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DFCM24S3.html" title="Dell Inspiron 3530 Laptop, 13th Generation Intel Core i7-1355U Processor, 16GB, 512GB, 15.6&quot; (39.62cm) FHD 120Hz Display, Backlit KB, Windows 11 + MSO&#039;21, 15 Month McAfee, Silver, Thin &amp; Light-1.62kg" class="shop-title-value">Dell Inspiron 3530 Laptop, 13th Generation Intel Core i7-1355U Processor, 16GB, 512GB, 15.6&quot; (39.62cm) FHD 120Hz Display, Backlit KB, Windows 11 + MSO&#039;21, 15 Month McAfee, Silver, Thin &amp; Light-1.62kg</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>66,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,31,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>68,211</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,28,113</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">68% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/49dU0fu" title="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/816xumK6oUL._SX679_.jpg" class="img-fluid lazy" alt="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" title="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07QY4HF8W.html" title="K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)" class="shop-title-value">K&amp;H PET PRODUCTS Buckle N&#039; Go Dog Car Seat for Pets, Gray, Large (21&quot; x 19&quot; x 19&quot;)</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Zij5CH" title="Bosch 9kg 5 Star Anti Stain &amp; AI Active Water Plus Fully Automatic Front Load Washing Machine with Built in Heater (WGA1420TIN, Pretreatment &amp; Steam with Anti Bacteria and 5 Star Inverter, Black Grey)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/61gKBMobLeL._SX679_.jpg" class="img-fluid lazy" alt="Bosch 9kg 5 Star Anti Stain &amp; AI Active Water Plus Fully Automatic Front Load Washing Machine with Built in Heater (WGA1420TIN, Pretreatment &amp; Steam with Anti Bacteria and 5 Star Inverter, Black Grey)" title="Bosch 9kg 5 Star Anti Stain &amp; AI Active Water Plus Fully Automatic Front Load Washing Machine with Built in Heater (WGA1420TIN, Pretreatment &amp; Steam with Anti Bacteria and 5 Star Inverter, Black Grey)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D22WV22C.html" title="Bosch 9kg 5 Star Anti Stain &amp; AI Active Water Plus Fully Automatic Front Load Washing Machine with Built in Heater (WGA1420TIN, Pretreatment &amp; Steam with Anti Bacteria and 5 Star Inverter, Black Grey)" class="shop-title-value">Bosch 9kg 5 Star Anti Stain &amp; AI Active Water Plus Fully Automatic Front Load Washing Machine with Built in Heater (WGA1420TIN, Pretreatment &amp; Steam with Anti Bacteria and 5 Star Inverter, Black Grey)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,814</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,900</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,990</span></span>
                   </div>
               </div>
           </div>
@@ -289,12 +289,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">67% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42hdKx1" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71S6jCCRkzL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07P57MJ44.html" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004</a></h4>
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Uexpsy" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71c3EH8FoWL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7W9R1HM.html" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,664</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
                   </div>
               </div>
           </div>
@@ -337,12 +337,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">30% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pbY1so" title="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/617SNrJ2qhL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" title="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FBWV9LR8.html" title="Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)" class="shop-title-value">Samsung 467 L, 3 Star, Convertible 5-in-1, Digital Inverter, Frost Free Double Door, Bespoke AI WiFi Enabled Refrigerator (RT80F51C3KHL, Luxe Black)</a></h4>
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ahotvz" title="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/711rRUziI5L._SX679_.jpg" class="img-fluid lazy" alt="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" title="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CY2QL1JR.html" title="HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray" class="shop-title-value">HONOR Pad 9 with Free Bluetooth Keyboard, 12.1-Inch 2.5K Display, 8GB, 256GB Storage, Snapdragon 6 Gen 1 (4nm), 8 Speakers, Up-to 17 Hours, Android 13, WiFi Tablet, Metal Body, Gray</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>58,400</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>82,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
                   </div>
               </div>
           </div>
@@ -385,12 +385,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3tA16Ko" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71hKcWCFoCL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LBXVH4L.html" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" class="shop-title-value">Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3BMDqGQ" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61dVOVxHn3L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBHYTM2X.html" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" class="shop-title-value">OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,529</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,989</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
                   </div>
               </div>
           </div>
@@ -425,12 +425,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">65% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ed3snB" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51CM1oCgyYL._SX679_.jpg" class="img-fluid lazy" alt="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGGMWNLC.html" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" class="shop-title-value">ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264</a></h4>
+                  <div class="discount"><span class="main">24% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XfoR75" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71VW8LmqqPL._SX679_.jpg" class="img-fluid lazy" alt="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQPGG8KG.html" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" class="shop-title-value">Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,999</span></span>
                   </div>
               </div>
           </div>
@@ -465,12 +465,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">58% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4112bbf" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71RTL1vn6TL._SX679_.jpg" class="img-fluid lazy" alt="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D9BYN6RJ.html" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" class="shop-title-value">acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)</a></h4>
+                  <div class="discount"><span class="main">40% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hnnR7E" title="Amazon Brand - Solimo Medusa Engineered Wood 3 Door Wardrobe (Wenge Finish)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71kyW5+QPoL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Medusa Engineered Wood 3 Door Wardrobe (Wenge Finish)" title="Amazon Brand - Solimo Medusa Engineered Wood 3 Door Wardrobe (Wenge Finish)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08699WZTK.html" title="Amazon Brand - Solimo Medusa Engineered Wood 3 Door Wardrobe (Wenge Finish)" class="shop-title-value">Amazon Brand - Solimo Medusa Engineered Wood 3 Door Wardrobe (Wenge Finish)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>72,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,729</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,000</span></span>
                   </div>
               </div>
           </div>
@@ -485,42 +485,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bVgGlY" title="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81s-f2I27lL._SX679_.jpg" class="img-fluid lazy" alt="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" title="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DC6FB622.html" title="Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey" class="shop-title-value">Kuber Industries 12 Units Storage Cabinet Organizer (5 + 4 + 3) | Multipurpose Folding Storage Racks | Drawer/Wardrobe Clothes Organizer | Grey</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,934</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,799</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-3 shop-item-wrapper">
-              <div class="shop-item">
                   <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y0MMI4" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811ssp-s+ZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5F443W.html" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45Q3a1u" title="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/610-3IpJwwL._SX679_.jpg" class="img-fluid lazy" alt="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" title="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CS3KHKM8.html" title="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" class="shop-title-value">Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>41,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>64,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,690</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3UGaK98" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61yHIxBZ6iL._SX679_.jpg" class="img-fluid lazy" alt="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGMQB5RG.html" title="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger" class="shop-title-value">TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment&#039;s 1st 48MP Sony AI Camera| Segment&#039;s 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger</a></h4>
+                  <div class="discount"><span class="main">91% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46hydE5" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vk-Npjs-L._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BY2QJJ8J.html" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" class="shop-title-value">Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,099</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42D7EXZ" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61sY8BGOyEL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WFPMJBH.html" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" class="shop-title-value">iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge</a></h4>
+                  <div class="discount"><span class="main">46% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4o9vJ0R" title="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/8158eP4tcnL._SX679_.jpg" class="img-fluid lazy" alt="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" title="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FCM6J32P.html" title="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" class="shop-title-value">VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XWpAKY" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Tfy967TKL._SX679_.jpg" class="img-fluid lazy" alt="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08DPLCM6T.html" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" class="shop-title-value">LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,990</span></span>
                   </div>
               </div>
           </div>
