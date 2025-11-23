@@ -4,7 +4,6 @@ stages:
   - build
   - deploy
 
-# If you have any build step (optional)
 build:
   stage: build
   script:
@@ -12,18 +11,18 @@ build:
     - npm run build || echo "No build step, skipping"
   artifacts:
     paths:
-      - ./
+      - public
   only:
-    - $CI_DEFAULT_BRANCH
+    - master
 
-# GitLab Pages deployment
 pages:
   stage: deploy
   script:
     - echo "Deploying site from root folder..."
+    - mkdir -p public
+    - cp -r * public/
   artifacts:
     paths:
-      - ./
-  publish: .
+      - public
   rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: '$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH'
