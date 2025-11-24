@@ -759,6 +759,9 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/ruskin-bond.html
+Allow: /great-people/maithili-sharan-gupt.html
+Allow: /great-people/the-great-khali.html
 Allow: /great-people/rg-bhandarkar.html
 Allow: /great-people/bhagwati-charan-verma.html
 Allow: /great-people/satyendranath-dutta.html
@@ -814,7 +817,6 @@ Allow: /great-people/ravi-kanbur.html
 Allow: /great-people/vilayat-khan.html
 Allow: /great-people/firaq-gorakhpuri.html
 Allow: /great-people/hrishikesh-mukherjee.html
-Allow: /great-people/the-great-khali.html
 Allow: /great-people/sri-chinmoy.html
 Allow: /great-people/jaswant-singh-neki.html
 Allow: /great-people/tanguturi-prakasam.html
@@ -886,7 +888,6 @@ Allow: /great-people/lala-amarnath.html
 Allow: /great-people/master-cvv.html
 Allow: /great-people/kishore-kumar.html
 Allow: /great-people/shakeel-badayuni.html
-Allow: /great-people/maithili-sharan-gupt.html
 Allow: /great-people/masti-venkatesha-iyengar.html
 Allow: /great-people/bunker-roy.html
 Allow: /great-people/ravishankar-shukla.html
@@ -958,7 +959,6 @@ Allow: /great-people/jadunath-sarkar.html
 Allow: /great-people/jamsetji-tata.html
 Allow: /great-people/neelam-sanjiva-reddy.html
 Allow: /great-people/nawazuddin-siddiqui.html
-Allow: /great-people/ruskin-bond.html
 Allow: /great-people/manik-bandopadhyay.html
 Allow: /great-people/obaidullah-aleem.html
 Allow: /great-people/sukhdev-thapar.html
