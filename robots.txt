@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/bangalore-to-kudremukh-solo-trip-plan.html
 Allow: /articles/three-days-trip-from-bangalore-to-ooty.html
 Allow: /articles/bangalore-to-kovalam-solo-trip-plan.html
@@ -17,7 +18,6 @@ Allow: /articles/bangalore-to-varkala-solo-trip-plan.html
 Allow: /articles/short-trip-from-bangalore-to-ghati.html
 Allow: /articles/ahmedabad-to-shamlaji-temple-pilgrimage.html
 Allow: /articles/bangalore-to-kanyakumari-solo-trip-plan.html
-Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/bangalore-to-srikalahasti-solo-trip-plan.html
 Allow: /articles/bangalore-to-srisailam-solo-trip-plan.html
 Allow: /articles/bangalore-to-rameswaram--days--nights-trip-plan.html
@@ -759,6 +759,10 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/dilip-sardesai.html
+Allow: /great-people/yash-johar.html
+Allow: /great-people/vv-giri.html
+Allow: /great-people/lala-amarnath.html
 Allow: /great-people/ruskin-bond.html
 Allow: /great-people/maithili-sharan-gupt.html
 Allow: /great-people/the-great-khali.html
@@ -782,7 +786,6 @@ Allow: /great-people/asha-bhosle.html
 Allow: /great-people/paul-chater.html
 Allow: /great-people/sunil-gangopadhyay.html
 Allow: /great-people/bhanumathi-ramakrishna.html
-Allow: /great-people/yash-johar.html
 Allow: /great-people/radha-charan-gupta.html
 Allow: /great-people/bhagwatikumar-sharma.html
 Allow: /great-people/salil-chowdhury.html
@@ -876,7 +879,6 @@ Allow: /great-people/perween-warsi.html
 Allow: /great-people/vishnu-narayan-bhatkhande.html
 Allow: /great-people/vinayaka-krishna-gokak.html
 Allow: /great-people/abey-kuruvilla.html
-Allow: /great-people/dilip-sardesai.html
 Allow: /great-people/sarat-pujari.html
 Allow: /great-people/varghese-payyappilly.html
 Allow: /great-people/kenneth-kendall.html
@@ -884,7 +886,6 @@ Allow: /great-people/surendranath-banerjee.html
 Allow: /great-people/rajendra-singh.html
 Allow: /great-people/ag-kripal-singh.html
 Allow: /great-people/chapman-pincher.html
-Allow: /great-people/lala-amarnath.html
 Allow: /great-people/master-cvv.html
 Allow: /great-people/kishore-kumar.html
 Allow: /great-people/shakeel-badayuni.html
@@ -904,7 +905,6 @@ Allow: /great-people/rd-burman.html
 Allow: /great-people/amala-shankar.html
 Allow: /great-people/vp-singh.html
 Allow: /great-people/madan-mohan.html
-Allow: /great-people/vv-giri.html
 Allow: /great-people/anita-desai.html
 Allow: /great-people/norman-pritchard.html
 Allow: /great-people/rama-narayanan.html
