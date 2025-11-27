@@ -759,6 +759,7 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/satyendranath-dutta.html
 Allow: /great-people/sumitranandan-pant.html
 Allow: /great-people/y-s-rajasekhara-reddy.html
 Allow: /great-people/sangolli-rayanna.html
@@ -773,7 +774,6 @@ Allow: /great-people/maithili-sharan-gupt.html
 Allow: /great-people/the-great-khali.html
 Allow: /great-people/rg-bhandarkar.html
 Allow: /great-people/bhagwati-charan-verma.html
-Allow: /great-people/satyendranath-dutta.html
 Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/amrish-puri.html
 Allow: /great-people/ng-chandavarkar.html
