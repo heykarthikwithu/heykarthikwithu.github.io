@@ -759,6 +759,9 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/kaka-kalelkar.html
+Allow: /great-people/mithun-chakraborty.html
+Allow: /great-people/alluri-sitarama-raju.html
 Allow: /great-people/satyendranath-dutta.html
 Allow: /great-people/sumitranandan-pant.html
 Allow: /great-people/y-s-rajasekhara-reddy.html
@@ -840,7 +843,6 @@ Allow: /great-people/chiranjeevi.html
 Allow: /great-people/harishankar-parsai.html
 Allow: /great-people/sachidananda-routray.html
 Allow: /great-people/subrahmanyan-chandrasekhar.html
-Allow: /great-people/kaka-kalelkar.html
 Allow: /great-people/kirpal-singh.html
 Allow: /great-people/b-k-s-iyengar.html
 Allow: /great-people/narendra-dabholkar.html
@@ -920,7 +922,6 @@ Allow: /great-people/syed-mushtaq-ali.html
 Allow: /great-people/charles-correa.html
 Allow: /great-people/chittaranjan-das.html
 Allow: /great-people/charles-sturt.html
-Allow: /great-people/mithun-chakraborty.html
 Allow: /great-people/hemanta-mukherjee.html
 Allow: /great-people/ibn-e-insha.html
 Allow: /great-people/dinanath-gopal-tendulkar.html
@@ -995,7 +996,6 @@ Allow: /great-people/hiren-bhattacharyya.html
 Allow: /great-people/pingali-venkayya.html
 Allow: /great-people/swami-vivekananda.html
 Allow: /great-people/gulzarilal-nanda.html
-Allow: /great-people/alluri-sitarama-raju.html
 Allow: /great-people/sv-ranga-rao.html
 Allow: /great-people/bidhan-chandra-roy.html
 Allow: /great-people/purushottam-das-tandon.html
