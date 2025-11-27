@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-shravanabelagola-jain-pilgrimage-a-peaceful-one-day-spiritual-journey.html
 Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/bangalore-to-kudremukh-solo-trip-plan.html
 Allow: /articles/three-days-trip-from-bangalore-to-ooty.html
