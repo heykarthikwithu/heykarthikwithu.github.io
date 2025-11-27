@@ -759,6 +759,11 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/sv-ranga-rao.html
+Allow: /great-people/jeppiaar.html
+Allow: /great-people/neelam-sanjiva-reddy.html
+Allow: /great-people/ak-lohithadas.html
+Allow: /great-people/hiren-bhattacharyya.html
 Allow: /great-people/kaka-kalelkar.html
 Allow: /great-people/mithun-chakraborty.html
 Allow: /great-people/alluri-sitarama-raju.html
@@ -902,7 +907,6 @@ Allow: /great-people/meena-kumari.html
 Allow: /great-people/sahib-singh-verma.html
 Allow: /great-people/saeed-akhtar-mirza.html
 Allow: /great-people/vaidyanath-mishra.html
-Allow: /great-people/ak-lohithadas.html
 Allow: /great-people/sam-manekshaw.html
 Allow: /great-people/rd-burman.html
 Allow: /great-people/amala-shankar.html
@@ -917,7 +921,6 @@ Allow: /great-people/vishnu-prabhakar.html
 Allow: /great-people/ramakant-desai.html
 Allow: /great-people/laxmanrao-kirloskar.html
 Allow: /great-people/salman-rushdie.html
-Allow: /great-people/jeppiaar.html
 Allow: /great-people/syed-mushtaq-ali.html
 Allow: /great-people/charles-correa.html
 Allow: /great-people/chittaranjan-das.html
@@ -958,7 +961,6 @@ Allow: /great-people/balu-mahendra.html
 Allow: /great-people/chandrashekarendra-saraswati.html
 Allow: /great-people/jadunath-sarkar.html
 Allow: /great-people/jamsetji-tata.html
-Allow: /great-people/neelam-sanjiva-reddy.html
 Allow: /great-people/nawazuddin-siddiqui.html
 Allow: /great-people/manik-bandopadhyay.html
 Allow: /great-people/obaidullah-aleem.html
@@ -992,11 +994,9 @@ Allow: /great-people/cornelia-sorabji.html
 Allow: /great-people/dhan-gopal-mukerji.html
 Allow: /great-people/thirunalloor-karunakaran.html
 Allow: /great-people/inayat-khan.html
-Allow: /great-people/hiren-bhattacharyya.html
 Allow: /great-people/pingali-venkayya.html
 Allow: /great-people/swami-vivekananda.html
 Allow: /great-people/gulzarilal-nanda.html
-Allow: /great-people/sv-ranga-rao.html
 Allow: /great-people/bidhan-chandra-roy.html
 Allow: /great-people/purushottam-das-tandon.html
 Allow: /great-people/venkaiah-naidu.html
