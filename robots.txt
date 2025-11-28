@@ -760,6 +760,8 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/abey-kuruvilla.html
+Allow: /great-people/hazari-prasad-dwivedi.html
 Allow: /great-people/vp-singh.html
 Allow: /great-people/nagarjuna-akkineni.html
 Allow: /great-people/sv-ranga-rao.html
@@ -857,7 +859,6 @@ Allow: /great-people/ram-sharan-sharma.html
 Allow: /great-people/gostha-pal.html
 Allow: /great-people/bineswar-brahma.html
 Allow: /great-people/peter-kemp.html
-Allow: /great-people/hazari-prasad-dwivedi.html
 Allow: /great-people/subramania-satyamurti.html
 Allow: /great-people/persis-khambatta.html
 Allow: /great-people/sandeep-patil.html
@@ -888,7 +889,6 @@ Allow: /great-people/phoolan-devi.html
 Allow: /great-people/perween-warsi.html
 Allow: /great-people/vishnu-narayan-bhatkhande.html
 Allow: /great-people/vinayaka-krishna-gokak.html
-Allow: /great-people/abey-kuruvilla.html
 Allow: /great-people/sarat-pujari.html
 Allow: /great-people/varghese-payyappilly.html
 Allow: /great-people/kenneth-kendall.html
