@@ -760,6 +760,12 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/vikram-seth.html
+Allow: /great-people/rajendra-singh.html
+Allow: /great-people/sukhdev-thapar.html
+Allow: /great-people/narendra-dabholkar.html
+Allow: /great-people/harindranath-chattopadhyay.html
+Allow: /great-people/u-r-ananthamurthy.html
 Allow: /great-people/raj-kapoor.html
 Allow: /great-people/ibn-e-insha.html
 Allow: /great-people/persis-khambatta.html
@@ -800,7 +806,6 @@ Allow: /great-people/suhasini-maniratnam.html
 Allow: /great-people/vivek-razdan.html
 Allow: /great-people/bismillah-khan.html
 Allow: /great-people/pannalal-patel.html
-Allow: /great-people/u-r-ananthamurthy.html
 Allow: /great-people/nilakantha-somayaji.html
 Allow: /great-people/verghese-kurien.html
 Allow: /great-people/vikram-batra.html
@@ -858,7 +863,6 @@ Allow: /great-people/sachidananda-routray.html
 Allow: /great-people/subrahmanyan-chandrasekhar.html
 Allow: /great-people/kirpal-singh.html
 Allow: /great-people/b-k-s-iyengar.html
-Allow: /great-people/narendra-dabholkar.html
 Allow: /great-people/ram-sharan-sharma.html
 Allow: /great-people/gostha-pal.html
 Allow: /great-people/bineswar-brahma.html
@@ -896,7 +900,6 @@ Allow: /great-people/sarat-pujari.html
 Allow: /great-people/varghese-payyappilly.html
 Allow: /great-people/kenneth-kendall.html
 Allow: /great-people/surendranath-banerjee.html
-Allow: /great-people/rajendra-singh.html
 Allow: /great-people/ag-kripal-singh.html
 Allow: /great-people/chapman-pincher.html
 Allow: /great-people/master-cvv.html
@@ -965,7 +968,6 @@ Allow: /great-people/jamsetji-tata.html
 Allow: /great-people/nawazuddin-siddiqui.html
 Allow: /great-people/manik-bandopadhyay.html
 Allow: /great-people/obaidullah-aleem.html
-Allow: /great-people/sukhdev-thapar.html
 Allow: /great-people/debendranath-tagore.html
 Allow: /great-people/sambhaji.html
 Allow: /great-people/sukanta-bhattacharya.html
@@ -1008,12 +1010,10 @@ Allow: /great-people/prasanta-chandra-mahalanobis.html
 Allow: /great-people/pv-narasimha-rao.html
 Allow: /great-people/bankim-chandra-chattopadhyay.html
 Allow: /great-people/mahendra-bhatnagar.html
-Allow: /great-people/harindranath-chattopadhyay.html
 Allow: /great-people/bhaktivinoda-thakur.html
 Allow: /great-people/john-hunt-baron-hunt.html
 Allow: /great-people/sunil-janah.html
 Allow: /great-people/bishnu-prasad-rabha.html
-Allow: /great-people/vikram-seth.html
 Allow: /great-people/subhash-mukherjee.html
 Allow: /great-people/syed-zafarul-hasan.html
 Allow: /great-people/gopinath-kaviraj.html
