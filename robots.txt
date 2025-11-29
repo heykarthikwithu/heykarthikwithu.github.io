@@ -760,6 +760,9 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/raj-kapoor.html
+Allow: /great-people/ibn-e-insha.html
+Allow: /great-people/persis-khambatta.html
 Allow: /great-people/neerja-bhanot.html
 Allow: /great-people/ramakant-desai.html
 Allow: /great-people/abey-kuruvilla.html
@@ -861,7 +864,6 @@ Allow: /great-people/gostha-pal.html
 Allow: /great-people/bineswar-brahma.html
 Allow: /great-people/peter-kemp.html
 Allow: /great-people/subramania-satyamurti.html
-Allow: /great-people/persis-khambatta.html
 Allow: /great-people/sandeep-patil.html
 Allow: /great-people/gulzar.html
 Allow: /great-people/madan-lal-dhingra.html
@@ -927,7 +929,6 @@ Allow: /great-people/charles-correa.html
 Allow: /great-people/chittaranjan-das.html
 Allow: /great-people/charles-sturt.html
 Allow: /great-people/hemanta-mukherjee.html
-Allow: /great-people/ibn-e-insha.html
 Allow: /great-people/dinanath-gopal-tendulkar.html
 Allow: /great-people/chhabi-biswas.html
 Allow: /great-people/margaret-abbott.html
@@ -936,7 +937,6 @@ Allow: /great-people/atul-chitnis.html
 Allow: /great-people/bhajan-lal.html
 Allow: /great-people/george-fernandes.html
 Allow: /great-people/baburao-painter.html
-Allow: /great-people/raj-kapoor.html
 Allow: /great-people/anthony-de-mello.html
 Allow: /great-people/nargis.html
 Allow: /great-people/francis-younghusband.html
