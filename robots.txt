@@ -760,6 +760,8 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/jamsetji-tata.html
+Allow: /great-people/vaidyanath-mishra.html
 Allow: /great-people/javagal-srinath.html
 Allow: /great-people/anita-desai.html
 Allow: /great-people/gulzarilal-nanda.html
@@ -916,7 +918,6 @@ Allow: /great-people/harkishan-singh-surjeet.html
 Allow: /great-people/meena-kumari.html
 Allow: /great-people/sahib-singh-verma.html
 Allow: /great-people/saeed-akhtar-mirza.html
-Allow: /great-people/vaidyanath-mishra.html
 Allow: /great-people/sam-manekshaw.html
 Allow: /great-people/rd-burman.html
 Allow: /great-people/amala-shankar.html
@@ -965,7 +966,6 @@ Allow: /great-people/leela-dube.html
 Allow: /great-people/balu-mahendra.html
 Allow: /great-people/chandrashekarendra-saraswati.html
 Allow: /great-people/jadunath-sarkar.html
-Allow: /great-people/jamsetji-tata.html
 Allow: /great-people/nawazuddin-siddiqui.html
 Allow: /great-people/manik-bandopadhyay.html
 Allow: /great-people/obaidullah-aleem.html
