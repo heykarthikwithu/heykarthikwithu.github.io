@@ -2698,6 +2698,7 @@ button#play-truth-dare-next {
     padding: 2px 4px;
     border-radius: 3px;
     font-size: 85%;
+    display: block;
 }
 .blog-content.read-article-content tt {
     padding: 0;

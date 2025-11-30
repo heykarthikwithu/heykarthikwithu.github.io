@@ -6,10 +6,10 @@
     <description/>
     <language>en</language>
     <item>
-			<title>Fix Colima Connection Refused Error on Mac: Step-by-Step</title>
+			<title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
 			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
-			<description>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp;amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.  While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and de</description>
-			<pubDate>Sun, 23 Nov 2025 10:00:00 +0530</pubDate>
+			<description>If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix &amp;mdash; and this article explains</description>
+			<pubDate>Sun, 30 Nov 2025 16:06:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</guid>
     </item><item>

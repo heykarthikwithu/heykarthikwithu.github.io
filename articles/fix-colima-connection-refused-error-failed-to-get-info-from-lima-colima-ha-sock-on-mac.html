@@ -4,16 +4,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="content-language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Fix Colima Connection Refused Error on Mac: Step-by-Step</title>
+    <title>How to Fix the “.lima/colima/ha.sock: connect: connection refused”</title>
     <meta name="description" content="Solve the Colima &ldquo;connection refused&rdquo; error on Mac. A simple troubleshooting guide to fix Docker and local development issues" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html" />
-    <meta property="og:title" content="Fix Colima Connection Refused Error on Mac: Step-by-Step" />
-    <meta property="og:description" content="This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh" />
+    <meta property="og:title" content="How to Fix the “.lima/colima/ha.sock: connect: connection refused”" />
+    <meta property="og:description" content="If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   Thi" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" />
     <meta property="og:type" content="article" />
-    <meta name="twitter:title" content="Fix Colima Connection Refused Error on Mac: Step-by-Step" />
-    <meta name="twitter:description" content="This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh" />
+    <meta name="twitter:title" content="How to Fix the “.lima/colima/ha.sock: connect: connection refused”" />
+    <meta name="twitter:description" content="If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   Thi" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -57,8 +57,8 @@
           "@type": "WebPage",
           "@id": "/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html"
         },
-        "headline": "Fix Colima Connection Refused Error on Mac: Step-by-Step",
-        "description": "This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people wh",
+        "headline": "How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue",
+        "description": "If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   Thi",
         "image": "https://peoplesblog.co.in/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg",
         "author": {
           "@type": "Person",
@@ -130,12 +130,12 @@
                                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                                     <li class="breadcrumb-item"><a href="/articles/index.html">Articles</a></li>
                                     <li class="breadcrumb-item"><a href="/articles/colima.html">Colima</a></li>
-                                    <li class="breadcrumb-item active">Fix Colima Connection Refused Error on Mac: Step-by-Step</li>
+                                    <li class="breadcrumb-item active">How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</li>
                                 </ol>
                                 <div class="single-post-media">
-                                    <img alt="Fix Colima Connection Refused Error on Mac: Step-by-Step" src="/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" class="img-fluid" title="Fix Colima Connection Refused Error on Mac: Step-by-Step" />
+                                    <img alt="How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)" src="/upload/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.jpg" class="img-fluid" title="How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)" />
                                 </div>
-                                <h1 class="read-article-title">Fix Colima Connection Refused Error on Mac: Step-by-Step</h1>
+                                <h1 class="read-article-title">How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</h1>
                                 <div class="blog-meta big-meta">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -156,7 +156,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.</p>  <p>While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and dependent services like ddev etc)</p>  <p>Lima is a service which launches Linux virtual machines with automatic file sharing and port forwarding on Mac machines and Colima uses Lima for working with Containers.</p>  <p>So, while you see an error like <code>.lima/colima/ha.sock: connect: connection refused</code></p>  <p>Check the list of colima profiles on your mac machine, you can notice the status as <code>Broken</code>.</p>  <p><code>% colima list<br /> PROFILE&nbsp; &nbsp; STATUS&nbsp; &nbsp; ARCH&nbsp; &nbsp; &nbsp; CPUS&nbsp; &nbsp; MEMORY&nbsp; &nbsp; DISK &nbsp; &nbsp; RUNTIME&nbsp; &nbsp; ADDRESS<br /> default&nbsp; &nbsp; Broken&nbsp; &nbsp; x86_64&nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 4GiB&nbsp; &nbsp; &nbsp; 60GiB</code></p>  <p>To stop the colima properly, use the below command</p>  <p><code>% limactl stop -f colima<br /> INFO[0000] The qemu driver process seems already stopped<br /> INFO[0000] Sending SIGKILL to the host agent process 1223<br /> ERRO[0000] operation not permitted<br /> INFO[0000] Removing *.pid *.sock under &quot;/Users/karthik.dk/.lima/colima&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ga.sock&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ha.pid&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ha.sock&quot;</code></p>  <p>Later, you can start the colima as usual</p>  <p><code>% colima start<br /> INFO[0000] starting colima<br /> INFO[0000] runtime: docker<br /> INFO[0000] preparing network ... &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=vm<br /> INFO[0001] starting ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=vm<br /> INFO[0032] provisioning ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=docker<br /> INFO[0033] starting ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; context=docker<br /> INFO[0039] done</code></p>  <p>You can see your Colima up and running properly.</p>  <p>Other notes</p>  <ul> <li>Sometime because of the Lima upgrade also such issues show up, in such cases, upgrading the Lima to the latest version.</li> <li>Colima has a command stop where you can run&nbsp;<code>colima stop -f</code>, to kill the process. If you are not able to stop, then you are having a <a href='/articles/different-spices-are-used-to-make-a-garam-masala-mix.html' title='Read about Different Spices Are Used To Make A Garam Masala Mix'>different</a> issue.</li> </ul>  <p>This way you can fix Colima connection refused error: failed to get Info from .lima/colima/ha.sock on Mac.&nbsp;</p>  <p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p> </div>
+                                <div><p>If you use <a href='/articles/colima-similar-tool-like-docker-desktop-for-drupal-development.html'><strong>Colima</strong></a> on macOS for container management, you may occasionally run into the error:</p>  <p><code>.lima/colima/ha.sock: connect: connection refused </code></p>  <p>This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like <strong>DDEV</strong>), it can completely break your workflow. The good news? The issue has a clean, repeatable fix &mdash; and this article explains exactly how to resolve it.</p>  <h2>Why This Colima Error Happens on macOS</h2>  <p>This issue usually occurs when:</p>  <ul> <li>You shut down or restart your Mac <strong>without stopping Colima</strong>,</li> <li>Or when dependent services (like <a href='/articles/optimizing-a-product-catalog-microservice-with-profiling-tools-in-php-using-ddev-and-visual-studio-code.html'>DDEV</a> or Docker running under Colima) are not shut down cleanly,</li> <li>Or after some <strong>Lima</strong> upgrades.</li> </ul>  <p>What Is Lima and Why Does It Matter?</p>  <ul> <li><strong>Lima</strong> is the underlying service Colima uses.</li> <li>It launches lightweight Linux VMs on macOS and provides file sharing + port forwarding.</li> <li>Colima is essentially a layer on top of Lima.</li> </ul>  <p>So when Colima becomes &ldquo;Broken,&rdquo; it&rsquo;s usually Lima that failed to stop properly, leaving behind leftover <tt>.sock</tt> and <tt>.pid</tt> files.</p>  <h2>How the Error Appears</h2>  <p>Running Colima commands often leads to:</p>  <p><code>.lima/colima/ha.sock: connect: connection refused </code></p>  <p>If you list Colima profiles, you&rsquo;ll usually see something like this:</p>  <p><code>% colima list<br /> PROFILE STATUS ARCH CPUS MEMORY DISK RUNTIME ADDRESS<br /> default Broken x86_64 4 4GiB 60GiB </code></p>  <p>The keyword here is <strong>Broken</strong>.<br /> This means the Colima VM is no longer in a valid state.</p>  <h2>Step-by-Step Fix for Colima &ldquo;connection refused&rdquo; ha.sock Error</h2>  <p>Follow this solution exactly &mdash; it&#39;s the safest and most reliable method.</p>  <h3>Step 1: Force-Stop the Lima Instance Used by Colima</h3>  <p>Run:</p>  <p><code>% limactl stop -f colima </code></p>  <p>You may see output like:</p>  <p><code>INFO[0000] The qemu driver process seems already stopped<br /> INFO[0000] Sending SIGKILL to the host agent process 1223<br /> ERRO[0000] operation not permitted<br /> INFO[0000] Removing *.pid *.sock under &quot;/Users/karthik.dk/.lima/colima&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ga.sock&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ha.pid&quot;<br /> INFO[0000] Removing &quot;/Users/karthik.dk/.lima/colima/ha.sock&quot; </code></p>  <p>This is normal.<br /> Lima will delete stale PID and socket files that cause the &ldquo;connection refused&rdquo; error.</p>  <h3>Step 2: Start Colima Normally</h3>  <p>Once Lima has been cleaned up, start Colima again:</p>  <p><code>% colima start </code></p>  <p>Typical output:</p>  <p><code>INFO[0000] starting colima<br /> INFO[0000] runtime: docker<br /> INFO[0000] preparing network ... context=vm<br /> INFO[0001] starting ... context=vm<br /> INFO[0032] provisioning ... context=docker<br /> INFO[0033] starting ... context=docker<br /> INFO[0039] done </code></p>  <p>Your Colima instance should now be up and running without errors.</p>  <h2>Your Colima is Now Working Again</h2>  <p>After restarting, running <tt>colima list</tt> should show a healthy status:</p>  <p><code>PROFILE STATUS ...<br /> default Running </code></p>  <p>This confirms that the <tt>.sock</tt> corruption issue is resolved.</p>  <div class='google-ad' id='google-ad-1'> <p>Google Ad 1</p> </div>  <h2>Additional Notes &amp; Tips</h2>  <h3>1. Lima Upgrades Can Also Cause This Issue</h3>  <p>If you recently upgraded Lima and suddenly encounter this problem, upgrading Lima again to the latest stable version usually fixes it.</p>  <h3>2. You Can Also Try Stopping Colima Directly</h3>  <p>Colima has its own force-stop command:</p>  <p><code>%&nbsp;colima stop -f </code></p>  <p>If this works, great &mdash; but if it <strong>fails</strong>, it means the VM is corrupted, and you should use the Lima command mentioned earlier.</p>  <h3>3. Don&rsquo;t Shut Down macOS While Colima Is Running</h3>  <p>Avoid hard shutdowns while Colima or <a href='/articles/multisite-local-environment-setup-with-ddev-and-drupal.html'>DDEV</a> is running.<br /> Always stop services first to prevent <tt>.sock</tt> corruption.</p>  <h2>Conclusion</h2>  <p>The <strong>&ldquo;failed to get Info from .lima/colima/ha.sock: connect: connection refused&rdquo;</strong> error in Colima is common on macOS, especially after improper shutdowns or upgrades. Thankfully, the fix is easy:</p>  <ol> <li>Force-stop Lima using <code>limactl stop -f colima</code></li> <li>Restart Colima using <code>colima start</code></li> </ol>  <p>With these steps, you can get Colima back to a working state quickly and avoid recreating your environment from scratch.</p>  <p>Thanks for reading! For more quick troubleshooting guides and Drupal-related articles, continue exploring PeoplesBLOG</p> </div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +168,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">24% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XfoR75" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71VW8LmqqPL._SX679_.jpg" class="img-fluid lazy" alt="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQPGG8KG.html" title="Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera" class="shop-title-value">Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) | 5G Ready | 120Hz Bezel-Less AMOLED | 7.mm Slimmest Note Ever | 108MP Pro-Grade Camera</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,999</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eXDQts" title="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61KpX1j3fpL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" title="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHZ23M74.html" title="Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray" class="shop-title-value">Samsung Galaxy Tab S9 FE+, S Pen in-Box, 31.50 cm (12.4 inch) Display, RAM 12 GB, ROM 256 GB Expandable, Wi-Fi, IP68 Tablet, Gray</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>53,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,999</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
                   <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CnBULD" title="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81-ufLM4tVL._SX679_.jpg" class="img-fluid lazy" alt="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" title="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCCCLMMV.html" title="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" class="shop-title-value">Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4de5TD1" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BENnbPpuL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DZ1SPM.html" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" class="shop-title-value">Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,349</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,900</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dfc9uQ" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71uOoXevxwL._SX679_.jpg" class="img-fluid lazy" alt="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHM729GT.html" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" class="shop-title-value">Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gd5JOP" title="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71toN+td5bL._SX679_.jpg" class="img-fluid lazy" alt="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" title="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F9YDKLGW.html" title="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" class="shop-title-value">ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>84,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,14,990</span></span>
                   </div>
               </div>
           </div>
@@ -225,15 +225,15 @@
               <div class="row"><div class="col-md-6">                      
                         <div class="row">
                           <div class="col-md-4">
-                            <a href="/articles/vedic-philosophy-the-foundation-of-indian-thought.html" title="Vedic Philosophy: Foundation of Indian Thought">
-                              <img class="img-fluid logo lazy" data-src="/upload/banners/vedic-philosophy-the-foundation-of-indian-thought.jpg" alt="Vedic Philosophy: Foundation of Indian Thought" title="Vedic Philosophy: Foundation of Indian Thought" src="/upload/cursor.jpg" />
+                            <a href="/articles/understanding-the-four-vedas-rigveda-samaveda-yajurveda-and-atharvaveda.html" title="The Four Vedas of Hinduism: Origin, Structure, Significance and Their Role in Vedic Tradition">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/understanding-the-four-vedas-rigveda-samaveda-yajurveda-and-atharvaveda.jpeg" alt="The Four Vedas of Hinduism: Origin, Structure, Significance and Their Role in Vedic Tradition" title="The Four Vedas of Hinduism: Origin, Structure, Significance and Their Role in Vedic Tradition" src="/upload/cursor.jpg" />
                             </a>
                           </div>
                           <div class="col-md-8">
                             <div class="prev">
                               <span>Previous Article</span>
-                              <a href="/articles/vedic-philosophy-the-foundation-of-indian-thought.html" title="Vedic Philosophy: Foundation of Indian Thought">
-                                <span class="title">Vedic Philosophy: Foundation of Indian Thought</span>
+                              <a href="/articles/understanding-the-four-vedas-rigveda-samaveda-yajurveda-and-atharvaveda.html" title="The Four Vedas of Hinduism: Origin, Structure, Significance and Their Role in Vedic Tradition">
+                                <span class="title">The Four Vedas of Hinduism: Origin, Structure, Significance and Their Role in Vedic Tradition</span>
                               </a>
                             </div>
                           </div>
@@ -243,19 +243,19 @@
                           <div class="col-md-8">
                             <div class="next">
                               <span>Next Article</span>
-                              <a href="/articles/bangalore-to-kanipakam-solo-trip-plan.html" title="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide">
-                                <span class="title">Bangalore to Kanipakam Solo Trip: Temple & Travel Guide</span>
+                              <a href="/articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html" title="Saffron: The Most Expensive Spice in the World – History, Price, Cultivation & Why It’s So Valuable">
+                                <span class="title">Saffron: The Most Expensive Spice in the World – History, Price, Cultivation & Why It’s So Valuable</span>
                               </a>
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <a href="/articles/bangalore-to-kanipakam-solo-trip-plan.html" title="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide">
-                              <img class="img-fluid logo lazy" data-src="/upload/banners/bangalore-to-kanipakam-solo-trip-plan.jpg" alt="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide" title="Bangalore to Kanipakam Solo Trip: Temple & Travel Guide" src="/upload/cursor.jpg" />
+                            <a href="/articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html" title="Saffron: The Most Expensive Spice in the World – History, Price, Cultivation & Why It’s So Valuable">
+                              <img class="img-fluid logo lazy" data-src="/upload/banners/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.jpg" alt="Saffron: The Most Expensive Spice in the World – History, Price, Cultivation & Why It’s So Valuable" title="Saffron: The Most Expensive Spice in the World – History, Price, Cultivation & Why It’s So Valuable" src="/upload/cursor.jpg" />
                             </a>
                           </div>
                         </div>
                     </div></div>
-            </div><div class="prevnext-articles-fixed"><a href="/articles/vedic-philosophy-the-foundation-of-indian-thought.html" class="prev"><i class="fa fa-angle-left"></i><span>PREV</span></a><a href="/articles/bangalore-to-kanipakam-solo-trip-plan.html" class="next"><i class="fa fa-angle-right"></i> <span>NEXT</span></a></div>
+            </div><div class="prevnext-articles-fixed"><a href="/articles/understanding-the-four-vedas-rigveda-samaveda-yajurveda-and-atharvaveda.html" class="prev"><i class="fa fa-angle-left"></i><span>PREV</span></a><a href="/articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html" class="next"><i class="fa fa-angle-right"></i> <span>NEXT</span></a></div>
                              
                         </div><!-- end page-wrapper -->
                     </div><!-- end col -->
@@ -295,12 +295,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">58% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eTPVya" title="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61XpKxA8nkL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" title="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CXPG97DD.html" title="Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty" class="shop-title-value">Amazon Basics Semi Value Counting Machine with Fake Note Detection | LCD Display | Customer Viewing Screen | Advanced Counterfeit Detection | 1-Year Warranty</a></h4>
+                  <div class="discount"><span class="main">49% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eXgkf4" title="Atomberg Azhero Smart Door Lock | 6 Ways Unlocking | Fingerprint | PIN | Remote OTP | NFC Card | Atomberg App (Data Stored in India) | Key | 2 Stainless Steel Bolt | 2 Year Warranty (Rose Gold)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51hKYZu4o+L._SX679_.jpg" class="img-fluid lazy" alt="Atomberg Azhero Smart Door Lock | 6 Ways Unlocking | Fingerprint | PIN | Remote OTP | NFC Card | Atomberg App (Data Stored in India) | Key | 2 Stainless Steel Bolt | 2 Year Warranty (Rose Gold)" title="Atomberg Azhero Smart Door Lock | 6 Ways Unlocking | Fingerprint | PIN | Remote OTP | NFC Card | Atomberg App (Data Stored in India) | Key | 2 Stainless Steel Bolt | 2 Year Warranty (Rose Gold)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D87P37TY.html" title="Atomberg Azhero Smart Door Lock | 6 Ways Unlocking | Fingerprint | PIN | Remote OTP | NFC Card | Atomberg App (Data Stored in India) | Key | 2 Stainless Steel Bolt | 2 Year Warranty (Rose Gold)" class="shop-title-value">Atomberg Azhero Smart Door Lock | 6 Ways Unlocking | Fingerprint | PIN | Remote OTP | NFC Card | Atomberg App (Data Stored in India) | Key | 2 Stainless Steel Bolt | 2 Year Warranty (Rose Gold)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,500</span></span>
                   </div>
               </div>
           </div>
@@ -318,6 +318,18 @@
 </script></div>
     <h2 class="popular-title">Popular Articles</h2>
     <div class="popular-articles"><div class="article">
+          <a href="/articles/short-trip-from-bangalore-to-ghati.html">
+            Bangalore to Ghati Short Trip Guide: One-Day Itinerary
+          </a>
+        </div><div class="article">
+          <a href="/articles/ahmedabad-to-shamlaji-temple-pilgrimage.html">
+            Ahmedabad to Shamlaji Temple: Distance, Best Route, Timings and Travel Guide
+          </a>
+        </div><div class="article">
+          <a href="/articles/bangalore-to-kanyakumari-solo-trip-plan.html">
+            Solo Trip from Bangalore to Kanyakumari – Complete Travel Guide and 4-Day Itinerary
+          </a>
+        </div><div class="article">
           <a href="/articles/bangalore-to-srikalahasti-solo-trip-plan.html">
             Bangalore to Srikalahasti Solo Trip Guide – Route, Temple Timings & Itinerary
           </a>
@@ -325,30 +337,18 @@
           <a href="/articles/bangalore-to-srisailam-solo-trip-plan.html">
             Bangalore to Srisailam Solo Trip Plan: Route, Temples & Tips
           </a>
-        </div><div class="article">
-          <a href="/articles/bangalore-to-rameswaram--days--nights-trip-plan.html">
-            Bangalore to Rameswaram Trip Plan: 3-Day Itinerary & Tips
-          </a>
-        </div><div class="article">
-          <a href="/articles/bangalore-to-horanadu-solo-trip-plan.html">
-            Bangalore to Horanadu Solo Trip Plan: Complete Travel Itinerary
-          </a>
-        </div><div class="article">
-          <a href="/articles/bangalore-to-dharmasthala-solo-trip-plan.html">
-            Bangalore to Dharmasthala Solo Trip Plan: Route & Guide
-          </a>
         </div>
     </div>
       <div class="shop-data amazon-ad">
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3WNDsWV" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51EknP3PutL._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BKJRHV2M.html" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" class="shop-title-value">Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)</a></h4>
+                  <div class="discount"><span class="main">8% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hEuVgo" title="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61g1pqSjAhL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" title="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX59H5W7.html" title="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,299</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,349</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>22,998</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
                   </div>
               </div>
           </div>
@@ -366,6 +366,18 @@
 </script></div>
     <h2>Recent Articles</h2>
     <div class="popular-articles"><div class="article">
+          <a href="/articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html">
+            Saffron: The Most Expensive Spice in the World – History, Price, Cultivation & Why It’s So Valuable
+          </a>
+        </div><div class="article">
+          <a href="/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html">
+            How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)
+          </a>
+        </div><div class="article">
+          <a href="/articles/understanding-the-four-vedas-rigveda-samaveda-yajurveda-and-atharvaveda.html">
+            The Four Vedas of Hinduism: Origin, Structure, Significance and Their Role in Vedic Tradition
+          </a>
+        </div><div class="article">
           <a href="/articles/the-mysterious-death-of-actress-divya-bharti.html">
             The Unfinished Story of Divya Bharti: Rise, Mystery, and the Questions That Still Remain
           </a>
@@ -373,30 +385,18 @@
           <a href="/articles/bangalore-to-shravanabelagola-jain-pilgrimage-a-peaceful-one-day-spiritual-journey.html">
             Bangalore to Shravanabelagola Jain Pilgrimage – A Peaceful One-Day Spiritual Journey
           </a>
-        </div><div class="article">
-          <a href="/articles/bangalore-to-chitradurga-solo-trip-plan.html">
-            Bangalore to Chitradurga Solo Trip Plan: Complete Itinerary
-          </a>
-        </div><div class="article">
-          <a href="/articles/bangalore-to-kudremukh-solo-trip-plan.html">
-            Bangalore to Kudremukh Solo Trip: Travel Guide & Tips
-          </a>
-        </div><div class="article">
-          <a href="/articles/three-days-trip-from-bangalore-to-ooty.html">
-            Bangalore to Ooty 3 Day Trip Plan – Best Itinerary for Couples & Families
-          </a>
         </div>
     </div>
       <div class="shop-data amazon-ad">
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/487lOTW" title="INALSA food processor for kitchen with Mixer Grinder Juicer|1200 Watt Copper Motor|3 Jars|2.5 L Processing Jar|Chopping &amp; Kneading Blade|Centrifugal/Citrus Juicer|Shredding|Slicing-INOX 1200" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61ndQOAg-nL._SX679_.jpg" class="img-fluid lazy" alt="INALSA food processor for kitchen with Mixer Grinder Juicer|1200 Watt Copper Motor|3 Jars|2.5 L Processing Jar|Chopping &amp; Kneading Blade|Centrifugal/Citrus Juicer|Shredding|Slicing-INOX 1200" title="INALSA food processor for kitchen with Mixer Grinder Juicer|1200 Watt Copper Motor|3 Jars|2.5 L Processing Jar|Chopping &amp; Kneading Blade|Centrifugal/Citrus Juicer|Shredding|Slicing-INOX 1200" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CKR1G5ZQ.html" title="INALSA food processor for kitchen with Mixer Grinder Juicer|1200 Watt Copper Motor|3 Jars|2.5 L Processing Jar|Chopping &amp; Kneading Blade|Centrifugal/Citrus Juicer|Shredding|Slicing-INOX 1200" class="shop-title-value">INALSA food processor for kitchen with Mixer Grinder Juicer|1200 Watt Copper Motor|3 Jars|2.5 L Processing Jar|Chopping &amp; Kneading Blade|Centrifugal/Citrus Juicer|Shredding|Slicing-INOX 1200</a></h4>
+                  <div class="discount"><span class="main">13% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3LRqukD" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81YtQzdFkIL._SX679_.jpg" class="img-fluid lazy" alt="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6R9XCXX.html" title="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,994</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +431,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">59% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40YW8ny" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41fiqGlrrKL.jpg" class="img-fluid lazy" alt="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68JR6S8.html" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" class="shop-title-value">AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CnBULD" title="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81-ufLM4tVL._SX679_.jpg" class="img-fluid lazy" alt="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" title="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCCCLMMV.html" title="Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)" class="shop-title-value">Honey Touch King Size Bed | No Assembly Required (Without Mattress, King)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,349</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,500</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +471,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3O980xf" title="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/810SJkiwLZL._SX679_.jpg" class="img-fluid lazy" alt="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" title="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09MVT1NDJ.html" title="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)" class="shop-title-value">BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)</a></h4>
+                  <div class="discount"><span class="main">69% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4iMwo4Z" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61RVAFjC7SL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DWXTN8B9.html" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" class="shop-title-value">AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,237</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,485</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,199</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +491,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Z1o36y" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91+5r30glVL._SX679_.jpg" class="img-fluid lazy" alt="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09F9QNWBV.html" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" class="shop-title-value">BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IDlVJ5" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61OBw+XUiuL._SX679_.jpg" class="img-fluid lazy" alt="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C467KFNM.html" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" class="shop-title-value">Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,164</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>25,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">46% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4o9vJ0R" title="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/8158eP4tcnL._SX679_.jpg" class="img-fluid lazy" alt="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" title="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FCM6J32P.html" title="VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)" class="shop-title-value">VW 109 cm (43 inches) OptimaX Series Full HD Smart QLED Android TV VW43AQ1 (Black)</a></h4>
+                  <div class="discount"><span class="main">82% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3B3CQUZ" title="UTRAI Jstar 4 Jump Starter with Wireless Charger 2500A Peak 16000mAh (up to 8L Gas, 7.5L Diesel Engine) 12V Car Battery Booster Portable Power Pack with LCD Display Jumper Cables, QC 3.0 and LED Light" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61cWPVH6SkL._SX679_.jpg" class="img-fluid lazy" alt="UTRAI Jstar 4 Jump Starter with Wireless Charger 2500A Peak 16000mAh (up to 8L Gas, 7.5L Diesel Engine) 12V Car Battery Booster Portable Power Pack with LCD Display Jumper Cables, QC 3.0 and LED Light" title="UTRAI Jstar 4 Jump Starter with Wireless Charger 2500A Peak 16000mAh (up to 8L Gas, 7.5L Diesel Engine) 12V Car Battery Booster Portable Power Pack with LCD Display Jumper Cables, QC 3.0 and LED Light" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08NCGJM4R.html" title="UTRAI Jstar 4 Jump Starter with Wireless Charger 2500A Peak 16000mAh (up to 8L Gas, 7.5L Diesel Engine) 12V Car Battery Booster Portable Power Pack with LCD Display Jumper Cables, QC 3.0 and LED Light" class="shop-title-value">UTRAI Jstar 4 Jump Starter with Wireless Charger 2500A Peak 16000mAh (up to 8L Gas, 7.5L Diesel Engine) 12V Car Battery Booster Portable Power Pack with LCD Display Jumper Cables, QC 3.0 and LED Light</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">53% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41b65jc" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lE8kU0+eL._SX679_PIbundle-5,TopRight,0,0_AA679SH20_.jpg" class="img-fluid lazy" alt="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3THTZRZ.html" title="Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)" class="shop-title-value">Village Company A2 Bilona Desi Cow Ghee | Bilona Method | Premium, Organic, Traditional | Grass Fed | Kangayam Cow | Lab-Certified | 1 Ltr (Pack Of 5)</a></h4>
+                  <div class="discount"><span class="main">40% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3WkTM1e" title="LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71CmKZXntgL._SX679_.jpg" class="img-fluid lazy" alt="LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)" title="LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C83J8YF8.html" title="LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)" class="shop-title-value">LG 139 cm (55 inches) 4K Ultra HD Smart LED TV 55UR7500PSC (Dark Iron Gray)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,540</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>42,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>71,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">28% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XyOHU7" title="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71tCOhEigtL._SX679_.jpg" class="img-fluid lazy" alt="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" title="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9JFWBH7.html" title="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" class="shop-title-value">Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer</a></h4>
+                  <div class="discount"><span class="main">67% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3PGK1X2" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50678011" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vwOCwKR5L._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50678011" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50678011" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0834VBB6X.html" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50678011" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50678011</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,664</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,995</span></span>
                   </div>
               </div>
           </div>
@@ -588,7 +588,7 @@
                             <h2 class="widget-title">Recent</h2>
                             <div class="link-widget">
                                 <ul class="blog-list-homepage-footer mobile">
-<li><a href="/articles/movie.html" title="Movie" aria-label="Movie">Movie</a></li><li><a href="/articles/bangalore.html" title="Bangalore" aria-label="Bangalore">Bangalore</a></li><li><a href="/articles/solo.html" title="Solo" aria-label="Solo">Solo</a></li><li><a href="/articles/couple.html" title="Couple" aria-label="Couple">Couple</a></li><li><a href="/articles/kovalam.html" title="Kovalam" aria-label="Kovalam">Kovalam</a></li>
+<li><a href="/articles/world.html" title="World" aria-label="World">World</a></li><li><a href="/articles/colima.html" title="Colima" aria-label="Colima">Colima</a></li><li><a href="/articles/vedas.html" title="Vedas" aria-label="Vedas">Vedas</a></li><li><a href="/articles/movie.html" title="Movie" aria-label="Movie">Movie</a></li><li><a href="/articles/bangalore.html" title="Bangalore" aria-label="Bangalore">Bangalore</a></li>
                                 </ul>
                             </div><!-- end link-widget -->
                         </div><!-- end widget -->

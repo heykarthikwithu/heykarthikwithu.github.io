@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
+			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
+			<description>If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix &amp;mdash; and this article explains</description>
+			<pubDate>Sun, 30 Nov 2025 16:06:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</guid>
+    </item><item>
 			<title>Secure Application Password Reset Flow: Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/secure-your-applications-reset-password-flow.html</link>
 			<description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so that user can reset the password on their own.  This is a default or general flow that any application framework provides, but developers or architec</description>
@@ -19,13 +26,6 @@
 			<pubDate>Sun, 23 Nov 2025 10:34:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/store-drupal-logs-amazon-s.html</guid>
-    </item><item>
-			<title>Fix Colima Connection Refused Error on Mac: Step-by-Step</title>
-			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
-			<description>This article is about fixing only a single error which you see with Colima on Mac machines. This might be a simple &amp;amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.  While you are running Colima on your mac machines, generally you get into such issue, when you power off or shut down your mac, without stopping the colima service (and de</description>
-			<pubDate>Sun, 23 Nov 2025 10:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</guid>
     </item><item>
 			<title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
 			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</link>
