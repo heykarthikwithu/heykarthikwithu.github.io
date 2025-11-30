@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
 Allow: /articles/bangalore-to-shravanabelagola-jain-pilgrimage-a-peaceful-one-day-spiritual-journey.html
 Allow: /articles/bangalore-to-chitradurga-solo-trip-plan.html
 Allow: /articles/bangalore-to-kudremukh-solo-trip-plan.html
@@ -157,7 +158,6 @@ Allow: /articles/bangalore-to-anamudi-solo-trip-plan.html
 Allow: /articles/difference-between-an-indian-housewife-and-foreign-housewife.html
 Allow: /articles/different-ways-to-get-more-out-of-six-nine-position.html
 Allow: /articles/when-life-puts-you-in-tough-situations-dont-say-why-me-say-try-me.html
-Allow: /articles/the-mysterious-death-of-actress-divya-bharti.html
 Allow: /articles/pachi-chintakaya-pachadi-recipe-andhra-style.html
 Allow: /articles/deploying-drupal-on-azure-kubernetes-service-aks.html
 Allow: /articles/south-indian-hindu-marriage-andhra-style.html

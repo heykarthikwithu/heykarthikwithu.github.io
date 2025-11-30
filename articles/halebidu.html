@@ -23,7 +23,10 @@
       <meta name="Generator" content="Peoples BLOG (https://peoplesblog.co.in)" />
       <meta name="MobileOptimized" content="width" />
       <meta name="HandheldFriendly" content="true" />
-      <meta name="google-site-verification" content="oIpwGHdguWnER2N8lKSljpYFSSUvg8A-sFzQkn-xLnU" />
+      
+    <link rel="shortcut icon" href="/upload/favicon.webp" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/upload/favicon.webp">
+    <meta name="google-site-verification" content="oIpwGHdguWnER2N8lKSljpYFSSUvg8A-sFzQkn-xLnU" />
     <meta name="msvalidate.01" content="9DAE9598E7C9A8CA5C08940C17D62C9B" />
     <meta name="yandex-verification" content="9407d632c1eaecc4" />
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="fxNb5kTLW81KnCIbNgz6gg" async></script>
@@ -39,13 +42,16 @@
         }
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- Google Ad -->
+    <!-- preconnect -->
     <link rel="preconnect" href="https://googleads.g.doubleclick.net">
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <!-- Google Ad -->
-    <link rel="shortcut icon" href="/upload/favicon.webp" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/upload/favicon.webp">
-    <link href="/css/public.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://cdn.webpushr.com">
+    <link rel="preconnect" href="https://analytics.webpushr.com">
+    <!-- preconnect -->
+    
+    <link rel="preload" href="/css/public.min.css" as="style">
+    <link rel="stylesheet" href="/css/public.min.css">
+    
   </head>
   <body>
     <div class="global-progress-bar-on-scroll-wrapper">
@@ -61,7 +67,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/">
-                  <img src="/upload/logo.png" title="Peoples BLOG" alt="Peoples BLOG" />
+                  <img src="/upload/logo.webp" title="Peoples BLOG" alt="Peoples BLOG" />
                 </a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
@@ -197,7 +203,7 @@
                             <h2 class="widget-title">Recent</h2>
                             <div class="link-widget">
                                 <ul class="blog-list-homepage-footer mobile">
-<li><a href="/articles/bangalore.html" title="Bangalore" aria-label="Bangalore">Bangalore</a></li><li><a href="/articles/solo.html" title="Solo" aria-label="Solo">Solo</a></li><li><a href="/articles/couple.html" title="Couple" aria-label="Couple">Couple</a></li><li><a href="/articles/kovalam.html" title="Kovalam" aria-label="Kovalam">Kovalam</a></li><li><a href="/articles/ahmedabad.html" title="Ahmedabad" aria-label="Ahmedabad">Ahmedabad</a></li>
+<li><a href="/articles/movie.html" title="Movie" aria-label="Movie">Movie</a></li><li><a href="/articles/bangalore.html" title="Bangalore" aria-label="Bangalore">Bangalore</a></li><li><a href="/articles/solo.html" title="Solo" aria-label="Solo">Solo</a></li><li><a href="/articles/couple.html" title="Couple" aria-label="Couple">Couple</a></li><li><a href="/articles/kovalam.html" title="Kovalam" aria-label="Kovalam">Kovalam</a></li>
                                 </ul>
                             </div><!-- end link-widget -->
                         </div><!-- end widget -->
@@ -264,7 +270,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
       </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js"></script>
+    <script src="/js/public.min.js" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">
@@ -296,7 +302,6 @@
       }());
     </script>
     <!-- Google Ad -->
-    <!-- script data-ad-client="ca-pub-2683569506254139" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script -->
     <script>
       window.addEventListener("load", function() {
         setTimeout(function() {
