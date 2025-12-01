@@ -9,6 +9,8 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/pachi-chintakaya-pachadi-recipe-andhra-style.html
+Allow: /articles/worlds-fastest-anti-ship-cruise-missile-in-operation.html
 Allow: /articles/what-is-the-most-expensive-spice-in-the-world-when-listed-by-weight.html
 Allow: /articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html
 Allow: /articles/understanding-the-four-vedas-rigveda-samaveda-yajurveda-and-atharvaveda.html
@@ -133,7 +135,6 @@ Allow: /articles/is-it-true-that-the-truth-always-comes-out.html
 Allow: /articles/bangalore-to-kanipakam-solo-trip-plan.html
 Allow: /articles/vedic-philosophy-the-foundation-of-indian-thought.html
 Allow: /articles/what-is-it-like-being-an-indian-husband.html
-Allow: /articles/worlds-fastest-anti-ship-cruise-missile-in-operation.html
 Allow: /articles/bangalore-to-thekkady-solo-trip-plan.html
 Allow: /articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html
 Allow: /articles/why-madanapalle-should-be-the-headquarters-of-the-proposed-annamayya-district.html
@@ -158,7 +159,6 @@ Allow: /articles/bangalore-to-anamudi-solo-trip-plan.html
 Allow: /articles/difference-between-an-indian-housewife-and-foreign-housewife.html
 Allow: /articles/different-ways-to-get-more-out-of-six-nine-position.html
 Allow: /articles/when-life-puts-you-in-tough-situations-dont-say-why-me-say-try-me.html
-Allow: /articles/pachi-chintakaya-pachadi-recipe-andhra-style.html
 Allow: /articles/deploying-drupal-on-azure-kubernetes-service-aks.html
 Allow: /articles/south-indian-hindu-marriage-andhra-style.html
 Allow: /articles/be-aware-of-chain-snatchers-tips-to-prevent-chain-snatching.html
