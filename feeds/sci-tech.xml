@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Top Drupal LMS Features You Should Look For — Guide for your Education Businesses</title>
+			<link>https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</link>
+			<description>If you run an education business today&amp;mdash;whether it&amp;rsquo;s an online academy, coaching platform, corporate training portal or skill-development institute&amp;mdash;choosing the right Learning Management System (LMS) is one of the most important decisions you will make. Your LMS becomes the backbone of your teaching, course delivery, student engagement and business growth.  Among the many LMS plat</description>
+			<pubDate>Mon, 01 Dec 2025 17:33:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</guid>
+    </item><item>
 			<title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
 			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
 			<description>If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix &amp;mdash; and this article explains</description>
@@ -348,13 +355,6 @@
 			<pubDate>Wed, 03 Sep 2025 10:48:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/ant-farm-observation-discovering-the-secret-life-of-ants.html</guid>
-    </item><item>
-			<title>Nature Scavenger Hunt, science experiment for children</title>
-			<link>https://peoplesblog.co.in/articles/nature-scavenger-hunt-science-experiment-for-children.html</link>
-			<description>A nature scavenger hunt is a delightful and educational science experiment that encourages children to explore the outdoors while learning about their natural environment. This activity combines adventure with observation, helping children develop their understanding of nature, enhance their observational skills and foster a sense of curiosity. Here’s a step-by-step guide to organizing a nature </description>
-			<pubDate>Fri, 22 Aug 2025 10:36:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/nature-scavenger-hunt-science-experiment-for-children.html</guid>
     </item>
 </channel>
 </rss>

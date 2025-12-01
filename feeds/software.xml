@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Top Drupal LMS Features You Should Look For — Guide for your Education Businesses</title>
+			<link>https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</link>
+			<description>If you run an education business today&amp;mdash;whether it&amp;rsquo;s an online academy, coaching platform, corporate training portal or skill-development institute&amp;mdash;choosing the right Learning Management System (LMS) is one of the most important decisions you will make. Your LMS becomes the backbone of your teaching, course delivery, student engagement and business growth.  Among the many LMS plat</description>
+			<pubDate>Mon, 01 Dec 2025 17:33:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</guid>
+    </item><item>
 			<title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
 			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
 			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
@@ -96,13 +103,6 @@
 			<pubDate>Mon, 05 Jun 2023 09:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/why-is-drupal-chosen-by-large-organizations.html</guid>
-    </item><item>
-			<title>Drupal LMS Features for Your Education Business</title>
-			<link>https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</link>
-			<description>If you're running an education business and considering Drupal as the platform for your Learning Management System (LMS), there are several features and capabilities you should look for to ensure a robust and effective solution.  Here are some key Drupal LMS features to consider:   Course Management: A Drupal LMS should provide comprehensive course management capabilities. This includes the abilit</description>
-			<pubDate>Tue, 30 May 2023 09:15:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</guid>
     </item><item>
 			<title>Leveraging Content Grouping for Personalized Digital Experiences</title>
 			<link>https://peoplesblog.co.in/articles/leveraging-content-grouping-for-personalized-digital-experiences.html</link>

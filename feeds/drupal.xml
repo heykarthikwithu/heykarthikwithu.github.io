@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Top Drupal LMS Features You Should Look For — Guide for your Education Businesses</title>
+			<link>https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</link>
+			<description>If you run an education business today&amp;mdash;whether it&amp;rsquo;s an online academy, coaching platform, corporate training portal or skill-development institute&amp;mdash;choosing the right Learning Management System (LMS) is one of the most important decisions you will make. Your LMS becomes the backbone of your teaching, course delivery, student engagement and business growth.  Among the many LMS plat</description>
+			<pubDate>Mon, 01 Dec 2025 17:33:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-lms-features-for-your-education-business.html</guid>
+    </item><item>
 			<title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
 			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
 			<description>If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix &amp;mdash; and this article explains</description>
@@ -348,13 +355,6 @@
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html</guid>
-    </item><item>
-			<title>How to work with Twig Templates in Drupal?</title>
-			<link>https://peoplesblog.co.in/articles/how-to-work-with-twig-templates-in-drupal.html</link>
-			<description>In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.  Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme.  First thing, we need to make sure</description>
-			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/how-to-work-with-twig-templates-in-drupal.html</guid>
     </item>
 </channel>
 </rss>
