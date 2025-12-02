@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/balloon-and-bottle-experiment-science-experiment-for-children.html
 Allow: /articles/what-is-the-best-age-to-get-married-and-why.html
 Allow: /articles/vimanas-in-ancient-india-were-they-real-flying-machines.html
 Allow: /articles/drupal-lms-features-for-your-education-business.html
@@ -101,7 +102,6 @@ Allow: /articles/understanding-the-solid-principles-in-php.html
 Allow: /articles/best-batteries-to-use-with-the-solar-panels-for-home.html
 Allow: /articles/bangalore-to-udupi-solo-trip-plan.html
 Allow: /articles/diy-potato-battery-science-experiment-for-children.html
-Allow: /articles/balloon-and-bottle-experiment-science-experiment-for-children.html
 Allow: /articles/create-a-volcanic-eruption-with-baking-soda-and-vinegar.html
 Allow: /articles/bangalore-to-dandeli-solo-trip-plan.html
 Allow: /articles/reading-a-book-its-not-my-thing-is-it-your-instant-reply.html
