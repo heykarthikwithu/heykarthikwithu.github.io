@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/bangalore-to-makalidurga-trekking.html
 Allow: /articles/bangalore-to-kochi-solo-trip-plan.html
 Allow: /articles/bangalore-to-hampi-solo-trip-plan.html
 Allow: /articles/balloon-and-bottle-experiment-science-experiment-for-children.html
@@ -461,7 +462,6 @@ Allow: /articles/improve-drupal-search-with-solr-locally-configured-via-lando.ht
 Allow: /articles/when-to-use-hook_update_n-and-hook_post_update_name.html
 Allow: /articles/creating-twitter-share-block-programmatically-drupal-.html
 Allow: /articles/improvements-for-editor-experience-in-drupal.html
-Allow: /articles/bangalore-to-makalidurga-trekking.html
 Allow: /articles/what-drupal-offers-as-responsive-web-design-within-core.html
 Allow: /articles/know-why-symfony-framework-was-picked-by-drupal.html
 Allow: /articles/understand-why-twig-is-replacing-php-template-in-drupal.html
