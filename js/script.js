@@ -632,27 +632,33 @@ $(function (){
 /******************************************************************************************************************/
 /************************************** Search Quick Read *********************************************************/
 /******************************************************************************************************************/
-$(function() {
+$(function () {
     searchQuickReadListPage();
 });
 function searchQuickReadListPage() {
     $('input[type=text]#search-quick-read').focus();
-    $("#search-quick-read").on("keyup", function(event) {
-        $('.search-quick-read .row .col-md-3 .quick-read').removeClass('hide');
-        $('.search-quick-read .row').children('.col-md-3').each(function () {
-            var title = $(this).find('.quick-read-title').text().toLowerCase();
-            title += " " + $(this).find('.quick-read-content').text().toLowerCase();
-            title += " " + $(this).find('.quick-read-author').text().toLowerCase();
-            // title += " " + $(this).find('.articles-labels').text().toLowerCase();
-            var search = event.currentTarget.value.toLowerCase();
-            var searchFor = search.split(' ');
-            for (var i = 0, ln = searchFor.length; i < ln; i++) {
-                if (title.indexOf(searchFor[i]) !== -1) {
-                    $(this).show();
+    $("#search-quick-read").on("keyup", function (event) {
+        const search = event.currentTarget.value.toLowerCase().trim();
+        const keywords = search.split(" ");
+        $('.search-quick-read .row .col-md-3').each(function () {
+            // Combine searchable text
+            let text =
+                $(this).find('.quick-read-title').text().toLowerCase() + " " +
+                $(this).find('.quick-read-content').text().toLowerCase() + " " +
+                $(this).find('.quick-read-author').text().toLowerCase();
+            let matchAll = true;
+            // Check ALL keywords
+            for (let i = 0; i < keywords.length; i++) {
+                if (keywords[i] && text.indexOf(keywords[i]) === -1) {
+                    matchAll = false;
+                    break;
                 }
-                else {
-                    $(this).hide();
-                }
+            }
+            // Final show/hide
+            if (matchAll) {
+                $(this).show();
+            } else {
+                $(this).hide();
             }
         });
     });
