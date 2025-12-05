@@ -9,6 +9,8 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/difference-between-an-indian-husband-and-foreign-husband.html
+Allow: /articles/best-heartwarming-gestures-that-people-would-like-to-receive.html
 Allow: /articles/bangalore-to-kabini-wildlife-safari-route-stay-options-travel-guide.html
 Allow: /articles/barometer-science-experiment-for-children.html
 Allow: /articles/bangalore-to-makalidurga-trekking.html
@@ -56,7 +58,6 @@ Allow: /articles/how-to-introduce-more-joy-into-your-everyday-life.html
 Allow: /articles/why-don-t-introverts-fall-in-love-easily.html
 Allow: /articles/bangalore-to-mekedatu-gorge-adventure-solo-trip-plan.html
 Allow: /articles/mini-wind-turbine-science-experiment-for-children.html
-Allow: /articles/difference-between-an-indian-husband-and-foreign-husband.html
 Allow: /articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html
 Allow: /articles/things-to-keep-always-as-a-secret.html
 Allow: /articles/diy-geodesic-dome-science-experiment-for-children.html
@@ -127,7 +128,6 @@ Allow: /articles/vedic-rituals-and-sacrifices-an-overview.html
 Allow: /articles/look-deep-into-the-nature-and-then-you-will-understand-everything-better.html
 Allow: /articles/why-should-we-chant-hare-rama-hare-krishna-mahamantra.html
 Allow: /articles/bangalore-to-talakadu-historical-site-a-couple-motorcycle-ride-travel-plan.html
-Allow: /articles/best-heartwarming-gestures-that-people-would-like-to-receive.html
 Allow: /articles/friend-what-comes-to-your-mind-when-you-hear-this-word.html
 Allow: /articles/leaf-chromatography-science-experiment-for-children.html
 Allow: /articles/floating-fish-science-experiment-for-children.html
