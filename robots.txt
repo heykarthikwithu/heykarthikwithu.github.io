@@ -9,6 +9,12 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/lava-lamp-science-experiment-for-children.html
+Allow: /articles/introduction-to-the-vedas-the-oldest-sacred-texts.html
+Allow: /articles/ins-vikrant-delivered-to-indian-navy-first-indigenous-aircraft-carrier-by-india.html
+Allow: /articles/how-do-people-feel-when-their-ex-gets-married.html
+Allow: /articles/coffee-ground-fossils-science-experiment-for-children.html
+Allow: /articles/best-places-in-karnataka-to-travel-solo-in-hot-summer.html
 Allow: /articles/difference-between-an-indian-husband-and-foreign-husband.html
 Allow: /articles/best-heartwarming-gestures-that-people-would-like-to-receive.html
 Allow: /articles/bangalore-to-kabini-wildlife-safari-route-stay-options-travel-guide.html
@@ -157,7 +163,6 @@ Allow: /articles/multisite-local-environment-setup-with-ddev-and-drupal.html
 Allow: /articles/bangalore-to-kollur-solo-trip-plan.html
 Allow: /articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html
 Allow: /articles/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.html
-Allow: /articles/how-do-people-feel-when-their-ex-gets-married.html
 Allow: /articles/abhaya-kshethram-a-shelter-of-hope-and-dignity.html
 Allow: /articles/how-is-the-life-of-a-divorced-man-in-india.html
 Allow: /articles/bangalore-to-anamudi-solo-trip-plan.html
@@ -258,7 +263,6 @@ Allow: /articles/how-to-prepare-curd-rice.html
 Allow: /articles/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.html
 Allow: /articles/how-to-prevent-morning-breath.html
 Allow: /articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html
-Allow: /articles/introduction-to-the-vedas-the-oldest-sacred-texts.html
 Allow: /articles/the-historical-context-of-the-vedas.html
 Allow: /articles/the-vedic-gods-and-their-attributes.html
 Allow: /articles/understanding-sharepoint-document-libraries-content-types-terms-user-groups-and-permissions.html
@@ -412,7 +416,6 @@ Allow: /articles/build-a-worm-farm-science-experiment-for-children.html
 Allow: /articles/samosas-snack-from-the-indian-subcontinent.html
 Allow: /articles/what-is-the-need-of-root-canal-treatment.html
 Allow: /articles/how-to-cure-pcod-pcos-to-have-better-lifestyle.html
-Allow: /articles/best-places-in-karnataka-to-travel-solo-in-hot-summer.html
 Allow: /articles/gummy-bear-osmosis-science-experiment-for-children.html
 Allow: /articles/few-relationship-events-in-life-those-change-peoples-personality.html
 Allow: /articles/how-to-deal-with-people-who-talk-too-much.html
@@ -507,7 +510,6 @@ Allow: /articles/scientists-have-created-hexagonal-salt.html
 Allow: /articles/cache-set-get-and-invalidate-user-drupal-.html
 Allow: /articles/everest-base-camp-trek-start-trekking-from-salleri-and-back-to-salleri.html
 Allow: /articles/usage-of-constraints-validations-on-media-entities-in-drupal-application.html
-Allow: /articles/ins-vikrant-delivered-to-indian-navy-first-indigenous-aircraft-carrier-by-india.html
 Allow: /articles/tips-to-overcome-suicidal-thoughts.html
 Allow: /articles/monkeypox-outbreak-around-the-world.html
 Allow: /articles/stop-overthinking-your-thoughts-of-future.html
@@ -586,7 +588,6 @@ Allow: /articles/why-to-have-a-green-roof-or-eco-friendly-roof-on-a-building.htm
 Allow: /articles/tips-to-live-a-happy-life-how-to-be-happy.html
 Allow: /articles/un-conditional-love-in-a-relationship.html
 Allow: /articles/eight-things-will-tell-you-that-you-are-not-happy-with-your-salary.html
-Allow: /articles/lava-lamp-science-experiment-for-children.html
 Allow: /articles/horrible-secrets-that-you-should-share-with-your-partner-and-how.html
 Allow: /articles/self-inflating-balloon-science-experiment-for-children.html
 Allow: /articles/vankaya-pappu-recipe-andhra-style.html
@@ -600,7 +601,6 @@ Allow: /articles/habits-that-can-improve-a-persons-life.html
 Allow: /articles/walking-water-science-experiment-for-children.html
 Allow: /articles/how-to-prepare-paneer-kulcha-at-home-paneer-kulcha-recipe.html
 Allow: /articles/how-to-keep-an-eye-on-social-commitments-to-avoid-overloading-your-schedule-around-deadlines.html
-Allow: /articles/coffee-ground-fossils-science-experiment-for-children.html
 Allow: /articles/coin-inertia-science-experiment-for-children.html
 Allow: /articles/harsh-truth-of-life-that-you-learn-from-your-bad-time.html
 Allow: /articles/film-canister-rocket-science-experiment-for-children.html
