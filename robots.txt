@@ -9,6 +9,9 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/mental-and-physical-wellbeing-connection.html
+Allow: /articles/marshmallow-catapult-science-experiment-for-children.html
+Allow: /articles/magnetic-slime-science-experiment-for-children.html
 Allow: /articles/lava-lamp-science-experiment-for-children.html
 Allow: /articles/introduction-to-the-vedas-the-oldest-sacred-texts.html
 Allow: /articles/ins-vikrant-delivered-to-indian-navy-first-indigenous-aircraft-carrier-by-india.html
@@ -81,7 +84,6 @@ Allow: /articles/the-role-of-vedas-in-hindu-philosophy.html
 Allow: /articles/complete-guide-to-setup-and-usage-solar-panels-at-home.html
 Allow: /articles/do-you-know-your-brain-is-the-biggest-sex-organ.html
 Allow: /articles/gongura-pappu-recipe-andhra-style.html
-Allow: /articles/marshmallow-catapult-science-experiment-for-children.html
 Allow: /articles/solo-everest-base-camp-trek-bangalore-to-kathmandu-then-to-salleri.html
 Allow: /articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html
 Allow: /articles/how-to-identify-a-fake-person.html
@@ -377,7 +379,6 @@ Allow: /articles/how-to-prepare-dal-palak.html
 Allow: /articles/borax-slime-science-experiment-for-children.html
 Allow: /articles/what-are-the-best-ways-to-earn-money-while-traveling-around-the-world.html
 Allow: /articles/lifestyle-changes-to-enhance-your-mood-and-mental-health.html
-Allow: /articles/magnetic-slime-science-experiment-for-childrens.html
 Allow: /articles/why-is-traveling-so-important-in-life.html
 Allow: /articles/my-husband-loves-me-but-clearly-fancies-a-woman-at-work-how-can-i-manage-my-jealousy.html
 Allow: /articles/fluffy-slime-science-experiment-for-children.html
@@ -448,7 +449,6 @@ Allow: /articles/if-farmers-have-greater-choice-to-sell-to-whoever-and-wherever.
 Allow: /articles/world-cancer-day-february-th.html
 Allow: /articles/indian-farms-reforms-of-.html
 Allow: /articles/it-is-ok-to-not-be-ok-hanukkah-john.html
-Allow: /articles/magnetic-slime-science-experiment-for-children.html
 Allow: /articles/how-to-have-a-better-sex.html
 Allow: /articles/build-self-awareness-about-unconscious-bias-and-why-it-is-needed.html
 Allow: /articles/drupal-ten-is-coming-in-a-few-days.html
@@ -660,7 +660,6 @@ Allow: /articles/increase-your-self-respect-with-these-ten-things.html
 Allow: /articles/psychological-facts-about-attracting-people.html
 Allow: /articles/how-do-you-take-space-in-a-relationship-without-breaking-up.html
 Allow: /articles/how-to-express-thoughts-without-hurting-other-people.html
-Allow: /articles/mental-and-physical-wellbeing-connection.html
 Allow: /articles/some-unwritten-social-rules-everyone-should-know.html
 Allow: /articles/lessons-to-be-learnt-from-marriage.html
 Allow: /articles/eight-things-should-never-be-rushed.html

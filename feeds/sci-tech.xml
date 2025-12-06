@@ -6,6 +6,20 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Marshmallow Catapult: A Fun &amp; Easy STEM Experiment for Kids</title>
+			<link>https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</link>
+			<description>Science experiments become more exciting when children can build something with their own hands&amp;mdash;and even launch a marshmallow across the room! A marshmallow catapult is a simple but powerful STEM activity that helps kids understand force, motion, energy, and projectile trajectory through play.  In this article, you&amp;rsquo;ll learn how to make a marshmallow catapult at home using basic craft m</description>
+			<pubDate>Sat, 06 Dec 2025 09:42:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</guid>
+    </item><item>
+			<title>Magnetic Slime Experiment for Kids: A Fun Way to Learn About Magnetism &amp; Chemistry</title>
+			<link>https://peoplesblog.co.in/articles/magnetic-slime-science-experiment-for-children.html</link>
+			<description>Magnetic slime is one of the most exciting and hands-on science experiments for children. It combines the fun of making slime with the magic of magnetism, allowing kids to explore how magnetic fields work in an enjoyable and interactive way. This simple activity helps children understand chemistry, physics, cause-and-effect, and scientific observation.  Magnetic slime can stretch, move and crawl t</description>
+			<pubDate>Sat, 06 Dec 2025 09:16:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/magnetic-slime-science-experiment-for-children.html</guid>
+    </item><item>
 			<title>Homemade Lava Lamp Experiment for Kids: Learn About Density &amp; Immiscible Liquids</title>
 			<link>https://peoplesblog.co.in/articles/lava-lamp-science-experiment-for-children.html</link>
 			<description>Science experiments are one of the best ways to help children learn important concepts while having fun. A homemade lava lamp is a simple, colorful and exciting activity that teaches kids about density, immiscible liquids, and gas reactions using basic materials found at home.  This step-by-step guide explains how to make a lava lamp, the science behind it, safety tips and additional learning idea</description>
@@ -159,13 +173,6 @@
 			<pubDate>Sun, 23 Nov 2025 10:40:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/complete-guide-to-setup-and-usage-solar-panels-at-home.html</guid>
-    </item><item>
-			<title>Marshmallow Catapult: Fun STEM Experiment for Kids</title>
-			<link>https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</link>
-			<description>Title: Marshmallow Catapult - Exploring Projectile Motion Experiment  Objective: To build and test a marshmallow catapult, exploring principles of force, motion and projectile trajectory.  Materials:   Popsicle sticks or craft sticks Rubber bands Plastic spoon Small marshmallows or soft projectiles Tape Optional: Decorative materials (markers, stickers) for customization   Procedure:   Begin by di</description>
-			<pubDate>Sun, 23 Nov 2025 10:38:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</guid>
     </item><item>
 			<title>Azure Front Door &amp; CDN Profiles: Concepts &amp; Best Practices</title>
 			<link>https://peoplesblog.co.in/articles/understanding-azure-front-door-and-cdn-profiles-key-concepts-and-best-practices.html</link>
@@ -348,13 +355,6 @@
 			<pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</guid>
-    </item><item>
-			<title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
-			<link>https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</link>
-			<description>Generally you see this error while you try to install the update manager module via UI or via Drush command.  Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site&amp;#39;s configuration saying that the update module is already installed.  1. You can simply delete this configuration with the below command  $ drush cdel update.settings  Which</description>
-			<pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html</guid>
     </item>
 </channel>
 </rss>
