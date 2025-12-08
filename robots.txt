@@ -1300,7 +1300,6 @@ Allow: /shopping/reviews/B0DDHJNFVS.html
 Allow: /shopping/reviews/B0BN87FHBZ.html
 Allow: /shopping/reviews/B012AU6PWY.html
 Allow: /shopping/reviews/B0CJ94X1NV.html
-Allow: /shopping/reviews/B0CJ33ZBBW.html
 Allow: /shopping/reviews/B097C3PWDV.html
 Allow: /shopping/reviews/B0D6QRQQ3S.html
 Allow: /shopping/reviews/B0F7X5FC43.html
@@ -1456,7 +1455,6 @@ Allow: /shopping/reviews/B0B8NK5HTH.html
 Allow: /shopping/reviews/B072J83V9W.html
 Allow: /shopping/reviews/B0972WB6VJ.html
 Allow: /shopping/reviews/B0CG5STQFQ.html
-Allow: /shopping/reviews/B0D6VJ6FYG.html
 Allow: /shopping/reviews/B0CBLXF764.html
 Allow: /shopping/reviews/B0CYWTZKB6.html
 Allow: /shopping/reviews/B07WGPJPR3.html
@@ -1518,7 +1516,6 @@ Allow: /shopping/reviews/B0DRYWLVNH.html
 Allow: /shopping/reviews/B0BKNF424G.html
 Allow: /shopping/reviews/B09J2T124D.html
 Allow: /shopping/reviews/B097BH2T5B.html
-Allow: /shopping/reviews/B0DZXSGP45.html
 Allow: /shopping/reviews/B096FYLB46.html
 Allow: /shopping/reviews/B07MNNH484.html
 Allow: /shopping/reviews/B0C497MSQN.html
@@ -1658,7 +1655,6 @@ Allow: /shopping/reviews/B079L5ZHJL.html
 Allow: /shopping/reviews/B08WWJH2RX.html
 Allow: /shopping/reviews/B07NT6FG36.html
 Allow: /shopping/reviews/B097RJ867P.html
-Allow: /shopping/reviews/B0BX9WTPLR.html
 Allow: /shopping/reviews/B0CZ6QF29Y.html
 Allow: /shopping/reviews/B0BJ72WZQ7.html
 Allow: /shopping/reviews/B0756K5DYZ.html
@@ -1743,7 +1739,6 @@ Allow: /shopping/reviews/B0B54P3N5F.html
 Allow: /shopping/reviews/B0CT9189RW.html
 Allow: /shopping/reviews/B0D37F8MJ5.html
 Allow: /shopping/reviews/B0D29GV262.html
-Allow: /shopping/reviews/B0D9P28RCV.html
 Allow: /shopping/reviews/B0F8N74NVN.html
 Allow: /shopping/reviews/B0D87P37TY.html
 Allow: /shopping/reviews/B0CRQB4HBP.html
@@ -1793,7 +1788,6 @@ Allow: /shopping/reviews/B0002IEQMS.html
 Allow: /shopping/reviews/B0B3DB4XS4.html
 Allow: /shopping/reviews/B0B7S4BQ45.html
 Allow: /shopping/reviews/B079556R74.html
-Allow: /shopping/reviews/B0BW8WYGRV.html
 Allow: /shopping/reviews/B0D4M66F6R.html
 Allow: /shopping/reviews/B0CCFDLTGH.html
 Allow: /shopping/reviews/B0CLRC13BP.html
