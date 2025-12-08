@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/what-are-the-best-ways-to-earn-money-while-traveling-around-the-world.html
 Allow: /articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html
 Allow: /articles/ten-best-beaches-to-travel-solo-in-india.html
 Allow: /articles/psychological-facts-about-attracting-people.html
@@ -383,7 +384,6 @@ Allow: /articles/what-is-it-like-to-quit-your-job-and-travel-the-world.html
 Allow: /articles/boost-your-attention-and-ability-to-function-with-meditation-exercise-and-sleep.html
 Allow: /articles/how-to-prepare-dal-palak.html
 Allow: /articles/borax-slime-science-experiment-for-children.html
-Allow: /articles/what-are-the-best-ways-to-earn-money-while-traveling-around-the-world.html
 Allow: /articles/lifestyle-changes-to-enhance-your-mood-and-mental-health.html
 Allow: /articles/why-is-traveling-so-important-in-life.html
 Allow: /articles/my-husband-loves-me-but-clearly-fancies-a-woman-at-work-how-can-i-manage-my-jealousy.html
