@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>How to Make a Sundial: A Simple Science Experiment for Kids to Learn How Shadows Tell Time</title>
+			<link>https://peoplesblog.co.in/articles/sundial-science-experiment-for-children.html</link>
+			<description>For thousands of years, people used the sun and shadows to tell time. Long before clocks and watches were invented, ancient civilizations relied on a simple tool called a sundial. A sundial uses the sun&amp;rsquo;s movement across the sky to create shadows, and these shadows help us estimate the time of day.  In this fun and easy science activity, children will build their own sundial, observe how sha</description>
+			<pubDate>Mon, 08 Dec 2025 11:42:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/sundial-science-experiment-for-children.html</guid>
+    </item><item>
 			<title>Solar Oven Experiment for Kids: Cook with Sunlight Using a Simple DIY Solar Cooker</title>
 			<link>https://peoplesblog.co.in/articles/solar-oven-cooking-science-experiment-for-children.html</link>
 			<description>A solar oven is one of the most exciting science experiments children can try. It teaches them how sunlight can be converted into heat energy, how renewable energy works, and how simple materials can be used to cook real food. This hands-on project is safe, affordable and highly educational, making it ideal for school activities, science fairs, and home learning.  In this detailed guide, you will </description>
@@ -348,13 +355,6 @@
 			<pubDate>Sun, 23 Nov 2025 10:03:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html</guid>
-    </item><item>
-			<title>Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices</title>
-			<link>https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</link>
-			<description>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft&amp;#39;s managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes&amp;#39; robust fea</description>
-			<pubDate>Sun, 23 Nov 2025 09:57:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html</guid>
     </item>
 </channel>
 </rss>

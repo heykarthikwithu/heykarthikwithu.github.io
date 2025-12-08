@@ -9,6 +9,8 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/psychological-facts-about-attracting-people.html
+Allow: /articles/sundial-science-experiment-for-children.html
 Allow: /articles/solar-oven-cooking-science-experiment-for-children.html
 Allow: /articles/paper-bridge-science-experiment-for-children.html
 Allow: /articles/origami-geometry-science-experiment-for-children.html
@@ -584,7 +586,6 @@ Allow: /articles/bangalore-to-mangalore-solo-trip-plan.html
 Allow: /articles/tornado-in-bottle-science-experiment-for-children.html
 Allow: /articles/can-you-have-a-good-life-without-kids.html
 Allow: /articles/how-to-run-phpunit-test-cases-on-your-local-machine-for-drupal.html
-Allow: /articles/sundial-science-experiment-for-children.html
 Allow: /articles/why-to-have-a-green-roof-or-eco-friendly-roof-on-a-building.html
 Allow: /articles/tips-to-live-a-happy-life-how-to-be-happy.html
 Allow: /articles/un-conditional-love-in-a-relationship.html
@@ -657,7 +658,6 @@ Allow: /articles/five-most-common-mind-games-people-play-on-you.html
 Allow: /articles/people-who-cares-the-least-has-the-most-power-in-a-relationship.html
 Allow: /articles/why-is-drupal-chosen-by-large-organizations.html
 Allow: /articles/increase-your-self-respect-with-these-ten-things.html
-Allow: /articles/psychological-facts-about-attracting-people.html
 Allow: /articles/how-do-you-take-space-in-a-relationship-without-breaking-up.html
 Allow: /articles/how-to-express-thoughts-without-hurting-other-people.html
 Allow: /articles/some-unwritten-social-rules-everyone-should-know.html
