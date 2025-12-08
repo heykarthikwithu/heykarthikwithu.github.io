@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/optimal-placement-of-solar-panels-for-better-observation-of-solar-energy.html
 Allow: /articles/mental-and-physical-wellbeing-connection.html
 Allow: /articles/marshmallow-catapult-science-experiment-for-children.html
 Allow: /articles/magnetic-slime-science-experiment-for-children.html
@@ -544,7 +545,6 @@ Allow: /articles/cabbage-fried-rice-recipe.html
 Allow: /articles/why-do-dentists-suggest-clear-aligners-invisalign.html
 Allow: /articles/possible-reasons-you-feel-tired-all-the-time.html
 Allow: /articles/questions-to-ask-dentist-before-dental-implant.html
-Allow: /articles/optimal-placement-of-solar-panels-for-better-observation-of-solar-energy.html
 Allow: /articles/dental-fluorosis-types-prevention-and-treatments.html
 Allow: /articles/bangalore-to-gandikota-two-days-one-night-trip-plan.html
 Allow: /articles/bangalore-to-tirumala-two-days-trip.html

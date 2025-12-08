@@ -6,6 +6,13 @@
     <description/>
     <language>en</language>
     <item>
+			<title>Optimal Placement of Solar Panels: A Guide for Maximum Solar Energy</title>
+			<link>https://peoplesblog.co.in/articles/optimal-placement-of-solar-panels-for-better-observation-of-solar-energy.html</link>
+			<description>Solar energy is becoming one of the most popular sources of clean and affordable electricity. Whether you want to reduce your electricity bill, go eco-friendly, or enjoy long-term savings, installing solar panels is a great choice. But simply buying high-quality solar panels is not enough. The position and placement of your solar panels play a very important role in how much energy you actually ge</description>
+			<pubDate>Mon, 08 Dec 2025 10:13:00 +0530</pubDate>
+			<dc:creator>Karthik Kumar D K</dc:creator>
+<guid isPermaLink="true">https://peoplesblog.co.in/articles/optimal-placement-of-solar-panels-for-better-observation-of-solar-energy.html</guid>
+    </item><item>
 			<title>Marshmallow Catapult: A Fun &amp; Easy STEM Experiment for Kids</title>
 			<link>https://peoplesblog.co.in/articles/marshmallow-catapult-science-experiment-for-children.html</link>
 			<description>Science experiments become more exciting when children can build something with their own hands&amp;mdash;and even launch a marshmallow across the room! A marshmallow catapult is a simple but powerful STEM activity that helps kids understand force, motion, energy, and projectile trajectory through play.  In this article, you&amp;rsquo;ll learn how to make a marshmallow catapult at home using basic craft m</description>
@@ -348,13 +355,6 @@
 			<pubDate>Sun, 23 Nov 2025 09:50:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/cloud-in-a-bottle-science-experiment-for-children.html</guid>
-    </item><item>
-			<title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
-			<link>https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</link>
-			<description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.  As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, her</description>
-			<pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
-<guid isPermaLink="true">https://peoplesblog.co.in/articles/multisite-local-environment-setup-with-ddev-and-drupal.html</guid>
     </item>
 </channel>
 </rss>
