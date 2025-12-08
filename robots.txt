@@ -9,6 +9,8 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html
+Allow: /articles/ten-best-beaches-to-travel-solo-in-india.html
 Allow: /articles/psychological-facts-about-attracting-people.html
 Allow: /articles/sundial-science-experiment-for-children.html
 Allow: /articles/solar-oven-cooking-science-experiment-for-children.html
@@ -401,7 +403,6 @@ Allow: /articles/what-to-do-when-your-kid-s-teeth-are-broken.html
 Allow: /articles/pigeonbot-is-the-first-robot-that-can-bend-its-wings.html
 Allow: /articles/sites-still-vulnerable-drupalgeddon-.html
 Allow: /articles/aegir-docker-develop-test-easier-deployment.html
-Allow: /articles/ten-best-beaches-to-travel-solo-in-india.html
 Allow: /articles/myths-of-tooth-cleaning.html
 Allow: /articles/how-to-tackle-emotional-resilience.html
 Allow: /articles/how-to-prepare-methi-thepla.html
@@ -486,7 +487,6 @@ Allow: /articles/is-feedback-really-necessary-in-persons-life.html
 Allow: /articles/drupal--to-drupalaudits.html
 Allow: /articles/technical-writing-vs-content-writing.html
 Allow: /articles/for-indian-youth-what-should-you-know-about-nambi-narayanan.html
-Allow: /articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html
 Allow: /articles/the-confident-you-taking-charge-of-your-life.html
 Allow: /articles/drupal-jsonapi-deep-dive-part-two.html
 Allow: /articles/heat-waves-in-india-and-current-temperature-status-and-warning-for-next-five-day.html
