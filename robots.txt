@@ -9,6 +9,9 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/solar-oven-cooking-science-experiment-for-children.html
+Allow: /articles/paper-bridge-science-experiment-for-children.html
+Allow: /articles/origami-geometry-science-experiment-for-children.html
 Allow: /articles/optimal-placement-of-solar-panels-for-better-observation-of-solar-energy.html
 Allow: /articles/mental-and-physical-wellbeing-connection.html
 Allow: /articles/marshmallow-catapult-science-experiment-for-children.html
@@ -103,7 +106,6 @@ Allow: /articles/sql-transactions-for-atomic-operations-ensuring-data-integrity-
 Allow: /articles/water-for-pakistan-lifeline-dependency-and-the-shifting-control.html
 Allow: /articles/tips-for-night-driving-on-motorcycle-on-roads-and-highways.html
 Allow: /articles/writing-secure-sql-queries-using-prepared-statements.html
-Allow: /articles/solar-oven-cooking-science-experiment-for-children.html
 Allow: /articles/karma-and-dharma-balancing-duty-and-destiny.html
 Allow: /articles/chennai-to-vedanthangal-bird-sanctuary-solo-trip-plan.html
 Allow: /articles/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.html
@@ -303,7 +305,6 @@ Allow: /articles/hardest-truths-of-life-we-all-have-to-face.html
 Allow: /articles/introduction-to-caching-and-setting-up-redis-in-php-.html
 Allow: /articles/implementing-a-redis-cache-for-product-catalog-data-in-php.html
 Allow: /articles/implementing-a-notification-system-using-the-observer-pattern-in-php.html
-Allow: /articles/origami-geometry-science-experiment-for-children.html
 Allow: /articles/when-and-how-to-use-each-design-pattern-in-php.html
 Allow: /articles/exploring-design-patterns-in-php--strategy-observer-and-decorator.html
 Allow: /articles/understanding-the-need-for-dental-sealants.html
@@ -609,7 +610,6 @@ Allow: /articles/hoop-and-straw-airplane-kids-science-experiment.html
 Allow: /articles/how-can-you-identify-intelligent-people.html
 Allow: /articles/some-stuff-people-realize-when-they-get-mature.html
 Allow: /articles/sticky-ice-science-experiment-for-children.html
-Allow: /articles/paper-bridge-science-experiment-for-children.html
 Allow: /articles/stuff-that-people-should-never-do-in-their-life.html
 Allow: /articles/seven-tips-to-have-a-healthy-relationship.html
 Allow: /articles/make-a-compass-science-experiment-for-children.html
