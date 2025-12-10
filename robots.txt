@@ -834,6 +834,11 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/harkishan-singh-surjeet.html
+Allow: /great-people/firaq-gorakhpuri.html
+Allow: /great-people/chiranjeevi.html
+Allow: /great-people/charles-correa.html
+Allow: /great-people/balu-mahendra.html
 Allow: /great-people/baburao-painter.html
 Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/apj-abdul-kalam.html
@@ -924,7 +929,6 @@ Allow: /great-people/dhyan-chand.html
 Allow: /great-people/jivraj-narayan-mehta.html
 Allow: /great-people/ravi-kanbur.html
 Allow: /great-people/vilayat-khan.html
-Allow: /great-people/firaq-gorakhpuri.html
 Allow: /great-people/hrishikesh-mukherjee.html
 Allow: /great-people/sri-chinmoy.html
 Allow: /great-people/jaswant-singh-neki.html
@@ -937,7 +941,6 @@ Allow: /great-people/raghunath-panigrahi.html
 Allow: /great-people/om-prakash-munjal.html
 Allow: /great-people/radha-gobinda-kar.html
 Allow: /great-people/krishna-reddy.html
-Allow: /great-people/chiranjeevi.html
 Allow: /great-people/harishankar-parsai.html
 Allow: /great-people/sachidananda-routray.html
 Allow: /great-people/subrahmanyan-chandrasekhar.html
@@ -990,7 +993,6 @@ Allow: /great-people/bunker-roy.html
 Allow: /great-people/ravishankar-shukla.html
 Allow: /great-people/prafulla-chandra-ray.html
 Allow: /great-people/rabindranath-tagore.html
-Allow: /great-people/harkishan-singh-surjeet.html
 Allow: /great-people/meena-kumari.html
 Allow: /great-people/sahib-singh-verma.html
 Allow: /great-people/saeed-akhtar-mirza.html
@@ -1006,7 +1008,6 @@ Allow: /great-people/vishnu-prabhakar.html
 Allow: /great-people/laxmanrao-kirloskar.html
 Allow: /great-people/salman-rushdie.html
 Allow: /great-people/syed-mushtaq-ali.html
-Allow: /great-people/charles-correa.html
 Allow: /great-people/chittaranjan-das.html
 Allow: /great-people/charles-sturt.html
 Allow: /great-people/hemanta-mukherjee.html
@@ -1038,7 +1039,6 @@ Allow: /great-people/ram-mohan-roy.html
 Allow: /great-people/rajiv-gandhi.html
 Allow: /great-people/chakravarthi-v-narasimhan.html
 Allow: /great-people/leela-dube.html
-Allow: /great-people/balu-mahendra.html
 Allow: /great-people/chandrashekarendra-saraswati.html
 Allow: /great-people/jadunath-sarkar.html
 Allow: /great-people/nawazuddin-siddiqui.html
