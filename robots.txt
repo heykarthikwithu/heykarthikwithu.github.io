@@ -834,6 +834,7 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/baburao-painter.html
 Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/apj-abdul-kalam.html
 Allow: /great-people/anjali-devi.html
@@ -1016,7 +1017,6 @@ Allow: /great-people/banda-singh-bahadur.html
 Allow: /great-people/atul-chitnis.html
 Allow: /great-people/bhajan-lal.html
 Allow: /great-people/george-fernandes.html
-Allow: /great-people/baburao-painter.html
 Allow: /great-people/anthony-de-mello.html
 Allow: /great-people/nargis.html
 Allow: /great-people/francis-younghusband.html
