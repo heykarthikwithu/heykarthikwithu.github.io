@@ -834,6 +834,10 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/b-vittalacharya.html
+Allow: /great-people/apj-abdul-kalam.html
+Allow: /great-people/anjali-devi.html
+Allow: /great-people/a-c-bhaktivedanta-swami-prabhupada.html
 Allow: /great-people/jamsetji-tata.html
 Allow: /great-people/vaidyanath-mishra.html
 Allow: /great-people/javagal-srinath.html
@@ -878,7 +882,6 @@ Allow: /great-people/maithili-sharan-gupt.html
 Allow: /great-people/the-great-khali.html
 Allow: /great-people/rg-bhandarkar.html
 Allow: /great-people/bhagwati-charan-verma.html
-Allow: /great-people/b-vittalacharya.html
 Allow: /great-people/amrish-puri.html
 Allow: /great-people/ng-chandavarkar.html
 Allow: /great-people/anugrah-narayan-sinha.html
@@ -909,7 +912,6 @@ Allow: /great-people/a-p-venkateswaran.html
 Allow: /great-people/uttam-kumar.html
 Allow: /great-people/t-v-sankaranarayanan.html
 Allow: /great-people/sadhana-shivdasani.html
-Allow: /great-people/a-c-bhaktivedanta-swami-prabhupada.html
 Allow: /great-people/bapu.html
 Allow: /great-people/kashiram-rana.html
 Allow: /great-people/rituparno-ghosh.html
@@ -926,7 +928,6 @@ Allow: /great-people/hrishikesh-mukherjee.html
 Allow: /great-people/sri-chinmoy.html
 Allow: /great-people/jaswant-singh-neki.html
 Allow: /great-people/tanguturi-prakasam.html
-Allow: /great-people/anjali-devi.html
 Allow: /great-people/shivaram-rajguru.html
 Allow: /great-people/sanjeev-sharma.html
 Allow: /great-people/giridharilal-kedia.html
@@ -1103,7 +1104,6 @@ Allow: /great-people/vallabhbhai-patel.html
 Allow: /great-people/srinivasa-ramanujan.html
 Allow: /great-people/satyendra-nath-bose.html
 Allow: /great-people/chandrasekhara-venkata-raman.html
-Allow: /great-people/apj-abdul-kalam.html
 Allow: /great-people/subhash-chandra-bose.html
 Allow: /great-people/bhagat-singh.html
 Allow: /dentofacts/index.html
