@@ -834,6 +834,7 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/meena-kumari.html
 Allow: /great-people/margaret-abbott.html
 Allow: /great-people/madan-mohan.html
 Allow: /great-people/madan-lal-dhingra.html
@@ -996,7 +997,6 @@ Allow: /great-people/bunker-roy.html
 Allow: /great-people/ravishankar-shukla.html
 Allow: /great-people/prafulla-chandra-ray.html
 Allow: /great-people/rabindranath-tagore.html
-Allow: /great-people/meena-kumari.html
 Allow: /great-people/sahib-singh-verma.html
 Allow: /great-people/saeed-akhtar-mirza.html
 Allow: /great-people/sam-manekshaw.html
