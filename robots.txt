@@ -834,6 +834,11 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/margaret-abbott.html
+Allow: /great-people/madan-mohan.html
+Allow: /great-people/madan-lal-dhingra.html
+Allow: /great-people/m-m-kalburgi.html
+Allow: /great-people/john-hunt-baron-hunt.html
 Allow: /great-people/harkishan-singh-surjeet.html
 Allow: /great-people/firaq-gorakhpuri.html
 Allow: /great-people/chiranjeevi.html
@@ -922,7 +927,6 @@ Allow: /great-people/bapu.html
 Allow: /great-people/kashiram-rana.html
 Allow: /great-people/rituparno-ghosh.html
 Allow: /great-people/amrita-pritam.html
-Allow: /great-people/m-m-kalburgi.html
 Allow: /great-people/bipan-chandra.html
 Allow: /great-people/ravi-shankar-prasad.html
 Allow: /great-people/dhyan-chand.html
@@ -953,7 +957,6 @@ Allow: /great-people/peter-kemp.html
 Allow: /great-people/subramania-satyamurti.html
 Allow: /great-people/sandeep-patil.html
 Allow: /great-people/gulzar.html
-Allow: /great-people/madan-lal-dhingra.html
 Allow: /great-people/atal-bihari-vajpayee.html
 Allow: /great-people/ramakrishna-paramahamsa.html
 Allow: /great-people/barry-hay.html
@@ -999,7 +1002,6 @@ Allow: /great-people/saeed-akhtar-mirza.html
 Allow: /great-people/sam-manekshaw.html
 Allow: /great-people/rd-burman.html
 Allow: /great-people/amala-shankar.html
-Allow: /great-people/madan-mohan.html
 Allow: /great-people/norman-pritchard.html
 Allow: /great-people/rama-narayanan.html
 Allow: /great-people/tom-alter.html
@@ -1013,7 +1015,6 @@ Allow: /great-people/charles-sturt.html
 Allow: /great-people/hemanta-mukherjee.html
 Allow: /great-people/dinanath-gopal-tendulkar.html
 Allow: /great-people/chhabi-biswas.html
-Allow: /great-people/margaret-abbott.html
 Allow: /great-people/banda-singh-bahadur.html
 Allow: /great-people/atul-chitnis.html
 Allow: /great-people/bhajan-lal.html
@@ -1086,7 +1087,6 @@ Allow: /great-people/pv-narasimha-rao.html
 Allow: /great-people/bankim-chandra-chattopadhyay.html
 Allow: /great-people/mahendra-bhatnagar.html
 Allow: /great-people/bhaktivinoda-thakur.html
-Allow: /great-people/john-hunt-baron-hunt.html
 Allow: /great-people/sunil-janah.html
 Allow: /great-people/bishnu-prasad-rabha.html
 Allow: /great-people/subhash-mukherjee.html
