@@ -834,6 +834,11 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/rama-narayanan.html
+Allow: /great-people/pramukh-swami-maharaj.html
+Allow: /great-people/perween-warsi.html
+Allow: /great-people/nawazuddin-siddiqui.html
+Allow: /great-people/nargis.html
 Allow: /great-people/meena-kumari.html
 Allow: /great-people/margaret-abbott.html
 Allow: /great-people/madan-mohan.html
@@ -967,7 +972,6 @@ Allow: /great-people/rakhee-gulzar.html
 Allow: /great-people/pran-kumar-sharma.html
 Allow: /great-people/ramaprasad-chanda.html
 Allow: /great-people/sri-aurobindo.html
-Allow: /great-people/pramukh-swami-maharaj.html
 Allow: /great-people/sridevi.html
 Allow: /great-people/rohinton-fali-nariman.html
 Allow: /great-people/robin-jackman.html
@@ -980,7 +984,6 @@ Allow: /great-people/kshudiram-bose.html
 Allow: /great-people/yashpal-sharma.html
 Allow: /great-people/baldev-upadhyaya.html
 Allow: /great-people/phoolan-devi.html
-Allow: /great-people/perween-warsi.html
 Allow: /great-people/vishnu-narayan-bhatkhande.html
 Allow: /great-people/vinayaka-krishna-gokak.html
 Allow: /great-people/sarat-pujari.html
@@ -1003,7 +1006,6 @@ Allow: /great-people/sam-manekshaw.html
 Allow: /great-people/rd-burman.html
 Allow: /great-people/amala-shankar.html
 Allow: /great-people/norman-pritchard.html
-Allow: /great-people/rama-narayanan.html
 Allow: /great-people/tom-alter.html
 Allow: /great-people/abid-hussain.html
 Allow: /great-people/vishnu-prabhakar.html
@@ -1020,7 +1022,6 @@ Allow: /great-people/atul-chitnis.html
 Allow: /great-people/bhajan-lal.html
 Allow: /great-people/george-fernandes.html
 Allow: /great-people/anthony-de-mello.html
-Allow: /great-people/nargis.html
 Allow: /great-people/francis-younghusband.html
 Allow: /great-people/charan-singh.html
 Allow: /great-people/tenzing-norgay.html
@@ -1042,7 +1043,6 @@ Allow: /great-people/chakravarthi-v-narasimhan.html
 Allow: /great-people/leela-dube.html
 Allow: /great-people/chandrashekarendra-saraswati.html
 Allow: /great-people/jadunath-sarkar.html
-Allow: /great-people/nawazuddin-siddiqui.html
 Allow: /great-people/manik-bandopadhyay.html
 Allow: /great-people/obaidullah-aleem.html
 Allow: /great-people/debendranath-tagore.html
