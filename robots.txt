@@ -834,6 +834,11 @@ Allow: /quick-read/isro-successfully-conducted-the-third-test-on-vikas-engine-fo
 Allow: /quick-read/heat-on-earths-atmosphere-is-heating-much-as-it-did-fifteen-years-ago.html
 Allow: /quick-read/device-with-two-atoms-thick-worlds-thinnest-device.html
 Allow: /quick-read/powerful-solar-storm-approaching-earth.html
+Allow: /great-people/tyagaraja.html
+Allow: /great-people/sridevi.html
+Allow: /great-people/sarat-pujari.html
+Allow: /great-people/sadhana-shivdasani.html
+Allow: /great-people/rash-behari-bose.html
 Allow: /great-people/rama-narayanan.html
 Allow: /great-people/pramukh-swami-maharaj.html
 Allow: /great-people/perween-warsi.html
@@ -928,7 +933,6 @@ Allow: /great-people/ram-kishore-shukla.html
 Allow: /great-people/a-p-venkateswaran.html
 Allow: /great-people/uttam-kumar.html
 Allow: /great-people/t-v-sankaranarayanan.html
-Allow: /great-people/sadhana-shivdasani.html
 Allow: /great-people/bapu.html
 Allow: /great-people/kashiram-rana.html
 Allow: /great-people/rituparno-ghosh.html
@@ -972,7 +976,6 @@ Allow: /great-people/rakhee-gulzar.html
 Allow: /great-people/pran-kumar-sharma.html
 Allow: /great-people/ramaprasad-chanda.html
 Allow: /great-people/sri-aurobindo.html
-Allow: /great-people/sridevi.html
 Allow: /great-people/rohinton-fali-nariman.html
 Allow: /great-people/robin-jackman.html
 Allow: /great-people/javeed-alam.html
@@ -986,7 +989,6 @@ Allow: /great-people/baldev-upadhyaya.html
 Allow: /great-people/phoolan-devi.html
 Allow: /great-people/vishnu-narayan-bhatkhande.html
 Allow: /great-people/vinayaka-krishna-gokak.html
-Allow: /great-people/sarat-pujari.html
 Allow: /great-people/varghese-payyappilly.html
 Allow: /great-people/kenneth-kendall.html
 Allow: /great-people/surendranath-banerjee.html
@@ -1033,7 +1035,6 @@ Allow: /great-people/vinayak-damodar-savarkar.html
 Allow: /great-people/manorama.html
 Allow: /great-people/kandukuri-veeresalingam.html
 Allow: /great-people/karim-emami.html
-Allow: /great-people/rash-behari-bose.html
 Allow: /great-people/majrooh-sultanpuri.html
 Allow: /great-people/shripad-amrit-dange.html
 Allow: /great-people/sher-shah-suri.html
@@ -1065,7 +1066,6 @@ Allow: /great-people/chinmayananda-saraswati.html
 Allow: /great-people/zail-singh.html
 Allow: /great-people/pritilata-waddedar.html
 Allow: /great-people/guru-amar-das.html
-Allow: /great-people/tyagaraja.html
 Allow: /great-people/zakir-husain-khan.html
 Allow: /great-people/vk-krishna-menon.html
 Allow: /great-people/satyajit-ray.html
