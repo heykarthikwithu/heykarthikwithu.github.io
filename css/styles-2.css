@@ -2923,7 +2923,8 @@ button#play-truth-dare-next {
         text-align: center;
     }
     .homepage-recent-quick-read .quick-read {
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
+        margin: 15px auto;
     }
     .homepage-recent-videos .video {
         margin-bottom: 30px;
