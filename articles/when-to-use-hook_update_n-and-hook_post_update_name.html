@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/when-to-use-hook_update_n-and-hook_post_update_name.html"
+          "@id": "https://peoplesblog.co.in/articles/when-to-use-hook_update_n-and-hook_post_update_name.html"
         },
         "headline": "When to use hook_update_N & hook_post_update_NAME?",
-        "description": "In this article, we are going to learn when to use hook_update_N and hook_post_update_NAME. In general, I was using hook_update_N for any database-rel",
-        "image": "https://peoplesblog.co.in/upload/banners/When-to-use-hook_update_N-and-hook_post_update_NAME.png",
+        "description": "In this article, we are going to learn when to use hook_update_N and hook_post_update_NAME. In general, I was using hook_update_N for any database-related changes or with any configuration additions or updates. And I was using hook_post_update_NAME for any content creation or updating or for the creation or updating any taxonomy terms etc, sometimes for clearing site caches as well.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/When-to-use-hook_update_N-and-hook_post_update_NAME.png",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2022-02-08"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/When-to-use-hook_update_N-and-hook_post_update_NAME.png" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we are going to learn when to use <code>hook_update_N</code> and <code>hook_post_update_NAME</code>. In general, I was using <code>hook_update_N</code> for any <strong>database-related</strong> changes or with any <strong><a href="/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> additions or updates</strong>. And I was using <code>hook_post_update_NAME</code> for any <strong>content <a href="/articles/cosmology-and-creation-in-the-vedas.html" title="Read about Cosmology And Creation In The Vedas">creation</a> or updating</strong> or for the <strong>creation or updating any <a href="/articles/auto-tagging-taxonomy-terms-drupal.html" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms</strong> etc, sometimes for <strong>clearing site caches</strong> as well.</p> <p>But, let’s have a check like <strong>why Drupal is offering us these two features</strong> and what is the flow of execution of these two.</p> <p>I have <strong>checked few core modules</strong> and a <strong>few contributed modules</strong> and understood that In a few of the modules there is <strong>no clear separation in the usage</strong> of these two hooks and in a few of the modules <code>hook_update_N</code> is used to modify field definitions and <code>hook_post_update_NAME</code> is used for creating or updating data.</p> <p>I have <strong>gone through a few of the articles and documentations</strong> and understood that within <code>hook_update_N</code> it's better to do config or database related changes &amp; in the <code>hook_post_update_NAME</code> it's better to do entity changes or content changes or something else.</p> <p>To <strong>get to know more about about</strong>, had a check in the drupal core code and found the <code>DbUpdateController</code> class, in which <code>triggerBatch</code> method is doing the stuff on running <code>https://drupal.local/update.php</code></p> <ul class="check"> <li>Initially all <code>hook_update_N</code> are found here and on the basis of module name they are picked up into the batch.</li> <li>Later <code>hook_post_update_NAME</code> are found and added to the batch. In case if any exist then all the caches are flushed at this point.</li> </ul>  <p>Also check the Drush, to understand how drush triggers this stuff. And <code>UpdateDBCommands</code> is the class, in which <code>updateBatch</code> method is doing the stuff on running <code>drush updb</code>.</p> <ul class="check"> <li>Initially gets all the <code>hook_update_N</code> and sorts on the basis of module name and adds to the batch to process and flush caches.</li> <li>In case if any <code>hook_post_update_NAME</code> exists, add all <code>hook_post_update_NAME</code> to the batch to process.</li> </ul> <p><strong>Small difference</strong> on running <code>update.php</code> and <code>drush updb</code>, its flushing caches during the process, apart from this else is the same.</p> <p><strong>Overall, it's not clear</strong> which one to use for what actions. And I see, <strong>better</strong> would be using <code>hook_update_N</code> for <strong>doing database changes or configuration changes</strong> and using <code>hook_post_update_NAME</code> for <strong>doing any entity changes or content changes</strong>. Let me know your thoughts in the comments.</p></div>
+                                <div><p>In this article, we are going to learn when to use <code>hook_update_N</code> and <code>hook_post_update_NAME</code>. In general, I was using <code>hook_update_N</code> for any <strong>database-related</strong> changes or with any <strong><a href="/articles/unable-to-install-update-manager-update-settings-already-exists-in-active-configuration.html" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> additions or updates</strong>. And I was using <code>hook_post_update_NAME</code> for any <strong>content <a href="/articles/cosmology-and-creation-in-the-vedas.html" title="Read about Cosmology And Creation In The Vedas">creation</a> or updating</strong> or for the <strong>creation or updating any <a href="/articles/auto-tagging-taxonomy-terms-drupal.html" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms</strong> etc, sometimes for <strong>clearing site caches</strong> as well.</p> <p>But, let’s have a check like <strong>why Drupal is offering us these two features</strong> and what is the flow of execution of these two.</p> <p>I have <strong>checked few core modules</strong> and a <strong>few contributed modules</strong> and understood that In a few of the modules there is <strong>no clear separation in the usage</strong> of these two hooks and in a few of the modules <code>hook_update_N</code> is used to modify field definitions and <code>hook_post_update_NAME</code> is used for creating or updating data.</p> <p>I have <strong>gone through a few of the articles and documentations</strong> and understood that within <code>hook_update_N</code> it's better to do config or database related changes and in the <code>hook_post_update_NAME</code> it's better to do entity changes or content changes or something else.</p> <p>To <strong>get to know more about about</strong>, had a check in the drupal core code and found the <code>DbUpdateController</code> class, in which <code>triggerBatch</code> method is doing the stuff on running <code>https://drupal.local/update.php</code></p> <ul class="check"> <li>Initially all <code>hook_update_N</code> are found here and on the basis of module name they are picked up into the batch.</li> <li>Later <code>hook_post_update_NAME</code> are found and added to the batch. In case if any exist then all the caches are flushed at this point.</li> </ul>  <p>Also check the Drush, to understand how drush triggers this stuff. And <code>UpdateDBCommands</code> is the class, in which <code>updateBatch</code> method is doing the stuff on running <code>drush updb</code>.</p> <ul class="check"> <li>Initially gets all the <code>hook_update_N</code> and sorts on the basis of module name and adds to the batch to process and flush caches.</li> <li>In case if any <code>hook_post_update_NAME</code> exists, add all <code>hook_post_update_NAME</code> to the batch to process.</li> </ul> <p><strong>Small difference</strong> on running <code>update.php</code> and <code>drush updb</code>, its flushing caches during the process, apart from this else is the same.</p> <p><strong>Overall, it's not clear</strong> which one to use for what actions. And I see, <strong>better</strong> would be using <code>hook_update_N</code> for <strong>doing database changes or configuration changes</strong> and using <code>hook_post_update_NAME</code> for <strong>doing any entity changes or content changes</strong>. Let me know your thoughts in the comments.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4542HqY" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71vwtBCsr8L._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSBRDRDV.html" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" class="shop-title-value">Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)</a></h4>
+                  <div class="discount"><span class="main">32% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dXzb9o" title="Haier 325 L, 3 Star, Convertible 14-in-1 Triple Inverter &amp; Fan Motor Technology, with Display Frost Free Double Door Bottom Mount Refrigerator (HEB-333DS-P, Dazzle Steel, 2024 Model)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/614q1XtcLRL._SX679_.jpg" class="img-fluid lazy" alt="Haier 325 L, 3 Star, Convertible 14-in-1 Triple Inverter &amp; Fan Motor Technology, with Display Frost Free Double Door Bottom Mount Refrigerator (HEB-333DS-P, Dazzle Steel, 2024 Model)" title="Haier 325 L, 3 Star, Convertible 14-in-1 Triple Inverter &amp; Fan Motor Technology, with Display Frost Free Double Door Bottom Mount Refrigerator (HEB-333DS-P, Dazzle Steel, 2024 Model)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BTHLGYHZ.html" title="Haier 325 L, 3 Star, Convertible 14-in-1 Triple Inverter &amp; Fan Motor Technology, with Display Frost Free Double Door Bottom Mount Refrigerator (HEB-333DS-P, Dazzle Steel, 2024 Model)" class="shop-title-value">Haier 325 L, 3 Star, Convertible 14-in-1 Triple Inverter &amp; Fan Motor Technology, with Display Frost Free Double Door Bottom Mount Refrigerator (HEB-333DS-P, Dazzle Steel, 2024 Model)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,040</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,350</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>34,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">71% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YNORWj" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61mfqrETVOL._SX679_.jpg" class="img-fluid lazy" alt="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CLYG2R1H.html" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" class="shop-title-value">MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))</a></h4>
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Pj2QzC" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61pt59LW-lL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPBNTC.html" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" class="shop-title-value">iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,784</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>18,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dfc9uQ" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71uOoXevxwL._SX679_.jpg" class="img-fluid lazy" alt="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHM729GT.html" title="Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM" class="shop-title-value">Lava Storm 5G(Gale Green,8GB RAM,128GB ROM)-Powered by MediaTek Dimensity 6080 Processor|120Hz FHD+ Display|50MP+8MP Ultrawide Camera|16MP FrontCamera|33W Fast Charging|Upto 16GB ExpandableRAM</a></h4>
+                  <div class="discount"><span class="main">72% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4m0TZAn" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91N52mFPgGL._SX679_.jpg" class="img-fluid lazy" alt="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKT8R1H.html" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" class="shop-title-value">boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,990</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDrB9l" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61WwrG1D13L._SX679_.jpg" class="img-fluid lazy" alt="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BMT9VP8R.html" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" class="shop-title-value">TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CX0p2E" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71SpdMLBi6L._SX679_.jpg" class="img-fluid lazy" alt="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CXLDSHSH.html" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" class="shop-title-value">JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,999</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">41% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gRmrng" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81P2YOHSQRL._SX679_.jpg" class="img-fluid lazy" alt="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F835K3HL.html" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" class="shop-title-value">LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA</a></h4>
+                  <div class="discount"><span class="main">61% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fXyOxn" title="INALSA Air Fryer for Home|5.5 liter Capacity|Visible Window &amp; Internal Light|1600 W with Smart AirCrisp Technology|6-In-1 Appliance With 8 Preset Menu &amp; Digital Display (Tasty fry DW5.5) Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61y6vBkpILL._SX679_.jpg" class="img-fluid lazy" alt="INALSA Air Fryer for Home|5.5 liter Capacity|Visible Window &amp; Internal Light|1600 W with Smart AirCrisp Technology|6-In-1 Appliance With 8 Preset Menu &amp; Digital Display (Tasty fry DW5.5) Black" title="INALSA Air Fryer for Home|5.5 liter Capacity|Visible Window &amp; Internal Light|1600 W with Smart AirCrisp Technology|6-In-1 Appliance With 8 Preset Menu &amp; Digital Display (Tasty fry DW5.5) Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C7QT1433.html" title="INALSA Air Fryer for Home|5.5 liter Capacity|Visible Window &amp; Internal Light|1600 W with Smart AirCrisp Technology|6-In-1 Appliance With 8 Preset Menu &amp; Digital Display (Tasty fry DW5.5) Black" class="shop-title-value">INALSA Air Fryer for Home|5.5 liter Capacity|Visible Window &amp; Internal Light|1600 W with Smart AirCrisp Technology|6-In-1 Appliance With 8 Preset Menu &amp; Digital Display (Tasty fry DW5.5) Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>26,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,090</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,994</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,795</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">55% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hg8vBL" title="Aquaguard Delight NXT Aquasaver 9-Stage Water Purifier | Upto 60% Water Savings | RO+UV+UF+MC Tech | Taste Adjuster | Suitable for Borewell, Tanker &amp; Municipal Water | India’s #1 Water Purifier" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51azW1nqt6L._SX679_.jpg" class="img-fluid lazy" alt="Aquaguard Delight NXT Aquasaver 9-Stage Water Purifier | Upto 60% Water Savings | RO+UV+UF+MC Tech | Taste Adjuster | Suitable for Borewell, Tanker &amp; Municipal Water | India’s #1 Water Purifier" title="Aquaguard Delight NXT Aquasaver 9-Stage Water Purifier | Upto 60% Water Savings | RO+UV+UF+MC Tech | Taste Adjuster | Suitable for Borewell, Tanker &amp; Municipal Water | India’s #1 Water Purifier" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CW5YZ6VV.html" title="Aquaguard Delight NXT Aquasaver 9-Stage Water Purifier | Upto 60% Water Savings | RO+UV+UF+MC Tech | Taste Adjuster | Suitable for Borewell, Tanker &amp; Municipal Water | India’s #1 Water Purifier" class="shop-title-value">Aquaguard Delight NXT Aquasaver 9-Stage Water Purifier | Upto 60% Water Savings | RO+UV+UF+MC Tech | Taste Adjuster | Suitable for Borewell, Tanker &amp; Municipal Water | India’s #1 Water Purifier</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3A84xLU" title="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/511ZzuWFVYL._SX679_.jpg" class="img-fluid lazy" alt="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" title="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSSPDT7C.html" title="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" class="shop-title-value">Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>63,100</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">38% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Upk40k" title="Godrej 223 L 2 Star Nano Shield Technology, Inverter Frost Free Double Door Refrigerator(RF EON 244B RI ST GL, Steel Glow)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81UaS57KmsL._SX679_.jpg" class="img-fluid lazy" alt="Godrej 223 L 2 Star Nano Shield Technology, Inverter Frost Free Double Door Refrigerator(RF EON 244B RI ST GL, Steel Glow)" title="Godrej 223 L 2 Star Nano Shield Technology, Inverter Frost Free Double Door Refrigerator(RF EON 244B RI ST GL, Steel Glow)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BXSRCPJ1.html" title="Godrej 223 L 2 Star Nano Shield Technology, Inverter Frost Free Double Door Refrigerator(RF EON 244B RI ST GL, Steel Glow)" class="shop-title-value">Godrej 223 L 2 Star Nano Shield Technology, Inverter Frost Free Double Door Refrigerator(RF EON 244B RI ST GL, Steel Glow)</a></h4>
+                  <div class="discount"><span class="main">32% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3AEK4hV" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51LvZVt7+XL._SY879_.jpg" class="img-fluid lazy" alt="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D222PDZ3.html" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" class="shop-title-value">Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>20,790</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,690</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,790</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>38,150</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">68% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fGWCom" title="Vita Flex E and Selenium Supplement for Horses, Balanced Essential Antioxidants, 64 Day Supply 4 Pound" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71AJcp36uwL._SX679_.jpg" class="img-fluid lazy" alt="Vita Flex E and Selenium Supplement for Horses, Balanced Essential Antioxidants, 64 Day Supply 4 Pound" title="Vita Flex E and Selenium Supplement for Horses, Balanced Essential Antioxidants, 64 Day Supply 4 Pound" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B000HHSB8O.html" title="Vita Flex E and Selenium Supplement for Horses, Balanced Essential Antioxidants, 64 Day Supply 4 Pound" class="shop-title-value">Vita Flex E and Selenium Supplement for Horses, Balanced Essential Antioxidants, 64 Day Supply 4 Pound</a></h4>
+                  <div class="discount"><span class="main">38% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3MG20v8" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/81QGKn2LCfL._SX679_.jpg" class="img-fluid lazy" alt="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BK1KS6ZD.html" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" class="shop-title-value">Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,182</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,680</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>58,400</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dNp2vh" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/512J3gqzLuL._SX679_.jpg" class="img-fluid lazy" alt="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSG412HD.html" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" class="shop-title-value">Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)</a></h4>
+                  <div class="discount"><span class="main">47% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YIhGoO" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61mKKrl80NL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6G4CVZ7.html" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" class="shop-title-value">Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>34,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>67,790</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">49% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hHaRKu" title="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51dfURQWjOL._SX679_.jpg" class="img-fluid lazy" alt="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray" title="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CRQB4HBP.html" title="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray" class="shop-title-value">HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray</a></h4>
+                  <div class="discount"><span class="main">58% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pSriss" title="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71lS1u8lQsL._SX679_.jpg" class="img-fluid lazy" alt="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" title="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DKNL8CHP.html" title="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" class="shop-title-value">acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>77,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">30% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/44T0ywn" title="Dell [Smartchoice] Core i3-1215U, 12th Gen (8GB RAM/512GB SSD/FHD/Window 11/MS Office&#039; 21/15&quot;(38 cm)/15 Month McAfee/Black/1.48kg Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61QXAqq9OhL._SX679_.jpg" class="img-fluid lazy" alt="Dell [Smartchoice] Core i3-1215U, 12th Gen (8GB RAM/512GB SSD/FHD/Window 11/MS Office&#039; 21/15&quot;(38 cm)/15 Month McAfee/Black/1.48kg Laptop" title="Dell [Smartchoice] Core i3-1215U, 12th Gen (8GB RAM/512GB SSD/FHD/Window 11/MS Office&#039; 21/15&quot;(38 cm)/15 Month McAfee/Black/1.48kg Laptop" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BQJ68HHC.html" title="Dell [Smartchoice] Core i3-1215U, 12th Gen (8GB RAM/512GB SSD/FHD/Window 11/MS Office&#039; 21/15&quot;(38 cm)/15 Month McAfee/Black/1.48kg Laptop" class="shop-title-value">Dell [Smartchoice] Core i3-1215U, 12th Gen (8GB RAM/512GB SSD/FHD/Window 11/MS Office&#039; 21/15&quot;(38 cm)/15 Month McAfee/Black/1.48kg Laptop</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3xAXfPf" title="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71293gyogZL._SX385_.jpg" class="img-fluid lazy" alt="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster" title="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09XB8GFBQ.html" title="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster" class="shop-title-value">Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>33,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>48,692</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41XuCbQ" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lfG3UaigL._SX679_.jpg" class="img-fluid lazy" alt="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CNRNH49R.html" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" class="shop-title-value">GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black</a></h4>
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YwZvCl" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61lhB3uQT3L._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7M8LG8S.html" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" class="shop-title-value">Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,290</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,998</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

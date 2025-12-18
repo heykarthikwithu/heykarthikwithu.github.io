@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/drupal-configuration-management-local-dev-test-and-live.html"
+          "@id": "https://peoplesblog.co.in/articles/drupal-configuration-management-local-dev-test-and-live.html"
         },
         "headline": "Drupal Configuration management (Local, Dev, Test and Live)",
-        "description": "In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contribut",
-        "image": "https://peoplesblog.co.in/upload/banners/drupal-configuration-management-local-dev-test-and-live.png",
+        "description": "In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contributed modules and version control. Drupal 8 onwards configuration has been saved in the yml files in a consistent manner, which includes all the enabled modules,, all the content types, vocabularies, fields and views.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/drupal-configuration-management-local-dev-test-and-live.png",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2022-06-04"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/drupal-configuration-management-local-dev-test-and-live.png" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contributed modules and version control.</p>  <p>Drupal 8 onwards <a href="/articles/configuration-management-via-quicksilver-on-pantheon.html" title="Read about Configuration Management Via Quicksilver On Pantheon">configuration</a> has been saved in the yml files in a consistent manner, which includes all the enabled modules, all the content types, vocabularies, fields &amp; views.</p>  <p>Making the configurations directly in the higher environment is not recommended, every configuration should go to a higher environment via code change (which is maintained in version control).</p>  <p>Drupal core provides the feature to import, export &amp; synchronise the configurations. Drupal provides drush commands for the same feature (which is even more helpful).</p>  <p><code>$settings['config_sync_directory'] = '../config/sync';</code></p>  <p>We can use the Configuration Split contributed module. This module allows us to create a group of configurations that can be exported to <a href="/articles/different-spices-are-used-to-make-a-garam-masala-mix.html" title="Read about Different Spices Are Used To Make A Garam Masala Mix">different</a> folders during exporting. This can be configured from the <code>settings.php</code>, like what folder should be active for which environment.</p>  <p>Create four environments in the config split configuration.</p>  <ol> <li>Local</li> <li>Dev</li> <li>Test</li> <li>Live</li> </ol>   <p>Here goes the folder structure of the config.</p> <p><code>config</code></p>  <ul> <li><code>default</code></li> <li><code>env</code> <ul> <li><code>local</code></li> <li><code>dev</code></li> <li><code>test</code></li> <li><code>live</code></li> </ul> </li> </ul>  <p>And in the <code>settings.php</code> file, configuration for this should go like below</p>  <p><code>switch ($env) {</code></p>  <p><code>    case ‘dev’:</code></p>  <p><code>        $config['config_split.config_split.local’]['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.dev']['status'] = TRUE;</code></p>  <p><code>        $config['config_split.config_split.test']['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.live']['status'] = FALSE;</code></p>  <p><code>        ….</code></p>  <p><code>        Similarly set for all env’s</code></p>  <p><code>        ….</code></p>  <p><code>    case ‘default’:</code></p>  <p><code>        $config['config_split.config_split.local’]['status'] = TRUE;</code></p>  <p><code>        $config['config_split.config_split.dev']['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.test']['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.live']['status'] = FALSE;</code></p>  <p><code>}</code></p>  <p>To export &amp; import the configuration, you can use the <code>drush cex</code> &amp; <code>drush cim</code> and commit the changes to the repository.</p>  <p>This way would be best to manage the configuration in the drupal applications.</p></div>
+                                <div><p>In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contributed modules and version control.</p>  <p>Drupal 8 onwards <a href="/articles/configuration-management-via-quicksilver-on-pantheon.html" title="Read about Configuration Management Via Quicksilver On Pantheon">configuration</a> has been saved in the yml files in a consistent manner, which includes all the enabled modules, all the content types, vocabularies, fields and views.</p>  <p>Making the configurations directly in the higher environment is not recommended, every configuration should go to a higher environment via code change (which is maintained in version control).</p>  <p>Drupal core provides the feature to import, export and synchronise the configurations. Drupal provides drush commands for the same feature (which is even more helpful).</p>  <p><code>$settings['config_sync_directory'] = '../config/sync';</code></p>  <p>We can use the Configuration Split contributed module. This module allows us to create a group of configurations that can be exported to <a href="/articles/different-spices-are-used-to-make-a-garam-masala-mix.html" title="Read about Different Spices Are Used To Make A Garam Masala Mix">different</a> folders during exporting. This can be configured from the <code>settings.php</code>, like what folder should be active for which environment.</p>  <p>Create four environments in the config split configuration.</p>  <ol> <li>Local</li> <li>Dev</li> <li>Test</li> <li>Live</li> </ol>   <p>Here goes the folder structure of the config.</p> <p><code>config</code></p>  <ul> <li><code>default</code></li> <li><code>env</code> <ul> <li><code>local</code></li> <li><code>dev</code></li> <li><code>test</code></li> <li><code>live</code></li> </ul> </li> </ul>  <p>And in the <code>settings.php</code> file, configuration for this should go like below</p>  <p><code>switch ($env) {</code></p>  <p><code>    case ‘dev’:</code></p>  <p><code>        $config['config_split.config_split.local’]['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.dev']['status'] = TRUE;</code></p>  <p><code>        $config['config_split.config_split.test']['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.live']['status'] = FALSE;</code></p>  <p><code>        ….</code></p>  <p><code>        Similarly set for all env’s</code></p>  <p><code>        ….</code></p>  <p><code>    case ‘default’:</code></p>  <p><code>        $config['config_split.config_split.local’]['status'] = TRUE;</code></p>  <p><code>        $config['config_split.config_split.dev']['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.test']['status'] = FALSE;</code></p>  <p><code>        $config['config_split.config_split.live']['status'] = FALSE;</code></p>  <p><code>}</code></p>  <p>To export and import the configuration, you can use the <code>drush cex</code> and <code>drush cim</code> and commit the changes to the repository.</p>  <p>This way would be best to manage the configuration in the drupal applications.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41fdayC" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BmLjte2HL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9MBP7DJ.html" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" class="shop-title-value">Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)</a></h4>
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YwZvCl" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61lhB3uQT3L._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7M8LG8S.html" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" class="shop-title-value">Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor</a></h4>
                   <div class="price">
                       <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,000</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">76% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46kOIxv" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71PJjjeM4bL._SX679_.jpg" class="img-fluid lazy" alt="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZ6KW5HQ.html" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" class="shop-title-value">TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)</a></h4>
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41XuCbQ" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lfG3UaigL._SX679_.jpg" class="img-fluid lazy" alt="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CNRNH49R.html" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" class="shop-title-value">GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>61,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>2,54,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,290</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,998</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Q1353t" title="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qIChjrrYL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)" title="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C2TNR2X2.html" title="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)" class="shop-title-value">Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)</a></h4>
+                  <div class="discount"><span class="main">44% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IPm7YW" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Vh6xPNA-L._SX679_.jpg" class="img-fluid lazy" alt="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCZMPRXC.html" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" class="shop-title-value">VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>37,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">29% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46oztBR" title="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71zWZo78JqL._SX679_.jpg" class="img-fluid lazy" alt="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" title="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B072J83V9W.html" title="Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)" class="shop-title-value">Philips Viva Collection HR1863/20 2-Litre Juicer (Black/Silver)</a></h4>
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4nn8PCx" title="KENT Supreme Plus Alkaline+Copper RO Water Purifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for Sabse Shudh Paani | Auto Flush | 8L| 20LPH | Ideal for Borewell/Tanker/Municipal Water" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61ubg1R7ofL._SX522_.jpg" class="img-fluid lazy" alt="KENT Supreme Plus Alkaline+Copper RO Water Purifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for Sabse Shudh Paani | Auto Flush | 8L| 20LPH | Ideal for Borewell/Tanker/Municipal Water" title="KENT Supreme Plus Alkaline+Copper RO Water Purifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for Sabse Shudh Paani | Auto Flush | 8L| 20LPH | Ideal for Borewell/Tanker/Municipal Water" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09F2FW4ZK.html" title="KENT Supreme Plus Alkaline+Copper RO Water Purifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for Sabse Shudh Paani | Auto Flush | 8L| 20LPH | Ideal for Borewell/Tanker/Municipal Water" class="shop-title-value">KENT Supreme Plus Alkaline+Copper RO Water Purifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for Sabse Shudh Paani | Auto Flush | 8L| 20LPH | Ideal for Borewell/Tanker/Municipal Water</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,199</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,500</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">66% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Cn8Qnn" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61UzKCR7JJL._SX679_.jpg" class="img-fluid lazy" alt="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09FGN9CD9.html" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" class="shop-title-value">Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4de5TD1" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BENnbPpuL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DZ1SPM.html" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" class="shop-title-value">Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,799</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,900</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">21% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3wS8EtK" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Id6WJDWqL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPJPR3.html" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" class="shop-title-value">iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone</a></h4>
+                  <div class="discount"><span class="main">47% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YyMO9N" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6131fzwXapL._SX679_.jpg" class="img-fluid lazy" alt="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B1DDZZ7K.html" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" class="shop-title-value">V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,639</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,500</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">38% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40C6s6m" title="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days." rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71YP0euGGIL._SX679_.jpg" class="img-fluid lazy" alt="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days." title="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days." src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0854DCXM2.html" title="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days." class="shop-title-value">Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days.</a></h4>
+                  <div class="discount"><span class="main">32% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48Ar7cX" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 256 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61ZEkMXevXL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 256 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 256 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6G4SKGK.html" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 256 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" class="shop-title-value">Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 256 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,074.05</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,000</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">55% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3NLH3Q9" title="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91b1B9Pjd2L._SX679_.jpg" class="img-fluid lazy" alt="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" title="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09Y65HV6N.html" title="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" class="shop-title-value">Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)</a></h4>
+                  <div class="discount"><span class="main">57% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/480M9AE" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OTEKiXIML._UY879_.jpg" class="img-fluid lazy" alt="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B00J4JKOX6.html" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" class="shop-title-value">Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>3,99,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>8,79,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,000</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">52% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gQqQXB" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nhlYFnOhL._SX679_.jpg" class="img-fluid lazy" alt="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09X1P3J6G.html" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" class="shop-title-value">Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black</a></h4>
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41fdayC" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BmLjte2HL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9MBP7DJ.html" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" class="shop-title-value">Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,500</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-3 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">50% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4g4O1eW" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51P0kGaUQ2L._SX679_.jpg" class="img-fluid lazy" alt="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07SGFSMXN.html" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" class="shop-title-value">JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-3 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">24% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3APl4oy" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/513esKxjeyL._SX679_.jpg" class="img-fluid lazy" alt="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BGXMZBLY.html" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" class="shop-title-value">Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,104.45</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,600</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
                   <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4851m6o" title="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71-jKID9hgL._SY879_.jpg" class="img-fluid lazy" alt="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" title="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DD45WVCM.html" title="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" class="shop-title-value">LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3V7waNl" title="OnePlus Nord CE 3 5G (Aqua Surge, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61abLrCfF7L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord CE 3 5G (Aqua Surge, 8GB RAM, 128GB Storage)" title="OnePlus Nord CE 3 5G (Aqua Surge, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9QPJY5R.html" title="OnePlus Nord CE 3 5G (Aqua Surge, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord CE 3 5G (Aqua Surge, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>33,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,490</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YwZvCl" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61lhB3uQT3L._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7M8LG8S.html" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" class="shop-title-value">Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47kSpmS" title="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/7113xg1N46L._SY879_.jpg" class="img-fluid lazy" alt="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" title="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09T6XD839.html" title="Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)" class="shop-title-value">Samsung 9 kg, 5 Star, Eco Bubble Technology, AI Control , Wi-Fi, Digital Inverter Motor, Fully-Automatic Front Load Washing Machine Appliance (WW90T504DAN1TL, Hygiene Steam, Inox)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>40,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>61,000</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

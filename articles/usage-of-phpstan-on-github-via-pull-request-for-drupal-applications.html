@@ -8,12 +8,12 @@
     <meta name="description" content="To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code a" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html" />
     <meta property="og:title" content="Usage of PhpStan on Github via Pull Request for Drupal Applications" />
-    <meta property="og:description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We" />
+    <meta property="og:description" content="In this article, we are going to see how some tools and libraries will make people's lives easier during the development and code review process. We h" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="Usage of PhpStan on Github via Pull Request for Drupal Applications" />
-    <meta name="twitter:description" content="In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We" />
+    <meta name="twitter:description" content="In this article, we are going to see how some tools and libraries will make people's lives easier during the development and code review process. We h" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html"
+          "@id": "https://peoplesblog.co.in/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html"
         },
         "headline": "Usage of PhpStan on Github via Pull Request for Drupal Applications",
-        "description": "In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We",
-        "image": "https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg",
+        "description": "In this article, we are going to see how some tools and libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this. To make developer life easier, developers look for tools or librariess which can automated code review and if needed make any corrections in the code automatically.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2022-07-05"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we are going to see how some tools &amp; libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.</p>  <p>To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PhpStan, a static analysing tool which primarily focuses on finding errors in your code without actually running.</p>  <p>If you are <a href="/articles/tips-for-maintaining-motivation-during-tough-times.html" title="Read about Tips For Maintaining Motivation During Tough Times">maintaining</a> your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>We could run this locally as well by having the PhpStan library, which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">environment</a>.</p>  <p>Also, having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br>   phpstan-report:<br>     runs-on: ubuntu-latest<br>     steps:<br>      - name: Clone the code<br>        uses: actions/checkout@v3<br>      - name: Setup PHP 7.4<br>        uses: shivamathur/setup-php@v2<br>        with:<br>           php-version: 7.4<br>      - name: Composer install<br>        run: composer install<br>      - name: Analyse codebase<br>        run: ./vendor/bin/phpstan analyse ./web/modules/custom</code></p>  <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 4 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To run the phpstan checks (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
+                                <div><p>In this article, we are going to see how some tools and libraries will make people's lives easier during the development and code review process. We have a similar helpful article related to Phpcs, have a check of this.</p>  <p>To make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PhpStan, a static analysing tool which primarily focuses on finding errors in your code without actually running.</p>  <p>If you are <a href="/articles/tips-for-maintaining-motivation-during-tough-times.html" title="Read about Tips For Maintaining Motivation During Tough Times">maintaining</a> your code in Github, then Github is providing continuous integration support within their workflows.</p>  <p>We could run this locally as well by having the PhpStan library, which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">environment</a>.</p>  <p>Also, having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>  <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br>   phpstan-report:<br>     runs-on: ubuntu-latest<br>     steps:<br>      - name: Clone the code<br>        uses: actions/checkout@v3<br>      - name: Setup PHP 7.4<br>        uses: shivamathur/setup-php@v2<br>        with:<br>           php-version: 7.4<br>      - name: Composer install<br>        run: composer install<br>      - name: Analyse codebase<br>        run: ./vendor/bin/phpstan analyse ./web/modules/custom</code></p>  <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 4 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To run the phpstan checks (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">66% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Cn8Qnn" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61UzKCR7JJL._SX679_.jpg" class="img-fluid lazy" alt="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09FGN9CD9.html" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" class="shop-title-value">Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3RcA30X" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61zByLjZFnL._SY879_.jpg" class="img-fluid lazy" alt="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3MHB63Q.html" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" class="shop-title-value">Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,799</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,600</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ErS9Ir" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71N8si9jomL._SX679_.jpg" class="img-fluid lazy" alt="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3VYT6Q6.html" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" class="shop-title-value">JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)</a></h4>
+                  <div class="discount"><span class="main">52% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gQqQXB" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nhlYFnOhL._SX679_.jpg" class="img-fluid lazy" alt="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09X1P3J6G.html" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" class="shop-title-value">Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,500</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">44% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IPm7YW" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Vh6xPNA-L._SX679_.jpg" class="img-fluid lazy" alt="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCZMPRXC.html" title="VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)" class="shop-title-value">VW 109 cm (43 inches) Playwall Frameless Series Full HD Android Smart LED TV VW43F2 (Black)</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Kh737v" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6181iXAgMjL._SX679_.jpg" class="img-fluid lazy" alt="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBQ2L8XY.html" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" class="shop-title-value">ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>51,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">76% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45AAMxy" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BRcToMOpL._SX679_.jpg" class="img-fluid lazy" alt="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07FKD34D6.html" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" class="shop-title-value">Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4de5TD1" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BENnbPpuL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DZ1SPM.html" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" class="shop-title-value">Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,299</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,705</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,900</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41GEDK3" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91EAEKi3EYL._SX679_.jpg" class="img-fluid lazy" alt="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKW3T1L.html" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" class="shop-title-value">boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)</a></h4>
+                  <div class="discount"><span class="main">61% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hiCzwB" title="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71eBHe20YJL._SX679_.jpg" class="img-fluid lazy" alt="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" title="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DHSY34ZS.html" title="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" class="shop-title-value">Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>44,990</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4de5TD1" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BENnbPpuL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DZ1SPM.html" title="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)" class="shop-title-value">Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)</a></h4>
+                  <div class="discount"><span class="main">32% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46GzAfn" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61zuR3UMnWL._SY879_.jpg" class="img-fluid lazy" alt="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08GTYFC37.html" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" class="shop-title-value">SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,800</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41fdayC" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BmLjte2HL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9MBP7DJ.html" title="Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)" class="shop-title-value">Lenovo Tab M10 5G |10.6 inch (26.9cm)| 6 GB, 128 GB Expandable|Wi-Fi+ 5G | 90 Hz, 2K Display (2000x1200)|Dual Speakers with Dolby Atmos |Android 13 | Octa-Core Processor (Abyss Blue, ZACT0030IN)</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gCeqkb" title="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71dEitCVLxL._SX679_.jpg" class="img-fluid lazy" alt="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" title="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C7H6SSC8.html" title="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" class="shop-title-value">ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>49,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>76,990</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">72% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4m0TZAn" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91N52mFPgGL._SX679_.jpg" class="img-fluid lazy" alt="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKT8R1H.html" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)" class="shop-title-value">boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker, Portable Speaker (Sea Green)</a></h4>
+                  <div class="discount"><span class="main">79% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3VRfxV5" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61YQ754bpRL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CTT6K6JS.html" title="AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)" class="shop-title-value">AQUA LIBRA WITH DEVICE Isi Mark Black Color Water Purifier With Ro+Copper+Uv Plus Tds Adjuster For Home For Kitchen(Model 2090)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>3,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Kh737v" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6181iXAgMjL._SX679_.jpg" class="img-fluid lazy" alt="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBQ2L8XY.html" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" class="shop-title-value">ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins</a></h4>
+                  <div class="discount"><span class="main">6% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Rm7D4t" title="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nxQ62qglL._SX679_.jpg" class="img-fluid lazy" alt="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" title="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX59SD6C.html" title="Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)" class="shop-title-value">Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>51,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">57% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/480M9AE" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OTEKiXIML._UY879_.jpg" class="img-fluid lazy" alt="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B00J4JKOX6.html" title="Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band" class="shop-title-value">Invicta Stainless Steel Pro-Diver Analog Black Dial Men Watch-8927Ob, Multi-Color Band</a></h4>
+                  <div class="discount"><span class="main">60% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/44Flmr2" title="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qKiT8j2rL._SX679_.jpg" class="img-fluid lazy" alt="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" title="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BBVBCL3F.html" title="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" class="shop-title-value">boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">68% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40GpMz3" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/8145KzfUFxL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LBHRDY8.html" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50673003</a></h4>
+                  <div class="discount"><span class="main">76% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45AAMxy" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BRcToMOpL._SX679_.jpg" class="img-fluid lazy" alt="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07FKD34D6.html" title="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black" class="shop-title-value">Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,299</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,705</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">68% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eM1BCR" title="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71iXd2zmTHL._SX679_.jpg" class="img-fluid lazy" alt="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" title="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0002IEQMS.html" title="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" class="shop-title-value">K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;</a></h4>
+                  <div class="discount"><span class="main">50% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4g4O1eW" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51P0kGaUQ2L._SX679_.jpg" class="img-fluid lazy" alt="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07SGFSMXN.html" title="JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer" class="shop-title-value">JD9 17&#039;&#039; Guillotine Paper Cutter, Heavy Duty A3+ Trimmer Machine with Tool Kit, Commercial Metal Base and 400 Sheet Large Capacity for Home and Office, Paper Trimmer</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,692</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>40,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/drupal-jsonapi-deep-dive-part-two.html"
+          "@id": "https://peoplesblog.co.in/articles/drupal-jsonapi-deep-dive-part-two.html"
         },
         "headline": "Drupal JSON API, Deep Dive - Part 2",
-        "description": "In Part 2, Let's see about the Core concepts like Types, URL structure, HTTP methods, Request headers, Response codes and Document structure i.e Data",
-        "image": "https://peoplesblog.co.in/upload/banners/Decoupled Drupal 8 with JSON API.jpg",
+        "description": "In Part 2, Let's see about the Core concepts like Types, URL structure, HTTP methods, Request headers, Response codes and Document structure i.e Data in the request body. JSON:API module will provide the APIs for Drupal entity types and bundles, where every bundle will have its own unique url path, which will have a shared pattern.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/Decoupled Drupal 8 with JSON API.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2021-03-28"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/Decoupled Drupal 8 with JSON API.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In Part 2, Let's see about the Core concepts like Types, URL structure, HTTP methods, Request headers, Response codes and <a href="/articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html" title="Read about How To Create A Document Library In Sharepoint And Configure Content Types Terms User Groups And Permissions">Document</a> structure i.e Data in the request body. JSON:API module will <strong>provide the APIs for Drupal entity types and bundles</strong>, where every bundle will have its own unique url path, which will have a shared pattern.</p>                                <h3>Types</h3>                                <p>Every resource in JSON:API must have a globally unique <code>type</code> property. For example, articles, pages and users are given the types <code>node--article</code>, <code>node--pages</code> and <code>user--user</code>, respectively. Note, user entity type in Drupal does not have a bundle. When an entity type does not have a bundle, the entity type is simply repeated for consistency</p>                                <h3>URL Structure</h3>                                <p>Every resource type must be uniquely addressable in the API. This means that every type that's available to the API must have a unique URL.<br>                                    <code>GET|POST     /jsonapi/node/article</code><br>                                    <code>PATCH|DELETE /jsonapi/node/article/{uuid}</code>                                </p>                                <p>Drupal implementation follows the pattern: <code>/jsonapi/{entity_type_id}/{bundle_id}[/{entity_id}]</code>.</p>                                <p>Exists:                                    <code>/jsonapi/node/page</code><br>                                    <code>/jsonapi/node/article</code><br>                                Does not exist:<br>                                    <code>/jsonapi/node</code>                                </p>                                <p>Usage <br>                                    <code>GET|POST /jsonapi/node/article</code><br>                                    <code>PATCH|DELETE /jsonapi/node/article/{uuid}</code>                                </p>                                <h3>HTTP Methods</h3>                                <p>JSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.</p>                                <ul class="check1">                                    <li>GET - Retrieve data, can be a <a href="/articles/rain-water-collection-storage-purification.html" title="Read about Rain Water Collection Storage Purification">collection</a> of resources or an individual resource</li>                                    <li>POST - Create a new resource</li>                                    <li>PATCH - Update an existing resource</li>                                    <li>DELETE - Remove an existing resource</li>                                </ul>                                <h3>Request headers</h3>                                <p>Make sure to use 'Content type' and 'Accept' headers when appropriate.<br>                                    <code>Accept: application/vnd.api+json</code><br>                                    <code>Content-Type: application/vnd.api+json</code>                                </p>                                <h3>Response Codes</h3>                                <p>The JSON:API Specification also dictates acceptable responses. The Drupal implementation uses a subset of those. The module can respond with the following codes</p>                                <ul class="check1">                                    <li>200 OK - All successful GET and PATCH requests</li>                                    <li>201 Created - All successful POST requests (response includes the newly created resource)</li>                                    <li>204 No Content - All successful DELETE requests</li>                                </ul>                                <h3>Document Structure</h3>                                <p>The JSON:API is highly opinionated about how JSON documents should be structured and what information must go into every request and/or response body.</p>                                <ul class="check1">                                    <li>Every request/response body must be underneath a single JSON object.</li>                                    <li>The <code>data</code> member can be either an object ({}) or an array ([]) and containes data specific to resource.</li>                                    <li>Other top-level members include: <code>errors</code>, <code>meta</code>, <code>links</code> and <code>included</code>. Of these, included will be used most often.</li>                                    <li>Every resource object must contain two members: <code>type</code> and <code>id</code>. All ID's in the JSON:API are UUIDs.</li>                                    <li>Actual values of entity are kept under <code>attributes</code> and <code>relationships</code>. <code>attributes</code> should have values specific to resource. <code>relationships</code> are values that belong to another resource in system.</li>                                    <li>Also sometime will have "Virtual" Resource Identifiers &amp; "Missing" Resource Identifiers.</li>                                </ul></div>
+                                <div><p>In Part 2, Let's see about the Core concepts like Types, URL structure, HTTP methods, Request headers, Response codes and <a href="/articles/how-to-create-a-document-library-in-sharepoint-and-configure-content-types-terms-user-groups-and-permissions.html" title="Read about How To Create A Document Library In Sharepoint And Configure Content Types Terms User Groups And Permissions">Document</a> structure i.e Data in the request body. JSON:API module will <strong>provide the APIs for Drupal entity types and bundles</strong>, where every bundle will have its own unique url path, which will have a shared pattern.</p>                                <h3>Types</h3>                                <p>Every resource in JSON:API must have a globally unique <code>type</code> property. For example, articles, pages and users are given the types <code>node--article</code>, <code>node--pages</code> and <code>user--user</code>, respectively. Note, user entity type in Drupal does not have a bundle. When an entity type does not have a bundle, the entity type is simply repeated for consistency</p>                                <h3>URL Structure</h3>                                <p>Every resource type must be uniquely addressable in the API. This means that every type that's available to the API must have a unique URL.<br>                                    <code>GET|POST     /jsonapi/node/article</code><br>                                    <code>PATCH|DELETE /jsonapi/node/article/{uuid}</code>                                </p>                                <p>Drupal implementation follows the pattern: <code>/jsonapi/{entity_type_id}/{bundle_id}[/{entity_id}]</code>.</p>                                <p>Exists:                                    <code>/jsonapi/node/page</code><br>                                    <code>/jsonapi/node/article</code><br>                                Does not exist:<br>                                    <code>/jsonapi/node</code>                                </p>                                <p>Usage <br>                                    <code>GET|POST /jsonapi/node/article</code><br>                                    <code>PATCH|DELETE /jsonapi/node/article/{uuid}</code>                                </p>                                <h3>HTTP Methods</h3>                                <p>JSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.</p>                                <ul class="check1">                                    <li>GET - Retrieve data, can be a <a href="/articles/rain-water-collection-storage-purification.html" title="Read about Rain Water Collection Storage Purification">collection</a> of resources or an individual resource</li>                                    <li>POST - Create a new resource</li>                                    <li>PATCH - Update an existing resource</li>                                    <li>DELETE - Remove an existing resource</li>                                </ul>                                <h3>Request headers</h3>                                <p>Make sure to use 'Content type' and 'Accept' headers when appropriate.<br>                                    <code>Accept: application/vnd.api+json</code><br>                                    <code>Content-Type: application/vnd.api+json</code>                                </p>                                <h3>Response Codes</h3>                                <p>The JSON:API Specification also dictates acceptable responses. The Drupal implementation uses a subset of those. The module can respond with the following codes</p>                                <ul class="check1">                                    <li>200 OK - All successful GET and PATCH requests</li>                                    <li>201 Created - All successful POST requests (response includes the newly created resource)</li>                                    <li>204 No Content - All successful DELETE requests</li>                                </ul>                                <h3>Document Structure</h3>                                <p>The JSON:API is highly opinionated about how JSON documents should be structured and what information must go into every request and/or response body.</p>                                <ul class="check1">                                    <li>Every request/response body must be underneath a single JSON object.</li>                                    <li>The <code>data</code> member can be either an object ({}) or an array ([]) and containes data specific to resource.</li>                                    <li>Other top-level members include: <code>errors</code>, <code>meta</code>, <code>links</code> and <code>included</code>. Of these, included will be used most often.</li>                                    <li>Every resource object must contain two members: <code>type</code> and <code>id</code>. All ID's in the JSON:API are UUIDs.</li>                                    <li>Actual values of entity are kept under <code>attributes</code> and <code>relationships</code>. <code>attributes</code> should have values specific to resource. <code>relationships</code> are values that belong to another resource in system.</li>                                    <li>Also sometime will have "Virtual" Resource Identifiers and "Missing" Resource Identifiers.</li>                                </ul></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">69% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3EvO1Hs" title="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71lptXjPprL._SX679_.jpg" class="img-fluid lazy" alt="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" title="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZLFJ3QY.html" title="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" class="shop-title-value">TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)</a></h4>
+                  <div class="discount"><span class="main">31% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/49JfKzl" title="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51PwsOOMErL._SX679_.jpg" class="img-fluid lazy" alt="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" title="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B097RJ867P.html" title="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" class="shop-title-value">PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>36,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,20,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,995</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">52% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Poa5qC" title="Tecno Phantom X2 5G Stardust Grey (8GB RAM,256GB Storage) | World&#039;s 1st 4nm Dimensity 9000 5G Processor | Dual Curved AMOLED Display | 64MP RGBW Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/613kSLrCn7L._SX679_.jpg" class="img-fluid lazy" alt="Tecno Phantom X2 5G Stardust Grey (8GB RAM,256GB Storage) | World&#039;s 1st 4nm Dimensity 9000 5G Processor | Dual Curved AMOLED Display | 64MP RGBW Camera" title="Tecno Phantom X2 5G Stardust Grey (8GB RAM,256GB Storage) | World&#039;s 1st 4nm Dimensity 9000 5G Processor | Dual Curved AMOLED Display | 64MP RGBW Camera" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BPS3DCC7.html" title="Tecno Phantom X2 5G Stardust Grey (8GB RAM,256GB Storage) | World&#039;s 1st 4nm Dimensity 9000 5G Processor | Dual Curved AMOLED Display | 64MP RGBW Camera" class="shop-title-value">Tecno Phantom X2 5G Stardust Grey (8GB RAM,256GB Storage) | World&#039;s 1st 4nm Dimensity 9000 5G Processor | Dual Curved AMOLED Display | 64MP RGBW Camera</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>51,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
                   <div class="discount"><span class="main">50% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40lZDUH" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" class="img-fluid lazy" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSKDPF9N.html" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" class="shop-title-value">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40jq913" title="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61fzU3GoerL._SX679_.jpg" class="img-fluid lazy" alt="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" title="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C6FC1GSN.html" title="Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV" class="shop-title-value">Anne Klein Quartz Analog Pink Dial Plastic Strap Watch for Women-AK4068GPMV</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,997</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,995</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">41% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gPmNc6" title="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81h-r-3hioL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" title="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DW7C39.html" title="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)" class="shop-title-value">Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>96,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,64,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,250</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,500</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">59% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40YW8ny" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41fiqGlrrKL.jpg" class="img-fluid lazy" alt="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68JR6S8.html" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" class="shop-title-value">AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3RcA30X" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61zByLjZFnL._SY879_.jpg" class="img-fluid lazy" alt="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3MHB63Q.html" title="Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)" class="shop-title-value">Whirlpool 6 Kg 5 Star Royal Fully-Automatic Top Loading Washing Machine (WHITEMAGIC ROYAL 6 GENX, Grey, ZPF Technology)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,600</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">71% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YNORWj" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61mfqrETVOL._SX679_.jpg" class="img-fluid lazy" alt="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CLYG2R1H.html" title="MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))" class="shop-title-value">MUNDET WALA Home Gym Set, Steel Home Gym Combo 28MM w/ 3Ft Curl, 5Ft Straight Rod, Pair Nut Dumbbell Rod, Steel Weight Plates, Gym Equipment for Home Workout (Steel 15KG Set (2.5KG x 6))</a></h4>
+                  <div class="discount"><span class="main">52% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gQqQXB" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nhlYFnOhL._SX679_.jpg" class="img-fluid lazy" alt="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09X1P3J6G.html" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" class="shop-title-value">Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,784</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,500</span></span>
                   </div>
               </div>
           </div>
@@ -392,11 +400,11 @@
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
                   <div class="discount"><span class="main">55% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/49agduy" title="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/919PT-mtS0L._SX522_.jpg" class="img-fluid lazy" alt="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" title="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B01M32X87O.html" title="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" class="shop-title-value">Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45r3WC1" title="Amazon Basics Digital Safe With Electronic Keypad Locker For Home, Gross Capacity - 58L (Net - 51L), Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81herOPgvYL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Basics Digital Safe With Electronic Keypad Locker For Home, Gross Capacity - 58L (Net - 51L), Black" title="Amazon Basics Digital Safe With Electronic Keypad Locker For Home, Gross Capacity - 58L (Net - 51L), Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B078K2YPRW.html" title="Amazon Basics Digital Safe With Electronic Keypad Locker For Home, Gross Capacity - 58L (Net - 51L), Black" class="shop-title-value">Amazon Basics Digital Safe With Electronic Keypad Locker For Home, Gross Capacity - 58L (Net - 51L), Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,414</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,939</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,300</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">58% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4112bbf" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71RTL1vn6TL._SX679_.jpg" class="img-fluid lazy" alt="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D9BYN6RJ.html" title="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)" class="shop-title-value">acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4542HqY" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71vwtBCsr8L._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSBRDRDV.html" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" class="shop-title-value">Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>72,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,040</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,350</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDrB9l" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61WwrG1D13L._SX679_.jpg" class="img-fluid lazy" alt="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BMT9VP8R.html" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" class="shop-title-value">TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera</a></h4>
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YwZvCl" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61lhB3uQT3L._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7M8LG8S.html" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" class="shop-title-value">Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">38% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fimLJs" title="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71xTwKIBX-L._SX679_.jpg" class="img-fluid lazy" alt="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" title="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08DF1Y7T7.html" title="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" class="shop-title-value">LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)</a></h4>
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CyFQto" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKMF8N7.html" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" class="shop-title-value">Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>99,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,11,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">21% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3sFjNw9" title="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Ct6+KF4AL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" title="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B8NHX62W.html" title="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" class="shop-title-value">Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)</a></h4>
+                  <div class="discount"><span class="main">80% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3J2o1pE" title="Lifelong Walking Pad Treadmill | 3 HP Brushless Motor | 2-Level Manual Incline | LED Display | Foldable Design | Remote Control | 110 Kg Capacity | 8 Km/h Speed | Home Fitness Walking Machine LLTM183" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61h2sG90b9L._SX679_.jpg" class="img-fluid lazy" alt="Lifelong Walking Pad Treadmill | 3 HP Brushless Motor | 2-Level Manual Incline | LED Display | Foldable Design | Remote Control | 110 Kg Capacity | 8 Km/h Speed | Home Fitness Walking Machine LLTM183" title="Lifelong Walking Pad Treadmill | 3 HP Brushless Motor | 2-Level Manual Incline | LED Display | Foldable Design | Remote Control | 110 Kg Capacity | 8 Km/h Speed | Home Fitness Walking Machine LLTM183" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FD817WFP.html" title="Lifelong Walking Pad Treadmill | 3 HP Brushless Motor | 2-Level Manual Incline | LED Display | Foldable Design | Remote Control | 110 Kg Capacity | 8 Km/h Speed | Home Fitness Walking Machine LLTM183" class="shop-title-value">Lifelong Walking Pad Treadmill | 3 HP Brushless Motor | 2-Level Manual Incline | LED Display | Foldable Design | Remote Control | 110 Kg Capacity | 8 Km/h Speed | Home Fitness Walking Machine LLTM183</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,690</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4ofJbjj" title="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51oj5gE7P+L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" title="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CJ96945H.html" title="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" class="shop-title-value">OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3JMAI86" title="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619FbHGS4rL._SX679_.jpg" class="img-fluid lazy" alt="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" title="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F8VHRFBX.html" title="Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)" class="shop-title-value">Godrej 600L 3 Star Frost Free Smart Convertible AI Powered 3 Intelligent Modes Toughened Glass Digital Touch Panel Inverter Side By Side Refrigerator(2025 Model,RS EONVELVET 646C RIT SM BL,Storm Blue)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>69,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,18,490</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">54% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CjRHe9" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619uqfCV8uL._SX679_.jpg" class="img-fluid lazy" alt="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68KM7F5.html" title="AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa" class="shop-title-value">AMATA Eagle Sofa Cum Bed with Two Cushions Perfect for Home Living Room and Guests (Dark Grey) (Wood,Suede,Velvet) 3-Person Sofa</a></h4>
+                  <div class="discount"><span class="main">5% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4ga4HmN" title="Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp; Women | Titanium, Matte Black 11" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61hK5QTdINL._SX679_.jpg" class="img-fluid lazy" alt="Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp; Women | Titanium, Matte Black 11" title="Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp; Women | Titanium, Matte Black 11" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGQQ8KHS.html" title="Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp; Women | Titanium, Matte Black 11" class="shop-title-value">Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp; Women | Titanium, Matte Black 11</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,649</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,109</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,800</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

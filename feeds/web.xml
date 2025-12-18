@@ -71,14 +71,14 @@
     </item><item>
 			<title>Improvements for Editor Experience in Drupal</title>
 			<link>https://peoplesblog.co.in/articles/improvements-for-editor-experience-in-drupal.html</link>
-			<description>In this article, we are going to learn what Drupal offers for text editors or content managers as a content management framework within Drupal Core &amp;amp; Contributed modules. Earlier versions of Drupal have several useful features to help content editors to manage their content on a daily basis. And in the newer versions of Drupal (from when Symfony was introduced), there are a few more improvemen</description>
+			<description>In this article, we are going to learn what Drupal offers for text editors or content managers as a content management framework within Drupal Core and Contributed modules. Earlier versions of Drupal have several useful features to help content editors to manage their content on a daily basis. And in the newer versions of Drupal (from when Symfony was introduced), there are a few more improvements</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/improvements-for-editor-experience-in-drupal.html</guid>
     </item><item>
 			<title>What Drupal offers as Responsive Web Design within Core</title>
 			<link>https://peoplesblog.co.in/articles/what-drupal-offers-as-responsive-web-design-within-core.html</link>
-			<description>In this article, we gonna see What Drupal offers as Responsive Web Design within Drupal Core for developers. While Drupal 8 was out and it had a buzz of being responsive, mobile friendly. And yes, the Internet is on the verge of being dominated by smartphones &amp;amp; Drupal needs to be prepared.Mobile friendly will also mean the content is first. From a big screen to a little screen, elements would </description>
+			<description>In this article, we gonna see What Drupal offers as Responsive Web Design within Drupal Core for developers. While Drupal 8 was out and it had a buzz of being responsive, mobile friendly. And yes, the Internet is on the verge of being dominated by smartphones and Drupal needs to be prepared.Mobile friendly will also mean the content is first. From a big screen to a little screen, elements would lo</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/what-drupal-offers-as-responsive-web-design-within-core.html</guid>
@@ -120,7 +120,7 @@
     </item><item>
 			<title>Fix SSL error 61 in Citrix Web Receiver on Ubuntu</title>
 			<link>https://peoplesblog.co.in/articles/fix-ssl-error-in-citrix-web-receiver-on-ubuntu.html</link>
-			<description>This article is about fixing only a single error which you see with Citrix Web Receiver on the Ubuntu machines. This might be a simple &amp;amp; specific issue, but people who are facing this issue will really feel grateful with the solution provided.                                After you install the Citrix web receiver on Ubuntu machine &amp;amp; while you try to connect, in some cases no connection t</description>
+			<description>This article is about fixing only a single error which you see with Citrix Web Receiver on the Ubuntu machines. This might be a simple and specific issue, but people who are facing this issue will really feel grateful with the solution provided.                                After you install the Citrix web receiver on Ubuntu machine and while you try to connect, in some cases no connection to sy</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-ssl-error-in-citrix-web-receiver-on-ubuntu.html</guid>
@@ -155,7 +155,7 @@
     </item><item>
 			<title>API Docs, Drupal contributed module for your Developer Portal</title>
 			<link>https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html</link>
-			<description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters &amp;amp; views.  Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.  Download &amp;amp; Enable the Module:   Visit the Drupal.org website and navigate to the API Docs module's page that you want to download, here’s th</description>
+			<description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters and views.  Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.  Download and Enable the Module:   Visit the Drupal.org website and navigate to the API Docs module's page that you want to download, here’s the mo</description>
 			<pubDate>Sat, 29 Jul 2023 17:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html</guid>

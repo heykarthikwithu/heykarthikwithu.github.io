@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035977" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035977">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.html"
+          "@id": "https://peoplesblog.co.in/articles/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.html"
         },
         "headline": "Advanced OOP Features in PHP: Final Classes, Magic Methods, and Late Static Binding",
-        "description": "Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest",
-        "image": "https://peoplesblog.co.in/upload/banners/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.jpg",
+        "description": "Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest iteration, PHP 8, provides several advanced OOP features that enhance its capabilities and allow for more robust and maintainable code. In this article, we will explore three advancedd OOP features in PHP 8: final classes, magic methods, and late static binding.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2024-11-11"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/advanced-oop-features-in-php-final-classes-magic-methods-and-late-static-binding.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest iteration, PHP 8, provides several advanced OOP features that enhance its capabilities and allow for more robust and maintainable code.</p>  <p>In this article, we will explore three advanced OOP features in PHP 8: final classes, magic methods, and late static binding.</p>  <h2>Final Classes</h2>  <p><strong>What Are Final Classes?</strong></p>  <ul> <li>A final class in PHP is a class that cannot be extended.</li> <li>This feature is useful when you want to prevent further inheritance, ensuring that the behavior of the class remains unchanged.</li> <li>You can declare a class as final by using the final keyword before the class definition.</li> </ul>  <p><strong>Example of Final Classes</strong></p>  <p><code>final class Logger {</code></p>  <p><code>    public function log($message) {</code></p>  <p><code>        echo "[LOG]: " . $message . "\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>// The following will cause an error</code></p>  <p><code>// class AdvancedLogger extends Logger {}</code></p>  <p>In the example above, <tt>Logger</tt> is declared as a final class. Any attempt to extend <tt>Logger</tt> will result in a fatal error, enforcing that the behavior of logging remains consistent.</p>  <p><strong>Use Cases for Final Classes</strong></p>  <ul> <li><strong>Security</strong>: Final classes can help prevent the alteration of critical functionality, such as logging or payment processing.</li> <li><strong>Performance</strong>: PHP may optimize the method calls on final classes, leading to potential performance improvements.</li> </ul>    <h2>Magic Methods</h2>  <p><strong>What Are Magic Methods?</strong></p>  <p>Magic methods in PHP are special methods that allow you to define specific behaviors in your classes. They are prefixed with double underscores (<tt>__</tt>) and are called automatically in certain circumstances. Some commonly used magic methods include:</p>  <ul> <li><tt>__construct()</tt>: Called when an object is instantiated.</li> <li><tt>__destruct()</tt>: Called when an object is destroyed.</li> <li><tt>__get()</tt>: Called when accessing inaccessible properties.</li> <li><tt>__set()</tt>: Called when setting inaccessible properties.</li> <li><tt>__call()</tt>: Called when invoking inaccessible methods.</li> </ul>  <p><strong>Example of Magic Methods</strong></p>  <p>Here’s an example illustrating how to use some of these magic methods:</p>  <p><code>class User {</code></p>  <p><code>    private $data = [];</code></p>  <p><code>    public function __construct($name) {</code></p>  <p><code>        $this-&gt;data['name'] = $name;</code></p>  <p><code>    }</code></p>  <p><code>    public function __get($property) {</code></p>  <p><code>        return $this-&gt;data[$property] ?? null;</code></p>  <p><code>    }</code></p>  <p><code>    public function __call($method, $args) {</code></p>  <p><code>        if ($method === 'greet') {</code></p>  <p><code>            return "Hello, " . $this-&gt;data['name'];</code></p>  <p><code>        }</code></p>  <p><code>        return null;</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>$user = new User("Alice");</code></p>  <p><code>echo $user-&gt;greet(); // Outputs: Hello, Alice</code></p>  <p>In this example, the <tt>User</tt> class uses <tt>__get</tt> to allow access to the private <tt>$data</tt> array and <tt>__call</tt> to handle calls to undefined methods, providing a dynamic way to extend functionality.</p>  <p><strong>Use Cases for Magic Methods</strong></p>  <ul> <li><strong>Dynamic Property Access</strong>: Magic methods like <tt>__get</tt> and <tt>__set</tt> allow for flexible property handling.</li> <li><strong>Implementing Interfaces</strong>: They can <a href="/articles/how-to-simplify-your-life-with-mindful-consumption.html" title="Read about How To Simplify Your Life With Mindful Consumption">simplify</a> method handling for objects that implement various interfaces.</li> <li><strong>Custom Object Serialization</strong>: Magic methods can be used to customize the serialization and deserialization of objects.</li> </ul>    <h2>Late Static Binding</h2>  <p><strong>What Is Late Static Binding?</strong></p>  <ul> <li>Late Static Binding is a feature introduced in PHP 5.3 that allows you to reference the called class in a static context, ensuring that the correct class is used when dealing with inheritance.</li> <li>This is particularly useful when you have a class hierarchy and want to call static methods on the child class from the parent class.</li> </ul>  <p><strong>Example of Late Static Binding</strong></p>  <p><code>class ParentClass {</code></p>  <p><code>    public static function whoAmI() {</code></p>  <p><code>        echo "I am " . static::class . "\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>class ChildClass extends ParentClass {</code></p>  <p><code>    public static function test() {</code></p>  <p><code>        static::whoAmI(); // Uses late static binding</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>ChildClass::test(); // Outputs: I am ChildClass</code></p>  <p>In this example, the <tt>whoAmI</tt> method correctly identifies the class context using <tt>static::class</tt>, demonstrating how late static binding allows for flexible and predictable static method resolution.</p>  <p><strong>Use Cases for Late Static Binding</strong></p>  <ul> <li><strong>Framework Development</strong>: Late static binding is invaluable in frameworks where methods need to be called dynamically based on the extending class.</li> <li><strong>Creating Fluent Interfaces</strong>: It allows for more elegant and intuitive chaining of methods in an object-oriented way.</li> </ul>  <h2>Conclusion</h2>  <p>PHP 8 continues to enhance the capabilities of Object-Oriented Programming with features like final classes, magic methods, and late static binding. <a href="/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Understanding</a> and utilizing these advanced OOP features can lead to more robust, maintainable, and efficient code.</p>  <p>By implementing final classes, you can secure critical functionalities. Magic methods provide flexibility and dynamic behaviors, while late static binding offers a powerful way to manage class hierarchies. Embracing these features will undoubtedly improve your PHP development experience and lead to cleaner, more efficient code.</p>  <p>Thanks for reading the article, for more Science &amp; Technology related articles read and subscribe to peoples blog articles.</p></div>
+                                <div><p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest iteration, PHP 8, provides several advanced OOP features that enhance its capabilities and allow for more robust and maintainable code.</p>  <p>In this article, we will explore three advanced OOP features in PHP 8: final classes, magic methods, and late static binding.</p>  <h2>Final Classes</h2>  <p><strong>What Are Final Classes?</strong></p>  <ul> <li>A final class in PHP is a class that cannot be extended.</li> <li>This feature is useful when you want to prevent further inheritance, ensuring that the behavior of the class remains unchanged.</li> <li>You can declare a class as final by using the final keyword before the class definition.</li> </ul>  <p><strong>Example of Final Classes</strong></p>  <p><code>final class Logger {</code></p>  <p><code>    public function log($message) {</code></p>  <p><code>        echo "[LOG]: " . $message . "\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>// The following will cause an error</code></p>  <p><code>// class AdvancedLogger extends Logger {}</code></p>  <p>In the example above, <tt>Logger</tt> is declared as a final class. Any attempt to extend <tt>Logger</tt> will result in a fatal error, enforcing that the behavior of logging remains consistent.</p>  <p><strong>Use Cases for Final Classes</strong></p>  <ul> <li><strong>Security</strong>: Final classes can help prevent the alteration of critical functionality, such as logging or payment processing.</li> <li><strong>Performance</strong>: PHP may optimize the method calls on final classes, leading to potential performance improvements.</li> </ul>    <h2>Magic Methods</h2>  <p><strong>What Are Magic Methods?</strong></p>  <p>Magic methods in PHP are special methods that allow you to define specific behaviors in your classes. They are prefixed with double underscores (<tt>__</tt>) and are called automatically in certain circumstances. Some commonly used magic methods include:</p>  <ul> <li><tt>__construct()</tt>: Called when an object is instantiated.</li> <li><tt>__destruct()</tt>: Called when an object is destroyed.</li> <li><tt>__get()</tt>: Called when accessing inaccessible properties.</li> <li><tt>__set()</tt>: Called when setting inaccessible properties.</li> <li><tt>__call()</tt>: Called when invoking inaccessible methods.</li> </ul>  <p><strong>Example of Magic Methods</strong></p>  <p>Here’s an example illustrating how to use some of these magic methods:</p>  <p><code>class User {</code></p>  <p><code>    private $data = [];</code></p>  <p><code>    public function __construct($name) {</code></p>  <p><code>        $this→data['name'] = $name;</code></p>  <p><code>    }</code></p>  <p><code>    public function __get($property) {</code></p>  <p><code>        return $this→data[$property] ?? null;</code></p>  <p><code>    }</code></p>  <p><code>    public function __call($method, $args) {</code></p>  <p><code>        if ($method === 'greet') {</code></p>  <p><code>            return "Hello, " . $this→data['name'];</code></p>  <p><code>        }</code></p>  <p><code>        return null;</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>$user = new User("Alice");</code></p>  <p><code>echo $user→greet(); // Outputs: Hello, Alice</code></p>  <p>In this example, the <tt>User</tt> class uses <tt>__get</tt> to allow access to the private <tt>$data</tt> array and <tt>__call</tt> to handle calls to undefined methods, providing a dynamic way to extend functionality.</p>  <p><strong>Use Cases for Magic Methods</strong></p>  <ul> <li><strong>Dynamic Property Access</strong>: Magic methods like <tt>__get</tt> and <tt>__set</tt> allow for flexible property handling.</li> <li><strong>Implementing Interfaces</strong>: They can <a href="/articles/how-to-simplify-your-life-with-mindful-consumption.html" title="Read about How To Simplify Your Life With Mindful Consumption">simplify</a> method handling for objects that implement various interfaces.</li> <li><strong>Custom Object Serialization</strong>: Magic methods can be used to customize the serialization and deserialization of objects.</li> </ul>    <h2>Late Static Binding</h2>  <p><strong>What Is Late Static Binding?</strong></p>  <ul> <li>Late Static Binding is a feature introduced in PHP 5.3 that allows you to reference the called class in a static context, ensuring that the correct class is used when dealing with inheritance.</li> <li>This is particularly useful when you have a class hierarchy and want to call static methods on the child class from the parent class.</li> </ul>  <p><strong>Example of Late Static Binding</strong></p>  <p><code>class ParentClass {</code></p>  <p><code>    public static function whoAmI() {</code></p>  <p><code>        echo "I am " . static::class . "\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>class ChildClass extends ParentClass {</code></p>  <p><code>    public static function test() {</code></p>  <p><code>        static::whoAmI(); // Uses late static binding</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>ChildClass::test(); // Outputs: I am ChildClass</code></p>  <p>In this example, the <tt>whoAmI</tt> method correctly identifies the class context using <tt>static::class</tt>, demonstrating how late static binding allows for flexible and predictable static method resolution.</p>  <p><strong>Use Cases for Late Static Binding</strong></p>  <ul> <li><strong>Framework Development</strong>: Late static binding is invaluable in frameworks where methods need to be called dynamically based on the extending class.</li> <li><strong>Creating Fluent Interfaces</strong>: It allows for more elegant and intuitive chaining of methods in an object-oriented way.</li> </ul>  <h2>Conclusion</h2>  <p>PHP 8 continues to enhance the capabilities of Object-Oriented Programming with features like final classes, magic methods, and late static binding. <a href="/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Understanding</a> and utilizing these advanced OOP features can lead to more robust, maintainable, and efficient code.</p>  <p>By implementing final classes, you can secure critical functionalities. Magic methods provide flexibility and dynamic behaviors, while late static binding offers a powerful way to manage class hierarchies. Embracing these features will undoubtedly improve your PHP development experience and lead to cleaner, more efficient code.</p>  <p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">15% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48igKu7" title="HP 15s Core i5 12th Gen (16GB RAM/512GB SSD/FHD/MS Office 21 /Backlit Keyboard /15.6-inch (39.6 cm)/FHD/Windows 11/Silver/1.69 kg) fy5009TU/fd0111tu Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61TIgpyjxPL._SX679_.jpg" class="img-fluid lazy" alt="HP 15s Core i5 12th Gen (16GB RAM/512GB SSD/FHD/MS Office 21 /Backlit Keyboard /15.6-inch (39.6 cm)/FHD/Windows 11/Silver/1.69 kg) fy5009TU/fd0111tu Laptop" title="HP 15s Core i5 12th Gen (16GB RAM/512GB SSD/FHD/MS Office 21 /Backlit Keyboard /15.6-inch (39.6 cm)/FHD/Windows 11/Silver/1.69 kg) fy5009TU/fd0111tu Laptop" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D4M66F6R.html" title="HP 15s Core i5 12th Gen (16GB RAM/512GB SSD/FHD/MS Office 21 /Backlit Keyboard /15.6-inch (39.6 cm)/FHD/Windows 11/Silver/1.69 kg) fy5009TU/fd0111tu Laptop" class="shop-title-value">HP 15s Core i5 12th Gen (16GB RAM/512GB SSD/FHD/MS Office 21 /Backlit Keyboard /15.6-inch (39.6 cm)/FHD/Windows 11/Silver/1.69 kg) fy5009TU/fd0111tu Laptop</a></h4>
+                  <div class="discount"><span class="main">28% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4h072AH" title="Apple iPhone 13 (128GB) - Midnight" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61VuVU94RnL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 13 (128GB) - Midnight" title="Apple iPhone 13 (128GB) - Midnight" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09G9HD6PD.html" title="Apple iPhone 13 (128GB) - Midnight" class="shop-title-value">Apple iPhone 13 (128GB) - Midnight</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>52,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>62,417</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,600</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3wL1XcS" title="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)" title="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BY8JZ22K.html" title="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)</a></h4>
+                  <div class="discount"><span class="main">14% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/476QaWt" title="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/615hoewbBQL._SX679_.jpg" class="img-fluid lazy" alt="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" title="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09Z1VLR19.html" title="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" class="shop-title-value">MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,680</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">58% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41PackK" title="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81+Csy-WQwL._SX679_.jpg" class="img-fluid lazy" alt="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" title="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07MNNH484.html" title="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S" class="shop-title-value">VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S</a></h4>
+                  <div class="discount"><span class="main">40% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3KgxlXs" title="KENT Supreme Plus Alkaline+Copper RO WaterPurifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for SabseShudh Paani |Auto Flush| 8L|20LPH | Ideal for Borewell/Tanker/MunicipalWater|Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61UKozh-B2L._SX522_.jpg" class="img-fluid lazy" alt="KENT Supreme Plus Alkaline+Copper RO WaterPurifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for SabseShudh Paani |Auto Flush| 8L|20LPH | Ideal for Borewell/Tanker/MunicipalWater|Black" title="KENT Supreme Plus Alkaline+Copper RO WaterPurifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for SabseShudh Paani |Auto Flush| 8L|20LPH | Ideal for Borewell/Tanker/MunicipalWater|Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CB8KG44H.html" title="KENT Supreme Plus Alkaline+Copper RO WaterPurifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for SabseShudh Paani |Auto Flush| 8L|20LPH | Ideal for Borewell/Tanker/MunicipalWater|Black" class="shop-title-value">KENT Supreme Plus Alkaline+Copper RO WaterPurifier | RO+UV+UF+Alk +Cu+TDSControl+UV LED Tank|Advanced ROTech for SabseShudh Paani |Auto Flush| 8L|20LPH | Ideal for Borewell/Tanker/MunicipalWater|Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,199</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,500</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">47% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YIhGoO" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61mKKrl80NL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D6G4CVZ7.html" title="Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey" class="shop-title-value">Lenovo Tab Plus with Octa JBL Hi-Fi Speakers| 8 GB RAM, 128 GB ROM| 11.5 Inch, 2K, 90 Hz Refresh| Wi-Fi Tablet| Android 14| 45 W Fast Charger| Built-in Kickstand| Color: Luna Grey</a></h4>
+                  <div class="discount"><span class="main">55% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3NLH3Q9" title="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91b1B9Pjd2L._SX679_.jpg" class="img-fluid lazy" alt="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" title="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09Y65HV6N.html" title="Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)" class="shop-title-value">Samsung 214 cm (85 inches) 4K Ultra HD Smart Neo QLED TV QA85QN90BAKXXL (Titan Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>3,99,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>8,79,900</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">38% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3MG20v8" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/81QGKn2LCfL._SX679_.jpg" class="img-fluid lazy" alt="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BK1KS6ZD.html" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" class="shop-title-value">Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)</a></h4>
+                  <div class="discount"><span class="main">63% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45Gl32P" title="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61pyaZYmiAL._SX679_.jpg" class="img-fluid lazy" alt="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" title="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DXQ575B9.html" title="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" class="shop-title-value">Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>58,400</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,690</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,990</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48QVZEp" title="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/619lW2YtVhL._SX679_.jpg" class="img-fluid lazy" alt="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" title="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGMXVFK.html" title="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)" class="shop-title-value">iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">38% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3MG20v8" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" rel="nofollow sponsored"><img data-src="https://f.media-amazon.com/images/I/81QGKn2LCfL._SX679_.jpg" class="img-fluid lazy" alt="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BK1KS6ZD.html" title="Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)" class="shop-title-value">Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>49,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>58,400</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">27% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3TNgtJk" title="Whirlpool 235 L 2 Star Frost Free inverter Double Door Refrigerator (NEO DF278 PRM RADIANT STEEL(2S)-TL)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71AQIXPLyeL._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 235 L 2 Star Frost Free inverter Double Door Refrigerator (NEO DF278 PRM RADIANT STEEL(2S)-TL)" title="Whirlpool 235 L 2 Star Frost Free inverter Double Door Refrigerator (NEO DF278 PRM RADIANT STEEL(2S)-TL)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D78KYB2P.html" title="Whirlpool 235 L 2 Star Frost Free inverter Double Door Refrigerator (NEO DF278 PRM RADIANT STEEL(2S)-TL)" class="shop-title-value">Whirlpool 235 L 2 Star Frost Free inverter Double Door Refrigerator (NEO DF278 PRM RADIANT STEEL(2S)-TL)</a></h4>
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4nNeykO" title="XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16) Display |12GB, 256GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Graphite Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71zKkpC7crL._SX679_.jpg" class="img-fluid lazy" alt="XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16) Display |12GB, 256GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Graphite Grey" title="XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16) Display |12GB, 256GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Graphite Grey" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DRYW91S6.html" title="XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16) Display |12GB, 256GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Graphite Grey" class="shop-title-value">XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16) Display |12GB, 256GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Graphite Grey</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,200</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40Oil8t" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51J9yKE61vL._SX679_.jpg" class="img-fluid lazy" alt="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F5PXXWM9.html" title="Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier" class="shop-title-value">Aquaguard Delight Aquasaver RO+UV+UF+MC Tech | 2-year filter life | With Mega Sediment filter | 2 Free cleaning service | 60% Higher Water Recovery | 9-Stage Purification | India’s No.1 Purifier</a></h4>
+                  <div class="discount"><span class="main">65% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jpOXNp" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/813i7KmyReL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LB71H8M.html" title="BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Mother of Pearl Dial Women&#039;s Watch-BG50665002</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,983</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,903</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,995</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46E9et6" title="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71zOYPGqZhL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" title="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DX791PX9.html" title="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" class="shop-title-value">Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger</a></h4>
+                  <div class="discount"><span class="main">52% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gQqQXB" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61nhlYFnOhL._SX679_.jpg" class="img-fluid lazy" alt="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09X1P3J6G.html" title="Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black" class="shop-title-value">Livpure GLO PRO++ RO+UV+UF | Water Purifier for Home - 7 L Storage | Free Standard Installation | Suitable for Borewell, Tanker, Municipal Water | Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,749</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,500</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CX0p2E" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71SpdMLBi6L._SX679_.jpg" class="img-fluid lazy" alt="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CXLDSHSH.html" title="JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)" class="shop-title-value">JBL Xtreme 4 Portable Bluetooth Speaker, ProSound with Powerful Bass Radiators, AI Sound Boost, Built-in Powerbank, Multispeaker Connection by Auracast, IP67, Replacable Battery, Fast Charging (Black)</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4cEJVJ5" title="MI 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61T5drqfafL._SX679_.jpg" class="img-fluid lazy" alt="MI 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)" title="MI 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CH33945T.html" title="MI 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)" class="shop-title-value">MI 108 cm (43 inches) X Series 4K Ultra HD Smart Google TV L43M8-A2IN (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,999</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-3 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">12% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dYa7yu" title="OnePlus 12R (Iron Gray, 8 GB RAM, 256 GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71XNeka-BRL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Iron Gray, 8 GB RAM, 256 GB Storage)" title="OnePlus 12R (Iron Gray, 8 GB RAM, 256 GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX2L28HH.html" title="OnePlus 12R (Iron Gray, 8 GB RAM, 256 GB Storage)" class="shop-title-value">OnePlus 12R (Iron Gray, 8 GB RAM, 256 GB Storage)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>22,499</span></span>
                       <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">24% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3APl4oy" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/513esKxjeyL._SX679_.jpg" class="img-fluid lazy" alt="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BGXMZBLY.html" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" class="shop-title-value">Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)</a></h4>
+                  <div class="discount"><span class="main">57% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3WoPxkR" title="MAXPRO PTM405M 4.5 HP Peak DC Motor Multifunction Folding Treadmill with Massager,Free Diet Plan,Max.Speed 14km/hr,Max. User Weight 110kgs,Fit Show App Support,Running Machine LED Display for Home use" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61ArQCIYS9L._SX679_.jpg" class="img-fluid lazy" alt="MAXPRO PTM405M 4.5 HP Peak DC Motor Multifunction Folding Treadmill with Massager,Free Diet Plan,Max.Speed 14km/hr,Max. User Weight 110kgs,Fit Show App Support,Running Machine LED Display for Home use" title="MAXPRO PTM405M 4.5 HP Peak DC Motor Multifunction Folding Treadmill with Massager,Free Diet Plan,Max.Speed 14km/hr,Max. User Weight 110kgs,Fit Show App Support,Running Machine LED Display for Home use" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07SRTPV2M.html" title="MAXPRO PTM405M 4.5 HP Peak DC Motor Multifunction Folding Treadmill with Massager,Free Diet Plan,Max.Speed 14km/hr,Max. User Weight 110kgs,Fit Show App Support,Running Machine LED Display for Home use" class="shop-title-value">MAXPRO PTM405M 4.5 HP Peak DC Motor Multifunction Folding Treadmill with Massager,Free Diet Plan,Max.Speed 14km/hr,Max. User Weight 110kgs,Fit Show App Support,Running Machine LED Display for Home use</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,104.45</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,600</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>65,000</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-3 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Uexpsy" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71c3EH8FoWL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7W9R1HM.html" title="OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus 12R (Sunset Dune, 8GB RAM, 256GB Storage)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035977" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

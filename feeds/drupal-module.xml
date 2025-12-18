@@ -29,7 +29,7 @@
     </item><item>
 			<title>Drupal Configuration management (Local, Dev, Test and Live)</title>
 			<link>https://peoplesblog.co.in/articles/drupal-configuration-management-local-dev-test-and-live.html</link>
-			<description>In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contributed modules and version control.  Drupal 8 onwards configuration has been saved in the yml files in a consistent manner, which includes all the enabled modules, all the content types, vocabularies, fields &amp;amp; views.  Making the configurations direct</description>
+			<description>In this article we are going to see how Drupal serves configurations across the environments, which can be well maintained with help of some contributed modules and version control.  Drupal 8 onwards configuration has been saved in the yml files in a consistent manner, which includes all the enabled modules, all the content types, vocabularies, fields and views.  Making the configurations directly</description>
 			<pubDate>Fri, 01 Dec 2023 08:00:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-configuration-management-local-dev-test-and-live.html</guid>
@@ -43,7 +43,7 @@
     </item><item>
 			<title>API Docs, Drupal contributed module for your Developer Portal</title>
 			<link>https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html</link>
-			<description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters &amp;amp; views.  Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.  Download &amp;amp; Enable the Module:   Visit the Drupal.org website and navigate to the API Docs module's page that you want to download, here’s th</description>
+			<description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters and views.  Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.  Download and Enable the Module:   Visit the Drupal.org website and navigate to the API Docs module's page that you want to download, here’s the mo</description>
 			<pubDate>Sat, 29 Jul 2023 17:15:00 +0530</pubDate>
 			<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html</guid>

@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/local-environment-setup-with-lando-and-drupal.html"
+          "@id": "https://peoplesblog.co.in/articles/local-environment-setup-with-lando-and-drupal.html"
         },
         "headline": "Local environment setup with Lando & Drupal",
-        "description": "We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local envir",
-        "image": "https://peoplesblog.co.in/upload/banners/lando-drupal.png",
+        "description": "We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/lando-drupal.png",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2021-07-09"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/lando-drupal.png" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier.</p>                                <p>Lando is a development tool, it's a free, open source, cross-platform, local development environment and DevOps tool built on Docker (opens new window) container technology and developed by Tandem. Designed to work with most major languages, frameworks and services, This is a brief about Lando.</p>                                <p>Now let's see how we set up Drupal 9 locally with Lando.</p>                                <p>Initially you have to install Lando on your machine (I’m using Ubuntu).</p>                                <p></p><pre>$ wget https://files.devwithlando.io/lando-stable.deb$ sudo dpkg -i lando-stable.deb$ lando</pre>                                <p>After successful installation, when you type lando in terminal and hit enter, you will see commands listed which lando provides by default.</p>                                <p>Let's proceed with the Drupal 9 installation.</p>                                <p></p><pre>$ lando init--source remote--remote-url https://ftp.drupal.org/files/projects/drupal-9.2.0.tar.gz--remote-options="--strip-components 1"--recipe drupal9--webroot .--name drupal9-local</pre>                                <p>This will download the drupal 9.2.0 version and place it in the drupal9-local folder. Further start lando by using the below command.</p>                                <p></p><pre>$ lando start</pre>                                <p>This will start the Drupal 9 installation and you will get the drupal up &amp; running. And you can see the information in the instance running by using the below command.</p>                                <p></p><pre>$ lando info</pre>                                                                <h3><a href="/articles/drupal-configuration-management-local-dev-test-and-live.html" title="Read about Drupal Configuration Management Local Dev Test And Live">Configuration</a></h3>                                <p>You can modify or <a href="/articles/how-to-maintain-solar-panel-setup-at-your-home-to-get-the-best-results.html" title="Read about How To Maintain Solar Panel Setup At Your Home To Get The Best Results">maintain</a> the configurations in a file named .lando.yml, which can have the details of the php, mysql, nginx etc details. An example file is shown below.</p>                                <p></p><pre>$ nano .lando.ymlrecipe: drupal9config:    php: '7.4'    composer_version: '1.10.1'    via: nginx    database: mysql:5.7    webroot: .    drush: false    xdebug: true    config:        database: config/db.cnf        php: config/php.ini        server: config/server.conf        vhosts: config/default.confservices:    appserver:        build:        - composer installtooling:    drush:        service: appserver        env:            DRUSH_OPTIONS_URI: "https://drupal9-local.site"</pre>                                <p>Also you can utilize lando utility to run the composer and other services defined in the config file. Few example commands are shown below.</p>                                <p></p><pre>$ lando composer require drush/drush$ lando -v db-import -h drupal9 backup.sql.gz$ lando composer test$ lando mysql$ lando php -m</pre>                                <p>This way by using lando you can set up drupal 9 on your local environment. And on the configuration front you can do many other things like configuring <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">multisite</a>, environment variables etc.</p></div>
+                                <div><p>We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier.</p>                                <p>Lando is a development tool, it's a free, open source, cross-platform, local development environment and DevOps tool built on Docker (opens new window) container technology and developed by Tandem. Designed to work with most major languages, frameworks and services, This is a brief about Lando.</p>                                <p>Now let's see how we set up Drupal 9 locally with Lando.</p>                                <p>Initially you have to install Lando on your machine (I’m using Ubuntu).</p>                                <p></p><pre>$ wget https://files.devwithlando.io/lando-stable.deb$ sudo dpkg -i lando-stable.deb$ lando</pre>                                <p>After successful installation, when you type lando in terminal and hit enter, you will see commands listed which lando provides by default.</p>                                <p>Let's proceed with the Drupal 9 installation.</p>                                <p></p><pre>$ lando init--source remote--remote-url https://ftp.drupal.org/files/projects/drupal-9.2.0.tar.gz--remote-options="--strip-components 1"--recipe drupal9--webroot .--name drupal9-local</pre>                                <p>This will download the drupal 9.2.0 version and place it in the drupal9-local folder. Further start lando by using the below command.</p>                                <p></p><pre>$ lando start</pre>                                <p>This will start the Drupal 9 installation and you will get the drupal up and running. And you can see the information in the instance running by using the below command.</p>                                <p></p><pre>$ lando info</pre>                                                                <h3><a href="/articles/drupal-configuration-management-local-dev-test-and-live.html" title="Read about Drupal Configuration Management Local Dev Test And Live">Configuration</a></h3>                                <p>You can modify or <a href="/articles/how-to-maintain-solar-panel-setup-at-your-home-to-get-the-best-results.html" title="Read about How To Maintain Solar Panel Setup At Your Home To Get The Best Results">maintain</a> the configurations in a file named .lando.yml, which can have the details of the php, mysql, nginx etc details. An example file is shown below.</p>                                <p></p><pre>$ nano .lando.ymlrecipe: drupal9config:    php: '7.4'    composer_version: '1.10.1'    via: nginx    database: mysql:5.7    webroot: .    drush: false    xdebug: true    config:        database: config/db.cnf        php: config/php.ini        server: config/server.conf        vhosts: config/default.confservices:    appserver:        build:        - composer installtooling:    drush:        service: appserver        env:            DRUSH_OPTIONS_URI: "https://drupal9-local.site"</pre>                                <p>Also you can utilize lando utility to run the composer and other services defined in the config file. Few example commands are shown below.</p>                                <p></p><pre>$ lando composer require drush/drush$ lando -v db-import -h drupal9 backup.sql.gz$ lando composer test$ lando mysql$ lando php -m</pre>                                <p>This way by using lando you can set up drupal 9 on your local environment. And on the configuration front you can do many other things like configuring <a href="/articles/multisite-local-environment-setup-with-ddev-and-drupal.html" title="Read about Multisite Local Environment Setup With Ddev And Drupal">multisite</a>, environment variables etc.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">28% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4h072AH" title="Apple iPhone 13 (128GB) - Midnight" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61VuVU94RnL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 13 (128GB) - Midnight" title="Apple iPhone 13 (128GB) - Midnight" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09G9HD6PD.html" title="Apple iPhone 13 (128GB) - Midnight" class="shop-title-value">Apple iPhone 13 (128GB) - Midnight</a></h4>
+                  <div class="discount"><span class="main">42% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y5kIBt" title="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81zPuf-0ETL._SX679_.jpg" class="img-fluid lazy" alt="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" title="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DWFY54.html" title="Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)" class="shop-title-value">Sony 139 cm (55 inches) BRAVIA 2 4K Ultra HD Smart LED Google TV K-55S25B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>42,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>59,600</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">18% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pcYGtm" title="acer AspireGo14,Intel Core Ultra5 125H(14thgen) AI Processor,16 GB/512 GB, WUXGA IPS, 14.0/35.56 cm, Win 11 Home, MS Office, Steel Gray, 1.5 kg, AG14-71M,Privacy Shutter,Backlit KB, Premium Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71JI131B9SL._SX679_.jpg" class="img-fluid lazy" alt="acer AspireGo14,Intel Core Ultra5 125H(14thgen) AI Processor,16 GB/512 GB, WUXGA IPS, 14.0/35.56 cm, Win 11 Home, MS Office, Steel Gray, 1.5 kg, AG14-71M,Privacy Shutter,Backlit KB, Premium Laptop" title="acer AspireGo14,Intel Core Ultra5 125H(14thgen) AI Processor,16 GB/512 GB, WUXGA IPS, 14.0/35.56 cm, Win 11 Home, MS Office, Steel Gray, 1.5 kg, AG14-71M,Privacy Shutter,Backlit KB, Premium Laptop" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FDL57MKD.html" title="acer AspireGo14,Intel Core Ultra5 125H(14thgen) AI Processor,16 GB/512 GB, WUXGA IPS, 14.0/35.56 cm, Win 11 Home, MS Office, Steel Gray, 1.5 kg, AG14-71M,Privacy Shutter,Backlit KB, Premium Laptop" class="shop-title-value">acer AspireGo14,Intel Core Ultra5 125H(14thgen) AI Processor,16 GB/512 GB, WUXGA IPS, 14.0/35.56 cm, Win 11 Home, MS Office, Steel Gray, 1.5 kg, AG14-71M,Privacy Shutter,Backlit KB, Premium Laptop</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Kh737v" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6181iXAgMjL._SX679_.jpg" class="img-fluid lazy" alt="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBQ2L8XY.html" title="ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins" class="shop-title-value">ECOVACS Deebot N30 PRO Omni 2 In 1 Robotic Vacuum Cleaner &amp; Mop,10000 Pa Suction,3500+ Sq.Ft,Self-Emptying Omni-Station,Truedge Mopping,Zerotangle 2.0,Hot Air-Drying,Auto-Lift Mop On Carpet,320 Mins</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>59,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>72,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>51,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>99,900</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CDr70g" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71wx0o6ZF9L._SX679_.jpg" class="img-fluid lazy" alt="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBLLXZW4.html" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" class="shop-title-value">VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)</a></h4>
+                  <div class="discount"><span class="main">14% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YmXSY1" title="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91y6-cWpxWL._SX679_.jpg" class="img-fluid lazy" alt="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" title="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D53M1ZQX.html" title="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3K9B2v8" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vDZyJQ-4L._SY879_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08VB57558.html" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" class="shop-title-value">Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)</a></h4>
+                  <div class="discount"><span class="main">67% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42hdKx1" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71S6jCCRkzL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07P57MJ44.html" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,250</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>74,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,664</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,995</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">95% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3PTWLeb" title="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61S9aVnRZDL._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)" title="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BF57RN3K.html" title="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)" class="shop-title-value">Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)</a></h4>
+                  <div class="discount"><span class="main">44% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3y9FwiC" title="Waterpik Cordless Advanced Water Flosser, Pearly White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/712+QdWxgqL._SX679_.jpg" class="img-fluid lazy" alt="Waterpik Cordless Advanced Water Flosser, Pearly White" title="Waterpik Cordless Advanced Water Flosser, Pearly White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B01GNVF8S8.html" title="Waterpik Cordless Advanced Water Flosser, Pearly White" class="shop-title-value">Waterpik Cordless Advanced Water Flosser, Pearly White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,121</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,000</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">62% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3DZIA3g" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41M3JHvOckL.jpg" class="img-fluid lazy" alt="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKXRXVH.html" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" class="shop-title-value">ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235</a></h4>
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41GEDK3" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91EAEKi3EYL._SX679_.jpg" class="img-fluid lazy" alt="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKW3T1L.html" title="boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)" class="shop-title-value">boAt New Launch Stone Opus, 80W Signature Sound, 12HRS Battery, Multilink Connectivity, Built-in Subwoofer, Premium Design, TWS, Bluetooth Speaker, Wireless Speaker,Portable Speaker (Midnight Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,879</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,990</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3BMDqGQ" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61dVOVxHn3L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBHYTM2X.html" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" class="shop-title-value">OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Y0MMI4" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/811ssp-s+ZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5F443W.html" title="Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)" class="shop-title-value">Samsung 138 cm (55 inches) D Series Crystal 4K Vivid Ultra HD Smart LED TV UA55DUE70BKLXL (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,989</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>41,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>64,900</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">60% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/44Flmr2" title="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qKiT8j2rL._SX679_.jpg" class="img-fluid lazy" alt="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" title="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BBVBCL3F.html" title="boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)" class="shop-title-value">boAt Aavante Bar Orion Soundbar with 160W RMS Signature Sound, 2.1 CH, BT v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs &amp; Master Remote Control(Pitch Black)</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45Q3a1u" title="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/610-3IpJwwL._SX679_.jpg" class="img-fluid lazy" alt="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" title="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CS3KHKM8.html" title="Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)" class="shop-title-value">Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182ML-N, Marine Lotus)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,690</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">54% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fqoDk9" title="Lenovo Tab M11 with Pen| 4G (LTE) + Wi-Fi | 8 Gb Ram, 128 Gb ROM (Expandable Upto 1 Tb)| 11 Inch Screen, 90 Hz Refresh Rate| Quad Speaker with Dolby Atmos| 13 Mp Rear Camera| Google Kids Space,Green" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/610nJ1jWpjL._SX679_.jpg" class="img-fluid lazy" alt="Lenovo Tab M11 with Pen| 4G (LTE) + Wi-Fi | 8 Gb Ram, 128 Gb ROM (Expandable Upto 1 Tb)| 11 Inch Screen, 90 Hz Refresh Rate| Quad Speaker with Dolby Atmos| 13 Mp Rear Camera| Google Kids Space,Green" title="Lenovo Tab M11 with Pen| 4G (LTE) + Wi-Fi | 8 Gb Ram, 128 Gb ROM (Expandable Upto 1 Tb)| 11 Inch Screen, 90 Hz Refresh Rate| Quad Speaker with Dolby Atmos| 13 Mp Rear Camera| Google Kids Space,Green" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D4DFVZK9.html" title="Lenovo Tab M11 with Pen| 4G (LTE) + Wi-Fi | 8 Gb Ram, 128 Gb ROM (Expandable Upto 1 Tb)| 11 Inch Screen, 90 Hz Refresh Rate| Quad Speaker with Dolby Atmos| 13 Mp Rear Camera| Google Kids Space,Green" class="shop-title-value">Lenovo Tab M11 with Pen| 4G (LTE) + Wi-Fi | 8 Gb Ram, 128 Gb ROM (Expandable Upto 1 Tb)| 11 Inch Screen, 90 Hz Refresh Rate| Quad Speaker with Dolby Atmos| 13 Mp Rear Camera| Google Kids Space,Green</a></h4>
+                  <div class="discount"><span class="main">9% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/44VYFkm" title="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71rs4Aer71L._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" title="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKMV3ZC.html" title="Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery" class="shop-title-value">Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI (Titanium Gray, 12GB RAM, 256GB Storage), Titanium Frame, Snapdragon 8 Elite, 200 MP Camera with ProVisual Engine and 5000mAh Battery</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,17,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,29,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">8% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hEuVgo" title="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61g1pqSjAhL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" title="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX59H5W7.html" title="OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)</a></h4>
+                  <div class="discount"><span class="main">29% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45Kd2by" title="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91JoitHYR4L._SX679_.jpg" class="img-fluid lazy" alt="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" title="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09XFMGSKV.html" title="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" class="shop-title-value">SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>22,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,329</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">28% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XyOHU7" title="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71tCOhEigtL._SX679_.jpg" class="img-fluid lazy" alt="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" title="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C9JFWBH7.html" title="Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer" class="shop-title-value">Redmi 12 5G (Jade Black, 6GB RAM, 128GB Storage Without Offer</a></h4>
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47Hj1AC" title="Sony BRAVIA 3 Series 139 cm (55 inches) 4K Ultra HD AI Smart LED Google TV K-55S30B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81ucmUnawvL._SX679_.jpg" class="img-fluid lazy" alt="Sony BRAVIA 3 Series 139 cm (55 inches) 4K Ultra HD AI Smart LED Google TV K-55S30B (Black)" title="Sony BRAVIA 3 Series 139 cm (55 inches) 4K Ultra HD AI Smart LED Google TV K-55S30B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3DW1CJF.html" title="Sony BRAVIA 3 Series 139 cm (55 inches) 4K Ultra HD AI Smart LED Google TV K-55S30B (Black)" class="shop-title-value">Sony BRAVIA 3 Series 139 cm (55 inches) 4K Ultra HD AI Smart LED Google TV K-55S30B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>73,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,29,900</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">14% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YmXSY1" title="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91y6-cWpxWL._SX679_.jpg" class="img-fluid lazy" alt="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" title="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D53M1ZQX.html" title="OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO F27 Pro+ 5G (Midnight Navy, 8GB RAM, 256GB Storage) | 6.7&quot; FHD+ AMOLED Toughest 3D Curved Display|64MP AI Featured Camera|IP69 | 67W SUPERVOOC| with No Cost EMI/Additional Exchange Offers</a></h4>
+                  <div class="discount"><span class="main">48% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dNp2vh" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/512J3gqzLuL._SX679_.jpg" class="img-fluid lazy" alt="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSG412HD.html" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" class="shop-title-value">Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>34,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>67,790</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

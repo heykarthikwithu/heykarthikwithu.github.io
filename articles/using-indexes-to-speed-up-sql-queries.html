@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035977" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035977">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/using-indexes-to-speed-up-sql-queries.html"
+          "@id": "https://peoplesblog.co.in/articles/using-indexes-to-speed-up-sql-queries.html"
         },
         "headline": "Using Indexes to Speed Up SQL Queries",
-        "description": "Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:",
-        "image": "https://peoplesblog.co.in/upload/banners/using-indexes-to-speed-up-sql-queries.jpg",
+        "description": "Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes: What Are Indexes? An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, whichch allows you to find information quickly without scanning every page.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/using-indexes-to-speed-up-sql-queries.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2024-10-24"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/using-indexes-to-speed-up-sql-queries.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:</p>  <h2>What Are Indexes?</h2>  <p>An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.</p>  <h2>Types of Indexes</h2>  <ul> <li><strong>Single-Column Index</strong>: Index on one column (e.g., <code>CREATE INDEX idx_name ON table_name (column_name);</code>).</li> <li><strong>Composite Index</strong>: Index on multiple columns (e.g., <code>CREATE INDEX idx_composite ON table_name (column1, column2);</code>).</li> <li><strong>Unique Index</strong>: Ensures all values in the indexed column are unique.</li> <li><strong>Full-Text Index</strong>: Used for efficient text searching.</li> </ul>  <h2>When to Use Indexes</h2>  <ul> <li><strong>Frequent Queries</strong>: Index columns that are often used in <code>SELECT</code> statements.</li> <li><strong>Join Conditions</strong>: Index foreign keys and columns used in joins.</li> <li><strong>Filtering and Sorting</strong>: Columns in <code>WHERE</code>, <code>ORDER BY</code>, or <code>GROUP BY</code> clauses are good candidates for indexing.</li> </ul>  <h2>Creating Indexes</h2>  <p>Use the SQL command:</p>  <p><code>CREATE INDEX index_name ON table_name (column_name);</code></p>  <p>For composite indexes:</p>  <p><code>CREATE INDEX idx_composite ON table_name (column1, column2);</code></p>  <h2>Analyzing Query Performance</h2>  <p>Use the <code>EXPLAIN</code> command to see how your query utilizes indexes:</p>  <p><code>EXPLAIN SELECT * FROM table_name WHERE column_name = 'value';</code></p>  <p>Look for indicators like "Using index" to confirm effective index usage.</p>  <h2>Trade-offs</h2>  <ul> <li><strong>Performance Impact</strong>: While indexes speed up read operations, they can slow down write operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) due to the overhead of maintaining the index.</li> <li><strong>Storage Costs</strong>: Indexes require additional disk space.</li> </ul>  <h2>Best <a href="/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Practices</a></h2>  <ul> <li><strong>Limit the Number of Indexes</strong>: Too many indexes can degrade performance, especially during writes.</li> <li><strong>Regular Maintenance</strong>: Monitor index usage and consider rebuilding or reorganizing indexes periodically.</li> <li><strong>Avoid Indexing Low-Cardinality Columns</strong>: Indexing columns with few unique values (like Boolean flags) typically offers little benefit.</li> </ul>  <h2>Monitoring and Adjusting</h2>  <ul> <li>Use database tools and logs to track query performance and adjust indexing <a href="/articles/communication-and-self-reflection-strategies.html" title="Read about Communication And Self Reflection Strategies">strategies</a> based on real-world usage.</li> </ul>  <h2>Conclusion</h2>  <p>Indexes are crucial for enhancing SQL query performance. By strategically creating and managing indexes, you can significantly improve data retrieval speeds while balancing the performance impacts on write operations. Regular analysis and adjustment of your indexing strategy will ensure optimal performance as your database grows and changes.</p>  <p>Thanks for reading the article, for more Science &amp; Technology related articles read and subscribe to peoples blog articles.</p></div>
+                                <div><p>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:</p>  <h2>What Are Indexes?</h2>  <p>An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.</p>  <h2>Types of Indexes</h2>  <ul> <li><strong>Single-Column Index</strong>: Index on one column (e.g., <code>CREATE INDEX idx_name ON table_name (column_name);</code>).</li> <li><strong>Composite Index</strong>: Index on multiple columns (e.g., <code>CREATE INDEX idx_composite ON table_name (column1, column2);</code>).</li> <li><strong>Unique Index</strong>: Ensures all values in the indexed column are unique.</li> <li><strong>Full-Text Index</strong>: Used for efficient text searching.</li> </ul>  <h2>When to Use Indexes</h2>  <ul> <li><strong>Frequent Queries</strong>: Index columns that are often used in <code>SELECT</code> statements.</li> <li><strong>Join Conditions</strong>: Index foreign keys and columns used in joins.</li> <li><strong>Filtering and Sorting</strong>: Columns in <code>WHERE</code>, <code>ORDER BY</code>, or <code>GROUP BY</code> clauses are good candidates for indexing.</li> </ul>  <h2>Creating Indexes</h2>  <p>Use the SQL command:</p>  <p><code>CREATE INDEX index_name ON table_name (column_name);</code></p>  <p>For composite indexes:</p>  <p><code>CREATE INDEX idx_composite ON table_name (column1, column2);</code></p>  <h2>Analyzing Query Performance</h2>  <p>Use the <code>EXPLAIN</code> command to see how your query utilizes indexes:</p>  <p><code>EXPLAIN SELECT * FROM table_name WHERE column_name = 'value';</code></p>  <p>Look for indicators like "Using index" to confirm effective index usage.</p>  <h2>Trade-offs</h2>  <ul> <li><strong>Performance Impact</strong>: While indexes speed up read operations, they can slow down write operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) due to the overhead of maintaining the index.</li> <li><strong>Storage Costs</strong>: Indexes require additional disk space.</li> </ul>  <h2>Best <a href="/articles/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.html" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Practices</a></h2>  <ul> <li><strong>Limit the Number of Indexes</strong>: Too many indexes can degrade performance, especially during writes.</li> <li><strong>Regular Maintenance</strong>: Monitor index usage and consider rebuilding or reorganizing indexes periodically.</li> <li><strong>Avoid Indexing Low-Cardinality Columns</strong>: Indexing columns with few unique values (like Boolean flags) typically offers little benefit.</li> </ul>  <h2>Monitoring and Adjusting</h2>  <ul> <li>Use database tools and logs to track query performance and adjust indexing <a href="/articles/communication-and-self-reflection-strategies.html" title="Read about Communication And Self Reflection Strategies">strategies</a> based on real-world usage.</li> </ul>  <h2>Conclusion</h2>  <p>Indexes are crucial for enhancing SQL query performance. By strategically creating and managing indexes, you can significantly improve data retrieval speeds while balancing the performance impacts on write operations. Regular analysis and adjustment of your indexing strategy will ensure optimal performance as your database grows and changes.</p>  <p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">66% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Cn8Qnn" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61UzKCR7JJL._SX679_.jpg" class="img-fluid lazy" alt="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09FGN9CD9.html" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" class="shop-title-value">Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black</a></h4>
+                  <div class="discount"><span class="main">45% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IUQ8aa" title="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61XhwNKrUlL._SX679_.jpg" class="img-fluid lazy" alt="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" title="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D62NZYJM.html" title="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)" class="shop-title-value">Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,799</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,249</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,200</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3tA16Ko" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71hKcWCFoCL._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LBXVH4L.html" title="Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters" class="shop-title-value">Amazon Brand - Solimo Polaris Engineered Wood Queen Bed With Box Storage (Walnut Finish),H-203 Centimeters,L-168 Centimeters</a></h4>
+                  <div class="discount"><span class="main">30% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3P43FeC" title="TECNO Pova 5 Pro 5G (Silver Fantasy, 8GB RAM,128GB Storage)| Segment 1st 68W Ultra Fast Charging | India&#039;s 1st Multi-colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg" class="img-fluid lazy" alt="TECNO Pova 5 Pro 5G (Silver Fantasy, 8GB RAM,128GB Storage)| Segment 1st 68W Ultra Fast Charging | India&#039;s 1st Multi-colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display" title="TECNO Pova 5 Pro 5G (Silver Fantasy, 8GB RAM,128GB Storage)| Segment 1st 68W Ultra Fast Charging | India&#039;s 1st Multi-colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CC36HMDC.html" title="TECNO Pova 5 Pro 5G (Silver Fantasy, 8GB RAM,128GB Storage)| Segment 1st 68W Ultra Fast Charging | India&#039;s 1st Multi-colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display" class="shop-title-value">TECNO Pova 5 Pro 5G (Silver Fantasy, 8GB RAM,128GB Storage)| Segment 1st 68W Ultra Fast Charging | India&#039;s 1st Multi-colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,529</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">32% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eNuWO4" title="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71VG3azYMjL._SX679_.jpg" class="img-fluid lazy" alt="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" title="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CV9S9VTD.html" title="MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN" class="shop-title-value">MSI Thin 15, Intel Core i5-12450H, 40CM FHD 144Hz Gaming Laptop(16GB/512GB NVMe SSD/Windows 11 Home/NVIDIA GeForce RTX 2050,GDDR 4GB /Cosmos Gray/1.86Kg), B12UCX-1695IN</a></h4>
+                  <div class="discount"><span class="main">42% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3HJItex" title="Whirlpool 431 L 2 Star IntelliFresh Convertible Inverter Frost Free Double Door Refrigerator (IF INV CNV 480 ALPHA STEEL-Z, 2S)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61ntpSkM78L._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 431 L 2 Star IntelliFresh Convertible Inverter Frost Free Double Door Refrigerator (IF INV CNV 480 ALPHA STEEL-Z, 2S)" title="Whirlpool 431 L 2 Star IntelliFresh Convertible Inverter Frost Free Double Door Refrigerator (IF INV CNV 480 ALPHA STEEL-Z, 2S)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C1G7PJKG.html" title="Whirlpool 431 L 2 Star IntelliFresh Convertible Inverter Frost Free Double Door Refrigerator (IF INV CNV 480 ALPHA STEEL-Z, 2S)" class="shop-title-value">Whirlpool 431 L 2 Star IntelliFresh Convertible Inverter Frost Free Double Door Refrigerator (IF INV CNV 480 ALPHA STEEL-Z, 2S)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>47,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>70,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>41,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>72,900</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">39% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3OyZV4V" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61or3k9RiSL._SX679_.jpg" class="img-fluid lazy" alt="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CWQY2JRZ.html" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" class="shop-title-value">Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bu81q9" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61SnaL4+EFL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WHRXTJV.html" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" class="shop-title-value">iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,999</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/456tgwN" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61v0diOacHL._SX679_.jpg" class="img-fluid lazy" alt="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BTDVHW6Q.html" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" class="shop-title-value">Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour</a></h4>
+                  <div class="discount"><span class="main">29% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48W4pfe" title="Faber 12 Place Settings Dishwasher (FFSD 6PR 12S, Neo Black, Best suited for Indian Kitchen, Hygiene Wash)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51H6c6oxnhL._SX679_.jpg" class="img-fluid lazy" alt="Faber 12 Place Settings Dishwasher (FFSD 6PR 12S, Neo Black, Best suited for Indian Kitchen, Hygiene Wash)" title="Faber 12 Place Settings Dishwasher (FFSD 6PR 12S, Neo Black, Best suited for Indian Kitchen, Hygiene Wash)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08HW2LQXP.html" title="Faber 12 Place Settings Dishwasher (FFSD 6PR 12S, Neo Black, Best suited for Indian Kitchen, Hygiene Wash)" class="shop-title-value">Faber 12 Place Settings Dishwasher (FFSD 6PR 12S, Neo Black, Best suited for Indian Kitchen, Hygiene Wash)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,200</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,990</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">11% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CyFQto" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKMF8N7.html" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" class="shop-title-value">Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI</a></h4>
+                  <div class="discount"><span class="main">30% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3VSQYau" title="Samsung 8 kg, 5 star, Eco Bubble Tech, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA80BG4441BGTL, Light Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61wstFqAjyL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 8 kg, 5 star, Eco Bubble Tech, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA80BG4441BGTL, Light Gray)" title="Samsung 8 kg, 5 star, Eco Bubble Tech, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA80BG4441BGTL, Light Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B8NK5HTH.html" title="Samsung 8 kg, 5 star, Eco Bubble Tech, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA80BG4441BGTL, Light Gray)" class="shop-title-value">Samsung 8 kg, 5 star, Eco Bubble Tech, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA80BG4441BGTL, Light Gray)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>99,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,11,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>18,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,000</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">3% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jKjFkt" title="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/715k0WQtg9L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" title="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQ8MPQFF.html" title="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" class="shop-title-value">OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)</a></h4>
+                  <div class="discount"><span class="main">57% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4mQAeM3" title="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71+0o7W+ezL._SX679_.jpg" class="img-fluid lazy" alt="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" title="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CLRC13BP.html" title="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" class="shop-title-value">Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>89,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>92,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,995</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3WNDsWV" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51EknP3PutL._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BKJRHV2M.html" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" class="shop-title-value">Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)</a></h4>
+                  <div class="discount"><span class="main">54% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3NV2w9h" title="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61p8i0azkvL._SX679_.jpg" class="img-fluid lazy" alt="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" title="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09CGQ6FCK.html" title="KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White" class="shop-title-value">KENT Grand RO Water Purifier | 4 Years Free Service | RO + UV LED + UF + TDS Control | ISI Marked | Extra 1000 Off on Exchange | 8L Tank | 20 LPH Flow | White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,299</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,349</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,000</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">11% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YwZvCl" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61lhB3uQT3L._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7M8LG8S.html" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" class="shop-title-value">Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor</a></h4>
+                  <div class="discount"><span class="main">39% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3OyZV4V" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61or3k9RiSL._SX679_.jpg" class="img-fluid lazy" alt="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CWQY2JRZ.html" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" class="shop-title-value">Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,500</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">76% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46kOIxv" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71PJjjeM4bL._SX679_.jpg" class="img-fluid lazy" alt="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZ6KW5HQ.html" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" class="shop-title-value">TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ErS9Ir" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71N8si9jomL._SX679_.jpg" class="img-fluid lazy" alt="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3VYT6Q6.html" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" class="shop-title-value">JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>61,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>2,54,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">78% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4iOwg5D" title="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91NPQ96+uML._SX679_.jpg" class="img-fluid lazy" alt="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" title="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DHSCTNQT.html" title="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" class="shop-title-value">Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4542HqY" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71vwtBCsr8L._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSBRDRDV.html" title="Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)" class="shop-title-value">Whirlpool 7 kg Magic Clean 5 Star Fully Automatic Top Load Washing Machine Grey (MAGIC CLEAN 7.0 GENX GREY 5YMW)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,699</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,599</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,040</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,350</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">11% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CyFQto" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKMF8N7.html" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" class="shop-title-value">Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI</a></h4>
+                  <div class="discount"><span class="main">7% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fxtKzm" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/616wnQmPQ-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VH5RL6.html" title="OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Oasis Green, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>99,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,11,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035977" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

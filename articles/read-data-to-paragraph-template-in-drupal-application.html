@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/read-data-to-paragraph-template-in-drupal-application.html"
+          "@id": "https://peoplesblog.co.in/articles/read-data-to-paragraph-template-in-drupal-application.html"
         },
         "headline": "Read Data to Paragraph Template in Drupal Application",
-        "description": "In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the",
-        "image": "https://peoplesblog.co.in/upload/banners/read-data-to-paragraph-template-in-drupal-application.png",
+        "description": "In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template. Generally while the Paragraph module is used, default template suggestions given by the paragraph module or thee template suggestions provided by the hooks are used and further template design is done.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/read-data-to-paragraph-template-in-drupal-application.png",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2022-07-17"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/read-data-to-paragraph-template-in-drupal-application.png" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.</p>  <p>Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which helps to write the template suggestions.</p>  <p>In few cases, there will be a need to read the actual values of the node fields or the entity data like for example media. And in some cases there will be unlimited values stored and need to read such data to paragraph template files.</p>  <p>In this article, I will share the possible ways of reading the data to the template file and few of them might not be the best approach but it's the decision to be taken for what type of project you are working with.</p>  <p>Let's see now the possible ways to read the data to the paragraph template file.</p>  <ul> <li>To read the <strong>Url</strong> of the current node, just you can use the below code, in the <code>paragraph.html.twig</code> file or in display of <code>paragraph–&lt;display&gt;.html.twig</code></li> </ul>  <p><code>{{ url("&lt;current&gt;") }}</code></p>    <ul> <li>To read the <strong>Title</strong> of the node, you can use the preprocess hooks like <code>theme_preprocess_paragraph</code> and read the node title and store it into a variable. And the variable data can be printed in the <code>paragraph.html.twig</code> file or in the display of <code>paragraph–&lt;display&gt;.html.twig</code>.</li> </ul>  <p><code>function bartik_preprocess_paragraph(&amp;$variables) {<br>    $node = Drupal::request()-&gt;attributes-&gt;get("node");<br>    $variables["node_title"] = $node-&gt;getTitle();<br> }</code></p>  <p><code>{{ node_title }}</code></p>  <ul> <li>To read the <strong>field</strong> value (for example text)</li> </ul>  <p>paragraph.field_text.entity.name.value</p>  <ul> <li>To read the <strong>Image</strong> (created via <strong>Media type</strong> or with just <strong>Image type</strong>), you can use the below <a href="/articles/different-ways-to-get-more-out-of-six-nine-position.html" title="Read about Different Ways To Get More Out Of Six Nine Position">different</a> types.</li> </ul>  <p><code>{% if paragraph.field_media_image is not empty %}<br>   {{ file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri) }}<br> {% endif %}</code></p>  <p><code>{{ file_url(paragraph.field_just_image.entity.uri.value) }}</code></p>    <ul> <li>If you want to read the <strong>Image</strong> (created via <strong>Media type</strong>) values in a <strong>custom</strong> approach or write some preprocess, then below code will help you. You can write the below code in the theme_preprocess_paragraph or other preprocess functions, then store into a variable and Render the stored variable in the paragraph template.</li> </ul>  <p><code>$paragraph = $term-&gt;get("field_custom_paragraph")-&gt;referencedEntities();<br> if ($paragraph) {<br>   $paragraph = reset($paragraph);<br>   $field_media_image = $paragraph&gt;get("field_media_image");<br>   if ($field_media_image[0] &amp;&amp; $field_media_image[0]-&gt;entity) {<br>     $build = Drupal::entityTypeManager()-&gt;getViewBuilder("media")-&gt;view($field_media_image[0]-&gt;entity);<br>     $variables["content"]["field_media_image"] = $build;<br>   }<br> }</code></p>  <p><code>{{ content.field_media_image }}</code></p>  <p>These are few possible ways to render read the data to the paragraph templates.</p>  <p><strong>Ideally the best approach is not to tweak</strong> the data or reading of the data at the rendering layer, because this will have some impact on the performance. I suggest to not tweak the data in the preprocess or reload the same paragraph value in the preprocess, And suggest to only use, if the case you don’t have any other possibility during the development process of drupal <a href="/articles/security-checklist-for-drupal-application.html" title="Read about Security Checklist For Drupal Application">application</a>.</p>  <p>Hope this article was helpful, read this article on how to work with paragraphs and Thanks for reading this article.</p></div>
+                                <div><p>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.</p>  <p>Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which helps to write the template suggestions.</p>  <p>In few cases, there will be a need to read the actual values of the node fields or the entity data like for example media. And in some cases there will be unlimited values stored and need to read such data to paragraph template files.</p>  <p>In this article, I will share the possible ways of reading the data to the template file and few of them might not be the best approach but it's the decision to be taken for what type of project you are working with.</p>  <p>Let's see now the possible ways to read the data to the paragraph template file.</p>  <ul> <li>To read the <strong>Url</strong> of the current node, just you can use the below code, in the <code>paragraph.html.twig</code> file or in display of <code>paragraph–&lt;display&gt;.html.twig</code></li> </ul>  <p><code>{{ url("&lt;current&gt;") }}</code></p>    <ul> <li>To read the <strong>Title</strong> of the node, you can use the preprocess hooks like <code>theme_preprocess_paragraph</code> and read the node title and store it into a variable. And the variable data can be printed in the <code>paragraph.html.twig</code> file or in the display of <code>paragraph–&lt;display&gt;.html.twig</code>.</li> </ul>  <p><code>function bartik_preprocess_paragraph(&amp;$variables) {<br>    $node = Drupal::request()→attributes→get("node");<br>    $variables["node_title"] = $node→getTitle();<br> }</code></p>  <p><code>{{ node_title }}</code></p>  <ul> <li>To read the <strong>field</strong> value (for example text)</li> </ul>  <p>paragraph.field_text.entity.name.value</p>  <ul> <li>To read the <strong>Image</strong> (created via <strong>Media type</strong> or with just <strong>Image type</strong>), you can use the below <a href="/articles/different-ways-to-get-more-out-of-six-nine-position.html" title="Read about Different Ways To Get More Out Of Six Nine Position">different</a> types.</li> </ul>  <p><code>{% if paragraph.field_media_image is not empty %}<br>   {{ file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri) }}<br> {% endif %}</code></p>  <p><code>{{ file_url(paragraph.field_just_image.entity.uri.value) }}</code></p>    <ul> <li>If you want to read the <strong>Image</strong> (created via <strong>Media type</strong>) values in a <strong>custom</strong> approach or write some preprocess, then below code will help you. You can write the below code in the theme_preprocess_paragraph or other preprocess functions, then store into a variable and Render the stored variable in the paragraph template.</li> </ul>  <p><code>$paragraph = $term→get("field_custom_paragraph")→referencedEntities();<br> if ($paragraph) {<br>   $paragraph = reset($paragraph);<br>   $field_media_image = $paragraph&gt;get("field_media_image");<br>   if ($field_media_image[0] &amp;&amp; $field_media_image[0]→entity) {<br>     $build = Drupal::entityTypeManager()→getViewBuilder("media")→view($field_media_image[0]→entity);<br>     $variables["content"]["field_media_image"] = $build;<br>   }<br> }</code></p>  <p><code>{{ content.field_media_image }}</code></p>  <p>These are few possible ways to render read the data to the paragraph templates.</p>  <p><strong>Ideally the best approach is not to tweak</strong> the data or reading of the data at the rendering layer, because this will have some impact on the performance. I suggest to not tweak the data in the preprocess or reload the same paragraph value in the preprocess, And suggest to only use, if the case you don’t have any other possibility during the development process of drupal <a href="/articles/security-checklist-for-drupal-application.html" title="Read about Security Checklist For Drupal Application">application</a>.</p>  <p>Hope this article was helpful, read this article on how to work with paragraphs and Thanks for reading this article.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">21% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3sFjNw9" title="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Ct6+KF4AL._SY879_.jpg" class="img-fluid lazy" alt="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" title="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B8NHX62W.html" title="Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)" class="shop-title-value">Samsung 7 kg, 5 star, Eco Bubble Technology, Digital Inverter, Motor, Soft Closing Door, Fully-Automatic Top Load Washing Machine (WA70BG4441YYTL, Lavender Gray)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,690</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,500</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4853Gbm" title="JioBook 11 with Lifetime Office | Android 4G Laptop Mediatek 8788 (JioOS) | Octa-core | 4GB RAM | 64 eMMC Storage | Thin and Light Laptop (11.6 inch, 990 Grams) | Dual Band WiFi + SIM | Blue" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61IDcxw27+L._SX679_.jpg" class="img-fluid lazy" alt="JioBook 11 with Lifetime Office | Android 4G Laptop Mediatek 8788 (JioOS) | Octa-core | 4GB RAM | 64 eMMC Storage | Thin and Light Laptop (11.6 inch, 990 Grams) | Dual Band WiFi + SIM | Blue" title="JioBook 11 with Lifetime Office | Android 4G Laptop Mediatek 8788 (JioOS) | Octa-core | 4GB RAM | 64 eMMC Storage | Thin and Light Laptop (11.6 inch, 990 Grams) | Dual Band WiFi + SIM | Blue" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CKX9PY1H.html" title="JioBook 11 with Lifetime Office | Android 4G Laptop Mediatek 8788 (JioOS) | Octa-core | 4GB RAM | 64 eMMC Storage | Thin and Light Laptop (11.6 inch, 990 Grams) | Dual Band WiFi + SIM | Blue" class="shop-title-value">JioBook 11 with Lifetime Office | Android 4G Laptop Mediatek 8788 (JioOS) | Octa-core | 4GB RAM | 64 eMMC Storage | Thin and Light Laptop (11.6 inch, 990 Grams) | Dual Band WiFi + SIM | Blue</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,890</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>25,000</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ErS9Ir" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71N8si9jomL._SX679_.jpg" class="img-fluid lazy" alt="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3VYT6Q6.html" title="JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)" class="shop-title-value">JBL Charge 5 Wi-Fi, Wireless Portable Bluetooth Speaker, Original Pro Sound, 20 Hours Playtime, Deep Bass, Built-in Powerbank, Wi-Fi with AirPlay, IP67 Water &amp; Dustproof, One App (Black)</a></h4>
+                  <div class="discount"><span class="main">49% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gti7bO" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vc14MtETL._SX679_.jpg" class="img-fluid lazy" alt="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BSXMR5TG.html" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" class="shop-title-value">JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)</a></h4>
                   <div class="price">
                       <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">0% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3sE37F3" title="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/7135keEf6AL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" title="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BKKPRMM6.html" title="Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)" class="shop-title-value">Samsung 28L Multi Spit , Convection Microwave Oven (MC28A6035QS/TL, Silver, Various Cooking Modes, Eco Mode, Hotblast, Crusty Plate, Wire Rack, Slim Fry, Ceramic Enamel Cavity with 10 year warranty)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,500</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,500</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">31% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4lCVg07" title="HP 15, Intel Core i3-1315U-13th Gen Laptop (8GB DDR4 Ram,512GB SSD) Anti-Glare, Micro-Edge,15.6 FHD, Win11,M365 Basic(1yr),Office Home24, Silver,1.59kg, FHD Camera Shutter, 15-fd0569TU" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/618EzEodvlL._SX679_.jpg" class="img-fluid lazy" alt="HP 15, Intel Core i3-1315U-13th Gen Laptop (8GB DDR4 Ram,512GB SSD) Anti-Glare, Micro-Edge,15.6 FHD, Win11,M365 Basic(1yr),Office Home24, Silver,1.59kg, FHD Camera Shutter, 15-fd0569TU" title="HP 15, Intel Core i3-1315U-13th Gen Laptop (8GB DDR4 Ram,512GB SSD) Anti-Glare, Micro-Edge,15.6 FHD, Win11,M365 Basic(1yr),Office Home24, Silver,1.59kg, FHD Camera Shutter, 15-fd0569TU" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FKN7Z65N.html" title="HP 15, Intel Core i3-1315U-13th Gen Laptop (8GB DDR4 Ram,512GB SSD) Anti-Glare, Micro-Edge,15.6 FHD, Win11,M365 Basic(1yr),Office Home24, Silver,1.59kg, FHD Camera Shutter, 15-fd0569TU" class="shop-title-value">HP 15, Intel Core i3-1315U-13th Gen Laptop (8GB DDR4 Ram,512GB SSD) Anti-Glare, Micro-Edge,15.6 FHD, Win11,M365 Basic(1yr),Office Home24, Silver,1.59kg, FHD Camera Shutter, 15-fd0569TU</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>34,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,903</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">8% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gs8aLZ" title="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61JOYUJbhcL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VJ72XK.html" title="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">77% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3AMLw1P" title="Urban Terrain UT1000 Steel Cycle/Bicycle 27.5 inch MTB (21 Speed) Gear Bicycle For Men/Boys With Front Suspension &amp; Disc Brake Mountain Bike | Ideal for 15+ Years, Frame Size : 16 inch (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61UbexhYzKL._SX679_.jpg" class="img-fluid lazy" alt="Urban Terrain UT1000 Steel Cycle/Bicycle 27.5 inch MTB (21 Speed) Gear Bicycle For Men/Boys With Front Suspension &amp; Disc Brake Mountain Bike | Ideal for 15+ Years, Frame Size : 16 inch (Black)" title="Urban Terrain UT1000 Steel Cycle/Bicycle 27.5 inch MTB (21 Speed) Gear Bicycle For Men/Boys With Front Suspension &amp; Disc Brake Mountain Bike | Ideal for 15+ Years, Frame Size : 16 inch (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09DVZST2V.html" title="Urban Terrain UT1000 Steel Cycle/Bicycle 27.5 inch MTB (21 Speed) Gear Bicycle For Men/Boys With Front Suspension &amp; Disc Brake Mountain Bike | Ideal for 15+ Years, Frame Size : 16 inch (Black)" class="shop-title-value">Urban Terrain UT1000 Steel Cycle/Bicycle 27.5 inch MTB (21 Speed) Gear Bicycle For Men/Boys With Front Suspension &amp; Disc Brake Mountain Bike | Ideal for 15+ Years, Frame Size : 16 inch (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>32,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>49,990</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">66% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46VZg6m" title="Urban Terrain Galaxy Ultra 27.5T Steel Geared High Performance Mountain Cycles for Men with Front Suspension &amp; Disc Brake MTB Bike | Ideal for 15+ Years, Unisex, Frame Size: 17 inch (21 Speed, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61jNnSU1ftL._SX679_.jpg" class="img-fluid lazy" alt="Urban Terrain Galaxy Ultra 27.5T Steel Geared High Performance Mountain Cycles for Men with Front Suspension &amp; Disc Brake MTB Bike | Ideal for 15+ Years, Unisex, Frame Size: 17 inch (21 Speed, White)" title="Urban Terrain Galaxy Ultra 27.5T Steel Geared High Performance Mountain Cycles for Men with Front Suspension &amp; Disc Brake MTB Bike | Ideal for 15+ Years, Unisex, Frame Size: 17 inch (21 Speed, White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CXM93RY2.html" title="Urban Terrain Galaxy Ultra 27.5T Steel Geared High Performance Mountain Cycles for Men with Front Suspension &amp; Disc Brake MTB Bike | Ideal for 15+ Years, Unisex, Frame Size: 17 inch (21 Speed, White)" class="shop-title-value">Urban Terrain Galaxy Ultra 27.5T Steel Geared High Performance Mountain Cycles for Men with Front Suspension &amp; Disc Brake MTB Bike | Ideal for 15+ Years, Unisex, Frame Size: 17 inch (21 Speed, White)</a></h4>
+                  <div class="discount"><span class="main">67% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4aqtRu8" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50680002" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/716MIi7BmVL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50680002" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50680002" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07LBHRDYR.html" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50680002" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50680002</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,467</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,799</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,195</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,995</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CDr70g" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71wx0o6ZF9L._SX679_.jpg" class="img-fluid lazy" alt="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBLLXZW4.html" title="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)" class="shop-title-value">VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)</a></h4>
+                  <div class="discount"><span class="main">21% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3wS8EtK" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Id6WJDWqL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPJPR3.html" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" class="shop-title-value">iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDrB9l" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61WwrG1D13L._SX679_.jpg" class="img-fluid lazy" alt="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BMT9VP8R.html" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" class="shop-title-value">TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera</a></h4>
+                  <div class="discount"><span class="main">14% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/476QaWt" title="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/615hoewbBQL._SX679_.jpg" class="img-fluid lazy" alt="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" title="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09Z1VLR19.html" title="MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes" class="shop-title-value">MOKOBARA Iconic Range The Check-in Luggage Medium Size German Makrolon Poly-Carbonate Hard Sided 8 Hinomoto Wheels Suitcase Trolley - Hinomoto Wheels, Purple-Cosmic Vibes</a></h4>
                   <div class="price">
                       <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">78% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4nJbXbR" title="Kinsco Aqua Punch+ Zinc Copper And Alkaline 15Liter Ro + Uv + Uf Water Purifier(Black) With Copper Guard,Ph Enhancer,And Pre-Filter-1-Year Warranty" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71xzugGTA-L._SX679_.jpg" class="img-fluid lazy" alt="Kinsco Aqua Punch+ Zinc Copper And Alkaline 15Liter Ro + Uv + Uf Water Purifier(Black) With Copper Guard,Ph Enhancer,And Pre-Filter-1-Year Warranty" title="Kinsco Aqua Punch+ Zinc Copper And Alkaline 15Liter Ro + Uv + Uf Water Purifier(Black) With Copper Guard,Ph Enhancer,And Pre-Filter-1-Year Warranty" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D2L1BTBG.html" title="Kinsco Aqua Punch+ Zinc Copper And Alkaline 15Liter Ro + Uv + Uf Water Purifier(Black) With Copper Guard,Ph Enhancer,And Pre-Filter-1-Year Warranty" class="shop-title-value">Kinsco Aqua Punch+ Zinc Copper And Alkaline 15Liter Ro + Uv + Uf Water Purifier(Black) With Copper Guard,Ph Enhancer,And Pre-Filter-1-Year Warranty</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42D7EXZ" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61sY8BGOyEL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WFPMJBH.html" title="iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge" class="shop-title-value">iQOO Z9x 5G (Storm Grey, 4GB RAM, 128GB Storage) | Snapdragon 6 Gen 1 with 560k+ AnTuTu Score | 6000mAh Battery with 7.99mm Slim Design | 44W FlashCharge</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">67% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/42hdKx1" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71S6jCCRkzL._SX679_.jpg" class="img-fluid lazy" alt="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07P57MJ44.html" title="BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004" class="shop-title-value">BCBG MAX AZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50910004</a></h4>
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YwZvCl" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61lhB3uQT3L._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7M8LG8S.html" title="Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor" class="shop-title-value">Lava Blaze X 5G - Starlight Purple (8GB RAM | 128GB Storage) - Segment First 5G Curved AMOLED Display* | 64MP Sony Sensor Camera | Upto 16GB Expandable RAM | Latest MediaTek 5G Processor</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,664</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>18,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">12% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XoXiaI" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61NbiB1GU-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VKMLGD.html" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3DRGv9A" title="iQOO Z9 Lite 5G (Aqua Flow, 6GB RAM, 128GB Storage) | Dimensity 6300 5G | 50MP Sony AI Camera | Charger in The Box" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61WZicN+coL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9 Lite 5G (Aqua Flow, 6GB RAM, 128GB Storage) | Dimensity 6300 5G | 50MP Sony AI Camera | Charger in The Box" title="iQOO Z9 Lite 5G (Aqua Flow, 6GB RAM, 128GB Storage) | Dimensity 6300 5G | 50MP Sony AI Camera | Charger in The Box" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WHSNYL5.html" title="iQOO Z9 Lite 5G (Aqua Flow, 6GB RAM, 128GB Storage) | Dimensity 6300 5G | 50MP Sony AI Camera | Charger in The Box" class="shop-title-value">iQOO Z9 Lite 5G (Aqua Flow, 6GB RAM, 128GB Storage) | Dimensity 6300 5G | 50MP Sony AI Camera | Charger in The Box</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,499</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">43% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3WNDsWV" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51EknP3PutL._SX679_.jpg" class="img-fluid lazy" alt="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BKJRHV2M.html" title="Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)" class="shop-title-value">Lava Blaze 5G (Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)</a></h4>
+                  <div class="discount"><span class="main">10% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3S6mj8X" title="OnePlus 11 5G (Titan Black, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71K84j2O8wL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 11 5G (Titan Black, 8GB RAM, 128GB Storage)" title="OnePlus 11 5G (Titan Black, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BQJLVSC2.html" title="OnePlus 11 5G (Titan Black, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus 11 5G (Titan Black, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,299</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,349</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>56,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>63,077</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
                   <div class="discount"><span class="main">57% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4mQAeM3" title="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71+0o7W+ezL._SX679_.jpg" class="img-fluid lazy" alt="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" title="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CLRC13BP.html" title="Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap" class="shop-title-value">Titan Crest 1.43” AMOLED Smart Watch with BT Calling, AI Morning Briefs, Functional Crown, Health Tracking, Aluminium Body, 100+ Sports Modes, Smartwatch for Men and Women - Black Mesh Strap</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bDuuBn" title="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51naBIaCpXL.jpg" class="img-fluid lazy" alt="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" title="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CFYFMQN2.html" title="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish" class="shop-title-value">Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,171</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,998</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

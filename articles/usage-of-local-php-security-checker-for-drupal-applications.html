@@ -8,12 +8,12 @@
     <meta name="description" content="To make developer life easier, developers look for tools or libraries which can automated security review. Here comes the Local PHP Security Checker l" />
     <link rel="canonical" href="https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html" />
     <meta property="og:title" content="Usage of Local Php Security Checker for Drupal Applications" />
-    <meta property="og:description" content="In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development &amp; code revi" />
+    <meta property="og:description" content="In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development and code review" />
     <meta property="og:url" content="https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html" />
     <meta property="og:image" content="https://peoplesblog.co.in/upload/banners/usage-of-local-php-security-checker-for-drupal-applications.jpg" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="Usage of Local Php Security Checker for Drupal Applications" />
-    <meta name="twitter:description" content="In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development &amp; code revi" />
+    <meta name="twitter:description" content="In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development and code review" />
     <meta name="twitter:image" content="https://peoplesblog.co.in/upload/banners/usage-of-local-php-security-checker-for-drupal-applications.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/usage-of-local-php-security-checker-for-drupal-applications.html"
+          "@id": "https://peoplesblog.co.in/articles/usage-of-local-php-security-checker-for-drupal-applications.html"
         },
         "headline": "Usage of Local Php Security Checker for Drupal Applications",
-        "description": "In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development &amp; code revi",
-        "image": "https://peoplesblog.co.in/upload/banners/usage-of-local-php-security-checker-for-drupal-applications.jpg",
+        "description": "In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development and code review process. To make developer life easier, developers look for tools or libraries which can automated security review. Here comes the Local PHP Security Checkerr library, which checks for any known vulnerabilities in the package dependencies.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/usage-of-local-php-security-checker-for-drupal-applications.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2022-07-23"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/usage-of-local-php-security-checker-for-drupal-applications.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development &amp; code review process.</p>  <p>To make <a href="/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html" title="Read about Api Docs Drupal Contributed Module For Your Developer Portal">developer</a> life easier, developers look for tools or libraries which can automated security review. Here comes the <a href="https://github.com/fabpot/local-php-security-checker">Local PHP Security Checker</a> library, which checks for any known vulnerabilities in the package dependencies.</p>  <p>This can also be added to the Github actions so that these checks can be done with the Pull requests. We have a similar helpful article related to Phpcs and Phpstan added to github actions, have a check of this.</p>  <p>We could run this locally which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-lando-and-drupal.html" title="Read about Multisite Local Environment Setup With Lando And Drupal">environment</a>.</p>  <p><code>$ local-php-security-checker --path=&lt;path-to-lock-file&gt;composer.lock</code></p>  <p>There are few more options provided by this library, like </p>  <p>1. To get the output in different formats like <code>ansi</code>, <code>markdown</code>, <code>json</code>, <code>junit</code> and <code>yaml</code>, you can do this with the argument of <code>--format.</code></p>  <p><code>$ local-php-security-checker --format=json</code></p>  <p>2. You can skip the checks for packages listed in <code>require-dev</code> by passing the <code>no-dev</code> flag</p>  <p><code>$ local-php-security-checker --no-dev</code></p>    <p>If you are maintaining your code in Github, then Github is providing continuous integration support within their workflows. You can run on github actions like shown below</p>  <p>Create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br> on: [pull_request]<br>   jobs:<br>     local-php-security-checker:<br>       runs-on: ubuntu-latest<br>       steps:<br>       - name: Clone the code<br>         uses: actions/checkout@v3<br>       - name: Setup PHP 7.4<br>         uses: shivamathur/setup-php@v2<br>          with:<br>           php-version: 7.4<br>       - name: Composer install<br>         run: composer install<br>       - name: Add cache<br>         uses: actions/cache@v3<br>         id: cache-db<br>         with:<br>          path: ~/.symfony/cache<br>          key: db<br>       - name: Scan composer.lock<br>         uses: symfonycorp/security-checker-action@v3</code></p>    <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 5 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To add the caches</li> <li>To scan the composer.lock file (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of security check is performed before you push the code to master branch or branch which has the stable code on your local and another check is done at the pull request level.</p>  <p>On the github actions note, Github Actions is based on the <a href="/articles/understanding-sql-query-execution-plans-and-optimizing-joins.html" title="Read about Understanding Sql Query Execution Plans And Optimizing Joins">execution</a> minutes for hosted runners (which basically run workflows). The users with basic membership will have 2000 free minutes/month.</p>  <p>Hope you have a picture, on how people can use and scan for known vulnerabilities in the drupal application with the help of Local PHP Security Checker. Thanks for reading the article, for more drupal related articles, check out here.</p></div>
+                                <div><p>In this article, we are going to see how the Local PHP Security Checker library will make people's lives easier during the development and code review process.</p>  <p>To make <a href="/articles/api-docs-drupal-contributed-module-for-your-developer-portal.html" title="Read about Api Docs Drupal Contributed Module For Your Developer Portal">developer</a> life easier, developers look for tools or libraries which can automated security review. Here comes the <a href="https://github.com/fabpot/local-php-security-checker">Local PHP Security Checker</a> library, which checks for any known vulnerabilities in the package dependencies.</p>  <p>This can also be added to the Github actions so that these checks can be done with the Pull requests. We have a similar helpful article related to Phpcs and Phpstan added to github actions, have a check of this.</p>  <p>We could run this locally which will help developers to make sure none of the issues will go to the higher <a href="/articles/multisite-local-environment-setup-with-lando-and-drupal.html" title="Read about Multisite Local Environment Setup With Lando And Drupal">environment</a>.</p>  <p><code>$ local-php-security-checker --path=&lt;path-to-lock-file&gt;composer.lock</code></p>  <p>There are few more options provided by this library, like </p>  <p>1. To get the output in different formats like <code>ansi</code>, <code>markdown</code>, <code>json</code>, <code>junit</code> and <code>yaml</code>, you can do this with the argument of <code>--format.</code></p>  <p><code>$ local-php-security-checker --format=json</code></p>  <p>2. You can skip the checks for packages listed in <code>require-dev</code> by passing the <code>no-dev</code> flag</p>  <p><code>$ local-php-security-checker --no-dev</code></p>    <p>If you are maintaining your code in Github, then Github is providing continuous integration support within their workflows. You can run on github actions like shown below</p>  <p>Create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p>  <p><code>.github/workflows/ci.yml</code></p>  <p>Add the below code to the <code>ci.yml</code> file.</p>  <p><code>name: pr-review<br> on: [pull_request]<br>   jobs:<br>     local-php-security-checker:<br>       runs-on: ubuntu-latest<br>       steps:<br>       - name: Clone the code<br>         uses: actions/checkout@v3<br>       - name: Setup PHP 7.4<br>         uses: shivamathur/setup-php@v2<br>          with:<br>           php-version: 7.4<br>       - name: Composer install<br>         run: composer install<br>       - name: Add cache<br>         uses: actions/cache@v3<br>         id: cache-db<br>         with:<br>          path: ~/.symfony/cache<br>          key: db<br>       - name: Scan composer.lock<br>         uses: symfonycorp/security-checker-action@v3</code></p>    <p>The YML file is configured to trigger a job upon the pull request creation.</p>  <ol> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 5 steps <ol> <li>To clone the code</li> <li>To setup the php 7.4 version.</li> <li>To run the composer install</li> <li>To add the caches</li> <li>To scan the composer.lock file (like we run locally)</li> </ol> </li> </ol>  <p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p>  <p>By this, One level of security check is performed before you push the code to master branch or branch which has the stable code on your local and another check is done at the pull request level.</p>  <p>On the github actions note, Github Actions is based on the <a href="/articles/understanding-sql-query-execution-plans-and-optimizing-joins.html" title="Read about Understanding Sql Query Execution Plans And Optimizing Joins">execution</a> minutes for hosted runners (which basically run workflows). The users with basic membership will have 2000 free minutes/month.</p>  <p>Hope you have a picture, on how people can use and scan for known vulnerabilities in the drupal application with the help of Local PHP Security Checker. Thanks for reading the article, for more drupal related articles, check out here.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">80% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4o6MbPM" title="AQUA D PURE 4 in 1 Copper RO Water Purifier with 10 Stage Purification Filtration, UV, UF, TDS Adjuster and 12 Liter Large Storage Tank, Suitable for all type of water supply" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71d2a+OlMRL._SX522_.jpg" class="img-fluid lazy" alt="AQUA D PURE 4 in 1 Copper RO Water Purifier with 10 Stage Purification Filtration, UV, UF, TDS Adjuster and 12 Liter Large Storage Tank, Suitable for all type of water supply" title="AQUA D PURE 4 in 1 Copper RO Water Purifier with 10 Stage Purification Filtration, UV, UF, TDS Adjuster and 12 Liter Large Storage Tank, Suitable for all type of water supply" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BJ6P3LSK.html" title="AQUA D PURE 4 in 1 Copper RO Water Purifier with 10 Stage Purification Filtration, UV, UF, TDS Adjuster and 12 Liter Large Storage Tank, Suitable for all type of water supply" class="shop-title-value">AQUA D PURE 4 in 1 Copper RO Water Purifier with 10 Stage Purification Filtration, UV, UF, TDS Adjuster and 12 Liter Large Storage Tank, Suitable for all type of water supply</a></h4>
+                  <div class="discount"><span class="main">55% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/49agduy" title="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/919PT-mtS0L._SX522_.jpg" class="img-fluid lazy" alt="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" title="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B01M32X87O.html" title="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black" class="shop-title-value">Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,946</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,414</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">48% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4dNp2vh" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/512J3gqzLuL._SX679_.jpg" class="img-fluid lazy" alt="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSG412HD.html" title="Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)" class="shop-title-value">Carrier 1.5 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,High Density Filter, Auto Cleanser, 2024 Model,ESTER NEO Exi+, CAI18ER3R34F0,White)</a></h4>
+                  <div class="discount"><span class="main">17% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4ofJbjj" title="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51oj5gE7P+L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" title="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CJ96945H.html" title="OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green" class="shop-title-value">OnePlus Pad Go 28.85Cm 2.4K 7:5 Ratio Readfit Eye Care LCD Display,Dolby Atmos Quad Speakers,4G LTE(Calling) + Wi-Fi Connectivity Tablet,8Gb Ram 256 Gb Storage Expandable Up-to 1Tb,Green</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>34,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>67,790</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3SddOrB" title="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81BGKLI+cWL._SX679_.jpg" class="img-fluid lazy" alt="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" title="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DLW427YG.html" title="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging" class="shop-title-value">Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gRmrng" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81P2YOHSQRL._SX679_.jpg" class="img-fluid lazy" alt="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F835K3HL.html" title="LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA" class="shop-title-value">LG 108 cm (43 inches) UA82 Series 4K Ultra HD Smart webOS LED TV 43UA82006LA</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,498</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>26,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,090</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">78% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4iOwg5D" title="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91NPQ96+uML._SX679_.jpg" class="img-fluid lazy" alt="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" title="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DHSCTNQT.html" title="Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent" class="shop-title-value">Criusia (24 Pcs Multipurpose Foldable Cloth Organizer for Wardrobe &amp; Almirah | Kids Shelf for Clothes &amp; Organiser Storage Box for Cupboard, Kitchen &amp; Bathroom | Transparent</a></h4>
+                  <div class="discount"><span class="main">36% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3UQsfE0" title="Redmi 13C 5G (Startrail Green, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81KFSdWCCEL._SX679_.jpg" class="img-fluid lazy" alt="Redmi 13C 5G (Startrail Green, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display" title="Redmi 13C 5G (Startrail Green, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CNX6WVG5.html" title="Redmi 13C 5G (Startrail Green, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display" class="shop-title-value">Redmi 13C 5G (Startrail Green, 4GB RAM, 128GB Storage) | MediaTek Dimensity 6100+ 5G | 90Hz Display</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,699</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,599</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">26% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Pj2QzC" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61pt59LW-lL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPBNTC.html" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" class="shop-title-value">iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box</a></h4>
+                  <div class="discount"><span class="main">75% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ZgxFsJ" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81oFv22OmQS._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08QT7FH84.html" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" class="shop-title-value">Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>18,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,000</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">3% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IElj9j" title="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/715k0WQtg9L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" title="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQ8MPQFF.html" title="OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)" class="shop-title-value">OnePlus 13 | Smarter with OnePlus AI | Lifetime Display Warranty (24GB RAM, 1TB Storage Black Eclipse)</a></h4>
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/48kMGOw" title="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/618cNlDLyZL._SX679_.jpg" class="img-fluid lazy" alt="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" title="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZ12FPM1.html" title="Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)" class="shop-title-value">Haier 596 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HES-690SS-P, Shiny Silver)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>89,997</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>92,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,01,990</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">76% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46kOIxv" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71PJjjeM4bL._SX679_.jpg" class="img-fluid lazy" alt="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZ6KW5HQ.html" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" class="shop-title-value">TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)</a></h4>
+                  <div class="discount"><span class="main">43% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/456tgwN" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61v0diOacHL._SX679_.jpg" class="img-fluid lazy" alt="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BTDVHW6Q.html" title="Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour" class="shop-title-value">Honor PAD 8 30.4 cm (12&quot;) 2K Display, Qualcomm Snapdragon 680, 6GB RAM, 128GB Storage, 8 Speakers, Android 12, Tuv Certified Eye Protection, Up to 14 Hours Battery, WiFi Tablet, Metal Body, Blue Hour</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>61,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>2,54,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">76% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46kOIxv" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71PJjjeM4bL._SX679_.jpg" class="img-fluid lazy" alt="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZ6KW5HQ.html" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" class="shop-title-value">TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)</a></h4>
+                  <div class="discount"><span class="main">58% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pSriss" title="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71lS1u8lQsL._SX679_.jpg" class="img-fluid lazy" alt="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" title="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DKNL8CHP.html" title="acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD" class="shop-title-value">acer 109 cm (43 inches) G Plus Series 4K Ultra HD LED Smart Google TV AR43UDGGR2851AD</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>61,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>2,54,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>47,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4851m6o" title="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71-jKID9hgL._SY879_.jpg" class="img-fluid lazy" alt="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" title="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DD45WVCM.html" title="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)" class="shop-title-value">LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)</a></h4>
+                  <div class="discount"><span class="main">21% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YTbVo1" title="OPPO F27 5G (Emerald Green, 8GB RAM, 256GB Storage) | 6.67&quot; FHD+ AMOLED Display|32MP Sony IMX615 Selfie Camera |AI Portrait Expert| 45W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81CFCXH1tVL._SX679_.jpg" class="img-fluid lazy" alt="OPPO F27 5G (Emerald Green, 8GB RAM, 256GB Storage) | 6.67&quot; FHD+ AMOLED Display|32MP Sony IMX615 Selfie Camera |AI Portrait Expert| 45W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" title="OPPO F27 5G (Emerald Green, 8GB RAM, 256GB Storage) | 6.67&quot; FHD+ AMOLED Display|32MP Sony IMX615 Selfie Camera |AI Portrait Expert| 45W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DCGGP82Z.html" title="OPPO F27 5G (Emerald Green, 8GB RAM, 256GB Storage) | 6.67&quot; FHD+ AMOLED Display|32MP Sony IMX615 Selfie Camera |AI Portrait Expert| 45W SUPERVOOC| with No Cost EMI/Additional Exchange Offers" class="shop-title-value">OPPO F27 5G (Emerald Green, 8GB RAM, 256GB Storage) | 6.67&quot; FHD+ AMOLED Display|32MP Sony IMX615 Selfie Camera |AI Portrait Expert| 45W SUPERVOOC| with No Cost EMI/Additional Exchange Offers</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>33,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,490</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>28,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">69% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4iMwo4Z" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61RVAFjC7SL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DWXTN8B9.html" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" class="shop-title-value">AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color</a></h4>
+                  <div class="discount"><span class="main">21% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3wS8EtK" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Id6WJDWqL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPJPR3.html" title="iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone" class="shop-title-value">iQOO Z7 Pro 5G (Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment&#039;s Slimmest &amp; Lightest Smartphone</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,199</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">66% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Cn8Qnn" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61UzKCR7JJL._SX679_.jpg" class="img-fluid lazy" alt="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09FGN9CD9.html" title="Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black" class="shop-title-value">Urban Terrain Bolt Cycle 27.5 inch Single Speed with Front Suspension &amp; Dual Disc Brake Bicycle for Men/Boys Mountain Bike UT5001S27.5 | Ideal for 15+ Years, Unisex, Frame Size : 17.5 inch, Black</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3wB4t5g" title="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SDSX, Dazzle Steel, Convertible with Express Freeze)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71Bp538cdNL._SX679_.jpg" class="img-fluid lazy" alt="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SDSX, Dazzle Steel, Convertible with Express Freeze)" title="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SDSX, Dazzle Steel, Convertible with Express Freeze)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C8NTDY55.html" title="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SDSX, Dazzle Steel, Convertible with Express Freeze)" class="shop-title-value">LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SDSX, Dazzle Steel, Convertible with Express Freeze)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,799</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">30% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ajg0I8" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71oIjjNm+nL._SY879_.jpg" class="img-fluid lazy" alt="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CDXHYHZ6.html" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" class="shop-title-value">Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey</a></h4>
+                  <div class="discount"><span class="main">0% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/412M7XF" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61iZASctQ9L._SY695_.jpg" class="img-fluid lazy" alt="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DM8R7MYZ.html" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" class="shop-title-value">Da Milano Genuine Leather Brown Tote (00173D) (Medium)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

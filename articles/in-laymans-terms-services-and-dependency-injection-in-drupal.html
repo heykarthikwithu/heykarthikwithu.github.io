@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/in-laymans-terms-services-and-dependency-injection-in-drupal.html"
+          "@id": "https://peoplesblog.co.in/articles/in-laymans-terms-services-and-dependency-injection-in-drupal.html"
         },
         "headline": "In layman's terms, Services & Dependency Injection in Drupal",
-        "description": "If we look into the basis of Software engineering, Dependency Injection is an approach in which one object get another object that it depends on. And",
-        "image": "https://peoplesblog.co.in/upload/banners/services-and-dependency-injection_0.png",
+        "description": "If we look into the basis of Software engineering, Dependency Injection is an approach in which one object get another object that it depends on. And these other objects are called dependencies. And Injection refers to the passing of a dependency (as a service) into the client object that would use it.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/services-and-dependency-injection_0.png",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2021-08-04"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/services-and-dependency-injection_0.png" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>If we look into the basis of Software engineering, Dependency Injection is an approach in which <strong>one object get another object that it depends on</strong>. And these other objects are called dependencies. And Injection refers to the passing of a dependency (as a service) into the client object that would use it.</p>                            <p>With Dependency Injection, the <strong>class is no longer responsible for instantiating the objects it requires</strong>. Those responsibilities are passed to independent services.</p>                            <p>There are a few advantages and disadvantages to having dependency injection.</p>                            <ul class="check">                                <li>Dependency Injection will decrease the coupling between a class and its dependency. It is one of the advantages.</li>                                <li>For a developer, it will be <a href="/articles/i-m-sorry-why-is-apologizing-so-difficult.html" title="Read about I M Sorry Why Is Apologizing So Difficult">difficult</a> to trace the code because it separates behaviour from construction. It’s one of the disadvantages.</li>                            </ul>                            <p>In Drupal terminology, <strong>a service is any object managed by the services container</strong>. And Drupal introduced a concept of services <strong>that divide re-usable functionalities and makes them into services (which are pluggable) and registering them with a service container</strong>.</p>                                                        <p>As a Drupal Developer, you have to <strong>make sure a couple of things while working Drupal</strong> 8 or later versions of 8.</p>                            <ul class="check">                                <li>Always access any drupal service via a service container to make sure decoupled nature of these systems is respected.</li>                                <li>If you want to trigger an email or do any DB operations, use the related services via service container, which will do needs without any hassle.</li>                                <li>And one more advantage is, the code which you write will be easier to test via PHP Unit tests because your logic will be separate from the drupal dependencies.</li>                            </ul>                            <p>And there is one more concept related to this Services &amp; Dependency Injection, which is called <strong>Autowiring</strong>. It is a Symfony framework feature &amp; not automatically tested by the Drupal Core test suite and there are no Drupal Core services that are autowired.</p>                            <p>But, What Symfony says about Autowiring is, Autowiring allows us to manage services in a container with minimal <a href="/articles/drupal-multisite-development-environment-configuration-ubuntu.html" title="Read about Drupal Multisite Development Environment Configuration Ubuntu">configuration</a> and It reads type-hints on a constructor and automatically passes correct service to each method.</p>                            <p>And since Drupal 9 PHP classes are not auto resolved, <strong>If your services are autowired but the injected classes are not</strong>. In such cases, it’s better to <strong>write your own service providers for the module than having a <code>.services.yml</code> file</strong> in the module.</p>                            <p>And in Drupal, <strong>how to inject dependencies into controllers, forms &amp; blocks</strong></p>                            <ul class="check">                                <li>In Drupal every object uses the ContainerInjectionInterface interface, you can implement create() factory method to inject the dependencies into the class constructor.</li>                            </ul>                            <p>This way the concept of Dependency Injection &amp; Services are been utilized in Drupal.</p></div>
+                                <div><p>If we look into the basis of Software engineering, Dependency Injection is an approach in which <strong>one object get another object that it depends on</strong>. And these other objects are called dependencies. And Injection refers to the passing of a dependency (as a service) into the client object that would use it.</p>                            <p>With Dependency Injection, the <strong>class is no longer responsible for instantiating the objects it requires</strong>. Those responsibilities are passed to independent services.</p>                            <p>There are a few advantages and disadvantages to having dependency injection.</p>                            <ul class="check">                                <li>Dependency Injection will decrease the coupling between a class and its dependency. It is one of the advantages.</li>                                <li>For a developer, it will be <a href="/articles/i-m-sorry-why-is-apologizing-so-difficult.html" title="Read about I M Sorry Why Is Apologizing So Difficult">difficult</a> to trace the code because it separates behaviour from construction. It’s one of the disadvantages.</li>                            </ul>                            <p>In Drupal terminology, <strong>a service is any object managed by the services container</strong>. And Drupal introduced a concept of services <strong>that divide re-usable functionalities and makes them into services (which are pluggable) and registering them with a service container</strong>.</p>                                                        <p>As a Drupal Developer, you have to <strong>make sure a couple of things while working Drupal</strong> 8 or later versions of 8.</p>                            <ul class="check">                                <li>Always access any drupal service via a service container to make sure decoupled nature of these systems is respected.</li>                                <li>If you want to trigger an email or do any DB operations, use the related services via service container, which will do needs without any hassle.</li>                                <li>And one more advantage is, the code which you write will be easier to test via PHP Unit tests because your logic will be separate from the drupal dependencies.</li>                            </ul>                            <p>And there is one more concept related to this Services and Dependency Injection, which is called <strong>Autowiring</strong>. It is a Symfony framework feature and not automatically tested by the Drupal Core test suite and there are no Drupal Core services that are autowired.</p>                            <p>But, What Symfony says about Autowiring is, Autowiring allows us to manage services in a container with minimal <a href="/articles/drupal-multisite-development-environment-configuration-ubuntu.html" title="Read about Drupal Multisite Development Environment Configuration Ubuntu">configuration</a> and It reads type-hints on a constructor and automatically passes correct service to each method.</p>                            <p>And since Drupal 9 PHP classes are not auto resolved, <strong>If your services are autowired but the injected classes are not</strong>. In such cases, it’s better to <strong>write your own service providers for the module than having a <code>.services.yml</code> file</strong> in the module.</p>                            <p>And in Drupal, <strong>how to inject dependencies into controllers, forms and blocks</strong></p>                            <ul class="check">                                <li>In Drupal every object uses the ContainerInjectionInterface interface, you can implement create() factory method to inject the dependencies into the class constructor.</li>                            </ul>                            <p>This way the concept of Dependency Injection and Services are been utilized in Drupal.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">28% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46AQVXp" title="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/718Wy4iXY1L._SY879_.jpg" class="img-fluid lazy" alt="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" title="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3LHV43S.html" title="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" class="shop-title-value">LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>53,990</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40gAsCV" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qEhDtYkRL._SX679_.jpg" class="img-fluid lazy" alt="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZPJQ2X2.html" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" class="shop-title-value">Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
                   <div class="discount"><span class="main">69% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3EvO1Hs" title="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71lptXjPprL._SX679_.jpg" class="img-fluid lazy" alt="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" title="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZLFJ3QY.html" title="TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)" class="shop-title-value">TCL 139 cm (55 inches) 4K Ultra HD Smart QLED Google TV 55C61B (Black)</a></h4>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4pLc5ZR" title="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71sRBqqrOpL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" title="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CCV8DBFH.html" title="Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating" class="shop-title-value">Samsung Galaxy Watch6 Classic (Black, 47mm) | Rotating Bezel | LTE | Monitor BP and ECG | Track Sleep | Track Health | Upto 40hrs Charge with Fast Charging | Galaxy Ecosystem | IP68 Rating</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>36,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,20,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">24% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3APl4oy" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/513esKxjeyL._SX679_.jpg" class="img-fluid lazy" alt="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BGXMZBLY.html" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" class="shop-title-value">Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,104.45</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,600</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gd5JOP" title="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71toN+td5bL._SX679_.jpg" class="img-fluid lazy" alt="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" title="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F9YDKLGW.html" title="ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS" class="shop-title-value">ASUS Vivobook S16, Intel Core Ultra 7 255H, Metallic Design Laptop(Intel iGPU/16GB RAM/512GB SSD/FHD+/16/144Hz/Windows 11/M365 Basic (1Year)*/Office Home 2024/Cool Silver/1.7 Kg) S3607CA-RP090WS</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>84,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,14,990</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">36% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4kIIQ7F" title="Wonderchef OTG | 48L OTG | Bake Breads and Cakes | 2 Year Warranty" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81j7gy4lgBL._SX679_.jpg" class="img-fluid lazy" alt="Wonderchef OTG | 48L OTG | Bake Breads and Cakes | 2 Year Warranty" title="Wonderchef OTG | 48L OTG | Bake Breads and Cakes | 2 Year Warranty" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGG4J3DN.html" title="Wonderchef OTG | 48L OTG | Bake Breads and Cakes | 2 Year Warranty" class="shop-title-value">Wonderchef OTG | 48L OTG | Bake Breads and Cakes | 2 Year Warranty</a></h4>
+                  <div class="discount"><span class="main">79% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4c0jnTo" title="Kuber Industries Pack of 6 Storage Rack with Wheels | Slim 4-Layer Storage Organizer Rack | Cutlery Kitchen Rack | Multipurpose Storage Rack for Home-Office-Hospital | Kitchen Spice Rack | Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Fq+b3HU7L._SX679_.jpg" class="img-fluid lazy" alt="Kuber Industries Pack of 6 Storage Rack with Wheels | Slim 4-Layer Storage Organizer Rack | Cutlery Kitchen Rack | Multipurpose Storage Rack for Home-Office-Hospital | Kitchen Spice Rack | Grey" title="Kuber Industries Pack of 6 Storage Rack with Wheels | Slim 4-Layer Storage Organizer Rack | Cutlery Kitchen Rack | Multipurpose Storage Rack for Home-Office-Hospital | Kitchen Spice Rack | Grey" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D48SRFBZ.html" title="Kuber Industries Pack of 6 Storage Rack with Wheels | Slim 4-Layer Storage Organizer Rack | Cutlery Kitchen Rack | Multipurpose Storage Rack for Home-Office-Hospital | Kitchen Spice Rack | Grey" class="shop-title-value">Kuber Industries Pack of 6 Storage Rack with Wheels | Slim 4-Layer Storage Organizer Rack | Cutlery Kitchen Rack | Multipurpose Storage Rack for Home-Office-Hospital | Kitchen Spice Rack | Grey</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,219</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>35,099</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">63% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4h2CSgE" title="LOOM &amp; NEEDLES Orthopedic Mattress | Dual Comfort with Hard &amp; Soft Foam Flip Mattress | 4 Inches 2 Layered Medium Soft &amp; Firm Support | Queen Size Gadda | 78x60 Inch" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71bFJA1H0OL._SX679_.jpg" class="img-fluid lazy" alt="LOOM &amp; NEEDLES Orthopedic Mattress | Dual Comfort with Hard &amp; Soft Foam Flip Mattress | 4 Inches 2 Layered Medium Soft &amp; Firm Support | Queen Size Gadda | 78x60 Inch" title="LOOM &amp; NEEDLES Orthopedic Mattress | Dual Comfort with Hard &amp; Soft Foam Flip Mattress | 4 Inches 2 Layered Medium Soft &amp; Firm Support | Queen Size Gadda | 78x60 Inch" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CV5R6CB9.html" title="LOOM &amp; NEEDLES Orthopedic Mattress | Dual Comfort with Hard &amp; Soft Foam Flip Mattress | 4 Inches 2 Layered Medium Soft &amp; Firm Support | Queen Size Gadda | 78x60 Inch" class="shop-title-value">LOOM &amp; NEEDLES Orthopedic Mattress | Dual Comfort with Hard &amp; Soft Foam Flip Mattress | 4 Inches 2 Layered Medium Soft &amp; Firm Support | Queen Size Gadda | 78x60 Inch</a></h4>
+                  <div class="discount"><span class="main">52% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4mCal31" title="V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51tA6aqyQWL._SX522_.jpg" class="img-fluid lazy" alt="V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black" title="V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZWDJ5X4.html" title="V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black" class="shop-title-value">V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>4,648</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,538</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bu81q9" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61SnaL4+EFL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WHRXTJV.html" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" class="shop-title-value">iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White</a></h4>
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hv26Ux" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61E7yk7f0vL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHZ2X647.html" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" class="shop-title-value">Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>44,999</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">44% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jgiOrQ" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81OmhFfS-hL._SX679_.jpg" class="img-fluid lazy" alt="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CX5DW4WT.html" title="Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)" class="shop-title-value">Samsung 108 cm (43 inches) D Series Crystal 4K Vivid Pro Ultra HD Smart LED TV UA43DUE77AKLXL (Black)</a></h4>
+                  <div class="discount"><span class="main">8% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IuDxKB" title="Motorola razr 60 Ultra (Pantone Rio Red, 16 GB RAM, 512 GB Storage) | Snapdragon® 8 Elite Mobile Platform | 6.9&quot; AMOLED Upto 165Hz Display | 50 MP + 50 MP + 50MP Triple Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51yzmctpGRL._SX679_.jpg" class="img-fluid lazy" alt="Motorola razr 60 Ultra (Pantone Rio Red, 16 GB RAM, 512 GB Storage) | Snapdragon® 8 Elite Mobile Platform | 6.9&quot; AMOLED Upto 165Hz Display | 50 MP + 50 MP + 50MP Triple Camera" title="Motorola razr 60 Ultra (Pantone Rio Red, 16 GB RAM, 512 GB Storage) | Snapdragon® 8 Elite Mobile Platform | 6.9&quot; AMOLED Upto 165Hz Display | 50 MP + 50 MP + 50MP Triple Camera" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0F5HQW3GZ.html" title="Motorola razr 60 Ultra (Pantone Rio Red, 16 GB RAM, 512 GB Storage) | Snapdragon® 8 Elite Mobile Platform | 6.9&quot; AMOLED Upto 165Hz Display | 50 MP + 50 MP + 50MP Triple Camera" class="shop-title-value">Motorola razr 60 Ultra (Pantone Rio Red, 16 GB RAM, 512 GB Storage) | Snapdragon® 8 Elite Mobile Platform | 6.9&quot; AMOLED Upto 165Hz Display | 50 MP + 50 MP + 50MP Triple Camera</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,980</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>46,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>99,998</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,09,000</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">32% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3AEK4hV" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51LvZVt7+XL._SY879_.jpg" class="img-fluid lazy" alt="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D222PDZ3.html" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)" class="shop-title-value">Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space, 2024 Model)</a></h4>
+                  <div class="discount"><span class="main">76% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46kOIxv" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71PJjjeM4bL._SX679_.jpg" class="img-fluid lazy" alt="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZ6KW5HQ.html" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" class="shop-title-value">TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,790</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>38,150</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>61,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>2,54,990</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">20% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4cicFI4" title="OnePlus Nord 3 5G (Tempest Gray, 16GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71-yDa90UrL._SY879_.jpg" class="img-fluid lazy" alt="OnePlus Nord 3 5G (Tempest Gray, 16GB RAM, 256GB Storage)" title="OnePlus Nord 3 5G (Tempest Gray, 16GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C7V84BS2.html" title="OnePlus Nord 3 5G (Tempest Gray, 16GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 3 5G (Tempest Gray, 16GB RAM, 256GB Storage)</a></h4>
+                  <div class="discount"><span class="main">56% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40n7JMI" title="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/515uY4BSuYL._SX679_.jpg" class="img-fluid lazy" alt="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" title="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3VDRPTW.html" title="XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon" class="shop-title-value">XRT65 Adjustable Dumbbells Set of 2 | 02Kgs - 12Kgs | Gym Equipment For Men &amp; Women, Home Workout | Black (12 KGs + 12 KGs), No-Freeze Dumbbells, Iron + Polypropylene + Nylon</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,300</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>37,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">91% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46hydE5" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vk-Npjs-L._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BY2QJJ8J.html" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" class="shop-title-value">Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)</a></h4>
+                  <div class="discount"><span class="main">50% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eV6GcW" title="V-Guard Zenora RO UF Water Purifier | TDS up to 2000 ppm | 7 Stage Purification with World-class RO Membrane and Advanced UF Membrane | 7 Litre, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51IJhnm6slL._SX522_.jpg" class="img-fluid lazy" alt="V-Guard Zenora RO UF Water Purifier | TDS up to 2000 ppm | 7 Stage Purification with World-class RO Membrane and Advanced UF Membrane | 7 Litre, Black" title="V-Guard Zenora RO UF Water Purifier | TDS up to 2000 ppm | 7 Stage Purification with World-class RO Membrane and Advanced UF Membrane | 7 Litre, Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07FJNNZCJ.html" title="V-Guard Zenora RO UF Water Purifier | TDS up to 2000 ppm | 7 Stage Purification with World-class RO Membrane and Advanced UF Membrane | 7 Litre, Black" class="shop-title-value">V-Guard Zenora RO UF Water Purifier | TDS up to 2000 ppm | 7 Stage Purification with World-class RO Membrane and Advanced UF Membrane | 7 Litre, Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,099</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,299</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,649</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40gAsCV" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qEhDtYkRL._SX679_.jpg" class="img-fluid lazy" alt="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZPJQ2X2.html" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" class="shop-title-value">Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)</a></h4>
+                  <div class="discount"><span class="main">17% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDrB9l" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61WwrG1D13L._SX679_.jpg" class="img-fluid lazy" alt="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BMT9VP8R.html" title="TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera" class="shop-title-value">TECNO POVA 4 (Magma Orange,8GB RAM,128GB Storage)| 6nm Helio G99 Processor | 6000mAh Battery 18W Charger Included| 90Hz Refresh Rate | 50MP Rear Camera</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,499</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">31% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/49JfKzl" title="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51PwsOOMErL._SX679_.jpg" class="img-fluid lazy" alt="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" title="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B097RJ867P.html" title="PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large" class="shop-title-value">PHILIPS Digital Air Fryer HD9252/90 with Touch Panel, uses up to 90% less fat, 7 Pre-set Menu, 1400W, 4.1 Liter, with Rapid Air Technology (Black), Large</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3A84xLU" title="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/511ZzuWFVYL._SX679_.jpg" class="img-fluid lazy" alt="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" title="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSSPDT7C.html" title="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)" class="shop-title-value">Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,995</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>63,100</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

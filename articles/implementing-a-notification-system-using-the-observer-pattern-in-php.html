@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035977" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035977">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/implementing-a-notification-system-using-the-observer-pattern-in-php.html"
+          "@id": "https://peoplesblog.co.in/articles/implementing-a-notification-system-using-the-observer-pattern-in-php.html"
         },
         "headline": "Implementing a Notification System Using the Observer Pattern in PHP",
-        "description": "The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scena",
-        "image": "https://peoplesblog.co.in/upload/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.jpg",
+        "description": "The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2024-11-05"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>The Observer pattern is a powerful design pattern that promotes a one-to-many <a href="/articles/water-for-pakistan-lifeline-dependency-and-the-shifting-control.html" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).</p>  <p>In this article, we'll explore how to implement a simple notification system using the Observer pattern in PHP 8.</p>  <h2>Understanding the Observer Pattern</h2>  <p>In the Observer pattern:</p>  <ul> <li><strong>Subject</strong>: The object that maintains a list of observers and notifies them of changes.</li> <li><strong>Observer</strong>: The object that wants to be notified of changes in the subject.</li> </ul>  <p><strong>Key Features:</strong></p>  <ul> <li>Loose coupling between the subject and observers.</li> <li>Dynamic subscription and unsubscription of observers.</li> <li>Supports multiple observers for a single subject.</li> </ul>  <h2>Implementing the Notification System</h2>  <p>Let’s build a notification system step by step.</p>  <p><strong>Step 1: Define the Observer Interface</strong></p>  <p>First, we need an interface that all observers will implement. This interface will define the method that observers must implement to receive notifications.</p>  <p><code>interface Observer {</code></p>  <p><code>    public function update(string $message): void;</code></p>  <p><code>}</code></p>    <p><strong>Step 2: Create the Subject Class</strong></p>  <p>Next, we implement the subject class. This class will manage the list of observers and provide methods to attach, detach, and notify observers.</p>  <p><code>class NotificationService {</code></p>  <p><code>    private array $observers = [];</code></p>  <p><code>    public function attach(Observer $observer): void {</code></p>  <p><code>        $this-&gt;observers[] = $observer;</code></p>  <p><code>    }</code></p>  <p><code>    public function detach(Observer $observer): void {</code></p>  <p><code>        $this-&gt;observers = array_filter($this-&gt;observers, fn($obs) =&gt; $obs !== $observer);</code></p>  <p><code>    }</code></p>  <p><code>    public function notify(string $message): void {</code></p>  <p><code>        foreach ($this-&gt;observers as $observer) {</code></p>  <p><code>            $observer-&gt;update($message);</code></p>  <p><code>        }</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><strong>Step 3: Create Concrete Observer Classes</strong></p>  <p>Now, let’s create some concrete observer classes that implement the Observer interface. These classes will define what to do when they receive notifications.</p>  <p><code>class EmailNotifier implements Observer {</code></p>  <p><code>    public function update(string $message): void {</code></p>  <p><code>        echo "Email Notification: $message\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>class SmsNotifier implements Observer {</code></p>  <p><code>    public function update(string $message): void {</code></p>  <p><code>        echo "SMS Notification: $message\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>class AppNotifier implements Observer {</code></p>  <p><code>    public function update(string $message): void {</code></p>  <p><code>        echo "App Notification: $message\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>    <p><strong>Step 4: Putting It All Together</strong></p>  <p>Now, we can use our NotificationService along with the observer classes to send notifications.</p>  <p><code>// Create the notification service</code></p>  <p><code>$notificationService = new NotificationService();</code></p>  <p><code>// Create observers</code></p>  <p><code>$emailNotifier = new EmailNotifier();</code></p>  <p><code>$smsNotifier = new SmsNotifier();</code></p>  <p><code>$appNotifier = new AppNotifier();</code></p>  <p><code>// Attach observers</code></p>  <p><code>$notificationService-&gt;attach($emailNotifier);</code></p>  <p><code>$notificationService-&gt;attach($smsNotifier);</code></p>  <p><code>$notificationService-&gt;attach($appNotifier);</code></p>  <p><code>// Send notifications</code></p>  <p><code>$notificationService-&gt;notify("A new update is available!");</code></p>  <p><strong>Step 5: Detach Observers (Optional)</strong></p>  <p>If you want to remove observers dynamically, you can use the detach method. Here’s how:</p>  <p><code>// Detach SMS notifier</code></p>  <p><code>$notificationService-&gt;detach($smsNotifier);</code></p>  <p><code>// This will only notify Email and App observers</code></p>  <p><code>$notificationService-&gt;notify("Another important update!");</code></p>  <h2>Conclusion</h2>  <p>Using the Observer pattern to implement a notification system in PHP 8 allows for a clean, maintainable, and scalable architecture. It decouples the components, making it easy to add or remove observers without affecting the subject. This pattern is widely applicable in various scenarios, from user interfaces to event-driven systems.</p>  <p>As you develop more complex <a href="/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a>, consider the Observer pattern as a way to manage notifications effectively, ensuring your system remains responsive and flexible to changes.</p>  <p>Thanks for reading the article, for more Science &amp; Technology related articles read and subscribe to peoples blog articles.</p></div>
+                                <div><p>The Observer pattern is a powerful design pattern that promotes a one-to-many <a href="/articles/water-for-pakistan-lifeline-dependency-and-the-shifting-control.html" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).</p>  <p>In this article, we'll explore how to implement a simple notification system using the Observer pattern in PHP 8.</p>  <h2>Understanding the Observer Pattern</h2>  <p>In the Observer pattern:</p>  <ul> <li><strong>Subject</strong>: The object that maintains a list of observers and notifies them of changes.</li> <li><strong>Observer</strong>: The object that wants to be notified of changes in the subject.</li> </ul>  <p><strong>Key Features:</strong></p>  <ul> <li>Loose coupling between the subject and observers.</li> <li>Dynamic subscription and unsubscription of observers.</li> <li>Supports multiple observers for a single subject.</li> </ul>  <h2>Implementing the Notification System</h2>  <p>Let’s build a notification system step by step.</p>  <p><strong>Step 1: Define the Observer Interface</strong></p>  <p>First, we need an interface that all observers will implement. This interface will define the method that observers must implement to receive notifications.</p>  <p><code>interface Observer {</code></p>  <p><code>    public function update(string $message): void;</code></p>  <p><code>}</code></p>    <p><strong>Step 2: Create the Subject Class</strong></p>  <p>Next, we implement the subject class. This class will manage the list of observers and provide methods to attach, detach, and notify observers.</p>  <p><code>class NotificationService {</code></p>  <p><code>    private array $observers = [];</code></p>  <p><code>    public function attach(Observer $observer): void {</code></p>  <p><code>        $this→observers[] = $observer;</code></p>  <p><code>    }</code></p>  <p><code>    public function detach(Observer $observer): void {</code></p>  <p><code>        $this→observers = array_filter($this→observers, fn($obs) =&gt; $obs !== $observer);</code></p>  <p><code>    }</code></p>  <p><code>    public function notify(string $message): void {</code></p>  <p><code>        foreach ($this→observers as $observer) {</code></p>  <p><code>            $observer→update($message);</code></p>  <p><code>        }</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><strong>Step 3: Create Concrete Observer Classes</strong></p>  <p>Now, let’s create some concrete observer classes that implement the Observer interface. These classes will define what to do when they receive notifications.</p>  <p><code>class EmailNotifier implements Observer {</code></p>  <p><code>    public function update(string $message): void {</code></p>  <p><code>        echo "Email Notification: $message\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>class SmsNotifier implements Observer {</code></p>  <p><code>    public function update(string $message): void {</code></p>  <p><code>        echo "SMS Notification: $message\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>class AppNotifier implements Observer {</code></p>  <p><code>    public function update(string $message): void {</code></p>  <p><code>        echo "App Notification: $message\n";</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>    <p><strong>Step 4: Putting It All Together</strong></p>  <p>Now, we can use our NotificationService along with the observer classes to send notifications.</p>  <p><code>// Create the notification service</code></p>  <p><code>$notificationService = new NotificationService();</code></p>  <p><code>// Create observers</code></p>  <p><code>$emailNotifier = new EmailNotifier();</code></p>  <p><code>$smsNotifier = new SmsNotifier();</code></p>  <p><code>$appNotifier = new AppNotifier();</code></p>  <p><code>// Attach observers</code></p>  <p><code>$notificationService→attach($emailNotifier);</code></p>  <p><code>$notificationService→attach($smsNotifier);</code></p>  <p><code>$notificationService→attach($appNotifier);</code></p>  <p><code>// Send notifications</code></p>  <p><code>$notificationService→notify("A new update is available!");</code></p>  <p><strong>Step 5: Detach Observers (Optional)</strong></p>  <p>If you want to remove observers dynamically, you can use the detach method. Here’s how:</p>  <p><code>// Detach SMS notifier</code></p>  <p><code>$notificationService→detach($smsNotifier);</code></p>  <p><code>// This will only notify Email and App observers</code></p>  <p><code>$notificationService→notify("Another important update!");</code></p>  <h2>Conclusion</h2>  <p>Using the Observer pattern to implement a notification system in PHP 8 allows for a clean, maintainable, and scalable architecture. It decouples the components, making it easy to add or remove observers without affecting the subject. This pattern is widely applicable in various scenarios, from user interfaces to event-driven systems.</p>  <p>As you develop more complex <a href="/articles/usage-of-phpstan-on-github-via-pull-request-for-drupal-applications.html" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a>, consider the Observer pattern as a way to manage notifications effectively, ensuring your system remains responsive and flexible to changes.</p>  <p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">40% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3KoioCE" title="Samsung Galaxy Tab S9 FE [Smartchoice], RAM 6 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi, IP68 Tablet, Gray" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71BM3TBipEL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Tab S9 FE [Smartchoice], RAM 6 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi, IP68 Tablet, Gray" title="Samsung Galaxy Tab S9 FE [Smartchoice], RAM 6 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi, IP68 Tablet, Gray" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHZ38BPP.html" title="Samsung Galaxy Tab S9 FE [Smartchoice], RAM 6 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi, IP68 Tablet, Gray" class="shop-title-value">Samsung Galaxy Tab S9 FE [Smartchoice], RAM 6 GB, ROM 128 GB Expandable, S Pen in-Box, Wi-Fi, IP68 Tablet, Gray</a></h4>
+                  <div class="discount"><span class="main">66% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Nv8r4z" title="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/614cFlQ5hAL._SX679_.jpg" class="img-fluid lazy" alt="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" title="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQK9JPMT.html" title="WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)" class="shop-title-value">WALTA ELITE BRIO-1450 Soundbar Party Speaker Audio Output with Bluetooth 5.3 &amp; Multiple Connectivity Options Available (280W)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,489</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                  </div>
+              </div>
+          </div><div class="col-md-4 shop-item-wrapper">
+              <div class="shop-item">
+                  <div class="discount"><span class="main">33% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hv26Ux" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61E7yk7f0vL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHZ2X647.html" title="Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver" class="shop-title-value">Samsung Galaxy Tab S9 FE, S Pen in-Box, 27.69 cm (10.9 inch) Display, RAM 6 GB, ROM 128 GB Expandable, Wi-Fi, IP68 Tablet, Silver</a></h4>
+                  <div class="price">
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
                       <span class="actualprice"><span class='india rupees rupee'>₹</span><span>44,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">22% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3BMDqGQ" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61dVOVxHn3L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DBHYTM2X.html" title="OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]" class="shop-title-value">OnePlus Buds Pro 3 Bluetooth TWS in-Ear Buds - Dual Drivers, Dual DACs, Dynaudio EQs, Up to 50dB Adaptive Noise Cancellation, Up to 43Hrs Battery [Lunar Radiance]</a></h4>
+                  <div class="discount"><span class="main">25% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45gVRPW" title="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71ntQ416CTL._SX679_.jpg" class="img-fluid lazy" alt="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" title="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DJS9ZK73.html" title="Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black" class="shop-title-value">Havells Air-Oven Avanza | 1700W | 15L Capacity | Digital Touch Control | 14 Pre-Sets | Aerocrisp Technology | Auto-Shutoff | Includes Skewer Set,Rotisserie Fork,Mesh,Baking Tray | 2Yr Warranty | Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,989</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>13,999</span></span>
-                  </div>
-              </div>
-          </div><div class="col-md-4 shop-item-wrapper">
-              <div class="shop-item">
-                  <div class="discount"><span class="main">31% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41GEWEH" title="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61B6NWbMGZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" title="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DX5MYCRG.html" title="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" class="shop-title-value">Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger</a></h4>
-                  <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,228</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,995</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">8% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CAHBWS" title="Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 512GB Storage), 200MP Camera, S Pen Included, Long Battery Life" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61sU8OqBs4L._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 512GB Storage), 200MP Camera, S Pen Included, Long Battery Life" title="Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 512GB Storage), 200MP Camera, S Pen Included, Long Battery Life" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSBTKP5Q.html" title="Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 512GB Storage), 200MP Camera, S Pen Included, Long Battery Life" class="shop-title-value">Samsung Galaxy S25 Ultra 5G AI Smartphone (Titanium Silverblue, 12GB RAM, 512GB Storage), 200MP Camera, S Pen Included, Long Battery Life</a></h4>
+                  <div class="discount"><span class="main">28% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46AQVXp" title="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/718Wy4iXY1L._SY879_.jpg" class="img-fluid lazy" alt="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" title="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C3LHV43S.html" title="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)" class="shop-title-value">LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp; Convenient Fabric Care, Allergy Care, Middle Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,29,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,41,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>53,990</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">68% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47XGpHW" title="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71trpms0VeL._SX679_.jpg" class="img-fluid lazy" alt="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" title="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09XKHNQR3.html" title="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" class="shop-title-value">Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)</a></h4>
+                  <div class="discount"><span class="main">20% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47LPVQL" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BpNVo+McL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FHWWDRRM.html" title="OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue" class="shop-title-value">OnePlus Pad Lite with Biggest Battery in Segment 9340 mAh, Massive 11&quot; (27.94 cm) Display with 500 nits Brightness &amp; 11 Hours of Video Playback, 6GB RAM 128GB Storage, Wi-Fi Connectivity, Aero Blue</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,451</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,299</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,999</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IDlVJ5" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61OBw+XUiuL._SX679_.jpg" class="img-fluid lazy" alt="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C467KFNM.html" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" class="shop-title-value">Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android</a></h4>
+                  <div class="discount"><span class="main">50% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40lZDUH" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" class="img-fluid lazy" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSKDPF9N.html" title="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD" class="shop-title-value">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>25,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,997</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,995</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">30% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hJw1s3" title="WAHL Legend 5 Star Professional Lithium-Ion Cord/Cordless Clipper, 5 Star Wedge Blade Technology, Wide Taper Lever Adjustment, Excellent for Soft Line Fading and Seamless Bleand, 100 of Minutes Runtime" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71efW4TbiOL._SX679_.jpg" class="img-fluid lazy" alt="WAHL Legend 5 Star Professional Lithium-Ion Cord/Cordless Clipper, 5 Star Wedge Blade Technology, Wide Taper Lever Adjustment, Excellent for Soft Line Fading and Seamless Bleand, 100 of Minutes Runtime" title="WAHL Legend 5 Star Professional Lithium-Ion Cord/Cordless Clipper, 5 Star Wedge Blade Technology, Wide Taper Lever Adjustment, Excellent for Soft Line Fading and Seamless Bleand, 100 of Minutes Runtime" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BFVZDSWG.html" title="WAHL Legend 5 Star Professional Lithium-Ion Cord/Cordless Clipper, 5 Star Wedge Blade Technology, Wide Taper Lever Adjustment, Excellent for Soft Line Fading and Seamless Bleand, 100 of Minutes Runtime" class="shop-title-value">WAHL Legend 5 Star Professional Lithium-Ion Cord/Cordless Clipper, 5 Star Wedge Blade Technology, Wide Taper Lever Adjustment, Excellent for Soft Line Fading and Seamless Bleand, 100 of Minutes Runtime</a></h4>
+                  <div class="discount"><span class="main">79% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40gAsCV" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61qEhDtYkRL._SX679_.jpg" class="img-fluid lazy" alt="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BZPJQ2X2.html" title="Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)" class="shop-title-value">Da URBAN® Merlion Office Chair,High Back Mesh Ergonomic Home Office Desk Chair with 3 Years Warranty, Adjustable Armrests,Adjustable Lumbar Support,Tilt Lock Mechanism (Grey)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>10,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>26,999</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">24% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3APl4oy" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/513esKxjeyL._SX679_.jpg" class="img-fluid lazy" alt="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BGXMZBLY.html" title="Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)" class="shop-title-value">Coffeeza Vanilla Flavoured Coffee Capsules, Intensity - 6 |Aluminium Coffee Pods |100% Arabica Coffee | Box of 20 (200 Capsules)</a></h4>
+                  <div class="discount"><span class="main">29% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45Kd2by" title="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91JoitHYR4L._SX679_.jpg" class="img-fluid lazy" alt="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" title="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09XFMGSKV.html" title="SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)" class="shop-title-value">SleepyCat Latex Mattress | 10 Years Warranty | Firm, Orthopedic 8-inch Hybrid Mattress with Pinhole Tech Latex &amp; Memory Foam Layers | 5 Zone Support and Bamboo Cover (King Size, 72x72x8inches)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>8,104.45</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>10,600</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,329</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">14% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hFi6CG" title="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51KJE22BKrL._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" title="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D5YDJ5QM.html" title="OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)" class="shop-title-value">OnePlus Nord CE4 Lite 5G (Ultra Orange, 8GB RAM, 128GB Storage)</a></h4>
+                  <div class="discount"><span class="main">64% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3K9B2v8" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vDZyJQ-4L._SY879_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08VB57558.html" title="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)" class="shop-title-value">Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>20,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,250</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>74,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">17% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4aiqbuu" title="Apple iPhone 15 (128 GB) - Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 15 (128 GB) - Black" title="Apple iPhone 15 (128 GB) - Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHX1W1XY.html" title="Apple iPhone 15 (128 GB) - Black" class="shop-title-value">Apple iPhone 15 (128 GB) - Black</a></h4>
+                  <div class="discount"><span class="main">61% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4hiCzwB" title="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71eBHe20YJL._SX679_.jpg" class="img-fluid lazy" alt="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" title="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DHSY34ZS.html" title="Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)" class="shop-title-value">Dr Luxur® Fabric Ergonomic Gaming Chair with 4D Armrests, Metallic wheelbase, Extractable footrest with 180 Degree Recline Mechanism (Stallion, Leather)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,900</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>44,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">40% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bU1gOK" title="KENT Supreme Copper RO Water Purifier | RO + UV + UF + Copper +TDS Control + UV LED Tank | .0001 Micron RO Membrane | Auto Flush feature |20LPH | Ideal for Borewell/Tanker/Municipal Water | Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Uz-R2mgxL._SX522_.jpg" class="img-fluid lazy" alt="KENT Supreme Copper RO Water Purifier | RO + UV + UF + Copper +TDS Control + UV LED Tank | .0001 Micron RO Membrane | Auto Flush feature |20LPH | Ideal for Borewell/Tanker/Municipal Water | Black" title="KENT Supreme Copper RO Water Purifier | RO + UV + UF + Copper +TDS Control + UV LED Tank | .0001 Micron RO Membrane | Auto Flush feature |20LPH | Ideal for Borewell/Tanker/Municipal Water | Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D3HWQFHQ.html" title="KENT Supreme Copper RO Water Purifier | RO + UV + UF + Copper +TDS Control + UV LED Tank | .0001 Micron RO Membrane | Auto Flush feature |20LPH | Ideal for Borewell/Tanker/Municipal Water | Black" class="shop-title-value">KENT Supreme Copper RO Water Purifier | RO + UV + UF + Copper +TDS Control + UV LED Tank | .0001 Micron RO Membrane | Auto Flush feature |20LPH | Ideal for Borewell/Tanker/Municipal Water | Black</a></h4>
+                  <div class="discount"><span class="main">0% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/412M7XF" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61iZASctQ9L._SY695_.jpg" class="img-fluid lazy" alt="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DM8R7MYZ.html" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" class="shop-title-value">Da Milano Genuine Leather Brown Tote (00173D) (Medium)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>25,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">65% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ed3snB" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51CM1oCgyYL._SX679_.jpg" class="img-fluid lazy" alt="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DGGMWNLC.html" title="ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264" class="shop-title-value">ROCOSJEWE Silver Diamonds Women&#039;s Watch Luxury Watches for Ladies Square Quartz Watches Waterproof Women&#039;s Wristwatches Love Hands Dazzling Dials R0264</a></h4>
+                  <div class="discount"><span class="main">63% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/45Gl32P" title="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61pyaZYmiAL._SX679_.jpg" class="img-fluid lazy" alt="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" title="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DXQ575B9.html" title="Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)" class="shop-title-value">Ionstar 7 Kg Semi Automatic Washing Machine - 5 Star Rated- 2025 - Top Load - Jet Pulsator - Magic Filter - Special Air Dryer - Rat Mesh - Powerful Copper Motor - 1500 RPM - Maroon (STAR70-AQUA-M)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,599</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,690</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,990</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035977" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

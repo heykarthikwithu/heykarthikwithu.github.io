@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035978" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035978">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/drupal-jsonapi-deep-dive-part-one.html"
+          "@id": "https://peoplesblog.co.in/articles/drupal-jsonapi-deep-dive-part-one.html"
         },
         "headline": "Drupal JSON API, Deep Dive - Part 1",
-        "description": "JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched",
-        "image": "https://peoplesblog.co.in/upload/banners/Decoupled Drupal 8 with JSON API.jpg",
+        "description": "JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/Decoupled Drupal 8 with JSON API.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2021-03-18"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/Decoupled Drupal 8 with JSON API.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>JSON:API module is implemented <strong>based on JSON:API Specification</strong>. Means, a specification that says <strong>how client should request</strong> the resources to be fetched or modified, &amp; also <strong>how server should respond</strong> to such requests. This JSON:API is designed to <strong>minimize the number of requests</strong> and also minimize the amount of data transmitted between clients &amp; servers. And <strong>such efficiency is achieved</strong> without compromising readability, flexibility, or discoverability.</p>                                <p>Once you enable the JSON:API module, <strong>REST API for every type in Drupal application is available</strong>. JSON:API inspects the entity types and bundles so that it can dynamically provide URLs by which to access each and every one of them using the <strong>standard HTTP methods, GET, POST, PATCH and DELETE</strong>.</p>                                <ul class="check1">                                    <li>Access control of APIs will be with Drupal Core's permissions system.</li>                                    <li>No configuration page available. Means you can get up and running with an API-driven Drupal application with minimal effort.</li>                                </ul>                                <h4>Request/Response terminology</h4>                                <ul class="check1">                                    <li>HTTP requests are made to JSON:API resources. These are different from resource objects.</li>                                    <li>The JSON object that the client receives is refered a document.</li>                                    <li>A document is always a JSON object and it has primary data under a data key.</li>                                    <li>The data under that key are called resource objects or resource identifier objects.</li>                                    <li>When you request that related data be embedded in the document, it becomes a compound document.</li>                                    <li>A compound document is one with an included key in the top-level object.</li>                                    <li>Resources that return many resource objects are called collection resources.</li>                                    <li>Resources that return one resource object are called individual resources.</li>                                    <li>Resources that return information about <a href="/articles/implementing-one-to-many-and-many-to-many-relationships.html" title="Read about Implementing One To Many And Many To Many Relationships">relationships</a> between resource objects are called relationship resources.</li>                                    <li><strong>In Drupal terms:</strong></li>                                    <ul class="check1">                                        <li>Resource Objects -&gt; Entities</li>                                        <li>Resource Identifier Objects -&gt; Entity reference field Items</li>                                        <li>Document -&gt; Request/response JSON payload</li>                                    </ul>                                </ul>                                <p>Let's see core <a href="/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html" title="Read about Understanding Azure Storage Accounts Key Concepts And Best Practices">concepts</a> &amp; API Overview in the next part.</p></div>
+                                <div><p>JSON:API module is implemented <strong>based on JSON:API Specification</strong>. Means, a specification that says <strong>how client should request</strong> the resources to be fetched or modified, and also <strong>how server should respond</strong> to such requests. This JSON:API is designed to <strong>minimize the number of requests</strong> and also minimize the amount of data transmitted between clients and servers. And <strong>such efficiency is achieved</strong> without compromising readability, flexibility, or discoverability.</p>                                <p>Once you enable the JSON:API module, <strong>REST API for every type in Drupal application is available</strong>. JSON:API inspects the entity types and bundles so that it can dynamically provide URLs by which to access each and every one of them using the <strong>standard HTTP methods, GET, POST, PATCH and DELETE</strong>.</p>                                <ul class="check1">                                    <li>Access control of APIs will be with Drupal Core's permissions system.</li>                                    <li>No configuration page available. Means you can get up and running with an API-driven Drupal application with minimal effort.</li>                                </ul>                                <h4>Request/Response terminology</h4>                                <ul class="check1">                                    <li>HTTP requests are made to JSON:API resources. These are different from resource objects.</li>                                    <li>The JSON object that the client receives is refered a document.</li>                                    <li>A document is always a JSON object and it has primary data under a data key.</li>                                    <li>The data under that key are called resource objects or resource identifier objects.</li>                                    <li>When you request that related data be embedded in the document, it becomes a compound document.</li>                                    <li>A compound document is one with an included key in the top-level object.</li>                                    <li>Resources that return many resource objects are called collection resources.</li>                                    <li>Resources that return one resource object are called individual resources.</li>                                    <li>Resources that return information about <a href="/articles/implementing-one-to-many-and-many-to-many-relationships.html" title="Read about Implementing One To Many And Many To Many Relationships">relationships</a> between resource objects are called relationship resources.</li>                                    <li><strong>In Drupal terms:</strong></li>                                    <ul class="check1">                                        <li>Resource Objects → Entities</li>                                        <li>Resource Identifier Objects → Entity reference field Items</li>                                        <li>Document → Request/response JSON payload</li>                                    </ul>                                </ul>                                <p>Let's see core <a href="/articles/understanding-azure-storage-accounts-key-concepts-and-best-practices.html" title="Read about Understanding Azure Storage Accounts Key Concepts And Best Practices">concepts</a> and API Overview in the next part.</p></div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">39% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3OyZV4V" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61or3k9RiSL._SX679_.jpg" class="img-fluid lazy" alt="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CWQY2JRZ.html" title="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)" class="shop-title-value">Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)</a></h4>
+                  <div class="discount"><span class="main">22% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4bu81q9" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61SnaL4+EFL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WHRXTJV.html" title="iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White" class="shop-title-value">iQOO Z9S Pro 5G (Luxe Marble, 8Gb Ram, 256Gb Storage) | Snapdragon 7 Gen 3 Processor | 120 Hz Curved Amoled Display with 4500 Nits Local Peak Brightness | 5500 Mah Battery | Ai Erase, White</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>31,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">59% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40YW8ny" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41fiqGlrrKL.jpg" class="img-fluid lazy" alt="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B68JR6S8.html" title="AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)" class="shop-title-value">AMATA Eagle 3 Seater Sofa Cum Bed Brown Suede velevt Fabric with Two Cushions Perfect for Home Living Room and Guests (Brown, Medium)(3 Year Warranty)</a></h4>
+                  <div class="discount"><span class="main">38% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4fimLJs" title="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71xTwKIBX-L._SX679_.jpg" class="img-fluid lazy" alt="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" title="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08DF1Y7T7.html" title="LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)" class="shop-title-value">LG 7 Kg 5 Star Inverter TurboDrum Fully Automatic Top Loading Washing Machine (T70SKSF1Z, Waterfall Circulation, Smart Motion, Middle Free Silver)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>39,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">3% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4jKjFkt" title="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/715k0WQtg9L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" title="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQ8MPQFF.html" title="OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)" class="shop-title-value">OnePlus 13 | Smarter with OnePlus AI (24GB RAM, 1TB Storage Black Eclipse)</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4e0k6mG" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51bTCAnwZIL._SX679_.jpg" class="img-fluid lazy" alt="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSCRBZ43.html" title="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)" class="shop-title-value">Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>89,998</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>92,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>35,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>55,400</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">20% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CDGtBS" title="Xiaomi Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.44cm(11.2) Display |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Mirage Purple" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/719+HKKRsJL._SX679_.jpg" class="img-fluid lazy" alt="Xiaomi Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.44cm(11.2) Display |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Mirage Purple" title="Xiaomi Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.44cm(11.2) Display |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Mirage Purple" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DRYWLVNH.html" title="Xiaomi Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.44cm(11.2) Display |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Mirage Purple" class="shop-title-value">Xiaomi Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.44cm(11.2) Display |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos |Quad Speakers |Wi-Fi 6e |Mirage Purple</a></h4>
+                  <div class="discount"><span class="main">21% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3NUq5Pm" title="iQOO Z9s 5G (Titanium Matte, 8GB RAM, 256GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61BxKJrnbdL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9s 5G (Titanium Matte, 8GB RAM, 256GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light" title="iQOO Z9s 5G (Titanium Matte, 8GB RAM, 256GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WHRZRD7.html" title="iQOO Z9s 5G (Titanium Matte, 8GB RAM, 256GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light" class="shop-title-value">iQOO Z9s 5G (Titanium Matte, 8GB RAM, 256GB Storage) | 120 Hz 3D Curved AMOLED Display | 5500 mAh Ultra-Thin Battery | Dimesity 7300 5G Processor | Sony IMX882 OIS Camera with Aura Light</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>21,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>27,999</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">9% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDuO9X" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vxWpPpgNL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQYGF1QY.html" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" class="shop-title-value">Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)</a></h4>
+                  <div class="discount"><span class="main">91% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46hydE5" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vk-Npjs-L._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BY2QJJ8J.html" title="Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)" class="shop-title-value">Fire-Boltt Talk Bluetooth Calling Smartwatch, 1.39&quot; TFT Display with Dual Button, Hands On Voice Assistance, 120 Sports Modes, in Built Mic &amp; Speaker (Talk, Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,31,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,44,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,099</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">75% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ZgxFsJ" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81oFv22OmQS._SX679_.jpg" class="img-fluid lazy" alt="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08QT7FH84.html" title="Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)" class="shop-title-value">Amazon Brand - Solimo Petra Solid Sheesham Wood King Bed (Teak Finish)</a></h4>
+                  <div class="discount"><span class="main">46% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ym6sV8" title="Carrier 1 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,Dual Filtration with HD &amp; PM 2.5 Filter, Auto Cleanser, 2024 Model,ESTER NEO+ Exi, CAI12ER3R34F0,White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/512J3gqzLuL._SX679_.jpg" class="img-fluid lazy" alt="Carrier 1 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,Dual Filtration with HD &amp; PM 2.5 Filter, Auto Cleanser, 2024 Model,ESTER NEO+ Exi, CAI12ER3R34F0,White)" title="Carrier 1 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,Dual Filtration with HD &amp; PM 2.5 Filter, Auto Cleanser, 2024 Model,ESTER NEO+ Exi, CAI12ER3R34F0,White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSG4K9QG.html" title="Carrier 1 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,Dual Filtration with HD &amp; PM 2.5 Filter, Auto Cleanser, 2024 Model,ESTER NEO+ Exi, CAI12ER3R34F0,White)" class="shop-title-value">Carrier 1 Ton 3 Star AI Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,Dual Filtration with HD &amp; PM 2.5 Filter, Auto Cleanser, 2024 Model,ESTER NEO+ Exi, CAI12ER3R34F0,White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,499</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>56,990</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">34% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4mCFC5I" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61eRCvBlFpL._SX679_.jpg" class="img-fluid lazy" alt="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space)" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D222PDZ3.html" title="Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space)" class="shop-title-value">Whirlpool 235 L Frost Free Triple-Door Refrigerator (FP 253D PROTTON ROY RADIANT STEEL(Z) Double Door Refrigerator space)</a></h4>
+                  <div class="discount"><span class="main">39% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eH0XY8" title="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/51fpGSYjWnL._SX679_.jpg" class="img-fluid lazy" alt="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" title="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CSSSPZSS.html" title="Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)" class="shop-title-value">Hitachi 1 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2023 Model - 3400FXL RAS.G312PCAIBFE, White)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>24,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>38,150</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>32,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>54,300</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">79% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Z1o36y" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/91+5r30glVL._SX679_.jpg" class="img-fluid lazy" alt="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09F9QNWBV.html" title="BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories" class="shop-title-value">BULLAR Home Gym Set, Home Gym Equipments for Men, Gym Equipment Set for Home Workout, Home Gym Kit with 30kg Iron Weight Plates 30mm, 3 Feet &amp; 5 Feet Weight Lifting Rod, Dumbbell Rods &amp; Accessories</a></h4>
+                  <div class="discount"><span class="main">41% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XWpAKY" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Tfy967TKL._SX679_.jpg" class="img-fluid lazy" alt="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08DPLCM6T.html" title="LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)" class="shop-title-value">LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,164</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>29,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>21,990</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">47% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YyMO9N" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/6131fzwXapL._SX679_.jpg" class="img-fluid lazy" alt="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B1DDZZ7K.html" title="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White" class="shop-title-value">V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White</a></h4>
+                  <div class="discount"><span class="main">0% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/412M7XF" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61iZASctQ9L._SY695_.jpg" class="img-fluid lazy" alt="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DM8R7MYZ.html" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" class="shop-title-value">Da Milano Genuine Leather Brown Tote (00173D) (Medium)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,639</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,500</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">35% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gCeqkb" title="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71dEitCVLxL._SX679_.jpg" class="img-fluid lazy" alt="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" title="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C7H6SSC8.html" title="ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS" class="shop-title-value">ASUS Vivobook 15 Thin and Light Laptop, Intel Core i5-12500H 12Th Gen, 15.6&quot; (39.62 Cm) FHD, 60Hz (16GB RAM/512GB/Windows 11/Office 2021/Blue/1.7 Kg), X1502ZA-EJ541WS</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/488MCBu" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lIE9MYV3L._SX679_.jpg" class="img-fluid lazy" alt="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0B4N6JVMW.html" title="HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU" class="shop-title-value">HP Laptop 15s, 11th Gen Intel Core i3-1115G4, 15.6-inch (39.6 cm), FHD, 8GB DDR4, 512GB SSD, Intel UHD Graphics, Thin &amp; Light, Dual Speakers (Win 11, MSO 2021, Silver, 1.69 kg), fq2673TU</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>49,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>76,990</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>38,300</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>49,557</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">93% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3JxMFLP" title="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61fTfbdaszL._SX679_.jpg" class="img-fluid lazy" alt="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" title="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C497MSQN.html" title="Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)" class="shop-title-value">Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)</a></h4>
+                  <div class="discount"><span class="main">68% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4eM1BCR" title="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71iXd2zmTHL._SX679_.jpg" class="img-fluid lazy" alt="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" title="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0002IEQMS.html" title="K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;" class="shop-title-value">K&amp;H Manufacturing Lectro-Kennel Heated Pad with FREE Cover Small 12.5&quot; x 18.5&quot;</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,099</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>12,692</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>40,000</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">49% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4gti7bO" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61Vc14MtETL._SX679_.jpg" class="img-fluid lazy" alt="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BSXMR5TG.html" title="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)" class="shop-title-value">JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)</a></h4>
+                  <div class="discount"><span class="main">69% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4iMwo4Z" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61RVAFjC7SL._SX522_.jpg" class="img-fluid lazy" alt="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DWXTN8B9.html" title="AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color" class="shop-title-value">AQUA LIBRA WITH DEVICE ISI Mark Copper Water Purifier | 10-Stage Filtration | Ro+Uv+Uf+Mtds With Copper &amp; Alkaline | 10 L Capacity | 1 Year Warranty (Filters Included) Black Color</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>34,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,199</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035978" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">

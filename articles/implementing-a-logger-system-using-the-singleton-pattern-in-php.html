@@ -46,8 +46,8 @@
     <link rel="preconnect" href="https://analytics.webpushr.com">
     <!-- preconnect -->
     
-    <link rel="preload" href="/css/public.min.css?v=1765945112" as="style">
-    <link rel="stylesheet" href="/css/public.min.css?v=1765945112">
+    <link rel="preload" href="/css/public.min.css?v=1766035977" as="style">
+    <link rel="stylesheet" href="/css/public.min.css?v=1766035977">
     
     <script type="application/ld+json">
       {
@@ -55,11 +55,16 @@
         "@type": "BlogPosting",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html"
+          "@id": "https://peoplesblog.co.in/articles/implementing-a-logger-system-using-the-singleton-pattern-in-php.html"
         },
         "headline": "Implementing a Logger System Using the Singleton Pattern in PHP",
-        "description": "In this article, we&#39;ll create a simple logger system using the Singleton Pattern in PHP.  This logger will allow you to log messages to a file, en",
-        "image": "https://peoplesblog.co.in/upload/banners/implementing-a-logger-system-using-the-singleton-pattern-in-php.jpg",
+        "description": "In this article, we&#39;ll create a simple logger system using the Singleton Pattern in PHP. This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your application. Step-by-Step Implementation Step 1: Create the Logger Class We&#39;ll start byt by defining a Logger class that follows the Singleton Pattern.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://peoplesblog.co.in/upload/banners/implementing-a-logger-system-using-the-singleton-pattern-in-php.jpg",
+            "width": 788,
+            "height": 443
+        },
         "author": {
           "@type": "Person",
           "name": "Karthik Kumar D K"
@@ -69,9 +74,12 @@
           "name": "Peoples BLOG",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://peoplesblog.co.in/upload/favicon.webp"
+            "url": "https://peoplesblog.co.in/upload/favicon.webp",
+            "width": 512,
+            "height": 512
           }
-        }
+        },
+        "datePublished": "2024-10-28"
       }
     </script>
     <link rel="preload" as="image" href="/upload/banners/implementing-a-logger-system-using-the-singleton-pattern-in-php.jpg" fetchpriority="high">
@@ -156,7 +164,7 @@
                                 </div><!-- end meta -->
                             </div><!-- end title -->
                             <div id="read-article-content" class="blog-content read-article-content">
-                                <div><p>In this article, we&#39;ll create a simple logger system using the Singleton Pattern in PHP.</p>  <p>This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your <a href='/articles/store-secrets-securely-on-pantheon-for-drupal-application.html' title='Read about Store Secrets Securely On Pantheon For Drupal Application'>application</a>.</p>  <h2>Step-by-Step Implementation</h2>  <p><strong>Step 1: Create the Logger Class</strong></p>  <p>We&#39;ll start by defining a Logger class that follows the Singleton Pattern. This class will have methods for logging messages and ensuring that only one instance exists.</p>  <p><code>class Logger {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Logger $instance = null;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;private string $logFile;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Private constructor to prevent direct instantiation</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;logFile = &#39;app.log&#39;; // Define the log file</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Method to get the single instance of Logger</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Logger {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Logger();</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Method to log a message</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function log(string $message): void {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$timestamp = date(&#39;Y-m-d H:i:s&#39;);</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$formattedMessage = &quot;[$timestamp] $message&quot; . PHP_EOL;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file_put_contents($this-&gt;logFile, $formattedMessage, FILE_APPEND);</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Optional: Method to read the log file (for testing purposes)</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function readLog(): string {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return file_get_contents($this-&gt;logFile);</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>}</code></p>  <p><strong>Step 2: Usage Example</strong></p>  <p>Now that we have our Logger class set up, let&#39;s see how to use it in a real application scenario.</p>  <p><code>// Usage of the Logger</code></p>  <p><code>$logger = Logger::getInstance();</code></p>  <p><code>$logger-&gt;log(&quot;Application started.&quot;);</code></p>  <p><code>// Simulating some actions</code></p>  <p><code>$logger-&gt;log(&quot;User logged in.&quot;);</code></p>  <p><code>$logger-&gt;log(&quot;Error: Unable to connect to the database.&quot;);</code></p>  <p><code>$logger-&gt;log(&quot;Application finished.&quot;);</code></p>  <p><strong>Step 3: Testing the Logger</strong></p>  <p>You can read the log file to verify that messages are being logged correctly. Here&rsquo;s a small snippet to do that:</p>  <p>// Displaying the log contents</p>  <p><code>$logger = Logger::getInstance();</code></p>  <p><code>echo $logger-&gt;readLog();</code></p>  <h2>Complete Example</h2>  <p>Putting everything together, here&rsquo;s the complete code for the Logger system.</p>  <p><code>class Logger {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Logger $instance = null;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;private string $logFile;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this-&gt;logFile = &#39;app.log&#39;; // Define the log file</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Logger {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Logger();</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function log(string $message): void {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$timestamp = date(&#39;Y-m-d H:i:s&#39;);</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$formattedMessage = &quot;[$timestamp] $message&quot; . PHP_EOL;</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file_put_contents($this-&gt;logFile, $formattedMessage, FILE_APPEND);</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function readLog(): string {</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return file_get_contents($this-&gt;logFile);</code></p>  <p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>  <p><code>}</code></p>  <p><code>// Usage of the Logger</code></p>  <p><code>$logger = Logger::getInstance();</code></p>  <p><code>$logger-&gt;log(&quot;Application started.&quot;);</code></p>  <p><code>$logger-&gt;log(&quot;User logged in.&quot;);</code></p>  <p><code>$logger-&gt;log(&quot;Error: Unable to connect to the database.&quot;);</code></p>  <p><code>$logger-&gt;log(&quot;Application finished.&quot;);</code></p>  <p><code>// Displaying the log contents</code></p>  <p><code>echo $logger-&gt;readLog();</code></p>  <p>In this hands-on exercise, we&#39;ve successfully implemented a simple logger system using the Singleton Pattern in PHP. This design ensures that only one instance of the logger exists, which simplifies the logging process and avoids conflicts.</p>  <p>Thanks for reading the article,&nbsp;for more Science &amp; <a href='/articles/advances-in-prosthetic-limb-technology.html' title='Read about Advances In Prosthetic Limb Technology'>Technology</a> related articles&nbsp;read and subscribe to peoples blog articles.</p> </div>
+                                <div><p>In this article, we&#39;ll create a simple logger system using the Singleton Pattern in PHP.</p>  <p>This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your <a href='/articles/store-secrets-securely-on-pantheon-for-drupal-application.html' title='Read about Store Secrets Securely On Pantheon For Drupal Application'>application</a>.</p>  <h2>Step-by-Step Implementation</h2>  <p><strong>Step 1: Create the Logger Class</strong></p>  <p>We&#39;ll start by defining a Logger class that follows the Singleton Pattern. This class will have methods for logging messages and ensuring that only one instance exists.</p>  <p><code>class Logger {</code></p>  <p><code>    private static ?Logger $instance = null;</code></p>  <p><code>    private string $logFile;</code></p>  <p><code>    // Private constructor to prevent direct instantiation</code></p>  <p><code>    private function __construct() {</code></p>  <p><code>        $this→logFile = &#39;app.log&#39;; // Define the log file</code></p>  <p><code>    }</code></p>  <p><code>    // Method to get the single instance of Logger</code></p>  <p><code>    public static function getInstance(): Logger {</code></p>  <p><code>        if (self::$instance === null) {</code></p>  <p><code>            self::$instance = new Logger();</code></p>  <p><code>        }</code></p>  <p><code>        return self::$instance;</code></p>  <p><code>    }</code></p>  <p><code>    // Method to log a message</code></p>  <p><code>    public function log(string $message): void {</code></p>  <p><code>        $timestamp = date(&#39;Y-m-d H:i:s&#39;);</code></p>  <p><code>        $formattedMessage = &quot;[$timestamp] $message&quot; . PHP_EOL;</code></p>  <p><code>        file_put_contents($this→logFile, $formattedMessage, FILE_APPEND);</code></p>  <p><code>    }</code></p>  <p><code>    // Optional: Method to read the log file (for testing purposes)</code></p>  <p><code>    public function readLog(): string {</code></p>  <p><code>        return file_get_contents($this→logFile);</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><strong>Step 2: Usage Example</strong></p>  <p>Now that we have our Logger class set up, let&#39;s see how to use it in a real application scenario.</p>  <p><code>// Usage of the Logger</code></p>  <p><code>$logger = Logger::getInstance();</code></p>  <p><code>$logger→log(&quot;Application started.&quot;);</code></p>  <p><code>// Simulating some actions</code></p>  <p><code>$logger→log(&quot;User logged in.&quot;);</code></p>  <p><code>$logger→log(&quot;Error: Unable to connect to the database.&quot;);</code></p>  <p><code>$logger→log(&quot;Application finished.&quot;);</code></p>  <p><strong>Step 3: Testing the Logger</strong></p>  <p>You can read the log file to verify that messages are being logged correctly. Here&rsquo;s a small snippet to do that:</p>  <p>// Displaying the log contents</p>  <p><code>$logger = Logger::getInstance();</code></p>  <p><code>echo $logger→readLog();</code></p>  <h2>Complete Example</h2>  <p>Putting everything together, here&rsquo;s the complete code for the Logger system.</p>  <p><code>class Logger {</code></p>  <p><code>    private static ?Logger $instance = null;</code></p>  <p><code>    private string $logFile;</code></p>  <p><code>    private function __construct() {</code></p>  <p><code>        $this→logFile = &#39;app.log&#39;; // Define the log file</code></p>  <p><code>    }</code></p>  <p><code>    public static function getInstance(): Logger {</code></p>  <p><code>        if (self::$instance === null) {</code></p>  <p><code>            self::$instance = new Logger();</code></p>  <p><code>        }</code></p>  <p><code>        return self::$instance;</code></p>  <p><code>    }</code></p>  <p><code>    public function log(string $message): void {</code></p>  <p><code>        $timestamp = date(&#39;Y-m-d H:i:s&#39;);</code></p>  <p><code>        $formattedMessage = &quot;[$timestamp] $message&quot; . PHP_EOL;</code></p>  <p><code>        file_put_contents($this→logFile, $formattedMessage, FILE_APPEND);</code></p>  <p><code>    }</code></p>  <p><code>    public function readLog(): string {</code></p>  <p><code>        return file_get_contents($this→logFile);</code></p>  <p><code>    }</code></p>  <p><code>}</code></p>  <p><code>// Usage of the Logger</code></p>  <p><code>$logger = Logger::getInstance();</code></p>  <p><code>$logger→log(&quot;Application started.&quot;);</code></p>  <p><code>$logger→log(&quot;User logged in.&quot;);</code></p>  <p><code>$logger→log(&quot;Error: Unable to connect to the database.&quot;);</code></p>  <p><code>$logger→log(&quot;Application finished.&quot;);</code></p>  <p><code>// Displaying the log contents</code></p>  <p><code>echo $logger→readLog();</code></p>  <p>In this hands-on exercise, we&#39;ve successfully implemented a simple logger system using the Singleton Pattern in PHP. This design ensures that only one instance of the logger exists, which simplifies the logging process and avoids conflicts.</p>  <p>Thanks for reading the article, for more Science and <a href='/articles/advances-in-prosthetic-limb-technology.html' title='Read about Advances In Prosthetic Limb Technology'>Technology</a> related articles read and subscribe to peoples blog articles.</p> </div>
                             </div><!-- end content -->
                             <div class="blog-title-area tag">
                                 <h4>Labels</h4>
@@ -168,32 +176,32 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">32% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46GzAfn" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61zuR3UMnWL._SY879_.jpg" class="img-fluid lazy" alt="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B08GTYFC37.html" title="SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD" class="shop-title-value">SanDisk 1TB Extreme Portable SSD 1050MB/s R, 1000MB/s W,Upto 2 Meter Drop Protection with IP55 Water/dust Resistance, HW Encryption, PC,MAC &amp; TypeC Smartphone Compatible, 5Y Warranty, Usb,External SSD</a></h4>
+                  <div class="discount"><span class="main">26% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Pj2QzC" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61pt59LW-lL._SX679_.jpg" class="img-fluid lazy" alt="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B07WGPBNTC.html" title="iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box" class="shop-title-value">iQOO Z9 5G (Brushed Green, 8GB RAM, 128GB Storage) | Dimensity 7200 5G Processor | Sony IMX882 OIS Camera | 120Hz AMOLED with 1800 nits Local Peak Brightness | 44W Charger in The Box</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>9,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>14,800</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>18,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>24,999</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">23% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40QwyRC" title="Hidesign Women&#039;s Satchel (Brown)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61B48BuhiaL._SY695_.jpg" class="img-fluid lazy" alt="Hidesign Women&#039;s Satchel (Brown)" title="Hidesign Women&#039;s Satchel (Brown)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B084PQY1WN.html" title="Hidesign Women&#039;s Satchel (Brown)" class="shop-title-value">Hidesign Women&#039;s Satchel (Brown)</a></h4>
+                  <div class="discount"><span class="main">30% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3Ajg0I8" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71oIjjNm+nL._SY879_.jpg" class="img-fluid lazy" alt="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CDXHYHZ6.html" title="Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey" class="shop-title-value">Nokia G42 5G | Snapdragon® 480+ 5G | 50MP Triple AI Camera | 11GB RAM (6GB RAM + 5GB Virtual RAM) | 128GB Storage | 5000mAh Battery | 2 Years Android Upgrades | 20W Charger Included | So Grey</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,896.29</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,595</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,499</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>16,499</span></span>
                   </div>
               </div>
           </div><div class="col-md-4 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">21% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/471ZISr" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/815VUnxk7dL._SX679_.jpg" class="img-fluid lazy" alt="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0BRQBVYVB.html" title="LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)" class="shop-title-value">LG 185 L 5 Star Inverter Direct-Cool Single Door Refrigerator (GL-D201ASEU, Scarlet Euphoria, Base stand with drawer)</a></h4>
+                  <div class="discount"><span class="main">25% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3YkM9sJ" title="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71-oDkPIB8L._SX679_.jpg" class="img-fluid lazy" alt="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" title="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C8NW342B.html" title="LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)" class="shop-title-value">LG 343 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S382SDSX, Dazzle Steel, Convertible with Express Freeze)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>17,490</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>22,199</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>37,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>50,799</span></span>
                   </div>
               </div>
           </div>
@@ -295,12 +303,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">9% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3QDuO9X" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81vxWpPpgNL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CQYGF1QY.html" title="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)" class="shop-title-value">Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)</a></h4>
+                  <div class="discount"><span class="main">17% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4aiqbuu" title="Apple iPhone 15 (128 GB) - Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" class="img-fluid lazy" alt="Apple iPhone 15 (128 GB) - Black" title="Apple iPhone 15 (128 GB) - Black" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CHX1W1XY.html" title="Apple iPhone 15 (128 GB) - Black" class="shop-title-value">Apple iPhone 15 (128 GB) - Black</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,31,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,44,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>57,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>69,900</span></span>
                   </div>
               </div>
           </div>
@@ -343,12 +351,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41XuCbQ" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81lfG3UaigL._SX679_.jpg" class="img-fluid lazy" alt="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CNRNH49R.html" title="GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black" class="shop-title-value">GOBBLER Air Fryer, 12 liter Family Size, 1800W All-In-One Air Fryer Oven With Led Touchscreen, 10 Preset Menu For Air Fry, Baking, Grill, Roast, Toast With Accessories (Af-120A)- Silver, Black</a></h4>
+                  <div class="discount"><span class="main">35% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3IDlVJ5" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61OBw+XUiuL._SX679_.jpg" class="img-fluid lazy" alt="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0C467KFNM.html" title="Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android" class="shop-title-value">Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage) | India&#039;s First Dimensity 7050 Processor | 120 Hz Curved Amoled Display | 13 5G Bands | Superfast 66W Charging | Clean Android</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,290</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>19,998</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>16,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>25,999</span></span>
                   </div>
               </div>
           </div>
@@ -391,12 +399,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">62% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3DZIA3g" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/41M3JHvOckL.jpg" class="img-fluid lazy" alt="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DQKXRXVH.html" title="ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235" class="shop-title-value">ROCOSJEWE Women´s Watch Luxury Green Dial Waterproof Watches for Ladies Emerald Elegant Wristwatch Leather Belt Girlfriend Gift R0235</a></h4>
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3XoXiaI" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61NbiB1GU-L._SX679_.jpg" class="img-fluid lazy" alt="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0D7VKMLGD.html" title="OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)" class="shop-title-value">OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>6,879</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>28,998</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>32,999</span></span>
                   </div>
               </div>
           </div>
@@ -431,12 +439,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">69% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3BHSF3H" title="Samsung Galaxy Wireless Buds FE (in Ear) (Graphite)|Powerful Active Noise Cancellation | Enriched Bass Sound | Ergonomic Design | 6-21 Hrs Play Time" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61CeRMMV7+L._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy Wireless Buds FE (in Ear) (Graphite)|Powerful Active Noise Cancellation | Enriched Bass Sound | Ergonomic Design | 6-21 Hrs Play Time" title="Samsung Galaxy Wireless Buds FE (in Ear) (Graphite)|Powerful Active Noise Cancellation | Enriched Bass Sound | Ergonomic Design | 6-21 Hrs Play Time" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CJJT1BFV.html" title="Samsung Galaxy Wireless Buds FE (in Ear) (Graphite)|Powerful Active Noise Cancellation | Enriched Bass Sound | Ergonomic Design | 6-21 Hrs Play Time" class="shop-title-value">Samsung Galaxy Wireless Buds FE (in Ear) (Graphite)|Powerful Active Noise Cancellation | Enriched Bass Sound | Ergonomic Design | 6-21 Hrs Play Time</a></h4>
+                  <div class="discount"><span class="main">12% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4nREgWl" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71cadtXNcBL._SX679_.jpg" class="img-fluid lazy" alt="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FDKPZHB7.html" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" class="shop-title-value">HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>3,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>12,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,09,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,24,319</span></span>
                   </div>
               </div>
           </div>
@@ -471,12 +479,12 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-12 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">64% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4igsq4P" title="JIN OFFICE Steel Manual Height Adjustable Desk | Premium Sit Stand Desk Manual With Hand Crank For Height Adjustment, Polished | Additional Crossbar For Stability | 1400 * 600 Mm Table Top" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81sGFRZoHsL._SX679_.jpg" class="img-fluid lazy" alt="JIN OFFICE Steel Manual Height Adjustable Desk | Premium Sit Stand Desk Manual With Hand Crank For Height Adjustment, Polished | Additional Crossbar For Stability | 1400 * 600 Mm Table Top" title="JIN OFFICE Steel Manual Height Adjustable Desk | Premium Sit Stand Desk Manual With Hand Crank For Height Adjustment, Polished | Additional Crossbar For Stability | 1400 * 600 Mm Table Top" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DB2BVZC1.html" title="JIN OFFICE Steel Manual Height Adjustable Desk | Premium Sit Stand Desk Manual With Hand Crank For Height Adjustment, Polished | Additional Crossbar For Stability | 1400 * 600 Mm Table Top" class="shop-title-value">JIN OFFICE Steel Manual Height Adjustable Desk | Premium Sit Stand Desk Manual With Hand Crank For Height Adjustment, Polished | Additional Crossbar For Stability | 1400 * 600 Mm Table Top</a></h4>
+                  <div class="discount"><span class="main">11% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3CyFQto" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DSKMF8N7.html" title="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI" class="shop-title-value">Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>15,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>45,000</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>99,999</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,11,999</span></span>
                   </div>
               </div>
           </div>
@@ -491,42 +499,42 @@
       <div class="shop-data-results">
       <div class="row"><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">33% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46E9et6" title="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71zOYPGqZhL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" title="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DX791PX9.html" title="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger" class="shop-title-value">Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger</a></h4>
+                  <div class="discount"><span class="main">76% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/46kOIxv" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71PJjjeM4bL._SX679_.jpg" class="img-fluid lazy" alt="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0CZ6KW5HQ.html" title="TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)" class="shop-title-value">TCL 189 cm (75 inches) Metallic Bezel-Less Series 4K Ultra HD Smart LED Google TV 75V6B (Black)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,749</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>61,990</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>2,54,990</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">12% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/4nREgWl" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71cadtXNcBL._SX679_.jpg" class="img-fluid lazy" alt="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0FDKPZHB7.html" title="HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop" class="shop-title-value">HP Victus, 13th Gen Intel Core i7-13620H, 8GB RTX 5050 (Upgradeable 24GB DDR5, 1TB SSD) FHD, 144Hz, IPS, 300nits, 15.6&#039;&#039;/39.6cm, Win11, M365*Office24, Mica Silver, 2.29kg, fa2309TX, RGB, Gaming Laptop</a></h4>
+                  <div class="discount"><span class="main">68% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/47XGpHW" title="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/71trpms0VeL._SX679_.jpg" class="img-fluid lazy" alt="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" title="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B09XKHNQR3.html" title="Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)" class="shop-title-value">Springtek Dreamer Euro Top Memory Foam Bonnell Spring 6-inch Double Bed Spring Mattress (72x48x6)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>1,09,990</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>1,24,319</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>7,451</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>23,299</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">0% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/412M7XF" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61iZASctQ9L._SY695_.jpg" class="img-fluid lazy" alt="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DM8R7MYZ.html" title="Da Milano Genuine Leather Brown Tote (00173D) (Medium)" class="shop-title-value">Da Milano Genuine Leather Brown Tote (00173D) (Medium)</a></h4>
+                  <div class="discount"><span class="main">23% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/40QwyRC" title="Hidesign Women&#039;s Satchel (Brown)" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61B48BuhiaL._SY695_.jpg" class="img-fluid lazy" alt="Hidesign Women&#039;s Satchel (Brown)" title="Hidesign Women&#039;s Satchel (Brown)" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B084PQY1WN.html" title="Hidesign Women&#039;s Satchel (Brown)" class="shop-title-value">Hidesign Women&#039;s Satchel (Brown)</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>30,999</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>25,896.29</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>33,595</span></span>
                   </div>
               </div>
           </div><div class="col-md-3 shop-item-wrapper">
               <div class="shop-item">
-                  <div class="discount"><span class="main">31% OFF</span></div>
-                  <div class="shop-image"><a target="_blank" href="https://amzn.to/41GEWEH" title="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/61B6NWbMGZL._SX679_.jpg" class="img-fluid lazy" alt="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" title="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" src="/upload/cursor.jpg" /></a></div>
-                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B0DX5MYCRG.html" title="Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger" class="shop-title-value">Samsung Galaxy M16 5G (Thunder Black, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | 25W Fast Charging | 6 Gen. of OS Upgrades | Without Charger</a></h4>
+                  <div class="discount"><span class="main">67% OFF</span></div>
+                  <div class="shop-image"><a target="_blank" href="https://amzn.to/3ChDyyC" title="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" rel="nofollow sponsored"><img data-src="https://m.media-amazon.com/images/I/81Q4OK+05TL._SX679_.jpg" class="img-fluid lazy" alt="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" title="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" src="/upload/cursor.jpg" /></a></div>
+                  <h4 class="shop-title"><a target="_blank" href="/shopping/reviews/B086PK9J9S.html" title="BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008" class="shop-title-value">BCBGMAXAZRIA Max Azria Analog Silver Dial Women&#039;s Watch-BG50999008</a></h4>
                   <div class="price">
-                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>11,999</span></span>
-                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>17,499</span></span>
+                      <span class="discountprice"><span class='india rupees rupee'>₹</span><span>5,285</span></span>
+                      <span class="actualprice"><span class='india rupees rupee'>₹</span><span>15,995</span></span>
                   </div>
               </div>
           </div>
@@ -683,7 +691,7 @@
   <!-- div class="dmtop">Scroll to Top</div -->
     </div><!-- end wrapper -->
     <!-- JS -->
-    <script src="/js/public.min.js?v=1765945112" defer></script>
+    <script src="/js/public.min.js?v=1766035977" defer></script>
     <!-- Policy -->
     <div id="policy-container">
        <div class="container-fluid policy-container">
