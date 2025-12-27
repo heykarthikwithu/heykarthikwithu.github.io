@@ -1182,6 +1182,7 @@ Allow: /articles/have-you-observed-dental-erosion-in-your-teeth.html
 Allow: /articles/what-to-do-with-dark-cavities-on-teeth.html
 Allow: /articles/healthy-diet-to-keep-your-teeth-healthy.html
 Allow: /articles/have-you-noticed-tongue-tie-in-children.html
+Allow: /sri-vedanta-swarajya-sangam/index.html
 Allow: /karthikkumardk/index.html
 Allow: /shopping/faq.html
 Allow: /shopping/comparisons/1755262825.html
@@ -1920,5 +1921,6 @@ Allow: /shopping/index.html
 Sitemap: https://peoplesblog.co.in/sitemaps/articles.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/quick-read.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/pages.xml
+Sitemap: https://peoplesblog.co.in/sitemaps/sri-vedanta-swarajya-sangam.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/karthikkumardk.xml
 Sitemap: https://peoplesblog.co.in/sitemaps/shopping.xml
