@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redirecting...</title>
+        <script>
+          (function () {
+            var p = location.pathname;
+            if (p.indexOf("/seeadlertech") === 0) {
+              location.replace("https://seeadlertech.peoplesblog.co.in" + p.slice(13));
+            }
+          })();
+        </script>
+    </head>
+    <body>
+        <!-- p>If you are not redirected automatically, <a id="fallback-link" href="#">click here</a>.</p>
+        <script>
+            // Optional fallback link update
+            const currentUrl = window.location.href;
+            if (currentUrl.includes("/bestproducts/products/")) {
+                document.getElementById("fallback-link").href = currentUrl.replace("/bestproducts/products/", "/shopping/reviews/");
+            }
+        </script -->
+    </body>
+</html>
