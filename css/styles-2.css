@@ -24,6 +24,7 @@ body h4 {
 .google-ad {
     margin: 15px auto;
     border-radius: 5px;
+    min-height: 100px;
 }
 .google-ad > p {
     display: none;
