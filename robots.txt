@@ -1411,6 +1411,7 @@ Allow: /shopping/reviews/B07R47WXX9.html
 Allow: /shopping/reviews/B07HTGQ2K7.html
 Allow: /shopping/reviews/B0DQPC71CR.html
 Allow: /shopping/reviews/B0D3HWQFHQ.html
+Allow: /shopping/reviews/B0C8HCLQVC.html
 Allow: /shopping/reviews/B0B46CSK6Q.html
 Allow: /shopping/reviews/B08CFJBZRK.html
 Allow: /shopping/reviews/B0D7VH5RL6.html
