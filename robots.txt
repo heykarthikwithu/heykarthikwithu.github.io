@@ -1570,6 +1570,7 @@ Allow: /shopping/reviews/B0C3DBY5WV.html
 Allow: /shopping/reviews/B0DCK8P9KR.html
 Allow: /shopping/reviews/B0BZY9L1LD.html
 Allow: /shopping/reviews/B0CFDSRQVT.html
+Allow: /shopping/reviews/B0D7MFQLJR.html
 Allow: /shopping/reviews/B08BGLPK9T.html
 Allow: /shopping/reviews/B08SMWPSF8.html
 Allow: /shopping/reviews/B0CSZ5MH1T.html
