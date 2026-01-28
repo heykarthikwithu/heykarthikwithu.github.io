@@ -691,6 +691,7 @@ Allow: /articles/egg-stuffed-paratha-home-made-recipe.html
 Allow: /articles/having-good-sex-at-any-age-is-it-really-possible.html
 Allow: /articles/expectations-and-freedom-in-a-relationship.html
 Allow: /articles/how-does-captcha-know-that-iam-not-robot.html
+Allow: /quick-read/elephant-and-friends.html
 Allow: /quick-read/the-bear-and-the-two-friends.html
 Allow: /quick-read/olympics-and-paralympics-are-two-different-olympic-games.html
 Allow: /quick-read/the-pig-and-the-sheep.html
@@ -824,7 +825,6 @@ Allow: /quick-read/the-boasting-traveler.html
 Allow: /quick-read/the-camel-and-the-baby.html
 Allow: /quick-read/the-farmer-and-the-well.html
 Allow: /quick-read/true-friends-love-you-anyway.html
-Allow: /quick-read/elephant-and-friends.html
 Allow: /quick-read/the-wolf-and-the-shepherds.html
 Allow: /quick-read/the-young-crab-and-his-mother.html
 Allow: /quick-read/the-other-side-of-the-wall.html
