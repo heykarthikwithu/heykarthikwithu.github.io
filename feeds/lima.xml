@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://peoplesblog.co.in">
 <channel>
-	<title>Lima - Peoples BLOG</title>
-    <link>https://peoplesblog.co.in/articles/lima.html</link>
-    <description/>
-    <language>en</language>
-    <item>
-			<title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
-			<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
-			<description>If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix &amp;mdash; and this article explains</description>
-			<pubDate>Sun, 30 Nov 2025 16:06:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
+<title>Lima - Peoples BLOG</title>
+<link>https://peoplesblog.co.in/articles/lima.html</link>
+<description/>
+<language>en</language><item>
+<title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
+<link>https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</link>
+<description>If you use Colima on macOS for container management, you may occasionally run into the error:  .lima/colima/ha.sock: connect: connection refused   This error appears simple, but for developers who rely on Colima for daily local development (especially with tool</description>
+<pubDate>Sun, 30 Nov 2025 16:06:00 +0530</pubDate>
+<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.html</guid>
-    </item>
-</channel>
-</rss>
+</item></channel></rss>

@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://peoplesblog.co.in">
 <channel>
-	<title>Movie - Peoples BLOG</title>
-    <link>https://peoplesblog.co.in/articles/movie.html</link>
-    <description/>
-    <language>en</language>
-    <item>
-			<title>The Shawshank Redemption – A Movie About Life, Hope and Freedom</title>
-			<link>https://peoplesblog.co.in/articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html</link>
-			<description>The Shawshank Redemption is one of the greatest movies ever made. Even today, it stands above The Godfather on IMDb&amp;rsquo;s Top 250 movies list. It is a must-watch film for anyone who loves meaningful cinema, emotional storytelling and powerful life lessons.  The movie is filled with unforgettable lines and moments that talk about life, hope and freedom. Each dialogue carries deep meaning, and whe</description>
-			<pubDate>Mon, 08 Dec 2025 13:01:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
+<title>Movie - Peoples BLOG</title>
+<link>https://peoplesblog.co.in/articles/movie.html</link>
+<description/>
+<language>en</language><item>
+<title>The Shawshank Redemption – A Movie About Life, Hope and Freedom</title>
+<link>https://peoplesblog.co.in/articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html</link>
+<description>The Shawshank Redemption is one of the greatest movies ever made. Even today, it stands above The Godfather on IMDb&amp;rsquo;s Top 250 movies list. It is a must-watch film for anyone who loves meaningful cinema, emotional storytelling and powerful life lessons.  The movie is filled with unforgettable lines and moments that talk about </description>
+<pubDate>Mon, 08 Dec 2025 13:01:00 +0530</pubDate>
+<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html</guid>
-    </item><item>
-			<title>The Unfinished Story of Divya Bharti: Rise, Mystery, and the Questions That Still Remain</title>
-			<link>https://peoplesblog.co.in/articles/the-mysterious-death-of-actress-divya-bharti.html</link>
-			<description>Divya Bharti remains one of the most unforgettable faces of Indian cinema&amp;mdash;an actress who achieved remarkable success in an extremely short span of time. Her expressive eyes, natural acting talent, and energetic screen presence made her one of Bollywood&amp;rsquo;s most promising young stars of the early 1990s. Yet, her sudden death at just 19 shocked the nation and left behind a trail of unanswe</description>
-			<pubDate>Sun, 30 Nov 2025 13:32:00 +0530</pubDate>
-			<dc:creator>Karthik Kumar D K</dc:creator>
+</item><item>
+<title>The Unfinished Story of Divya Bharti: Rise, Mystery, and the Questions That Still Remain</title>
+<link>https://peoplesblog.co.in/articles/the-mysterious-death-of-actress-divya-bharti.html</link>
+<description>Divya Bharti remains one of the most unforgettable faces of Indian cinema&amp;mdash;an actress who achieved remarkable success in an extremely short span of time. Her expressive eyes, natural acting talent, and energetic screen presence made her one of Bollywood&amp;rsquo;s most promising young stars of the early 1990s. Yet, her sudden death at just 19 sh</description>
+<pubDate>Sun, 30 Nov 2025 13:32:00 +0530</pubDate>
+<dc:creator>Karthik Kumar D K</dc:creator>
 <guid isPermaLink="true">https://peoplesblog.co.in/articles/the-mysterious-death-of-actress-divya-bharti.html</guid>
-    </item>
-</channel>
-</rss>
+</item></channel></rss>
