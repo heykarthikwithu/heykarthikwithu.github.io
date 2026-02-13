@@ -9,6 +9,7 @@ Allow: /site-links.html
 Allow: /sitemaps/index.html
 Allow: /quick-read/index.html
 Allow: /feeds/index.html
+Allow: /articles/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.html
 Allow: /articles/bangalore-to-kochi-solo-trip-plan.html
 Allow: /articles/what-are-the-best-ways-to-earn-money-while-traveling-around-the-world.html
 Allow: /articles/the-shawshank-redemption-movie-about-life-hope-and-freedom.html
