@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /home.html
 Allow: /articles/index.html
 Allow: /about.html
 Allow: /contact.html
@@ -1585,7 +1586,6 @@ Allow: /shopping/reviews/B0D11V1LW9.html
 Allow: /shopping/reviews/B0G2RZ9N63.html
 Allow: /shopping/reviews/B08151RD5R.html
 Allow: /shopping/reviews/B09SHJ1C9W.html
-Allow: /shopping/reviews/B08DF1Y7T7.html
 Allow: /shopping/reviews/B0F7RWM6W1.html
 Allow: /shopping/reviews/B08HW2LQXP.html
 Allow: /shopping/reviews/B09DD9SX9Z.html
@@ -1626,7 +1626,6 @@ Allow: /shopping/reviews/B07SRTPV2M.html
 Allow: /shopping/reviews/B0CNYSGNN3.html
 Allow: /shopping/reviews/B0CDXHYHZ6.html
 Allow: /shopping/reviews/B0B3RYSVD4.html
-Allow: /shopping/reviews/B08699WZTK.html
 Allow: /shopping/reviews/B0D4RBM6Q6.html
 Allow: /shopping/reviews/B07VCKVJKS.html
 Allow: /shopping/reviews/B0D9BHVTVW.html
