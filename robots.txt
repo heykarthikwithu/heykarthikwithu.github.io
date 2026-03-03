@@ -1515,7 +1515,6 @@ Allow: /shopping/reviews/B0FNX6LHLJ.html
 Allow: /shopping/reviews/B09G9W3WFL.html
 Allow: /shopping/reviews/B0BFRKC6JL.html
 Allow: /shopping/reviews/B096FFX4HX.html
-Allow: /shopping/reviews/B085B1RFL9.html
 Allow: /shopping/reviews/B0DWXTN8B9.html
 Allow: /shopping/reviews/B0753L1QSM.html
 Allow: /shopping/reviews/B0BHC467PM.html
