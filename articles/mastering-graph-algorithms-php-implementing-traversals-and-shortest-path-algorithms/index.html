@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://peoplesblog.co.in/articles/mastering-graph-algorithms-php-implementing-traversals-and-shortest-path-algorithms" />
+<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms" />
+<meta property="og:description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more" />
+<meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more" />
+<meta name="twitter:title" content="Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms" />
+<meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms",
+            "description": "Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://peoplesblog.co.in/sites/default/files/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp"
+            },
+            "datePublished": "2024-11-28T07:44:00+0530",
+            "dateModified": "2026-04-16T08:54:00+0530",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Peoples BLOG",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://peoplesblog.co.in/logo.png"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://peoplesblog.co.in/articles/mastering-graph-algorithms-php-implementing-traversals-and-shortest-path-algorithms"
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        },
+        {
+            "@type": "WebSite",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
+
+    <title>Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+
+    
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+</noscript>
+  </head>
+  <body class="path-node page-node-type-article">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-olivero-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="site-branding__inner">
+          <a href="/" rel="home" class="site-branding__logo">
+        <img src="/sites/default/files/logo.png" alt="Home" fetchpriority="high"/>
+      </a>
+          </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav  id="block-olivero-main-menu" class="primary-nav block block-menu navigation menu--main" aria-labelledby="block-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-olivero-main-menu-menu">Main navigation</h2>
+  
+        
+
+
+          
+        
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="block__content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          <a href="/articles" class="breadcrumb__link">Articles</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          Mastering Graph Algorithms In PHP: Implementing Traversals and Shortest Path Algorithms
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main role="main">
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-page-title" class="block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">
+<span>Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms</span>
+</h1>
+
+
+  
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article data-history-node-id="3885" class="node node--type-article grid-full node--promoted node--view-mode-full">
+  <header class="layout--content-narrow">
+    
+          
+          <div class="node__meta">
+              <span>
+          By <span class="node__author">
+<span><span>Karthik Kumar D K</span></span>
+</span>, 28 November 2024
+        </span>
+        
+      </div>
+      </header>
+  <div class="node__content layout--content-narrow">
+        
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp.avif?itok=92J16rdD" width="788" height="443" alt="Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms" />
+
+
+</div>
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.</p><p>In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.</p><h2>Understanding Graph Data Structures</h2><p>A <strong>graph</strong> is a collection of nodes (vertices) connected by edges. There are two main types of graphs:</p><ul> <li><strong>Directed Graph</strong>: In a directed graph, the edges have a direction, meaning they go from one vertex to another.</li> <li><strong>Undirected Graph</strong>: In an undirected graph, edges don’t have a direction; they simply connect two vertices.</li> </ul><p>We can represent graphs using two common methods in programming:</p><ol> <li><strong>Adjacency Matrix</strong>: A 2D array where each cell represents an edge between two vertices.</li> <li><strong>Adjacency List</strong>: An array of lists (or hash maps) where each vertex has a list of connected vertices.</li> </ol><p>In this article, we will use an <strong>adjacency list</strong> to represent graphs because it's more efficient in terms of space for sparse graphs.</p><p><strong>Example: Graph Representation</strong></p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $adjList = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Add a vertex to the graph</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Add an edge between two vertices</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex2][] = $vertex1; // For undirected graph</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Get adjacent vertices of a given vertex</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function getAdjacencyList(string $vertex): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→adjList[$vertex] ?? [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><h2>Implementing Graph Traversals</h2><p>Graph traversals allow you to visit every vertex in the graph in a systematic manner. There are two main traversal algorithms:</p><p><strong>1. Depth-First Search (DFS)</strong></p><p>DFS explores as far as possible along a branch before backtracking. It is often implemented using recursion or a stack.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// ... (Previous methods)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// DFS traversal</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function depthFirstSearch(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→dfsHelper($start, $visited, $result);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function dfsHelper(string $vertex, array &amp;$visited, array &amp;$result): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($visited[$vertex])) return;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited[$vertex] = true;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = $vertex;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($vertex) as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→dfsHelper($neighbor, $visited, $result);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>2. Breadth-First Search (BFS)</strong></p><p>BFS explores all neighboring nodes at the present depth before moving on to nodes at the next depth level. It is implemented using a queue.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// ... (Previous methods)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// BFS traversal</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function breadthFirstSearch(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue = [$start];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ($queue) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vertex = array_shift($queue);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($visited[$vertex])) continue;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited[$vertex] = true;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = $vertex;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($vertex) as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!isset($visited[$neighbor])) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[] = $neighbor;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p>Both DFS and BFS help in <a href="/article/exploring-use-artificial-organs-healthcare" title="Read about Exploring The Use Of Artificial Organs In Healthcare">exploring</a> the graph’s vertices in different ways, which is useful for solving problems like finding connected components, solving puzzles, etc.</p><h2>Shortest Path Algorithms</h2><p>Finding the shortest path between nodes is one of the most important <a href="/article/usage-phpcs-github-pull-request-drupal-applications" title="Read about Usage Of Phpcs On Github Via Pull Request For Drupal Applications">applications</a> of graph algorithms. Two well-known algorithms for this task are <strong>Dijkstra’s Algorithm</strong> and <strong>Bellman-Ford Algorithm</strong>.</p><p><strong>1. Dijkstra’s Algorithm</strong></p><p>Dijkstra's algorithm finds the shortest path from a source vertex to all other vertices in a graph. It works only with graphs that have non-negative weights on edges.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $adjList = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $weights = []; // Store edge weights</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2, int $weight): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex2][] = $vertex1;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex1,$vertex2"] = $weight;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex2,$vertex1"] = $weight; // Undirected graph</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><div class="google-ad" id="google-ad-1"><p>Google Ad 1</p></div><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function dijkstra(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Set initial distances to infinity</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$vertex] = INF;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev[$vertex] = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$vertex] = INF;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$start] = 0;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$start] = 0;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ($queue) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Get the vertex with the smallest distance</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asort($queue);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$minVertex = key($queue);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset($queue[$minVertex]);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Visit each neighbor</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($minVertex) as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$minVertex,$neighbor";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$alt = $dist[$minVertex] + ($this→weights[$edge] ?? INF);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($alt &lt; $dist[$neighbor]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$neighbor] = $alt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev[$neighbor] = $minVertex;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$neighbor] = $alt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['distances' =&gt; $dist, 'previous' =&gt; $prev];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>2. Bellman-Ford Algorithm</strong></p><p>The Bellman-Ford algorithm is more versatile than Dijkstra’s because it can handle graphs with negative weight edges. It runs in <strong>O(VE)</strong> time complexity and can also detect negative weight cycles.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $adjList = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $weights = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2, int $weight): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex1,$vertex2"] = $weight;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function bellmanFord(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$start] = 0;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Initialize distances for all other vertices</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($vertex !== $start) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$vertex] = INF;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Relax edges repeatedly</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vertices = array_keys($this→adjList);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for ($i = 0; $i &lt; count($vertices) - 1; $i++) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($edges as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$vertex,$neighbor";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$alt = $dist[$vertex] + ($this→weights[$edge] ?? INF);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($alt &lt; $dist[$neighbor]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$neighbor] = $alt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Check for negative weight cycles</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($edges as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$vertex,$neighbor";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($dist[$vertex] + ($this→weights[$edge] ?? INF) &lt; $dist[$neighbor]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception("Graph contains negative weight cycle");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $dist;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><h2>Conclusion</h2><p>Graphs are an essential part of computer science and are widely used in many fields, such as networking, routing, and data analysis. Understanding the core graph algorithms, such as traversals (DFS and BFS) and shortest path algorithms (Dijkstra's and Bellman-Ford), is critical for solving a wide range of problems.</p><p>With PHP 8’s modern features and efficient object-oriented practices, you can easily implement and optimize these algorithms for your own projects. Understanding these techniques can help you build smarter, more efficient <a href="/article/surviving-corporate-ladder-how-software-engineers-can-manage-workplace-politics" title="Read about Surviving The Corporate Ladder How Software Engineers Can Manage Workplace Politics">software</a> that deals with complex data <a href="/article/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">relationships</a>.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+</div>
+      
+
+<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
+      <h3 class="field__label field--tags__label">Tags</h3>
+    <ul class="links field__items field--tags__items">
+          <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
+          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/php" hreflang="en">Php</a></li>
+      </ul>
+</div>
+
+  </div>
+  </article>
+
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-powered" class="block block-system block-system-powered-by-block">
+  
+    
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewBox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"/>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3885","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
+<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+
+  </body>
+</html>

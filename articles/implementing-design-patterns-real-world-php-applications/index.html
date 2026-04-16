@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://peoplesblog.co.in/articles/implementing-design-patterns-real-world-php-applications" />
+<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Implementing Design Patterns in Real-World PHP Applications" />
+<meta property="og:description" content="Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability" />
+<meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/implementing-design-patterns-in-real-world-php-applications.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability" />
+<meta name="twitter:title" content="Implementing Design Patterns in Real-World PHP Applications" />
+<meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/implementing-design-patterns-in-real-world-php-applications.webp" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Implementing Design Patterns in Real-World PHP Applications",
+            "description": "Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-design-patterns-in-real-world-php-applications.webp"
+            },
+            "datePublished": "2024-10-27T20:39:00+0530",
+            "dateModified": "2026-04-16T08:54:00+0530",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Peoples BLOG",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://peoplesblog.co.in/logo.png"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://peoplesblog.co.in/articles/implementing-design-patterns-real-world-php-applications"
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        },
+        {
+            "@type": "WebSite",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
+
+    <title>Implementing Design Patterns in Real-World PHP Applications</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+
+    
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+</noscript>
+  </head>
+  <body class="path-node page-node-type-article">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-olivero-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="site-branding__inner">
+          <a href="/" rel="home" class="site-branding__logo">
+        <img src="/sites/default/files/logo.png" alt="Home" fetchpriority="high"/>
+      </a>
+          </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav  id="block-olivero-main-menu" class="primary-nav block block-menu navigation menu--main" aria-labelledby="block-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-olivero-main-menu-menu">Main navigation</h2>
+  
+        
+
+
+          
+        
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="block__content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          <a href="/articles" class="breadcrumb__link">Articles</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          Implementing Design Patterns In Real-World PHP Applications
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main role="main">
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-page-title" class="block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">
+<span>Implementing Design Patterns in Real-World PHP Applications</span>
+</h1>
+
+
+  
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article data-history-node-id="3925" class="node node--type-article grid-full node--promoted node--view-mode-full">
+  <header class="layout--content-narrow">
+    
+          
+          <div class="node__meta">
+              <span>
+          By <span class="node__author">
+<span><span>Karthik Kumar D K</span></span>
+</span>, 27 October 2024
+        </span>
+        
+      </div>
+      </header>
+  <div class="node__content layout--content-narrow">
+        
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/implementing-design-patterns-in-real-world-php-applications.webp.avif?itok=_iSssWFq" width="788" height="443" alt="Implementing Design Patterns in Real-World PHP Applications" />
+
+
+</div>
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.</p><p>In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP <a href="/article/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a> using PHP 8.</p><h2>1. Factory Pattern</h2><p><strong>Scenario</strong></p><p>Imagine you’re developing an e-commerce application where different types of payment methods are available: Credit Card, PayPal and Bitcoin. Instead of <a href="/article/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">creating</a> each payment object directly, you can use the Factory Pattern.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Define the Payment Interface</p><p><code>interface PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount);</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create Concrete Payment Classes</p><p><code>class CreditCardPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a credit card payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class PayPalPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a PayPal payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class BitcoinPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a Bitcoin payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Implement the Factory Class</p><p><code>class PaymentFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function create(string $type): PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'credit_card':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new CreditCardPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'paypal':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new PayPalPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'bitcoin':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new BitcoinPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown payment method");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4:</strong> Usage Example</p><p><code>$paymentMethod = PaymentFactory::create('paypal');</code></p><p><code>echo $paymentMethod→processPayment(100.00); // Outputs: Processing a PayPal payment of $100.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Decoupling</strong>: You decouple the client code from the concrete payment classes.</li> <li><strong>Scalability</strong>: Adding new payment methods becomes easier, as you only need to create a new class and update the factory.</li> </ul><h2>2. Singleton Pattern</h2><p><strong>Scenario</strong></p><p>Let’s consider a logging mechanism for your application. You want to ensure that only one instance of the logger exists to avoid writing to multiple files or connections.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Create the Logger Class</p><p><code>class Logger {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Logger $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Private constructor to prevent instantiation</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Logger {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Logger();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function log(string $message) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// In a real application, you'd write to a file or database</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[LOG] " . $message . "\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Usage Example</p><p><code>$logger = Logger::getInstance();</code></p><p><code>$logger→log("This is a log message."); // Outputs: [LOG] This is a log message.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Controlled Access</strong>: Only one instance is created, which saves resources.</li> <li><strong>Global Point of Access</strong>: The logger can be accessed from anywhere in the application.</li> </ul><h2>3. Dependency Injection</h2><p><strong>Scenario</strong></p><p>In a web application, you might have a service that retrieves user information from a database. You want to make it easy to test this service by allowing it to receive its database dependency through a constructor.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Create the Database Class</p><p><code>class Database {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function connect() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Simulate a database connection</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Database connected";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create the User Service Class</p><p><code>class UserService {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private Database $database;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct(Database $database) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→database = $database;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function getUser(int $id) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Simulate fetching a user</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→database→connect() . " - User with ID: $id";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Usage Example</p><p><code>$database = new Database();</code></p><p><code>$userService = new UserService($database);</code></p><p><code>echo $userService→getUser(1); // Outputs: Database connected - User with ID: 1</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Loose Coupling</strong>: UserService is not tightly coupled with the Database class.</li> <li><strong>Testability</strong>: You can easily mock the Database dependency in unit tests.</li> </ul><h2>Conclusion</h2><p>Implementing design patterns in PHP applications can significantly enhance code <a href="/article/vedic-sanskrit-language-structure-linguistic-significance" title="Read about Vedic Sanskrit Language And Structure">structure</a> and maintainability. The Factory Pattern allows for flexible object creation, the Singleton Pattern ensures controlled access to shared resources and Dependency Injection promotes loose coupling and testability.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+</div>
+      
+
+<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
+      <h3 class="field__label field--tags__label">Tags</h3>
+    <ul class="links field__items field--tags__items">
+          <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
+          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/php" hreflang="en">Php</a></li>
+      </ul>
+</div>
+
+  </div>
+  </article>
+
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-powered" class="block block-system block-system-powered-by-block">
+  
+    
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewBox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"/>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3925","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
+<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+
+  </body>
+</html>

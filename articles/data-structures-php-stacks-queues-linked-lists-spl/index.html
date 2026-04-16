@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="Learn how to implement fundamental data structures in PHP using stacks, queues, linked lists, and SPL classes. A developer’s guide" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://peoplesblog.co.in/articles/data-structures-php-stacks-queues-linked-lists-spl" />
+<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL" />
+<meta property="og:description" content="Learn how to implement fundamental data structures in PHP using stacks, queues, linked lists, and SPL classes. A developer’s guide" />
+<meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Learn how to implement fundamental data structures in PHP using stacks, queues, linked lists, and SPL classes. A developer’s guide" />
+<meta name="twitter:title" content="Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL" />
+<meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.webp" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Data Structures in PHP: Stacks, Queues, Linked Lists \u0026 SPL",
+            "description": "Learn how to implement fundamental data structures in PHP using stacks, queues, linked lists, and SPL classes. A developer’s guide",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://peoplesblog.co.in/sites/default/files/banners/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.webp"
+            },
+            "datePublished": "2025-11-23T10:26:00+0530",
+            "dateModified": "2026-04-16T08:54:00+0530",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Peoples BLOG",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://peoplesblog.co.in/logo.png"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://peoplesblog.co.in/articles/data-structures-php-stacks-queues-linked-lists-spl"
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        },
+        {
+            "@type": "WebSite",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
+
+    <title>Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+
+    
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+</noscript>
+  </head>
+  <body class="path-node page-node-type-article">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-olivero-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="site-branding__inner">
+          <a href="/" rel="home" class="site-branding__logo">
+        <img src="/sites/default/files/logo.png" alt="Home" fetchpriority="high"/>
+      </a>
+          </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav  id="block-olivero-main-menu" class="primary-nav block block-menu navigation menu--main" aria-labelledby="block-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-olivero-main-menu-menu">Main navigation</h2>
+  
+        
+
+
+          
+        
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="block__content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          <a href="/articles" class="breadcrumb__link">Articles</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          Data Structures In PHP: Stacks, Queues, Linked Lists &amp; SPL
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main role="main">
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-page-title" class="block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">
+<span>Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL</span>
+</h1>
+
+
+  
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article data-history-node-id="3890" class="node node--type-article grid-full node--promoted node--view-mode-full">
+  <header class="layout--content-narrow">
+    
+          
+          <div class="node__meta">
+              <span>
+          By <span class="node__author">
+<span><span>Karthik Kumar D K</span></span>
+</span>, 23 November 2025
+        </span>
+        
+      </div>
+      </header>
+  <div class="node__content layout--content-narrow">
+        
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.webp.avif?itok=jN3FRXSY" width="788" height="443" alt="Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL" />
+
+
+</div>
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>Data structures are an integral part of programming, offering <a href="/article/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong> will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high performance and easy integration into your projects.</p><p>In this article, we'll explore how to implement basic data structures in PHP 8 and how to leverage PHP’s SPL classes for enhanced functionality.</p><h2>1. Introduction to Data Structures in PHP</h2><ul> <li>Data structures are ways of organizing and storing data so that they can be accessed and modified efficiently.</li> <li>By understanding the strengths and weaknesses of various data structures, developers can optimize their code for performance and readability.</li> </ul><p>In PHP 8, developers can choose between building their own data structures or using the built-in SPL classes.</p><p>Let's start with manual implementations for three common data structures: <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong>.</p><h2>2. <a href="/article/implementing-notification-system-using-observer-pattern-php" title="Read about Implementing A Notification System Using The Observer Pattern In Php">Implementing</a> Stacks in PHP</h2><p>A <strong>stack</strong> is a simple data structure that follows the <strong>Last In, First Out (LIFO)</strong> principle. The last element pushed onto the stack is the first to be popped out.</p><p><strong>Stack Operations:</strong></p><ul> <li><tt>push()</tt>: Add an element to the top of the stack.</li> <li><tt>pop()</tt>: Remove and return the top element.</li> <li><tt>peek()</tt>: View the top element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the stack is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Stack {</code></p><p><code>    private $stack = [];</code></p><p><code>    public function push($item) {</code></p><p><code>        array_push($this→stack, $item);</code></p><p><code>    }</code></p><p><code>    public function pop() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_pop($this→stack);</code></p><p><code>        }</code></p><p><code>        return null; // Stack is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return end($this→stack);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→stack);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$stack = new Stack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→peek(); // 1</code></p><p><strong>SPL Stack Implementation:</strong></p><p>PHP offers a built-in stack class <tt>SplStack</tt> in the SPL library:</p><p><code>$stack = new SplStack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→top(); // 1</code></p><h2>3. Implementing Queues in PHP</h2><p>A <strong>queue</strong> is a data structure that follows the <strong>First In, First Out (FIFO)</strong> principle. The first element added to the queue will be the first to be removed.</p><p><strong>Queue Operations:</strong></p><ul> <li><tt>enqueue()</tt>: Add an element to the back of the queue.</li> <li><tt>dequeue()</tt>: Remove and return the front element.</li> <li><tt>peek()</tt>: View the front element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the queue is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Queue {</code></p><p><code>    private $queue = [];</code></p><p><code>    public function enqueue($item) {</code></p><p><code>        array_push($this→queue, $item);</code></p><p><code>    }</code></p><p><code>    public function dequeue() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_shift($this→queue);</code></p><p><code>        }</code></p><p><code>        return null; // Queue is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return reset($this→queue);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→queue);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$queue = new Queue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p><p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→peek(); // 2</code></p><p><strong>SPL Queue Implementation:</strong></p><p>PHP’s <tt>SplQueue</tt> class implements a queue with optimized methods:</p><p><code>$queue = new SplQueue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p><div class="google-ad" id="google-ad-1"> <p>Google Ad 1</p> </div><p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→bottom(); // 2</code></p><h2>4. Implementing Linked Lists in PHP</h2><p>A <strong>linked list</strong> is a collection of nodes, where each node contains data and a <a href="/article/quick-reference-code-reviews-drupal-application" title="Read about Quick Reference Of Code Reviews For Drupal Application">reference</a> to the next node. Linked lists can be singly or doubly linked, depending on whether nodes have a reference to the next node only or both the next and previous nodes.</p><p><strong>Linked List Operations:</strong></p><ul> <li><tt>insert()</tt>: Add a new node.</li> <li><tt>delete()</tt>: Remove a node.</li> <li><tt>traverse()</tt>: Iterate over the nodes.</li> </ul><p><strong>Manual Implementation (Singly Linked List):</strong></p><p><code>class Node {</code></p><p><code>    public $data;</code></p><p><code>    public $next;</code></p><p><code>    public function __construct($data) {</code></p><p><code>        $this→data = $data;</code></p><p><code>        $this→next = null;</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class LinkedList {</code></p><p><code>    private $head;</code></p><p><code>    public function __construct() {</code></p><p><code>        $this→head = null;</code></p><p><code>    }</code></p><p><code>    public function insert($data) {</code></p><p><code>        $newNode = new Node($data);</code></p><p><code>        $newNode→next = $this→head;</code></p><p><code>        $this→head = $newNode;</code></p><p><code>    }</code></p><p><code>    public function delete($data) {</code></p><p><code>        $current = $this→head;</code></p><p><code>        $previous = null;</code></p><p><code>        while ($current !== null &amp;&amp; $current→data !== $data) {</code></p><p><code>            $previous = $current;</code></p><p><code>            $current = $current→next;</code></p><p><code>        }</code></p><p><code>        if ($current !== null) {</code></p><p><code>            if ($previous === null) {</code></p><p><code>                $this→head = $current→next;</code></p><p><code>            } else {</code></p><p><code>                $previous→next = $current→next;</code></p><p><code>            }</code></p><p><code>        }</code></p><p><code>    }</code></p><p><code>    public function traverse() {</code></p><p><code>        $current = $this→head;</code></p><p><code>        while ($current !== null) {</code></p><p><code>            echo $current→data . ' ';</code></p><p><code>            $current = $current→next;</code></p><p><code>        }</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$list = new LinkedList();</code></p><p><code>$list→insert(1);</code></p><p><code>$list→insert(2);</code></p><p><code>$list→insert(3);</code></p><p><code>$list→traverse(); // 3 2 1</code></p><p><code>$list→delete(2);</code></p><p><code>$list→traverse(); // 3 1</code></p><p><strong>SPL Doubly Linked List Implementation:</strong></p><p>The <tt>SplDoublyLinkedList</tt> class in PHP provides an easy way to manage linked lists with both forward and backward traversal:</p><p><code>$list = new SplDoublyLinkedList();</code></p><p><code>$list→push(1);</code></p><p><code>$list→push(2);</code></p><p><code>$list→push(3);</code></p><p><code>$list→rewind(); // Reset pointer to the first element</code></p><p><code>echo $list→current(); // 1</code></p><h2>5. Using PHP's SPL Data Structures</h2><p>PHP’s SPL extension provides several useful built-in data structures that are highly optimized for performance. Let’s take a quick look at the most popular SPL classes for handling data structures.</p><ul> <li><tt>SplStack</tt><strong>:</strong> PHP’s built-in stack class that provides methods like <tt>push()</tt>, <tt>pop()</tt>, and <tt>top()</tt>.</li> <li><tt>SplQueue</tt><strong>:</strong> An optimized queue implementation with methods such as <tt>enqueue()</tt>, <tt>dequeue()</tt>, and <tt>bottom()</tt>.</li> <li><tt>SplDoublyLinkedList</tt><strong>:</strong> A doubly linked list class that supports both forward and backward traversal using methods like <tt>push()</tt>, <tt>pop()</tt>, <tt>rewind()</tt>, and <tt>current()</tt>.</li> <li><tt>SplHeap</tt><strong>:</strong> A heap class useful for creating priority queues.</li> <li><tt>SplFixedArray</tt><strong>:</strong> A fixed-size array class that can be used for efficient memory management when the size of the array is known in advance.</li> </ul><h2>6. Conclusion</h2><p>In PHP 8, understanding and utilizing common data structures like <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong> is vital for writing efficient and scalable code. While you can implement these structures manually for more flexibility, PHP’s <strong>SPL classes</strong> provide highly optimized and easy-to-use alternatives that save time and effort.</p><p>By mastering these data structures and knowing when to use each one, you can significantly improve the performance and maintainability of your PHP applications. Whether you build your own or leverage SPL, the right data structure can make all the difference in solving problems efficiently.</p><p>By implementing these data structures and understanding their use cases, you’ll become more adept at solving complex problems with PHP. Whether you're building a small <a href="/article/security-checklist-drupal-application" title="Read about Security Checklist For Drupal Application">application</a> or a large-scale system, these foundational concepts will serve you well in your development journey.</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
+</div>
+      
+
+<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
+      <h3 class="field__label field--tags__label">Tags</h3>
+    <ul class="links field__items field--tags__items">
+          <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
+          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/php" hreflang="en">Php</a></li>
+      </ul>
+</div>
+
+  </div>
+  </article>
+
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-powered" class="block block-system block-system-powered-by-block">
+  
+    
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewBox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"/>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3890","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
+<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+
+  </body>
+</html>

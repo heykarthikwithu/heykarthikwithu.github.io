@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="When working with SharePoint, a robust collaboration and document management platform, it&#039;s important to understand the different ways you can organize and manage your files" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases" />
+<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases" />
+<meta property="og:description" content="When working with SharePoint, a robust collaboration and document management platform, it&#039;s important to understand the different ways you can organize and manage your files" />
+<meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="When working with SharePoint, a robust collaboration and document management platform, it&#039;s important to understand the different ways you can organize and manage your files" />
+<meta name="twitter:title" content="Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases" />
+<meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.webp" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases",
+            "description": "When working with SharePoint, a robust collaboration and document management platform, it\u0027s important to understand the different ways you can organize and manage your files",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://peoplesblog.co.in/sites/default/files/banners/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.webp"
+            },
+            "datePublished": "2024-11-29T07:12:00+0530",
+            "dateModified": "2026-04-16T08:54:00+0530",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Peoples BLOG",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://peoplesblog.co.in/logo.png"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://peoplesblog.co.in/articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases"
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        },
+        {
+            "@type": "WebSite",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
+
+    <title>Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+
+    
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+</noscript>
+  </head>
+  <body class="path-node page-node-type-article">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-olivero-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="site-branding__inner">
+          <a href="/" rel="home" class="site-branding__logo">
+        <img src="/sites/default/files/logo.png" alt="Home" fetchpriority="high"/>
+      </a>
+          </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav  id="block-olivero-main-menu" class="primary-nav block block-menu navigation menu--main" aria-labelledby="block-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-olivero-main-menu-menu">Main navigation</h2>
+  
+        
+
+
+          
+        
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="block__content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          <a href="/articles" class="breadcrumb__link">Articles</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          Understanding SharePoint Documents Vs. Document Sets: Key Differences and Use Cases
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main role="main">
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-page-title" class="block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">
+<span>Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases</span>
+</h1>
+
+
+  
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article data-history-node-id="3880" class="node node--type-article grid-full node--promoted node--view-mode-full">
+  <header class="layout--content-narrow">
+    
+          
+          <div class="node__meta">
+              <span>
+          By <span class="node__author">
+<span><span>Karthik Kumar D K</span></span>
+</span>, 29 November 2024
+        </span>
+        
+      </div>
+      </header>
+  <div class="node__content layout--content-narrow">
+        
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases.webp.avif?itok=Q1Zo3-rY" width="788" height="443" alt="Understanding SharePoint Documents vs. Document Sets: Key Differences and Use Cases" />
+
+
+</div>
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>When working with <strong>SharePoint</strong>, a robust collaboration and document management platform, it's important to understand the different ways you can organize and manage your files. Two key features for managing files in SharePoint are <strong>Documents</strong> and <strong>Document Sets</strong>. Although they may seem similar at first glance, they serve different purposes and offer distinct features to help you manage your content more effectively.</p><p>In this article, we will break down the differences between SharePoint <strong>Documents</strong> and <strong>Document Sets</strong>, explore their unique features, and discuss when to use each one.</p><h2>What is a SharePoint Document?</h2><p>In SharePoint, a <strong>Document</strong> is a single file stored within a document library. It could be any type of file: a Word document, Excel sheet, PowerPoint presentation, PDF, or any other file format that SharePoint supports. Documents are the fundamental unit of content within SharePoint.</p><p><strong>Key Features of a Document:</strong></p><ul> <li><strong>Single File</strong>: A document is an individual file stored in a document library, with no grouping involved.</li> <li><strong>Metadata</strong>: Each document can have associated metadata, such as title, author, creation date, and tags, which makes it easier to organize, search, and retrieve files.</li> <li><strong>Versioning</strong>: SharePoint supports versioning for documents, which allows you to track changes over time and revert to previous versions when needed.</li> <li><strong>Check-In/Check-Out</strong>: Documents can be checked in or out, ensuring that only one person edits the document at a time, preventing conflicting changes.</li> <li><strong>Security</strong>: You can set specific permissions for each document, controlling who can view, edit, or delete it.</li> <li><strong>Sharing</strong>: Documents can be shared with others through direct links, with fine-grained control over permissions to determine who has access to the file.</li> </ul><p><strong>When to Use Documents:</strong></p><ul> <li>When you are working with individual files that do not need to be grouped with other related files.</li> <li>When each file needs its own set of metadata and versioning.</li> <li>If you are dealing with files that require separate management, security, or sharing permissions</li> </ul><h2>What is a SharePoint Document Set?</h2><p>A <strong>Document Set</strong> is a special type of container in SharePoint that allows you to group multiple related documents together. It provides a way to manage and organize sets of documents that share common metadata, versioning, and security settings. While it may seem similar to a folder, a Document Set is more powerful and flexible because it allows you to manage multiple documents as a unit.</p><p><strong>Key Features of a Document Set:</strong></p><ul> <li><strong>Grouping of Documents</strong>:  <ul> <li>A Document Set can contain multiple documents that are logically related to each other.</li> <li>For example, a project folder might contain a contract, meeting notes, design documents, and other related files.</li> </ul> </li> <li><strong>Shared Metadata</strong>: <ul> <li>One of the most powerful features of Document Sets is the ability to define metadata that applies to all documents within the set.</li> <li>For example, you can set a "Project Name" or "Client" field that is consistent across all documents in the set.</li> </ul> </li> <li><strong>Versioning for the Set</strong>: <ul> <li>Document Sets can have versioning enabled, allowing you to track changes made to the entire set of documents.</li> <li>In addition, each individual document within the set can have its own version history.</li> </ul> </li> <li><strong>Content Types</strong>: <ul> <li>Document Sets are often associated with content types, which define the <a href="/article/vedic-sanskrit-language-structure-linguistic-significance" title="Read about Vedic Sanskrit Language And Structure">structure</a> and metadata for the set.</li> <li>For instance, a "Contract" content type might include specific fields like "Contract Number," "Start Date," and "End Date."</li> </ul> </li> <li><strong>Document Set Home Page</strong>: Document Sets can have a home page that provides an overview of the documents within the set, including their metadata and any relevant links or <a href="/article/technical-information-know-about-solar-energy-setup-your-home" title="Read about Technical Information To Know About The Solar Energy Setup For Your Home">information</a>.</li> <li><strong>Permissions</strong>: <ul> <li>Document Sets inherit permissions from the parent library but can also be configured with unique permissions.</li> <li>This allows you to control access to the entire set of documents as a unit.</li> </ul> </li> </ul><p><strong>When to Use Document Sets:</strong></p><ul> <li>When you need to organize multiple related documents, such as project files, client folders, or contracts.</li> <li>When you want to apply shared metadata across a group of documents.</li> <li>If you need to manage multiple documents together, including versioning and workflows.</li> <li>When you require a more structured way of managing collections of documents with consistent metadata and permissions</li> </ul><h2>Key Differences Between a SharePoint Document and a Document Set</h2><div> <table cellspacing="0"> <tbody> <tr> <td> <p><strong>Feature</strong></p> </td> <td> <p><strong>Document</strong></p> </td> <td> <p><strong>Document Set</strong></p> </td> </tr> <tr> <td> <p><strong>Basic Concept</strong></p> </td> <td> <p>A single file stored in a document library.</p> </td> <td> <p>A container that groups related documents together.</p> </td> </tr> <tr> <td> <p><strong>Metadata</strong></p> </td> <td> <p>Each document has its own metadata.</p> </td> <td> <p>Shared metadata for all documents within the set.</p> </td> </tr> <tr> <td> <p><strong>Versioning</strong></p> </td> <td> <p>Versioning is enabled per document.</p> </td> <td> <p>Versioning can be enabled for the entire set of documents.</p> </td> </tr> <tr> <td> <p><strong>Permissions</strong></p><div class="google-ad" id="google-ad-1"><p>Google Ad 1</p></div> </td> <td> <p>Permissions are set individually for each document.</p> </td> <td> <p>Inherits permissions from the parent library or can have unique permissions for the entire set.</p> </td> </tr> <tr> <td> <p><strong>Content Types</strong></p> </td> <td> <p>Documents can be based on content types (optional).</p> </td> <td> <p>Document Sets are tied to content types and can have custom content types.</p> </td> </tr> <tr> <td> <p><strong>Document Management</strong></p> </td> <td> <p>Documents are managed individually.</p> </td> <td> <p>Documents in the set are managed together.</p> </td> </tr> <tr> <td> <p><strong>Collaboration</strong></p> </td> <td> <p>Collaboration occurs on individual documents.</p> </td> <td> <p>Collaboration occurs across all documents in the set.</p> </td> </tr> <tr> <td> <p><strong>Use Case</strong></p> </td> <td> <p>Ideal for single files.</p> </td> <td> <p>Ideal for grouping related documents, such as project or case folders.</p> </td> </tr> </tbody> </table> </div><h2>When to Choose One Over the Other?</h2><p>The decision to use a <strong>Document</strong> or a <strong>Document Set</strong> depends largely on your organizational needs and how you plan to manage your content.</p><p><strong>Use Documents:</strong></p><ul> <li>When you only need to store and manage individual files without any need for grouping.</li> <li>When each document has distinct metadata and versioning requirements.</li> <li>If you're working with files that don't need to be organized together or tracked as a unit.</li> </ul><p><strong>Use Document Sets:</strong></p><ul> <li>When you need to group multiple documents that are related to a specific project, task, or client.</li> <li>If you want to apply common metadata (e.g., project name, client) across all documents in the set.</li> <li>If you want to manage and track a collection of documents together, including versioning and permissions.</li> </ul><h2>Example Use Cases for Document Sets:</h2><ol> <li><strong>Project Management</strong>:  <ol> <li>A Document Set could be used to group all files related to a project, such as project plans, contracts, designs, and meeting notes.</li> <li>This allows for easy management of all project-related documents with shared metadata like project name, client, and status.</li> </ol> </li> <li><strong>Legal or Compliance</strong>: <ol> <li>In a legal environment, a Document Set can group all documents related to a specific case, including contracts, legal briefs, and correspondence.</li> <li>The shared metadata might include case number, client, or jurisdiction, ensuring consistent categorization.</li> </ol> </li> <li><strong>Sales and Marketing</strong>: <ol> <li>A Document Set might be used to organize all marketing materials for a campaign, including project plans, creative assets, reports, and presentations.</li> <li>All documents in the set would share metadata like campaign name or client.</li> </ol> </li> </ol><h2>Conclusion</h2><p>Both <strong>Documents</strong> and <strong>Document Sets</strong> are essential tools within SharePoint for managing files, but they serve different purposes. <strong>Documents</strong> are perfect for managing individual files that don't need to be grouped with others, while <strong>Document Sets</strong> are designed for grouping related documents that share common metadata and need to be managed together. By <a href="/article/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">understanding</a> the differences between the two and knowing when to use each, you can ensure that your content is well-organized, easily accessible, and efficiently managed within SharePoint.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+</div>
+      
+
+<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
+      <h3 class="field__label field--tags__label">Tags</h3>
+    <ul class="links field__items field--tags__items">
+          <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
+          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/software" hreflang="en">Software</a></li>
+      </ul>
+</div>
+
+  </div>
+  </article>
+
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-powered" class="block block-system block-system-powered-by-block">
+  
+    
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewBox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"/>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3880","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
+<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://peoplesblog.co.in/articles/introduction-caching-and-setting-redis-php-8" />
+<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Introduction to Caching and Setting Up Redis in PHP 8" />
+<meta property="og:description" content="Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer" />
+<meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/introduction-to-caching-and-setting-up-redis-in-php-8.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer" />
+<meta name="twitter:title" content="Introduction to Caching and Setting Up Redis in PHP 8" />
+<meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/introduction-to-caching-and-setting-up-redis-in-php-8.webp" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Introduction to Caching and Setting Up Redis in PHP 8",
+            "description": "Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://peoplesblog.co.in/sites/default/files/banners/introduction-to-caching-and-setting-up-redis-in-php-8.webp"
+            },
+            "datePublished": "2024-11-08T10:01:00+0530",
+            "dateModified": "2026-04-16T08:54:00+0530",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Peoples BLOG",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://peoplesblog.co.in/logo.png"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://peoplesblog.co.in/articles/introduction-caching-and-setting-redis-php-8"
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        },
+        {
+            "@type": "WebSite",
+            "name": "Peoples BLOG",
+            "url": "https://peoplesblog.co.in"
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
+
+    <title>Introduction to Caching and Setting Up Redis in PHP 8</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+
+    
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+</noscript>
+  </head>
+  <body class="path-node page-node-type-article">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-olivero-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="site-branding__inner">
+          <a href="/" rel="home" class="site-branding__logo">
+        <img src="/sites/default/files/logo.png" alt="Home" fetchpriority="high"/>
+      </a>
+          </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav  id="block-olivero-main-menu" class="primary-nav block block-menu navigation menu--main" aria-labelledby="block-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-olivero-main-menu-menu">Main navigation</h2>
+  
+        
+
+
+          
+        
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="block__content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          <a href="/articles" class="breadcrumb__link">Articles</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          Introduction To Caching and Setting Up Redis In PHP 8
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main role="main">
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-page-title" class="block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">
+<span>Introduction to Caching and Setting Up Redis in PHP 8</span>
+</h1>
+
+
+  
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article data-history-node-id="3888" class="node node--type-article grid-full node--promoted node--view-mode-full">
+  <header class="layout--content-narrow">
+    
+          
+          <div class="node__meta">
+              <span>
+          By <span class="node__author">
+<span><span>Karthik Kumar D K</span></span>
+</span>, 8 November 2024
+        </span>
+        
+      </div>
+      </header>
+  <div class="node__content layout--content-narrow">
+        
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/introduction-to-caching-and-setting-up-redis-in-php-8.webp.avif?itok=c7S2w5S6" width="788" height="443" alt="Introduction to Caching and Setting Up Redis in PHP 8" />
+
+
+</div>
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer. In PHP 8, caching can significantly reduce load times and improve the overall user experience of web applications.</p><p>This article will provide an overview of caching, its benefits, and common use cases.</p><h2>What is Caching?</h2><p>Caching involves storing copies of files, data, or results of expensive computations in a cache—typically a fast-access memory storage. When a request for data is made, the <a href="/article/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">application</a> first checks the cache to see if the data is available. If found, this is known as a <strong>cache hit</strong>; if not, the application retrieves the data from the original source (like a database or an API) and stores it in the cache for future requests.</p><h2>Benefits of Caching</h2><ul> <li><strong>Improved Performance</strong>: Caching dramatically speeds up data retrieval. By serving requests from memory rather than fetching them from slower data sources, applications can provide faster response times, leading to a smoother user experience.</li> <li><strong>Reduced Load on Data Sources</strong>: <ul> <li>By caching data, you decrease the frequency of requests sent to databases or external APIs.</li> <li>This reduction in load can prevent bottlenecks, especially during peak traffic periods, and improves overall system reliability.</li> </ul> </li> <li><strong>Cost Efficiency</strong>: For cloud-based services, caching can reduce operational costs by minimizing the number of read operations on databases, which are often charged based on usage.</li> <li><strong>Scalability</strong>: <ul> <li>Caching allows applications to handle a higher number of concurrent users and requests.</li> <li>This scalability is crucial for applications experiencing rapid growth or high traffic.</li> </ul> </li> <li><strong>Enhanced User Experience</strong>: <ul> <li>Faster response times directly correlate with better user experiences.</li> <li>Users are less likely to abandon applications that respond quickly, which can lead to higher engagement and satisfaction.</li> </ul> </li> </ul><h2>Common Use Cases for Caching</h2><ul> <li><strong>Web Application Data</strong>: Caching frequently accessed data, such as user sessions or profile information, can improve the performance of web applications, allowing them to respond quickly to user requests.</li> <li><strong>API Responses</strong>: In scenarios where applications consume external APIs, caching the responses can reduce latency and API call costs. For example, a news application can cache articles to serve users faster.</li> <li><strong>Database Query Results</strong>: <ul> <li>By caching the results of common database queries, applications can reduce the load on databases and decrease the time taken to generate responses.</li> <li>This is particularly effective for read-heavy applications</li> </ul> </li> <li><strong>Static Content</strong>: <ul> <li>Static assets like images, stylesheets, and scripts are often cached to enhance website performance.</li> <li>Caching these assets reduces the time it takes to load pages.</li> </ul> </li> <li><strong>Machine Learning Predictions</strong>: In applications utilizing machine learning models, caching the predictions can save computation time and resources, allowing for quicker responses in scenarios like real-time data processing.</li> </ul><p>Caching is an essential technique in modern web development, particularly in PHP 8 applications. By <a href="/article/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases" title="Read about Understanding Sharepoint Documents Vs Document Sets Key Differences And Use Cases">understanding</a> the benefits and use cases of caching, developers can implement effective caching <a href="/article/communication-and-self-reflection-strategies" title="Read about Communication And Self Reflection Strategies">strategies</a> that improve performance, reduce costs, and enhance user experiences. As applications continue to scale and evolve, caching will remain a vital component of efficient software architecture.</p><h2>Setting Up Redis in PHP 8 with DDEV</h2><p>Redis is a powerful in-memory data structure store commonly used as a caching layer, message broker, and for session <a href="/article/configuration-management-quicksilver-pantheon" title="Read about Configuration Management Via Quicksilver On Pantheon">management</a>. Integrating Redis with PHP 8 can significantly enhance application performance by reducing data retrieval times and offloading work from your primary database. In this article, we'll walk through the steps to set up Redis in PHP 8.</p><p>By leveraging DDEV, you can easily integrate Redis into your PHP 8 applications. In this article, we’ll go through the steps to set up Redis in a DDEV environment.</p><h2>Prerequisites</h2><p>Before you begin, ensure you have the following installed:</p><ul> <li>DDEV: Make sure you have DDEV installed on your machine. You can follow the official installation guide if you haven't installed it yet.</li> <li>PHP 8: Ensure your DDEV project is configured to use PHP 8.</li> </ul><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal and run the following commands:</p><p><code>ddev config</code></p><p>Follow the prompts to set up your project. Once configured, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, you can use the ddev command:</p><p>ddev add-service redis</p><p>This command will automatically configure Redis for your project, If not added, alternatively you can setup using below steps</p><ol> <li>Under the <code>.ddev</code> folder, create a file with the name <code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file <code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run <code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>After adding Redis, you can connect to it using the hostname provided by DDEV, typically redis within your DDEV environment. You can also access the Redis CLI using:</p><p><code>ddev ssh</code></p><p><code>redis-cli</code></p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><div class="google-ad" id="google-ad-1"><p>Google Ad 1</p></div><p>If you plan to use the Redis extension directly, you can install it through DDEV's environment. However, a popular alternative is to use predis/predis, which is a flexible Redis client for PHP.</p><p>Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p><p><strong>Step 5: Connecting to Redis in PHP</strong></p><p>Now that you have Redis and a client library set up, you can create a simple PHP script to interact with Redis. Create a new PHP file (e.g., <tt>redis-example.php</tt>) in your project’s web directory.</p><p><strong>Example Code</strong></p><p><code>require 'vendor/autoload.php';</code></p><p><code>use Predis\Client;</code></p><p><code>// Create a Redis client instance</code></p><p><code>$client = new Client(['host' =&gt; 'redis', 'port' =&gt; 6379]);</code></p><p><code>// Test the connection</code></p><p><code>try {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$client→ping();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Connected to Redis successfully!\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Set a value</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$client→set('key', 'Hello, Redis!');</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Get the value</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$value = $client→get('key');</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Value from Redis: $value\n"; // Outputs: Hello, Redis!&nbsp;&nbsp;&nbsp;&nbsp;</code></p><p><code>} catch (Exception $e) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Could not connect to Redis: " . $e→getMessage() . "\n";</code></p><p><code>}</code></p><p><strong>Step 6: Running Your PHP Script</strong></p><p>To run your PHP script, you can access it through your web browser at http://.ddev.site/redis-example.php or run it from the command line within the DDEV environment:</p><p><code>ddev exec php redis-example.php</code></p><p><strong>Step 7: Monitoring Redis</strong></p><p>You can monitor Redis directly from the command line within your DDEV environment. Use the Redis CLI to check the status and metrics:</p><p><code>ddev ssh</code></p><p><code>redis-cli info</code></p><p>This command provides insights into memory usage, connected clients, and more.</p><h2>Conclusion</h2><p>Setting up Redis in a PHP 8 application using DDEV is straightforward and efficient. By leveraging DDEV’s capabilities, you can easily integrate Redis into your development workflow, enabling faster data access and improved application performance.</p><p>With this article, you should be able to set up and utilize Redis in your PHP applications effectively.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+</div>
+      
+
+<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
+      <h3 class="field__label field--tags__label">Tags</h3>
+    <ul class="links field__items field--tags__items">
+          <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
+          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/php" hreflang="en">Php</a></li>
+      </ul>
+</div>
+
+  </div>
+  </article>
+
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-powered" class="block block-system block-system-powered-by-block">
+  
+    
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewBox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"/>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3888","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
+<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+
+  </body>
+</html>
