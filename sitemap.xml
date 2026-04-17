@@ -4,6 +4,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
  <url>
   <loc>https://peoplesblog.co.in/</loc>
+  <lastmod>2026-04-16T14:11:35+05:30</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
  </url>
@@ -10940,6 +10941,12 @@
    <image:loc>https://peoplesblog.co.in/sites/default/files/banners/what-are-recommended-servings-of-fruits-and-vegetables.webp</image:loc>
    <image:caption>What are recommended servings of fruits and vegetables?</image:caption>
   </image:image>
+ </url>
+ <url>
+  <loc>https://peoplesblog.co.in/homepage</loc>
+  <lastmod>2026-04-16T14:11:35+05:30</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
  </url>
  <url>
   <loc>https://peoplesblog.co.in/quick-read</loc>

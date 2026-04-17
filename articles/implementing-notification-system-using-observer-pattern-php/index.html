@@ -59,8 +59,11 @@
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
     <title>Implementing a Notification System Using the Observer Pattern in PHP</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOwyAMQy9E4UgolBRFDaQiWStuv25C_dl-YuXZlixMJ3YJhSUBL2qDqRUnEzc4qYCRtOXoVKGPx5rqDRLjQw-5sGNe0lgSy7o_hlLGBP35DYq6I8WtSzNseS5wKisBx3vFHjdCzmG7A3ChSkW_Sj2kYbM_uR_iP804q3GTXsEMu9OhhjUkUHQn4aXhe32V_GJ8A9M8a-A" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_yytCLxki_BKwjdM_qSX_7ddhmz9W77zaB0KH3HC2iOA.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOwyAMQy9E4UgolBRFDaQiWStuv25C_dl-YuXZlixMJ3YJhSUBL2qDqRUnEzc4qYCRtOXoVKGPx5rqDRLjQw-5sGNe0lgSy7o_hlLGBP35DYq6I8WtSzNseS5wKisBx3vFHjdCzmG7A3ChSkW_Sj2kYbM_uR_iP804q3GTXsEMu9OhhjUkUHQn4aXhe32V_GJ8A9M8a-A" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4zf1sJGuskY5fZwjNIxjr8Q3N-C6cd7pvwCz_uG3MPc.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOwyAMQy9E4UgolBRFDaQiWStuv25C_dl-YuXZlixMJ3YJhSUBL2qDqRUnEzc4qYCRtOXoVKGPx5rqDRLjQw-5sGNe0lgSy7o_hlLGBP35DYq6I8WtSzNseS5wKisBx3vFHjdCzmG7A3ChSkW_Sj2kYbM_uR_iP804q3GTXsEMu9OhhjUkUHQn4aXhe32V_GJ8A9M8a-A" />
 
     
     
@@ -68,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdmafp" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -224,8 +227,9 @@
   </div>
 
 
-                          <main role="main">
-                
+                          <div class="sidebar-grid grid-full">
+                <main role="main" class="site-main">
+                  
 
   <div class="region region--content-above grid-full layout--pass--content-medium">
     
@@ -244,7 +248,7 @@
 
   </div>
 
-                
+                  
 
   <div class="region region--content grid-full layout--pass--content-medium" id="content">
     
@@ -270,17 +274,15 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.webp.avif?itok=JwelrfDe" width="788" height="443" alt="Implementing a Notification System Using the Observer Pattern in PHP" />
-
-
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/implementing-notification-system-using-observer-pattern-php" hreflang="en"><img loading="eager" src="/sites/default/files/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.webp" width="788" height="443" alt="Implementing a Notification System Using the Observer Pattern in PHP" />
+</a>
 </div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>The Observer pattern is a powerful design pattern that promotes a one-to-many <a href="/article/water-pakistan-lifeline-dependency-geopolitical-control" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).</p><p>In this article, we'll explore how to implement a simple notification system using the Observer pattern in PHP 8.</p><h2>Understanding the Observer Pattern</h2><p>In the Observer pattern:</p><ul> <li><strong>Subject</strong>: The object that maintains a list of observers and notifies them of changes.</li> <li><strong>Observer</strong>: The object that wants to be notified of changes in the subject.</li> </ul><p><strong>Key Features:</strong></p><ul> <li>Loose coupling between the subject and observers.</li> <li>Dynamic subscription and unsubscription of observers.</li> <li>Supports multiple observers for a single subject.</li> </ul><h2>Implementing the Notification System</h2><p>Let’s build a notification system step by step.</p><p><strong>Step 1: Define the Observer Interface</strong></p><p>First, we need an interface that all observers will implement. This interface will define the method that observers must implement to receive notifications.</p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void;</code></p><p><code>}</code></p><p><strong>Step 2: Create the Subject Class</strong></p><p>Next, we implement the subject class. This class will manage the list of observers and provide methods to attach, detach, and notify observers.</p><p><code>class NotificationService {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers = array_filter($this→observers, fn($obs) =&gt; $obs !== $observer);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update($message);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3: Create Concrete Observer Classes</strong></p><p>Now, let’s create some concrete observer classes that implement the Observer interface. These classes will define what to do when they receive notifications.</p><p><code>class EmailNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Email Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class SmsNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "SMS Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class AppNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "App Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4: Putting It All Together</strong></p><p>Now, we can use our NotificationService along with the observer classes to send notifications.</p><p><code>// Create the notification service</code></p><p><code>$notificationService = new NotificationService();</code></p><p><code>// Create observers</code></p><p><code>$emailNotifier = new EmailNotifier();</code></p><p><code>$smsNotifier = new SmsNotifier();</code></p><p><code>$appNotifier = new AppNotifier();</code></p><p><code>// Attach observers</code></p><p><code>$notificationService→attach($emailNotifier);</code></p><p><code>$notificationService→attach($smsNotifier);</code></p><p><code>$notificationService→attach($appNotifier);</code></p><p><code>// Send notifications</code></p><p><code>$notificationService→notify("A new update is available!");</code></p><p><strong>Step 5: Detach Observers (Optional)</strong></p><p>If you want to remove observers dynamically, you can use the detach method. Here’s how:</p><p><code>// Detach SMS notifier</code></p><p><code>$notificationService→detach($smsNotifier);</code></p><p><code>// This will only notify Email and App observers</code></p><p><code>$notificationService→notify("Another important update!");</code></p><h2>Conclusion</h2><p>Using the Observer pattern to implement a notification system in PHP 8 allows for a clean, maintainable, and scalable architecture. It decouples the components, making it easy to add or remove observers without affecting the subject. This pattern is widely applicable in various scenarios, from user interfaces to event-driven systems.</p><p>As you develop more complex <a href="/article/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a>, consider the Observer pattern as a way to manage notifications effectively, ensuring your system remains responsive and flexible to changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
-<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
-      <h3 class="field__label field--tags__label">Tags</h3>
+<div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
     <ul class="links field__items field--tags__items">
           <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
           <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
@@ -294,9 +296,53 @@
     </div>
   </div>
 
+
+<div class="views-element-container block block-views block-views-blockarticles-block-8" id="block-olivero-views-block-articles-block-8">
+  
+    
+      <div class="block__content">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ee43f474e2c8cb9aba909bdcc13f6c31487831e3ff70cc39cc6c6fed7964ba9e">
+  
+    
+      
+      <div class="view-content">
+          <div class="author-card views-row"><div class="views-field views-field-user-picture"><div class="field-content">  <img loading="lazy" src="/sites/default/files/pictures/2026-04/karthikkumardk.jpeg" width="225" height="225" alt="" />
+
+</div></div><div class="views-field views-field-name"><span class="field-content">Karthik Kumar D K</span></div><div class="views-field views-field-field-bio"><div class="field-content"><p>Hey, I’m Karthik — a software engineer who enjoys writing about tech, travel, and the world around us. I contribute to PeoplesBLOG to share honest takes on everything from gadgets and digital tools to social issues and everyday experiences.</p><p>I’m curious by nature, detail-driven, and someone who likes to question things that don’t sit right. When I’m not writing or coding, you’ll probably find me on a motorcycle trip or working on a side project.</p></div></div><div><div>
+
+<ul  class="social-link-field vertical"><li><a href="https://www.linkedin.com/in/karthikkumardk" class="" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li><li><a href="https://www.drupal.org/u/heykarthikwithu" class="" title="Drupal User Profile" target="_blank"><i class="fa-brands fa-drupal"></i></a></li><li><a href="https://www.x.com/heykarthikwithu" class="" title="X (Twitter)" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li></ul></div></div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
   </div>
 
-              </main>
+  </div>
+
+                </main>
+
+                
+
+
+  <aside class="region region--sidebar">
+    
+
+<div id="block-olivero-sidebarcustomtoc" class="block block-block-content block-block-content7f0c2de4-7de4-4ff4-abc0-a8ef0904097c">
+  
+    
+      <div class="block__content">
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div id="toc-sidebar"><strong>In this article</strong></div></div></div>
+      
+    </div>
+  </div>
+
+  </aside>
+
+              </div>
                         
           </div>
         </div>
@@ -342,7 +388,8 @@
 
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3886","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
-<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/js/js_40Z1YFRvBBoPMQ8sJOzZ8YeOuOnaYfN_hVPPD3R_Czc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
 
   </body>
 </html>

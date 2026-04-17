@@ -59,8 +59,11 @@
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
     <title>Introduction to Caching and Setting Up Redis in PHP 8</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4oPgMb0rBCtG2_zLaNNFrZ4MhDVz98X-1I9Ql7MVDJo.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJw9ydEKwCAIQNEfqvVNuknILEOl0d_vJXq6cK4KTzItVRRBsscS7jXp5g6TKwRrz8O4ga2zdq8AFDo69COjJ-PKKHq_ZwRUT748qBUEpx9fUS9b" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NBY0-8UBrNcbEU3lWaJrRgBtwaXuyr3GURCrYt98gK8.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOwyAMQy9E4UgolBRFDaQiWStuv25C_dl-YuXZlixMJ3YJhSUBL2qDqRUnEzc4qYCRtOXoVKGPx5rqDRLjQw-5sGNe0lgSy7o_hlLGBP35DYq6I8WtSzNseS5wKisBx3vFHjdCzmG7A3ChSkW_Sj2kYbM_uR_iP804q3GTXsEMu9OhhjUkUHQn4aXhe32V_GJ8A9M8a-A" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_yytCLxki_BKwjdM_qSX_7ddhmz9W77zaB0KH3HC2iOA.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOwyAMQy9E4UgolBRFDaQiWStuv25C_dl-YuXZlixMJ3YJhSUBL2qDqRUnEzc4qYCRtOXoVKGPx5rqDRLjQw-5sGNe0lgSy7o_hlLGBP35DYq6I8WtSzNseS5wKisBx3vFHjdCzmG7A3ChSkW_Sj2kYbM_uR_iP804q3GTXsEMu9OhhjUkUHQn4aXhe32V_GJ8A9M8a-A" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4zf1sJGuskY5fZwjNIxjr8Q3N-C6cd7pvwCz_uG3MPc.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOwyAMQy9E4UgolBRFDaQiWStuv25C_dl-YuXZlixMJ3YJhSUBL2qDqRUnEzc4qYCRtOXoVKGPx5rqDRLjQw-5sGNe0lgSy7o_hlLGBP35DYq6I8WtSzNseS5wKisBx3vFHjdCzmG7A3ChSkW_Sj2kYbM_uR_iP804q3GTXsEMu9OhhjUkUHQn4aXhe32V_GJ8A9M8a-A" />
 
     
     
@@ -68,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdkuvg" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdmafp" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -224,8 +227,9 @@
   </div>
 
 
-                          <main role="main">
-                
+                          <div class="sidebar-grid grid-full">
+                <main role="main" class="site-main">
+                  
 
   <div class="region region--content-above grid-full layout--pass--content-medium">
     
@@ -244,7 +248,7 @@
 
   </div>
 
-                
+                  
 
   <div class="region region--content grid-full layout--pass--content-medium" id="content">
     
@@ -270,17 +274,15 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/styles/wide/public/banners/introduction-to-caching-and-setting-up-redis-in-php-8.webp.avif?itok=c7S2w5S6" width="788" height="443" alt="Introduction to Caching and Setting Up Redis in PHP 8" />
-
-
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/introduction-caching-and-setting-redis-php-8" hreflang="en"><img loading="eager" src="/sites/default/files/banners/introduction-to-caching-and-setting-up-redis-in-php-8.webp" width="788" height="443" alt="Introduction to Caching and Setting Up Redis in PHP 8" />
+</a>
 </div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>Caching is a fundamental technique used in software development to enhance performance and efficiency by storing frequently accessed data in a temporary storage layer. In PHP 8, caching can significantly reduce load times and improve the overall user experience of web applications.</p><p>This article will provide an overview of caching, its benefits, and common use cases.</p><h2>What is Caching?</h2><p>Caching involves storing copies of files, data, or results of expensive computations in a cache—typically a fast-access memory storage. When a request for data is made, the <a href="/article/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">application</a> first checks the cache to see if the data is available. If found, this is known as a <strong>cache hit</strong>; if not, the application retrieves the data from the original source (like a database or an API) and stores it in the cache for future requests.</p><h2>Benefits of Caching</h2><ul> <li><strong>Improved Performance</strong>: Caching dramatically speeds up data retrieval. By serving requests from memory rather than fetching them from slower data sources, applications can provide faster response times, leading to a smoother user experience.</li> <li><strong>Reduced Load on Data Sources</strong>: <ul> <li>By caching data, you decrease the frequency of requests sent to databases or external APIs.</li> <li>This reduction in load can prevent bottlenecks, especially during peak traffic periods, and improves overall system reliability.</li> </ul> </li> <li><strong>Cost Efficiency</strong>: For cloud-based services, caching can reduce operational costs by minimizing the number of read operations on databases, which are often charged based on usage.</li> <li><strong>Scalability</strong>: <ul> <li>Caching allows applications to handle a higher number of concurrent users and requests.</li> <li>This scalability is crucial for applications experiencing rapid growth or high traffic.</li> </ul> </li> <li><strong>Enhanced User Experience</strong>: <ul> <li>Faster response times directly correlate with better user experiences.</li> <li>Users are less likely to abandon applications that respond quickly, which can lead to higher engagement and satisfaction.</li> </ul> </li> </ul><h2>Common Use Cases for Caching</h2><ul> <li><strong>Web Application Data</strong>: Caching frequently accessed data, such as user sessions or profile information, can improve the performance of web applications, allowing them to respond quickly to user requests.</li> <li><strong>API Responses</strong>: In scenarios where applications consume external APIs, caching the responses can reduce latency and API call costs. For example, a news application can cache articles to serve users faster.</li> <li><strong>Database Query Results</strong>: <ul> <li>By caching the results of common database queries, applications can reduce the load on databases and decrease the time taken to generate responses.</li> <li>This is particularly effective for read-heavy applications</li> </ul> </li> <li><strong>Static Content</strong>: <ul> <li>Static assets like images, stylesheets, and scripts are often cached to enhance website performance.</li> <li>Caching these assets reduces the time it takes to load pages.</li> </ul> </li> <li><strong>Machine Learning Predictions</strong>: In applications utilizing machine learning models, caching the predictions can save computation time and resources, allowing for quicker responses in scenarios like real-time data processing.</li> </ul><p>Caching is an essential technique in modern web development, particularly in PHP 8 applications. By <a href="/article/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases" title="Read about Understanding Sharepoint Documents Vs Document Sets Key Differences And Use Cases">understanding</a> the benefits and use cases of caching, developers can implement effective caching <a href="/article/communication-and-self-reflection-strategies" title="Read about Communication And Self Reflection Strategies">strategies</a> that improve performance, reduce costs, and enhance user experiences. As applications continue to scale and evolve, caching will remain a vital component of efficient software architecture.</p><h2>Setting Up Redis in PHP 8 with DDEV</h2><p>Redis is a powerful in-memory data structure store commonly used as a caching layer, message broker, and for session <a href="/article/configuration-management-quicksilver-pantheon" title="Read about Configuration Management Via Quicksilver On Pantheon">management</a>. Integrating Redis with PHP 8 can significantly enhance application performance by reducing data retrieval times and offloading work from your primary database. In this article, we'll walk through the steps to set up Redis in PHP 8.</p><p>By leveraging DDEV, you can easily integrate Redis into your PHP 8 applications. In this article, we’ll go through the steps to set up Redis in a DDEV environment.</p><h2>Prerequisites</h2><p>Before you begin, ensure you have the following installed:</p><ul> <li>DDEV: Make sure you have DDEV installed on your machine. You can follow the official installation guide if you haven't installed it yet.</li> <li>PHP 8: Ensure your DDEV project is configured to use PHP 8.</li> </ul><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal and run the following commands:</p><p><code>ddev config</code></p><p>Follow the prompts to set up your project. Once configured, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, you can use the ddev command:</p><p>ddev add-service redis</p><p>This command will automatically configure Redis for your project, If not added, alternatively you can setup using below steps</p><ol> <li>Under the <code>.ddev</code> folder, create a file with the name <code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file <code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run <code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>After adding Redis, you can connect to it using the hostname provided by DDEV, typically redis within your DDEV environment. You can also access the Redis CLI using:</p><p><code>ddev ssh</code></p><p><code>redis-cli</code></p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><div class="google-ad" id="google-ad-1"><p>Google Ad 1</p></div><p>If you plan to use the Redis extension directly, you can install it through DDEV's environment. However, a popular alternative is to use predis/predis, which is a flexible Redis client for PHP.</p><p>Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p><p><strong>Step 5: Connecting to Redis in PHP</strong></p><p>Now that you have Redis and a client library set up, you can create a simple PHP script to interact with Redis. Create a new PHP file (e.g., <tt>redis-example.php</tt>) in your project’s web directory.</p><p><strong>Example Code</strong></p><p><code>require 'vendor/autoload.php';</code></p><p><code>use Predis\Client;</code></p><p><code>// Create a Redis client instance</code></p><p><code>$client = new Client(['host' =&gt; 'redis', 'port' =&gt; 6379]);</code></p><p><code>// Test the connection</code></p><p><code>try {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$client→ping();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Connected to Redis successfully!\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Set a value</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$client→set('key', 'Hello, Redis!');</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Get the value</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$value = $client→get('key');</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Value from Redis: $value\n"; // Outputs: Hello, Redis!&nbsp;&nbsp;&nbsp;&nbsp;</code></p><p><code>} catch (Exception $e) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Could not connect to Redis: " . $e→getMessage() . "\n";</code></p><p><code>}</code></p><p><strong>Step 6: Running Your PHP Script</strong></p><p>To run your PHP script, you can access it through your web browser at http://.ddev.site/redis-example.php or run it from the command line within the DDEV environment:</p><p><code>ddev exec php redis-example.php</code></p><p><strong>Step 7: Monitoring Redis</strong></p><p>You can monitor Redis directly from the command line within your DDEV environment. Use the Redis CLI to check the status and metrics:</p><p><code>ddev ssh</code></p><p><code>redis-cli info</code></p><p>This command provides insights into memory usage, connected clients, and more.</p><h2>Conclusion</h2><p>Setting up Redis in a PHP 8 application using DDEV is straightforward and efficient. By leveraging DDEV’s capabilities, you can easily integrate Redis into your development workflow, enabling faster data access and improved application performance.</p><p>With this article, you should be able to set up and utilize Redis in your PHP applications effectively.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
-<div class="field field--name-field-tags field--type-entity-reference field--label-above field--tags">
-      <h3 class="field__label field--tags__label">Tags</h3>
+<div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
     <ul class="links field__items field--tags__items">
           <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
           <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
@@ -294,9 +296,53 @@
     </div>
   </div>
 
+
+<div class="views-element-container block block-views block-views-blockarticles-block-8" id="block-olivero-views-block-articles-block-8">
+  
+    
+      <div class="block__content">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e704642d1c29c75acfb7430d80db7160565d3901ed7ff6c8546619dfa9e674b9">
+  
+    
+      
+      <div class="view-content">
+          <div class="author-card views-row"><div class="views-field views-field-user-picture"><div class="field-content">  <img loading="lazy" src="/sites/default/files/pictures/2026-04/karthikkumardk.jpeg" width="225" height="225" alt="" />
+
+</div></div><div class="views-field views-field-name"><span class="field-content">Karthik Kumar D K</span></div><div class="views-field views-field-field-bio"><div class="field-content"><p>Hey, I’m Karthik — a software engineer who enjoys writing about tech, travel, and the world around us. I contribute to PeoplesBLOG to share honest takes on everything from gadgets and digital tools to social issues and everyday experiences.</p><p>I’m curious by nature, detail-driven, and someone who likes to question things that don’t sit right. When I’m not writing or coding, you’ll probably find me on a motorcycle trip or working on a side project.</p></div></div><div><div>
+
+<ul  class="social-link-field vertical"><li><a href="https://www.linkedin.com/in/karthikkumardk" class="" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li><li><a href="https://www.drupal.org/u/heykarthikwithu" class="" title="Drupal User Profile" target="_blank"><i class="fa-brands fa-drupal"></i></a></li><li><a href="https://www.x.com/heykarthikwithu" class="" title="X (Twitter)" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li></ul></div></div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
   </div>
 
-              </main>
+  </div>
+
+                </main>
+
+                
+
+
+  <aside class="region region--sidebar">
+    
+
+<div id="block-olivero-sidebarcustomtoc" class="block block-block-content block-block-content7f0c2de4-7de4-4ff4-abc0-a8ef0904097c">
+  
+    
+      <div class="block__content">
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div id="toc-sidebar"><strong>In this article</strong></div></div></div>
+      
+    </div>
+  </div>
+
+  </aside>
+
+              </div>
                         
           </div>
         </div>
@@ -342,7 +388,8 @@
 
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3888","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
-<script src="/sites/default/files/js/js_Ke5g9N1SyfsT2fdzhnqdfs2jjW2BxXmKYL59f6NsUBU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJzLz8ksSy3K10_PyU9KzNEtLqnMycxL18mHCucllmWmJ5Zk5ufpFhRl5iYWVQIA53wTlA"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/js/js_40Z1YFRvBBoPMQ8sJOzZ8YeOuOnaYfN_hVPPD3R_Czc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
 
   </body>
 </html>
