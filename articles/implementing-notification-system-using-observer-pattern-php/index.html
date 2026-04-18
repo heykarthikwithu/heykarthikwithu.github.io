@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects" />
+<meta name="description" content="The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject)." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/implementing-notification-system-using-observer-pattern-php" />
 <meta property="og:site_name" content="Peoples BLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Implementing a Notification System Using the Observer Pattern in PHP" />
-<meta property="og:description" content="The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects" />
+<meta property="og:description" content="The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject)." />
 <meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects" />
+<meta name="twitter:description" content="The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject)." />
 <meta name="twitter:title" content="Implementing a Notification System Using the Observer Pattern in PHP" />
 <meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
@@ -24,13 +24,13 @@
         {
             "@type": "Article",
             "headline": "Implementing a Notification System Using the Observer Pattern in PHP",
-            "description": "The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects",
+            "description": "The Observer pattern is a powerful design pattern that promotes a one-to-many dependency between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-a-notification-system-using-the-observer-pattern-in-php.webp"
             },
             "datePublished": "2024-11-05T15:52:00+0530",
-            "dateModified": "2026-04-16T08:54:00+0530",
+            "dateModified": "2026-04-18T10:12:26+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdmafp" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoc50" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -139,9 +139,377 @@
                           
         
         
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/science-tech" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/456">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Science &amp; Tech</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Science &amp; Tech sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/drupal" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/251">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Drupal</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/php" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/321">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">PHP</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/experiment" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/268">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Experiment</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/lifestyle" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/261">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Lifestyle</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Lifestyle sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/relationship" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/264">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Relationship</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/marriage" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/271">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Marriage</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/love" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/279">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Love</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/crime" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/357">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Crime</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/unsolved-mysteries" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/367">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Unsolved Mysteries</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/284">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Health</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-123" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Health sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-123">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/dentofacts" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/299">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Dentofacts</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/medical" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/365">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Medical</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/sexual-health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/294">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Sexual Health</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/travel" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/255">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Travel</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1234" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Travel sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1234">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/bangalore" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/256">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Bangalore</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/ooty" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/265">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Ooty</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/munnar" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/329">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Munnar</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/wayanad" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/272">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Wayanad</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/coorg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/330">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Coorg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chikmagalur" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/392">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chikmagalur</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/food" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/252">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Food</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12345" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Food sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12345">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/vegetable" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/254">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Vegetable</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/fruits" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/285">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Fruits</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/egg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/307">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Egg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chutney" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/309">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chutney</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/recipe" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/274">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Recipe</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
             
@@ -153,17 +521,6 @@
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
                       <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
-                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
           </a>
 
             
@@ -262,7 +619,9 @@
 <article data-history-node-id="3886" class="node node--type-article grid-full node--promoted node--view-mode-full">
   <header class="layout--content-narrow">
     
-          
+          <div class="pb-meta">By 
+<span><span>Karthik Kumar D K</span></span>
+ | Published: Nov 5, 2024 3:52 PM IST</div>
           <div class="node__meta">
               <span>
           By <span class="node__author">
@@ -278,14 +637,14 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>The Observer pattern is a powerful design pattern that promotes a one-to-many <a href="/article/water-pakistan-lifeline-dependency-geopolitical-control" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).</p><p>In this article, we'll explore how to implement a simple notification system using the Observer pattern in PHP 8.</p><h2>Understanding the Observer Pattern</h2><p>In the Observer pattern:</p><ul> <li><strong>Subject</strong>: The object that maintains a list of observers and notifies them of changes.</li> <li><strong>Observer</strong>: The object that wants to be notified of changes in the subject.</li> </ul><p><strong>Key Features:</strong></p><ul> <li>Loose coupling between the subject and observers.</li> <li>Dynamic subscription and unsubscription of observers.</li> <li>Supports multiple observers for a single subject.</li> </ul><h2>Implementing the Notification System</h2><p>Let’s build a notification system step by step.</p><p><strong>Step 1: Define the Observer Interface</strong></p><p>First, we need an interface that all observers will implement. This interface will define the method that observers must implement to receive notifications.</p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void;</code></p><p><code>}</code></p><p><strong>Step 2: Create the Subject Class</strong></p><p>Next, we implement the subject class. This class will manage the list of observers and provide methods to attach, detach, and notify observers.</p><p><code>class NotificationService {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers = array_filter($this→observers, fn($obs) =&gt; $obs !== $observer);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update($message);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3: Create Concrete Observer Classes</strong></p><p>Now, let’s create some concrete observer classes that implement the Observer interface. These classes will define what to do when they receive notifications.</p><p><code>class EmailNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Email Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class SmsNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "SMS Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class AppNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "App Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4: Putting It All Together</strong></p><p>Now, we can use our NotificationService along with the observer classes to send notifications.</p><p><code>// Create the notification service</code></p><p><code>$notificationService = new NotificationService();</code></p><p><code>// Create observers</code></p><p><code>$emailNotifier = new EmailNotifier();</code></p><p><code>$smsNotifier = new SmsNotifier();</code></p><p><code>$appNotifier = new AppNotifier();</code></p><p><code>// Attach observers</code></p><p><code>$notificationService→attach($emailNotifier);</code></p><p><code>$notificationService→attach($smsNotifier);</code></p><p><code>$notificationService→attach($appNotifier);</code></p><p><code>// Send notifications</code></p><p><code>$notificationService→notify("A new update is available!");</code></p><p><strong>Step 5: Detach Observers (Optional)</strong></p><p>If you want to remove observers dynamically, you can use the detach method. Here’s how:</p><p><code>// Detach SMS notifier</code></p><p><code>$notificationService→detach($smsNotifier);</code></p><p><code>// This will only notify Email and App observers</code></p><p><code>$notificationService→notify("Another important update!");</code></p><h2>Conclusion</h2><p>Using the Observer pattern to implement a notification system in PHP 8 allows for a clean, maintainable, and scalable architecture. It decouples the components, making it easy to add or remove observers without affecting the subject. This pattern is widely applicable in various scenarios, from user interfaces to event-driven systems.</p><p>As you develop more complex <a href="/article/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a>, consider the Observer pattern as a way to manage notifications effectively, ensuring your system remains responsive and flexible to changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The Observer pattern is a powerful design pattern that promotes a one-to-many <a href="/articles/water-pakistan-lifeline-dependency-geopolitical-control" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects. This pattern is particularly useful in scenarios where changes in one object need to be reflected across multiple objects. A classic use case for the Observer pattern is in building a notification system, where subscribers (observers) are notified of changes in a publisher (subject).</p><p>In this article, we'll explore how to implement a simple notification system using the Observer pattern in PHP 8.</p><h2>Understanding the Observer Pattern</h2><p>In the Observer pattern:</p><ul> <li><strong>Subject</strong>: The object that maintains a list of observers and notifies them of changes.</li> <li><strong>Observer</strong>: The object that wants to be notified of changes in the subject.</li> </ul><p><strong>Key Features:</strong></p><ul> <li>Loose coupling between the subject and observers.</li> <li>Dynamic subscription and unsubscription of observers.</li> <li>Supports multiple observers for a single subject.</li> </ul><h2>Implementing the Notification System</h2><p>Let’s build a notification system step by step.</p><p><strong>Step 1: Define the Observer Interface</strong></p><p>First, we need an interface that all observers will implement. This interface will define the method that observers must implement to receive notifications.</p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void;</code></p><p><code>}</code></p><p><strong>Step 2: Create the Subject Class</strong></p><p>Next, we implement the subject class. This class will manage the list of observers and provide methods to attach, detach, and notify observers.</p><p><code>class NotificationService {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers = array_filter($this→observers, fn($obs) =&gt; $obs !== $observer);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update($message);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3: Create Concrete Observer Classes</strong></p><p>Now, let’s create some concrete observer classes that implement the Observer interface. These classes will define what to do when they receive notifications.</p><p><code>class EmailNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Email Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class SmsNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "SMS Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class AppNotifier implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $message): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "App Notification: $message\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4: Putting It All Together</strong></p><p>Now, we can use our NotificationService along with the observer classes to send notifications.</p><p><code>// Create the notification service</code></p><p><code>$notificationService = new NotificationService();</code></p><p><code>// Create observers</code></p><p><code>$emailNotifier = new EmailNotifier();</code></p><p><code>$smsNotifier = new SmsNotifier();</code></p><p><code>$appNotifier = new AppNotifier();</code></p><p><code>// Attach observers</code></p><p><code>$notificationService→attach($emailNotifier);</code></p><p><code>$notificationService→attach($smsNotifier);</code></p><p><code>$notificationService→attach($appNotifier);</code></p><p><code>// Send notifications</code></p><p><code>$notificationService→notify("A new update is available!");</code></p><p><strong>Step 5: Detach Observers (Optional)</strong></p><p>If you want to remove observers dynamically, you can use the detach method. Here’s how:</p><p><code>// Detach SMS notifier</code></p><p><code>$notificationService→detach($smsNotifier);</code></p><p><code>// This will only notify Email and App observers</code></p><p><code>$notificationService→notify("Another important update!");</code></p><h2>Conclusion</h2><p>Using the Observer pattern to implement a notification system in PHP 8 allows for a clean, maintainable, and scalable architecture. It decouples the components, making it easy to add or remove observers without affecting the subject. This pattern is widely applicable in various scenarios, from user interfaces to event-driven systems.</p><p>As you develop more complex <a href="/articles/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a>, consider the Observer pattern as a way to manage notifications effectively, ensuring your system remains responsive and flexible to changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
     <ul class="links field__items field--tags__items">
           <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
-          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/science-tech" hreflang="en">Science &amp; Tech</a></li>
           <li class="field--tags__item"><a href="/php" hreflang="en">Php</a></li>
       </ul>
 </div>
@@ -301,7 +660,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ee43f474e2c8cb9aba909bdcc13f6c31487831e3ff70cc39cc6c6fed7964ba9e">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-68b602377181cd93e2751d89d6ffeb35f47c8f23836466c9ff529b0114bd74e8">
   
     
       
@@ -335,7 +694,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div id="toc-sidebar"><strong>In this article</strong></div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -389,7 +748,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3886","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_40Z1YFRvBBoPMQ8sJOzZ8YeOuOnaYfN_hVPPD3R_Czc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
+<script src="/sites/default/files/js/js_YJyMVOR4nKYiqVeyQpd_gnhbo7ofGDsuBM5BcZSZ3gM.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
 
   </body>
 </html>

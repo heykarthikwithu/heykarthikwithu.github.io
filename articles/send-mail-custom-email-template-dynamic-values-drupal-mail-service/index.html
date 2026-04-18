@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email. Any module can modify the composed email message array using hook_mail_alter(). Finally Drupal::service(&#039;plugin.manager.mail&#039;)-&gt;mail() sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients." />
+<meta name="description" content="Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/send-mail-custom-email-template-dynamic-values-drupal-mail-service" />
 <meta property="og:site_name" content="Peoples BLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Send Mail with Custom Email Template &amp; with Dynamic values via Drupal Mail Service" />
-<meta property="og:description" content="Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email. Any module can modify the composed email message array using hook_mail_alter(). Finally Drupal::service(&#039;plugin.manager.mail&#039;)-&gt;mail() sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients." />
+<meta property="og:description" content="Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email." />
 <meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/drupal_8_mail_system.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email. Any module can modify the composed email message array using hook_mail_alter(). Finally Drupal::service(&#039;plugin.manager.mail&#039;)-&gt;mail() sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients." />
+<meta name="twitter:description" content="Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email." />
 <meta name="twitter:title" content="Send Mail with Custom Email Template &amp; with Dynamic values via Drupal Mail Service" />
 <meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/drupal_8_mail_system.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
@@ -24,13 +24,13 @@
         {
             "@type": "Article",
             "headline": "Send Mail with Custom Email Template \u0026 with Dynamic values via Drupal Mail Service",
-            "description": "Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email. Any module can modify the composed email message array using hook_mail_alter(). Finally Drupal::service(\u0027plugin.manager.mail\u0027)-\u003Email() sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients.",
+            "description": "Sending an email works with defining an email template (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email templates are requested from hook_mail() from the module sending the email.",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupal_8_mail_system.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-16T08:54:00+0530",
+            "dateModified": "2026-04-18T10:12:26+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdmafp" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoc50" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -139,9 +139,377 @@
                           
         
         
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/science-tech" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/456">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Science &amp; Tech</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Science &amp; Tech sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/drupal" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/251">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Drupal</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/php" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/321">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">PHP</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/experiment" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/268">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Experiment</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/lifestyle" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/261">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Lifestyle</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Lifestyle sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/relationship" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/264">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Relationship</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/marriage" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/271">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Marriage</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/love" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/279">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Love</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/crime" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/357">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Crime</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/unsolved-mysteries" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/367">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Unsolved Mysteries</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/284">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Health</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-123" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Health sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-123">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/dentofacts" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/299">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Dentofacts</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/medical" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/365">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Medical</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/sexual-health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/294">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Sexual Health</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/travel" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/255">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Travel</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1234" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Travel sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1234">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/bangalore" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/256">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Bangalore</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/ooty" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/265">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Ooty</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/munnar" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/329">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Munnar</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/wayanad" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/272">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Wayanad</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/coorg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/330">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Coorg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chikmagalur" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/392">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chikmagalur</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/food" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/252">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Food</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12345" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Food sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12345">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/vegetable" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/254">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Vegetable</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/fruits" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/285">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Fruits</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/egg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/307">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Egg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chutney" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/309">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chutney</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/recipe" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/274">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Recipe</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
             
@@ -153,17 +521,6 @@
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
                       <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
-                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
           </a>
 
             
@@ -262,7 +619,9 @@
 <article data-history-node-id="3715" class="node node--type-article grid-full node--promoted node--view-mode-full">
   <header class="layout--content-narrow">
     
-          
+          <div class="pb-meta">By 
+<span><span>Karthik Kumar D K</span></span>
+ | Published: Dec 1, 2023 8:00 AM IST</div>
           <div class="node__meta">
               <span>
           By <span class="node__author">
@@ -278,14 +637,14 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>Sending an email works with defining an email <a href="/article/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email <a href="/article/how-work-twig-templates-drupal" title="Read about How To Work With Twig Templates In Drupal">templates</a> are requested from <code>hook_mail()</code> from the module sending the email. Any module can modify the composed email message array using <code>hook_mail_alter()</code>. Finally <code>\Drupal::service('plugin.manager.mail')→mail()</code> sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients.</p><p>Below function's <code>triggerMail</code> code, can be written in any submit handlers or post actions in Drupal.</p><pre>function triggerMail() {<br>&nbsp;&nbsp;$module = "x_module";<br>&nbsp;&nbsp;$key = "x_mail";<br>&nbsp;&nbsp;$to = "example@gmail.com";<br>&nbsp;&nbsp;$langcode = 'en';<br>&nbsp;&nbsp;\Drupal::service('plugin.manager.mail')→mail($module, $key, $to, $langcode);<br>}</pre><p>Below is the <code>hook_mail()</code> usage, written in <code>x_module.module</code> file.</p><pre>function x_module_mail($key, &amp;$message, $params) {<br>&nbsp;&nbsp;switch($key) {<br>&nbsp;&nbsp;&nbsp;&nbsp;// To Trigger email on x_mail key.<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'x_mail':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['headers'] = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type' =&gt; 'text/html'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['subject'] = t('X Mail subject');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['body'][] = (string) getXMailMessageBody();<br>&nbsp;&nbsp;}<br>}</pre><p>Below is the helper function <code>getXMailMessageBody()</code> which can pull the dynamic data from the system and pass it through.</p><pre>function getXMailMessageBody() {<br>&nbsp;&nbsp;// Get Dynamic values.. then pass to twig file..<br>&nbsp;&nbsp;return twig_render_template(<br>&nbsp;&nbsp;&nbsp;&nbsp;drupal_get_path('module', 'x_module') . '/templates/x-mail.html.twig',<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'theme_hook_original' =&gt; 'not-applicable',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key1' =&gt; "{value1}",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key2' =&gt; "{value2}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;);<br>}</pre><p>Create a twig template file <code>x-mail.html.twig</code> in the module folder within templates folder.</p><pre>Email Body and with dynamic values here {{ dynamic_key1 }} and {{ dynamic_key2 }}.</pre><p>So, with these Drupal Mail service and custom template, you can send emails with customized message mails from your Drupal application.</p><p>Thank you :)</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Sending an email works with defining an email <a href="/articles/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email <a href="/articles/how-work-twig-templates-drupal" title="Read about How To Work With Twig Templates In Drupal">templates</a> are requested from <code>hook_mail()</code> from the module sending the email. Any module can modify the composed email message array using <code>hook_mail_alter()</code>. Finally <code>\Drupal::service('plugin.manager.mail')→mail()</code> sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients.</p><p>Below function's <code>triggerMail</code> code, can be written in any submit handlers or post actions in Drupal.</p><pre>function triggerMail() {<br>&nbsp;&nbsp;$module = "x_module";<br>&nbsp;&nbsp;$key = "x_mail";<br>&nbsp;&nbsp;$to = "example@gmail.com";<br>&nbsp;&nbsp;$langcode = 'en';<br>&nbsp;&nbsp;\Drupal::service('plugin.manager.mail')→mail($module, $key, $to, $langcode);<br>}</pre><p>Below is the <code>hook_mail()</code> usage, written in <code>x_module.module</code> file.</p><pre>function x_module_mail($key, &amp;$message, $params) {<br>&nbsp;&nbsp;switch($key) {<br>&nbsp;&nbsp;&nbsp;&nbsp;// To Trigger email on x_mail key.<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'x_mail':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['headers'] = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type' =&gt; 'text/html'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['subject'] = t('X Mail subject');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['body'][] = (string) getXMailMessageBody();<br>&nbsp;&nbsp;}<br>}</pre><p>Below is the helper function <code>getXMailMessageBody()</code> which can pull the dynamic data from the system and pass it through.</p><pre>function getXMailMessageBody() {<br>&nbsp;&nbsp;// Get Dynamic values.. then pass to twig file..<br>&nbsp;&nbsp;return twig_render_template(<br>&nbsp;&nbsp;&nbsp;&nbsp;drupal_get_path('module', 'x_module') . '/templates/x-mail.html.twig',<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'theme_hook_original' =&gt; 'not-applicable',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key1' =&gt; "{value1}",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key2' =&gt; "{value2}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;);<br>}</pre><p>Create a twig template file <code>x-mail.html.twig</code> in the module folder within templates folder.</p><pre>Email Body and with dynamic values here {{ dynamic_key1 }} and {{ dynamic_key2 }}.</pre><p>So, with these Drupal Mail service and custom template, you can send emails with customized message mails from your Drupal application.</p><p>Thank you :)</p>
 </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
     <ul class="links field__items field--tags__items">
           <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
-          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/science-tech" hreflang="en">Science &amp; Tech</a></li>
           <li class="field--tags__item"><a href="/drupal" hreflang="en">Drupal</a></li>
       </ul>
 </div>
@@ -301,7 +660,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-96b94efbf5a61809588cdb6c79663705bb485e822eecfe39ad2cf53fe245dc3f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-425f78d380b719c313c1ceace8f303112aa469a6c63188148d1c75a141d3a61d">
   
     
       
@@ -335,7 +694,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div id="toc-sidebar"><strong>In this article</strong></div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -389,7 +748,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3715","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_40Z1YFRvBBoPMQ8sJOzZ8YeOuOnaYfN_hVPPD3R_Czc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
+<script src="/sites/default/files/js/js_YJyMVOR4nKYiqVeyQpd_gnhbo7ofGDsuBM5BcZSZ3gM.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
 
   </body>
 </html>

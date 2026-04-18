@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="In this article, we are going to see how a developer can work with Twig templates and how to override templates and create template suggestions with hooks, so that templates could be easily managed." />
+<meta name="description" content="In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/how-work-twig-templates-drupal" />
 <meta property="og:site_name" content="Peoples BLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="How to work with Twig Templates in Drupal?" />
-<meta property="og:description" content="In this article, we are going to see how a developer can work with Twig templates and how to override templates and create template suggestions with hooks, so that templates could be easily managed." />
+<meta property="og:description" content="In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme." />
 <meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/how-to-work-with-twig-templates-in-drupal.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="In this article, we are going to see how a developer can work with Twig templates and how to override templates and create template suggestions with hooks, so that templates could be easily managed." />
+<meta name="twitter:description" content="In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme." />
 <meta name="twitter:title" content="How to work with Twig Templates in Drupal?" />
 <meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/how-to-work-with-twig-templates-in-drupal.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
@@ -24,13 +24,13 @@
         {
             "@type": "Article",
             "headline": "How to work with Twig Templates in Drupal?",
-            "description": "In this article, we are going to see how a developer can work with Twig templates and how to override templates and create template suggestions with hooks, so that templates could be easily managed.",
+            "description": "In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme.",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/how-to-work-with-twig-templates-in-drupal.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-16T08:54:00+0530",
+            "dateModified": "2026-04-18T10:12:26+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdmafp" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoc50" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -139,9 +139,377 @@
                           
         
         
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/science-tech" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/456">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Science &amp; Tech</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Science &amp; Tech sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/drupal" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/251">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Drupal</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/php" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/321">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">PHP</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/experiment" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/268">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Experiment</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/lifestyle" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/261">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Lifestyle</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Lifestyle sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/relationship" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/264">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Relationship</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/marriage" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/271">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Marriage</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/love" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/279">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Love</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/crime" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/357">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Crime</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/unsolved-mysteries" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/367">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Unsolved Mysteries</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/284">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Health</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-123" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Health sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-123">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/dentofacts" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/299">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Dentofacts</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/medical" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/365">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Medical</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/sexual-health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/294">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Sexual Health</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/travel" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/255">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Travel</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1234" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Travel sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1234">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/bangalore" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/256">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Bangalore</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/ooty" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/265">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Ooty</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/munnar" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/329">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Munnar</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/wayanad" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/272">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Wayanad</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/coorg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/330">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Coorg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chikmagalur" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/392">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chikmagalur</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/food" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/252">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Food</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12345" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Food sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12345">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/vegetable" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/254">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Vegetable</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/fruits" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/285">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Fruits</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/egg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/307">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Egg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chutney" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/309">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chutney</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/recipe" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/274">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Recipe</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
             
@@ -153,17 +521,6 @@
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
                       <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
-                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
           </a>
 
             
@@ -262,7 +619,9 @@
 <article data-history-node-id="3631" class="node node--type-article grid-full node--promoted node--view-mode-full">
   <header class="layout--content-narrow">
     
-          
+          <div class="pb-meta">By 
+<span><span>Karthik Kumar D K</span></span>
+ | Published: Dec 1, 2023 8:00 AM IST</div>
           <div class="node__meta">
               <span>
           By <span class="node__author">
@@ -278,7 +637,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p>In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.</p><p>Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme.</p><p>First thing, we need to make sure we override the templates, for this to do we have to enable the twig debugging for your local drupal application. And it's done by modifying some lines of code within your <code>services.yml</code> file which will be located at <code>sites/default/services.yml</code>, as shown below.</p><p><code>parameters:<br> &nbsp;&nbsp;twig.config:<br> &nbsp;&nbsp;&nbsp;&nbsp;debug: true</code></p><p>By default, you can see the value set to <code>false</code>, you need to set it to <code>true</code>.</p><p>Once you do this and rebuild the caches, you can see the existing template suggestion on inspecting the web page locally.</p><p>Now you have to write the code to alter the template suggestions, which will give you more control to create the twig template files.</p><p>And Drupal provides hooks to do this and hook_theme_suggestions_HOOK_alter is the hook which does the purpose.</p><p>Let’s take an example to alter the template suggestions of the taxonomy term page and with the below code you can do it.</p><p><code>use Drupal\taxonomy\TermInterface;<br> /**<br> &nbsp;* Implements hook_theme_suggestions_HOOK_alter().<br> &nbsp;*/<br> function mytheme_theme_suggestions_taxonomy_term_alter(&amp;$suggestions, $variables) {<br> &nbsp;&nbsp;$elements = $variables['elements'];<br> &nbsp;&nbsp;if (isset($elements['#taxonomy_term']) &amp;&amp; isset($elements['#theme']) &amp;&amp; isset($elements['#view_mode'])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$term = $elements['#taxonomy_term'];<br> &nbsp;&nbsp;&nbsp;&nbsp;if ($term instanceof TermInterface) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suggestions[] = $elements['#theme'] . '__' . $term→bundle() . '__' . $elements['#view_mode'];<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suggestions[] = $elements['#theme'] . '__' . $term→id() . '__' . $elements['#view_mode'];<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;}<br> }</code></p><p>Once you write this code in your <code>.theme</code> file and rebuild the caches. You can see the template suggestions on inspect of the page.</p><p>Similarly you can do for all the other pages or entities like User, Node, Media, Paragraph or a View.</p><p>Now reading the data to the templates will be a crucial or difficult part, in case you have not built your <a href="/article/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> at its best. What this means is,</p><ol> <li>For example, people should make sure to use the form modes and view modes of the content type and importantly only the needed data should be passed to the form modes or view modes.</li> <li>Also, if you want to render just the Image URL, make sure the field from the view mode is returning just the Image URL.</li> <li>Don't preprocess the data, it would be a very rare case where you need to use preprocess hooks in your .theme file.</li> <li>If you are using a data preprocessor, it means your application is not well planned, which means you are good to make some corrections in the application.</li> <li>And one must make sure not to load any data from the <a href="/article/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a> on the .theme file or twig file, because you are already on the rendering layer.</li> </ol><p>To conclude, the approach or inputs provided in the article will help drupal people to understand how they can work with twig templates.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.</p><p>Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme.</p><p>First thing, we need to make sure we override the templates, for this to do we have to enable the twig debugging for your local drupal application. And it's done by modifying some lines of code within your <code>services.yml</code> file which will be located at <code>sites/default/services.yml</code>, as shown below.</p><p><code>parameters:<br> &nbsp;&nbsp;twig.config:<br> &nbsp;&nbsp;&nbsp;&nbsp;debug: true</code></p><p>By default, you can see the value set to <code>false</code>, you need to set it to <code>true</code>.</p><p>Once you do this and rebuild the caches, you can see the existing template suggestion on inspecting the web page locally.</p><p>Now you have to write the code to alter the template suggestions, which will give you more control to create the twig template files.</p><p>And Drupal provides hooks to do this and hook_theme_suggestions_HOOK_alter is the hook which does the purpose.</p><p>Let’s take an example to alter the template suggestions of the taxonomy term page and with the below code you can do it.</p><p><code>use Drupal\taxonomy\TermInterface;<br> /**<br> &nbsp;* Implements hook_theme_suggestions_HOOK_alter().<br> &nbsp;*/<br> function mytheme_theme_suggestions_taxonomy_term_alter(&amp;$suggestions, $variables) {<br> &nbsp;&nbsp;$elements = $variables['elements'];<br> &nbsp;&nbsp;if (isset($elements['#taxonomy_term']) &amp;&amp; isset($elements['#theme']) &amp;&amp; isset($elements['#view_mode'])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$term = $elements['#taxonomy_term'];<br> &nbsp;&nbsp;&nbsp;&nbsp;if ($term instanceof TermInterface) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suggestions[] = $elements['#theme'] . '__' . $term→bundle() . '__' . $elements['#view_mode'];<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suggestions[] = $elements['#theme'] . '__' . $term→id() . '__' . $elements['#view_mode'];<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;}<br> }</code></p><p>Once you write this code in your <code>.theme</code> file and rebuild the caches. You can see the template suggestions on inspect of the page.</p><p>Similarly you can do for all the other pages or entities like User, Node, Media, Paragraph or a View.</p><p>Now reading the data to the templates will be a crucial or difficult part, in case you have not built your <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> at its best. What this means is,</p><ol> <li>For example, people should make sure to use the form modes and view modes of the content type and importantly only the needed data should be passed to the form modes or view modes.</li> <li>Also, if you want to render just the Image URL, make sure the field from the view mode is returning just the Image URL.</li> <li>Don't preprocess the data, it would be a very rare case where you need to use preprocess hooks in your .theme file.</li> <li>If you are using a data preprocessor, it means your application is not well planned, which means you are good to make some corrections in the application.</li> <li>And one must make sure not to load any data from the <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a> on the .theme file or twig file, because you are already on the rendering layer.</li> </ol><p>To conclude, the approach or inputs provided in the article will help drupal people to understand how they can work with twig templates.</p>
 </div>
       
 
@@ -288,7 +647,7 @@
           <li class="field--tags__item"><a href="/drupal" hreflang="en">Drupal</a></li>
           <li class="field--tags__item"><a href="/twig" hreflang="en">Twig</a></li>
           <li class="field--tags__item"><a href="/php" hreflang="en">Php</a></li>
-          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/science-tech" hreflang="en">Science &amp; Tech</a></li>
       </ul>
 </div>
 
@@ -303,7 +662,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a411603d75c77ecff1c16c3d21326bbde2c807657c56642e929f9f89148de97d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-bbe5510153f5528850e1891bc3d8e413b86b9e62982ffd8e26a2fa214a0e816c">
   
     
       
@@ -337,7 +696,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div id="toc-sidebar"><strong>In this article</strong></div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -391,7 +750,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3631","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_40Z1YFRvBBoPMQ8sJOzZ8YeOuOnaYfN_hVPPD3R_Czc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
+<script src="/sites/default/files/js/js_YJyMVOR4nKYiqVeyQpd_gnhbo7ofGDsuBM5BcZSZ3gM.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
 
   </body>
 </html>

@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="Understand SQL transactions, atomicity, and how to maintain data consistency in your database design — with practical examples" />
+<meta name="description" content="Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/sql-transactions-explained-atomic-operations-data-integrity" />
 <meta property="og:site_name" content="Peoples BLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="SQL Transactions Explained: Atomic Operations &amp; Data Integrity" />
-<meta property="og:description" content="Understand SQL transactions, atomicity, and how to maintain data consistency in your database design — with practical examples" />
+<meta property="og:description" content="Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved." />
 <meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Understand SQL transactions, atomicity, and how to maintain data consistency in your database design — with practical examples" />
+<meta name="twitter:description" content="Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved." />
 <meta name="twitter:title" content="SQL Transactions Explained: Atomic Operations &amp; Data Integrity" />
 <meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
@@ -24,13 +24,13 @@
         {
             "@type": "Article",
             "headline": "SQL Transactions Explained: Atomic Operations \u0026 Data Integrity",
-            "description": "Understand SQL transactions, atomicity, and how to maintain data consistency in your database design — with practical examples",
+            "description": "Implementing transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.webp"
             },
             "datePublished": "2025-11-23T10:30:00+0530",
-            "dateModified": "2026-04-16T08:54:00+0530",
+            "dateModified": "2026-04-18T10:12:26+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdmafp" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoc50" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -139,9 +139,377 @@
                           
         
         
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/science-tech" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/456">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Science &amp; Tech</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Science &amp; Tech sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/drupal" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/251">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Drupal</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/php" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/321">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">PHP</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/experiment" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/268">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Experiment</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/lifestyle" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/261">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Lifestyle</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Lifestyle sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/relationship" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/264">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Relationship</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/marriage" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/271">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Marriage</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/love" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/279">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Love</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/crime" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/357">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Crime</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/unsolved-mysteries" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/367">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Unsolved Mysteries</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/284">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Health</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-123" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Health sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-123">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/dentofacts" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/299">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Dentofacts</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/medical" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/365">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Medical</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/sexual-health" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/294">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Sexual Health</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/travel" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/255">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Travel</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-1234" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Travel sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-1234">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/bangalore" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/256">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Bangalore</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/ooty" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/265">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Ooty</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/munnar" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/329">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Munnar</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/wayanad" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/272">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Wayanad</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/coorg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/330">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Coorg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chikmagalur" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/392">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chikmagalur</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1 primary-nav__menu-item--has-children" data-drupal-selector="primary-nav-menu-item-has-children">
+                              
+                      <a href="/food" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1 primary-nav__menu-link--has-children" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/252">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Food</span>
+          </a>
+
+                                                        
+                <button class="primary-nav__button-toggle" data-drupal-selector="primary-nav-submenu-toggle-button" aria-controls="primary-menu-item-12345" aria-expanded="false" aria-hidden="true" tabindex="-1">
+                  <span class="visually-hidden">Food sub-navigation</span>
+                  <span class="icon--menu-toggle"></span>
+                </button>
+              
+                                      
+              <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>
+    
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-2" data-drupal-selector="primary-nav-menu--level-2" id="primary-menu-item-12345">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/vegetable" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/254">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Vegetable</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/fruits" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/285">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Fruits</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/egg" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/307">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Egg</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/chutney" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/309">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Chutney</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-2">
+                              
+                      <a href="/recipe" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-2" data-drupal-link-system-path="taxonomy/term/274">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-2">Recipe</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+            
+                  </li>
+      
+                          
+        
+        
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/articles" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/249">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Articles</span>
+                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
+          </a>
+
+            
+                  </li>
+      
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
             
@@ -153,17 +521,6 @@
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
                       <a href="/great-people" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/439">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Great People</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
-                      <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Read</span>
           </a>
 
             
@@ -262,7 +619,9 @@
 <article data-history-node-id="3929" class="node node--type-article grid-full node--promoted node--view-mode-full">
   <header class="layout--content-narrow">
     
-          
+          <div class="pb-meta">By 
+<span><span>Karthik Kumar D K</span></span>
+ | Published: Nov 23, 2025 10:30 AM IST</div>
           <div class="node__meta">
               <span>
           By <span class="node__author">
@@ -278,14 +637,14 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><?xml encoding="utf-8" ?><p><a href="/article/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p><h2>Key Concepts</h2><ol> <li><strong>Atomicity</strong>: Ensures that a series of operations either complete entirely or have no effect at all. If any operation fails, the entire transaction is rolled back.</li> <li><strong>Consistency</strong>: Guarantees that a transaction will bring the system from one valid state to another, maintaining all predefined rules, such as constraints and triggers.</li> <li><strong>Isolation</strong>: Ensures that transactions occur independently of one another. Intermediate states of a transaction should not be visible to other transactions until it is committed.</li> <li><strong>Durability</strong>: Once a transaction has been committed, its effects are permanent, even in the case of a system failure.</li> </ol><h2>Implementation Steps</h2><ol> <li><strong>Begin Transaction</strong>: Start a new transaction. This often involves setting a flag or state that indicates a transaction is in progress.</li> <li><strong>Execute Operations</strong>: Perform the desired operations (e.g., inserts, updates, deletes). Keep track of changes made during the transaction.</li> <li><strong>Validation</strong>: Check for any constraints or conditions that must be satisfied before committing the transaction.</li> <li><strong>Commit</strong>: If all operations are successful and validations are met, apply the changes permanently. This might involve writing changes to the database and clearing any transaction-related state.</li> <li><strong>Rollback</strong>: If an error occurs during execution or validation, revert all changes made during the transaction to ensure that the system remains in a consistent state.</li> </ol><p><strong>Database Setup</strong></p><p>Assume you have two tables: accounts and transactions.</p><p><code>CREATE TABLE accounts (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    balance DECIMAL(10, 2) NOT NULL</code></p><p><code>);</code></p><p><code>CREATE TABLE transactions (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    account_id INT,</code></p><p><code>    amount DECIMAL(10, 2),</code></p><p><code>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>    FOREIGN KEY (account_id) REFERENCES accounts(id)</code></p><p><code>);</code></p><p><strong>PHP Code</strong></p><p>Here's a PHP script that performs a transaction to transfer money between two accounts:</p><p><!--?php</p--></p><p><code>$host = 'localhost';</code></p><p><code>$db = 'your_database';</code></p><p><code>$user = 'your_username';</code></p><p><code>$pass = 'your_password';</code></p><p><code>try {</code></p><p><code>    // Create a new PDO instance</code></p><p><code>    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);</code></p><p><code>    $pdo→setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code></p><p><code>    // Start a transaction</code></p><p><code>    $pdo→beginTransaction();</code></p><p><code>    // Amount to transfer</code></p><p><code>    $transferAmount = 100.00;</code></p><p><code>    $fromAccountId = 1;</code></p><p><code>    $toAccountId = 2;</code></p><p><code>    // Deduct amount from the source account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance - ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $fromAccountId]);</code></p><p><code>    // Check if the balance is sufficient</code></p><p><code>    if ($stmt→rowCount() === 0) {</code></p><p><code>        throw new Exception("Insufficient funds or account not found.");</code></p><p><code>    }</code></p><p><code>    // Add amount to the destination account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance + ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $toAccountId]);</code></p><p><code>    // Log the transaction</code></p><p><code>    $stmt = $pdo→prepare("INSERT INTO transactions (account_id, amount) VALUES (?, ?)");</code></p><p><code>    $stmt→execute([$fromAccountId, -$transferAmount]);</code></p><p><code>    $stmt→execute([$toAccountId, $transferAmount]);</code></p><p><code>    // Commit the transaction</code></p><p><code>    $pdo→commit();</code></p><p><code>    echo "Transaction completed successfully.";</code></p><p><code>}</code></p><p><code>catch (Exception $e) {</code></p><p><code>    // Rollback the transaction in case of error</code></p><p><code>    $pdo→rollBack();</code></p><p><code>    echo "Transaction failed: " . $e→getMessage();</code></p><p><code>}</code></p><p><code>?&gt;</code></p><h2>Explanation</h2><ol> <li><strong>Database Connection</strong>: We establish a connection to the MySQL database using PDO.</li> <li><strong>Begin Transaction</strong>: The transaction starts with <code>$pdo→beginTransaction()</code>.</li> <li><strong>Perform Operations</strong>: <ul> <li>The script first deducts the transfer amount from the source account.</li> <li>It checks if the update affected any rows, ensuring there are sufficient funds.</li> <li>Then it adds the amount to the destination account.</li> <li>Finally, it logs the transaction in the transactions table.</li> </ul> </li> <li><strong>Commit or Rollback</strong>: If all operations succeed, the transaction is committed with <code>$pdo→commit()</code>. If any error occurs, the transaction is rolled back to maintain data integrity.</li> </ol><h2>Notes</h2><ul> <li>Always use prepared statements to prevent SQL injection.</li> <li>Ensure proper error handling to manage any exceptions that may arise during the transaction.</li> <li>This is a simple example; consider adding more complex <a href="/article/top-drupal-lms-features-you-should-look-guide-your-education-businesses" title="Read about Drupal Lms Features For Your Education Business">business</a> logic and checks as needed in real applications.</li> </ul><h2>Using Database Management Systems</h2><p>If you're using a DBMS (like MySQL, PostgreSQL, or MongoDB), many of these functionalities are built-in. You would typically use:</p><ul> <li><strong>SQL Transactions</strong>: Use <code>BEGIN</code>, <code>COMMIT</code> and <code>ROLLBACK</code> statements.</li> <li><strong>ORM Libraries</strong>: Most Object-Relational Mapping libraries (like Hibernate or Entity Framework) provide transaction support.</li> </ul><h2>Considerations</h2><ul> <li><strong>Concurrency Control</strong>: Implement locking mechanisms or use optimistic concurrency control to manage how transactions interact with each other.</li> <li><strong>Error Handling</strong>: Ensure robust error handling and logging mechanisms to track issues during transactions.</li> <li><strong>Testing</strong>: Thoroughly test transaction implementations to validate atomicity, consistency, isolation and durability.</li> </ul><h2>Conclusion</h2><p>Implementing transactions is essential for maintaining data integrity in applications. Understanding and applying the principles of atomic operations will help you create robust systems that can handle errors gracefully and ensure consistency even under concurrent operations.</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p><h2>Key Concepts</h2><ol> <li><strong>Atomicity</strong>: Ensures that a series of operations either complete entirely or have no effect at all. If any operation fails, the entire transaction is rolled back.</li> <li><strong>Consistency</strong>: Guarantees that a transaction will bring the system from one valid state to another, maintaining all predefined rules, such as constraints and triggers.</li> <li><strong>Isolation</strong>: Ensures that transactions occur independently of one another. Intermediate states of a transaction should not be visible to other transactions until it is committed.</li> <li><strong>Durability</strong>: Once a transaction has been committed, its effects are permanent, even in the case of a system failure.</li> </ol><h2>Implementation Steps</h2><ol> <li><strong>Begin Transaction</strong>: Start a new transaction. This often involves setting a flag or state that indicates a transaction is in progress.</li> <li><strong>Execute Operations</strong>: Perform the desired operations (e.g., inserts, updates, deletes). Keep track of changes made during the transaction.</li> <li><strong>Validation</strong>: Check for any constraints or conditions that must be satisfied before committing the transaction.</li> <li><strong>Commit</strong>: If all operations are successful and validations are met, apply the changes permanently. This might involve writing changes to the database and clearing any transaction-related state.</li> <li><strong>Rollback</strong>: If an error occurs during execution or validation, revert all changes made during the transaction to ensure that the system remains in a consistent state.</li> </ol><p><strong>Database Setup</strong></p><p>Assume you have two tables: accounts and transactions.</p><p><code>CREATE TABLE accounts (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    balance DECIMAL(10, 2) NOT NULL</code></p><p><code>);</code></p><p><code>CREATE TABLE transactions (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    account_id INT,</code></p><p><code>    amount DECIMAL(10, 2),</code></p><p><code>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>    FOREIGN KEY (account_id) REFERENCES accounts(id)</code></p><p><code>);</code></p><p><strong>PHP Code</strong></p><p>Here's a PHP script that performs a transaction to transfer money between two accounts:</p><p><!--?php</p--></p><p><code>$host = 'localhost';</code></p><p><code>$db = 'your_database';</code></p><p><code>$user = 'your_username';</code></p><p><code>$pass = 'your_password';</code></p><p><code>try {</code></p><p><code>    // Create a new PDO instance</code></p><p><code>    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);</code></p><p><code>    $pdo→setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code></p><p><code>    // Start a transaction</code></p><p><code>    $pdo→beginTransaction();</code></p><p><code>    // Amount to transfer</code></p><p><code>    $transferAmount = 100.00;</code></p><p><code>    $fromAccountId = 1;</code></p><p><code>    $toAccountId = 2;</code></p><p><code>    // Deduct amount from the source account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance - ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $fromAccountId]);</code></p><p><code>    // Check if the balance is sufficient</code></p><p><code>    if ($stmt→rowCount() === 0) {</code></p><p><code>        throw new Exception("Insufficient funds or account not found.");</code></p><p><code>    }</code></p><p><code>    // Add amount to the destination account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance + ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $toAccountId]);</code></p><p><code>    // Log the transaction</code></p><p><code>    $stmt = $pdo→prepare("INSERT INTO transactions (account_id, amount) VALUES (?, ?)");</code></p><p><code>    $stmt→execute([$fromAccountId, -$transferAmount]);</code></p><p><code>    $stmt→execute([$toAccountId, $transferAmount]);</code></p><p><code>    // Commit the transaction</code></p><p><code>    $pdo→commit();</code></p><p><code>    echo "Transaction completed successfully.";</code></p><p><code>}</code></p><p><code>catch (Exception $e) {</code></p><p><code>    // Rollback the transaction in case of error</code></p><p><code>    $pdo→rollBack();</code></p><p><code>    echo "Transaction failed: " . $e→getMessage();</code></p><p><code>}</code></p><p><code>?&gt;</code></p><h2>Explanation</h2><ol> <li><strong>Database Connection</strong>: We establish a connection to the MySQL database using PDO.</li> <li><strong>Begin Transaction</strong>: The transaction starts with <code>$pdo→beginTransaction()</code>.</li> <li><strong>Perform Operations</strong>: <ul> <li>The script first deducts the transfer amount from the source account.</li> <li>It checks if the update affected any rows, ensuring there are sufficient funds.</li> <li>Then it adds the amount to the destination account.</li> <li>Finally, it logs the transaction in the transactions table.</li> </ul> </li> <li><strong>Commit or Rollback</strong>: If all operations succeed, the transaction is committed with <code>$pdo→commit()</code>. If any error occurs, the transaction is rolled back to maintain data integrity.</li> </ol><h2>Notes</h2><ul> <li>Always use prepared statements to prevent SQL injection.</li> <li>Ensure proper error handling to manage any exceptions that may arise during the transaction.</li> <li>This is a simple example; consider adding more complex <a href="/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses" title="Read about Drupal Lms Features For Your Education Business">business</a> logic and checks as needed in real applications.</li> </ul><h2>Using Database Management Systems</h2><p>If you're using a DBMS (like MySQL, PostgreSQL, or MongoDB), many of these functionalities are built-in. You would typically use:</p><ul> <li><strong>SQL Transactions</strong>: Use <code>BEGIN</code>, <code>COMMIT</code> and <code>ROLLBACK</code> statements.</li> <li><strong>ORM Libraries</strong>: Most Object-Relational Mapping libraries (like Hibernate or Entity Framework) provide transaction support.</li> </ul><h2>Considerations</h2><ul> <li><strong>Concurrency Control</strong>: Implement locking mechanisms or use optimistic concurrency control to manage how transactions interact with each other.</li> <li><strong>Error Handling</strong>: Ensure robust error handling and logging mechanisms to track issues during transactions.</li> <li><strong>Testing</strong>: Thoroughly test transaction implementations to validate atomicity, consistency, isolation and durability.</li> </ul><h2>Conclusion</h2><p>Implementing transactions is essential for maintaining data integrity in applications. Understanding and applying the principles of atomic operations will help you create robust systems that can handle errors gracefully and ensure consistency even under concurrent operations.</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
 </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
     <ul class="links field__items field--tags__items">
           <li class="field--tags__item"><a href="/articles" hreflang="en">Articles</a></li>
-          <li class="field--tags__item"><a href="/sci-tech" hreflang="en">Sci-Tech</a></li>
+          <li class="field--tags__item"><a href="/science-tech" hreflang="en">Science &amp; Tech</a></li>
           <li class="field--tags__item"><a href="/sql" hreflang="en">SQL</a></li>
       </ul>
 </div>
@@ -301,7 +660,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-60c4ca282512bf183525b5e10c398bd8292c4ca26ac8f54b1de7ab104b17e272">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-158df9077c0cf9cf14837f45d1c7d12520d7c126a46660be6003aa0f80c09c7a">
   
     
       
@@ -335,7 +694,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div id="toc-sidebar"><strong>In this article</strong></div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -389,7 +748,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3929","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ff59d152a33001e5d9062b5630f9d52949ee05214ccfcae269b253ca85e13860"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_40Z1YFRvBBoPMQ8sJOzZ8YeOuOnaYfN_hVPPD3R_Czc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
+<script src="/sites/default/files/js/js_YJyMVOR4nKYiqVeyQpd_gnhbo7ofGDsuBM5BcZSZ3gM.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBMAPKX1SiVVDIM1KGgR_78VLrwMDldkcFysKaf5iqRgnHDaawhQCy8PlJV9plLs7LJrVs34UeDaGyyEj"></script>
 
   </body>
 </html>
