@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/how-to-run-phpunit-test-cases-on-your-local-machine-for-drupal.webp"
             },
             "datePublished": "2023-08-27T11:30:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,259 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Running PHPUnit tests helps ensure that your Drupal module behaves as expected and provides a reliable way to identify and fix issues during <a href="/articles/vedas-and-development-yoga" title="Read about The Vedas And The Development Of Yoga">development</a>.</p><p>To run PHPUnit test cases on your local machine for Drupal, follow these steps:</p><p><strong>Install PHPUnit and its dependency</strong>:</p><ul> <li>Make sure you have PHP and Composer installed on your local machine. If you don't have PHPUnit installed, you can install it using Composer by running the following command:</li> </ul><p><code>composer require drupal/core-dev --dev --update-with-all-dependencies</code></p><p><strong>Set up a Drupal <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal Ten">Environment</a> and Configure</strong>:</p><ul> <li>Install Drupal on your local machine. You can use the Drupal project <a href="/articles/send-mail-custom-email-template-dynamic-values-drupal-mail-service" title="Read about Send Mail With Custom Email Template And With Dynamic Values Via Drupal Mail Service">template</a> or any other method of your choice. Ensure you have a working Drupal site with the module you want to test installed and enabled (In my case using the composer and ddev for the setup).</li> <li>To configure PHPUnit, you need to copy the phpunit.xml.dist file to phpunit.xml and make below changes in this file.</li> </ul><p><code>&lt;env name="SIMPLETEST_BASE_URL" value="https://drupal.ddev.site"/&gt;</code></p><p><code>&lt;env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/&gt;</code></p><p><code>&lt;env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/var/www/html/web/sites/simpletest/browser_output"/&gt;</code></p><ul> <li>Next, create a directory to store the output and change the folder permissions to 777, below shown the commands.</li> </ul><p><code>mkdir -p sites/simpletest/browser_output</code></p><p><code>chmod -R 777 sites/simpletest</code></p><p><strong>Run PHPUnit Tests:</strong></p><ul> <li>Get into the container by running the command ddev ssh.</li> <li>Now, navigate to the root of your Drupal site and execute the following command to run This command runs the PHPUnit tests for your Drupal module. If everything is set up correctly and your tests pass, you will see the test results displayed in the console.</li> </ul><p><code>cd web</code></p><p><code>../vendor/bin/phpunit -c core core/tests/Drupal/Tests/Core/Entity/ContentEntityBaseUnitTest.php</code></p><ul> <li>Below are a few example commands to run the test cases for core and contrib code.</li> </ul><p><code>../vendor/bin/phpunit -c core core/tests/Drupal/Tests/Core/Entity/EntityAccessCheckTest.php</code></p><p><code>../vendor/bin/phpunit -c core core/modules/help/tests/src/Functional/HelpPageReverseOrderTest.php</code></p><p><code>../vendor/bin/phpunit -c core core/modules/action</code></p><p><code>../vendor/bin/phpunit -c core modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarAdminMenuTest.php</code></p><p><code>../vendor/bin/phpunit -c core modules/contrib/admin_toolbar</code></p><ul> <li>Below is the example output for one such test case.</li> </ul><p><code>karthik.dk@drupal-web:/var/www/html/web$ ../vendor/bin/phpunit -c core core/tests/Drupal/Tests/Core/Entity/ContentEntityBaseUnitTest.php</code></p><p><code>PHPUnit 9.6.10 by Sebastian Bergmann and contributors.</code></p><p><code>Testing Drupal\Tests\Core\Entity\ContentEntityBaseUnitTest</code></p><p><code>......................&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 22 / 22 (100%)</code></p><p><code>Time: 00:01.852, Memory: 8.00 MB</code></p><p><code>OK (22 tests, 62 assertions)</code></p><p>Keep in mind that PHPUnit tests for Drupal modules are organized in specific directories and namespaces within your module's tests folder. Also, ensure that your module adheres to Drupal's coding standards for test classes and methods.</p><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Running PHPUnit tests helps ensure that your Drupal module behaves as expected and provides a reliable way to identify and fix issues during <a href="/articles/vedas-and-development-yoga" title="Read about The Vedas And The Development Of Yoga">development</a>.</p><p>To run PHPUnit test cases on your local machine for Drupal, follow these steps:</p><p><strong>Install PHPUnit and its dependency</strong>:</p><ul> <li>Make sure you have PHP and Composer installed on your local machine. If you don't have PHPUnit installed, you can install it using Composer by running the following command:</li> </ul><p><code>composer require drupal/core-dev --dev --update-with-all-dependencies</code></p><p><strong>Set up a Drupal <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal Ten">Environment</a> and Configure</strong>:</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4t9CBgS" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71SSpHadzXL._SL1500_.jpg" alt="Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4t9CBgS" target="_blank">
+                                Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 39% Off</div>
+
+                        <a href="https://amzn.to/4t9CBgS" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1088.00</span>
+                                <span class="current-price">₹669.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <ul> <li>Install Drupal on your local machine. You can use the Drupal project <a href="/articles/send-mail-custom-email-template-dynamic-values-drupal-mail-service" title="Read about Send Mail With Custom Email Template And With Dynamic Values Via Drupal Mail Service">template</a> or any other method of your choice. Ensure you have a working Drupal site with the module you want to test installed and enabled (In my case using the composer and ddev for the setup).</li> <li>To configure PHPUnit, you need to copy the phpunit.xml.dist file to phpunit.xml and make below changes in this file.</li> </ul><p><code>&lt;env name="SIMPLETEST_BASE_URL" value="https://drupal.ddev.site"/&gt;</code></p><p><code>&lt;env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/&gt;</code></p><p><code>&lt;env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/var/www/html/web/sites/simpletest/browser_output"/&gt;</code></p><ul> <li>Next, create a directory to store the output and change the folder permissions to 777, below shown the commands.</li> </ul><p><code>mkdir -p sites/simpletest/browser_output</code></p><p><code>chmod -R 777 sites/simpletest</code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4mDyx6k" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/616GUlIEqHL._SL1000_.jpg" alt="Universal Bumper Protection Blocks – Crash Guard Sliders for 22mm / 25mm / 28mm Pipes">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4mDyx6k" target="_blank">
+                                Universal Bumper Protection Blocks – Crash Guard Sliders for 22mm / 25mm / 28mm Pipes
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 50% Off</div>
+
+                        <a href="https://amzn.to/4mDyx6k" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹999.00</span>
+                                <span class="current-price">₹499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><strong>Run PHPUnit Tests:</strong></p><ul> <li>Get into the container by running the command ddev ssh.</li> <li>Now, navigate to the root of your Drupal site and execute the following command to run This command runs the PHPUnit tests for your Drupal module. If everything is set up correctly and your tests pass, you will see the test results displayed in the console.</li> </ul><p><code>cd web</code></p><p><code>../vendor/bin/phpunit -c core core/tests/Drupal/Tests/Core/Entity/ContentEntityBaseUnitTest.php</code></p><ul> <li>Below are a few example commands to run the test cases for core and contrib code.</li> </ul><p><code>../vendor/bin/phpunit -c core core/tests/Drupal/Tests/Core/Entity/EntityAccessCheckTest.php</code></p><p><code>../vendor/bin/phpunit -c core core/modules/help/tests/src/Functional/HelpPageReverseOrderTest.php</code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4t8DOVG" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71F7wEYKTeL._SL1280_.jpg" alt="Tecno Pova 7 Pro 5G – Best Gaming &amp;amp; High-Storage Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4t8DOVG" target="_blank">
+                                Tecno Pova 7 Pro 5G – Best Gaming &amp;amp; High-Storage Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 20% Off</div>
+
+                        <a href="https://amzn.to/4t8DOVG" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹23999.00</span>
+                                <span class="current-price">₹19299.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><code>../vendor/bin/phpunit -c core core/modules/action</code></p><p><code>../vendor/bin/phpunit -c core modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarAdminMenuTest.php</code></p><p><code>../vendor/bin/phpunit -c core modules/contrib/admin_toolbar</code></p><ul> <li>Below is the example output for one such test case.</li> </ul><p><code>karthik.dk@drupal-web:/var/www/html/web$ ../vendor/bin/phpunit -c core core/tests/Drupal/Tests/Core/Entity/ContentEntityBaseUnitTest.php</code></p><p><code>PHPUnit 9.6.10 by Sebastian Bergmann and contributors.</code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4vr3LBq" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41kKGEM47iL.jpg" alt="Motorola G57 Power 5G – Best Clean UI &amp;amp; Battery Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4vr3LBq" target="_blank">
+                                Motorola G57 Power 5G – Best Clean UI &amp;amp; Battery Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 10% Off</div>
+
+                        <a href="https://amzn.to/4vr3LBq" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16190.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><code>Testing Drupal\Tests\Core\Entity\ContentEntityBaseUnitTest</code></p><p><code>......................&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 22 / 22 (100%)</code></p><p><code>Time: 00:01.852, Memory: 8.00 MB</code></p><p><code>OK (22 tests, 62 assertions)</code></p><p>Keep in mind that PHPUnit tests for Drupal modules are organized in specific directories and namespaces within your module's tests folder. Also, ensure that your module adheres to Drupal's coding standards for test classes and methods.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41quccS" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41N-A8bxoeL.jpg" alt="OPPO K14 5G – Best Battery Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41quccS" target="_blank">
+                                OPPO K14 5G – Best Battery Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 28% Off</div>
+
+                        <a href="https://amzn.to/41quccS" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹25999.00</span>
+                                <span class="current-price">₹18752.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -662,7 +913,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-941aee9ca7c0a8cefcd4882b6a837d5cba3b2c580ff8bcf89009a029ffff3356">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9d4cd6372e4a0c6d74d0bd6d19b6adb4e2a652165d29e7e407ceb3cc91a27562">
   
     
       
@@ -714,7 +965,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

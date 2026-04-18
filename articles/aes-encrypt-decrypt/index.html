@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/1_4BDmgHbEkjYDUtEK-ntr6Q.webp"
             },
             "datePublished": "2024-08-15T12:33:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T14:43:34+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,13 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p dir="ltr"><a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">Advanced</a> Encryption Standard, where we use AES-256 to encrypt the data with Cipher.<strong> </strong>Encrypt and Decrypt <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> taken is 'Cipher Block Chaining' method 'AES-256-CBC'.</p><h3 dir="ltr">AES Encrypt</h3><ul dir="ltr"> <li>We would have the 'Secret' stored in a file which is other than the web root.</li> </ul><pre> $key = hash('sha256', $secret, true);</pre><ul dir="ltr"> <li>Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</li> <li>And Generate the pseudo random bytes as 'IV', so that it would be used during encryption and also be attached to the encrypted data.</li> </ul><pre> $iv = openssl_random_pseudo_bytes(16);</pre><ul dir="ltr"> <li>Now encrypt the 'String' with openssl encrypt by passing the 'AES-256-CBC' method, 'Key' and 'IV'</li> </ul><pre> $ciphertext = openssl_encrypt($plaintext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre><ul> <li>'openssl_encrypt' will Encrypt given data with given method and key, returns a raw or base64 encoded string.</li> <li>'Hash' the returned 'Cipher' text with sha256 hmac method</li> </ul><pre> $hash = hash_hmac('sha256', $ciphertext, $key, true);</pre><ul dir="ltr"> <li>Now concatenate the 'IV' and 'Hash' and 'Cipher' and store in the DB as the encrypted value.</li> </ul><h3 dir="ltr">AES Decrypt</h3><ul dir="ltr"> <li>Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</li> </ul><pre> $key = hash('sha256', $password, true);</pre><ul dir="ltr"> <li>Explode the concatenated string to 'IV' and 'Hash' and 'Cipher'</li> </ul><pre> $iv = substr($ivHashCiphertext, 0, 16);$hash = substr($ivHashCiphertext, 16, 32);$ciphertext = substr($ivHashCiphertext, 48);</pre><ul> <li>'openssl_decrypt' will take a raw or base64 encoded string and decrypts it using a given method and key.</li> <li>Now decrypt the 'Cipher' with 'AES-256-CBC' method, 'Key' and 'IV'</li> </ul><pre> openssl_decrypt($ciphertext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre><ul dir="ltr"> <li>Return the decrypted 'String'. it is ok, or do i need to change it to excel.</li> </ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p dir="ltr"><a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">Advanced</a> Encryption Standard, where we use AES-256 to encrypt the data with Cipher.<strong> </strong>Encrypt and Decrypt <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> taken is 'Cipher Block Chaining' method 'AES-256-CBC'.</p><h3 dir="ltr">AES Encrypt</h3>
+            
+            
+            <ul dir="ltr"> <li>We would have the 'Secret' stored in a file which is other than the web root.</li> </ul><pre> $key = hash('sha256', $secret, true);</pre><ul dir="ltr"> <li>Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</li> <li>And Generate the pseudo random bytes as 'IV', so that it would be used during encryption and also be attached to the encrypted data.</li> </ul><pre> $iv = openssl_random_pseudo_bytes(16);</pre><ul dir="ltr"> <li>Now encrypt the 'String' with openssl encrypt by passing the 'AES-256-CBC' method, 'Key' and 'IV'</li> </ul><pre> $ciphertext = openssl_encrypt($plaintext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre><ul> <li>'openssl_encrypt' will Encrypt given data with given method and key, returns a raw or base64 encoded string.</li> <li>'Hash' the returned 'Cipher' text with sha256 hmac method</li> </ul><pre> $hash = hash_hmac('sha256', $ciphertext, $key, true);</pre><ul dir="ltr"> <li>Now concatenate the 'IV' and 'Hash' and 'Cipher' and store in the DB as the encrypted value.</li> </ul><h3 dir="ltr">AES Decrypt</h3>
+            
+            
+            <ul dir="ltr"> <li>Hash the 'Secret' with sha256, this gives you the 'Key' which will be used to openssl encrypt.</li> </ul><pre> $key = hash('sha256', $password, true);</pre><ul dir="ltr"> <li>Explode the concatenated string to 'IV' and 'Hash' and 'Cipher'</li> </ul><pre> $iv = substr($ivHashCiphertext, 0, 16);$hash = substr($ivHashCiphertext, 16, 32);$ciphertext = substr($ivHashCiphertext, 48);</pre><ul> <li>'openssl_decrypt' will take a raw or base64 encoded string and decrypts it using a given method and key.</li> <li>Now decrypt the 'Cipher' with 'AES-256-CBC' method, 'Key' and 'IV'</li> </ul><pre> openssl_decrypt($ciphertext, $method, $key, OPENSSL_RAW_DATA, $iv);</pre><ul dir="ltr"> <li>Return the decrypted 'String'. it is ok, or do i need to change it to excel.</li> </ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -660,7 +666,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4c54fde7fb51680a45ec8d8559e74960069060be0b81f0f40de3daa23f183ee8">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-aebd54b5eef33dc0c933e6463f359191bb49b8ad1559dda5834c02c2f76279e4">
   
     
       
@@ -712,7 +718,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

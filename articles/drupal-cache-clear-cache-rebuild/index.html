@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/cache-drupal.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:02:08+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,25 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In order to render a page via Drupal, Drupal will need to make several database queries and get the data to render. This process of making queries can be reduced by storing the web pages in a cache, which is what Drupal does.</p><p>And developers during developments may use this cache clear or cache rebuild quite often, like after installing a new module or theme. The site would slow for a couple of clicks but would be quick once the caches are filled back.</p><p>Coming to the article's agenda, Why there is Cache Rebuild on Drupal 8, while we had Cache Clear in Drupal 7.</p><p><strong><sup><i class="fa fa-quote-left"></i></sup> Since Drupal is using caching very intensively and by this it creates lots of inter-dependencies. And for this clearing parts of the entire caches would lead to some major risks for a website. Here’s the Cache Rebuild will come and practically will rebuild (re-bootstraps) the whole Drupal site and will make sure that caches are perfectly cleared without any errors. <sup><i class="fa fa-quote-right"></i></sup></strong></p><p>Drupal 8's cache-rebuild is one more step in the conventional cache-clear practice, it adds a new "re-bootstrapping" operation to the "cache clearing" process.</p><p>And how do you rebuild your caches in Drupal 8?</p><ul class="check">                                <li>Via Drush</li>                                <li>Via Admin side</li>                                <li>Via /core/rebuild.php</li>                                <li>Via Truncating all "cache_*" tables</li>                            </ul><h3>1. Via Drush</h3><p>If you have drush installed you will have the following commands for cache rebuild</p><pre>drush cache-rebuilddrush rebuild or drush cr</pre><h3>2. Via Admin</h3><p>On the Drupal site, Navigate to <code>Administration &gt; Configuration &gt; Development &gt; Performance</code>. Click the button <code>Clear all Caches</code>.</p><h3>3. Via <code>/core/rebuild.php</code></h3><p>Drupal 8 comes with a new <code>/core/rebuild.php</code>, which does the cache rebuild. This actually Rebuilds all Drupal caches even when Drupal itself does not work.</p><p>Add <code>$settings['rebuild_access'] = TRUE;</code> in your <code>settings.php</code> and visit <code>BASE_URL/rebuild.php</code></p><p>Run script in your command line <code>/core/admin/rebuild_token_calculator.sh</code>, then use the results there as query parameters for <code>/core/rebuild.php</code></p><p>Here's the source of <a target="_blank" href="https://www.drupal.org/node/2153725"><strong>Rebuild Script in Drupal (https://www.drupal.org/node/2153725)</strong></a></p><h3>4. Via Truncating all "cache_*" tables</h3><p>Another approach is to empty all the data from the cache table from Drupal.</p><pre>TRUNCATE cache_config</pre><p>Similarly for all the cache_* tables.</p><p>To summarise, <strong>Drupal 8's cache-rebuild</strong> is one more step in the conventional cache-clear practice, it adds a new <strong>re-bootstrapping</strong> operation to the <strong>cache clearing</strong> process.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In order to render a page via Drupal, Drupal will need to make several database queries and get the data to render. This process of making queries can be reduced by storing the web pages in a cache, which is what Drupal does.</p><p>And developers during developments may use this cache clear or cache rebuild quite often, like after installing a new module or theme. The site would slow for a couple of clicks but would be quick once the caches are filled back.</p><p>Coming to the article's agenda, Why there is Cache Rebuild on Drupal 8, while we had Cache Clear in Drupal 7.</p><p><strong><sup><i class="fa fa-quote-left"></i></sup> Since Drupal is using caching very intensively and by this it creates lots of inter-dependencies. And for this clearing parts of the entire caches would lead to some major risks for a website. Here’s the Cache Rebuild will come and practically will rebuild (re-bootstraps) the whole Drupal site and will make sure that caches are perfectly cleared without any errors. <sup><i class="fa fa-quote-right"></i></sup></strong></p><p>Drupal 8's cache-rebuild is one more step in the conventional cache-clear practice, it adds a new "re-bootstrapping" operation to the "cache clearing" process.</p><p>And how do you rebuild your caches in Drupal 8?</p><ul class="check">                                <li>Via Drush</li>                                <li>Via Admin side</li>                                <li>Via /core/rebuild.php</li>                                <li>Via Truncating all "cache_*" tables</li>                            </ul>
+        
+            
+        <h3>1. Via Drush</h3>
+            
+            
+            <p>If you have drush installed you will have the following commands for cache rebuild</p><pre>drush cache-rebuilddrush rebuild or drush cr</pre><h3>2. Via Admin</h3>
+            
+            
+            <p>On the Drupal site, Navigate to <code>Administration &gt; Configuration &gt; Development &gt; Performance</code>. Click the button <code>Clear all Caches</code>.</p><h3>3. Via <code>/core/rebuild.php</code></h3>
+            
+            
+            <p>Drupal 8 comes with a new <code>/core/rebuild.php</code>, which does the cache rebuild. This actually Rebuilds all Drupal caches even when Drupal itself does not work.</p><p>Add <code>$settings['rebuild_access'] = TRUE;</code> in your <code>settings.php</code> and visit <code>BASE_URL/rebuild.php</code></p><p>Run script in your command line <code>/core/admin/rebuild_token_calculator.sh</code>, then use the results there as query parameters for <code>/core/rebuild.php</code></p><p>Here's the source of <a target="_blank" href="https://www.drupal.org/node/2153725"><strong>Rebuild Script in Drupal (https://www.drupal.org/node/2153725)</strong></a></p><h3>4. Via Truncating all "cache_*" tables</h3>
+        
+            
+        
+            
+            
+            <p>Another approach is to empty all the data from the cache table from Drupal.</p><pre>TRUNCATE cache_config</pre><p>Similarly for all the cache_* tables.</p><p>To summarise, <strong>Drupal 8's cache-rebuild</strong> is one more step in the conventional cache-clear practice, it adds a new <strong>re-bootstrapping</strong> operation to the <strong>cache clearing</strong> process.</p>
 </div>
       
 
@@ -661,7 +679,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-fa8739b6f1a9db52bc6a4e11d4eb6051dc4d5f248194d8a77528cb664e6e1f6d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-0c2aca26c312f7a5b0c4c4e31d8ccd55431cf57619b4336a2e7b094704fd264f">
   
     
       
@@ -713,7 +731,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

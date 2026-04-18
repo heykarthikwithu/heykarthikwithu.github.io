@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupal-twig.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,77 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>A completely new template engine is introduced in Drupal. The templating system in all previous versions of Drupal is using <code>theme_*</code> functions and PHP-based <code>*.tpl.php</code> files. Now, this has been completely replaced in Drupal 8. Instead of using theme functions and theme template files, Drupal is now using the Twig templating system.</p><p>Twig is a <strong>PHP-based compiled templating language</strong>. When your web page renders, the Twig engine takes the template and converts it into a 'compiled' PHP template which is stored in a protected directory in <code>sites/default/files/php/twig</code>. The compilation is done once, <strong>template files are cached for reuse</strong> and are recompiled on clearing the Twig cache.</p><h3>Why Twig?</h3><p><strong>If we already have PHP templates, a faster templating system…! Then why Twig?</strong>.</p><p>Let’s see <strong>how we define faster</strong>, is it execution time, or development time, or maintenance time, or memory utilized by it, or a combination of a few of these. To have a template engine means to have some performance improvements in terms of speed and memory at the same time have better development + maintenance experience.</p><p><strong>And Yes</strong>, just using the PHP Templating system is faster compared with having any template engine. But at the same time, if any template engine is solving some problems and gives developers a better experience, then that would be a good choice for any framework like Drupal to have.</p><p>Below are a few points put out which we can take as improvements in a template engine compared to plain PHP templates.</p><h4>1. Syntax in template engine</h4><p>Drupal 8 will be accessing all the variables very consistently like <code>{{ node.nid }}</code> or <code>{{ node_url }}</code>, wherein Drupal 7 we have multiple ways to print a particular variable, including strings, objects and arrays.</p><h4>2. Inconsistency in PHP templates</h4><p>In Drupal 7 we can use template files and at the same time, we can use the functions to render. Sometimes it becomes harder to <a href="/articles/ways-understand-tricks-played-people-around-you" title="Read about Ways To Understand The Tricks Played By People Around You">understand</a> already written code or the Core code (without documentation) and also we see difficulties in overriding the code. But Drupal 8 only uses template files.</p><h4>3. Redundancy while writing code</h4><p>In Drupal 8 we can use the existing template, like using extends, which is a kind of proper inheritance and by this, we can eliminate the duplicate code. But in Drupal 7 we have multiple files with similar code.</p><h4>4. Sanitize data</h4><p>Using template engines like Twig, we can automatically sanitize the data which is to be rendered. So there would be no way to have any unsafe functions like in Drupal earlier version like in Drupal 7 we can print the unsanitized data to render and even we would be able to do database queries. Here Twig is responsible for sanitizing data.</p><h4>5. Caching</h4><p>And also handling of caches are improved in Drupal when compared to earlier versions (which is discussed in this article), which will keep any template engine at top of its performance.</p><p>Overall, Drupal as a framework now has moved to a more <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> and optimized way of rendering a site’s theme through the use of Twig.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>A completely new template engine is introduced in Drupal. The templating system in all previous versions of Drupal is using <code>theme_*</code> functions and PHP-based <code>*.tpl.php</code> files. Now, this has been completely replaced in Drupal 8. Instead of using theme functions and theme template files, Drupal is now using the Twig templating system.</p><p>Twig is a <strong>PHP-based compiled templating language</strong>. When your web page renders, the Twig engine takes the template and converts it into a 'compiled' PHP template which is stored in a protected directory in <code>sites/default/files/php/twig</code>. The compilation is done once, <strong>template files are cached for reuse</strong> and are recompiled on clearing the Twig cache.</p><h3>Why Twig?</h3>
+            
+            
+            <p><strong>If we already have PHP templates, a faster templating system…! Then why Twig?</strong>.</p><p>Let’s see <strong>how we define faster</strong>, is it execution time, or development time, or maintenance time, or memory utilized by it, or a combination of a few of these. To have a template engine means to have some performance improvements in terms of speed and memory at the same time have better development + maintenance experience.</p><p><strong>And Yes</strong>, just using the PHP Templating system is faster compared with having any template engine. But at the same time, if any template engine is solving some problems and gives developers a better experience, then that would be a good choice for any framework like Drupal to have.</p><p>Below are a few points put out which we can take as improvements in a template engine compared to plain PHP templates.</p><h4>1. Syntax in template engine</h4><p>Drupal 8 will be accessing all the variables very consistently like <code>{{ node.nid }}</code> or <code>{{ node_url }}</code>, wherein Drupal 7 we have multiple ways to print a particular variable, including strings, objects and arrays.</p><h4>2. Inconsistency in PHP templates</h4><p>In Drupal 7 we can use template files and at the same time, we can use the functions to render. Sometimes it becomes harder to <a href="/articles/ways-understand-tricks-played-people-around-you" title="Read about Ways To Understand The Tricks Played By People Around You">understand</a> already written code or the Core code (without documentation) and also we see difficulties in overriding the code. But Drupal 8 only uses template files.</p><h4>3. Redundancy while writing code</h4>
+        
+            
+        <p>In Drupal 8 we can use the existing template, like using extends, which is a kind of proper inheritance and by this, we can eliminate the duplicate code. But in Drupal 7 we have multiple files with similar code.</p>
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4t98VjZ" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71y8TdM2dJL._SL1500_.jpg" alt="AllExtreme Disc Lock Alarm – 110dB Anti-Theft Security Lock for Bikes &amp;amp; Scooters">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4t98VjZ" target="_blank">
+                                AllExtreme Disc Lock Alarm – 110dB Anti-Theft Security Lock for Bikes &amp;amp; Scooters
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 0% Off</div>
+
+                        <a href="https://amzn.to/4t98VjZ" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹898.00</span>
+                                <span class="current-price">₹898.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h4>4. Sanitize data</h4><p>Using template engines like Twig, we can automatically sanitize the data which is to be rendered. So there would be no way to have any unsafe functions like in Drupal earlier version like in Drupal 7 we can print the unsanitized data to render and even we would be able to do database queries. Here Twig is responsible for sanitizing data.</p>
+        
+            
+        <h4>5. Caching</h4>
+                    
+                        
+                    <p>And also handling of caches are improved in Drupal when compared to earlier versions (which is discussed in this article), which will keep any template engine at top of its performance.</p><p>Overall, Drupal as a framework now has moved to a more <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> and optimized way of rendering a site’s theme through the use of Twig.</p>
 </div>
       
 
@@ -663,7 +733,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1d1ee8bdd4e73d607e6e18f7c0d07daa7a1cb5b9761a7b2db4fe5ff908ae0c7d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-eb5e1d6ac143227edcec2e8e06dbb7f3031bc80960fa0f1303b415d3f9875fd9">
   
     
       
@@ -715,7 +785,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/profiling-drupal-performance-with-webgrind-and-xdebug.webp"
             },
             "datePublished": "2023-11-25T09:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,95 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Xdebug Profiling is all about measuring the <a href="/articles/how-improve-drupal-website-performance" title="Read about How To Improve Drupal Website Performance">performance</a> of PHP code. In this article you gonna see how your measure the performance of your php code using webgrid and the xdebug.</p><h2>Requirements:</h2><ol> <li>Xdebug, with profiler enabled</li> <li>Webgrind</li> <li>Xdebug Addon plugin for browser</li> </ol><h3>1. Xdebug with profiler enabled</h3><h3>For setting up the <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a>, edit the php.ini file and add following lines.</h3><p><code>xdebug.profiler_enable_trigger = 1</code></p><p>If you want the cachegrind in a prefered location, then add the following</p><p><code>xdebug.profiler_output_dir="/var/www/html/xdebug_profiler"</code></p><p>If you want a prefered name, add below line of code</p><p><code>xdebug.profiler_output_name="cachegrind.out.%u.%H_%R"</code></p><p>Once added, restart the web server in my case</p><p><code>service apache2 restart</code></p><p>Once you restart the server, visit the index page where you have PHPInfo with profiler enabled, as shown in the image.</p><p><img alt="profiler-settings" src="/upload/blogs/profiler-settings.png"></p><h3>2. Webgrind</h3><h3>For installing the webgrind, download the latest version from the below url</h3><p><a href="https://code.google.com/archive/p/webgrind/downloads">https://code.google.com/archive/p/webgrind/downloads</a></p><p>Extract it and put in the root folder of your web server. When you hit the&nbsp;localhost&nbsp;you will be able to see the running webgrind. In my case I have the existing cache grinds</p><p><img alt="webgrind" src="/upload/blogs/webgrind1.png"></p><h3>3. Xdebug Addon plugin</h3><p>Next we go to installing the xdebug plugin. First download and enable the plugin,</p><p><img alt="xdebug" src="/upload/blogs/xdebug1.png"></p><p>Once done, you will be able to see the icons shown in the below image on your browser.</p><p><img alt="xdebug2" src="/upload/blogs/xdebug2.png"></p><p>Enable the Xdebug trace as shown in the image.</p><h2>Now let's check the performance.</h2><p>To do this initially we write a test code in a&nbsp;testme.php&nbsp;We have 3 for loops in our case, which runs heavily when compared to the rest.The 3rd one will be slowest one in our case,So this should be shown by our webgrind</p><p><img alt=" testme0" src="/upload/blogs/testme0.png"></p><p>Run the&nbsp;<code>testme.php</code>&nbsp;code by hitting the url with the parameter&nbsp;<code>XDEBUG_PROFILE=on</code></p><p><img alt="testme1" src="/upload/blogs/testme1.png"></p><p>Now visit the webgrind at you localhost and select the testme.php‘s cache grind.</p><p>You will be able to see the output as shown in image</p><p><img alt="testme3" src="/upload/blogs/testme3.png"></p><p>As shown in the above image</p><blockquote> <p>In&nbsp;line 24 of testme.php&nbsp;the time consumed is&nbsp;99.84 percent&nbsp;of you entire testme.php time execution.</p> </blockquote><p>So in Drupal case also hit the page url as shown below where we are hitting the <code>node/4</code> with <code>XDEBUG_PROFILE=on</code></p><p><img alt="drupaltest1" src="/upload/blogs/drupaltest1.png"></p><p>Visit the webgrind on localhost, where one more cache grind will be created for drupal one.</p><p><img alt="drupaltest2" src="/upload/blogs/drupaltest2.png"></p><p>Similarly as in the&nbsp;<code>test.php</code>&nbsp;case, we can see at which particular line the code is taking the more time.</p><h2>Conclusion</h2><p>In this manner we can check for the specific piece of code which is taking more time to execute and optimize that particular piece of code. Additionally, you can see the hierarchy of all <a href="/articles/boost-your-attention-and-ability-function-meditation-exercise-and-sleep" title="Read about Boost Your Attention And Ability To Function With Meditation Exercise And Sleep">function</a> calls and follow the same steps to check for the root function performance.</p><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Xdebug Profiling is all about measuring the <a href="/articles/how-improve-drupal-website-performance" title="Read about How To Improve Drupal Website Performance">performance</a> of PHP code. In this article you gonna see how your measure the performance of your php code using webgrid and the xdebug.</p>
+        
+            
+        
+        
+            
+        <h2>Requirements:</h2><ol> <li>Xdebug, with profiler enabled</li> <li>Webgrind</li> <li>Xdebug Addon plugin for browser</li> </ol><h3>1. Xdebug with profiler enabled</h3>
+            
+            
+            <h3>For setting up the <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a>, edit the php.ini file and add following lines.</h3>
+            
+            
+            <p><code>xdebug.profiler_enable_trigger = 1</code></p><p>If you want the cachegrind in a prefered location, then add the following</p><p><code>xdebug.profiler_output_dir="/var/www/html/xdebug_profiler"</code></p><p>If you want a prefered name, add below line of code</p><p><code>xdebug.profiler_output_name="cachegrind.out.%u.%H_%R"</code></p><p>Once added, restart the web server in my case</p><p><code>service apache2 restart</code></p><p>Once you restart the server, visit the index page where you have PHPInfo with profiler enabled, as shown in the image.</p><p><img alt="profiler-settings" src="/upload/blogs/profiler-settings.png"></p><h3>2. Webgrind</h3>
+        
+            
+        
+            
+            
+            
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4e4EV4n" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41Sb3p-NPBL._SX679_.jpg" alt="Qlect Portable Blender – USB Rechargeable Smoothie Maker On-the-Go">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4e4EV4n" target="_blank">
+                                Qlect Portable Blender – USB Rechargeable Smoothie Maker On-the-Go
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 66% Off</div>
+
+                        <a href="https://amzn.to/4e4EV4n" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1999.00</span>
+                                <span class="current-price">₹683.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h3>For installing the webgrind, download the latest version from the below url</h3>
+            
+            
+            <p><a href="https://code.google.com/archive/p/webgrind/downloads">https://code.google.com/archive/p/webgrind/downloads</a></p><p>Extract it and put in the root folder of your web server. When you hit the&nbsp;localhost&nbsp;you will be able to see the running webgrind. In my case I have the existing cache grinds</p><p><img alt="webgrind" src="/upload/blogs/webgrind1.png"></p><h3>3. Xdebug Addon plugin</h3>
+            
+            
+            <p>Next we go to installing the xdebug plugin. First download and enable the plugin,</p><p><img alt="xdebug" src="/upload/blogs/xdebug1.png"></p><p>Once done, you will be able to see the icons shown in the below image on your browser.</p><p><img alt="xdebug2" src="/upload/blogs/xdebug2.png"></p><p>Enable the Xdebug trace as shown in the image.</p><h2>Now let's check the performance.</h2><p>To do this initially we write a test code in a&nbsp;testme.php&nbsp;We have 3 for loops in our case, which runs heavily when compared to the rest.The 3rd one will be slowest one in our case,So this should be shown by our webgrind</p><p><img alt=" testme0" src="/upload/blogs/testme0.png"></p><p>Run the&nbsp;<code>testme.php</code>&nbsp;code by hitting the url with the parameter&nbsp;<code>XDEBUG_PROFILE=on</code></p><p><img alt="testme1" src="/upload/blogs/testme1.png"></p><p>Now visit the webgrind at you localhost and select the testme.php‘s cache grind.</p><p>You will be able to see the output as shown in image</p><p><img alt="testme3" src="/upload/blogs/testme3.png"></p><p>As shown in the above image</p><blockquote> <p>In&nbsp;line 24 of testme.php&nbsp;the time consumed is&nbsp;99.84 percent&nbsp;of you entire testme.php time execution.</p> </blockquote><p>So in Drupal case also hit the page url as shown below where we are hitting the <code>node/4</code> with <code>XDEBUG_PROFILE=on</code></p><p><img alt="drupaltest1" src="/upload/blogs/drupaltest1.png"></p><p>Visit the webgrind on localhost, where one more cache grind will be created for drupal one.</p><p><img alt="drupaltest2" src="/upload/blogs/drupaltest2.png"></p><p>Similarly as in the&nbsp;<code>test.php</code>&nbsp;case, we can see at which particular line the code is taking the more time.</p>
+        
+            
+        <h2>Conclusion</h2>
+        
+            
+        <p>In this manner we can check for the specific piece of code which is taking more time to execute and optimize that particular piece of code. Additionally, you can see the hierarchy of all <a href="/articles/boost-your-attention-and-ability-function-meditation-exercise-and-sleep" title="Read about Boost Your Attention And Ability To Function With Meditation Exercise And Sleep">function</a> calls and follow the same steps to check for the root function performance.</p><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -661,7 +749,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-988db5047dd5e43e71c0503a66dbdbd09f19dec92b2639e6233fa53f43c5fb35">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9fe5c3fab4a1f17037073cde70dc733fba16df4febfb96905f4466afc291d38e">
   
     
       
@@ -713,7 +801,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

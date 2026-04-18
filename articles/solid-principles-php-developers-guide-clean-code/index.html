@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/understanding-the-solid-principles-in-php.webp"
             },
             "datePublished": "2025-11-23T10:23:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,83 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The SOLID <a href="/articles/solid-principles-php-developers-guide-clean-code" title="Read about Understanding The Solid Principles In Php">principles</a> are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.</p><p>Let's dive into each principle, exploring its meaning and how it can be applied effectively in PHP.</p><h2>1. Single Responsibility Principle (SRP)</h2><p>A class should have only one reason to change, meaning it should have only one job or responsibility.</p><ul> <li>When a class has multiple responsibilities, it becomes harder to maintain and <a href="/articles/how-understand-love-and-hate-after-cheating" title="Read about How To Understand Love And Hate After Cheating">understand</a>.</li> <li>Changes related to one responsibility can impact others, leading to increased complexity and potential bugs.</li> <li>Single Responsibility Principal (SRP) encourages a clear separation of concerns, resulting in more manageable and focused classes.</li> </ul><p><strong>Example in PHP:</strong></p><p>Consider a class that handles both user authentication and user data storage.</p><p>Code Violating SRP.</p><p><code>class User {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>    public function save() {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>class UserAuthenticator {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class UserRepository {</code></p><p><code>    public function save(User $user) {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><h2>2. Open/Closed Principle (OCP)</h2><p>Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.</p><ul> <li>This principle states that you should be able to add new functionality to a class without changing its existing code.</li> <li>This promotes code stability and allows for easier enhancements, reducing the risk of introducing new bugs when features are added.</li> <li>Open/Closed Principle (OCP) is typically achieved through the use of interfaces and abstract classes.</li> </ul><p><strong>Example in PHP</strong>: Imagine a Shape class that calculates area. If you need to add new shapes, you shouldn't modify the existing class.</p><p><code>abstract class Shape {</code></p><p><code>    abstract public function area(): float;</code></p><p><code>}</code></p><p><code>class Circle extends Shape {</code></p><p><code>    public function __construct(private float $radius) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return pi() * ($this→radius ** 2);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Square extends Shape {</code></p><p><code>    public function __construct(private float $side) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return $this→side ** 2;</code></p><p><code>    }</code></p><p><code>}</code></p><h2>3. Liskov Substitution Principle (LSP)</h2><p>Subtypes must be substitutable for their base types without altering the correctness of the program.</p><ul> <li>This principle ensures that a derived class can replace its base class without causing issues in the program.</li> <li>If a subclass modifies expected behavior in an undesirable way, it violates LSP.</li> <li>Adhering to this principle promotes consistent behavior across different class hierarchies and helps maintain program integrity.</li> </ul><p><strong>Example in PHP</strong>: Consider a Bird class. If a Penguin class is derived from Bird, it should not implement a method that allows it to fly, as penguins cannot fly.</p><p>Code Violating LSP.</p><p><code>class Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Sparrow extends Bird {}</code></p><p><code>class Penguin extends Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        throw new Exception("Penguins can't fly!");</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface Flyable {</code></p><p><code>    public function fly();</code></p><p><code>}</code></p><p><code>class Sparrow implements Flyable {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Penguin {</code></p><p><code>    // no fly method</code></p><p><code>}</code></p><h2>4. Interface Segregation Principle (ISP)</h2><p>Clients should not be forced to depend on interfaces they do not use.</p><ul> <li>Rather than creating large, unwieldy interfaces that force clients to implement unnecessary methods, ISP advocates for smaller, more specific interfaces.</li> <li>This reduces dependencies and promotes cleaner designs, allowing classes to implement only the functionality they need.</li> </ul><p><strong>Example in PHP</strong>: A large interface for various functionalities can lead to unnecessary dependencies.</p><p>Code Violating ISP.</p><p><code>interface MultiFunctionDevice {</code></p><p><code>    public function print();</code></p><p><code>    public function scan();</code></p><p><code>    public function fax();</code></p><p><code>}</code></p><p><code>class Printer implements MultiFunctionDevice {</code></p><p><code>    public function print() {</code></p><p><code>        // print logic</code></p><p><code>    }</code></p><p><code>    public function scan() {</code></p><p><code>        throw new Exception("Not a scanner");</code></p><p><code>    }</code></p><p><code>    public function fax() {</code></p><p><code>        throw new Exception("Not a fax machine");</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface Printer {</code></p><p><code>    public function print();</code></p><p><code>}</code></p><p><code>interface Scanner {</code></p><p><code>    public function scan();</code></p><p><code>}</code></p><p><code>class SimplePrinter implements Printer {</code></p><p><code>    public function print() {</code></p><p><code>        // print logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class MultiFunctionPrinter implements Printer, Scanner {</code></p><p><code>    public function print() {</code></p><p><code>        // print logic</code></p><p><code>    }</code></p><p><code>    public function scan() {</code></p><p><code>        // scan logic</code></p><p><code>    }</code></p><p><code>}</code></p><h2>5. Dependency Inversion Principle (DIP)</h2><p>High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).</p><ul> <li>DIP encourages the use of abstractions to decouple high-level and low-level components.</li> <li>By depending on interfaces rather than concrete implementations, you enhance flexibility and make it easier to swap out components without affecting the overall system.</li> <li>This leads to a more modular architecture, improving maintainability and testing.</li> </ul><p><strong>Example in PHP</strong>: A class that directly instantiates its dependencies.</p><p>Code Violating DIP.</p><p><code>class UserService {</code></p><p><code>    private Database $database;</code></p><p><code>    public function __construct() {</code></p><p><code>        $this→database = new Database();</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface DatabaseInterface {</code></p><p><code>    public function save(User $user);</code></p><p><code>}</code></p><p><code>class Database implements DatabaseInterface {</code></p><p><code>    public function save(User $user) {</code></p><p><code>        // save logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class UserService {</code></p><p><code>    public function __construct(private DatabaseInterface $database) {}</code></p><p><code>}</code></p><h2>Conclusion</h2><p>The SOLID principles provide a foundation for developing well-structured, maintainable and scalable software. By following these principles, developers can create applications that are easier to understand and adapt over time, ultimately leading to better software quality and enhanced collaboration among team members. Embracing SOLID principles is essential for effective software development in PHP and beyond</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The SOLID <a href="/articles/solid-principles-php-developers-guide-clean-code" title="Read about Understanding The Solid Principles In Php">principles</a> are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.</p><p>Let's dive into each principle, exploring its meaning and how it can be applied effectively in PHP.</p><h2>1. Single Responsibility Principle (SRP)</h2><p>A class should have only one reason to change, meaning it should have only one job or responsibility.</p><ul> <li>When a class has multiple responsibilities, it becomes harder to maintain and <a href="/articles/how-understand-love-and-hate-after-cheating" title="Read about How To Understand Love And Hate After Cheating">understand</a>.</li> <li>Changes related to one responsibility can impact others, leading to increased complexity and potential bugs.</li> <li>Single Responsibility Principal (SRP) encourages a clear separation of concerns, resulting in more manageable and focused classes.</li> </ul><p><strong>Example in PHP:</strong></p><p>Consider a class that handles both user authentication and user data storage.</p><p>Code Violating SRP.</p><p><code>class User {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>    public function save() {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>class UserAuthenticator {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class UserRepository {</code></p><p><code>    public function save(User $user) {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><h2>2. Open/Closed Principle (OCP)</h2><p>Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.</p><ul> <li>This principle states that you should be able to add new functionality to a class without changing its existing code.</li> <li>This promotes code stability and allows for easier enhancements, reducing the risk of introducing new bugs when features are added.</li> <li>Open/Closed Principle (OCP) is typically achieved through the use of interfaces and abstract classes.</li> </ul><p><strong>Example in PHP</strong>: Imagine a Shape class that calculates area. If you need to add new shapes, you shouldn't modify the existing class.</p><p><code>abstract class Shape {</code></p><p><code>    abstract public function area(): float;</code></p><p><code>}</code></p><p><code>class Circle extends Shape {</code></p><p><code>    public function __construct(private float $radius) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return pi() * ($this→radius ** 2);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Square extends Shape {</code></p><p><code>    public function __construct(private float $side) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return $this→side ** 2;</code></p><p><code>    }</code></p><p><code>}</code></p><h2>3. Liskov Substitution Principle (LSP)</h2><p>Subtypes must be substitutable for their base types without altering the correctness of the program.</p><ul> <li>This principle ensures that a derived class can replace its base class without causing issues in the program.</li> <li>If a subclass modifies expected behavior in an undesirable way, it violates LSP.</li> <li>Adhering to this principle promotes consistent behavior across different class hierarchies and helps maintain program integrity.</li> </ul><p><strong>Example in PHP</strong>: Consider a Bird class. If a Penguin class is derived from Bird, it should not implement a method that allows it to fly, as penguins cannot fly.</p><p>Code Violating LSP.</p><p><code>class Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Sparrow extends Bird {}</code></p><p><code>class Penguin extends Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        throw new Exception("Penguins can't fly!");</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface Flyable {</code></p><p><code>    public function fly();</code></p><p><code>}</code></p><p><code>class Sparrow implements Flyable {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Penguin {</code></p><p><code>    // no fly method</code></p><p><code>}</code></p>
+        
+            
+        <h2>4. Interface Segregation Principle (ISP)</h2>
+        
+            
+        
+                    
+                        
+                    <p>Clients should not be forced to depend on interfaces they do not use.</p><ul> <li>Rather than creating large, unwieldy interfaces that force clients to implement unnecessary methods, ISP advocates for smaller, more specific interfaces.</li> <li>This reduces dependencies and promotes cleaner designs, allowing classes to implement only the functionality they need.</li> </ul><p><strong>Example in PHP</strong>: A large interface for various functionalities can lead to unnecessary dependencies.</p><p>Code Violating ISP.</p><p><code>interface MultiFunctionDevice {</code></p><p><code>    public function print();</code></p><p><code>    public function scan();</code></p><p><code>    public function fax();</code></p><p><code>}</code></p><p><code>class Printer implements MultiFunctionDevice {</code></p><p><code>    public function print() {</code></p><p><code>        // print logic</code></p><p><code>    }</code></p><p><code>    public function scan() {</code></p><p><code>        throw new Exception("Not a scanner");</code></p><p><code>    }</code></p><p><code>    public function fax() {</code></p><p><code>        throw new Exception("Not a fax machine");</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface Printer {</code></p><p><code>    public function print();</code></p><p><code>}</code></p><p><code>interface Scanner {</code></p><p><code>    public function scan();</code></p><p><code>}</code></p><p><code>class SimplePrinter implements Printer {</code></p><p><code>    public function print() {</code></p><p><code>        // print logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class MultiFunctionPrinter implements Printer, Scanner {</code></p><p><code>    public function print() {</code></p><p><code>        // print logic</code></p><p><code>    }</code></p><p><code>    public function scan() {</code></p><p><code>        // scan logic</code></p><p><code>    }</code></p><p><code>}</code></p>
+                    
+                        
+                    
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4t98VjZ" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71y8TdM2dJL._SL1500_.jpg" alt="AllExtreme Disc Lock Alarm – 110dB Anti-Theft Security Lock for Bikes &amp;amp; Scooters">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4t98VjZ" target="_blank">
+                                AllExtreme Disc Lock Alarm – 110dB Anti-Theft Security Lock for Bikes &amp;amp; Scooters
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 0% Off</div>
+
+                        <a href="https://amzn.to/4t98VjZ" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹898.00</span>
+                                <span class="current-price">₹898.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h2>5. Dependency Inversion Principle (DIP)</h2><p>High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).</p><ul> <li>DIP encourages the use of abstractions to decouple high-level and low-level components.</li> <li>By depending on interfaces rather than concrete implementations, you enhance flexibility and make it easier to swap out components without affecting the overall system.</li> <li>This leads to a more modular architecture, improving maintainability and testing.</li> </ul><p><strong>Example in PHP</strong>: A class that directly instantiates its dependencies.</p><p>Code Violating DIP.</p><p><code>class UserService {</code></p><p><code>    private Database $database;</code></p><p><code>    public function __construct() {</code></p><p><code>        $this→database = new Database();</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface DatabaseInterface {</code></p><p><code>    public function save(User $user);</code></p><p><code>}</code></p><p><code>class Database implements DatabaseInterface {</code></p><p><code>    public function save(User $user) {</code></p><p><code>        // save logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class UserService {</code></p><p><code>    public function __construct(private DatabaseInterface $database) {}</code></p><p><code>}</code></p>
+                    
+                        
+                    <h2>Conclusion</h2><p>The SOLID principles provide a foundation for developing well-structured, maintainable and scalable software. By following these principles, developers can create applications that are easier to understand and adapt over time, ultimately leading to better software quality and enhanced collaboration among team members. Embracing SOLID principles is essential for effective software development in PHP and beyond</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -660,7 +736,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e2cac95cef65df598495ac5604ae0b7ab689bb4fa33a2914eb664c1cad586a09">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1c7ffcfd4cb47d7bf5f176f8742e47161b99962279b19c7dfde374eb6bf1fe60">
   
     
       
@@ -712,7 +788,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/configuration-management-via-quicksilver-on-pantheon.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,60 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>As we saw in the earlier article, like how we manage the configuration across the environments.</p><p>In this article we are going to see how Drupal configurations can be deployed or imported across the environments with the help of Quicksilver which hooks into platform workflows to automate your Pantheon WebOps workflow across the environments.</p><p>In the pantheon <a href="/articles/multisite-local-environment-setup-lando-drupal" title="Read about Multisite Local Environment Setup With Lando And Drupal">environment</a>’s drupal code base, you can see a <code>pantheon.yml</code> file, in this file you can add your custom workflows.</p><p>As you can see in the below example of <code>pantheon.yml</code>, we are running a script after the code sync on the pantheon environment.</p><p><code>​​api_version: 1<br> workflows:<br> &nbsp;&nbsp;sync_code:<br> &nbsp;&nbsp;&nbsp;&nbsp;after:<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- type: webphp<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description: Run drush deploy after code sync<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;script: private/admin/drush_deploy.php</code></p><p>And the script has the drush command as shared below <code>private/admin/drush_deploy.php</code>, which runs</p><ol> <li>Database updates</li> <li>Cache rebuilds</li> <li>Config import</li> <li>Deploy hook start (if any)</li> </ol><p><code>&lt;?php<br> echo ‘Start drush deploy’;<br> passthru(drush deploy -y);<br> echo ‘Finish drush deploy’;</code></p><p>This way Pantheon’s Quicksilver tool will help people to manage the configuration across the environments seamlessly.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>As we saw in the earlier article, like how we manage the configuration across the environments.</p><p>In this article we are going to see how Drupal configurations can be deployed or imported across the environments with the help of Quicksilver which hooks into platform workflows to automate your Pantheon WebOps workflow across the environments.</p><p>In the pantheon <a href="/articles/multisite-local-environment-setup-lando-drupal" title="Read about Multisite Local Environment Setup With Lando And Drupal">environment</a>’s drupal code base, you can see a <code>pantheon.yml</code> file, in this file you can add your custom workflows.</p><p>As you can see in the below example of <code>pantheon.yml</code>, we are running a script after the code sync on the pantheon environment.</p><p><code>​​api_version: 1<br> workflows:<br> &nbsp;&nbsp;sync_code:<br> &nbsp;&nbsp;&nbsp;&nbsp;after:<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- type: webphp<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description: Run drush deploy after code sync<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;script: private/admin/drush_deploy.php</code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/48AmZuB" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/718EtZPXTqL._SL1500_.jpg" alt="Lifelong Rider Gloves with Touchscreen – Anti-Slip Winter Riding Gloves for Bikes &amp;amp; Outdoor Use">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/48AmZuB" target="_blank">
+                                Lifelong Rider Gloves with Touchscreen – Anti-Slip Winter Riding Gloves for Bikes &amp;amp; Outdoor Use
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 50% Off</div>
+
+                        <a href="https://amzn.to/48AmZuB" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹999.00</span>
+                                <span class="current-price">₹499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>And the script has the drush command as shared below <code>private/admin/drush_deploy.php</code>, which runs</p><ol> <li>Database updates</li> <li>Cache rebuilds</li> <li>Config import</li> <li>Deploy hook start (if any)</li> </ol><p><code>&lt;?php<br> echo ‘Start drush deploy’;<br> passthru(drush deploy -y);<br> echo ‘Finish drush deploy’;</code></p><p>This way Pantheon’s Quicksilver tool will help people to manage the configuration across the environments seamlessly.</p>
+
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -662,7 +714,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-dbef99d8eca65cb2ff46a394793eb9061a6b9be991374013c0e0c5ba418832fa">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-978fa11fe5b14cf2315b85a1a9fb95cde8a57cab96cb73d1548c8bc6c6b5049e">
   
     
       
@@ -714,7 +766,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/usage-of-constraints-validations-on-media-entities-in-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,115 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.</p><p>Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony’s validator and extends with Symfony’s Typed Data API for validating specific Entity field definitions.</p><p>These constraint validators can be used in different ways</p><ul> <li>Using the API.</li> <li>Adding the Constraints to Field properties definitions.</li> <li>By <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">Creating</a> Custom Constraints.</li> </ul><p>In this article we gonna see how to Custom constraints for Media entities.</p><ol> <li>Create a <code>CustomMediaConstraint</code>.</li> <li>Create a <code>CustomMediaConstraintValidator</code></li> <li>Use <code>hook_entity_bundle_field_info_alter</code> to add the custom media constraint.</li> </ol><p>You need to create a custom module as a prerequisite, Create a module with the name <code>custom_media_constraint</code>.</p><p><strong>1. Create a CustomMediaConstraint</strong></p><ul> <li>Let's create the constraint for the Size of the media file.</li> <li>Create a Class with the name <code>CustomMediaConstraint</code> in the module. Create this file in the folder location <code>&lt;project&gt;/modules/custom/custom_media_constraint/Plugin/Validation/Constraint</code></li> </ul><p><code>&lt;?php<br> namespace Drupal/custom_media_constraint/Plugin/Validation/Constraint;<br> use Symfony/Component/Validator/Constraint;<br> /**<br> * Constraint for the Media fields in the application.<br> *<br> * @Constraint(<br> *&nbsp; &nbsp; &nbsp; id = "custom_media_constraint",<br> *&nbsp; &nbsp; &nbsp; label = @Translation("Custom Media Constraint", context = "Validation"),<br> * )<br> */<br> class CustomMediaConstraint extends Constraint {<br> &nbsp; &nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* Key variable.<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public $key = '';<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* {@inheritdoc}<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public function getRequiredOptions(): array {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['key'];<br> &nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* Image size.<br> &nbsp;&nbsp;&nbsp;&nbsp;*<br> &nbsp;&nbsp;&nbsp;&nbsp;* @var string<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public size = 'Expected Image size "%excepted", given %value.';<br> }</code></p><p><strong>2. Create a CustomMediaConstraintValidator</strong></p><ul> <li>Let's create the constraint validator, to validate the media size.</li> <li>Create a Class with the name <code>CustomMediaConstraintValidator</code> in the module. Create this file in the folder location <code>&lt;project&gt;/modules/custom/custom_media_constraint/Plugin/Validation/Constraint</code></li> <li>In the <code>validate</code> function <ul> <li>Load all the media fields in the drupal application.</li> <li>For all the media fields get the size settings.</li> <li>Get all the media custom size settings, which you can define in a custom drupal form, via your custom module (IMP)</li> <li>Then write the <a href="/articles/how-hereditary-conditions-are-diagnosed-and-managed" title="Read about How Hereditary Conditions Are Diagnosed And Managed">conditions</a> and add the violation.</li> </ul> </li> </ul><p><code>&lt;?php<br> namespace Drupal/custom_media_constraint/Plugin/Validation/Constraint;<br> use Symfony/Component/Validator/Constraint;<br> use Symfony/Component/Validator/ConstraintValidator;<br> use Symfony/Component/DependencyInjection/ContainerInjectionInterface;<br> use Drupal/Core/DependencyInjection/ContainerInjectionInterface;<br> use Drupal/Core/Config/ConfigFactoryInterface;<br> class CustomMediaConstraintValidator extends ConstraintValidator implements ContainerInjectionInterface {<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* @var /Symfony/Component/Validator/Context/ExecutionContextInterface<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;protected $context;<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* @var /Drupal/Core/Config/ConfigFactoryInterface<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;protected $configFactory;<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* Constructor.<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public function _construct(ConfigFactoryInterface $configFactory) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→configFactory = $configFactory;<br> &nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* {@inheritdoc}<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public static function create(ContainerInterface $container) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new static(<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$container→get('config.factory')<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br> &nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* {@inheritdoc}<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public function validate($entity, Constraint $constraint) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media = $entity→referencedEntities();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!media) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($media as $item) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$settings = $item→get('field_media_image')→getSettings();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$file_bytes = $item→get('field_media_image')→entity→getSize();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$size = number_format($file_bytes / 1048576, 2);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Load the custom media settings from custom form.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media_config = $this→configFactory→get('custom_media_constraints.settings');<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$_expected_size = $media_config→get($constraint→key . '_expected_size');<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (empty($_expected_size)) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($_expected_size != '' &amp;&amp; $size &gt; $_expected_size) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→context→addViolation(<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$constraint→isWidthHeight(<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%value' =&gt; $size . 'MB',<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%expected' =&gt; $_expected_size . 'MB',<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%name' =&gt; $entity→getFieldDefination()→getLabel(),<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;}<br> }</code></p><p><strong>3. Use hook_entity_bundle_field_info_alter to add the custom media constraint.</strong></p><ul> <li>Next you need to use the hook <code>hook_entity_bundle_field_info_alter</code>, to add this constraint to the media entity for the needed entities in drupal application.</li> <li>This needs to be added in the <code>custom_media_constraint.module</code>&nbsp;file.</li> </ul><p><code>&lt;?php<br> use Drupal/Core/Routing/RouteMatchInterface;<br> use Drupal/Core/Entity/EntityTypeInterface;<br> /**<br> * Implements hook_entity_bundle_field_info_alter().<br> */<br> function custom_media_constraint_entity_bundle_field_info_alter(&amp;$fields, EntityTypeInterface $entity_type, $bundle) {<br> &nbsp;&nbsp;&nbsp;if ($entity_type→id() == 'node') {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$storage = /Drupal::service('entity_type.manager')→getStorage('field_storage_config');<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media_fields = $storage→loadByProperties([<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'type' =&gt; 'entity_reference',<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'settings' =&gt; ['target_type' =&gt; 'media']<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($media_fields as $key =&gt; $media_field) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media_field_name = $field→getName();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($fields[$media_field_name])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$fields[$media_field_name]→addConstraint('custom_media_constraint', ['key' =&gt; $key]);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;}<br> }</code></p><p>Once you create the custom constraint and constraint validation, then you attach this validator via the hook to the needed entities.</p><p><strong>One important thing is</strong> the custom media sizes should be defined by the admin via the custom form, refer the validate function in the <code>CustomMediaConstraintValidator</code> for more <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">understanding</a> of this.</p><p>Hope you have a picture on how people can create custom constraint validators for the media entities. Thanks for reading the article, for more drupal related articles, check out here.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                    
+                        
+                    <p>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.</p><p>Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony’s validator and extends with Symfony’s Typed Data API for validating specific Entity field definitions.</p><p>These constraint validators can be used in different ways</p><ul> <li>Using the API.</li> <li>Adding the Constraints to Field properties definitions.</li> <li>By <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">Creating</a> Custom Constraints.</li> </ul><p>In this article we gonna see how to Custom constraints for Media entities.</p><ol> <li>Create a <code>CustomMediaConstraint</code>.</li> <li>Create a <code>CustomMediaConstraintValidator</code></li> <li>Use <code>hook_entity_bundle_field_info_alter</code> to add the custom media constraint.</li> </ol><p>You need to create a custom module as a prerequisite, Create a module with the name <code>custom_media_constraint</code>.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41uiv50" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41mFPaH4EUL.jpg" alt="POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41uiv50" target="_blank">
+                                POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 7% Off</div>
+
+                        <a href="https://amzn.to/41uiv50" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16728.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><strong>1. Create a CustomMediaConstraint</strong></p><ul> <li>Let's create the constraint for the Size of the media file.</li> <li>Create a Class with the name <code>CustomMediaConstraint</code> in the module. Create this file in the folder location <code>&lt;project&gt;/modules/custom/custom_media_constraint/Plugin/Validation/Constraint</code></li> </ul><p><code>&lt;?php<br> namespace Drupal/custom_media_constraint/Plugin/Validation/Constraint;<br> use Symfony/Component/Validator/Constraint;<br> /**<br> * Constraint for the Media fields in the application.<br> *<br> * @Constraint(<br> *&nbsp; &nbsp; &nbsp; id = "custom_media_constraint",<br> *&nbsp; &nbsp; &nbsp; label = @Translation("Custom Media Constraint", context = "Validation"),<br> * )<br> */<br> class CustomMediaConstraint extends Constraint {<br> &nbsp; &nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* Key variable.<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public $key = '';<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* {@inheritdoc}<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public function getRequiredOptions(): array {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['key'];<br> &nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* Image size.<br> &nbsp;&nbsp;&nbsp;&nbsp;*<br> &nbsp;&nbsp;&nbsp;&nbsp;* @var string<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public size = 'Expected Image size "%excepted", given %value.';<br> }</code></p><p><strong>2. Create a CustomMediaConstraintValidator</strong></p><ul> <li>Let's create the constraint validator, to validate the media size.</li> <li>Create a Class with the name <code>CustomMediaConstraintValidator</code> in the module. Create this file in the folder location <code>&lt;project&gt;/modules/custom/custom_media_constraint/Plugin/Validation/Constraint</code></li> <li>In the <code>validate</code> function <ul> <li>Load all the media fields in the drupal application.</li> <li>For all the media fields get the size settings.</li> <li>Get all the media custom size settings, which you can define in a custom drupal form, via your custom module (IMP)</li> <li>Then write the <a href="/articles/how-hereditary-conditions-are-diagnosed-and-managed" title="Read about How Hereditary Conditions Are Diagnosed And Managed">conditions</a> and add the violation.</li> </ul> </li> </ul><p><code>&lt;?php<br> namespace Drupal/custom_media_constraint/Plugin/Validation/Constraint;<br> use Symfony/Component/Validator/Constraint;<br> use Symfony/Component/Validator/ConstraintValidator;<br> use Symfony/Component/DependencyInjection/ContainerInjectionInterface;<br> use Drupal/Core/DependencyInjection/ContainerInjectionInterface;<br> use Drupal/Core/Config/ConfigFactoryInterface;<br> class CustomMediaConstraintValidator extends ConstraintValidator implements ContainerInjectionInterface {<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* @var /Symfony/Component/Validator/Context/ExecutionContextInterface<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;protected $context;<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* @var /Drupal/Core/Config/ConfigFactoryInterface<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;protected $configFactory;<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* Constructor.<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public function _construct(ConfigFactoryInterface $configFactory) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→configFactory = $configFactory;<br> &nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* {@inheritdoc}<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;public static function create(ContainerInterface $container) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new static(<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$container→get('config.factory')<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br> &nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;/**<br> &nbsp;&nbsp;&nbsp;&nbsp;* {@inheritdoc}<br> &nbsp;&nbsp;&nbsp;&nbsp;*/<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public function validate($entity, Constraint $constraint) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media = $entity→referencedEntities();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!media) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($media as $item) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$settings = $item→get('field_media_image')→getSettings();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$file_bytes = $item→get('field_media_image')→entity→getSize();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$size = number_format($file_bytes / 1048576, 2);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Load the custom media settings from custom form.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media_config = $this→configFactory→get('custom_media_constraints.settings');<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$_expected_size = $media_config→get($constraint→key . '_expected_size');<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (empty($_expected_size)) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($_expected_size != '' &amp;&amp; $size &gt; $_expected_size) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→context→addViolation(<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$constraint→isWidthHeight(<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%value' =&gt; $size . 'MB',<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%expected' =&gt; $_expected_size . 'MB',<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'%name' =&gt; $entity→getFieldDefination()→getLabel(),<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;}<br> }</code></p><p><strong>3. Use hook_entity_bundle_field_info_alter to add the custom media constraint.</strong></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4tDt4yw" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71bJ3TVfwgL._SL1500_.jpg" alt="Samsung Galaxy M17 5G – Best Reliable Camera Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4tDt4yw" target="_blank">
+                                Samsung Galaxy M17 5G – Best Reliable Camera Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 8% Off</div>
+
+                        <a href="https://amzn.to/4tDt4yw" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <ul> <li>Next you need to use the hook <code>hook_entity_bundle_field_info_alter</code>, to add this constraint to the media entity for the needed entities in drupal application.</li> <li>This needs to be added in the <code>custom_media_constraint.module</code>&nbsp;file.</li> </ul><p><code>&lt;?php<br> use Drupal/Core/Routing/RouteMatchInterface;<br> use Drupal/Core/Entity/EntityTypeInterface;<br> /**<br> * Implements hook_entity_bundle_field_info_alter().<br> */<br> function custom_media_constraint_entity_bundle_field_info_alter(&amp;$fields, EntityTypeInterface $entity_type, $bundle) {<br> &nbsp;&nbsp;&nbsp;if ($entity_type→id() == 'node') {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$storage = /Drupal::service('entity_type.manager')→getStorage('field_storage_config');<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media_fields = $storage→loadByProperties([<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'type' =&gt; 'entity_reference',<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'settings' =&gt; ['target_type' =&gt; 'media']<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($media_fields as $key =&gt; $media_field) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$media_field_name = $field→getName();<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($fields[$media_field_name])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$fields[$media_field_name]→addConstraint('custom_media_constraint', ['key' =&gt; $key]);<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;}<br> }</code></p><p>Once you create the custom constraint and constraint validation, then you attach this validator via the hook to the needed entities.</p><p><strong>One important thing is</strong> the custom media sizes should be defined by the admin via the custom form, refer the validate function in the <code>CustomMediaConstraintValidator</code> for more <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">understanding</a> of this.</p><p>Hope you have a picture on how people can create custom constraint validators for the media entities. Thanks for reading the article, for more drupal related articles, check out here.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -664,7 +771,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-06fa520a0611762ae03c83f22f4b332b8931ddcc37d5413ab26ce1a725831148">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f6a3807a5747b6de0af36521c0dbdf2fa7a62bbec2e952c9124393525c16d0a0">
   
     
       
@@ -716,7 +823,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

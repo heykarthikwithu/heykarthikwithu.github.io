@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/read-data-to-paragraph-template-in-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,164 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.</p><p>Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which helps to write the template suggestions.</p><p>In few cases, there will be a need to read the actual values of the node fields or the entity data like for example media. And in some cases there will be unlimited values stored and need to read such data to paragraph template files.</p><p>In this article, I will share the possible ways of reading the data to the template file and few of them might not be the best approach but it's the decision to be taken for what type of project you are working with.</p><p>Let's see now the possible ways to read the data to the paragraph template file.</p><ul> <li>To read the <strong>Url</strong> of the current node, just you can use the below code, in the <code>paragraph.html.twig</code> file or in display of <code>paragraph–&lt;display&gt;.html.twig</code></li> </ul><p><code>{{ url("&lt;current&gt;") }}</code></p><ul> <li>To read the <strong>Title</strong> of the node, you can use the preprocess hooks like <code>theme_preprocess_paragraph</code> and read the node title and store it into a variable. And the variable data can be printed in the <code>paragraph.html.twig</code> file or in the display of <code>paragraph–&lt;display&gt;.html.twig</code>.</li> </ul><p><code>function bartik_preprocess_paragraph(&amp;$variables) {<br> &nbsp;&nbsp;&nbsp;$node = Drupal::request()→attributes→get("node");<br> &nbsp;&nbsp;&nbsp;$variables["node_title"] = $node→getTitle();<br> }</code></p><p><code>{{ node_title }}</code></p><ul> <li>To read the <strong>field</strong> value (for example text)</li> </ul><p>paragraph.field_text.entity.name.value</p><ul> <li>To read the <strong>Image</strong> (created via <strong>Media type</strong> or with just <strong>Image type</strong>), you can use the below <a href="/articles/69-position-guide-tips-enhance-intimacy-connection" title="Read about Different Ways To Get More Out Of Six Nine Position">different</a> types.</li> </ul><p><code>{% if paragraph.field_media_image is not empty %}<br> &nbsp;&nbsp;{{ file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri) }}<br> {% endif %}</code></p><p><code>{{ file_url(paragraph.field_just_image.entity.uri.value) }}</code></p><ul> <li>If you want to read the <strong>Image</strong> (created via <strong>Media type</strong>) values in a <strong>custom</strong> approach or write some preprocess, then below code will help you. You can write the below code in the theme_preprocess_paragraph or other preprocess functions, then store into a variable and Render the stored variable in the paragraph template.</li> </ul><p><code>$paragraph = $term→get("field_custom_paragraph")→referencedEntities();<br> if ($paragraph) {<br> &nbsp;&nbsp;$paragraph = reset($paragraph);<br> &nbsp;&nbsp;$field_media_image = $paragraph&gt;get("field_media_image");<br> &nbsp;&nbsp;if ($field_media_image[0] &amp;&amp; $field_media_image[0]→entity) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$build = Drupal::entityTypeManager()→getViewBuilder("media")→view($field_media_image[0]→entity);<br> &nbsp;&nbsp;&nbsp;&nbsp;$variables["content"]["field_media_image"] = $build;<br> &nbsp;&nbsp;}<br> }</code></p><p><code>{{ content.field_media_image }}</code></p><p>These are few possible ways to render read the data to the paragraph templates.</p><p><strong>Ideally the best approach is not to tweak</strong> the data or reading of the data at the rendering layer, because this will have some impact on the performance. I suggest to not tweak the data in the preprocess or reload the same paragraph value in the preprocess, And suggest to only use, if the case you don’t have any other possibility during the development process of drupal <a href="/articles/security-checklist-drupal-application" title="Read about Security Checklist For Drupal Application">application</a>.</p><p>Hope this article was helpful, read this article on how to work with paragraphs and Thanks for reading this article.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                    
+                        
+                    <p>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.</p><p>Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which helps to write the template suggestions.</p><p>In few cases, there will be a need to read the actual values of the node fields or the entity data like for example media. And in some cases there will be unlimited values stored and need to read such data to paragraph template files.</p><p>In this article, I will share the possible ways of reading the data to the template file and few of them might not be the best approach but it's the decision to be taken for what type of project you are working with.</p><p>Let's see now the possible ways to read the data to the paragraph template file.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/48GnDXq" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71twUWwa4VL._SL1500_.jpg" alt="Infinix GT 30 5G+ – Best Gaming Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/48GnDXq" target="_blank">
+                                Infinix GT 30 5G+ – Best Gaming Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 22% Off</div>
+
+                        <a href="https://amzn.to/48GnDXq" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹24999.00</span>
+                                <span class="current-price">₹19499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <ul> <li>To read the <strong>Url</strong> of the current node, just you can use the below code, in the <code>paragraph.html.twig</code> file or in display of <code>paragraph–&lt;display&gt;.html.twig</code></li> </ul><p><code>{{ url("&lt;current&gt;") }}</code></p><ul> <li>To read the <strong>Title</strong> of the node, you can use the preprocess hooks like <code>theme_preprocess_paragraph</code> and read the node title and store it into a variable. And the variable data can be printed in the <code>paragraph.html.twig</code> file or in the display of <code>paragraph–&lt;display&gt;.html.twig</code>.</li> </ul><p><code>function bartik_preprocess_paragraph(&amp;$variables) {<br> &nbsp;&nbsp;&nbsp;$node = Drupal::request()→attributes→get("node");<br> &nbsp;&nbsp;&nbsp;$variables["node_title"] = $node→getTitle();<br> }</code></p><p><code>{{ node_title }}</code></p><ul> <li>To read the <strong>field</strong> value (for example text)</li> </ul><p>paragraph.field_text.entity.name.value</p><ul> <li>To read the <strong>Image</strong> (created via <strong>Media type</strong> or with just <strong>Image type</strong>), you can use the below <a href="/articles/69-position-guide-tips-enhance-intimacy-connection" title="Read about Different Ways To Get More Out Of Six Nine Position">different</a> types.</li> </ul><p><code>{% if paragraph.field_media_image is not empty %}<br> &nbsp;&nbsp;{{ file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri) }}<br> {% endif %}</code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/48MIus6" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/7118r6AH+ML._SL1500_.jpg" alt="Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp;amp; Bike Maintenance Tool">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/48MIus6" target="_blank">
+                                Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp;amp; Bike Maintenance Tool
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 29% Off</div>
+
+                        <a href="https://amzn.to/48MIus6" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1199.00</span>
+                                <span class="current-price">₹849.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><code>{{ file_url(paragraph.field_just_image.entity.uri.value) }}</code></p><ul> <li>If you want to read the <strong>Image</strong> (created via <strong>Media type</strong>) values in a <strong>custom</strong> approach or write some preprocess, then below code will help you. You can write the below code in the theme_preprocess_paragraph or other preprocess functions, then store into a variable and Render the stored variable in the paragraph template.</li> </ul><p><code>$paragraph = $term→get("field_custom_paragraph")→referencedEntities();<br> if ($paragraph) {<br> &nbsp;&nbsp;$paragraph = reset($paragraph);<br> &nbsp;&nbsp;$field_media_image = $paragraph&gt;get("field_media_image");<br> &nbsp;&nbsp;if ($field_media_image[0] &amp;&amp; $field_media_image[0]→entity) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$build = Drupal::entityTypeManager()→getViewBuilder("media")→view($field_media_image[0]→entity);<br> &nbsp;&nbsp;&nbsp;&nbsp;$variables["content"]["field_media_image"] = $build;<br> &nbsp;&nbsp;}<br> }</code></p><p><code>{{ content.field_media_image }}</code></p><p>These are few possible ways to render read the data to the paragraph templates.</p><p><strong>Ideally the best approach is not to tweak</strong> the data or reading of the data at the rendering layer, because this will have some impact on the performance. I suggest to not tweak the data in the preprocess or reload the same paragraph value in the preprocess, And suggest to only use, if the case you don’t have any other possibility during the development process of drupal <a href="/articles/security-checklist-drupal-application" title="Read about Security Checklist For Drupal Application">application</a>.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4mDyx6k" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/616GUlIEqHL._SL1000_.jpg" alt="Universal Bumper Protection Blocks – Crash Guard Sliders for 22mm / 25mm / 28mm Pipes">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4mDyx6k" target="_blank">
+                                Universal Bumper Protection Blocks – Crash Guard Sliders for 22mm / 25mm / 28mm Pipes
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 50% Off</div>
+
+                        <a href="https://amzn.to/4mDyx6k" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹999.00</span>
+                                <span class="current-price">₹499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Hope this article was helpful, read this article on how to work with paragraphs and Thanks for reading this article.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -662,7 +818,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4066b00e91258ae593145dc21ef354ea72f978f6adf7a7594cc6b9a9647ee18b">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-89bd94651a96400de476af3b1ff1cb0d3fc1905b735a648866b9b722fd25c3da">
   
     
       
@@ -714,7 +870,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

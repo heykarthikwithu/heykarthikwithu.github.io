@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/quick-reference-of-code-reviews-for-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,115 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.</p><p>It’s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.</p><p>Firstly, for the code reviews to be at their best, <b>the committed code should be more organised</b> by the people or developers who would commit and push the code to a branch.</p><p>Whatever the code pushed to the branch should have an <a href="/articles/azure-key-vault-key-concepts-security-best-practices" title="Read about Understanding Azure Key Vault Key Concepts And Best Practices">understanding</a> like</p><ul> <li>Why was this particular change made?</li> <li>What lines of code were changed? And how the new code works.?</li> <li>How to verify that the change <a href="/articles/what-actually-matters-end-life" title="Read about What Actually Matters At The End Of Life">actually</a> worked?</li> </ul><p>If a commit or pull request is holding the above details, then code reviews can go pretty smoothly.</p><p>Second, <b>all the people in the team should be aware of the workflow of the code changes</b>, from their local machine to the dev or higher environment.</p><p>Here’s a standard flow</p><ul> <li>Create a Story branch or Feature branch out of a Base branch (develop or master).</li> <li>Dev’s always make sure to have proper commit messages. Example: <em>Story #1203: Validate form fields</em>.</li> <li>Dev’s always make sure to get the latest code from Base branch before pushing Story branch to repository.</li> <li>And create a PR, from Story branch to Base branch and add the details mentioned in the Firstly section above.</li> </ul><p>Their are tools like PHP Codesniffer and drupal coder, which will help to do automated checks, Use them on your local machine and also on Github workflows (here’s article like how to configure and used PHP Codesniffer in Github workflows).</p><p>So far discussed points are to be checked or used by all the team members. Now we're gonna discuss what code reviewers should make sure to review before pushing the code to a higher environment.</p><p><b>Appropriate or Systematic way to write the code</b> (check if its done) like below</p><ol> <li>Alters or Validations to be done in the module file, nothing to be done on the JS or Jquery.</li> <li>Any preprocess of data to be done, then make sure no data load is done twice or multiple times.</li> <li>Once the data is on the Twig file, then don’t load any data from DB at this point.</li> </ol><p><b>How Secure is the written code</b>.</p><ol> <li>Make sure to have <code>check_plain()</code> and <code>filter_xss()</code>, wherever needed, which will avoid cross origin exploits.</li> <li>Make sure it has a CSRF token, if it's an API to avoid cross-site request forgery (CSRF) exploits.</li> <li>Content Access controls should be strictly followed, check for Roles and permissions of all the modified ones.</li> </ol><p>Last one, <b>Documentation</b> should be maintained within the code, so that the code is readable at its best.</p><p>To conclude, if the code reviewer and the people in the team are following these above minimum steps, then you should be good at your code reviews.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                    
+                        
+                    <p>In this article we are going to see how your Drupal team can do code reviews and available tools or libraries which help people in the team to do the code reviews seamlessly.</p><p>It’s pretty important to follow a few guidelines as well, so that all people or developers in the team are on the same page.</p><p>Firstly, for the code reviews to be at their best, <b>the committed code should be more organised</b> by the people or developers who would commit and push the code to a branch.</p><p>Whatever the code pushed to the branch should have an <a href="/articles/azure-key-vault-key-concepts-security-best-practices" title="Read about Understanding Azure Key Vault Key Concepts And Best Practices">understanding</a> like</p><ul> <li>Why was this particular change made?</li> <li>What lines of code were changed? And how the new code works.?</li> <li>How to verify that the change <a href="/articles/what-actually-matters-end-life" title="Read about What Actually Matters At The End Of Life">actually</a> worked?</li> </ul><p>If a commit or pull request is holding the above details, then code reviews can go pretty smoothly.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4vrY5qM" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/61Ab+wE97gL._SL1200_.jpg" alt="iQOO Z11x 5G – Best Performance + Battery Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4vrY5qM" target="_blank">
+                                iQOO Z11x 5G – Best Performance + Battery Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 34% Off</div>
+
+                        <a href="https://amzn.to/4vrY5qM" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹28999.00</span>
+                                <span class="current-price">₹18999.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Second, <b>all the people in the team should be aware of the workflow of the code changes</b>, from their local machine to the dev or higher environment.</p><p>Here’s a standard flow</p><ul> <li>Create a Story branch or Feature branch out of a Base branch (develop or master).</li> <li>Dev’s always make sure to have proper commit messages. Example: <em>Story #1203: Validate form fields</em>.</li> <li>Dev’s always make sure to get the latest code from Base branch before pushing Story branch to repository.</li> <li>And create a PR, from Story branch to Base branch and add the details mentioned in the Firstly section above.</li> </ul><p>Their are tools like PHP Codesniffer and drupal coder, which will help to do automated checks, Use them on your local machine and also on Github workflows (here’s article like how to configure and used PHP Codesniffer in Github workflows).</p><p>So far discussed points are to be checked or used by all the team members. Now we're gonna discuss what code reviewers should make sure to review before pushing the code to a higher environment.</p><p><b>Appropriate or Systematic way to write the code</b> (check if its done) like below</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4cta5jf" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71kcp6OTEvL._SL1500_.jpg" alt="Frenchware Plastic Cutting Board – Large, Durable &amp;amp; Food-Safe Kitchen Essential">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4cta5jf" target="_blank">
+                                Frenchware Plastic Cutting Board – Large, Durable &amp;amp; Food-Safe Kitchen Essential
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 64% Off</div>
+
+                        <a href="https://amzn.to/4cta5jf" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹499.96</span>
+                                <span class="current-price">₹179.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <ol> <li>Alters or Validations to be done in the module file, nothing to be done on the JS or Jquery.</li> <li>Any preprocess of data to be done, then make sure no data load is done twice or multiple times.</li> <li>Once the data is on the Twig file, then don’t load any data from DB at this point.</li> </ol><p><b>How Secure is the written code</b>.</p><ol> <li>Make sure to have <code>check_plain()</code> and <code>filter_xss()</code>, wherever needed, which will avoid cross origin exploits.</li> <li>Make sure it has a CSRF token, if it's an API to avoid cross-site request forgery (CSRF) exploits.</li> <li>Content Access controls should be strictly followed, check for Roles and permissions of all the modified ones.</li> </ol><p>Last one, <b>Documentation</b> should be maintained within the code, so that the code is readable at its best.</p><p>To conclude, if the code reviewer and the people in the team are following these above minimum steps, then you should be good at your code reviews.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -662,7 +769,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-949e6037be3a62ddab98cd83275a8e89e2afaf774d49f6b40373d76a9c6d1143">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-219c7d36a2e899bada40f6b7be76f6b023d8c4a5ebf543aac346a35536a28dc6">
   
     
       
@@ -714,7 +821,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

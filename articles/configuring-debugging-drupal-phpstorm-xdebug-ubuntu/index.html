@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/phpstorm-xdebug-drupal.webp"
             },
             "datePublished": "2024-08-15T11:40:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,63 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Debugging the code is one of the <a href="/articles/why-traveling-so-important-life" title="Read about Why Is Traveling So Important In Life">important</a> process for a developer, So now this article will help you to configure the Phpstorm for debugging the Drupal 7 <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a> with the help of xDebug.</p><p>The configuration made in this article refers specifically to the Ubuntu machine, which has Apache2 webserver running and xDebug installed.</p><ul> <li>Initally open terminal and check the php version</li> </ul><p><code>$ php -v</code></p><ul> <li>you will get the following output</li> </ul><p><kbd><small>PHP 5.6.12-1+deb.sury.org~trusty+1 (cli)<br> Copyright (c) 1997-2015 The PHP Group<br> Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies<br> &nbsp;&nbsp;&nbsp; with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies<br> &nbsp;&nbsp;&nbsp; with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans</small></kbd></p><ul> <li>In my case, since xdebug is already installed, it showing xdebug else you should install the xdebug., follow below command to install xdebug.</li> </ul><p><code>$ pecl install xdebug</code></p><ul> <li>Next find the path of the file where <code>xdebug.so</code> is located, you can find by this command <code>$ locate xdebug.so</code></li> <li>Next, you got to the <code>php.ini</code> file, in my case its located in <code>/etc/php5/apache2/php.ini</code> Or to find where its is located you can find by this command <code>$ locate php.ini</code></li> <li>Next, you need to add below lines to the <code>php.ini</code> file</li> </ul><pre> zend_extension="/usr/lib/php5/20131226/xdebug.so" xdebug.remote_port="9001" xdebug.remote_enable="1" xdebug.idekey="PHPSTORM"</pre><ul> <li>Next, Open PhpStorm → <em>File</em> → <em>Default Settings</em> → In the search box search with <em>debug</em>, Change <em>Debug port</em> to <strong>9001</strong>, apply and ok.</li> <li>Again Open <em>File</em> → <em>Default Settings</em> → Search for <em>IDE Key</em>, Set IDE key as <em>PHPSTORM</em>, Apply and OK</li> <li>Next, Goto you browser, install an <a href="https://chrome.google.com/webstore/unsupported/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en">Xdebug helper</a> extension.</li> <li>Once you have enabled extension then you need to add Debugger bookmarklets for chrome. Go to <a href="https://www.jetbrains.com/phpstorm/marklets/">https://www.jetbrains.com/phpstorm/marklets/</a> page and Generate XDebugger bookmarks. -&nbsp;<strong>Note</strong>: IDE key should be PHPSTORM, as we set in PhpStorm settings.</li> <li>Now Drag and drop - Start debugger and Stop debugger to your browsers bookmarks Bar.</li> <li>Now its time to debug our drupal 7 site with phpstorm and your browser.</li> <li>Open PhpStorm with drupal project and click <em>Start listen for PHP Debug connections</em> (These option are at Top Right corner of your phpstorm)</li> <li>Now open your browser and click on <em>Start debugger</em> in the bookmark toolbar.</li> <li>Again, Goto phpstorm. Now add breakpoint in index.php file.</li> <li>Next, Again visit your browser and load any page (localhost/drupal7). For the first time phpstorm you will ask be asked for confirmation dialogue box to accept connection from browser. Once you accept it, you will be automatically&nbsp; taken to you phpstorm's breakpoint.</li> </ul><p>In this way you can put multiple breakpoints and debug the code.</p><p>Thanks for reading the article,&nbsp;for more drupal related articles, check out here.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Debugging the code is one of the <a href="/articles/why-traveling-so-important-life" title="Read about Why Is Traveling So Important In Life">important</a> process for a developer, So now this article will help you to configure the Phpstorm for debugging the Drupal 7 <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a> with the help of xDebug.</p><p>The configuration made in this article refers specifically to the Ubuntu machine, which has Apache2 webserver running and xDebug installed.</p><ul> <li>Initally open terminal and check the php version</li> </ul><p><code>$ php -v</code></p><ul> <li>you will get the following output</li> </ul><p><kbd><small>PHP 5.6.12-1+deb.sury.org~trusty+1 (cli)<br> Copyright (c) 1997-2015 The PHP Group<br> Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies<br> &nbsp;&nbsp;&nbsp; with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies<br> &nbsp;&nbsp;&nbsp; with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans</small></kbd></p><ul> <li>In my case, since xdebug is already installed, it showing xdebug else you should install the xdebug., follow below command to install xdebug.</li> </ul><p><code>$ pecl install xdebug</code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41uiv50" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41mFPaH4EUL.jpg" alt="POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41uiv50" target="_blank">
+                                POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 7% Off</div>
+
+                        <a href="https://amzn.to/41uiv50" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16728.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <ul> <li>Next find the path of the file where <code>xdebug.so</code> is located, you can find by this command <code>$ locate xdebug.so</code></li> <li>Next, you got to the <code>php.ini</code> file, in my case its located in <code>/etc/php5/apache2/php.ini</code> Or to find where its is located you can find by this command <code>$ locate php.ini</code></li> <li>Next, you need to add below lines to the <code>php.ini</code> file</li> </ul><pre> zend_extension="/usr/lib/php5/20131226/xdebug.so" xdebug.remote_port="9001" xdebug.remote_enable="1" xdebug.idekey="PHPSTORM"</pre><ul> <li>Next, Open PhpStorm → <em>File</em> → <em>Default Settings</em> → In the search box search with <em>debug</em>, Change <em>Debug port</em> to <strong>9001</strong>, apply and ok.</li> <li>Again Open <em>File</em> → <em>Default Settings</em> → Search for <em>IDE Key</em>, Set IDE key as <em>PHPSTORM</em>, Apply and OK</li> <li>Next, Goto you browser, install an <a href="https://chrome.google.com/webstore/unsupported/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en">Xdebug helper</a> extension.</li> <li>Once you have enabled extension then you need to add Debugger bookmarklets for chrome. Go to <a href="https://www.jetbrains.com/phpstorm/marklets/">https://www.jetbrains.com/phpstorm/marklets/</a> page and Generate XDebugger bookmarks. -&nbsp;<strong>Note</strong>: IDE key should be PHPSTORM, as we set in PhpStorm settings.</li> <li>Now Drag and drop - Start debugger and Stop debugger to your browsers bookmarks Bar.</li> <li>Now its time to debug our drupal 7 site with phpstorm and your browser.</li> <li>Open PhpStorm with drupal project and click <em>Start listen for PHP Debug connections</em> (These option are at Top Right corner of your phpstorm)</li> <li>Now open your browser and click on <em>Start debugger</em> in the bookmark toolbar.</li> <li>Again, Goto phpstorm. Now add breakpoint in index.php file.</li> <li>Next, Again visit your browser and load any page (localhost/drupal7). For the first time phpstorm you will ask be asked for confirmation dialogue box to accept connection from browser. Once you accept it, you will be automatically&nbsp; taken to you phpstorm's breakpoint.</li> </ul><p>In this way you can put multiple breakpoints and debug the code.</p><p>Thanks for reading the article,&nbsp;for more drupal related articles, check out here.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -661,7 +716,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f3581207c0548e44b778604a1def1ea3b9c0a7958e056ca10b27ec1d4abe96c4">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c96fa1cf4c782465b100709fb0ebbe6d90de9d9b1408765af84989789e4165fa">
   
     
       
@@ -713,7 +768,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

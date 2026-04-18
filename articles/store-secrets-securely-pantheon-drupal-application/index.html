@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/store-secrets-securely-on-pantheon-for-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,158 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to see how people can store access keys and tokens securely, in the case of your drupal application that is managed on pantheon.</p><p>Generally, all the Access keys or Tokens or any Secret third party auth <a href="/articles/technical-information-know-about-solar-energy-setup-your-home" title="Read about Technical Information To Know About The Solar Energy Setup For Your Home">information</a> should not be stored in the database or within the project web root, Its safe to store it encrypted and within a file and keep the file outside of the project web root.</p><p>In the pantheon <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a>, we can store such information in a <code>secrets.json</code> file, which can be accessed via the terminus tool.</p><p>Below we are gonna see, how to do it?</p><ol> <li>How to Login to Pantheon via terminus.</li> <li>How to Store the key/value pairs as secrets.</li> <li>How to Read the stored key/value pair secrets.</li> </ol><p><strong>Login to Pantheon via terminus</strong></p><p>Login via terminus, with the email id of the admin/maintainer of the environment. Below command will help you to do this.</p><p><code>terminus auth:login –email=&lt;email-id&gt;</code></p><p><strong>Store the key/value pairs as secrets</strong></p><p>After login to the terminus, use <code>secrets:set</code> command to set the key and value pair of secrets.</p><p>Best thing to do is, Value which you are passing should be encrypted via some encryption algorithm (AES or something tough).</p><p>Below command will help you to set the key value pair into secrets.</p><p><code>terminus secrets:set &lt;pantheon-env&gt; &lt;key&gt; &lt;value&gt;</code></p><p><strong>Read the stored key/value pair secrets</strong></p><p>To read the stored secret key and values to the settings.php, we can use the php function <code>file_get_contents</code> php. Below code will help to read the secrets to <code>settings.php</code> file.</p><p>Further the secrets can be used in your drupal application.</p><p><code>$secretsFile = $_SERVER[‘HOME’] . ‘/files/private/secrets.json’;<br> If (file_exists($secretsFile)) {<br> &nbsp;&nbsp;$secrets = json_decode(file_get_contents($secretsFile), 1);<br> &nbsp;&nbsp;If (!empty($secrets[‘&lt;key&gt;’])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$settings[‘&lt;drupal-any-settings&gt;’] = $secrets[‘&lt;value&gt;’];<br> &nbsp;&nbsp;}<br> }</code></p><p>And you can also see all the stored secrets via terminus with <code>secrets:list</code> command, as shared below.</p><p><code>terminus secrets:list &lt;pantheon-env&gt;</code></p><p>This way on the Pantheon environment, you can store the secrets and read secrets for your Drupal application.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to see how people can store access keys and tokens securely, in the case of your drupal application that is managed on pantheon.</p><p>Generally, all the Access keys or Tokens or any Secret third party auth <a href="/articles/technical-information-know-about-solar-energy-setup-your-home" title="Read about Technical Information To Know About The Solar Energy Setup For Your Home">information</a> should not be stored in the database or within the project web root, Its safe to store it encrypted and within a file and keep the file outside of the project web root.</p><p>In the pantheon <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a>, we can store such information in a <code>secrets.json</code> file, which can be accessed via the terminus tool.</p><p>Below we are gonna see, how to do it?</p><ol> <li>How to Login to Pantheon via terminus.</li> <li>How to Store the key/value pairs as secrets.</li> <li>How to Read the stored key/value pair secrets.</li> </ol><p><strong>Login to Pantheon via terminus</strong></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41uiv50" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41mFPaH4EUL.jpg" alt="POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41uiv50" target="_blank">
+                                POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 7% Off</div>
+
+                        <a href="https://amzn.to/41uiv50" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16728.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Login via terminus, with the email id of the admin/maintainer of the environment. Below command will help you to do this.</p><p><code>terminus auth:login –email=&lt;email-id&gt;</code></p><p><strong>Store the key/value pairs as secrets</strong></p><p>After login to the terminus, use <code>secrets:set</code> command to set the key and value pair of secrets.</p><p>Best thing to do is, Value which you are passing should be encrypted via some encryption algorithm (AES or something tough).</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4tDt4yw" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71bJ3TVfwgL._SL1500_.jpg" alt="Samsung Galaxy M17 5G – Best Reliable Camera Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4tDt4yw" target="_blank">
+                                Samsung Galaxy M17 5G – Best Reliable Camera Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 8% Off</div>
+
+                        <a href="https://amzn.to/4tDt4yw" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Below command will help you to set the key value pair into secrets.</p><p><code>terminus secrets:set &lt;pantheon-env&gt; &lt;key&gt; &lt;value&gt;</code></p><p><strong>Read the stored key/value pair secrets</strong></p><p>To read the stored secret key and values to the settings.php, we can use the php function <code>file_get_contents</code> php. Below code will help to read the secrets to <code>settings.php</code> file.</p><p>Further the secrets can be used in your drupal application.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4vr3LBq" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41kKGEM47iL.jpg" alt="Motorola G57 Power 5G – Best Clean UI &amp;amp; Battery Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4vr3LBq" target="_blank">
+                                Motorola G57 Power 5G – Best Clean UI &amp;amp; Battery Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 10% Off</div>
+
+                        <a href="https://amzn.to/4vr3LBq" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16190.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><code>$secretsFile = $_SERVER[‘HOME’] . ‘/files/private/secrets.json’;<br> If (file_exists($secretsFile)) {<br> &nbsp;&nbsp;$secrets = json_decode(file_get_contents($secretsFile), 1);<br> &nbsp;&nbsp;If (!empty($secrets[‘&lt;key&gt;’])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$settings[‘&lt;drupal-any-settings&gt;’] = $secrets[‘&lt;value&gt;’];<br> &nbsp;&nbsp;}<br> }</code></p><p>And you can also see all the stored secrets via terminus with <code>secrets:list</code> command, as shared below.</p><p><code>terminus secrets:list &lt;pantheon-env&gt;</code></p><p>This way on the Pantheon environment, you can store the secrets and read secrets for your Drupal application.</p>
+
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -663,7 +813,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-461b7bc3bf53bb53b3bc4538ffce0c2c923a738a958a4ede1fad3d38e3907809">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3761c28a1874d9e237a69cdf33621d0b4265bcdcac0992324b0b73308b166202">
   
     
       
@@ -715,7 +865,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

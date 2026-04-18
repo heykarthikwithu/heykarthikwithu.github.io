@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/usage-of-phpcs-on-github-via-pull-request-for-drupal-applications.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,112 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to see how some tools and libraries will make people's lives easier during the development and code review process.</p><p>And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.</p><p>If you are maintaining your code in Github, then Github is providing continuous <a href="/articles/discovering-wellness-through-work-life-integration" title="Read about Discovering Wellness Through Work Life Integration">integration</a> support within their workflows.</p><p>It's pretty simple, if we already know PHPCS and PHPCBF libraries are used to do the code reviews and checks on your local <a href="/articles/vimanas-ancient-indian-flying-machines-or-mythological-legends-deep-exploration" title="Read about Vimanas In Ancient India Were They Real Flying Machines">machines</a> and the same thing can be done once the pull request is raised by the developer.</p><p>Having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p><p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p><p><code>.github/workflows/ci.yml</code></p><p>Add the below code to the <code>ci.yml</code> file.</p><p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br> &nbsp; &nbsp; check-drupal-code-standards:<br> &nbsp; &nbsp; &nbsp; &nbsp; runs-on: ubuntu-latest<br> &nbsp; &nbsp; &nbsp; &nbsp; steps:<br> &nbsp; &nbsp; &nbsp; &nbsp; - name: Install PHPCS<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: composer global require –dev drupal/coder dealerdirect/php codesniffer-composer-installer<br> &nbsp; &nbsp; &nbsp; &nbsp; - name: Clone code<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: actions/checkout@v3<br> &nbsp; &nbsp; &nbsp; &nbsp; - name: Check drupal coding standards<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: ~/.composer/vendor/bin/phpcs –standard=”Drupal,DrupalPractice” –extensions=”php,module,inc,install,test,profile,theme,css,info”</code></p><p>The YML file is configured to trigger a job upon the pull request creation.</p><ul> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 3 steps <ul> <li>To install PHPCS</li> <li>To clone the code</li> <li>To run the phpcs checks (like we run locally)</li> </ul> </li> </ul><p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p><p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to see how some tools and libraries will make people's lives easier during the development and code review process.</p><p>And to make developer life easier, developers look for tools or libraries which can automated code review and if needed make any corrections in the code automatically. Here comes the PHP codesniffer and Drupal coder module.</p><p>If you are maintaining your code in Github, then Github is providing continuous <a href="/articles/discovering-wellness-through-work-life-integration" title="Read about Discovering Wellness Through Work Life Integration">integration</a> support within their workflows.</p><p>It's pretty simple, if we already know PHPCS and PHPCBF libraries are used to do the code reviews and checks on your local <a href="/articles/vimanas-ancient-indian-flying-machines-or-mythological-legends-deep-exploration" title="Read about Vimanas In Ancient India Were They Real Flying Machines">machines</a> and the same thing can be done once the pull request is raised by the developer.</p><p>Having the code standard checks done at this level (on PR create level), will ensure the project is maintained with proper drupal coding standards.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4tbqP5A" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/61anXaxy3-L._SL1080_.jpg" alt="Grand Pitstop Helmet Mask – Full Face UV Protection Riding Face Cover">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4tbqP5A" target="_blank">
+                                Grand Pitstop Helmet Mask – Full Face UV Protection Riding Face Cover
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 60% Off</div>
+
+                        <a href="https://amzn.to/4tbqP5A" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹499.00</span>
+                                <span class="current-price">₹199.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>To do this, you need to create a folder structure like <code>.github/workflows</code> within your project (if not created) and Create a file <code>ci.yml</code> within the folder, once created the file path will look as seen below</p><p><code>.github/workflows/ci.yml</code></p><p>Add the below code to the <code>ci.yml</code> file.</p><p><code>name: pr-review<br> on: [pull_request]<br> jobs:<br> &nbsp; &nbsp; check-drupal-code-standards:<br> &nbsp; &nbsp; &nbsp; &nbsp; runs-on: ubuntu-latest<br> &nbsp; &nbsp; &nbsp; &nbsp; steps:<br> &nbsp; &nbsp; &nbsp; &nbsp; - name: Install PHPCS<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: composer global require –dev drupal/coder dealerdirect/php codesniffer-composer-installer<br> &nbsp; &nbsp; &nbsp; &nbsp; - name: Clone code<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: actions/checkout@v3<br> &nbsp; &nbsp; &nbsp; &nbsp; - name: Check drupal coding standards<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; run: ~/.composer/vendor/bin/phpcs –standard=”Drupal,DrupalPractice” –extensions=”php,module,inc,install,test,profile,theme,css,info”</code></p><p>The YML file is configured to trigger a job upon the pull request creation.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4mDyx6k" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/616GUlIEqHL._SL1000_.jpg" alt="Universal Bumper Protection Blocks – Crash Guard Sliders for 22mm / 25mm / 28mm Pipes">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4mDyx6k" target="_blank">
+                                Universal Bumper Protection Blocks – Crash Guard Sliders for 22mm / 25mm / 28mm Pipes
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 50% Off</div>
+
+                        <a href="https://amzn.to/4mDyx6k" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹999.00</span>
+                                <span class="current-price">₹499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <ul> <li>Where this job run’s on the Ubuntu machine.</li> <li>This job has 3 steps <ul> <li>To install PHPCS</li> <li>To clone the code</li> <li>To run the phpcs checks (like we run locally)</li> </ul> </li> </ul><p>Once this <code>ci.yml</code> is pushed to your github repository, then from next time onwards if any PR is created then this automatic checks will be triggered and will show the pass or fail data on the PR itself.</p><p>By this, One level of coding standard check is performed before you push the code to master branch or branch which has the stable code.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -662,7 +766,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-429a5540a2de99369a150adccd176dc534da260e1143802a3842bdca2939dd87">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6e744d101feb9e795546394572f066698e5d767762fd94e30ea1e923a8090d15">
   
     
       
@@ -714,7 +818,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-a-redis-cache-for-product-catalog-data-in-php.webp"
             },
             "datePublished": "2024-11-08T09:32:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,81 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p><h2><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> the Redis Cache for Product Catalog Data</h2><p><strong>Step 1: Connecting to Redis</strong></p><p>Create a new PHP file (e.g., cache.php) in your project’s web directory. In this file, establish a <a href="/articles/powerful-connection-between-mental-and-physical-wellbeing" title="Read about Mental And Physical Wellbeing Connection">connection</a> to Redis and implement basic caching functionality:</p><p><code>require 'vendor/autoload.php';</code></p><p><code>use Predis\Client;</code></p><p><code>class RedisCache {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private Client $client;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→client = new Client(['host' =&gt; 'redis', 'port' =&gt; 6379]);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set($key, $value, $expiration = 3600) {</code></p><div class="google-ad" id="google-ad-1"><p>Google Ad 1</p></div><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→client→set($key, $value);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→client→expire($key, $expiration);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get($key) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→client→get($key);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 2: Simulating Product Catalog Data Retrieval</strong></p><p>Next, let’s simulate a function that retrieves product catalog data. In a real application, this would typically involve querying your database. For this example, we’ll return a hardcoded array:</p><p><code>function fetchProductCatalog() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Simulate database call</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return [</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['id' =&gt; 1, 'name' =&gt; 'Product A', 'price' =&gt; 100],</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['id' =&gt; 2, 'name' =&gt; 'Product B', 'price' =&gt; 200],</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['id' =&gt; 3, 'name' =&gt; 'Product C', 'price' =&gt; 300],</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;];</code></p><p><code>}</code></p><p><strong>Step 3: Implementing Caching Logic</strong></p><p>Now, let’s implement the caching logic for the product catalog data. We’ll first check if the data is available in the cache before querying the simulated database.</p><p><code>function getProductCatalog(RedisCache $cache) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$cacheKey = 'product_catalog';</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Try to get data from cache</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$data = $cache→get($cacheKey);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if ($data) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Cache hit! Retrieving product catalog from cache.\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return json_decode($data, true); // Convert back to an array</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// If not in cache, fetch from the "database"</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Cache miss! Fetching product catalog from the database.\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$data = fetchProductCatalog();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Store in cache</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$cache→set($cacheKey, json_encode($data)); // Cache as JSON string</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return $data;</code></p><p><code>}</code></p><p><code>// Usage example</code></p><p><code>$cache = new RedisCache();</code></p><p><code>$productCatalog = getProductCatalog($cache);</code></p><p><code>print_r($productCatalog);</code></p><p><strong>Step 4: Running Your Application</strong></p><p>To run your PHP script, access it through your web browser at <tt>http://ddev.site/cache.php</tt>, or execute it from the command line within the DDEV environment:</p><p><code>ddev exec php cache.php</code></p><p>The first call to <tt>getProductCatalog($cache)</tt> will fetch the product catalog from the simulated database, while subsequent calls will retrieve the data from the Redis cache.</p><h2>Conclusion</h2><p>Implementing a Redis cache for product catalog data in a PHP 8 application using DDEV is a straightforward process that can significantly enhance your application's performance. By caching frequently accessed data, you reduce database load, improve response times, and provide a better user experience.</p><p>Using DDEV simplifies the development environment setup, allowing you to focus on building <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> applications. As you continue to develop your e-commerce platform, consider leveraging Redis for additional caching and data management tasks to further optimize your application.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
+        
+            
+        <h2><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> the Redis Cache for Product Catalog Data</h2>
+        
+            
+        
+                    
+                        
+                    <p><strong>Step 1: Connecting to Redis</strong></p><p>Create a new PHP file (e.g., cache.php) in your project’s web directory. In this file, establish a <a href="/articles/powerful-connection-between-mental-and-physical-wellbeing" title="Read about Mental And Physical Wellbeing Connection">connection</a> to Redis and implement basic caching functionality:</p><p><code>require 'vendor/autoload.php';</code></p><p><code>use Predis\Client;</code></p><p><code>class RedisCache {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private Client $client;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→client = new Client(['host' =&gt; 'redis', 'port' =&gt; 6379]);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set($key, $value, $expiration = 3600) {</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→client→set($key, $value);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→client→expire($key, $expiration);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get($key) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→client→get($key);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 2: Simulating Product Catalog Data Retrieval</strong></p><p>Next, let’s simulate a function that retrieves product catalog data. In a real application, this would typically involve querying your database. For this example, we’ll return a hardcoded array:</p><p><code>function fetchProductCatalog() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Simulate database call</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return [</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['id' =&gt; 1, 'name' =&gt; 'Product A', 'price' =&gt; 100],</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['id' =&gt; 2, 'name' =&gt; 'Product B', 'price' =&gt; 200],</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['id' =&gt; 3, 'name' =&gt; 'Product C', 'price' =&gt; 300],</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;];</code></p><p><code>}</code></p><p><strong>Step 3: Implementing Caching Logic</strong></p><p>Now, let’s implement the caching logic for the product catalog data. We’ll first check if the data is available in the cache before querying the simulated database.</p><p><code>function getProductCatalog(RedisCache $cache) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$cacheKey = 'product_catalog';</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Try to get data from cache</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$data = $cache→get($cacheKey);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if ($data) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Cache hit! Retrieving product catalog from cache.\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return json_decode($data, true); // Convert back to an array</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// If not in cache, fetch from the "database"</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;echo "Cache miss! Fetching product catalog from the database.\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$data = fetchProductCatalog();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Store in cache</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$cache→set($cacheKey, json_encode($data)); // Cache as JSON string</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return $data;</code></p><p><code>}</code></p><p><code>// Usage example</code></p><p><code>$cache = new RedisCache();</code></p><p><code>$productCatalog = getProductCatalog($cache);</code></p><p><code>print_r($productCatalog);</code></p><p><strong>Step 4: Running Your Application</strong></p><p>To run your PHP script, access it through your web browser at <tt>http://ddev.site/cache.php</tt>, or execute it from the command line within the DDEV environment:</p><p><code>ddev exec php cache.php</code></p><p>The first call to <tt>getProductCatalog($cache)</tt> will fetch the product catalog from the simulated database, while subsequent calls will retrieve the data from the Redis cache.</p>
+                    
+                        
+                    
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4dKHIPZ" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71JxqRoEC9L._SL1500_.jpg" alt="AGARO Elite Rechargeable Mini Chopper – Compact &amp;amp; Powerful Kitchen Helper">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4dKHIPZ" target="_blank">
+                                AGARO Elite Rechargeable Mini Chopper – Compact &amp;amp; Powerful Kitchen Helper
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 60% Off</div>
+
+                        <a href="https://amzn.to/4dKHIPZ" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1499.00</span>
+                                <span class="current-price">₹599.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h2>Conclusion</h2><p>Implementing a Redis cache for product catalog data in a PHP 8 application using DDEV is a straightforward process that can significantly enhance your application's performance. By caching frequently accessed data, you reduce database load, improve response times, and provide a better user experience.</p><p>Using DDEV simplifies the development environment setup, allowing you to focus on building <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> applications. As you continue to develop your e-commerce platform, consider leveraging Redis for additional caching and data management tasks to further optimize your application.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -660,7 +734,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9f55920a189a2f2dbdef8d075e0947156e8ced0faf54e5bcb9257add0699ba80">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a378b0b080d9413643d704c79c476983624095f4f78e1e1f47a1a93034c029bd">
   
     
       
@@ -712,7 +786,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

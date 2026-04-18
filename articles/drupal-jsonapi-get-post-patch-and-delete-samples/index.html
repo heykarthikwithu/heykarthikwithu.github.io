@@ -24,7 +24,7 @@
             "headline": "Drupal JSON:API GET, POST, PATCH and DELETE Samples",
             "description": "The API that the JSON:API module makes available is centered on Drupal\u0027s entity types and bundles. Every bundle receives its own, unique URL path, which all follow a shared patternHTTP MethodsJSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.",
             "datePublished": "2024-08-15T12:34:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -65,7 +65,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -627,8 +627,109 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The API that the JSON:API module makes available is centered on Drupal's entity types and bundles. Every bundle receives its own, unique URL path, which all follow a shared pattern</p><p><strong>HTTP Methods</strong></p><p>JSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.</p><ul> <li>GET - Retrieve data, can be a collection of resources or an individual resource</li> <li>POST - Create a new resource</li> <li>PATCH - Update an existing resource</li> <li>DELETE - Remove an existing resource</li> </ul><p><strong>Authentication</strong></p><p>Typically some form of authentication is used for POST requests. The examples below all use Basic Authentication. Enable the HTTP Basic Authentication module, set the permission for the API user (and role) and set the encoded username and password to the 'Authorization' request header.</p><p><strong>Headers</strong></p><p>Make sure to use 'Content type' and 'Accept' headers when appropriate</p><pre> <code>Accept: application/vnd.api+jsonContent-Type: application/vnd.api+json</code></pre><p><strong>Response codes</strong></p><p>The JSON:API Specification also dictates&nbsp;acceptable responses. The Drupal implementation uses a subset of those. The module can respond with the following codes:</p><ul> <li>200 OK - All successful GET and PATCH requests</li> <li>201 Created - All successful POST requests (response includes the newly created resource)</li> <li>204 No Content - All successful DELETE requests</li> </ul><p>And here's the detailed documentation - <a href="https://www.drupal.org/docs/8/modules/jsonapi/get-post-patch-and-delete">https://www.drupal.org/docs/8/modules/jsonapi/get-post-patch-and-delete</a></p><p>And here's the sample postman collection - <a href="https://gitlab.com/heykarthikwithu/drupal-jsonapi---sample-api-calls">https://gitlab.com/heykarthikwithu/drupal-jsonapi---sample-api-calls</a></p><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The API that the JSON:API module makes available is centered on Drupal's entity types and bundles. Every bundle receives its own, unique URL path, which all follow a shared pattern</p><p><strong>HTTP Methods</strong></p><p>JSON:API specifies what HTTP Methods to accept. Those are: GET, POST, PATCH and DELETE. Notably, PUT is not included.</p><ul> <li>GET - Retrieve data, can be a collection of resources or an individual resource</li> <li>POST - Create a new resource</li> <li>PATCH - Update an existing resource</li> <li>DELETE - Remove an existing resource</li> </ul><p><strong>Authentication</strong></p><p>Typically some form of authentication is used for POST requests. The examples below all use Basic Authentication. Enable the HTTP Basic Authentication module, set the permission for the API user (and role) and set the encoded username and password to the 'Authorization' request header.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41uiv50" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41mFPaH4EUL.jpg" alt="POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41uiv50" target="_blank">
+                                POCO M7 Plus 5G – Best Value Performance Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 7% Off</div>
+
+                        <a href="https://amzn.to/41uiv50" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹17999.00</span>
+                                <span class="current-price">₹16728.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p><strong>Headers</strong></p><p>Make sure to use 'Content type' and 'Accept' headers when appropriate</p><pre> <code>Accept: application/vnd.api+jsonContent-Type: application/vnd.api+json</code></pre><p><strong>Response codes</strong></p><p>The JSON:API Specification also dictates&nbsp;acceptable responses. The Drupal implementation uses a subset of those. The module can respond with the following codes:</p><ul> <li>200 OK - All successful GET and PATCH requests</li> <li>201 Created - All successful POST requests (response includes the newly created resource)</li> <li>204 No Content - All successful DELETE requests</li> </ul><p>And here's the detailed documentation - <a href="https://www.drupal.org/docs/8/modules/jsonapi/get-post-patch-and-delete">https://www.drupal.org/docs/8/modules/jsonapi/get-post-patch-and-delete</a></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4dJ2u2l" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71GIdDAvGrL._SL1500_.jpg" alt="Turtle Thigh Bag for Bike Riders – 5-in-1 Waterproof Tactical Riding Bag">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4dJ2u2l" target="_blank">
+                                Turtle Thigh Bag for Bike Riders – 5-in-1 Waterproof Tactical Riding Bag
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 60% Off</div>
+
+                        <a href="https://amzn.to/4dJ2u2l" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1999.00</span>
+                                <span class="current-price">₹799.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>And here's the sample postman collection - <a href="https://gitlab.com/heykarthikwithu/drupal-jsonapi---sample-api-calls">https://gitlab.com/heykarthikwithu/drupal-jsonapi---sample-api-calls</a></p><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -651,7 +752,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-be949ce1a3fc306f98dc9a27d2274a7b906accdbbc78d16385f59bc83b91b4e0">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5a940498fab378b9e3475b34a5e959f2c8dc17cc606c2dbad966bf9c416a3acf">
   
     
       
@@ -703,7 +804,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

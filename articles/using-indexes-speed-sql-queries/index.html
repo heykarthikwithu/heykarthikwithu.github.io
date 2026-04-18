@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/using-indexes-to-speed-up-sql-queries.webp"
             },
             "datePublished": "2025-07-27T11:37:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,129 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:</p><h2>What Are Indexes?</h2><p>An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.</p><h2>Types of Indexes</h2><ul> <li><strong>Single-Column Index</strong>: Index on one column (e.g., <code>CREATE INDEX idx_name ON table_name (column_name);</code>).</li> <li><strong>Composite Index</strong>: Index on multiple columns (e.g., <code>CREATE INDEX idx_composite ON table_name (column1, column2);</code>).</li> <li><strong>Unique Index</strong>: Ensures all values in the indexed column are unique.</li> <li><strong>Full-Text Index</strong>: Used for efficient text searching.</li> </ul><h2>When to Use Indexes</h2><ul> <li><strong>Frequent Queries</strong>: Index columns that are often used in <code>SELECT</code> statements.</li> <li><strong>Join Conditions</strong>: Index foreign keys and columns used in joins.</li> <li><strong>Filtering and Sorting</strong>: Columns in <code>WHERE</code>, <code>ORDER BY</code>, or <code>GROUP BY</code> clauses are good candidates for indexing.</li> </ul><h2>Creating Indexes</h2><p>Use the SQL command:</p><p><code>CREATE INDEX index_name ON table_name (column_name);</code></p><p>For composite indexes:</p><p><code>CREATE INDEX idx_composite ON table_name (column1, column2);</code></p><h2>Analyzing Query Performance</h2><p>Use the <code>EXPLAIN</code> command to see how your query utilizes indexes:</p><p><code>EXPLAIN SELECT * FROM table_name WHERE column_name = 'value';</code></p><p>Look for indicators like "Using index" to confirm effective index usage.</p><h2>Trade-offs</h2><ul> <li><strong>Performance Impact</strong>: While indexes speed up read operations, they can slow down write operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) due to the overhead of maintaining the index.</li> <li><strong>Storage Costs</strong>: Indexes require additional disk space.</li> </ul><h2>Best <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Practices</a></h2><ul> <li><strong>Limit the Number of Indexes</strong>: Too many indexes can degrade performance, especially during writes.</li> <li><strong>Regular Maintenance</strong>: Monitor index usage and consider rebuilding or reorganizing indexes periodically.</li> <li><strong>Avoid Indexing Low-Cardinality Columns</strong>: Indexing columns with few unique values (like Boolean flags) typically offers little benefit.</li> </ul><h2>Monitoring and Adjusting</h2><ul> <li>Use database tools and logs to track query performance and adjust indexing <a href="/articles/communication-and-self-reflection-strategies" title="Read about Communication And Self Reflection Strategies">strategies</a> based on real-world usage.</li> </ul><h2>Conclusion</h2><p>Indexes are crucial for enhancing SQL query performance. By strategically creating and managing indexes, you can significantly improve data retrieval speeds while balancing the performance impacts on write operations. Regular analysis and adjustment of your indexing strategy will ensure optimal performance as your database grows and changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Using indexes to speed up SQL queries is an essential technique in database optimization. Here’s a concise guide on how to effectively use indexes:</p><h2>What Are Indexes?</h2><p>An index is a database object that improves the speed of data retrieval. Think of it like an index in a book, which allows you to find information quickly without scanning every page.</p><h2>Types of Indexes</h2><ul> <li><strong>Single-Column Index</strong>: Index on one column (e.g., <code>CREATE INDEX idx_name ON table_name (column_name);</code>).</li> <li><strong>Composite Index</strong>: Index on multiple columns (e.g., <code>CREATE INDEX idx_composite ON table_name (column1, column2);</code>).</li> <li><strong>Unique Index</strong>: Ensures all values in the indexed column are unique.</li> <li><strong>Full-Text Index</strong>: Used for efficient text searching.</li> </ul><h2>When to Use Indexes</h2><ul> <li><strong>Frequent Queries</strong>: Index columns that are often used in <code>SELECT</code> statements.</li> <li><strong>Join Conditions</strong>: Index foreign keys and columns used in joins.</li> <li><strong>Filtering and Sorting</strong>: Columns in <code>WHERE</code>, <code>ORDER BY</code>, or <code>GROUP BY</code> clauses are good candidates for indexing.</li> </ul><h2>Creating Indexes</h2>
+        
+            
+        <p>Use the SQL command:</p><p><code>CREATE INDEX index_name ON table_name (column_name);</code></p><p>For composite indexes:</p><p><code>CREATE INDEX idx_composite ON table_name (column1, column2);</code></p>
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41quccS" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41N-A8bxoeL.jpg" alt="OPPO K14 5G – Best Battery Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41quccS" target="_blank">
+                                OPPO K14 5G – Best Battery Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 28% Off</div>
+
+                        <a href="https://amzn.to/41quccS" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹25999.00</span>
+                                <span class="current-price">₹18752.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h2>Analyzing Query Performance</h2><p>Use the <code>EXPLAIN</code> command to see how your query utilizes indexes:</p><p><code>EXPLAIN SELECT * FROM table_name WHERE column_name = 'value';</code></p><p>Look for indicators like "Using index" to confirm effective index usage.</p><h2>Trade-offs</h2><ul> <li><strong>Performance Impact</strong>: While indexes speed up read operations, they can slow down write operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) due to the overhead of maintaining the index.</li> <li><strong>Storage Costs</strong>: Indexes require additional disk space.</li> </ul><h2>Best <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Practices</a></h2><ul> <li><strong>Limit the Number of Indexes</strong>: Too many indexes can degrade performance, especially during writes.</li> <li><strong>Regular Maintenance</strong>: Monitor index usage and consider rebuilding or reorganizing indexes periodically.</li> <li><strong>Avoid Indexing Low-Cardinality Columns</strong>: Indexing columns with few unique values (like Boolean flags) typically offers little benefit.</li> </ul><h2>Monitoring and Adjusting</h2>
+        
+            
+        <ul> <li>Use database tools and logs to track query performance and adjust indexing <a href="/articles/communication-and-self-reflection-strategies" title="Read about Communication And Self Reflection Strategies">strategies</a> based on real-world usage.</li> </ul>
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4e4EV4n" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41Sb3p-NPBL._SX679_.jpg" alt="Qlect Portable Blender – USB Rechargeable Smoothie Maker On-the-Go">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4e4EV4n" target="_blank">
+                                Qlect Portable Blender – USB Rechargeable Smoothie Maker On-the-Go
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 66% Off</div>
+
+                        <a href="https://amzn.to/4e4EV4n" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1999.00</span>
+                                <span class="current-price">₹683.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h2>Conclusion</h2><p>Indexes are crucial for enhancing SQL query performance. By strategically creating and managing indexes, you can significantly improve data retrieval speeds while balancing the performance impacts on write operations. Regular analysis and adjustment of your indexing strategy will ensure optimal performance as your database grows and changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -660,7 +782,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-be00f78ac31b0999ce1f031bc36cb03d88501d17737a67f5dfab8b41d8807c91">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ad291e783209ccceff5a7e440fb9cd188567141bc184347063439b7550103177">
   
     
       
@@ -712,7 +834,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

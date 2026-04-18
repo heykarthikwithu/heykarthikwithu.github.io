@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.webp"
             },
             "datePublished": "2025-11-23T10:30:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,92 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p><h2>Key Concepts</h2><ol> <li><strong>Atomicity</strong>: Ensures that a series of operations either complete entirely or have no effect at all. If any operation fails, the entire transaction is rolled back.</li> <li><strong>Consistency</strong>: Guarantees that a transaction will bring the system from one valid state to another, maintaining all predefined rules, such as constraints and triggers.</li> <li><strong>Isolation</strong>: Ensures that transactions occur independently of one another. Intermediate states of a transaction should not be visible to other transactions until it is committed.</li> <li><strong>Durability</strong>: Once a transaction has been committed, its effects are permanent, even in the case of a system failure.</li> </ol><h2>Implementation Steps</h2><ol> <li><strong>Begin Transaction</strong>: Start a new transaction. This often involves setting a flag or state that indicates a transaction is in progress.</li> <li><strong>Execute Operations</strong>: Perform the desired operations (e.g., inserts, updates, deletes). Keep track of changes made during the transaction.</li> <li><strong>Validation</strong>: Check for any constraints or conditions that must be satisfied before committing the transaction.</li> <li><strong>Commit</strong>: If all operations are successful and validations are met, apply the changes permanently. This might involve writing changes to the database and clearing any transaction-related state.</li> <li><strong>Rollback</strong>: If an error occurs during execution or validation, revert all changes made during the transaction to ensure that the system remains in a consistent state.</li> </ol><p><strong>Database Setup</strong></p><p>Assume you have two tables: accounts and transactions.</p><p><code>CREATE TABLE accounts (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    balance DECIMAL(10, 2) NOT NULL</code></p><p><code>);</code></p><p><code>CREATE TABLE transactions (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    account_id INT,</code></p><p><code>    amount DECIMAL(10, 2),</code></p><p><code>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>    FOREIGN KEY (account_id) REFERENCES accounts(id)</code></p><p><code>);</code></p><p><strong>PHP Code</strong></p><p>Here's a PHP script that performs a transaction to transfer money between two accounts:</p><p><!--?php</p--></p><p><code>$host = 'localhost';</code></p><p><code>$db = 'your_database';</code></p><p><code>$user = 'your_username';</code></p><p><code>$pass = 'your_password';</code></p><p><code>try {</code></p><p><code>    // Create a new PDO instance</code></p><p><code>    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);</code></p><p><code>    $pdo→setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code></p><p><code>    // Start a transaction</code></p><p><code>    $pdo→beginTransaction();</code></p><p><code>    // Amount to transfer</code></p><p><code>    $transferAmount = 100.00;</code></p><p><code>    $fromAccountId = 1;</code></p><p><code>    $toAccountId = 2;</code></p><p><code>    // Deduct amount from the source account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance - ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $fromAccountId]);</code></p><p><code>    // Check if the balance is sufficient</code></p><p><code>    if ($stmt→rowCount() === 0) {</code></p><p><code>        throw new Exception("Insufficient funds or account not found.");</code></p><p><code>    }</code></p><p><code>    // Add amount to the destination account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance + ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $toAccountId]);</code></p><p><code>    // Log the transaction</code></p><p><code>    $stmt = $pdo→prepare("INSERT INTO transactions (account_id, amount) VALUES (?, ?)");</code></p><p><code>    $stmt→execute([$fromAccountId, -$transferAmount]);</code></p><p><code>    $stmt→execute([$toAccountId, $transferAmount]);</code></p><p><code>    // Commit the transaction</code></p><p><code>    $pdo→commit();</code></p><p><code>    echo "Transaction completed successfully.";</code></p><p><code>}</code></p><p><code>catch (Exception $e) {</code></p><p><code>    // Rollback the transaction in case of error</code></p><p><code>    $pdo→rollBack();</code></p><p><code>    echo "Transaction failed: " . $e→getMessage();</code></p><p><code>}</code></p><p><code>?&gt;</code></p><h2>Explanation</h2><ol> <li><strong>Database Connection</strong>: We establish a connection to the MySQL database using PDO.</li> <li><strong>Begin Transaction</strong>: The transaction starts with <code>$pdo→beginTransaction()</code>.</li> <li><strong>Perform Operations</strong>: <ul> <li>The script first deducts the transfer amount from the source account.</li> <li>It checks if the update affected any rows, ensuring there are sufficient funds.</li> <li>Then it adds the amount to the destination account.</li> <li>Finally, it logs the transaction in the transactions table.</li> </ul> </li> <li><strong>Commit or Rollback</strong>: If all operations succeed, the transaction is committed with <code>$pdo→commit()</code>. If any error occurs, the transaction is rolled back to maintain data integrity.</li> </ol><h2>Notes</h2><ul> <li>Always use prepared statements to prevent SQL injection.</li> <li>Ensure proper error handling to manage any exceptions that may arise during the transaction.</li> <li>This is a simple example; consider adding more complex <a href="/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses" title="Read about Drupal Lms Features For Your Education Business">business</a> logic and checks as needed in real applications.</li> </ul><h2>Using Database Management Systems</h2><p>If you're using a DBMS (like MySQL, PostgreSQL, or MongoDB), many of these functionalities are built-in. You would typically use:</p><ul> <li><strong>SQL Transactions</strong>: Use <code>BEGIN</code>, <code>COMMIT</code> and <code>ROLLBACK</code> statements.</li> <li><strong>ORM Libraries</strong>: Most Object-Relational Mapping libraries (like Hibernate or Entity Framework) provide transaction support.</li> </ul><h2>Considerations</h2><ul> <li><strong>Concurrency Control</strong>: Implement locking mechanisms or use optimistic concurrency control to manage how transactions interact with each other.</li> <li><strong>Error Handling</strong>: Ensure robust error handling and logging mechanisms to track issues during transactions.</li> <li><strong>Testing</strong>: Thoroughly test transaction implementations to validate atomicity, consistency, isolation and durability.</li> </ul><h2>Conclusion</h2><p>Implementing transactions is essential for maintaining data integrity in applications. Understanding and applying the principles of atomic operations will help you create robust systems that can handle errors gracefully and ensure consistency even under concurrent operations.</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p>
+        
+            
+        <h2>Key Concepts</h2><ol> <li><strong>Atomicity</strong>: Ensures that a series of operations either complete entirely or have no effect at all. If any operation fails, the entire transaction is rolled back.</li> <li><strong>Consistency</strong>: Guarantees that a transaction will bring the system from one valid state to another, maintaining all predefined rules, such as constraints and triggers.</li> <li><strong>Isolation</strong>: Ensures that transactions occur independently of one another. Intermediate states of a transaction should not be visible to other transactions until it is committed.</li> <li><strong>Durability</strong>: Once a transaction has been committed, its effects are permanent, even in the case of a system failure.</li> </ol><h2>Implementation Steps</h2><ol> <li><strong>Begin Transaction</strong>: Start a new transaction. This often involves setting a flag or state that indicates a transaction is in progress.</li> <li><strong>Execute Operations</strong>: Perform the desired operations (e.g., inserts, updates, deletes). Keep track of changes made during the transaction.</li> <li><strong>Validation</strong>: Check for any constraints or conditions that must be satisfied before committing the transaction.</li> <li><strong>Commit</strong>: If all operations are successful and validations are met, apply the changes permanently. This might involve writing changes to the database and clearing any transaction-related state.</li> <li><strong>Rollback</strong>: If an error occurs during execution or validation, revert all changes made during the transaction to ensure that the system remains in a consistent state.</li> </ol><p><strong>Database Setup</strong></p><p>Assume you have two tables: accounts and transactions.</p><p><code>CREATE TABLE accounts (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    balance DECIMAL(10, 2) NOT NULL</code></p><p><code>);</code></p><p><code>CREATE TABLE transactions (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    account_id INT,</code></p><p><code>    amount DECIMAL(10, 2),</code></p><p><code>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>    FOREIGN KEY (account_id) REFERENCES accounts(id)</code></p><p><code>);</code></p><p><strong>PHP Code</strong></p><p>Here's a PHP script that performs a transaction to transfer money between two accounts:</p><p><!--?php</p--></p><p><code>$host = 'localhost';</code></p><p><code>$db = 'your_database';</code></p><p><code>$user = 'your_username';</code></p><p><code>$pass = 'your_password';</code></p><p><code>try {</code></p><p><code>    // Create a new PDO instance</code></p><p><code>    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);</code></p><p><code>    $pdo→setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code></p><p><code>    // Start a transaction</code></p><p><code>    $pdo→beginTransaction();</code></p><p><code>    // Amount to transfer</code></p><p><code>    $transferAmount = 100.00;</code></p><p><code>    $fromAccountId = 1;</code></p><p><code>    $toAccountId = 2;</code></p><p><code>    // Deduct amount from the source account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance - ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $fromAccountId]);</code></p><p><code>    // Check if the balance is sufficient</code></p><p><code>    if ($stmt→rowCount() === 0) {</code></p><p><code>        throw new Exception("Insufficient funds or account not found.");</code></p><p><code>    }</code></p><p><code>    // Add amount to the destination account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance + ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $toAccountId]);</code></p><p><code>    // Log the transaction</code></p><p><code>    $stmt = $pdo→prepare("INSERT INTO transactions (account_id, amount) VALUES (?, ?)");</code></p><p><code>    $stmt→execute([$fromAccountId, -$transferAmount]);</code></p><p><code>    $stmt→execute([$toAccountId, $transferAmount]);</code></p><p><code>    // Commit the transaction</code></p><p><code>    $pdo→commit();</code></p><p><code>    echo "Transaction completed successfully.";</code></p><p><code>}</code></p><p><code>catch (Exception $e) {</code></p><p><code>    // Rollback the transaction in case of error</code></p><p><code>    $pdo→rollBack();</code></p><p><code>    echo "Transaction failed: " . $e→getMessage();</code></p><p><code>}</code></p><p><code>?&gt;</code></p>
+        
+            
+        <h2>Explanation</h2>
+                    
+                        
+                    <ol> <li><strong>Database Connection</strong>: We establish a connection to the MySQL database using PDO.</li> <li><strong>Begin Transaction</strong>: The transaction starts with <code>$pdo→beginTransaction()</code>.</li> <li><strong>Perform Operations</strong>: <ul> <li>The script first deducts the transfer amount from the source account.</li> <li>It checks if the update affected any rows, ensuring there are sufficient funds.</li> <li>Then it adds the amount to the destination account.</li> <li>Finally, it logs the transaction in the transactions table.</li> </ul> </li> <li><strong>Commit or Rollback</strong>: If all operations succeed, the transaction is committed with <code>$pdo→commit()</code>. If any error occurs, the transaction is rolled back to maintain data integrity.</li> </ol>
+                    
+                        
+                    
+        
+            
+        <h2>Notes</h2>
+        
+            
+        <ul> <li>Always use prepared statements to prevent SQL injection.</li> <li>Ensure proper error handling to manage any exceptions that may arise during the transaction.</li> <li>This is a simple example; consider adding more complex <a href="/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses" title="Read about Drupal Lms Features For Your Education Business">business</a> logic and checks as needed in real applications.</li> </ul>
+                    
+                        
+                    
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/48AmZuB" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/718EtZPXTqL._SL1500_.jpg" alt="Lifelong Rider Gloves with Touchscreen – Anti-Slip Winter Riding Gloves for Bikes &amp;amp; Outdoor Use">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/48AmZuB" target="_blank">
+                                Lifelong Rider Gloves with Touchscreen – Anti-Slip Winter Riding Gloves for Bikes &amp;amp; Outdoor Use
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 50% Off</div>
+
+                        <a href="https://amzn.to/48AmZuB" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹999.00</span>
+                                <span class="current-price">₹499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><h2>Using Database Management Systems</h2><p>If you're using a DBMS (like MySQL, PostgreSQL, or MongoDB), many of these functionalities are built-in. You would typically use:</p><ul> <li><strong>SQL Transactions</strong>: Use <code>BEGIN</code>, <code>COMMIT</code> and <code>ROLLBACK</code> statements.</li> <li><strong>ORM Libraries</strong>: Most Object-Relational Mapping libraries (like Hibernate or Entity Framework) provide transaction support.</li> </ul>
+                    
+                        
+                    <h2>Considerations</h2><ul> <li><strong>Concurrency Control</strong>: Implement locking mechanisms or use optimistic concurrency control to manage how transactions interact with each other.</li> <li><strong>Error Handling</strong>: Ensure robust error handling and logging mechanisms to track issues during transactions.</li> <li><strong>Testing</strong>: Thoroughly test transaction implementations to validate atomicity, consistency, isolation and durability.</li> </ul>
+                    
+                        
+                    <h2>Conclusion</h2><p>Implementing transactions is essential for maintaining data integrity in applications. Understanding and applying the principles of atomic operations will help you create robust systems that can handle errors gracefully and ensure consistency even under concurrent operations.</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -660,7 +745,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-533f5c671046b716da8b33a63cb94fe678f01aef6f1e62279edd14fd843c80b3">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f71c05eda8162c1355b0c7d4e5ea579cd7922ee37756079a8abdea7d73c1d110">
   
     
       
@@ -712,7 +797,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupal-solr-lando.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,63 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to learn <strong>how Drupal search can be improved with Solr</strong> which provides great <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> and is suitable even for use on large commercial <a href="/articles/how-generate-good-revenue-blogging-websites" title="Read about How To Generate Good Revenue From Blogging Websites">websites</a>. And along with this using the <code>search_api</code> and <code>search_api_solr</code> modules, helps to <strong>configure the Facets and Multilingual content</strong> can be handled in an improved manner. And let's see <strong>how we can configure this locally with the help of Lando</strong>, which provides the container for Solr locally.</p><p><strong>Assuming you already have a Drupal 9 basic setup with Lando</strong>, where you have the web server and mysql running, means you Drupal 9 site is up running with such a url - <code>drupal9.lndo.site</code></p><p><strong>To set up Solr locally</strong>, you have to add Solr related <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> in your <code>.lando.yml</code> file. Here’s the sample of the configuration.</p><pre>name: drupal9 recipe: drupal9 config:   webroot: web services:   appserver:     type: php:7.4   database:     type: mysql     healthcheck: ''   solr:     type: solr     portforward: true     core: drupal9     config:       conf: solr/conf proxy:   appserver:     - drupal9.lndo.site   solr:     - solr.lndo.site </pre><p>It will <strong>spin up a container</strong> with name <code>solr</code></p><ul class="check"> <li><code>type: solr</code> means, it will pick the latest solr version, currently it picks Solr 7.</li> <li><code>core: drupal9</code> means, Solr core name</li> <li><code>conf: utils/solr7/conf</code> means, Create a conf folder under the folder mentioned and download the conf from <code>search_api_solr</code> - <a href="https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start" target="_blank" style="border-bottom: 1px solid #064771 !important;"><strong>https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start</strong></a> and place it in the conf folder.</li> </ul><p>You can access the <strong>Admin side of Solr</strong> via <code>Solr.lndo.site</code>. By this you are done with the Solr configuration within Lando on your local machine.</p><p>Next thing is to enable the <code>search_api</code> and <code>search_api_solr</code> module on Drupal 9.</p><ul class="check"> <li>Like any other module <strong>download these two modules</strong> <code>search_api</code> and <code>search_api_solr</code> with lando composer or with lando drush.</li> <li><strong>Add the Server</strong> on Drupal side, by choosing Backend as <strong>solr</strong> and <strong>Standard</strong> connecter with the Solr core name as <strong>drupal9</strong>.</li> <li>Leave other details <strong>as default</strong> and Save server configuration.</li> <li>Next you have to <strong>add Fields</strong> which you wish to Index.</li> <li>Later, <strong>Create a View</strong> to check the indexed content.</li> </ul><p>This is how we can configure Solr 7 locally with the help of Lando. And using <code>search_api</code> and <code>search_api_solr</code> modules adds more flexibility to index and search content.</p><p>In Solr 7 we have two major features like <strong>Replication modes and Auto Scaling</strong> (details can be found here - https://solr.apache.org/guide/7_0/major-changes-in-solr-7.html).</p><p>From the Search performance perspective, Solr would play a major role, Thanks to that for Solr. and Thanks to Lando for Solr lando setup and Thanks to module maintainers for <code>search_api</code> and <code>search_api_solr</code> for adding flexibility to index and search content.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to learn <strong>how Drupal search can be improved with Solr</strong> which provides great <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> and is suitable even for use on large commercial <a href="/articles/how-generate-good-revenue-blogging-websites" title="Read about How To Generate Good Revenue From Blogging Websites">websites</a>. And along with this using the <code>search_api</code> and <code>search_api_solr</code> modules, helps to <strong>configure the Facets and Multilingual content</strong> can be handled in an improved manner. And let's see <strong>how we can configure this locally with the help of Lando</strong>, which provides the container for Solr locally.</p><p><strong>Assuming you already have a Drupal 9 basic setup with Lando</strong>, where you have the web server and mysql running, means you Drupal 9 site is up running with such a url - <code>drupal9.lndo.site</code></p><p><strong>To set up Solr locally</strong>, you have to add Solr related <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> in your <code>.lando.yml</code> file. Here’s the sample of the configuration.</p><pre>name: drupal9 recipe: drupal9 config:   webroot: web services:   appserver:     type: php:7.4   database:     type: mysql     healthcheck: ''   solr:     type: solr     portforward: true     core: drupal9     config:       conf: solr/conf proxy:   appserver:     - drupal9.lndo.site   solr:     - solr.lndo.site </pre><p>It will <strong>spin up a container</strong> with name <code>solr</code></p><ul class="check"> <li><code>type: solr</code> means, it will pick the latest solr version, currently it picks Solr 7.</li> <li><code>core: drupal9</code> means, Solr core name</li> <li><code>conf: utils/solr7/conf</code> means, Create a conf folder under the folder mentioned and download the conf from <code>search_api_solr</code> - <a href="https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start" target="_blank" style="border-bottom: 1px solid #064771 !important;"><strong>https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start</strong></a> and place it in the conf folder.</li> </ul><p>You can access the <strong>Admin side of Solr</strong> via <code>Solr.lndo.site</code>. By this you are done with the Solr configuration within Lando on your local machine.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4vs9ffp" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71dMngXeysL._SL1500_.jpg" alt="MILTON Cryo Fridge Storage Boxes Set (6 Pcs) – Stackable &amp;amp; Smart Kitchen Organizer">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4vs9ffp" target="_blank">
+                                MILTON Cryo Fridge Storage Boxes Set (6 Pcs) – Stackable &amp;amp; Smart Kitchen Organizer
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 50% Off</div>
+
+                        <a href="https://amzn.to/4vs9ffp" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹999.00</span>
+                                <span class="current-price">₹499.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Next thing is to enable the <code>search_api</code> and <code>search_api_solr</code> module on Drupal 9.</p><ul class="check"> <li>Like any other module <strong>download these two modules</strong> <code>search_api</code> and <code>search_api_solr</code> with lando composer or with lando drush.</li> <li><strong>Add the Server</strong> on Drupal side, by choosing Backend as <strong>solr</strong> and <strong>Standard</strong> connecter with the Solr core name as <strong>drupal9</strong>.</li> <li>Leave other details <strong>as default</strong> and Save server configuration.</li> <li>Next you have to <strong>add Fields</strong> which you wish to Index.</li> <li>Later, <strong>Create a View</strong> to check the indexed content.</li> </ul><p>This is how we can configure Solr 7 locally with the help of Lando. And using <code>search_api</code> and <code>search_api_solr</code> modules adds more flexibility to index and search content.</p><p>In Solr 7 we have two major features like <strong>Replication modes and Auto Scaling</strong> (details can be found here - https://solr.apache.org/guide/7_0/major-changes-in-solr-7.html).</p><p>From the Search performance perspective, Solr would play a major role, Thanks to that for Solr. and Thanks to Lando for Solr lando setup and Thanks to module maintainers for <code>search_api</code> and <code>search_api_solr</code> for adding flexibility to index and search content.</p>
+
+        
+            
+        
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -661,7 +716,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-63b80486a91297f198cbb11b44869d4ecb6e863dbbcd10d60ac7c3876c5b54d7">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ecbeae545e41ac9a3984fda9151aa4452ac336caa2b7d6fbb0e29f6dbf203a63">
   
     
       
@@ -713,7 +768,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

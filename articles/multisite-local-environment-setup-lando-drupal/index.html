@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/lando-drupal.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T14:43:34+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,7 +637,13 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>As we have seen in the earlier article to setup the Local environment with Lando and Drupal, Now let's see how we set up the multisite with the lando.</p><p>And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection of many websites. At a high level we can say Same Code with <a href="/articles/different-spices-are-used-make-garam-masala-mix" title="Read about Different Spices Are Used To Make A Garam Masala Mix">Different</a> databases and Different Sites.</p><p>We already know Lando is a <a href="/articles/colima-similar-tool-docker-desktop-drupal-development" title="Read about Colima Similar Tool Like Docker Desktop For Drupal Development">development</a> tool (as discussed in an earlier article), which makes drupal development much quicker and easier. Lando provides an option to configure this from the <code>.lando.yml</code> file.</p><p>Let’s see in-details to set up a multisite. To setup Drupal multisite on lando you need to do below things:</p><p>In your <code>.lando.yml</code> you need to add proxies for each multisite in the appserver.</p><p>Have <code>settings.lando.php</code> file within your sub-directory (example: docroot/sites/drupal9_site_1/) which would need settings to connect to the respective <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a>.</p><h3>1. Changes in <code>.lando.yml</code> file</h3><p>You need to add proxies for each multisite in the appserver.</p><pre>proxy:appserver:- drupal9.site-1.local- drupal9.site-2.localservices:    drupal9_site_1:        type: mysql    drupal9_site_2:        type: mysql</pre><h3>2. Configure each <code>settings.lando.php</code> file</h3><p>You need to have <code>settings.lando.php</code> file within your sub-directory and should add database connection settings on each file.</p><pre>$databases['default'] = array (    'default' =&gt; array (        'driver' =&gt; 'mysql',        'database' =&gt; 'database',        'username' =&gt; 'mysql',        'password' =&gt; 'password',        'host' =&gt; 'password',        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined services above        'port' =&gt; 3306,    ));</pre><p>In case, if you have huge number of multisites, You can have below code in the <code>settings.php</code> of default site.</p><pre>if (@$_ENV['LANDO'] == 'ON' &amp;&amp; file_exists(dirname(__FILE__) . '/settings.lando.php')){    require(dirname(__FILE__) . '/settings.lando.php');}</pre><p>And include the below code in <code>settings.lando.php</code></p><pre>$sites['drupal9.site-1.local'] = 'drupal9_site_1';$sites['drupal9.site-2.local'] = 'drupal9_site_2';</pre><p>And in each subsite’s <code>settings.lando.php</code>, have below code added.</p><pre>$base_url = 'https://drupal9.site-1.local';</pre><p>So, you will have both the base path and database creds in each of the subsite’s <code>settings.lando.php</code> file</p><pre>$databases['default'] = array (    'default' =&gt; array (        'driver' =&gt; 'mysql',        'database' =&gt; 'database',        'username' =&gt; 'mysql',        'password' =&gt; 'password',        'host' =&gt; 'password',        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined service above        'port' =&gt; 3306,    ));$base_url = 'https://drupal9.site-1.local';</pre><p>This way by configuring lando you can run drupal 9 Multisite on your local environment. And on the configuration front you can do many other things like adding a few more sites, having different configuration of each subsite as same as in default drupal etc.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>As we have seen in the earlier article to setup the Local environment with Lando and Drupal, Now let's see how we set up the multisite with the lando.</p><p>And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection of many websites. At a high level we can say Same Code with <a href="/articles/different-spices-are-used-make-garam-masala-mix" title="Read about Different Spices Are Used To Make A Garam Masala Mix">Different</a> databases and Different Sites.</p><p>We already know Lando is a <a href="/articles/colima-similar-tool-docker-desktop-drupal-development" title="Read about Colima Similar Tool Like Docker Desktop For Drupal Development">development</a> tool (as discussed in an earlier article), which makes drupal development much quicker and easier. Lando provides an option to configure this from the <code>.lando.yml</code> file.</p><p>Let’s see in-details to set up a multisite. To setup Drupal multisite on lando you need to do below things:</p><p>In your <code>.lando.yml</code> you need to add proxies for each multisite in the appserver.</p><p>Have <code>settings.lando.php</code> file within your sub-directory (example: docroot/sites/drupal9_site_1/) which would need settings to connect to the respective <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a>.</p><h3>1. Changes in <code>.lando.yml</code> file</h3>
+            
+            
+            <p>You need to add proxies for each multisite in the appserver.</p><pre>proxy:appserver:- drupal9.site-1.local- drupal9.site-2.localservices:    drupal9_site_1:        type: mysql    drupal9_site_2:        type: mysql</pre><h3>2. Configure each <code>settings.lando.php</code> file</h3>
+            
+            
+            <p>You need to have <code>settings.lando.php</code> file within your sub-directory and should add database connection settings on each file.</p><pre>$databases['default'] = array (    'default' =&gt; array (        'driver' =&gt; 'mysql',        'database' =&gt; 'database',        'username' =&gt; 'mysql',        'password' =&gt; 'password',        'host' =&gt; 'password',        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined services above        'port' =&gt; 3306,    ));</pre><p>In case, if you have huge number of multisites, You can have below code in the <code>settings.php</code> of default site.</p><pre>if (@$_ENV['LANDO'] == 'ON' &amp;&amp; file_exists(dirname(__FILE__) . '/settings.lando.php')){    require(dirname(__FILE__) . '/settings.lando.php');}</pre><p>And include the below code in <code>settings.lando.php</code></p><pre>$sites['drupal9.site-1.local'] = 'drupal9_site_1';$sites['drupal9.site-2.local'] = 'drupal9_site_2';</pre><p>And in each subsite’s <code>settings.lando.php</code>, have below code added.</p><pre>$base_url = 'https://drupal9.site-1.local';</pre><p>So, you will have both the base path and database creds in each of the subsite’s <code>settings.lando.php</code> file</p><pre>$databases['default'] = array (    'default' =&gt; array (        'driver' =&gt; 'mysql',        'database' =&gt; 'database',        'username' =&gt; 'mysql',        'password' =&gt; 'password',        'host' =&gt; 'password',        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined service above        'port' =&gt; 3306,    ));$base_url = 'https://drupal9.site-1.local';</pre><p>This way by configuring lando you can run drupal 9 Multisite on your local environment. And on the configuration front you can do many other things like adding a few more sites, having different configuration of each subsite as same as in default drupal etc.</p>
 </div>
       
 
@@ -662,7 +668,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ecc1c709f069d1ddf1380904324f8c83079b06cc31ea5d7c0e97b8754ef76cf8">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-513e8516cec6b79154c8b29ae4859dfc6199eb21b831e2f0e68afb0655f3b6f4">
   
     
       
@@ -714,7 +720,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

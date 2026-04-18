@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupal_8_mail_system.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,60 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Sending an email works with defining an email <a href="/articles/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email <a href="/articles/how-work-twig-templates-drupal" title="Read about How To Work With Twig Templates In Drupal">templates</a> are requested from <code>hook_mail()</code> from the module sending the email. Any module can modify the composed email message array using <code>hook_mail_alter()</code>. Finally <code>\Drupal::service('plugin.manager.mail')→mail()</code> sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients.</p><p>Below function's <code>triggerMail</code> code, can be written in any submit handlers or post actions in Drupal.</p><pre>function triggerMail() {<br>&nbsp;&nbsp;$module = "x_module";<br>&nbsp;&nbsp;$key = "x_mail";<br>&nbsp;&nbsp;$to = "example@gmail.com";<br>&nbsp;&nbsp;$langcode = 'en';<br>&nbsp;&nbsp;\Drupal::service('plugin.manager.mail')→mail($module, $key, $to, $langcode);<br>}</pre><p>Below is the <code>hook_mail()</code> usage, written in <code>x_module.module</code> file.</p><pre>function x_module_mail($key, &amp;$message, $params) {<br>&nbsp;&nbsp;switch($key) {<br>&nbsp;&nbsp;&nbsp;&nbsp;// To Trigger email on x_mail key.<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'x_mail':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['headers'] = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type' =&gt; 'text/html'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['subject'] = t('X Mail subject');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['body'][] = (string) getXMailMessageBody();<br>&nbsp;&nbsp;}<br>}</pre><p>Below is the helper function <code>getXMailMessageBody()</code> which can pull the dynamic data from the system and pass it through.</p><pre>function getXMailMessageBody() {<br>&nbsp;&nbsp;// Get Dynamic values.. then pass to twig file..<br>&nbsp;&nbsp;return twig_render_template(<br>&nbsp;&nbsp;&nbsp;&nbsp;drupal_get_path('module', 'x_module') . '/templates/x-mail.html.twig',<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'theme_hook_original' =&gt; 'not-applicable',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key1' =&gt; "{value1}",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key2' =&gt; "{value2}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;);<br>}</pre><p>Create a twig template file <code>x-mail.html.twig</code> in the module folder within templates folder.</p><pre>Email Body and with dynamic values here {{ dynamic_key1 }} and {{ dynamic_key2 }}.</pre><p>So, with these Drupal Mail service and custom template, you can send emails with customized message mails from your Drupal application.</p><p>Thank you :)</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Sending an email works with defining an email <a href="/articles/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email <a href="/articles/how-work-twig-templates-drupal" title="Read about How To Work With Twig Templates In Drupal">templates</a> are requested from <code>hook_mail()</code> from the module sending the email. Any module can modify the composed email message array using <code>hook_mail_alter()</code>. Finally <code>\Drupal::service('plugin.manager.mail')→mail()</code> sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients.</p><p>Below function's <code>triggerMail</code> code, can be written in any submit handlers or post actions in Drupal.</p><pre>function triggerMail() {<br>&nbsp;&nbsp;$module = "x_module";<br>&nbsp;&nbsp;$key = "x_mail";<br>&nbsp;&nbsp;$to = "example@gmail.com";<br>&nbsp;&nbsp;$langcode = 'en';<br>&nbsp;&nbsp;\Drupal::service('plugin.manager.mail')→mail($module, $key, $to, $langcode);<br>}</pre><p>Below is the <code>hook_mail()</code> usage, written in <code>x_module.module</code> file.</p><pre>function x_module_mail($key, &amp;$message, $params) {<br>&nbsp;&nbsp;switch($key) {<br>&nbsp;&nbsp;&nbsp;&nbsp;// To Trigger email on x_mail key.<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'x_mail':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['headers'] = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type' =&gt; 'text/html'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['subject'] = t('X Mail subject');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['body'][] = (string) getXMailMessageBody();<br>&nbsp;&nbsp;}<br>}</pre><p>Below is the helper function <code>getXMailMessageBody()</code> which can pull the dynamic data from the system and pass it through.</p><pre>function getXMailMessageBody() {<br>&nbsp;&nbsp;// Get Dynamic values.. then pass to twig file..<br>&nbsp;&nbsp;return twig_render_template(<br>&nbsp;&nbsp;&nbsp;&nbsp;drupal_get_path('module', 'x_module') . '/templates/x-mail.html.twig',<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'theme_hook_original' =&gt; 'not-applicable',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key1' =&gt; "{value1}",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key2' =&gt; "{value2}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;);<br>}</pre><p>Create a twig template file <code>x-mail.html.twig</code> in the module folder within templates folder.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/41quccS" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41N-A8bxoeL.jpg" alt="OPPO K14 5G – Best Battery Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/41quccS" target="_blank">
+                                OPPO K14 5G – Best Battery Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 28% Off</div>
+
+                        <a href="https://amzn.to/41quccS" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹25999.00</span>
+                                <span class="current-price">₹18752.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <pre>Email Body and with dynamic values here {{ dynamic_key1 }} and {{ dynamic_key2 }}.</pre><p>So, with these Drupal Mail service and custom template, you can send emails with customized message mails from your Drupal application.</p><p>Thank you :)</p>
+
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -660,7 +712,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-80ce1df10948a42c3540110729908ba98599b5e1f74e6cb2cc763e446b47660f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e5036f7f3c5337e7f7211debae98c0ac0ae35773a67418f8901e27a7ae18f75b">
   
     
       
@@ -712,7 +764,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       

@@ -30,7 +30,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/multisite-local-environment-setup-with-ddev-and-drupal.webp"
             },
             "datePublished": "2025-11-23T09:48:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-04-18T15:16:39+0530",
             "publisher": {
                 "@type": "Organization",
                 "name": "Peoples BLOG",
@@ -71,7 +71,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdoh7f" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdotcn" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -637,8 +637,158 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.</p><p>As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, here’s the <a href="https://github.com/drud/ddev-contrib/tree/master/recipes/drupal8-multisite">recipe</a> provided by ddev.</p><p>Assuming you already have <code>ddev</code> installed and a drupal site is up and running on local. If so check the site details by running <code>ddev describe</code>.</p><p>Initially create a file <code>config.multisite.yaml</code> within the <code>.ddev</code> directory, with <a href="/articles/best-way-add-additional-estimates-upon-original-estimate-story-sprint" title="Read about Best Way To Add Additional Estimates Upon The Original Estimate For A Story In A Sprint">additional</a> hostnames and post hooks.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/blob/master/recipes/drupal8-multisite/dot.ddev/config.multisite.yaml">config.multisite.yaml</a>)</p><p>Next, create the directories for each of the site within sites folder and create entries in <code>sites.php</code> (by default Drupal allows this configuration)</p><p>(reference: <a href="https://www.drupal.org/docs/multisite-drupal">drupal multisite</a>)</p><p>Next, add the <code>settings.ddev.php</code> files for each of the site and add the configurations and also check if the environment is <code>IS_DDEV_PROJECT</code> from the env variables.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/blob/master/recipes/drupal8-multisite/web/sites/default/settings.base.php">settings.ddev.php</a>)</p><p>Next, restart the ddev with the command <code>ddev restart</code>.</p><p>Once the containers are up and running, then run the <code>ddev describe</code> and see the multi site urls.</p><p>You can use drush commands like, <code>drush status -l </code>, allowed by drush. Or create drush aliases and use them for each site.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/tree/master/recipes/drupal8-multisite/drush/sites">drush aliases</a>)</p><p>In case you are configuring ddev multi site for existing drupal site, you might need to import the db to the relevant databases (do it manually, in case locally you are using only on database container)</p><p><code>docker exec -i mysql -u -p &lt; </code></p><p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.</p><p>As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, here’s the <a href="https://github.com/drud/ddev-contrib/tree/master/recipes/drupal8-multisite">recipe</a> provided by ddev.</p><p>Assuming you already have <code>ddev</code> installed and a drupal site is up and running on local. If so check the site details by running <code>ddev describe</code>.</p><p>Initially create a file <code>config.multisite.yaml</code> within the <code>.ddev</code> directory, with <a href="/articles/best-way-add-additional-estimates-upon-original-estimate-story-sprint" title="Read about Best Way To Add Additional Estimates Upon The Original Estimate For A Story In A Sprint">additional</a> hostnames and post hooks.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/blob/master/recipes/drupal8-multisite/dot.ddev/config.multisite.yaml">config.multisite.yaml</a>)</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4t98VjZ" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71y8TdM2dJL._SL1500_.jpg" alt="AllExtreme Disc Lock Alarm – 110dB Anti-Theft Security Lock for Bikes &amp;amp; Scooters">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4t98VjZ" target="_blank">
+                                AllExtreme Disc Lock Alarm – 110dB Anti-Theft Security Lock for Bikes &amp;amp; Scooters
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 0% Off</div>
+
+                        <a href="https://amzn.to/4t98VjZ" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹898.00</span>
+                                <span class="current-price">₹898.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Next, create the directories for each of the site within sites folder and create entries in <code>sites.php</code> (by default Drupal allows this configuration)</p><p>(reference: <a href="https://www.drupal.org/docs/multisite-drupal">drupal multisite</a>)</p><p>Next, add the <code>settings.ddev.php</code> files for each of the site and add the configurations and also check if the environment is <code>IS_DDEV_PROJECT</code> from the env variables.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/blob/master/recipes/drupal8-multisite/web/sites/default/settings.base.php">settings.ddev.php</a>)</p><p>Next, restart the ddev with the command <code>ddev restart</code>.</p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4t8DOVG" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/71F7wEYKTeL._SL1280_.jpg" alt="Tecno Pova 7 Pro 5G – Best Gaming &amp;amp; High-Storage Phone Under ₹20,000">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4t8DOVG" target="_blank">
+                                Tecno Pova 7 Pro 5G – Best Gaming &amp;amp; High-Storage Phone Under ₹20,000
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 20% Off</div>
+
+                        <a href="https://amzn.to/4t8DOVG" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹23999.00</span>
+                                <span class="current-price">₹19299.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Once the containers are up and running, then run the <code>ddev describe</code> and see the multi site urls.</p><p>You can use drush commands like, <code>drush status -l </code>, allowed by drush. Or create drush aliases and use them for each site.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/tree/master/recipes/drupal8-multisite/drush/sites">drush aliases</a>)</p><p>In case you are configuring ddev multi site for existing drupal site, you might need to import the db to the relevant databases (do it manually, in case locally you are using only on database container)</p><p><code>docker exec -i mysql -u -p &lt; </code></p>
+        <div class="tbp-ad-wrapper">
+            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+
+            <div class="product-card tbp-ad">
+                <div class="product-layout">
+
+                    <div class="product-image">
+                        <a href="https://amzn.to/4e4EV4n" target="_blank">
+                            <img src="https://m.media-amazon.com/images/I/41Sb3p-NPBL._SX679_.jpg" alt="Qlect Portable Blender – USB Rechargeable Smoothie Maker On-the-Go">
+                        </a>
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="product-title">
+                            <a href="https://amzn.to/4e4EV4n" target="_blank">
+                                Qlect Portable Blender – USB Rechargeable Smoothie Maker On-the-Go
+                            </a>
+                        </div>
+
+                        <div class="discount-badge">Now 66% Off</div>
+
+                        <a href="https://amzn.to/4e4EV4n" target="_blank" class="buy-button">
+
+                            <span class="product-price">
+                                <span class="actual-price">₹1999.00</span>
+                                <span class="current-price">₹683.00</span>
+                            </span>
+
+                            <span class="product-store">
+                                <span>Amazon</span>
+                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                    <path d="M5 5h5V3H3v7h2V5z" />
+                                </svg>
+                            </span>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+            
+        <p>Thanks for reading the article, for more drupal related articles read and subscribe to peoples blog articles.</p>
+
+        
+            
+        </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -662,7 +812,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-af16da7f0afc6bf8c3932e18a506284981c67150e5c135d2c84bdf4713763ee2">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-47a6068ae7e9b31c9929d7725e456f1ce519df70b26ae7341db5a2ac5e1c605a">
   
     
       
@@ -714,7 +864,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8aab9d84351e23f2b1bc9d9925e67f716f53d0b360590530f8ef83739621a8cd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-51c3d356a39a046e5b30106b0233151029560d0c1388a8aa5f2cfaaa5389700b">
   
     
       
