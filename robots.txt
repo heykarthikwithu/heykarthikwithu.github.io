@@ -82,4 +82,4 @@ Disallow:
 # =========================
 # SITEMAP
 # =========================
-Sitemap: https://thebestproducts.co.in/sitemap.xml
+Sitemap: https://peoplesblog.co.in/sitemap.xml
