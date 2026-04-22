@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
         
             
         <h2><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> the Redis Cache for Product Catalog Data</h2>
@@ -744,7 +733,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4d67aceffcb1419434d060801ba41405321bf6e40db8644c333fe83247ecab8d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a82b8384904926bf4eaa07fb965e56dfe8ad9b7260507f5b780ed3e4f9c052b8">
   
     
       
@@ -778,7 +767,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -796,7 +785,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -891,6 +880,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -965,7 +964,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Drupal's batch API processing is very nice and provides few benifits, We can break long tasks into smaller batches and by this we will be able to prevent maximum execution time errors.</p><p>This article will show how to Build a batch routine in a custom module, its more straight forward approach, you can follow up below code, which is been explained with required comments.</p><p>Create your custom module, which contains <code>custom.info</code> and <code>custom.module</code> files</p><p>The below code put in your <code>custom.module</code> file</p><pre>function custom_menu() {<br>&nbsp;$items['admin/custom_batch'] = array(<br>&nbsp; &nbsp;'title' =&gt; 'Custom Batch',<br>&nbsp; &nbsp;'description' =&gt; 'Custom Batch Process',<br>&nbsp; &nbsp;'type' =&gt; MENU_NORMAL_ITEM,<br>&nbsp; &nbsp;'access callback' =&gt; TRUE,<br>&nbsp; &nbsp;'page callback' =&gt; 'drupal_get_form',<br>&nbsp; &nbsp;'page arguments' =&gt; array('custom_batch_form'),<br>&nbsp;);<br>&nbsp;return $items;<br>}</pre><pre>function custom_batch_form($form, $form_state) {<br>&nbsp;$form["text"]['#markup'] = "Custom batch process to update nodes.... ";<br>&nbsp;$form['submit'] = array(<br>&nbsp; &nbsp;'#type' =&gt; 'submit',<br>&nbsp; &nbsp;'#value' =&gt; t('Run Batch'),<br>&nbsp;);<br>&nbsp;return $form;<br>}</pre><pre>function custom_batch_form_submit($form, $form_state) {<br>&nbsp;batch_set(custom_batch_update_nodes());<br>}</pre><pre>function custom_batch_update_nodes() {<br>&nbsp;drupal_set_message('Updating Nodes');<br>&nbsp;$nodes = node_load_multiple(array(), array('type' =&gt; "story_song"));<br>&nbsp;$node_count = count($nodes);<br>&nbsp;foreach($nodes as $nid=&gt;$node) {<br>&nbsp; &nbsp;$operations[] = array('custom_batch_each_operation', array($node));<br>&nbsp;}<br>&nbsp;$batch = array(<br>&nbsp; &nbsp;'operations' =&gt; $operations,<br>&nbsp; &nbsp;'finished' =&gt; 'custom_batch_update_nodes_finished',<br>&nbsp;);<br>&nbsp;return $batch;<br>}</pre><pre>function custom_batch_each_operation($node, &amp;$context) {<br>&nbsp;$context['results'][] = $node→nid . ' : ' . check_plain($node→title);<br>&nbsp;$context['message'] = t('Processing node "@title"', array('@title' =&gt; $node→title));<br>&nbsp;$updated = FALSE;<br>&nbsp;if ($updated) {<br>&nbsp; &nbsp;node_save($node);<br>&nbsp; &nbsp;$path = drupal_lookup_path("alias", "node/" . $node→nid);<br>&nbsp; &nbsp;drupal_set_message("&lt;a href='/$path'&gt;" . $node→title . "&lt;/a&gt; updated.");<br>&nbsp;}<br>}</pre><pre>function custom_batch_update_nodes_finished($success, $results, $operations) {<br>&nbsp;if ($success) {<br>&nbsp; &nbsp;drupal_set_message(t('@count nodes processed.', array('@count' =&gt; count($results))));<br>&nbsp;}<br>&nbsp;else {<br>&nbsp; &nbsp;$error_operation = reset($operations);<br>&nbsp; &nbsp;drupal_set_message(t('An error occurred while processing @operation with arguments : @args', array('@operation' =&gt; $error_operation[0], '@args' =&gt; print_r($error_operation[0], TRUE))));<br>&nbsp;}<br>}</pre><p>Thank you. </p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Drupal's batch API processing is very nice and provides few benifits, We can break long tasks into smaller batches and by this we will be able to prevent maximum execution time errors.</p><p>This article will show how to Build a batch routine in a custom module, its more straight forward approach, you can follow up below code, which is been explained with required comments.</p><p>Create your custom module, which contains <code>custom.info</code> and <code>custom.module</code> files</p><p>The below code put in your <code>custom.module</code> file</p><pre>function custom_menu() {<br>&nbsp;$items['admin/custom_batch'] = array(<br>&nbsp; &nbsp;'title' =&gt; 'Custom Batch',<br>&nbsp; &nbsp;'description' =&gt; 'Custom Batch Process',<br>&nbsp; &nbsp;'type' =&gt; MENU_NORMAL_ITEM,<br>&nbsp; &nbsp;'access callback' =&gt; TRUE,<br>&nbsp; &nbsp;'page callback' =&gt; 'drupal_get_form',<br>&nbsp; &nbsp;'page arguments' =&gt; array('custom_batch_form'),<br>&nbsp;);<br>&nbsp;return $items;<br>}</pre><pre>function custom_batch_form($form, $form_state) {<br>&nbsp;$form["text"]['#markup'] = "Custom batch process to update nodes.... ";<br>&nbsp;$form['submit'] = array(<br>&nbsp; &nbsp;'#type' =&gt; 'submit',<br>&nbsp; &nbsp;'#value' =&gt; t('Run Batch'),<br>&nbsp;);<br>&nbsp;return $form;<br>}</pre><pre>function custom_batch_form_submit($form, $form_state) {<br>&nbsp;batch_set(custom_batch_update_nodes());<br>}</pre><pre>function custom_batch_update_nodes() {<br>&nbsp;drupal_set_message('Updating Nodes');<br>&nbsp;$nodes = node_load_multiple(array(), array('type' =&gt; "story_song"));<br>&nbsp;$node_count = count($nodes);<br>&nbsp;foreach($nodes as $nid=&gt;$node) {<br>&nbsp; &nbsp;$operations[] = array('custom_batch_each_operation', array($node));<br>&nbsp;}<br>&nbsp;$batch = array(<br>&nbsp; &nbsp;'operations' =&gt; $operations,<br>&nbsp; &nbsp;'finished' =&gt; 'custom_batch_update_nodes_finished',<br>&nbsp;);<br>&nbsp;return $batch;<br>}</pre><pre>function custom_batch_each_operation($node, &amp;$context) {<br>&nbsp;$context['results'][] = $node→nid . ' : ' . check_plain($node→title);<br>&nbsp;$context['message'] = t('Processing node "@title"', array('@title' =&gt; $node→title));<br>&nbsp;$updated = FALSE;<br>&nbsp;if ($updated) {<br>&nbsp; &nbsp;node_save($node);<br>&nbsp; &nbsp;$path = drupal_lookup_path("alias", "node/" . $node→nid);<br>&nbsp; &nbsp;drupal_set_message("&lt;a href='/$path'&gt;" . $node→title . "&lt;/a&gt; updated.");<br>&nbsp;}<br>}</pre><pre>function custom_batch_update_nodes_finished($success, $results, $operations) {<br>&nbsp;if ($success) {<br>&nbsp; &nbsp;drupal_set_message(t('@count nodes processed.', array('@count' =&gt; count($results))));<br>&nbsp;}<br>&nbsp;else {<br>&nbsp; &nbsp;$error_operation = reset($operations);<br>&nbsp; &nbsp;drupal_set_message(t('An error occurred while processing @operation with arguments : @args', array('@operation' =&gt; $error_operation[0], '@args' =&gt; print_r($error_operation[0], TRUE))));<br>&nbsp;}<br>}</pre><p>Thank you. </p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
@@ -726,7 +715,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5ea33869a62049ad2827548c0e39b9e1446541fda1859c26ddbd1d85fc7e8db3">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9880262f44d9ecb3c7a07ffbeb4c1a251507fa87e20bc10395c11ec494c148cc">
   
     
       
@@ -760,7 +749,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -778,7 +767,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -873,6 +862,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -947,7 +946,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

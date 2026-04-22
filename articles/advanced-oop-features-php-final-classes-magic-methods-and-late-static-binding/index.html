@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest iteration, PHP 8, provides several advanced OOP features that enhance its capabilities and allow for more robust and maintainable code.</p><p>In this article, we will explore three advanced OOP features in PHP 8: final classes, magic methods, and late static binding.</p><h2>Final Classes</h2><p><strong>What Are Final Classes?</strong></p><ul> <li>A final class in PHP is a class that cannot be extended.</li> <li>This feature is useful when you want to prevent further inheritance, ensuring that the behavior of the class remains unchanged.</li> <li>You can declare a class as final by using the final keyword before the class definition.</li> </ul><p><strong>Example of Final Classes</strong></p><p><code>final class Logger {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function log($message) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[LOG]: " . $message . "\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// The following will cause an error</code></p><p><code>// class AdvancedLogger extends Logger {}</code></p><p>In the example above, <tt>Logger</tt> is declared as a final class. Any attempt to extend <tt>Logger</tt> will result in a fatal error, enforcing that the behavior of logging remains consistent.</p><p><strong>Use Cases for Final Classes</strong></p><ul> <li><strong>Security</strong>: Final classes can help prevent the alteration of critical functionality, such as logging or payment processing.</li> <li><strong>Performance</strong>: PHP may optimize the method calls on final classes, leading to potential performance improvements.</li> </ul><h2>Magic Methods</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and structure code. PHP, especially in its latest iteration, PHP 8, provides several advanced OOP features that enhance its capabilities and allow for more robust and maintainable code.</p><p>In this article, we will explore three advanced OOP features in PHP 8: final classes, magic methods, and late static binding.</p><h2>Final Classes</h2><p><strong>What Are Final Classes?</strong></p><ul> <li>A final class in PHP is a class that cannot be extended.</li> <li>This feature is useful when you want to prevent further inheritance, ensuring that the behavior of the class remains unchanged.</li> <li>You can declare a class as final by using the final keyword before the class definition.</li> </ul><p><strong>Example of Final Classes</strong></p><p><code>final class Logger {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function log($message) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[LOG]: " . $message . "\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// The following will cause an error</code></p><p><code>// class AdvancedLogger extends Logger {}</code></p><p>In the example above, <tt>Logger</tt> is declared as a final class. Any attempt to extend <tt>Logger</tt> will result in a fatal error, enforcing that the behavior of logging remains consistent.</p><p><strong>Use Cases for Final Classes</strong></p><ul> <li><strong>Security</strong>: Final classes can help prevent the alteration of critical functionality, such as logging or payment processing.</li> <li><strong>Performance</strong>: PHP may optimize the method calls on final classes, leading to potential performance improvements.</li> </ul><h2>Magic Methods</h2>
                     
                         
                     <p><strong>What Are Magic Methods?</strong></p><p>Magic methods in PHP are special methods that allow you to define specific behaviors in your classes. They are prefixed with double underscores (<tt>__</tt>) and are called automatically in certain circumstances. Some commonly used magic methods include:</p><ul> <li><tt>__construct()</tt>: Called when an object is instantiated.</li> <li><tt>__destruct()</tt>: Called when an object is destroyed.</li> <li><tt>__get()</tt>: Called when accessing inaccessible properties.</li> <li><tt>__set()</tt>: Called when setting inaccessible properties.</li> <li><tt>__call()</tt>: Called when invoking inaccessible methods.</li> </ul><p><strong>Example of Magic Methods</strong></p><p>Here’s an example illustrating how to use some of these magic methods:</p><p><code>class User {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private $data = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct($name) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→data['name'] = $name;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __get($property) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→data[$property] ?? null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __call($method, $args) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($method === 'greet') {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Hello, " . $this→data['name'];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>$user = new User("Alice");</code></p><p><code>echo $user→greet(); // Outputs: Hello, Alice</code></p><p>In this example, the <tt>User</tt> class uses <tt>__get</tt> to allow access to the private <tt>$data</tt> array and <tt>__call</tt> to handle calls to undefined methods, providing a dynamic way to extend functionality.</p><p><strong>Use Cases for Magic Methods</strong></p><ul> <li><strong>Dynamic Property Access</strong>: Magic methods like <tt>__get</tt> and <tt>__set</tt> allow for flexible property handling.</li> <li><strong>Implementing Interfaces</strong>: They can <a href="/articles/how-simplify-your-life-mindful-consumption" title="Read about How To Simplify Your Life With Mindful Consumption">simplify</a> method handling for objects that implement various interfaces.</li> <li><strong>Custom Object Serialization</strong>: Magic methods can be used to customize the serialization and deserialization of objects.</li> </ul>
@@ -684,7 +673,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6d57c7d4ead9a50464538b0fecd0041021cb4e56d7004e6a33fdb4aedb5a8a2b">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9940c95646450de21e90851c9dde362760169a9d01a33f027131b7af88d89cba">
   
     
       
@@ -718,7 +707,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -736,7 +725,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -831,6 +820,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -905,7 +904,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

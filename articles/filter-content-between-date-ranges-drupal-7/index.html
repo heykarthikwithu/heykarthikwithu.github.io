@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul> <li>A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li> <li>If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li> </ul><ul> <li>The following conversation <a href="https://www.drupal.org/node/1302940">https://www.drupal.org/node/1302940</a> explains:</li> </ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul> <li>Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li> <li>To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li> <li>In this order: <ul> <li>Date - end date (field_dates:value2)</li> <li>Date - start date (field_dates)</li> </ul> </li> <li>In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li> <li>In next window: Select Exposed this filter to visitor</li> <li>Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li> <li>Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li> </ul><ul> <li>Do the same to the second filter:</li> </ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul> <li>This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li> <li>And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li> <li>Save the view.</li> </ul>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul> <li>A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li> <li>If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li> </ul><ul> <li>The following conversation <a href="https://www.drupal.org/node/1302940">https://www.drupal.org/node/1302940</a> explains:</li> </ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul> <li>Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li> <li>To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li> <li>In this order: <ul> <li>Date - end date (field_dates:value2)</li> <li>Date - start date (field_dates)</li> </ul> </li> <li>In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li> <li>In next window: Select Exposed this filter to visitor</li> <li>Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li> <li>Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li> </ul><ul> <li>Do the same to the second filter:</li> </ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul> <li>This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li> <li>And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li> <li>Save the view.</li> </ul>
         
             
         
@@ -675,7 +664,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1319acd0fcd42a12aa49dfc1fdbdec6b48f60b4f42b44151a56959985d574040">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4f424c942ab5fef77e356eadca73b7550c2fe39a89b6f59924b93188412c7621">
   
     
       
@@ -709,7 +698,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -727,7 +716,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -822,6 +811,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -896,7 +895,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

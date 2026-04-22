@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p>
         
             
         <h2>Key Concepts</h2><ol> <li><strong>Atomicity</strong>: Ensures that a series of operations either complete entirely or have no effect at all. If any operation fails, the entire transaction is rolled back.</li> <li><strong>Consistency</strong>: Guarantees that a transaction will bring the system from one valid state to another, maintaining all predefined rules, such as constraints and triggers.</li> <li><strong>Isolation</strong>: Ensures that transactions occur independently of one another. Intermediate states of a transaction should not be visible to other transactions until it is committed.</li> <li><strong>Durability</strong>: Once a transaction has been committed, its effects are permanent, even in the case of a system failure.</li> </ol><h2>Implementation Steps</h2><ol> <li><strong>Begin Transaction</strong>: Start a new transaction. This often involves setting a flag or state that indicates a transaction is in progress.</li> <li><strong>Execute Operations</strong>: Perform the desired operations (e.g., inserts, updates, deletes). Keep track of changes made during the transaction.</li> <li><strong>Validation</strong>: Check for any constraints or conditions that must be satisfied before committing the transaction.</li> <li><strong>Commit</strong>: If all operations are successful and validations are met, apply the changes permanently. This might involve writing changes to the database and clearing any transaction-related state.</li> <li><strong>Rollback</strong>: If an error occurs during execution or validation, revert all changes made during the transaction to ensure that the system remains in a consistent state.</li> </ol><p><strong>Database Setup</strong></p><p>Assume you have two tables: accounts and transactions.</p><p><code>CREATE TABLE accounts (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    balance DECIMAL(10, 2) NOT NULL</code></p><p><code>);</code></p><p><code>CREATE TABLE transactions (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    account_id INT,</code></p><p><code>    amount DECIMAL(10, 2),</code></p><p><code>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>    FOREIGN KEY (account_id) REFERENCES accounts(id)</code></p><p><code>);</code></p><p><strong>PHP Code</strong></p><p>Here's a PHP script that performs a transaction to transfer money between two accounts:</p><p><!--?php</p--></p><p><code>$host = 'localhost';</code></p><p><code>$db = 'your_database';</code></p><p><code>$user = 'your_username';</code></p><p><code>$pass = 'your_password';</code></p><p><code>try {</code></p><p><code>    // Create a new PDO instance</code></p><p><code>    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);</code></p><p><code>    $pdo→setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code></p><p><code>    // Start a transaction</code></p><p><code>    $pdo→beginTransaction();</code></p><p><code>    // Amount to transfer</code></p><p><code>    $transferAmount = 100.00;</code></p><p><code>    $fromAccountId = 1;</code></p><p><code>    $toAccountId = 2;</code></p><p><code>    // Deduct amount from the source account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance - ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $fromAccountId]);</code></p><p><code>    // Check if the balance is sufficient</code></p><p><code>    if ($stmt→rowCount() === 0) {</code></p><p><code>        throw new Exception("Insufficient funds or account not found.");</code></p><p><code>    }</code></p><p><code>    // Add amount to the destination account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance + ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $toAccountId]);</code></p><p><code>    // Log the transaction</code></p><p><code>    $stmt = $pdo→prepare("INSERT INTO transactions (account_id, amount) VALUES (?, ?)");</code></p><p><code>    $stmt→execute([$fromAccountId, -$transferAmount]);</code></p><p><code>    $stmt→execute([$toAccountId, $transferAmount]);</code></p><p><code>    // Commit the transaction</code></p><p><code>    $pdo→commit();</code></p><p><code>    echo "Transaction completed successfully.";</code></p><p><code>}</code></p><p><code>catch (Exception $e) {</code></p><p><code>    // Rollback the transaction in case of error</code></p><p><code>    $pdo→rollBack();</code></p><p><code>    echo "Transaction failed: " . $e→getMessage();</code></p><p><code>}</code></p><p><code>?&gt;</code></p>
@@ -755,7 +744,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a51ca55837e493bebda4ac561644532a4a441621088fb88aaee6c2c863f3e663">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-66421ad9be14511d9b7d8188678269f4490ec6688e8b907bcc08d0fdaffd2c1b">
   
     
       
@@ -789,7 +778,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -807,7 +796,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -902,6 +891,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -976,7 +975,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
         
             
         <h2>Key Concepts</h2><ol> <li><strong>Drupal Migration API</strong>: This API allows importing content from external sources (like JSStream) and mapping it to Drupal entities (e.g., media entities).</li> <li><strong>Vimeo API</strong>: The Vimeo API allows programmatic interaction with Vimeo to upload videos, set metadata, and manage video privacy and settings.</li> <li><strong>Media Entities</strong>: In Drupal, media entities represent multimedia content (images, videos, etc.). We’ll use the <strong>Video media bundle</strong> to store Vimeo videos.</li> </ol><h2>Prerequisites</h2><p>Before proceeding with the migration, ensure you have the following setup:</p><ul> <li><strong>Drupal </strong>latest version&nbsp;installed.</li> <li>The required migration modules enabled: <tt>migrate</tt>, <tt>migrate_plus</tt>, <tt>migrate_tools</tt>.</li> <li>A <strong>Vimeo Developer</strong> account to get <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>Access Token</strong>.</li> <li>Video files and metadata exported from <strong>JSStream</strong> in a CSV or JSON format.</li> </ul><h2>1. Install Required Modules</h2><p>First, install the necessary modules for migration:</p><p><code>composer require drupal/migrate drupal/migrate_plus drupal/migrate_tools</code></p><p>Then enable the modules:</p><p><code>drush en migrate migrate_plus migrate_tools</code></p><h2>2. Define Migration Configuration</h2>
@@ -759,7 +748,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-327b95cc8f73172ed175900191c358636b6ec59cc061dc07dbebad2f170e7536">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6b87d8e4919cc7cd85496d9e0a89c1c988f668b93003a7d3e880dedc219b956e">
   
     
       
@@ -793,7 +782,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -811,7 +800,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -906,6 +895,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -980,7 +979,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

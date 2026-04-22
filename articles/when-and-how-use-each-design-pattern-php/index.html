@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
                     
                         
                     <p><strong>When to Use</strong></p><ul> <li>The Observer pattern is useful when you have one-to-many relationships between objects.</li> <li>When one object changes its state, all its dependents should be notified and updated automatically, which is common in event-driven systems.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void;</code></p><p><code>}</code></p><p><code>class EventObserver implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Received event: $event\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class EventSource {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update($event);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$eventSource = new EventSource();</code></p><p><code>$observer = new EventObserver();</code></p><p><code>$eventSource→attach($observer);</code></p><p><code>$eventSource→notify('Event 1');</code></p>
@@ -749,7 +738,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1333193d9594fd86f6ca80cd4d3d0864113736f78da3e5fd5e02523eacdd7621">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c66b414d1003bb6f33134d795e5dc77fa3c453c54250189fa018152514b8fda6">
   
     
       
@@ -783,7 +772,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -801,7 +790,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -896,6 +885,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -970,7 +969,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

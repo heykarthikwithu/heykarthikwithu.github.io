@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.</p><p>In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP <a href="/articles/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a> using PHP 8.</p><h2>1. Factory Pattern</h2><p><strong>Scenario</strong></p><p>Imagine you’re developing an e-commerce application where different types of payment methods are available: Credit Card, PayPal and Bitcoin. Instead of <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">creating</a> each payment object directly, you can use the Factory Pattern.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Define the Payment Interface</p><p><code>interface PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount);</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create Concrete Payment Classes</p><p><code>class CreditCardPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a credit card payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class PayPalPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a PayPal payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class BitcoinPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a Bitcoin payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Implement the Factory Class</p><p><code>class PaymentFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function create(string $type): PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'credit_card':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new CreditCardPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'paypal':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new PayPalPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'bitcoin':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new BitcoinPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown payment method");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4:</strong> Usage Example</p><p><code>$paymentMethod = PaymentFactory::create('paypal');</code></p><p><code>echo $paymentMethod→processPayment(100.00); // Outputs: Processing a PayPal payment of $100.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Decoupling</strong>: You decouple the client code from the concrete payment classes.</li> <li><strong>Scalability</strong>: Adding new payment methods becomes easier, as you only need to create a new class and update the factory.</li> </ul>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.</p><p>In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP <a href="/articles/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a> using PHP 8.</p><h2>1. Factory Pattern</h2><p><strong>Scenario</strong></p><p>Imagine you’re developing an e-commerce application where different types of payment methods are available: Credit Card, PayPal and Bitcoin. Instead of <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">creating</a> each payment object directly, you can use the Factory Pattern.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Define the Payment Interface</p><p><code>interface PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount);</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create Concrete Payment Classes</p><p><code>class CreditCardPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a credit card payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class PayPalPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a PayPal payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class BitcoinPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a Bitcoin payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Implement the Factory Class</p><p><code>class PaymentFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function create(string $type): PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'credit_card':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new CreditCardPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'paypal':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new PayPalPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'bitcoin':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new BitcoinPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown payment method");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4:</strong> Usage Example</p><p><code>$paymentMethod = PaymentFactory::create('paypal');</code></p><p><code>echo $paymentMethod→processPayment(100.00); // Outputs: Processing a PayPal payment of $100.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Decoupling</strong>: You decouple the client code from the concrete payment classes.</li> <li><strong>Scalability</strong>: Adding new payment methods becomes easier, as you only need to create a new class and update the factory.</li> </ul>
         
             
         <h2>2. Singleton Pattern</h2>
@@ -684,7 +673,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-66fa8593876bb96e0abef513a5067370574be1595971af2bd1ecb2f9802c2896">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-d582a1b1deec8f278dcf3785a160f15206c19acf8a449aa3dc1491afa64327d1">
   
     
       
@@ -718,7 +707,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -736,7 +725,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -831,6 +820,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -905,7 +904,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

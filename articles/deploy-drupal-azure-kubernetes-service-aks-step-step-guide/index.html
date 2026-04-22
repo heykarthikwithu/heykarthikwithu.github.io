@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><strong>Azure Kubernetes Service (AKS)</strong>, offered by Microsoft Azure, is a fully managed container orchestration service that leverages Kubernetes to manage, deploy, and scale <a href="/articles/secure-application-password-reset-flow-best-practices" title="Read about Secure Your Applications Reset Password Flow">applications</a> in containers. Kubernetes is the go-to platform for automating the deployment, scaling, and management of containerized applications, making it an ideal choice for running complex web applications like <strong>Drupal</strong>.</p><p>Drupal, an open-source content management system (CMS), powers millions of websites worldwide, from small blogs to large, enterprise-level applications. By deploying Drupal on AKS, you gain the benefits of Kubernetes' orchestration capabilities, while also leveraging Azure's cloud-native tools for enhanced <a href="/articles/usage-local-php-security-checker-drupal-applications" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a>, scalability, and high availability.</p><p>This article provides a detailed theoretical overview of the process involved in deploying Drupal on AKS. We’ll cover the key concepts, the steps involved, and the benefits of using AKS for Drupal, without delving into technical implementation steps like command-line operations.</p><h2>Key Concepts</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p><strong>Azure Kubernetes Service (AKS)</strong>, offered by Microsoft Azure, is a fully managed container orchestration service that leverages Kubernetes to manage, deploy, and scale <a href="/articles/secure-application-password-reset-flow-best-practices" title="Read about Secure Your Applications Reset Password Flow">applications</a> in containers. Kubernetes is the go-to platform for automating the deployment, scaling, and management of containerized applications, making it an ideal choice for running complex web applications like <strong>Drupal</strong>.</p><p>Drupal, an open-source content management system (CMS), powers millions of websites worldwide, from small blogs to large, enterprise-level applications. By deploying Drupal on AKS, you gain the benefits of Kubernetes' orchestration capabilities, while also leveraging Azure's cloud-native tools for enhanced <a href="/articles/usage-local-php-security-checker-drupal-applications" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a>, scalability, and high availability.</p><p>This article provides a detailed theoretical overview of the process involved in deploying Drupal on AKS. We’ll cover the key concepts, the steps involved, and the benefits of using AKS for Drupal, without delving into technical implementation steps like command-line operations.</p><h2>Key Concepts</h2>
                     
                         
                     <p><strong>1. Azure Kubernetes Service (AKS)</strong></p><p>Azure Kubernetes Service (AKS) is a managed Kubernetes offering that allows you to quickly deploy and manage Kubernetes clusters in the Azure cloud. AKS abstracts away the complexity of Kubernetes cluster management by handling tasks such as provisioning, upgrading, scaling, and monitoring. It integrates seamlessly with other Azure services, making it a perfect choice for deploying cloud-native applications.</p><ul> <li><strong>Kubernetes Control Plane</strong>: Azure manages the Kubernetes control plane, which includes the master nodes responsible for the overall cluster management, scheduling, and orchestrating workloads.</li> <li><strong>Kubernetes Worker Nodes</strong>: These are the virtual machines that actually run the containerized applications. You manage the worker nodes, but Azure provides a managed infrastructure layer.</li> <li><strong>Scaling</strong>: AKS allows you to scale your application up and down dynamically, based on the demand. You can configure Kubernetes' <strong>auto-scaling</strong> feature to adjust the number of worker nodes or pods based on usage.</li> <li><strong>Load Balancing and High Availability</strong>: Kubernetes provides automatic load balancing of traffic across your containers, ensuring high availability for your applications.</li> </ul><p><strong>2. Drupal</strong></p><p>Drupal is a robust open-source content management system (CMS) used by a wide range of websites, from personal blogs to large enterprise sites. Its modular architecture allows users to extend its functionality using themes and modules, which is one of the reasons it’s highly favored by developers. However, to ensure optimal performance, especially at scale, it’s important to deploy Drupal in a way that leverages the strengths of containerization and cloud computing.</p><ul> <li><strong>Database Backend</strong>: Drupal requires a relational database like MySQL or PostgreSQL to store its content, user data, and configurations.</li> <li><strong>PHP-based</strong>: Drupal is built using PHP, a server-side scripting language, and needs a compatible web server like Apache or Nginx to serve web pages.</li> <li><strong>Customizability and Extensibility</strong>: Drupal’s ability to support custom themes and modules makes it a highly flexible platform for a wide range of use cases, from simple content-driven websites to complex applications.</li> </ul><p><strong>3. Kubernetes</strong></p><p>Kubernetes, often referred to as <strong>K8s</strong>, is an open-source platform designed for managing containerized applications. Kubernetes automates many of the tasks associated with running and maintaining containerized applications, including:</p><ul> <li><strong>Automated Scaling</strong>: Kubernetes automatically adjusts the number of running containers (pods) based on the current load.</li> <li><strong>Self-Healing</strong>: Kubernetes ensures that if a pod fails, it will automatically restart or replace it.</li> <li><strong>Service Discovery and Load Balancing</strong>: Kubernetes provides a built-in service discovery mechanism and load balancing, ensuring that traffic is routed correctly to the available pods.</li> <li><strong>Rolling Updates</strong>: Kubernetes enables zero-downtime deployments by performing rolling updates, where new versions of the application are deployed gradually, without affecting the overall availability of the service.</li> </ul><p><strong>4. Containers and Docker</strong></p>
@@ -692,7 +681,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-45a9ef784448d976e55bc3907c4e8309126c345d9a8a96440443ce4f06bab82f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-beb36748c6aa74e6fa7e4bb8524d3f62cbf0e7f3a04226a250bc748d83b523ea">
   
     
       
@@ -726,7 +715,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -744,7 +733,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -839,6 +828,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -913,7 +912,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

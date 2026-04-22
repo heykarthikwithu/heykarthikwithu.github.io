@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Data structures are an integral part of programming, offering <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong> will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high performance and easy integration into your projects.</p><p>In this article, we'll explore how to implement basic data structures in PHP 8 and how to leverage PHP’s SPL classes for enhanced functionality.</p><h2>1. Introduction to Data Structures in PHP</h2><ul> <li>Data structures are ways of organizing and storing data so that they can be accessed and modified efficiently.</li> <li>By understanding the strengths and weaknesses of various data structures, developers can optimize their code for performance and readability.</li> </ul><p>In PHP 8, developers can choose between building their own data structures or using the built-in SPL classes.</p><p>Let's start with manual implementations for three common data structures: <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong>.</p><h2>2. <a href="/articles/implementing-notification-system-using-observer-pattern-php" title="Read about Implementing A Notification System Using The Observer Pattern In Php">Implementing</a> Stacks in PHP</h2><p>A <strong>stack</strong> is a simple data structure that follows the <strong>Last In, First Out (LIFO)</strong> principle. The last element pushed onto the stack is the first to be popped out.</p><p><strong>Stack Operations:</strong></p><ul> <li><tt>push()</tt>: Add an element to the top of the stack.</li> <li><tt>pop()</tt>: Remove and return the top element.</li> <li><tt>peek()</tt>: View the top element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the stack is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Stack {</code></p><p><code>    private $stack = [];</code></p><p><code>    public function push($item) {</code></p><p><code>        array_push($this→stack, $item);</code></p><p><code>    }</code></p><p><code>    public function pop() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_pop($this→stack);</code></p><p><code>        }</code></p><p><code>        return null; // Stack is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return end($this→stack);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→stack);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$stack = new Stack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→peek(); // 1</code></p><p><strong>SPL Stack Implementation:</strong></p><p>PHP offers a built-in stack class <tt>SplStack</tt> in the SPL library:</p><p><code>$stack = new SplStack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→top(); // 1</code></p><h2>3. Implementing Queues in PHP</h2><p>A <strong>queue</strong> is a data structure that follows the <strong>First In, First Out (FIFO)</strong> principle. The first element added to the queue will be the first to be removed.</p><p><strong>Queue Operations:</strong></p><ul> <li><tt>enqueue()</tt>: Add an element to the back of the queue.</li> <li><tt>dequeue()</tt>: Remove and return the front element.</li> <li><tt>peek()</tt>: View the front element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the queue is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Queue {</code></p><p><code>    private $queue = [];</code></p><p><code>    public function enqueue($item) {</code></p><p><code>        array_push($this→queue, $item);</code></p><p><code>    }</code></p><p><code>    public function dequeue() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_shift($this→queue);</code></p><p><code>        }</code></p><p><code>        return null; // Queue is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return reset($this→queue);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→queue);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$queue = new Queue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p><p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→peek(); // 2</code></p><p><strong>SPL Queue Implementation:</strong></p><p>PHP’s <tt>SplQueue</tt> class implements a queue with optimized methods:</p><p><code>$queue = new SplQueue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Data structures are an integral part of programming, offering <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong> will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high performance and easy integration into your projects.</p><p>In this article, we'll explore how to implement basic data structures in PHP 8 and how to leverage PHP’s SPL classes for enhanced functionality.</p><h2>1. Introduction to Data Structures in PHP</h2><ul> <li>Data structures are ways of organizing and storing data so that they can be accessed and modified efficiently.</li> <li>By understanding the strengths and weaknesses of various data structures, developers can optimize their code for performance and readability.</li> </ul><p>In PHP 8, developers can choose between building their own data structures or using the built-in SPL classes.</p><p>Let's start with manual implementations for three common data structures: <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong>.</p><h2>2. <a href="/articles/implementing-notification-system-using-observer-pattern-php" title="Read about Implementing A Notification System Using The Observer Pattern In Php">Implementing</a> Stacks in PHP</h2><p>A <strong>stack</strong> is a simple data structure that follows the <strong>Last In, First Out (LIFO)</strong> principle. The last element pushed onto the stack is the first to be popped out.</p><p><strong>Stack Operations:</strong></p><ul> <li><tt>push()</tt>: Add an element to the top of the stack.</li> <li><tt>pop()</tt>: Remove and return the top element.</li> <li><tt>peek()</tt>: View the top element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the stack is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Stack {</code></p><p><code>    private $stack = [];</code></p><p><code>    public function push($item) {</code></p><p><code>        array_push($this→stack, $item);</code></p><p><code>    }</code></p><p><code>    public function pop() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_pop($this→stack);</code></p><p><code>        }</code></p><p><code>        return null; // Stack is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return end($this→stack);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→stack);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$stack = new Stack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→peek(); // 1</code></p><p><strong>SPL Stack Implementation:</strong></p><p>PHP offers a built-in stack class <tt>SplStack</tt> in the SPL library:</p><p><code>$stack = new SplStack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→top(); // 1</code></p><h2>3. Implementing Queues in PHP</h2><p>A <strong>queue</strong> is a data structure that follows the <strong>First In, First Out (FIFO)</strong> principle. The first element added to the queue will be the first to be removed.</p><p><strong>Queue Operations:</strong></p><ul> <li><tt>enqueue()</tt>: Add an element to the back of the queue.</li> <li><tt>dequeue()</tt>: Remove and return the front element.</li> <li><tt>peek()</tt>: View the front element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the queue is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Queue {</code></p><p><code>    private $queue = [];</code></p><p><code>    public function enqueue($item) {</code></p><p><code>        array_push($this→queue, $item);</code></p><p><code>    }</code></p><p><code>    public function dequeue() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_shift($this→queue);</code></p><p><code>        }</code></p><p><code>        return null; // Queue is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return reset($this→queue);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→queue);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$queue = new Queue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p><p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→peek(); // 2</code></p><p><strong>SPL Queue Implementation:</strong></p><p>PHP’s <tt>SplQueue</tt> class implements a queue with optimized methods:</p><p><code>$queue = new SplQueue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p>
 <p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→bottom(); // 2</code></p>
         
             
@@ -747,7 +736,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c30827fa93e2e5ffcb71bf132d9948567b89ad8d8145c318b636030ddc0ae6ae">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-459f16b4d1d9aeec0717b09e7ec59e4885008c7d5c3cd4cc5a391a2bbc337b56">
   
     
       
@@ -781,7 +770,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -799,7 +788,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -894,6 +883,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -968,7 +967,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

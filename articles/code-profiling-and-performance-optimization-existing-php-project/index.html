@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>As applications grow in complexity, ensuring optimal performance becomes critical. Code profiling and performance optimization are essential practices that help developers identify bottlenecks and improve the efficiency of their PHP applications.</p><p>In this article, we will explore the tools and techniques for code profiling and performance optimization in PHP 8.</p><h2>What is Code Profiling?</h2><p>Code profiling is the process of analyzing an application to identify areas that consume excessive resources, such as CPU time or memory. Profiling helps developers understand how their code behaves in real-world scenarios, allowing for informed optimization decisions.</p><p><strong>Benefits of Code Profiling</strong></p><ul> <li><strong>Identifies Bottlenecks</strong>: Profiling reveals which parts of the code are slow or resource-intensive.</li> <li><strong>Improves Performance</strong>: By focusing on the most critical areas, developers can achieve significant performance gains.</li> <li><strong>Guides Refactoring</strong>: Profiling provides insights into where code structure can be improved for better efficiency.</li> </ul><h2>Tools for Code Profiling in PHP 8</h2><p><strong>1. Xdebug</strong></p><ul> <li><a href="https://xdebug.org/" target="_blank"><u>Xdebug</u></a> is a powerful debugging and profiling tool for PHP.</li> <li>It provides detailed insights into code <a href="/articles/understanding-sql-query-execution-plans-and-optimizing-joins" title="Read about Understanding Sql Query Execution Plans And Optimizing Joins">execution</a>, including function call traces and memory usage.</li> </ul><p><strong>Installing Xdebug</strong></p><p>You can install Xdebug using PECL:</p><p><code>pecl install xdebug</code></p><p>Once installed, you can enable it in your <tt>php.ini</tt> file:</p><p><code>zend_extension=xdebug.so</code></p><p><strong>Using Xdebug for Profiling</strong></p><p>To profile your PHP application, you can enable the profiling feature in your <tt>php.ini</tt>:</p><p><code>xdebug.profiler_enable=1</code></p><p><code>xdebug.profiler_output_dir="/path/to/profiler/output"</code></p><p>This configuration will generate cachegrind files in the specified directory, which can be analyzed using tools like<a href="https://github.com/jokkedk/webgrind" target="_blank"> <u>Webgrind</u></a> or QCacheGrind.</p><p><strong>2. Blackfire</strong></p><ul> <li><a href="https://blackfire.io/" target="_blank"><u>Blackfire</u></a> is a commercial profiling tool designed for PHP applications.</li> <li>It provides advanced performance <a href="/articles/how-set-monitoring-system-solar-panel-your-home" title="Read about How To Set Up A Monitoring System For The Solar Panel At Your Home">monitoring</a> and profiling features, including integration with CI/CD pipelines.</li> </ul><p><strong>Setting Up Blackfire</strong></p><p>To get started, you need to install the Blackfire agent and PHP extension:</p><p><code># Install Blackfire agent</code></p><p><code>curl -sS https://get.blackfire.io/blackfire-install.sh | bash</code></p><p><code># Install Blackfire PHP extension</code></p><p><code>pecl install blackfire</code></p><p>Once installed, configure your Blackfire credentials in your <tt>php.ini</tt>:</p><p><code>blackfire.client_id="YOUR_CLIENT_ID"</code></p><p><code>blackfire.client_token="YOUR_CLIENT_TOKEN"</code></p><p><code>blackfire.server_id="YOUR_SERVER_ID"</code></p><p><strong>Profiling with Blackfire</strong></p><p>You can profile your application using the Blackfire CLI:</p><p><code>blackfire run php your-script.php</code></p><p>This command will capture performance data, which you can view on the Blackfire web interface.</p><p><strong>3. Tideways</strong></p><ul> <li><a href="https://tideways.com/" target="_blank"><u>Tideways</u></a> is another performance monitoring tool that focuses on profiling PHP applications.</li> <li>It provides insights into performance bottlenecks and includes transaction monitoring.</li> </ul><p><strong>Installing Tideways</strong></p><p>You can install the Tideways PHP extension using PECL:</p><p><code>pecl install tideways</code></p><p>Then, configure it in your <tt>php.ini</tt>:</p><p><code>extension=tideways.so</code></p><p><code>tideways.api_key="YOUR_API_KEY"</code></p><p><strong>Profiling with Tideways</strong></p><p>To profile a script with Tideways, you can use the CLI tool:</p><p><code>tideways start</code></p><p><code>php your-script.php</code></p><p><code>tideways stop</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>As applications grow in complexity, ensuring optimal performance becomes critical. Code profiling and performance optimization are essential practices that help developers identify bottlenecks and improve the efficiency of their PHP applications.</p><p>In this article, we will explore the tools and techniques for code profiling and performance optimization in PHP 8.</p><h2>What is Code Profiling?</h2><p>Code profiling is the process of analyzing an application to identify areas that consume excessive resources, such as CPU time or memory. Profiling helps developers understand how their code behaves in real-world scenarios, allowing for informed optimization decisions.</p><p><strong>Benefits of Code Profiling</strong></p><ul> <li><strong>Identifies Bottlenecks</strong>: Profiling reveals which parts of the code are slow or resource-intensive.</li> <li><strong>Improves Performance</strong>: By focusing on the most critical areas, developers can achieve significant performance gains.</li> <li><strong>Guides Refactoring</strong>: Profiling provides insights into where code structure can be improved for better efficiency.</li> </ul><h2>Tools for Code Profiling in PHP 8</h2><p><strong>1. Xdebug</strong></p><ul> <li><a href="https://xdebug.org/" target="_blank"><u>Xdebug</u></a> is a powerful debugging and profiling tool for PHP.</li> <li>It provides detailed insights into code <a href="/articles/understanding-sql-query-execution-plans-and-optimizing-joins" title="Read about Understanding Sql Query Execution Plans And Optimizing Joins">execution</a>, including function call traces and memory usage.</li> </ul><p><strong>Installing Xdebug</strong></p><p>You can install Xdebug using PECL:</p><p><code>pecl install xdebug</code></p><p>Once installed, you can enable it in your <tt>php.ini</tt> file:</p><p><code>zend_extension=xdebug.so</code></p><p><strong>Using Xdebug for Profiling</strong></p><p>To profile your PHP application, you can enable the profiling feature in your <tt>php.ini</tt>:</p><p><code>xdebug.profiler_enable=1</code></p><p><code>xdebug.profiler_output_dir="/path/to/profiler/output"</code></p><p>This configuration will generate cachegrind files in the specified directory, which can be analyzed using tools like<a href="https://github.com/jokkedk/webgrind" target="_blank"> <u>Webgrind</u></a> or QCacheGrind.</p><p><strong>2. Blackfire</strong></p><ul> <li><a href="https://blackfire.io/" target="_blank"><u>Blackfire</u></a> is a commercial profiling tool designed for PHP applications.</li> <li>It provides advanced performance <a href="/articles/how-set-monitoring-system-solar-panel-your-home" title="Read about How To Set Up A Monitoring System For The Solar Panel At Your Home">monitoring</a> and profiling features, including integration with CI/CD pipelines.</li> </ul><p><strong>Setting Up Blackfire</strong></p><p>To get started, you need to install the Blackfire agent and PHP extension:</p><p><code># Install Blackfire agent</code></p><p><code>curl -sS https://get.blackfire.io/blackfire-install.sh | bash</code></p><p><code># Install Blackfire PHP extension</code></p><p><code>pecl install blackfire</code></p><p>Once installed, configure your Blackfire credentials in your <tt>php.ini</tt>:</p><p><code>blackfire.client_id="YOUR_CLIENT_ID"</code></p><p><code>blackfire.client_token="YOUR_CLIENT_TOKEN"</code></p><p><code>blackfire.server_id="YOUR_SERVER_ID"</code></p><p><strong>Profiling with Blackfire</strong></p><p>You can profile your application using the Blackfire CLI:</p><p><code>blackfire run php your-script.php</code></p><p>This command will capture performance data, which you can view on the Blackfire web interface.</p><p><strong>3. Tideways</strong></p><ul> <li><a href="https://tideways.com/" target="_blank"><u>Tideways</u></a> is another performance monitoring tool that focuses on profiling PHP applications.</li> <li>It provides insights into performance bottlenecks and includes transaction monitoring.</li> </ul><p><strong>Installing Tideways</strong></p><p>You can install the Tideways PHP extension using PECL:</p><p><code>pecl install tideways</code></p><p>Then, configure it in your <tt>php.ini</tt>:</p><p><code>extension=tideways.so</code></p><p><code>tideways.api_key="YOUR_API_KEY"</code></p><p><strong>Profiling with Tideways</strong></p><p>To profile a script with Tideways, you can use the CLI tool:</p><p><code>tideways start</code></p><p><code>php your-script.php</code></p><p><code>tideways stop</code></p>
         
             
         <h2>Step 1: Performance Optimization Techniques</h2>
@@ -753,7 +742,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a453ef2eb719820ca7385c2b02d34cb81d788ed90020f9ae67f3f52d63667cd9">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-836080eb2756390cae2342ed0250124bebccac80aa5b60672cf66789c581d945">
   
     
       
@@ -787,7 +776,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -805,7 +794,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -900,6 +889,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -974,7 +973,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>

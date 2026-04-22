@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdwanv" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -504,17 +504,6 @@
         
         <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
                               
-                      <a href="/spiritual" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/369">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Spiritual</span>
-          </a>
-
-            
-                  </li>
-      
-                          
-        
-        
-        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
-                              
                       <a href="/quick-read" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="taxonomy/term/248">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Quick Reads</span>
           </a>
 
@@ -643,7 +632,7 @@
 </a>
 </div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in <a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">algorithms</a> that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculations.</p><p>In this article, we will explore the fundamentals of Dynamic Programming in PHP 8, discuss key concepts, and solve some classic problems like the <em>Knapsack Problem</em> and <em>Longest Common Subsequence</em> (LCS). We will also provide working PHP code to demonstrate these concepts.</p><h2>What is Dynamic Programming?</h2><p>Dynamic Programming is a method for solving problems by dividing them into smaller, manageable subproblems. It is a bottom-up <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> where you solve subproblems first and use their solutions to build up the final answer. DP typically involves two main techniques:</p><ol> <li><strong>Memoization (Top-Down Approach):</strong> Storing the results of already solved subproblems in a cache (usually an array) to avoid redundant work.</li> <li><strong>Tabulation (Bottom-Up Approach):</strong> Solving the problem iteratively by filling up a table with solutions to subproblems in a systematic manner.</li> </ol><p>Dynamic Programming is applied to problems where:</p><ul> <li>Overlapping subproblems exist.</li> <li>Optimal substructure is present, meaning the optimal solution to the overall problem can be constructed from optimal solutions to subproblems.</li> </ul><p><strong>Key Concepts in Dynamic Programming</strong></p><ol> <li><strong>Overlapping Subproblems:</strong> This occurs when the problem can be divided into smaller subproblems that are solved multiple times. By solving each subproblem once and storing the results, we can improve efficiency.</li> <li><strong>Optimal Substructure:</strong> This means that the solution to the overall problem can be constructed from the solutions to its subproblems. If a problem does not have this property, Dynamic Programming is not applicable.</li> <li><strong>State Representation:</strong> This is the way you represent the problem's state, typically through an array or matrix. The state transitions represent how you can move from one state to another by taking an action.</li> </ol><h2>Solving Classic DP Problems</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in <a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">algorithms</a> that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculations.</p><p>In this article, we will explore the fundamentals of Dynamic Programming in PHP 8, discuss key concepts, and solve some classic problems like the <em>Knapsack Problem</em> and <em>Longest Common Subsequence</em> (LCS). We will also provide working PHP code to demonstrate these concepts.</p><h2>What is Dynamic Programming?</h2><p>Dynamic Programming is a method for solving problems by dividing them into smaller, manageable subproblems. It is a bottom-up <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> where you solve subproblems first and use their solutions to build up the final answer. DP typically involves two main techniques:</p><ol> <li><strong>Memoization (Top-Down Approach):</strong> Storing the results of already solved subproblems in a cache (usually an array) to avoid redundant work.</li> <li><strong>Tabulation (Bottom-Up Approach):</strong> Solving the problem iteratively by filling up a table with solutions to subproblems in a systematic manner.</li> </ol><p>Dynamic Programming is applied to problems where:</p><ul> <li>Overlapping subproblems exist.</li> <li>Optimal substructure is present, meaning the optimal solution to the overall problem can be constructed from optimal solutions to subproblems.</li> </ul><p><strong>Key Concepts in Dynamic Programming</strong></p><ol> <li><strong>Overlapping Subproblems:</strong> This occurs when the problem can be divided into smaller subproblems that are solved multiple times. By solving each subproblem once and storing the results, we can improve efficiency.</li> <li><strong>Optimal Substructure:</strong> This means that the solution to the overall problem can be constructed from the solutions to its subproblems. If a problem does not have this property, Dynamic Programming is not applicable.</li> <li><strong>State Representation:</strong> This is the way you represent the problem's state, typically through an array or matrix. The state transitions represent how you can move from one state to another by taking an action.</li> </ol><h2>Solving Classic DP Problems</h2>
                     
                         
                     <p>Now, let’s solve some classic DP problems to better understand the technique.</p><p><strong>1. The Knapsack Problem</strong></p><ul> <li><strong>Problem Description: </strong>Given a set of items, each with a weight and a value, determine the maximum value you can carry in a knapsack with a fixed capacity.  <ul> <li><em>Items:</em> Each item has a value and weight.</li> <li><em>Knapsack capacity:</em> The maximum weight the knapsack can carry.</li> </ul> </li> <li><strong>Goal:</strong> Maximize the total value in the knapsack without exceeding the capacity.</li> <li><strong>Solution Approach:</strong> <ul> <li>We can use DP to solve this problem.</li> <li>The idea is to maintain a table where each entry <tt>dp[i][w]</tt> represents the maximum value that can be attained with the first <tt>i</tt> items and a knapsack capacity of <tt>w</tt>.</li> </ul> </li> </ul><p><strong>PHP Code for the Knapsack Problem:</strong></p><p><code>function knapsack($weights, $values, $capacity) {</code></p><p><code>    $n = count($weights);</code></p><p><code>    $dp = array_fill(0, $n + 1, array_fill(0, $capacity + 1, 0));</code></p><p><code>    // Build the DP table</code></p><p><code>    for ($i = 1; $i &lt;= $n; $i++) {</code></p><p><code>        for ($w = 1; $w &lt;= $capacity; $w++) {</code></p><p><code>            if ($weights[$i - 1] &lt;= $w) {</code></p><p><code>                $dp[$i][$w] = max($values[$i - 1] + $dp[$i - 1][$w - $weights[$i - 1]], $dp[$i - 1][$w]);</code></p><p><code>            } else {</code></p><p><code>                $dp[$i][$w] = $dp[$i - 1][$w];</code></p><p><code>            }</code></p><p><code>        }</code></p><p><code>    }</code></p><p><code>    return $dp[$n][$capacity];</code></p><p><code>}</code></p><p><code>// Example usage</code></p><p><code>$weights = [2, 3, 4, 5];</code></p><p><code>$values = [3, 4, 5, 6];</code></p><p><code>$capacity = 5;</code></p><p><code>echo "Maximum value: " . knapsack($weights, $values, $capacity);</code></p><p><strong>Explanation:</strong></p><ul> <li>We first initialize a DP table <tt>dp[i][w]</tt> where <tt>i</tt> represents the number of items considered and w represents the weight of the knapsack.</li> <li>We then iterate through the items and capacities, updating the table by either including or excluding each item.</li> <li>Finally, the answer to the problem is found at <tt>dp[n][capacity]</tt>, which contains the maximum value we can achieve with the given items and knapsack capacity.</li> </ul><p><strong>2. Longest Common Subsequence (LCS)</strong></p><ul> <li><strong>Problem Description:</strong>   <ul> <li>Given two sequences, find the longest subsequence common to both.</li> <li>A subsequence is a sequence that can be derived by deleting some or no elements without changing the order of the remaining elements.</li> </ul> </li> <li><strong>Solution Approach:</strong> <ul> <li>The LCS problem is a classic example of dynamic programming.</li> <li>We construct a 2D table <tt>dp[i][j]</tt> where <tt>i</tt> and <tt>j</tt> represent the indices of the two sequences.</li> <li>The value at <tt>dp[i][j]</tt> will be the length of the longest common subsequence of the first <tt>i</tt> characters of the first sequence and the first <tt>j</tt> characters of the second sequence.</li> </ul> </li> </ul><p><strong>PHP Code for Longest Common Subsequence:</strong></p><p><code>function longestCommonSubsequence($s1, $s2) {</code></p><p><code>    $m = strlen($s1);</code></p><p><code>    $n = strlen($s2);</code></p><p><code>    $dp = array_fill(0, $m + 1, array_fill(0, $n + 1, 0));</code></p><p><code>    // Build the DP table</code></p><p><code>    for ($i = 1; $i &lt;= $m; $i++) {</code></p><p><code>        for ($j = 1; $j &lt;= $n; $j++) {</code></p><p><code>            if ($s1[$i - 1] == $s2[$j - 1]) {</code></p><p><code>                $dp[$i][$j] = $dp[$i - 1][$j - 1] + 1;</code></p><p><code>            } else {</code></p><p><code>                $dp[$i][$j] = max($dp[$i - 1][$j], $dp[$i][$j - 1]);</code></p><p><code>            }</code></p><p><code>        }</code></p><p><code>    }</code></p><p><code>    return $dp[$m][$n];</code></p><p><code>}</code></p><p><code>// Example usage</code></p><p><code>$s1 = "ABCBDAB";</code></p><p><code>$s2 = "BDCAB";</code></p><p><code>echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s2);</code></p><p><strong>Explanation:</strong></p><ul> <li>We initialize a DP table dp[i][j] where each cell stores the length of the LCS of the first i characters of s1 and the first j characters of s2.</li> <li>We then iterate through both strings, filling the DP table based on whether the characters at s1[i-1] and s2[j-1] match. If they match, the LCS length increases by 1; otherwise, we take the maximum of excluding either the current character of s1 or s2.</li> <li>The final answer is in dp[m][n], which represents the LCS length for the two strings.</li> </ul>
@@ -678,7 +667,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-92ef3fc25c29ff091b04cff0aafb13efe2f1ac74470e1e7faf084a8404e2330d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c91f2a7f3bccebf1c081e5eead5c8206104d1e99725a8bf2165688a6269efaf5">
   
     
       
@@ -712,7 +701,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -730,7 +719,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ebb4b91021d656cf767868c10e4f4249e053b84154e30268746a1ba201d47e0c">
   
     
       
@@ -825,6 +814,16 @@
         
         <li class="menu__item menu__item--link menu__item--level-1">
                     
+          <a href="/search" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="search">Search</a>
+
+          
+        </li>
+      
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
           <a href="/about-us" class="menu__link menu__link--link menu__link--level-1" data-drupal-link-system-path="node/3981">About Us</a>
 
           
@@ -899,7 +898,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is an independent platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
