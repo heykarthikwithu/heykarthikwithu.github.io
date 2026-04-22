@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.webp"
             },
             "datePublished": "2024-12-13T08:43:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -689,49 +689,41 @@
         
             
         
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/4cFT7hO" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/71qdibNXatL._SY879_.jpg" alt="Enamor Women’s Sleeveless Tank Top – Soft Cotton Scoop Neck">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/4cFT7hO" target="_blank">
-                                Enamor Women’s Sleeveless Tank Top – Soft Cotton Scoop Neck
+        
+            
+        
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4e0k6mG" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/51bTCAnwZIL._SX679_.jpg" alt="Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4e0k6mG" target="_blank" rel="noopener sponsored">Panasonic 1.5 Ton 3 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with True AI Mode, PM 0.1 Air Purification Filter, CS/CU-SU18ZKYWT, 2024 Model, White)</a>
+                            </div>
+                            <div class="discount-badge">Now 35% Off</div>
+                            <a href="https://amzn.to/4e0k6mG" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹55400</span>
+                                    <span class="current-price">₹35990</span>
+                                </span>
 
-                        <div class="discount-badge">Now 0% Off</div>
-
-                        <a href="https://amzn.to/4cFT7hO" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹299.00</span>
-                                <span class="current-price">₹299.00</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div><h2>3. Create the Custom Migration Process Plugin (vimeo_upload<strong>)</strong></h2><p>Now we need to create a custom migration process plugin (<tt>vimeo_upload</tt>) to handle uploading videos to <strong>Vimeo</strong> and setting their metadata.</p><p><strong>Create the Custom Process Plugin</strong></p><p>In your custom module (e.g., <tt>/modules/custom/my_module</tt>), create the following PHP file for the custom process plugin.</p><p><strong>Custom Process Plugin (</strong><tt>VimeoUpload.php</tt><strong>)</strong></p><p><code>namespace Drupal\my_module\Plugin\migrate\process;</code></p><p><code>use Drupal\migrate\Plugin\migrate\process\ProcessPluginBase;</code></p><p><code>use Vimeo\Vimeo;</code></p><p><code>use Drupal\Core\Field\FieldInterface;</code></p><p><code>use Drupal\migrate\MigrateExecutableInterface;</code></p><p><code>use Drupal\migrate\Row;</code></p><p><code>/**</code></p><p><code>&nbsp;* Upload video to Vimeo and return the video URI.</code></p><p><code>&nbsp;*</code></p><p><code>&nbsp;* @MigrateProcessPlugin(</code></p><p><code>&nbsp;* &nbsp; id = "vimeo_upload"</code></p><p><code>&nbsp;* )</code></p>
+            </div><h2>3. Create the Custom Migration Process Plugin (vimeo_upload<strong>)</strong></h2><p>Now we need to create a custom migration process plugin (<tt>vimeo_upload</tt>) to handle uploading videos to <strong>Vimeo</strong> and setting their metadata.</p><p><strong>Create the Custom Process Plugin</strong></p><p>In your custom module (e.g., <tt>/modules/custom/my_module</tt>), create the following PHP file for the custom process plugin.</p><p><strong>Custom Process Plugin (</strong><tt>VimeoUpload.php</tt><strong>)</strong></p><p><code>namespace Drupal\my_module\Plugin\migrate\process;</code></p><p><code>use Drupal\migrate\Plugin\migrate\process\ProcessPluginBase;</code></p><p><code>use Vimeo\Vimeo;</code></p><p><code>use Drupal\Core\Field\FieldInterface;</code></p><p><code>use Drupal\migrate\MigrateExecutableInterface;</code></p><p><code>use Drupal\migrate\Row;</code></p><p><code>/**</code></p><p><code>&nbsp;* Upload video to Vimeo and return the video URI.</code></p><p><code>&nbsp;*</code></p><p><code>&nbsp;* @MigrateProcessPlugin(</code></p><p><code>&nbsp;* &nbsp; id = "vimeo_upload"</code></p><p><code>&nbsp;* )</code></p>
 <p><code>&nbsp;*/</code></p><p><code>class VimeoUpload extends ProcessPluginBase {</code></p><p><code>&nbsp;&nbsp;/**</code></p><p><code>&nbsp;&nbsp;&nbsp;* Process the migration data and upload to Vimeo.</code></p><p><code>&nbsp;&nbsp;&nbsp;*</code></p><p><code>&nbsp;&nbsp;&nbsp;* @param string $file_path</code></p><p><code>&nbsp;&nbsp;&nbsp;* &nbsp; The path to the video file to be uploaded.</code></p><p><code>&nbsp;&nbsp;&nbsp;* @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable</code></p><p><code>&nbsp;&nbsp;&nbsp;* &nbsp; The migrate executable.</code></p><p><code>&nbsp;&nbsp;&nbsp;* @param \Drupal\migrate\Row $row</code></p><p><code>&nbsp;&nbsp;&nbsp;* &nbsp; The current row of migration data.</code></p><p><code>&nbsp;&nbsp;&nbsp;* @param \Drupal\Core\Field\FieldDefinitionInterface $field</code></p><p><code>&nbsp;&nbsp;&nbsp;* &nbsp; The field being processed.</code></p><p><code>&nbsp;&nbsp;&nbsp;*</code></p><p><code>&nbsp;&nbsp;&nbsp;* @return string</code></p><p><code>&nbsp;&nbsp;&nbsp;* &nbsp; The Vimeo video URI or another identifier.</code></p><p><code>&nbsp;&nbsp;&nbsp;*/</code></p><p><code>&nbsp;&nbsp;public function transform($file_path, MigrateExecutableInterface $migrate_executable, Row $row, FieldInterface $field) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Vimeo API credentials</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$client_id = 'YOUR_VIMEO_CLIENT_ID';</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$client_secret = 'YOUR_VIMEO_CLIENT_SECRET';</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$access_token = 'YOUR_VIMEO_ACCESS_TOKEN';</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Initialize Vimeo client</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$vimeo = new Vimeo($client_id, $client_secret);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$vimeo→setToken($access_token);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Upload video to Vimeo</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;try {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$response = $vimeo→<tt>upload</tt>($file_path);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Set video metadata (title, description, tags)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$video_id = $response['uri'];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$metadata = [</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'name' =&gt; $row→getSourceProperty('title'),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'description' =&gt; $row→getSourceProperty('description'),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'tags' =&gt; explode(',', $row→getSourceProperty('tags')),&nbsp; // Split tags</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vimeo→request($video_id, $metadata, 'PATCH');</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Return the video URI (or other video identifier)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $video_id;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;catch (\Exception $e) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Log the error if the upload fails</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\Drupal::logger('my_module')→error('Vimeo upload failed: ' . $e→getMessage());</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return NULL;&nbsp; // Return NULL in case of failure</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Explanation of the </strong><strong>vimeo_upload</strong><strong> Plugin:</strong></p><ul> <li><strong>Vimeo API credentials</strong>: You need to replace '<tt>YOUR_VIMEO_CLIENT_ID</tt>', '<tt>YOUR_VIMEO_CLIENT_SECRET</tt>', and '<tt>YOUR_VIMEO_ACCESS_TOKEN</tt>' with your actual Vimeo API credentials.</li> <li><strong>Uploading video</strong>: The <tt>upload()</tt> method uploads the video to Vimeo.</li> <li><strong>Setting metadata</strong>: After uploading, the video's title, description, and tags are updated via the Vimeo API using the <tt>PATCH</tt> request.</li> <li><strong>Returning the video URI</strong>: The plugin returns the Vimeo video URI (or another identifier) to Drupal.</li> </ul><p>Make sure you have installed the <strong>Vimeo PHP SDK</strong> via Composer:</p><p><code>composer require vimeo/vimeo-api</code></p>
                     
                         
@@ -767,7 +759,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1aa978a1d0c99df3c84b9f36325dbd94b5ddb2e359c22611bc74df38243aa613">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-327b95cc8f73172ed175900191c358636b6ec59cc061dc07dbebad2f170e7536">
   
     
       
@@ -819,7 +811,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       

@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/how-to-work-with-twig-templates-in-drupal.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -647,49 +647,41 @@
                     
                         
                     <p>In this article, we are going to see how a developer can work with Twig templates and how to override templates (if needed) and create template suggestions with hooks, so that templates could be easily managed.</p><p>Basically drupal allows people to override the existing twig templates, so that people can fully have control on the html generated via the custom theme.</p><p>First thing, we need to make sure we override the templates, for this to do we have to enable the twig debugging for your local drupal application. And it's done by modifying some lines of code within your <code>services.yml</code> file which will be located at <code>sites/default/services.yml</code>, as shown below.</p><p><code>parameters:<br> &nbsp;&nbsp;twig.config:<br> &nbsp;&nbsp;&nbsp;&nbsp;debug: true</code></p><p>By default, you can see the value set to <code>false</code>, you need to set it to <code>true</code>.</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3WQxSAC" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/41qNJmFKAnL._SX300_SY300_QL70_FMwebp_.jpg" alt="Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3WQxSAC" target="_blank">
-                                Samsung Galaxy S22 Ultra 5G (Phantom Black, 12GB, 256GB Storage) Without Offer
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3uWeg5y" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/61l0ocLvZKS._SX679_.jpg" alt="truke Buds S1 Bluetooth Truly Wireless In Ear Earbuds with Mic with Environmental Noise Cancellation(ENC) &amp;amp; Quad MEMS for Clear Calls Up to 72hrs of Playtime Premium Sliding Case Low Latency 5.1 IPX4">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3uWeg5y" target="_blank" rel="noopener sponsored">truke Buds S1 Bluetooth Truly Wireless In Ear Earbuds with Mic with Environmental Noise Cancellation(ENC) &amp;amp; Quad MEMS for Clear Calls Up to 72hrs of Playtime Premium Sliding Case Low Latency 5.1 IPX4</a>
+                            </div>
+                            <div class="discount-badge">Now 73% Off</div>
+                            <a href="https://amzn.to/3uWeg5y" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹3999</span>
+                                    <span class="current-price">₹1099</span>
+                                </span>
 
-                        <div class="discount-badge">Now 49% Off</div>
-
-                        <a href="https://amzn.to/3WQxSAC" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹131999</span>
-                                <span class="current-price">₹66999</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -708,49 +700,41 @@
         
             
         <p>Once you do this and rebuild the caches, you can see the existing template suggestion on inspecting the web page locally.</p><p>Now you have to write the code to alter the template suggestions, which will give you more control to create the twig template files.</p><p>And Drupal provides hooks to do this and hook_theme_suggestions_HOOK_alter is the hook which does the purpose.</p><p>Let’s take an example to alter the template suggestions of the taxonomy term page and with the below code you can do it.</p><p><code>use Drupal\taxonomy\TermInterface;<br> /**<br> &nbsp;* Implements hook_theme_suggestions_HOOK_alter().<br> &nbsp;*/<br> function mytheme_theme_suggestions_taxonomy_term_alter(&amp;$suggestions, $variables) {<br> &nbsp;&nbsp;$elements = $variables['elements'];<br> &nbsp;&nbsp;if (isset($elements['#taxonomy_term']) &amp;&amp; isset($elements['#theme']) &amp;&amp; isset($elements['#view_mode'])) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$term = $elements['#taxonomy_term'];<br> &nbsp;&nbsp;&nbsp;&nbsp;if ($term instanceof TermInterface) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suggestions[] = $elements['#theme'] . '__' . $term→bundle() . '__' . $elements['#view_mode'];<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suggestions[] = $elements['#theme'] . '__' . $term→id() . '__' . $elements['#view_mode'];<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;}<br> }</code></p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3Ab7ZVU" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/71MwDnn-ZaL._SX679_.jpg" alt="Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3Ab7ZVU" target="_blank">
-                                Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32MA-FVIN (Black)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4lSCr9s" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/71WeJxq1pGL._SX679_.jpg" alt="Power Guard 7.5 kg 5 Star Semi-Automatic Top Loading Washing Machine Appliance (PG75WM-BG-OP, Burgundy, Powerful Motor, Effective Wash Pulsator,1400 RPM &amp;amp; Castors)">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4lSCr9s" target="_blank" rel="noopener sponsored">Power Guard 7.5 kg 5 Star Semi-Automatic Top Loading Washing Machine Appliance (PG75WM-BG-OP, Burgundy, Powerful Motor, Effective Wash Pulsator,1400 RPM &amp;amp; Castors)</a>
+                            </div>
+                            <div class="discount-badge">Now 60% Off</div>
+                            <a href="https://amzn.to/4lSCr9s" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹18990</span>
+                                    <span class="current-price">₹7690</span>
+                                </span>
 
-                        <div class="discount-badge">Now 54% Off</div>
-
-                        <a href="https://amzn.to/3Ab7ZVU" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹24999</span>
-                                <span class="current-price">₹11499</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -799,7 +783,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ff4bbc327ce972175c5079434d3562bb1ff442b01d5b8d2cb9ae19eb8605f64a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4149a9d87b8010eff73974cb0f1975ef8f765b9c2cfece4a91989b021d56953b">
   
     
       
@@ -851,7 +835,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       

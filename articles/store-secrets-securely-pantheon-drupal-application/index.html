@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/store-secrets-securely-on-pantheon-for-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -644,49 +644,41 @@
 </div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to see how people can store access keys and tokens securely, in the case of your drupal application that is managed on pantheon.</p><p>Generally, all the Access keys or Tokens or any Secret third party auth <a href="/articles/technical-information-know-about-solar-energy-setup-your-home" title="Read about Technical Information To Know About The Solar Energy Setup For Your Home">information</a> should not be stored in the database or within the project web root, Its safe to store it encrypted and within a file and keep the file outside of the project web root.</p><p>In the pantheon <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a>, we can store such information in a <code>secrets.json</code> file, which can be accessed via the terminus tool.</p><p>Below we are gonna see, how to do it?</p><ol> <li>How to Login to Pantheon via terminus.</li> <li>How to Store the key/value pairs as secrets.</li> <li>How to Read the stored key/value pair secrets.</li> </ol><p><strong>Login to Pantheon via terminus</strong></p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3OyZV4V" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/61or3k9RiSL._SX679_.jpg" alt="Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3OyZV4V" target="_blank">
-                                Potauto Mattu Led Headlight H27/880-300 High Power Illumination, Csp Chip Technology, 2X Brightness - Illuminate Your Path With Unmatched Brightness - Ch27Lematg548 (Silver)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4mEZlRW" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/51oYlo9Y5sL._SX679_.jpg" alt="KENT Classic Hot Air Fryer 4L 1300 W | 80% Less Oil | Instant Electric Air Fryer | Auto Cut Off | Fry, Grill, Roast, Steam, and Bake | 1 Year Warranty | Black">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4mEZlRW" target="_blank" rel="noopener sponsored">KENT Classic Hot Air Fryer 4L 1300 W | 80% Less Oil | Instant Electric Air Fryer | Auto Cut Off | Fry, Grill, Roast, Steam, and Bake | 1 Year Warranty | Black</a>
+                            </div>
+                            <div class="discount-badge">Now 66% Off</div>
+                            <a href="https://amzn.to/4mEZlRW" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹8000</span>
+                                    <span class="current-price">₹2699</span>
+                                </span>
 
-                        <div class="discount-badge">Now 39% Off</div>
-
-                        <a href="https://amzn.to/3OyZV4V" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹16500</span>
-                                <span class="current-price">₹9999</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -705,49 +697,41 @@
         
             
         <p>Login via terminus, with the email id of the admin/maintainer of the environment. Below command will help you to do this.</p><p><code>terminus auth:login –email=&lt;email-id&gt;</code></p><p><strong>Store the key/value pairs as secrets</strong></p><p>After login to the terminus, use <code>secrets:set</code> command to set the key and value pair of secrets.</p><p>Best thing to do is, Value which you are passing should be encrypted via some encryption algorithm (AES or something tough).</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3WqQush" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/61AkAm4EAML._SX679_.jpg" alt="Techista 2-in-1 Rechargeable and Waterproof LED Cycle Front Lights (3 Modes) with Horn (140 dB), Cycle Bell">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3WqQush" target="_blank">
-                                Techista 2-in-1 Rechargeable and Waterproof LED Cycle Front Lights (3 Modes) with Horn (140 dB), Cycle Bell
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3NAY1Ea" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/41GVFGuOXhL._SL1000_.jpg" alt="Lakme Makeup+Skincare VitC Superglow Skin Perfecting Tint Cool Cinnamon C300 25ml">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3NAY1Ea" target="_blank" rel="noopener sponsored">Lakme Makeup+Skincare VitC Superglow Skin Perfecting Tint Cool Cinnamon C300 25ml</a>
+                            </div>
+                            <div class="discount-badge">Now 10% Off</div>
+                            <a href="https://amzn.to/3NAY1Ea" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹430</span>
+                                    <span class="current-price">₹385</span>
+                                </span>
 
-                        <div class="discount-badge">Now 80% Off</div>
-
-                        <a href="https://amzn.to/3WqQush" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹999</span>
-                                <span class="current-price">₹199</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -766,49 +750,41 @@
         
             
         <p>Below command will help you to set the key value pair into secrets.</p><p><code>terminus secrets:set &lt;pantheon-env&gt; &lt;key&gt; &lt;value&gt;</code></p><p><strong>Read the stored key/value pair secrets</strong></p><p>To read the stored secret key and values to the settings.php, we can use the php function <code>file_get_contents</code> php. Below code will help to read the secrets to <code>settings.php</code> file.</p><p>Further the secrets can be used in your drupal application.</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3XFC35m" target="_blank">
-                            <img src="https://f.media-amazon.com/images/I/714gtA8+m3L._SX679_.jpg" alt="LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp;amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp;amp; Convenient Fabric Care, Allergy Care, Middle Black)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3XFC35m" target="_blank">
-                                LG 9 Kg, 5 Star, AI Direct Drive Technology, Steam, 6 Motion DD &amp;amp; Wi-Fi Fully-Automatic Front Load Washing Machine (FHP1209Z5M, Intelligent &amp;amp; Convenient Fabric Care, Allergy Care, Middle Black)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4cFT7hO" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/71qdibNXatL._SY879_.jpg" alt="Enamor Women’s Sleeveless Tank Top – Soft Cotton Scoop Neck">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4cFT7hO" target="_blank" rel="noopener sponsored">Enamor Women’s Sleeveless Tank Top – Soft Cotton Scoop Neck</a>
+                            </div>
+                            <div class="discount-badge">Now 0% Off</div>
+                            <a href="https://amzn.to/4cFT7hO" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹299.00</span>
+                                    <span class="current-price">₹299.00</span>
+                                </span>
 
-                        <div class="discount-badge">Now 26% Off</div>
-
-                        <a href="https://amzn.to/3XFC35m" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹53990</span>
-                                <span class="current-price">₹39990</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -855,7 +831,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5a30d5ccab8e21908510a7531426189e1a82111db2dbc15a5f1d40ee525ac658">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a59f4ec95f3d4cab58b604dd519448f7dddc87f398a44b49a61c533f253321e8">
   
     
       
@@ -907,7 +883,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       

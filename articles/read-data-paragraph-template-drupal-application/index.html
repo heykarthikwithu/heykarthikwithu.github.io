@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/read-data-to-paragraph-template-in-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -647,49 +647,41 @@
                     
                         
                     <p>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.</p><p>Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which helps to write the template suggestions.</p><p>In few cases, there will be a need to read the actual values of the node fields or the entity data like for example media. And in some cases there will be unlimited values stored and need to read such data to paragraph template files.</p><p>In this article, I will share the possible ways of reading the data to the template file and few of them might not be the best approach but it's the decision to be taken for what type of project you are working with.</p><p>Let's see now the possible ways to read the data to the paragraph template file.</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/4bqQWh4" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/81piwlskHKL._SX679_.jpg" alt="boAt Partypal 390 Speaker with 160 W Signature Sound, Up to 6 hrs Playtime, EQ Modes, 2 Mics for Karaoke, TWS Mode, Bluetooth v5.3, AUX Port, &amp;amp; USB Type-C Port(Space Black)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/4bqQWh4" target="_blank">
-                                boAt Partypal 390 Speaker with 160 W Signature Sound, Up to 6 hrs Playtime, EQ Modes, 2 Mics for Karaoke, TWS Mode, Bluetooth v5.3, AUX Port, &amp;amp; USB Type-C Port(Space Black)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3ZRPsqj" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/71mL2bdyRdL._SX679_.jpg" alt="Philips HL7756/00 Mixer Grinder 750 Watt, 3 Stainless Steel Multipurpose Jars with 3 Speed Control and Pulse function (Black)">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3ZRPsqj" target="_blank" rel="noopener sponsored">Philips HL7756/00 Mixer Grinder 750 Watt, 3 Stainless Steel Multipurpose Jars with 3 Speed Control and Pulse function (Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 10% Off</div>
+                            <a href="https://amzn.to/3ZRPsqj" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹4995</span>
+                                    <span class="current-price">₹4495</span>
+                                </span>
 
-                        <div class="discount-badge">Now 60% Off</div>
-
-                        <a href="https://amzn.to/4bqQWh4" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹34990</span>
-                                <span class="current-price">₹13999</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -708,49 +700,41 @@
         
             
         <ul> <li>To read the <strong>Url</strong> of the current node, just you can use the below code, in the <code>paragraph.html.twig</code> file or in display of <code>paragraph–&lt;display&gt;.html.twig</code></li> </ul><p><code>{{ url("&lt;current&gt;") }}</code></p><ul> <li>To read the <strong>Title</strong> of the node, you can use the preprocess hooks like <code>theme_preprocess_paragraph</code> and read the node title and store it into a variable. And the variable data can be printed in the <code>paragraph.html.twig</code> file or in the display of <code>paragraph–&lt;display&gt;.html.twig</code>.</li> </ul><p><code>function bartik_preprocess_paragraph(&amp;$variables) {<br> &nbsp;&nbsp;&nbsp;$node = Drupal::request()→attributes→get("node");<br> &nbsp;&nbsp;&nbsp;$variables["node_title"] = $node→getTitle();<br> }</code></p><p><code>{{ node_title }}</code></p><ul> <li>To read the <strong>field</strong> value (for example text)</li> </ul><p>paragraph.field_text.entity.name.value</p><ul> <li>To read the <strong>Image</strong> (created via <strong>Media type</strong> or with just <strong>Image type</strong>), you can use the below <a href="/articles/69-position-guide-tips-enhance-intimacy-connection" title="Read about Different Ways To Get More Out Of Six Nine Position">different</a> types.</li> </ul><p><code>{% if paragraph.field_media_image is not empty %}<br> &nbsp;&nbsp;{{ file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri) }}<br> {% endif %}</code></p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3TOuZk3" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/518i7BOTGKL._SX679_.jpg" alt="Wolpin Resistance Band for Workout Back Set Exercise &amp;amp; Stretching Pull Up Bands for Home Exercise Bands Gym Men &amp;amp; Women Yoga Resistance Tube Loop Bands Toning Bands Kit, Thermoplastic Elastomer (TPE)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3TOuZk3" target="_blank">
-                                Wolpin Resistance Band for Workout Back Set Exercise &amp;amp; Stretching Pull Up Bands for Home Exercise Bands Gym Men &amp;amp; Women Yoga Resistance Tube Loop Bands Toning Bands Kit, Thermoplastic Elastomer (TPE)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/41PackK" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/81+Csy-WQwL._SX679_.jpg" alt="VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/41PackK" target="_blank" rel="noopener sponsored">VW 80 cm (32 inches) Frameless Series HD Ready Android Smart LED TV VW32S</a>
+                            </div>
+                            <div class="discount-badge">Now 58% Off</div>
+                            <a href="https://amzn.to/41PackK" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹16999</span>
+                                    <span class="current-price">₹7199</span>
+                                </span>
 
-                        <div class="discount-badge">Now 70% Off</div>
-
-                        <a href="https://amzn.to/3TOuZk3" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹599</span>
-                                <span class="current-price">₹177</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -769,49 +753,41 @@
         
             
         <p><code>{{ file_url(paragraph.field_just_image.entity.uri.value) }}</code></p><ul> <li>If you want to read the <strong>Image</strong> (created via <strong>Media type</strong>) values in a <strong>custom</strong> approach or write some preprocess, then below code will help you. You can write the below code in the theme_preprocess_paragraph or other preprocess functions, then store into a variable and Render the stored variable in the paragraph template.</li> </ul><p><code>$paragraph = $term→get("field_custom_paragraph")→referencedEntities();<br> if ($paragraph) {<br> &nbsp;&nbsp;$paragraph = reset($paragraph);<br> &nbsp;&nbsp;$field_media_image = $paragraph&gt;get("field_media_image");<br> &nbsp;&nbsp;if ($field_media_image[0] &amp;&amp; $field_media_image[0]→entity) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$build = Drupal::entityTypeManager()→getViewBuilder("media")→view($field_media_image[0]→entity);<br> &nbsp;&nbsp;&nbsp;&nbsp;$variables["content"]["field_media_image"] = $build;<br> &nbsp;&nbsp;}<br> }</code></p><p><code>{{ content.field_media_image }}</code></p><p>These are few possible ways to render read the data to the paragraph templates.</p><p><strong>Ideally the best approach is not to tweak</strong> the data or reading of the data at the rendering layer, because this will have some impact on the performance. I suggest to not tweak the data in the preprocess or reload the same paragraph value in the preprocess, And suggest to only use, if the case you don’t have any other possibility during the development process of drupal <a href="/articles/security-checklist-drupal-application" title="Read about Security Checklist For Drupal Application">application</a>.</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3DNiCjh" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/61AbDjbgGxL._AC_SX679_.jpg" alt="Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3DNiCjh" target="_blank">
-                                Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4mCal31" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/51tA6aqyQWL._SX522_.jpg" alt="V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp;amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4mCal31" target="_blank" rel="noopener sponsored">V-Guard RequPro True High Recovery RO UV UF Water Purifier | 8 Stage Purification | 60% Water Recovery &amp;amp; 100% RO Purified Water | 1-Year Comprehensive Warranty | Black</a>
+                            </div>
+                            <div class="discount-badge">Now 52% Off</div>
+                            <a href="https://amzn.to/4mCal31" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹24999</span>
+                                    <span class="current-price">₹11999</span>
+                                </span>
 
-                        <div class="discount-badge">Now 15% Off</div>
-
-                        <a href="https://amzn.to/3DNiCjh" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹12.99</span>
-                                <span class="current-price">₹10.99</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -860,7 +836,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-33657220977fef6b83360be9e33c66c311078b41173a72e0169760a80350ced1">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-8b3f22422b4d27f8661d4fb311babc7503391c79aa2591de33edf5a2b2478f4f">
   
     
       
@@ -912,7 +888,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       

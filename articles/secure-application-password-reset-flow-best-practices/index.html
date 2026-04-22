@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/secure-your-applications-reset-password-flow.webp"
             },
             "datePublished": "2025-11-23T10:52:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -647,49 +647,41 @@
                     
                         
                     <p>Generally any application <a href="/articles/know-why-symfony-framework-was-picked-drupal" title="Read about Know Why Symfony Framework Was Picked By Drupal">framework</a> provides users to have a flow to reset the <a href="/articles/secure-application-password-reset-flow-best-practices" title="Read about Secure Your Applications Reset Password Flow">password</a>s by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so that user can reset the password on their own.</p><p>This is a default or general flow that any application framework provides, but developers or architects have to make sure, this flow is more secure than just an email confirmation.</p><p>And, in this article we are gonna see certain inputs, which help developers or architects to design and develop a better secured <a href="/articles/pcos-symptoms-causes-diagnosis-treatment-recovery" title="Read about Pcos Symptoms Causes Diagnosis Treatment Recovery">recovery</a> password flow in the web application.</p><p><strong>1. Set expiry on reset password link</strong></p><p>Make sure the reset password link expires in a certain amount of time, so that the user is entitled to reset the password in that interval of time. And also the link will not be available for users forever to reset the password.</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/45qTgzS" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/81aALsqzUlL._SX679_.jpg" alt="Butterfly Jet Elite Mixer Grinder, 750W, 4 Jars (Grey)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/45qTgzS" target="_blank">
-                                Butterfly Jet Elite Mixer Grinder, 750W, 4 Jars (Grey)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3CDr70g" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/71wx0o6ZF9L._SX679_.jpg" alt="VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3CDr70g" target="_blank" rel="noopener sponsored">VW 101 cm (40 inches) Playwall Frameless Series Full HD Android Smart LED TV VW40F2 (Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 35% Off</div>
+                            <a href="https://amzn.to/3CDr70g" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹19999</span>
+                                    <span class="current-price">₹12999</span>
+                                </span>
 
-                        <div class="discount-badge">Now 55% Off</div>
-
-                        <a href="https://amzn.to/45qTgzS" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹5795</span>
-                                <span class="current-price">₹2599</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -708,49 +700,41 @@
         
             
         <p><strong>2. Application to identify reset password link</strong></p><p>Always make sure the web application will identify the reset password link that is shared to the user. This can be done by adding the token to the reset password link and validating the token with application secure storage, when the user uses the reset password link and resets the password.</p><p><strong>3. Password should be set complex</strong></p><p>Allow users only to set the complex passwords, don’t allow users to set simple passwords.</p><ul> <li>Alphanumeric Character types (one digit, one letter and one punctuation)</li> <li>Uppercase and Lowercase</li> <li>Length of minimum 8 characters</li> <li>Don’t allow username or email as password.</li> <li>Check history of password (avoid users to set old passwords.</li> <li>Avoid generic passwords (like admin, admin123 etc)</li> </ul><p><strong>4. User Sessions</strong></p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/4hvhksb" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/61RdxS44OAL._SX679_PIbundle-5,TopRight,0,0_AA679SH20_.jpg" alt="Cadbury Dairy Milk Silk Special Valentine&amp;#039;s Gift Basket with Teddy Bear, 222 g">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/4hvhksb" target="_blank">
-                                Cadbury Dairy Milk Silk Special Valentine&amp;#039;s Gift Basket with Teddy Bear, 222 g
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/81lGxS2ZisL._SX679_.jpg" alt="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored">Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue</a>
+                            </div>
+                            <div class="discount-badge">Now 0% Off</div>
+                            <a href="https://amzn.to/467L75Q" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹5499</span>
+                                    <span class="current-price">₹5479</span>
+                                </span>
 
-                        <div class="discount-badge">Now 35% Off</div>
-
-                        <a href="https://amzn.to/4hvhksb" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹1000</span>
-                                <span class="current-price">₹650</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -769,49 +753,41 @@
         
             
         <p>During the password reset flow (while the reset is triggered by users), make sure to clear all the sessions of the users from the application, including in other devices.</p><p><strong>5. Hash the passwords</strong></p><p>Use the latest and most secure encryption algorithm to hash the passwords.</p><p><strong>6. Have questions on reset password form</strong></p><p>This is quite an extra step, but this can be helpful to make sure the reset password flow is secured with one more step.</p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/4mzFyne" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/61aBU1D8DkL._SX679_.jpg" alt="Aristocrat Polypropylene Airpro Cabin 55 Cm(Small) 8 Spinner Wheels Trolley Bags For Travel Hard Case Luggage, Lightweight Bag With Combination Lock &amp;amp; Robust Trolley With 7 Years Warranty (Blue)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/4mzFyne" target="_blank">
-                                Aristocrat Polypropylene Airpro Cabin 55 Cm(Small) 8 Spinner Wheels Trolley Bags For Travel Hard Case Luggage, Lightweight Bag With Combination Lock &amp;amp; Robust Trolley With 7 Years Warranty (Blue)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3CbdcuE" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/61kVLrByg+L._SX522_.jpg" alt="WD 40 Smart Straw | All Purpose Cleaner for Home Improvement | Household Cleaner to Loosen Stuck &amp;amp; Rust Parts, Removes Sticky Residue, &amp;amp; Auto Maintenance 500ml">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3CbdcuE" target="_blank" rel="noopener sponsored">WD 40 Smart Straw | All Purpose Cleaner for Home Improvement | Household Cleaner to Loosen Stuck &amp;amp; Rust Parts, Removes Sticky Residue, &amp;amp; Auto Maintenance 500ml</a>
+                            </div>
+                            <div class="discount-badge">Now 20% Off</div>
+                            <a href="https://amzn.to/3CbdcuE" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹700</span>
+                                    <span class="current-price">₹560</span>
+                                </span>
 
-                        <div class="discount-badge">Now 79% Off</div>
-
-                        <a href="https://amzn.to/4mzFyne" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹7500</span>
-                                <span class="current-price">₹1599</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -830,49 +806,41 @@
         
             
         <p><strong>7. Logging</strong></p><p>Avoid logging the sensitive information related to passwords or password hashes or the input provided by users which is sensitive and can crack the reset password flow.</p><p><strong>8. Limit Password retries</strong></p><p>This can be applicable in certain cases, but should not be applied for all the cases.</p><ul> <li>Multiple reset password requests from a certain IP, in this case limit the reset of password.</li> <li>Multiple failed login attempts in a short interval of time from different IPs, then avoid this request. Have something like 3 attempts for failed login and should wait for sometime.</li> <li>Also look into the brute force attack to set such a limitation on the password reset workflow.</li> </ul><p><strong>9. TFA</strong></p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/4dTXOTC" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/81uisCTEWSL._SX679_.jpg" alt="MILTON Express 800 Watt Grill Sandwich Maker | Electric Toaster Griller Sandwich Maker | Non Stick Coating Grill Plates | Power Indicators | 1 Year Warranty | Black">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/4dTXOTC" target="_blank">
-                                MILTON Express 800 Watt Grill Sandwich Maker | Electric Toaster Griller Sandwich Maker | Non Stick Coating Grill Plates | Power Indicators | 1 Year Warranty | Black
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/47xCmUY" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/51tuqUNdLsS._SX679_.jpg" alt="GLUN Automatic Wireless Portable Mini Rechargeable Water Bottle Can Dispenser Pump Upto 20 Litre Bottle With USB Cable">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/47xCmUY" target="_blank" rel="noopener sponsored">GLUN Automatic Wireless Portable Mini Rechargeable Water Bottle Can Dispenser Pump Upto 20 Litre Bottle With USB Cable</a>
+                            </div>
+                            <div class="discount-badge">Now 68% Off</div>
+                            <a href="https://amzn.to/47xCmUY" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹899</span>
+                                    <span class="current-price">₹292</span>
+                                </span>
 
-                        <div class="discount-badge">Now 50% Off</div>
-
-                        <a href="https://amzn.to/4dTXOTC" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹1990</span>
-                                <span class="current-price">₹999</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -921,7 +889,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-eb045b4a6d88426437951b6b737b69f1b7d8f52696fbf9e1deb0729526094773">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7c5659af8cc0a9d7a077029abf5246ee49d2d1eded6746888326c49c9c73ed3b">
   
     
       
@@ -973,7 +941,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       

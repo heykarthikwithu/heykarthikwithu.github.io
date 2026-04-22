@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/using-indexes-to-speed-up-sql-queries.webp"
             },
             "datePublished": "2025-07-27T11:37:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -674,49 +674,41 @@
         
             
         
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/3ZRPsqj" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/71mL2bdyRdL._SX679_.jpg" alt="Philips HL7756/00 Mixer Grinder 750 Watt, 3 Stainless Steel Multipurpose Jars with 3 Speed Control and Pulse function (Black)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/3ZRPsqj" target="_blank">
-                                Philips HL7756/00 Mixer Grinder 750 Watt, 3 Stainless Steel Multipurpose Jars with 3 Speed Control and Pulse function (Black)
+        
+            
+        
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4vs9ffp" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/71dMngXeysL._SL1500_.jpg" alt="MILTON Cryo Fridge Storage Boxes Set (6 Pcs) – Stackable &amp;amp; Smart Kitchen Organizer">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4vs9ffp" target="_blank" rel="noopener sponsored">MILTON Cryo Fridge Storage Boxes Set (6 Pcs) – Stackable &amp;amp; Smart Kitchen Organizer</a>
+                            </div>
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/4vs9ffp" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹999.00</span>
+                                    <span class="current-price">₹499.00</span>
+                                </span>
 
-                        <div class="discount-badge">Now 10% Off</div>
-
-                        <a href="https://amzn.to/3ZRPsqj" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹4995</span>
-                                <span class="current-price">₹4495</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div><h2>Analyzing Query Performance</h2><p>Use the <code>EXPLAIN</code> command to see how your query utilizes indexes:</p><p><code>EXPLAIN SELECT * FROM table_name WHERE column_name = 'value';</code></p><p>Look for indicators like "Using index" to confirm effective index usage.</p><h2>Trade-offs</h2><ul> <li><strong>Performance Impact</strong>: While indexes speed up read operations, they can slow down write operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) due to the overhead of maintaining the index.</li> <li><strong>Storage Costs</strong>: Indexes require additional disk space.</li> </ul><h2>Best <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Practices</a></h2><ul> <li><strong>Limit the Number of Indexes</strong>: Too many indexes can degrade performance, especially during writes.</li> <li><strong>Regular Maintenance</strong>: Monitor index usage and consider rebuilding or reorganizing indexes periodically.</li> <li><strong>Avoid Indexing Low-Cardinality Columns</strong>: Indexing columns with few unique values (like Boolean flags) typically offers little benefit.</li> </ul><h2>Monitoring and Adjusting</h2>
+            </div><h2>Analyzing Query Performance</h2><p>Use the <code>EXPLAIN</code> command to see how your query utilizes indexes:</p><p><code>EXPLAIN SELECT * FROM table_name WHERE column_name = 'value';</code></p><p>Look for indicators like "Using index" to confirm effective index usage.</p><h2>Trade-offs</h2><ul> <li><strong>Performance Impact</strong>: While indexes speed up read operations, they can slow down write operations (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) due to the overhead of maintaining the index.</li> <li><strong>Storage Costs</strong>: Indexes require additional disk space.</li> </ul><h2>Best <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" title="Read about Understanding Azure Kubernetes Service Aks Key Concepts And Best Practices">Practices</a></h2><ul> <li><strong>Limit the Number of Indexes</strong>: Too many indexes can degrade performance, especially during writes.</li> <li><strong>Regular Maintenance</strong>: Monitor index usage and consider rebuilding or reorganizing indexes periodically.</li> <li><strong>Avoid Indexing Low-Cardinality Columns</strong>: Indexing columns with few unique values (like Boolean flags) typically offers little benefit.</li> </ul><h2>Monitoring and Adjusting</h2>
         
             
         <ul> <li>Use database tools and logs to track query performance and adjust indexing <a href="/articles/communication-and-self-reflection-strategies" title="Read about Communication And Self Reflection Strategies">strategies</a> based on real-world usage.</li> </ul>
@@ -747,49 +739,41 @@
         
             
         
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/4kLw0o6" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/817uKaCFGjL._SX679_.jpg" alt="GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/4kLw0o6" target="_blank">
-                                GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.
+        
+            
+        
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4g8OzAm" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/71kEz7xCIxL._SX522_.jpg" alt="UCRAVO Double Sided Tape Heavy Duty - Multipurpose Removable Traceless Mounting Adhesive Tape for Walls，Washable Reusable Strong Sticky Strips Grip Tape">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4g8OzAm" target="_blank" rel="noopener sponsored">UCRAVO Double Sided Tape Heavy Duty - Multipurpose Removable Traceless Mounting Adhesive Tape for Walls，Washable Reusable Strong Sticky Strips Grip Tape</a>
+                            </div>
+                            <div class="discount-badge">Now 33% Off</div>
+                            <a href="https://amzn.to/4g8OzAm" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹299</span>
+                                    <span class="current-price">₹199</span>
+                                </span>
 
-                        <div class="discount-badge">Now 33% Off</div>
-
-                        <a href="https://amzn.to/4kLw0o6" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹299</span>
-                                <span class="current-price">₹199</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div><h2>Conclusion</h2><p>Indexes are crucial for enhancing SQL query performance. By strategically creating and managing indexes, you can significantly improve data retrieval speeds while balancing the performance impacts on write operations. Regular analysis and adjustment of your indexing strategy will ensure optimal performance as your database grows and changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            </div><h2>Conclusion</h2><p>Indexes are crucial for enhancing SQL query performance. By strategically creating and managing indexes, you can significantly improve data retrieval speeds while balancing the performance impacts on write operations. Regular analysis and adjustment of your indexing strategy will ensure optimal performance as your database grows and changes.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
 </div>
       
 
@@ -812,7 +796,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7b578a7a16f3ce07e3e77177ccb16ee7a668b56890a3000eace4946c2d2acb25">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f153a46cc41e8af9f22cc6b2d300f634ca009596d665b3e2661872a0a3879744">
   
     
       
@@ -864,7 +848,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       

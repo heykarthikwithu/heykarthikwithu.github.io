@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/When-to-use-hook_update_N-and-hook_post_update_NAME.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-21T11:18:56+0530",
+            "dateModified": "2026-04-22T12:25:07+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdvsf6" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tdw0f7" />
 </noscript>
   </head>
   <body class="path-node page-node-type-article">
@@ -644,49 +644,41 @@
 </div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to learn when to use <code>hook_update_N</code> and <code>hook_post_update_NAME</code>. In general, I was using <code>hook_update_N</code> for any <strong>database-related</strong> changes or with any <strong><a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> additions or updates</strong>. And I was using <code>hook_post_update_NAME</code> for any <strong>content <a href="/articles/cosmology-and-creation-vedas" title="Read about Cosmology And Creation In The Vedas">creation</a> or updating</strong> or for the <strong>creation or updating any <a href="/articles/auto-tagging-taxonomy-terms-drupal7" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms</strong> etc, sometimes for <strong>clearing site caches</strong> as well.</p><p>But, let’s have a check like <strong>why Drupal is offering us these two features</strong> and what is the flow of execution of these two.</p><p>I have <strong>checked few core modules</strong> and a <strong>few contributed modules</strong> and understood that In a few of the modules there is <strong>no clear separation in the usage</strong> of these two hooks and in a few of the modules <code>hook_update_N</code> is used to modify field definitions and <code>hook_post_update_NAME</code> is used for creating or updating data.</p><p>I have <strong>gone through a few of the articles and documentations</strong> and understood that within <code>hook_update_N</code> it's better to do config or database related changes and in the <code>hook_post_update_NAME</code> it's better to do entity changes or content changes or something else.</p><p>To <strong>get to know more about about</strong>, had a check in the drupal core code and found the <code>DbUpdateController</code> class, in which <code>triggerBatch</code> method is doing the stuff on running <code>https://drupal.local/update.php</code></p>
-        <div class="tbp-ad-wrapper">
-            <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
-
-            <div class="product-card tbp-ad">
-                <div class="product-layout">
-
-                    <div class="product-image">
-                        <a href="https://amzn.to/46Cj0Lb" target="_blank">
-                            <img src="https://m.media-amazon.com/images/I/51ZLJK6FRzL._SX679_.jpg" alt="Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)">
-                        </a>
-                    </div>
-
-                    <div class="product-content">
-
-                        <div class="product-title">
-                            <a href="https://amzn.to/46Cj0Lb" target="_blank">
-                                Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4ga4HmN" target="_blank" rel="noopener sponsored">
+                                <img src="https://m.media-amazon.com/images/I/61hK5QTdINL._SX679_.jpg" alt="Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp;amp; Women | Titanium, Matte Black 11">
                             </a>
                         </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4ga4HmN" target="_blank" rel="noopener sponsored">Gabit Smart Ring | Health Tracker | Sleep, Fitness, Nutrition, Stress | Buy Sizing Kit First | 7+ Day Battery, Track Steps, HRV, HR, VO2 Max | Smart Ring for Men &amp;amp; Women | Titanium, Matte Black 11</a>
+                            </div>
+                            <div class="discount-badge">Now 5% Off</div>
+                            <a href="https://amzn.to/4ga4HmN" target="_blank" class="buy-button" rel="noopener sponsored">
+                                <span class="product-price">
+                                    <span class="actual-price">₹13800</span>
+                                    <span class="current-price">₹13109</span>
+                                </span>
 
-                        <div class="discount-badge">Now 43% Off</div>
-
-                        <a href="https://amzn.to/46Cj0Lb" target="_blank" class="buy-button">
-
-                            <span class="product-price">
-                                <span class="actual-price">₹2635</span>
-                                <span class="current-price">₹1499</span>
-                            </span>
-
-                            <span class="product-store">
-                                <span>Amazon</span>
-                                <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                    <path d="M5 5h5V3H3v7h2V5z" />
-                                </svg>
-                            </span>
-
-                        </a>
-
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
+            
+        
         
             
         
@@ -734,7 +726,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ebc462f918b7aebecbb607a33170bd3019e96c4e0b94c796a87c7c0b1af00617">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f422905fe6c3bf7065b65486a63c4908b975bfc81a865b1fea9e6c0b5e20afe7">
   
     
       
@@ -786,7 +778,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9d3227915483abf8dcd3eeb4e382a78b4b6ebf227857b9509011097c92f04e5a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cea4e4a5d74fdd10bcd22f3b8e2f3355522cee132568558d9db93773f4d6741f">
   
     
       
