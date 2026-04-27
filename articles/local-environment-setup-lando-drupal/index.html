@@ -10,9 +10,11 @@
 <meta property="og:url" content="https://peoplesblog.co.in/articles/local-environment-setup-lando-drupal" />
 <meta property="og:title" content="Local environment setup with Lando &amp; Drupal" />
 <meta property="og:description" content="We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier." />
+<meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/2026-04/local-environment-setup-with-lando-and-drupal-ten.webp" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier." />
 <meta name="twitter:title" content="Local environment setup with Lando &amp; Drupal" />
+<meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/2026-04/local-environment-setup-with-lando-and-drupal-ten.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
@@ -24,8 +26,12 @@
             "@type": "Article",
             "headline": "Local environment setup with Lando \u0026 Drupal",
             "description": "We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://peoplesblog.co.in/sites/default/files/2026-04/local-environment-setup-with-lando-and-drupal-ten.webp"
+            },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T14:58:02+0530",
+            "dateModified": "2026-04-27T16:41:54+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -71,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te1p13" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te5gjg" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -633,6 +639,10 @@
       </header>
   <div class="node__content layout--content-narrow">
         
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/local-environment-setup-lando-drupal" hreflang="en"><img loading="eager" src="/sites/default/files/2026-04/local-environment-setup-with-lando-and-drupal-ten.webp" width="788" height="443" alt="Local environment setup with Lando &amp; Drupal" />
+</a>
+</div>
+      
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>We developers always choose to have some tools or setup, which makes our lives easier during the development process whether it might be a local environment or higher environments. Not only will lives be easier with such a setup, even the productivity of the individual or team will be increased. And today we are gonna see how Lando will help the drupal developer or drupal development much more quicker and easier.</p><p>Lando is a development tool, it's a free, open source, cross-platform, local development environment and DevOps tool built on Docker (opens new window) container technology and developed by Tandem. Designed to work with most major languages, frameworks and services, This is a brief about Lando.</p><p>Now let's see how we set up Drupal 9 locally with Lando.</p><p>Initially you have to install Lando on your machine (I’m using Ubuntu).</p><pre>$ wget https://files.devwithlando.io/lando-stable.deb$ sudo dpkg -i lando-stable.deb$ lando</pre><p>After successful installation, when you type lando in terminal and hit enter, you will see commands listed which lando provides by default.</p><p>Let's proceed with the Drupal 9 installation.</p><pre>$ lando init--source remote--remote-url https://ftp.drupal.org/files/projects/drupal-9.2.0.tar.gz--remote-options="--strip-components 1"--recipe drupal9--webroot .--name drupal9-local</pre><p>This will download the drupal 9.2.0 version and place it in the drupal9-local folder. Further start lando by using the below command.</p><pre>$ lando start</pre><p>This will start the Drupal 9 installation and you will get the drupal up and running. And you can see the information in the instance running by using the below command.</p><pre>$ lando info</pre>
         
             
@@ -667,7 +677,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-23b9c01a357debab76a47802562bacbb81b45b74672763909af3fd1e8b1021e3">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-35e5606e369282b20adbee05aa53badf5cf1ec0a0ac2f28d246de5e1e4b82ce9">
   
     
       
@@ -719,7 +729,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f82793f7dce6c28c2e25c093dd385ca606921d89e96d6bc7cc3e3eb8715d1c90">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f2b08f27c805d50cb77119f95eecebb7e5673f18d4383cd67d5e6b85d3dbf33b">
   
     
       
@@ -729,6 +739,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
+  <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
+  <h4>How to Disconnect from Technology and Reconnect with Life</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -746,13 +762,13 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
@@ -768,12 +784,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
   <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
   <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-kochi-road-trip-2-3-days-itinerary-solo-riders-and-family-travelers" title="Bangalore to Kochi Road Trip (2–3 Days): Itinerary for Solo Riders and Family Travelers">
-  <img src="/sites/default/files/banners/bangalore-to-kochi-solo-trip-plan.webp" alt="Bangalore to Kochi Road Trip (2–3 Days): Itinerary for Solo Riders and Family Travelers">
-  <h4>Bangalore to Kochi Road Trip (2–3 Days): Itinerary for Solo Riders and Family Travelers</h4>
 </a></span></div></div>
       </div>
       </div>
