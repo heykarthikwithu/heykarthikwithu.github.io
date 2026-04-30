@@ -5,7 +5,7 @@
 <meta name="description" content="In the modern world of cloud computing, managing identity and access is crucial to securing enterprise applications and data. Microsoft Azure provides a comprehensive identity and access management solution through Azure Active Directory (Azure AD)." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/azure-active-directory-app-registrations-complete-guide" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/azure-active-directory-app-registrations-complete-guide" />
 <meta property="og:title" content="Azure Active Directory &amp; App Registrations: Complete Guide" />
@@ -31,14 +31,14 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.webp"
             },
             "datePublished": "2025-11-23T10:03:00+0530",
-            "dateModified": "2026-04-29T08:17:15+0530",
+            "dateModified": "2026-04-30T07:44:48+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>Azure Active Directory &amp; App Registrations: Complete Guide | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>Azure Active Directory &amp; App Registrations: Complete Guide | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/azure-active-directory-app-registrations-complete-guide" hreflang="en"><img loading="eager" src="/sites/default/files/banners/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.webp" width="788" height="443" alt="Azure Active Directory &amp; App Registrations: Complete Guide" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/understanding-azure-active-directory-azure-app-registrations-key-concepts-and-best-practices.webp" width="788" height="443" alt="Azure Active Directory &amp; App Registrations: Complete Guide" />
+
+<div class="pb-image-caption">Azure Active Directory &amp; App Registrations: Complete Guide</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In the modern world of cloud computing, managing identity and access is crucial to securing enterprise <a href="/articles/secure-application-password-reset-flow-best-practices" title="Read about Secure Your Applications Reset Password Flow">applications</a> and data. Microsoft Azure provides a comprehensive identity and access management solution through <strong>Azure Active Directory (Azure AD)</strong>. Whether you are managing an enterprise IT <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a> or building cloud-based applications, understanding Azure AD and Azure App Registrations is foundational to ensuring secure and seamless user and application experiences.</p><p>In this article, we will explore the key concepts behind <strong>Azure Active Directory</strong> and <strong>Azure App Registrations</strong>, and provide best practices for configuring and managing them. Additionally, we will dive into <strong>OpenID SSO for Admin Login</strong> as a critical use case of Azure AD that simplifies administrative access and improves security.</p><h2>What is Azure Active Directory?</h2><p>Azure Active Directory (Azure AD) is Microsoft’s cloud-based identity and access management service. It serves as the backbone for authentication and authorization in Azure, Office 365, and other Microsoft services. Azure AD helps businesses control access to resources, manage identities, and provide security for cloud and on-premises applications.</p><p>Azure AD is distinct from traditional Active Directory (AD), which is primarily used for on-premises identity management. While traditional AD is based on Windows Server, Azure AD operates in the cloud and supports a broader set of modern authentication protocols like OAuth, OpenID Connect, and SAML.</p><p><strong>Key Features of Azure AD:</strong></p><ol> <li><strong>Identity Management</strong>: Provides centralized identity management for users, groups, and devices. It allows administrators to create and manage user accounts, assign roles, and configure access policies.</li> <li><strong>Authentication and Authorization</strong>: Azure AD supports Single Sign-On (SSO) for cloud apps, multi-factor authentication (MFA), conditional access policies, and more.</li> <li><strong>Integration with SaaS Applications</strong>: Azure AD can integrate with thousands of SaaS (Software as a Service) applications, such as Salesforce, Slack, and Zoom, using pre-built connectors for authentication.</li> <li><strong>Role-Based Access Control (RBAC)</strong>: Azure AD supports RBAC for controlling user access to Azure resources based on roles assigned to users or groups.</li> <li><strong>Self-Service Password Reset (SSPR)</strong>: Users can reset their passwords without admin intervention, improving security and reducing helpdesk workloads.</li> <li><strong>Conditional Access</strong>: This allows administrators to define policies based on user risk profiles, device health, and other factors to enforce security requirements before granting access to applications.</li> </ol><h2>What is Azure App Registration?</h2>
                     
@@ -726,24 +726,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4sX1agc" target="_blank" rel="noopener sponsored" data-product="Panasonic 27L Convection Microwave Oven – 360° Heat Wrap &amp; Magic Grill">
-                                <img src="https://m.media-amazon.com/images/I/71ksdSsJ-IL._SL1500_.jpg" alt="Panasonic 27L Convection Microwave Oven – 360° Heat Wrap &amp; Magic Grill">
+                            <a href="https://amzn.to/42ElYQj" target="_blank" rel="noopener sponsored" data-product="Amazon Brand - Solimo Wooden Ironing Board/Table with Iron Holder, Foldable &amp; Adjustable (116 x 40cm)">
+                                <img src="https://m.media-amazon.com/images/I/31DRznWZ2WL.jpg" alt="Amazon Brand - Solimo Wooden Ironing Board/Table with Iron Holder, Foldable &amp; Adjustable (116 x 40cm)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4sX1agc" target="_blank" rel="noopener sponsored" data-product="Panasonic 27L Convection Microwave Oven – 360° Heat Wrap &amp; Magic Grill">Panasonic 27L Convection Microwave Oven – 360° Heat Wrap &amp; Magic Grill</a>
+                                <a href="https://amzn.to/42ElYQj" target="_blank" rel="noopener sponsored" data-product="Amazon Brand - Solimo Wooden Ironing Board/Table with Iron Holder, Foldable &amp; Adjustable (116 x 40cm)">Amazon Brand - Solimo Wooden Ironing Board/Table with Iron Holder, Foldable &amp; Adjustable (116 x 40cm)</a>
                             </div>
-                            <div class="discount-badge">Now 22% Off</div>
-                            <a href="https://amzn.to/4sX1agc" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Panasonic 27L Convection Microwave Oven – 360° Heat Wrap &amp; Magic Grill">
+                            <div class="discount-badge">Now 65% Off</div>
+                            <a href="https://amzn.to/42ElYQj" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Brand - Solimo Wooden Ironing Board/Table with Iron Holder, Foldable &amp; Adjustable (116 x 40cm)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹16190.00</span>
-                                    <span class="current-price">₹12590.00</span>
+                                    <span class="actual-price">₹3599</span>
+                                    <span class="current-price">₹1259</span>
                                 </span>
 
                                 <span class="product-store">
@@ -785,7 +788,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-58c8d8ad7c48f812e810211b1f12096a30925effb0c2fea4b8c2da94fbffc2b2">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f962e734d408d09e962fb7febb5e95efcc7234292a3a22e1b2fccfacf5b8a3cb">
   
     
       
@@ -837,7 +840,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9ae69b56c1e95594b2c19e5155dedbde113cc7793afa45269383db1e1d54e53a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-1f37953bb68e3db04a6491b5d61f4ed2d63c1887365d280be713bb53c037d528">
   
     
       
@@ -847,6 +850,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -864,13 +873,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -886,12 +895,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1012,12 +1015,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -1083,7 +1126,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3775","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>

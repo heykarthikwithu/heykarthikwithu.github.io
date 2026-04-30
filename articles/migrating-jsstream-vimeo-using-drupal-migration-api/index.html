@@ -5,7 +5,7 @@
 <meta name="description" content="Migrating video content from JSStream (a custom video streaming platform) to Vimeo can be a crucial task if you&#039;re looking for a more scalable, feature-rich platform for hosting and managing your videos." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/migrating-jsstream-vimeo-using-drupal-migration-api" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/migrating-jsstream-vimeo-using-drupal-migration-api" />
 <meta property="og:title" content="Migrating from JSStream to Vimeo Using Drupal Migration API" />
@@ -31,14 +31,14 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.webp"
             },
             "datePublished": "2024-12-13T08:43:00+0530",
-            "dateModified": "2026-04-29T08:17:15+0530",
+            "dateModified": "2026-04-30T07:44:48+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>Migrating from JSStream to Vimeo Using Drupal Migration API | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>Migrating from JSStream to Vimeo Using Drupal Migration API | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/migrating-jsstream-vimeo-using-drupal-migration-api" hreflang="en"><img loading="eager" src="/sites/default/files/banners/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.webp" width="788" height="443" alt="Migrating from JSStream to Vimeo Using Drupal Migration API" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.webp" width="788" height="443" alt="Migrating from JSStream to Vimeo Using Drupal Migration API" />
+
+<div class="pb-image-caption">Migrating from JSStream to Vimeo Using Drupal Migration API</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
         
@@ -722,24 +722,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3xAXfPf" target="_blank" rel="noopener sponsored" data-product="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster">
-                                <img src="https://m.media-amazon.com/images/I/71293gyogZL._SX385_.jpg" alt="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster">
+                            <a href="https://amzn.to/3EHthMQ" target="_blank" rel="noopener sponsored" data-product="Kimirica Valentines Gift Box The Gulistan duo Bath Kit For Women's &amp; Men's|Luxury Self Care Kit For Wife, Husband, Girlfriend &amp; Boyfriend|Set of 2">
+                                <img src="https://m.media-amazon.com/images/I/61+PY3gMYML._SX679_.jpg" alt="Kimirica Valentines Gift Box The Gulistan duo Bath Kit For Women's &amp; Men's|Luxury Self Care Kit For Wife, Husband, Girlfriend &amp; Boyfriend|Set of 2">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3xAXfPf" target="_blank" rel="noopener sponsored" data-product="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster">Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster</a>
+                                <a href="https://amzn.to/3EHthMQ" target="_blank" rel="noopener sponsored" data-product="Kimirica Valentines Gift Box The Gulistan duo Bath Kit For Women's &amp; Men's|Luxury Self Care Kit For Wife, Husband, Girlfriend &amp; Boyfriend|Set of 2">Kimirica Valentines Gift Box The Gulistan duo Bath Kit For Women's &amp; Men's|Luxury Self Care Kit For Wife, Husband, Girlfriend &amp; Boyfriend|Set of 2</a>
                             </div>
-                            <div class="discount-badge">Now 33% Off</div>
-                            <a href="https://amzn.to/3xAXfPf" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Xiaomi Redmi 10A (Charcoal Black, 3GB RAM, 32GB Storage) | 2 Ghz Octa Core Helio G25 | 5000 mAh Battery | Finger Print Sensor | Upto 5GB RAM with RAM Booster">
+                            <div class="discount-badge">Now 10% Off</div>
+                            <a href="https://amzn.to/3EHthMQ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Kimirica Valentines Gift Box The Gulistan duo Bath Kit For Women's &amp; Men's|Luxury Self Care Kit For Wife, Husband, Girlfriend &amp; Boyfriend|Set of 2">
                                 <span class="product-price">
-                                    <span class="actual-price">₹11999</span>
-                                    <span class="current-price">₹7999</span>
+                                    <span class="actual-price">₹699</span>
+                                    <span class="current-price">₹629</span>
                                 </span>
 
                                 <span class="product-store">
@@ -789,7 +792,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-813aadc93a7fa1f1d34809b045061403b1f23236f25c682c7f8a73e708147943">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-b7448503a5ac8a8788246d5f7f6610ec1d4e707254fe478d55a8afa05603c503">
   
     
       
@@ -841,7 +844,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f3a1f942391ac1c99a1b619020643740e596ec77ad6fab0f1ce0452c97b441e7">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ed39f685d62c94a6f9f00d25ef94a9974433a5505b45b0dcbc4491e47b6b8aa4">
   
     
       
@@ -851,6 +854,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -868,13 +877,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -890,12 +899,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1016,12 +1019,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -1087,7 +1130,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3827","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>

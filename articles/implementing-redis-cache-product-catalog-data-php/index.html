@@ -5,7 +5,7 @@
 <meta name="description" content="Caching is a vital technique for improving application performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/implementing-redis-cache-product-catalog-data-php" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/implementing-redis-cache-product-catalog-data-php" />
 <meta property="og:title" content="Implementing a Redis Cache for Product Catalog Data in PHP" />
@@ -31,14 +31,14 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-a-redis-cache-for-product-catalog-data-in-php.webp"
             },
             "datePublished": "2024-11-08T09:32:00+0530",
-            "dateModified": "2026-04-29T08:17:15+0530",
+            "dateModified": "2026-04-30T07:44:48+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>Implementing a Redis Cache for Product Catalog Data in PHP | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>Implementing a Redis Cache for Product Catalog Data in PHP | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/implementing-redis-cache-product-catalog-data-php" hreflang="en"><img loading="eager" src="/sites/default/files/banners/implementing-a-redis-cache-for-product-catalog-data-in-php.webp" width="788" height="443" alt="Implementing a Redis Cache for Product Catalog Data in PHP" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/implementing-a-redis-cache-for-product-catalog-data-in-php.webp" width="788" height="443" alt="Implementing a Redis Cache for Product Catalog Data in PHP" />
+
+<div class="pb-image-caption">Implementing a Redis Cache for Product Catalog Data in PHP</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
         
@@ -720,24 +720,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4ch8E6U" target="_blank" rel="noopener sponsored" data-product="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)">
-                                <img src="https://m.media-amazon.com/images/I/81wHA8+P09L._SX679_.jpg" alt="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)">
+                            <a href="https://amzn.to/3R9UvPZ" target="_blank" rel="noopener sponsored" data-product="Philips GC097/50 750-Watt Dry Iron (World no. 1 Ironing Brand), Light &amp; Easy to Use, Powerful 750 Watt Heat up with a comforable wide grip, Black Non Stick Soleplate (Peach)">
+                                <img src="https://m.media-amazon.com/images/I/61HbXGEnwSL._SX679_.jpg" alt="Philips GC097/50 750-Watt Dry Iron (World no. 1 Ironing Brand), Light &amp; Easy to Use, Powerful 750 Watt Heat up with a comforable wide grip, Black Non Stick Soleplate (Peach)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4ch8E6U" target="_blank" rel="noopener sponsored" data-product="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)">boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)</a>
+                                <a href="https://amzn.to/3R9UvPZ" target="_blank" rel="noopener sponsored" data-product="Philips GC097/50 750-Watt Dry Iron (World no. 1 Ironing Brand), Light &amp; Easy to Use, Powerful 750 Watt Heat up with a comforable wide grip, Black Non Stick Soleplate (Peach)">Philips GC097/50 750-Watt Dry Iron (World no. 1 Ironing Brand), Light &amp; Easy to Use, Powerful 750 Watt Heat up with a comforable wide grip, Black Non Stick Soleplate (Peach)</a>
                             </div>
-                            <div class="discount-badge">Now 70% Off</div>
-                            <a href="https://amzn.to/4ch8E6U" target="_blank" class="buy-button" rel="noopener sponsored" data-product="boAt Partypal 300/320 Speaker with 120 W Signature Sound, Karaoke with Built-in Mic, Up to 6 hrs Playtime, TWS Mode, Bluetooth v5.3, AUX Port, &amp; USB Type-C Port(Premium Black)">
+                            <div class="discount-badge">Now 33% Off</div>
+                            <a href="https://amzn.to/3R9UvPZ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Philips GC097/50 750-Watt Dry Iron (World no. 1 Ironing Brand), Light &amp; Easy to Use, Powerful 750 Watt Heat up with a comforable wide grip, Black Non Stick Soleplate (Peach)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹29990</span>
-                                    <span class="current-price">₹8999</span>
+                                    <span class="actual-price">₹895</span>
+                                    <span class="current-price">₹598</span>
                                 </span>
 
                                 <span class="product-store">
@@ -774,7 +777,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5c4cb3937573f879377280794a88b84fcc5a4d31b3d857c1d79e4b158dc625ed">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6b7a63c324095f06531d717421bad1c6e0586222ed78b33d292f94a7f128a555">
   
     
       
@@ -826,7 +829,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-fe3743e598b0f46f2717e4cb24dbf953e9c303fe7ec11498c2977f1394288446">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5b58b851b77b9a8b7b8b257bf8421d72c71419eb62d684ef5993aa7b070bd514">
   
     
       
@@ -836,6 +839,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -853,13 +862,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -875,12 +884,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1001,12 +1004,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -1072,7 +1115,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3883","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>

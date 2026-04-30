@@ -5,7 +5,7 @@
 <meta name="description" content="Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.In this article, we&#039;ll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP applications using PHP 8.1. Factory PatternScenario" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/implementing-design-patterns-real-world-php-applications" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/implementing-design-patterns-real-world-php-applications" />
 <meta property="og:title" content="Implementing Design Patterns in Real-World PHP Applications" />
@@ -38,7 +38,7 @@
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>Implementing Design Patterns in Real-World PHP Applications | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>Implementing Design Patterns in Real-World PHP Applications | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/implementing-design-patterns-real-world-php-applications" hreflang="en"><img loading="eager" src="/sites/default/files/banners/implementing-design-patterns-in-real-world-php-applications.webp" width="788" height="443" alt="Implementing Design Patterns in Real-World PHP Applications" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/implementing-design-patterns-in-real-world-php-applications.webp" width="788" height="443" alt="Implementing Design Patterns in Real-World PHP Applications" />
+
+<div class="pb-image-caption">Implementing Design Patterns in Real-World PHP Applications</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.</p><p>In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP <a href="/articles/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a> using PHP 8.</p><h2>1. Factory Pattern</h2><p><strong>Scenario</strong></p><p>Imagine you’re developing an e-commerce application where different types of payment methods are available: Credit Card, PayPal and Bitcoin. Instead of <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">creating</a> each payment object directly, you can use the Factory Pattern.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Define the Payment Interface</p><p><code>interface PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount);</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create Concrete Payment Classes</p><p><code>class CreditCardPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a credit card payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class PayPalPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a PayPal payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class BitcoinPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a Bitcoin payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Implement the Factory Class</p><p><code>class PaymentFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function create(string $type): PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'credit_card':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new CreditCardPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'paypal':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new PayPalPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'bitcoin':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new BitcoinPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown payment method");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4:</strong> Usage Example</p><p><code>$paymentMethod = PaymentFactory::create('paypal');</code></p><p><code>echo $paymentMethod→processPayment(100.00); // Outputs: Processing a PayPal payment of $100.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Decoupling</strong>: You decouple the client code from the concrete payment classes.</li> <li><strong>Scalability</strong>: Adding new payment methods becomes easier, as you only need to create a new class and update the factory.</li> </ul>
         
@@ -684,7 +684,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1e036d1581028dbc293a3a8f45a2dd4188827bc3ce68b34dba76d217559c44e4">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5d22236d3336ff22330cbf2305765599c816471ddb8dbf7c22dbd4669c205714">
   
     
       
@@ -736,7 +736,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-bd8ad472ef72a2b0ef40c91f73ad233d457d5ce913695d53af98907549a8b9cc">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-72525656765adc1fca3ae03cddf65be51261473893be7011debe3271cbf268fb">
   
     
       
@@ -746,6 +746,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -763,13 +769,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -785,12 +791,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -911,12 +911,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -982,7 +1022,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3925","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>

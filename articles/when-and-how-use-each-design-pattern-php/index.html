@@ -5,7 +5,7 @@
 <meta name="description" content="Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.1. Singleton PatternWhen to Use" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/when-and-how-use-each-design-pattern-php" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/when-and-how-use-each-design-pattern-php" />
 <meta property="og:title" content="When and How to Use Each Design Pattern in PHP" />
@@ -31,14 +31,14 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/when-and-how-to-use-each-design-pattern-in-php.webp"
             },
             "datePublished": "2024-11-04T06:51:00+0530",
-            "dateModified": "2026-04-29T08:17:15+0530",
+            "dateModified": "2026-04-30T07:44:48+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>When and How to Use Each Design Pattern in PHP | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>When and How to Use Each Design Pattern in PHP | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/when-and-how-use-each-design-pattern-php" hreflang="en"><img loading="eager" src="/sites/default/files/banners/when-and-how-to-use-each-design-pattern-in-php.webp" width="788" height="443" alt="When and How to Use Each Design Pattern in PHP" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/when-and-how-to-use-each-design-pattern-in-php.webp" width="788" height="443" alt="When and How to Use Each Design Pattern in PHP" />
+
+<div class="pb-image-caption">When and How to Use Each Design Pattern in PHP</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
                     
@@ -722,24 +722,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4gPmNc6" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">
-                                <img src="https://m.media-amazon.com/images/I/81h-r-3hioL._SX679_.jpg" alt="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">
+                            <a href="https://amzn.to/3XEvaOT" target="_blank" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
+                                <img src="https://m.media-amazon.com/images/I/71IHKbuambL._SY385_.jpg" alt="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4gPmNc6" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)</a>
+                                <a href="https://amzn.to/3XEvaOT" target="_blank" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack</a>
                             </div>
-                            <div class="discount-badge">Now 41% Off</div>
-                            <a href="https://amzn.to/4gPmNc6" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">
+                            <div class="discount-badge">Now 29% Off</div>
+                            <a href="https://amzn.to/3XEvaOT" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
                                 <span class="product-price">
-                                    <span class="actual-price">₹164900</span>
-                                    <span class="current-price">₹96990</span>
+                                    <span class="actual-price">₹419</span>
+                                    <span class="current-price">₹298.30</span>
                                 </span>
 
                                 <span class="product-store">
@@ -779,7 +782,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e836384fa6b5a5fe3c009e4c3c8bdef206eb4a504efa98994fd35335e4f1e637">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-cec2646254cd0600701d24e5f52617b69501a7996056c10b419b76bba1fe200e">
   
     
       
@@ -831,7 +834,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f1b77c690a876691c0e386a34c17d075c9b72f95f7403c2965c8a40ffd45cd14">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-d5d1356e7100ce0d733ede9450fc4a48b9d68a6f535b24254d2cf104ba7880a0">
   
     
       
@@ -841,6 +844,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -858,13 +867,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -880,12 +889,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1006,12 +1009,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -1077,7 +1120,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3889","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>

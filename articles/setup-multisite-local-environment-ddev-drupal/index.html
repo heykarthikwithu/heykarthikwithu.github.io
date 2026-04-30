@@ -5,7 +5,7 @@
 <meta name="description" content="In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, here’s the recipe provided by ddev." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/setup-multisite-local-environment-ddev-drupal" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/setup-multisite-local-environment-ddev-drupal" />
 <meta property="og:title" content="Setup Multisite Local Environment with DDEV &amp; Drupal" />
@@ -31,14 +31,14 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/multisite-local-environment-setup-with-ddev-and-drupal.webp"
             },
             "datePublished": "2025-11-23T09:48:00+0530",
-            "dateModified": "2026-04-29T08:17:15+0530",
+            "dateModified": "2026-04-30T07:44:48+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>Setup Multisite Local Environment with DDEV &amp; Drupal | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>Setup Multisite Local Environment with DDEV &amp; Drupal | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/setup-multisite-local-environment-ddev-drupal" hreflang="en"><img loading="eager" src="/sites/default/files/banners/multisite-local-environment-setup-with-ddev-and-drupal.webp" width="788" height="443" alt="Setup Multisite Local Environment with DDEV &amp; Drupal" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/multisite-local-environment-setup-with-ddev-and-drupal.webp" width="788" height="443" alt="Setup Multisite Local Environment with DDEV &amp; Drupal" />
+
+<div class="pb-image-caption">Setup Multisite Local Environment with DDEV &amp; Drupal</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.</p><p>As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, here’s the <a href="https://github.com/drud/ddev-contrib/tree/master/recipes/drupal8-multisite">recipe</a> provided by ddev.</p><p>Assuming you already have <code>ddev</code> installed and a drupal site is up and running on local. If so check the site details by running <code>ddev describe</code>.</p><p>Initially create a file <code>config.multisite.yaml</code> within the <code>.ddev</code> directory, with <a href="/articles/best-way-add-additional-estimates-upon-original-estimate-story-sprint" title="Read about Best Way To Add Additional Estimates Upon The Original Estimate For A Story In A Sprint">additional</a> hostnames and post hooks.</p><p>(reference: <a href="https://github.com/drud/ddev-contrib/blob/master/recipes/drupal8-multisite/dot.ddev/config.multisite.yaml">config.multisite.yaml</a>)</p>
             <div class="tbp-ad-wrapper">
@@ -649,19 +649,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/48bg0sU" target="_blank" rel="noopener sponsored" data-product="Lymio Track Pant for Men || Regular Fit || Track Pants || Lycra Full Elastic Jogger Track Pant (Available in Combo Packs) (TP-06-08)">
-                                <img src="https://m.media-amazon.com/images/I/61Qn8EIYWNL._SX679_.jpg" alt="Lymio Track Pant for Men || Regular Fit || Track Pants || Lycra Full Elastic Jogger Track Pant (Available in Combo Packs) (TP-06-08)">
+                            <a href="https://amzn.to/4o2KP8D" target="_blank" rel="noopener sponsored" data-product="SkinInspired Care Addict Encapsulated Sunscreen SPF 50 For Dry Skin With Pa++++ | Broad Spectrum UV A, UV B &amp; Blue Light Protection | Contains Ceramides &amp; Hyaluronic Acid | No White Cast | For All Skin Type | 150G">
+                                <img src="https://m.media-amazon.com/images/I/41KNTI2sR3L._SX679_.jpg" alt="SkinInspired Care Addict Encapsulated Sunscreen SPF 50 For Dry Skin With Pa++++ | Broad Spectrum UV A, UV B &amp; Blue Light Protection | Contains Ceramides &amp; Hyaluronic Acid | No White Cast | For All Skin Type | 150G">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/48bg0sU" target="_blank" rel="noopener sponsored" data-product="Lymio Track Pant for Men || Regular Fit || Track Pants || Lycra Full Elastic Jogger Track Pant (Available in Combo Packs) (TP-06-08)">Lymio Track Pant for Men || Regular Fit || Track Pants || Lycra Full Elastic Jogger Track Pant (Available in Combo Packs) (TP-06-08)</a>
+                                <a href="https://amzn.to/4o2KP8D" target="_blank" rel="noopener sponsored" data-product="SkinInspired Care Addict Encapsulated Sunscreen SPF 50 For Dry Skin With Pa++++ | Broad Spectrum UV A, UV B &amp; Blue Light Protection | Contains Ceramides &amp; Hyaluronic Acid | No White Cast | For All Skin Type | 150G">SkinInspired Care Addict Encapsulated Sunscreen SPF 50 For Dry Skin With Pa++++ | Broad Spectrum UV A, UV B &amp; Blue Light Protection | Contains Ceramides &amp; Hyaluronic Acid | No White Cast | For All Skin Type | 150G</a>
                             </div>
-                            <div class="discount-badge">Now 88% Off</div>
-                            <a href="https://amzn.to/48bg0sU" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lymio Track Pant for Men || Regular Fit || Track Pants || Lycra Full Elastic Jogger Track Pant (Available in Combo Packs) (TP-06-08)">
+                            <div class="discount-badge">Now 5% Off</div>
+                            <a href="https://amzn.to/4o2KP8D" target="_blank" class="buy-button" rel="noopener sponsored" data-product="SkinInspired Care Addict Encapsulated Sunscreen SPF 50 For Dry Skin With Pa++++ | Broad Spectrum UV A, UV B &amp; Blue Light Protection | Contains Ceramides &amp; Hyaluronic Acid | No White Cast | For All Skin Type | 150G">
                                 <span class="product-price">
-                                    <span class="actual-price">₹4999</span>
-                                    <span class="current-price">₹599</span>
+                                    <span class="actual-price">₹999</span>
+                                    <span class="current-price">₹949</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -732,19 +735,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4kLw0o6" target="_blank" rel="noopener sponsored" data-product="GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.">
-                                <img src="https://m.media-amazon.com/images/I/817uKaCFGjL._SX679_.jpg" alt="GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.">
+                            <a href="https://amzn.to/3W64dop" target="_blank" rel="noopener sponsored" data-product="ACCUTRUST Digital Upper Arm Blood Pressure Monitor with Large LCD Display, Automatic Measurement, Cuff 22-32cm, Heart Rate &amp; Irregular Heartbeat Detection – Portable BP Machine for Home Use">
+                                <img src="https://m.media-amazon.com/images/I/71YTlHO+m8L._SX679_.jpg" alt="ACCUTRUST Digital Upper Arm Blood Pressure Monitor with Large LCD Display, Automatic Measurement, Cuff 22-32cm, Heart Rate &amp; Irregular Heartbeat Detection – Portable BP Machine for Home Use">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4kLw0o6" target="_blank" rel="noopener sponsored" data-product="GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.">GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.</a>
+                                <a href="https://amzn.to/3W64dop" target="_blank" rel="noopener sponsored" data-product="ACCUTRUST Digital Upper Arm Blood Pressure Monitor with Large LCD Display, Automatic Measurement, Cuff 22-32cm, Heart Rate &amp; Irregular Heartbeat Detection – Portable BP Machine for Home Use">ACCUTRUST Digital Upper Arm Blood Pressure Monitor with Large LCD Display, Automatic Measurement, Cuff 22-32cm, Heart Rate &amp; Irregular Heartbeat Detection – Portable BP Machine for Home Use</a>
                             </div>
-                            <div class="discount-badge">Now 33% Off</div>
-                            <a href="https://amzn.to/4kLw0o6" target="_blank" class="buy-button" rel="noopener sponsored" data-product="GRAND PITSTOP Universal Tubeless Tyre Puncture Kit with Strips, Strip Puncture Repair Kit On The Go, Tubless Tire Strip Kit for Autos, Cars, Motorcycles, Trucks, RVs, etc.">
+                            <div class="discount-badge">Now 41% Off</div>
+                            <a href="https://amzn.to/3W64dop" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ACCUTRUST Digital Upper Arm Blood Pressure Monitor with Large LCD Display, Automatic Measurement, Cuff 22-32cm, Heart Rate &amp; Irregular Heartbeat Detection – Portable BP Machine for Home Use">
                                 <span class="product-price">
-                                    <span class="actual-price">₹299</span>
-                                    <span class="current-price">₹199</span>
+                                    <span class="actual-price">₹1499</span>
+                                    <span class="current-price">₹879</span>
                                 </span>
 
                                 <span class="product-store">
@@ -759,6 +762,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -815,19 +821,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4eOsBlZ" target="_blank" rel="noopener sponsored" data-product="Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5">
-                                <img src="https://m.media-amazon.com/images/I/51O+J5jnXcL._SX679_.jpg" alt="Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5">
+                            <a href="https://amzn.to/40lZDUH" target="_blank" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
+                                <img src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4eOsBlZ" target="_blank" rel="noopener sponsored" data-product="Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5">Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5</a>
+                                <a href="https://amzn.to/40lZDUH" target="_blank" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a>
                             </div>
-                            <div class="discount-badge">Now 10% Off</div>
-                            <a href="https://amzn.to/4eOsBlZ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5">
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/40lZDUH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
                                 <span class="product-price">
-                                    <span class="actual-price">₹399</span>
-                                    <span class="current-price">₹359</span>
+                                    <span class="actual-price">₹11995</span>
+                                    <span class="current-price">₹5997</span>
                                 </span>
 
                                 <span class="product-store">
@@ -842,6 +848,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -920,7 +929,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-bcf9ff6369de3f63af49e3b8d78f4031845c7d7c0b329dadeb10bdbbec1b2037">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-cfdde59c9e1d32ad9ce3e43bd60c1b2ea5d34f30128435c647d7113026663290">
   
     
       
@@ -972,7 +981,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-2b514ab28ba34c198cb693c3ac2bd89d291193d20183f686b0ca1cdd0a84eca4">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-40c395a05901450baf50b7df2ac3ae2f7b1e5b3db691cc6d16f41b4cf2a67887">
   
     
       
@@ -982,6 +991,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -999,13 +1014,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -1021,12 +1036,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1147,12 +1156,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -1218,7 +1267,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3545","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>

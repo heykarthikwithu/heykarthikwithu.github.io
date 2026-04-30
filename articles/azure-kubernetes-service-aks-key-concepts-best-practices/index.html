@@ -5,7 +5,7 @@
 <meta name="description" content="As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft&#039;s managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes&#039; robust features, such as automated scaling, load balancing, and high availability, without having to manage the underlying infrastructure." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/azure-kubernetes-service-aks-key-concepts-best-practices" />
-<meta property="og:site_name" content="Peoples BLOG" />
+<meta property="og:site_name" content="PeoplesBLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/azure-kubernetes-service-aks-key-concepts-best-practices" />
 <meta property="og:title" content="Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices" />
@@ -31,14 +31,14 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.webp"
             },
             "datePublished": "2025-11-23T09:57:00+0530",
-            "dateModified": "2026-04-29T08:17:15+0530",
+            "dateModified": "2026-04-30T07:44:48+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "Peoples BLOG",
+                "name": "PeoplesBLOG",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://peoplesblog.co.in/sites/default/files/logo.png"
@@ -48,7 +48,7 @@
         },
         {
             "@type": "Organization",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in",
             "logo": {
                 "@type": "ImageObject",
@@ -57,19 +57,19 @@
         },
         {
             "@type": "WebSite",
-            "name": "Peoples BLOG",
+            "name": "PeoplesBLOG",
             "url": "https://peoplesblog.co.in"
         }
     ]
 }</script>
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
-    <title>Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices | Peoples BLOG</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+    <title>Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices | PeoplesBLOG</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3eTQ4XKRVM6yAkCmpsT8fLBp9J558A5N2C86Epiuj2w.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kFFuxCAMRC8UyJEiExzWWoMj7E3E7UujFLXaan_AfjMjG4TpwCrzKsWwmAvIck5y08QSgJ1aYyppYIYmL3MH4akuVYpDKXBQAiMpbq-UobYh3bc3CIyD7nJixehCc4FlfQ5BKWKAOnqDpNMelq1em8Z7tz-o10zay0llJeDeleeyEXKct-6BE1Uy-lXyLqU_9x_fG_HfyeWOLpvUDGZYf6IZI8Fl188zfhvfkbcHZpy09fXzHEBxur53vk6fJb4YvwClfKj9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?te8ibq" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teabiv" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -639,9 +639,9 @@
       </header>
   <div class="node__content layout--content-narrow">
         
-            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <a href="/articles/azure-kubernetes-service-aks-key-concepts-best-practices" hreflang="en"><img loading="eager" src="/sites/default/files/banners/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.webp" width="788" height="443" alt="Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices" />
-</a>
-</div>
+            <div class="wide-content field field--name-field-image field--type-image field--label-hidden field__item">  <img loading="eager" src="/sites/default/files/banners/understanding-azure-kubernetes-service-aks-key-concepts-and-best-practices.webp" width="788" height="443" alt="Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices" />
+
+<div class="pb-image-caption">Azure Kubernetes Service (AKS): Key Concepts &amp; Best Practices</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>As the adoption of cloud-native technologies grows, Kubernetes has become the de facto standard for orchestrating containerized applications. Azure Kubernetes Service (AKS) is Microsoft's managed Kubernetes offering in the Azure cloud, designed to simplify the deployment, management, and scaling of containerized applications. AKS helps organizations take advantage of Kubernetes' robust features, such as automated scaling, load balancing, and high availability, without having to manage the underlying infrastructure.</p><p>In this article, we will explore the key <a href="/articles/azure-key-vault-key-concepts-security-best-practices" title="Read about Understanding Azure Key Vault Key Concepts And Best Practices">concepts</a> behind <strong>Azure Kubernetes Service (AKS)</strong>, how it works, its benefits, and best practices for deploying and managing Kubernetes clusters on Azure.</p><h2>What is Azure Kubernetes Service (AKS)?</h2><p><strong>Azure Kubernetes Service (AKS)</strong> is a fully managed Kubernetes service provided by Microsoft Azure. It allows developers to deploy, manage, and scale containerized applications using Kubernetes without the complexity of managing the underlying infrastructure. With AKS, Azure handles tasks like <strong>control plane management</strong>, <strong>patching</strong>, and <strong>upgrades</strong>, while you focus on deploying and managing your containerized workloads.</p><p><strong>Key Features of Azure Kubernetes Service</strong></p><ol> <li><strong>Managed Kubernetes Control Plane</strong>: With AKS, the Kubernetes control plane (including the API server, scheduler, and controller manager) is fully managed by Azure, ensuring high availability, scalability, and performance.</li> <li><strong>Simplified Cluster Management</strong>: <ol> <li>AKS simplifies cluster management by automating tasks like patching and upgrades, reducing the operational overhead.</li> <li>You can manage your cluster using the <strong>Azure portal</strong>, <strong>Azure CLI</strong>, or <strong>Kubernetes kubectl</strong>.</li> </ol> </li> <li><strong>Integrated with Azure Active Directory (AAD)</strong>: <ol> <li>AKS integrates seamlessly with <strong>Azure Active Directory (AAD)</strong> to manage user access to Kubernetes resources.</li> <li>This enables role-based access control (RBAC) for both Kubernetes and Azure resources, improving <a href="/articles/security-checklist-drupal-application" title="Read about Security Checklist For Drupal Application">security</a>.</li> </ol> </li> <li><strong>Scaling and Load Balancing</strong>: <ol> <li>AKS supports both <strong>horizontal pod scaling</strong> (based on resource utilization) and <strong>cluster scaling</strong> (to add or remove nodes).</li> <li>AKS also integrates with Azure Load Balancer to ensure traffic is efficiently distributed across pods.</li> </ol> </li> <li><strong>DevOps and CI/CD Integration</strong>: <ol> <li>AKS is designed to work well with Azure DevOps, GitHub Actions, and other continuous integration/continuous deployment (CI/CD) tools.</li> <li>It provides native integrations for automated deployment and monitoring.</li> </ol> </li> <li><strong>High Availability</strong>: <ol> <li>AKS supports multi-zone availability in certain regions, ensuring that your applications are resilient to data center failures.</li> <li>The service also supports <strong>availability sets</strong> for the worker nodes to distribute workloads across different fault domains.</li> </ol> </li> <li><strong>Security and Compliance</strong>: <ol> <li>AKS integrates with Azure security services such as <strong>Azure Security Center</strong> for continuous monitoring, <strong>Azure Policy</strong> for compliance, and <strong>Azure Monitor</strong> for logging and diagnostics.</li> <li>It also supports <strong>Network Policies</strong> and <strong>Pod Security Policies</strong> for securing network traffic between pods and restricting container behavior.</li> </ol> </li> <li><strong>Integration with Azure Services</strong>: AKS integrates with other Azure services like <strong>Azure Monitor</strong>, <strong>Azure Application Insights</strong>, <strong>Azure Container Registry (ACR)</strong>, and <strong>Azure Virtual Networks</strong>, making it easier to build and manage cloud-native applications.</li> <li><strong>Windows and Linux Support</strong>: AKS supports both Linux and Windows containers, enabling the deployment of mixed workloads in the same cluster.</li> </ol>
         
@@ -728,24 +728,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3oDfwqN" target="_blank" rel="noopener sponsored" data-product="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">
-                                <img src="https://m.media-amazon.com/images/I/51u9vPziVfS._SX679_.jpg" alt="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">
+                            <a href="https://amzn.to/42xogiG" target="_blank" rel="noopener sponsored" data-product="Bosch 9kg Front Load Washing Machine – 5 Star, AI ActiveWater, Steam Wash">
+                                <img src="https://m.media-amazon.com/images/I/61CVw7YmyrL._SL1500_.jpg" alt="Bosch 9kg Front Load Washing Machine – 5 Star, AI ActiveWater, Steam Wash">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3oDfwqN" target="_blank" rel="noopener sponsored" data-product="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium</a>
+                                <a href="https://amzn.to/42xogiG" target="_blank" rel="noopener sponsored" data-product="Bosch 9kg Front Load Washing Machine – 5 Star, AI ActiveWater, Steam Wash">Bosch 9kg Front Load Washing Machine – 5 Star, AI ActiveWater, Steam Wash</a>
                             </div>
-                            <div class="discount-badge">Now 5% Off</div>
-                            <a href="https://amzn.to/3oDfwqN" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">
+                            <div class="discount-badge">Now 34% Off</div>
+                            <a href="https://amzn.to/42xogiG" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bosch 9kg Front Load Washing Machine – 5 Star, AI ActiveWater, Steam Wash">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1340</span>
-                                    <span class="current-price">₹1273</span>
+                                    <span class="actual-price">₹59990.00</span>
+                                    <span class="current-price">₹39890.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -783,7 +786,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-93ac6719ba32538c9000d5a9208f98f117bc79d8e8050d302a69289bb682d8ef">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7f5fe08a47648b591b0bf7074dddead0e08fcfcae00391921125da4859f95af1">
   
     
       
@@ -835,7 +838,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-140a5de7f9022775d6b3e82302baccae3a89b85904b83baa5529c54d27a1135c">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-95f7b0319b173f242c95e137321ad552f393e59ddb61ea155f304cda44b20398">
   
     
       
@@ -845,6 +848,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/m-visvesvaraya-visionary-engineer-who-helped-build-modern-india" title="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <img src="/sites/default/files/2026-04/m-visvesvaraya-the-visionary-engineer-who-helped-build-modern-india.webp" alt="M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India">
+  <h4>M. Visvesvaraya - The Visionary Engineer Who Helped Build Modern India</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience-once" title="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <img src="/sites/default/files/2026-04/ahmedabad-to-rann-of-kutch-white-desert-adventure-you-must-experience-once.webp" alt="Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once">
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
@@ -862,13 +871,13 @@
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/how-long-can-you-keep-hatred-your-heart" title="How Long Can You Keep Hatred in Your Heart?">
   <img src="/sites/default/files/2026-04/how-long-can-you-keep-hatred-in-your-heart-1.webp" alt="How Long Can You Keep Hatred in Your Heart?">
   <h4>How Long Can You Keep Hatred in Your Heart?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/exploring-link-between-pcos-and-insulin-resistance" title="Exploring the Link Between PCOS and Insulin Resistance">
   <img src="/sites/default/files/2026-04/exploring-the-link-between-pcos-and-insulin-resistance.webp" alt="Exploring the Link Between PCOS and Insulin Resistance">
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
@@ -884,12 +893,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
   <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
-  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1010,12 +1013,52 @@
 
 <div id="block-olivero-aboutpeoplesblog" class="block block-block-content block-block-contentcb497773-f002-4721-9011-836bd51ba226">
   
-      <h2 class="block__title">About Peoples BLOG</h2>
+      <h2 class="block__title">About PeoplesBLOG</h2>
     
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Peoples BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
+    </div>
+  </div>
+
+
+<div id="block-olivero-googleformsubscribeblock" class="block block-gform-subscribe block-gform-subscribe-block">
+  
+      <h2 class="block__title">Join the PeoplesBLOG Community</h2>
+    
+      <div class="block__content">
+      
+      <div class="gform-subscribe" id="gform_69f2bb2513b4e">
+
+        <form class="gform-form"
+              data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
+
+          <input type="email"
+                 name="entry.1045781291"
+                 placeholder="Enter your email"
+                 required>
+
+          <input type="text"
+                 name="website"
+                 class="gform-hidden"
+                 tabindex="-1"
+                 autocomplete="off">
+
+          <div class="gform-math">
+            <span class="gform-math-label"></span>
+            <input type="number" class="gform-math-input" required>
+          </div>
+
+          <button type="submit">Subscribe</button>
+
+        </form>
+
+        <p class="gform-success" style="display:none;">✅ Subscribed successfully!</p>
+        <p class="gform-error" style="display:none;">❌ Something went wrong</p>
+
+      </div>
+    
     </div>
   </div>
 
@@ -1081,7 +1124,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3828","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_2GvZjDokgdy2vr9C4rAmIPm44r5isqRpwueg55upmX8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMBdELKT1SidVKIM2XGARvXxdu3A0PBsKjGK4qSCSx-xTWGrBZaXAlZ2hsxh_ZDC3dr0G9aN7XQauF-8pDHc8Pw4wpzw"></script>
+<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>
