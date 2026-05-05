@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/cache-drupal.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T15:02:08+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,26 +643,112 @@
 
 <div class="pb-image-caption">Drupal Cache Clear &amp; Cache Rebuild</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In order to render a page via Drupal, Drupal will need to make several database queries and get the data to render. This process of making queries can be reduced by storing the web pages in a cache, which is what Drupal does.</p><p>And developers during developments may use this cache clear or cache rebuild quite often, like after installing a new module or theme. The site would slow for a couple of clicks but would be quick once the caches are filled back.</p><p>Coming to the article's agenda, Why there is Cache Rebuild on Drupal 8, while we had Cache Clear in Drupal 7.</p><p><strong><sup><i class="fa fa-quote-left"></i></sup> Since Drupal is using caching very intensively and by this it creates lots of inter-dependencies. And for this clearing parts of the entire caches would lead to some major risks for a website. Here’s the Cache Rebuild will come and practically will rebuild (re-bootstraps) the whole Drupal site and will make sure that caches are perfectly cleared without any errors. <sup><i class="fa fa-quote-right"></i></sup></strong></p><p>Drupal 8's cache-rebuild is one more step in the conventional cache-clear practice, it adds a new "re-bootstrapping" operation to the "cache clearing" process.</p><p>And how do you rebuild your caches in Drupal 8?</p><ul class="check">                                <li>Via Drush</li>                                <li>Via Admin side</li>                                <li>Via /core/rebuild.php</li>                                <li>Via Truncating all "cache_*" tables</li>                            </ul>
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In order to render a page via Drupal, Drupal will need to make several database queries and get the data to render. This process of making queries can be reduced by storing the web pages in a cache, which is what Drupal does.</p><p>And developers during developments may use this cache clear or cache rebuild quite often, like after installing a new module or theme. The site would slow for a couple of clicks but would be quick once the caches are filled back.</p><p>Coming to the article's agenda, Why there is Cache Rebuild on Drupal 8, while we had Cache Clear in Drupal 7.</p><p><strong>Since Drupal is using caching very intensively and by this it creates lots of inter-dependencies. And for this clearing parts of the entire caches would lead to some major risks for a website. Here’s the Cache Rebuild will come and practically will rebuild (re-bootstraps) the whole Drupal site and will make sure that caches are perfectly cleared without any errors.</strong></p><p>Drupal 8's cache-rebuild is one more step in the conventional cache-clear practice, it adds a new "re-bootstrapping" operation to the "cache clearing" process.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3Rj1AjG" target="_blank" rel="noopener sponsored" data-product="Panasonic 1.5 Ton Smart WiFi Inverter Split AC – 3 Star, 8-in-1 Convertible">
+                                <img src="https://m.media-amazon.com/images/I/61Pca7f3SfL._SL1500_.jpg" alt="Panasonic 1.5 Ton Smart WiFi Inverter Split AC – 3 Star, 8-in-1 Convertible">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3Rj1AjG" target="_blank" rel="noopener sponsored" data-product="Panasonic 1.5 Ton Smart WiFi Inverter Split AC – 3 Star, 8-in-1 Convertible">Panasonic 1.5 Ton Smart WiFi Inverter Split AC – 3 Star, 8-in-1 Convertible</a>
+                            </div>
+                            <div class="discount-badge">Now 32% Off</div>
+                            <a href="https://amzn.to/3Rj1AjG" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Panasonic 1.5 Ton Smart WiFi Inverter Split AC – 3 Star, 8-in-1 Convertible">
+                                <span class="product-price">
+                                    <span class="actual-price">₹54000.00</span>
+                                    <span class="current-price">₹36990.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h3>1. Via Drush</h3>
+                
+            <p>And how do you rebuild your caches in Drupal 8?</p><ul class="check"><li data-list-item-id="e25c38cc7b0cf0ae72ea34eea6162c597">Via Drush</li><li data-list-item-id="e32a21439352bfaf70ddfcdc63dfcea06">Via Admin side</li><li data-list-item-id="e7254097c2e6e5d585ce639904f56fd46">Via /core/rebuild.php</li><li data-list-item-id="e0306f4cf41cf261d1914b34941cc7de9">Via Truncating all "cache_*" tables</li></ul><p><strong>1. Via Drush</strong></p><p>If you have drush installed you will have the following commands for cache rebuild</p><pre>drush cache-rebuilddrush rebuild or drush cr</pre><p><strong>2. Via Admin</strong></p><p>On the Drupal site, Navigate to <code>Administration &gt; Configuration &gt; Development &gt; Performance</code>. Click the button <code>Clear all Caches</code>.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3S434uz" target="_blank" rel="noopener sponsored" data-product="TopTorch Portable Can 225Gm Refillable Fuel Butane Gas Canister Suitable For Lighter Gas, Small Stove, Flame Torch, Welding Fuel, Soldering Gun, Food Baking, Burner Gas (Safety Release Device)">
+                                <img src="https://m.media-amazon.com/images/I/61aiQ2mTTQL._SX385_.jpg" alt="TopTorch Portable Can 225Gm Refillable Fuel Butane Gas Canister Suitable For Lighter Gas, Small Stove, Flame Torch, Welding Fuel, Soldering Gun, Food Baking, Burner Gas (Safety Release Device)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3S434uz" target="_blank" rel="noopener sponsored" data-product="TopTorch Portable Can 225Gm Refillable Fuel Butane Gas Canister Suitable For Lighter Gas, Small Stove, Flame Torch, Welding Fuel, Soldering Gun, Food Baking, Burner Gas (Safety Release Device)">TopTorch Portable Can 225Gm Refillable Fuel Butane Gas Canister Suitable For Lighter Gas, Small Stove, Flame Torch, Welding Fuel, Soldering Gun, Food Baking, Burner Gas (Safety Release Device)</a>
+                            </div>
+                            <div class="discount-badge">Now 31% Off</div>
+                            <a href="https://amzn.to/3S434uz" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TopTorch Portable Can 225Gm Refillable Fuel Butane Gas Canister Suitable For Lighter Gas, Small Stove, Flame Torch, Welding Fuel, Soldering Gun, Food Baking, Burner Gas (Safety Release Device)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹700</span>
+                                    <span class="current-price">₹481</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+                
+            <p><strong>3. Via </strong><code><strong>/core/rebuild.php</strong></code></p><p>Drupal 8 comes with a new <code>/core/rebuild.php</code>, which does the cache rebuild. This actually Rebuilds all Drupal caches even when Drupal itself does not work.</p><p>Add <code>$settings['rebuild_access'] = TRUE;</code> in your <code>settings.php</code> and visit <code>BASE_URL/rebuild.php</code></p><p>Run script in your command line <code>/core/admin/rebuild_token_calculator.sh</code>, then use the results there as query parameters for <code>/core/rebuild.php</code></p><p>Here's the source of <a href="https://www.drupal.org/node/2153725" target="_blank"><strong>Rebuild Script in Drupal (https://www.drupal.org/node/2153725)</strong></a></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4ejSb5a" target="_blank" rel="noopener sponsored" data-product="Arihant NCERT Exemplar Class 10 (Science &amp; Maths) – 2025–26 Edition (Set of 2)">
+                                <img src="https://m.media-amazon.com/images/I/61+HnbZRQLL._SL1500_.jpg" alt="Arihant NCERT Exemplar Class 10 (Science &amp; Maths) – 2025–26 Edition (Set of 2)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4ejSb5a" target="_blank" rel="noopener sponsored" data-product="Arihant NCERT Exemplar Class 10 (Science &amp; Maths) – 2025–26 Edition (Set of 2)">Arihant NCERT Exemplar Class 10 (Science &amp; Maths) – 2025–26 Edition (Set of 2)</a>
+                            </div>
+                            <div class="discount-badge">Now 35% Off</div>
+                            <a href="https://amzn.to/4ejSb5a" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Arihant NCERT Exemplar Class 10 (Science &amp; Maths) – 2025–26 Edition (Set of 2)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹500.00</span>
+                                    <span class="current-price">₹326.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <p>If you have drush installed you will have the following commands for cache rebuild</p><pre>drush cache-rebuilddrush rebuild or drush cr</pre><h3>2. Via Admin</h3>
-            
-            
-            <p>On the Drupal site, Navigate to <code>Administration &gt; Configuration &gt; Development &gt; Performance</code>. Click the button <code>Clear all Caches</code>.</p><h3>3. Via <code>/core/rebuild.php</code></h3>
-            
-            
-            <p>Drupal 8 comes with a new <code>/core/rebuild.php</code>, which does the cache rebuild. This actually Rebuilds all Drupal caches even when Drupal itself does not work.</p><p>Add <code>$settings['rebuild_access'] = TRUE;</code> in your <code>settings.php</code> and visit <code>BASE_URL/rebuild.php</code></p><p>Run script in your command line <code>/core/admin/rebuild_token_calculator.sh</code>, then use the results there as query parameters for <code>/core/rebuild.php</code></p><p>Here's the source of <a target="_blank" href="https://www.drupal.org/node/2153725"><strong>Rebuild Script in Drupal (https://www.drupal.org/node/2153725)</strong></a></p><h3>4. Via Truncating all "cache_*" tables</h3>
-        
-            
-        
-            
-            
-            <p>Another approach is to empty all the data from the cache table from Drupal.</p><pre>TRUNCATE cache_config</pre><p>Similarly for all the cache_* tables.</p><p>To summarise, <strong>Drupal 8's cache-rebuild</strong> is one more step in the conventional cache-clear practice, it adds a new <strong>re-bootstrapping</strong> operation to the <strong>cache clearing</strong> process.</p>
-</div>
+                
+            <p><strong>4. Via Truncating all "cache_*" tables</strong></p><p>Another approach is to empty all the data from the cache table from Drupal.</p><pre>TRUNCATE cache_config</pre><p>Similarly for all the cache_* tables.</p><p>To summarise, <strong>Drupal 8's cache-rebuild</strong> is one more step in the conventional cache-clear practice, it adds a new <strong>re-bootstrapping</strong> operation to the <strong>cache clearing</strong> process.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -685,7 +771,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-bad018cd3f4e1903c3616e7714153122fd374cf8fc9498400ab65ca9e4ea5d8e">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-59998efee7a0f34b40031b1bb1495f8f4bbfa58d5b3e880895ea61ee220e52c9">
   
     
       
@@ -719,7 +805,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -737,7 +823,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-c100a8fce297df2f2f82de52713b0adc66c6584b67d354db7fc50bd3f91e5607">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5b808d5753bbf3b8ac057755938cb2f1d5c2108ea5b260c56218dd379a3dc95c">
   
     
       
@@ -916,7 +1002,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -928,7 +1014,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

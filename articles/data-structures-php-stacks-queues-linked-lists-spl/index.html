@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/data-structures-in-php-implementing-stacks-queues-linked-lists-and-spl-classes.webp"
             },
             "datePublished": "2025-11-23T10:26:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Data Structures in PHP: Stacks, Queues, Linked Lists &amp; SPL</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Data structures are an integral part of programming, offering <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong> will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high performance and easy integration into your projects.</p><p>In this article, we'll explore how to implement basic data structures in PHP 8 and how to leverage PHP’s SPL classes for enhanced functionality.</p><h2>1. Introduction to Data Structures in PHP</h2><ul> <li>Data structures are ways of organizing and storing data so that they can be accessed and modified efficiently.</li> <li>By understanding the strengths and weaknesses of various data structures, developers can optimize their code for performance and readability.</li> </ul><p>In PHP 8, developers can choose between building their own data structures or using the built-in SPL classes.</p><p>Let's start with manual implementations for three common data structures: <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong>.</p><h2>2. <a href="/articles/implementing-notification-system-using-observer-pattern-php" title="Read about Implementing A Notification System Using The Observer Pattern In Php">Implementing</a> Stacks in PHP</h2><p>A <strong>stack</strong> is a simple data structure that follows the <strong>Last In, First Out (LIFO)</strong> principle. The last element pushed onto the stack is the first to be popped out.</p><p><strong>Stack Operations:</strong></p><ul> <li><tt>push()</tt>: Add an element to the top of the stack.</li> <li><tt>pop()</tt>: Remove and return the top element.</li> <li><tt>peek()</tt>: View the top element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the stack is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Stack {</code></p><p><code>    private $stack = [];</code></p><p><code>    public function push($item) {</code></p><p><code>        array_push($this→stack, $item);</code></p><p><code>    }</code></p><p><code>    public function pop() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_pop($this→stack);</code></p><p><code>        }</code></p><p><code>        return null; // Stack is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return end($this→stack);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→stack);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$stack = new Stack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→peek(); // 1</code></p><p><strong>SPL Stack Implementation:</strong></p><p>PHP offers a built-in stack class <tt>SplStack</tt> in the SPL library:</p><p><code>$stack = new SplStack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→top(); // 1</code></p><h2>3. Implementing Queues in PHP</h2><p>A <strong>queue</strong> is a data structure that follows the <strong>First In, First Out (FIFO)</strong> principle. The first element added to the queue will be the first to be removed.</p><p><strong>Queue Operations:</strong></p><ul> <li><tt>enqueue()</tt>: Add an element to the back of the queue.</li> <li><tt>dequeue()</tt>: Remove and return the front element.</li> <li><tt>peek()</tt>: View the front element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the queue is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Queue {</code></p><p><code>    private $queue = [];</code></p><p><code>    public function enqueue($item) {</code></p><p><code>        array_push($this→queue, $item);</code></p><p><code>    }</code></p><p><code>    public function dequeue() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_shift($this→queue);</code></p><p><code>        }</code></p><p><code>        return null; // Queue is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return reset($this→queue);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→queue);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$queue = new Queue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p><p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→peek(); // 2</code></p><p><strong>SPL Queue Implementation:</strong></p><p>PHP’s <tt>SplQueue</tt> class implements a queue with optimized methods:</p><p><code>$queue = new SplQueue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Data structures are an integral part of programming, offering <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> ways to store and organize data. As PHP evolves, understanding how to implement and utilize common data structures like <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong> will make you a more proficient PHP developer. PHP 8 provides a range of options, from manual implementations to built-in SPL (Standard PHP Library) classes that offer high performance and easy integration into your projects.</p><p>In this article, we'll explore how to implement basic data structures in PHP 8 and how to leverage PHP’s SPL classes for enhanced functionality.</p><h2>1. Introduction to Data Structures in PHP</h2><ul> <li>Data structures are ways of organizing and storing data so that they can be accessed and modified efficiently.</li> <li>By understanding the strengths and weaknesses of various data structures, developers can optimize their code for performance and readability.</li> </ul><p>In PHP 8, developers can choose between building their own data structures or using the built-in SPL classes.</p><p>Let's start with manual implementations for three common data structures: <strong>Stacks</strong>, <strong>Queues</strong>, and <strong>Linked Lists</strong>.</p><h2>2. <a href="/articles/implementing-notification-system-using-observer-pattern-php" title="Read about Implementing A Notification System Using The Observer Pattern In Php">Implementing</a> Stacks in PHP</h2><p>A <strong>stack</strong> is a simple data structure that follows the <strong>Last In, First Out (LIFO)</strong> principle. The last element pushed onto the stack is the first to be popped out.</p><p><strong>Stack Operations:</strong></p><ul> <li><tt>push()</tt>: Add an element to the top of the stack.</li> <li><tt>pop()</tt>: Remove and return the top element.</li> <li><tt>peek()</tt>: View the top element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the stack is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Stack {</code></p><p><code>    private $stack = [];</code></p><p><code>    public function push($item) {</code></p><p><code>        array_push($this→stack, $item);</code></p><p><code>    }</code></p><p><code>    public function pop() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_pop($this→stack);</code></p><p><code>        }</code></p><p><code>        return null; // Stack is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return end($this→stack);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→stack);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$stack = new Stack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→peek(); // 1</code></p><p><strong>SPL Stack Implementation:</strong></p><p>PHP offers a built-in stack class <tt>SplStack</tt> in the SPL library:</p><p><code>$stack = new SplStack();</code></p><p><code>$stack→push(1);</code></p><p><code>$stack→push(2);</code></p><p><code>echo $stack→pop(); // 2</code></p><p><code>echo $stack→top(); // 1</code></p><h2>3. Implementing Queues in PHP</h2><p>A <strong>queue</strong> is a data structure that follows the <strong>First In, First Out (FIFO)</strong> principle. The first element added to the queue will be the first to be removed.</p><p><strong>Queue Operations:</strong></p><ul> <li><tt>enqueue()</tt>: Add an element to the back of the queue.</li> <li><tt>dequeue()</tt>: Remove and return the front element.</li> <li><tt>peek()</tt>: View the front element without removing it.</li> <li><tt>isEmpty()</tt>: Check if the queue is empty.</li> </ul><p><strong>Manual Implementation:</strong></p><p><code>class Queue {</code></p><p><code>    private $queue = [];</code></p><p><code>    public function enqueue($item) {</code></p><p><code>        array_push($this→queue, $item);</code></p><p><code>    }</code></p><p><code>    public function dequeue() {</code></p><p><code>        if (!$this→isEmpty()) {</code></p><p><code>            return array_shift($this→queue);</code></p><p><code>        }</code></p><p><code>        return null; // Queue is empty</code></p><p><code>    }</code></p><p><code>    public function peek() {</code></p><p><code>        return reset($this→queue);</code></p><p><code>    }</code></p><p><code>    public function isEmpty() {</code></p><p><code>        return empty($this→queue);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>$queue = new Queue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p><p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→peek(); // 2</code></p><p><strong>SPL Queue Implementation:</strong></p><p>PHP’s <tt>SplQueue</tt> class implements a queue with optimized methods:</p><p><code>$queue = new SplQueue();</code></p><p><code>$queue→enqueue(1);</code></p><p><code>$queue→enqueue(2);</code></p>
 <p><code>echo $queue→dequeue(); // 1</code></p><p><code>echo $queue→bottom(); // 2</code></p>
         
             
@@ -738,24 +738,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3EHJ669" target="_blank" rel="noopener sponsored" data-product="OnePlus Buds 3 in Ear TWS Bluetooth Earbuds with Upto 49dB Smart Adaptive Noise Cancellation,Hi-Res Sound Quality,Sliding Volume Control,10mins for 7Hours Fast Charging with Upto 44Hrs Playback(Gray)">
-                                <img src="https://m.media-amazon.com/images/I/51h7CQTRJ1L._SX679_.jpg" alt="OnePlus Buds 3 in Ear TWS Bluetooth Earbuds with Upto 49dB Smart Adaptive Noise Cancellation,Hi-Res Sound Quality,Sliding Volume Control,10mins for 7Hours Fast Charging with Upto 44Hrs Playback(Gray)">
+                            <a href="https://amzn.to/3SddOrB" target="_blank" rel="noopener sponsored" data-product="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging">
+                                <img src="https://m.media-amazon.com/images/I/81BGKLI+cWL._SX679_.jpg" alt="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3EHJ669" target="_blank" rel="noopener sponsored" data-product="OnePlus Buds 3 in Ear TWS Bluetooth Earbuds with Upto 49dB Smart Adaptive Noise Cancellation,Hi-Res Sound Quality,Sliding Volume Control,10mins for 7Hours Fast Charging with Upto 44Hrs Playback(Gray)">OnePlus Buds 3 in Ear TWS Bluetooth Earbuds with Upto 49dB Smart Adaptive Noise Cancellation,Hi-Res Sound Quality,Sliding Volume Control,10mins for 7Hours Fast Charging with Upto 44Hrs Playback(Gray)</a>
+                                <a href="https://amzn.to/3SddOrB" target="_blank" rel="noopener sponsored" data-product="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging">Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging</a>
                             </div>
                             <div class="discount-badge">Now 23% Off</div>
-                            <a href="https://amzn.to/3EHJ669" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OnePlus Buds 3 in Ear TWS Bluetooth Earbuds with Upto 49dB Smart Adaptive Noise Cancellation,Hi-Res Sound Quality,Sliding Volume Control,10mins for 7Hours Fast Charging with Upto 44Hrs Playback(Gray)">
+                            <a href="https://amzn.to/3SddOrB" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 | Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging">
                                 <span class="product-price">
-                                    <span class="actual-price">₹6499</span>
-                                    <span class="current-price">₹4999</span>
+                                    <span class="actual-price">₹10999</span>
+                                    <span class="current-price">₹8498</span>
                                 </span>
 
                                 <span class="product-store">
@@ -795,7 +801,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7a599b32f2e7afc2f22bff9ff4105242aa2342cf6c4922ccb7013793af0b7dd4">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5b41af80e620d49454f883eeede97e8e9e34069510f6b471ef93637749b66ac4">
   
     
       
@@ -829,7 +835,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -847,7 +853,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-eb17c1e2852d117526a782c52df6d30bd747f8e1897a24faa290acf875ded839">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-3ea2856bfbc7c31ac9d21d225afa96e84c8af9c8a9c1cd4910902647091e5d85">
   
     
       
@@ -1026,7 +1032,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1038,7 +1044,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

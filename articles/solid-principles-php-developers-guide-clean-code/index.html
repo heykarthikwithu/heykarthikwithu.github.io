@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/understanding-the-solid-principles-in-php.webp"
             },
             "datePublished": "2025-11-23T10:23:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">SOLID Principles in PHP: A Developer’s Guide to Clean Code</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>The SOLID <a href="/articles/solid-principles-php-developers-guide-clean-code" title="Read about Understanding The Solid Principles In Php">principles</a> are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.</p><p>Let's dive into each principle, exploring its meaning and how it can be applied effectively in PHP.</p><h2>1. Single Responsibility Principle (SRP)</h2><p>A class should have only one reason to change, meaning it should have only one job or responsibility.</p><ul> <li>When a class has multiple responsibilities, it becomes harder to maintain and <a href="/articles/how-understand-love-and-hate-after-cheating" title="Read about How To Understand Love And Hate After Cheating">understand</a>.</li> <li>Changes related to one responsibility can impact others, leading to increased complexity and potential bugs.</li> <li>Single Responsibility Principal (SRP) encourages a clear separation of concerns, resulting in more manageable and focused classes.</li> </ul><p><strong>Example in PHP:</strong></p><p>Consider a class that handles both user authentication and user data storage.</p><p>Code Violating SRP.</p><p><code>class User {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>    public function save() {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>class UserAuthenticator {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class UserRepository {</code></p><p><code>    public function save(User $user) {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><h2>2. Open/Closed Principle (OCP)</h2><p>Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.</p><ul> <li>This principle states that you should be able to add new functionality to a class without changing its existing code.</li> <li>This promotes code stability and allows for easier enhancements, reducing the risk of introducing new bugs when features are added.</li> <li>Open/Closed Principle (OCP) is typically achieved through the use of interfaces and abstract classes.</li> </ul><p><strong>Example in PHP</strong>: Imagine a Shape class that calculates area. If you need to add new shapes, you shouldn't modify the existing class.</p><p><code>abstract class Shape {</code></p><p><code>    abstract public function area(): float;</code></p><p><code>}</code></p><p><code>class Circle extends Shape {</code></p><p><code>    public function __construct(private float $radius) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return pi() * ($this→radius ** 2);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Square extends Shape {</code></p><p><code>    public function __construct(private float $side) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return $this→side ** 2;</code></p><p><code>    }</code></p><p><code>}</code></p><h2>3. Liskov Substitution Principle (LSP)</h2><p>Subtypes must be substitutable for their base types without altering the correctness of the program.</p><ul> <li>This principle ensures that a derived class can replace its base class without causing issues in the program.</li> <li>If a subclass modifies expected behavior in an undesirable way, it violates LSP.</li> <li>Adhering to this principle promotes consistent behavior across different class hierarchies and helps maintain program integrity.</li> </ul><p><strong>Example in PHP</strong>: Consider a Bird class. If a Penguin class is derived from Bird, it should not implement a method that allows it to fly, as penguins cannot fly.</p><p>Code Violating LSP.</p><p><code>class Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Sparrow extends Bird {}</code></p><p><code>class Penguin extends Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        throw new Exception("Penguins can't fly!");</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface Flyable {</code></p><p><code>    public function fly();</code></p><p><code>}</code></p><p><code>class Sparrow implements Flyable {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Penguin {</code></p><p><code>    // no fly method</code></p><p><code>}</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>The SOLID <a href="/articles/solid-principles-php-developers-guide-clean-code" title="Read about Understanding The Solid Principles In Php">principles</a> are a set of five fundamental design principles in object-oriented programming aimed at improving software design, making it more understandable, flexible and maintainable. These principles are especially relevant for developers working with PHP and similar languages.</p><p>Let's dive into each principle, exploring its meaning and how it can be applied effectively in PHP.</p><h2>1. Single Responsibility Principle (SRP)</h2><p>A class should have only one reason to change, meaning it should have only one job or responsibility.</p><ul> <li>When a class has multiple responsibilities, it becomes harder to maintain and <a href="/articles/how-understand-love-and-hate-after-cheating" title="Read about How To Understand Love And Hate After Cheating">understand</a>.</li> <li>Changes related to one responsibility can impact others, leading to increased complexity and potential bugs.</li> <li>Single Responsibility Principal (SRP) encourages a clear separation of concerns, resulting in more manageable and focused classes.</li> </ul><p><strong>Example in PHP:</strong></p><p>Consider a class that handles both user authentication and user data storage.</p><p>Code Violating SRP.</p><p><code>class User {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>    public function save() {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>class UserAuthenticator {</code></p><p><code>    public function authenticate() {</code></p><p><code>        // authentication logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class UserRepository {</code></p><p><code>    public function save(User $user) {</code></p><p><code>        // save user data</code></p><p><code>    }</code></p><p><code>}</code></p><h2>2. Open/Closed Principle (OCP)</h2><p>Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.</p><ul> <li>This principle states that you should be able to add new functionality to a class without changing its existing code.</li> <li>This promotes code stability and allows for easier enhancements, reducing the risk of introducing new bugs when features are added.</li> <li>Open/Closed Principle (OCP) is typically achieved through the use of interfaces and abstract classes.</li> </ul><p><strong>Example in PHP</strong>: Imagine a Shape class that calculates area. If you need to add new shapes, you shouldn't modify the existing class.</p><p><code>abstract class Shape {</code></p><p><code>    abstract public function area(): float;</code></p><p><code>}</code></p><p><code>class Circle extends Shape {</code></p><p><code>    public function __construct(private float $radius) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return pi() * ($this→radius ** 2);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Square extends Shape {</code></p><p><code>    public function __construct(private float $side) {}</code></p><p><code>    public function area(): float {</code></p><p><code>        return $this→side ** 2;</code></p><p><code>    }</code></p><p><code>}</code></p><h2>3. Liskov Substitution Principle (LSP)</h2><p>Subtypes must be substitutable for their base types without altering the correctness of the program.</p><ul> <li>This principle ensures that a derived class can replace its base class without causing issues in the program.</li> <li>If a subclass modifies expected behavior in an undesirable way, it violates LSP.</li> <li>Adhering to this principle promotes consistent behavior across different class hierarchies and helps maintain program integrity.</li> </ul><p><strong>Example in PHP</strong>: Consider a Bird class. If a Penguin class is derived from Bird, it should not implement a method that allows it to fly, as penguins cannot fly.</p><p>Code Violating LSP.</p><p><code>class Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Sparrow extends Bird {}</code></p><p><code>class Penguin extends Bird {</code></p><p><code>    public function fly() {</code></p><p><code>        throw new Exception("Penguins can't fly!");</code></p><p><code>    }</code></p><p><code>}</code></p><p>Refactored Code:</p><p><code>interface Flyable {</code></p><p><code>    public function fly();</code></p><p><code>}</code></p><p><code>class Sparrow implements Flyable {</code></p><p><code>    public function fly() {</code></p><p><code>        // flying logic</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>class Penguin {</code></p><p><code>    // no fly method</code></p><p><code>}</code></p>
         
             
         <h2>4. Interface Segregation Principle (ISP)</h2>
@@ -737,24 +737,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3A84xLU" target="_blank" rel="noopener sponsored" data-product="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)">
-                                <img src="https://m.media-amazon.com/images/I/511ZzuWFVYL._SX679_.jpg" alt="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)">
+                            <a href="https://amzn.to/4mOgZmr" target="_blank" rel="noopener sponsored" data-product="Lymio Jackets || Jacket for men || Lightweight Outwear Jacket (J-04-06)">
+                                <img src="https://m.media-amazon.com/images/I/619xMvtqClL._SY879_.jpg" alt="Lymio Jackets || Jacket for men || Lightweight Outwear Jacket (J-04-06)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3A84xLU" target="_blank" rel="noopener sponsored" data-product="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)">Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)</a>
+                                <a href="https://amzn.to/4mOgZmr" target="_blank" rel="noopener sponsored" data-product="Lymio Jackets || Jacket for men || Lightweight Outwear Jacket (J-04-06)">Lymio Jackets || Jacket for men || Lightweight Outwear Jacket (J-04-06)</a>
                             </div>
-                            <div class="discount-badge">Now 41% Off</div>
-                            <a href="https://amzn.to/3A84xLU" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Hitachi 1.5 Ton Class 3 Star, ice Clean, Xpandable+, Inverter Split AC (100% Copper, Dust Filter, 2024 Model - 3400FXL RAS.G318PCBIBF, White)">
+                            <div class="discount-badge">Now 71% Off</div>
+                            <a href="https://amzn.to/4mOgZmr" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lymio Jackets || Jacket for men || Lightweight Outwear Jacket (J-04-06)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹63100</span>
-                                    <span class="current-price">₹37490</span>
+                                    <span class="actual-price">₹1999</span>
+                                    <span class="current-price">₹579</span>
                                 </span>
 
                                 <span class="product-store">
@@ -794,7 +800,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f5667fdc9838adf44e1b2042b6f68c7eaff1178acd17090a62671afa4a2cafc5">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-90539ca4cbdf68bcba3a738778443aeb95b10e9e019492247afee6b196920a42">
   
     
       
@@ -828,7 +834,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -846,7 +852,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-a374e02f5312ea37829ec7d53a446b90108108e0e648b40628c276e684681420">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f002664a3157040e2645364783dbd0de1cbb256c60b9b3b5552a254af7ee4cfa">
   
     
       
@@ -1025,7 +1031,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1037,7 +1043,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

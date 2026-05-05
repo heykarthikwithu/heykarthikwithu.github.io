@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/optimizing-a-product-catalog-microservice-with-profiling-tools-in-php-using-ddev-and-visual-studio-code.webp"
             },
             "datePublished": "2024-11-17T08:12:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Optimizing a Product Catalog Microservice with Profiling Tools in PHP Using DDEV and Visual Studio Code</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In this article, we will enhance the product catalog microservice we built earlier by integrating Xdebug for profiling, specifically tailored for development in Visual Studio Code (VS Code). We will include detailed setup instructions, ensuring a smooth experience while profiling your <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a>.</p><h2>Overview</h2><p><strong>Key Components</strong></p><ol> <li><strong>PHP 8</strong>: The programming <a href="/articles/international-mother-language-day" title="Read about International Mother Language Day">language</a> for our microservice.</li> <li><strong>MySQL</strong>: The database for storing product data.</li> <li><strong>Redis</strong>: The caching layer for frequently accessed product data.</li> <li><strong>Xdebug</strong>: A profiling tool for identifying performance bottlenecks.</li> </ol><h2>Step 1: Setting Up Your <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">Environment</a> with DDEV</h2><p><strong>1. Install DDEV</strong></p><p>Ensure DDEV is installed on your machine. Follow the installation instructions&nbsp;<a href="https://ddev.readthedocs.io/en/stable/#installation" target="_blank"><u>here</u></a>.</p><p><strong>2. Create a New DDEV Project</strong></p><p>Open your terminal and create a new project directory:</p><p><code>mkdir product-catalog-microservice</code></p><p><code>cd product-catalog-microservice</code></p><p>Initialize DDEV:</p><p><code>ddev config</code></p><p>Choose "php" as the project type and select PHP 8.</p><p>Start the DDEV environment:</p><p><code>ddev start</code></p><p><strong>3. Install Composer Dependencies</strong></p><p>Inside the DDEV environment, run:</p><p><code>ddev composer require predis/predis</code></p><p>If you see isssue with predis/predis, setup redis with docker compose, refer to this article for more details.</p><h2>Step 2: Setting Up the MySQL Database</h2><p><strong>Create the Database</strong></p><p>DDEV automatically sets up a MySQL database for you. Access the MySQL shell with:</p><p><code>ddev mysql</code></p><p>Run the following commands to create the products table:</p><p><code>CREATE TABLE products (</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;name VARCHAR(255) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;description TEXT,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;price DECIMAL(10, 2) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</code></p><p><code>);</code></p><p><strong>Insert Sample Data</strong></p><p>Insert some sample products:</p><p><code>INSERT INTO products (name, description, price) VALUES</code></p><p><code>('Product A', 'Description for Product A', 10.00),</code></p><p><code>('Product B', 'Description for Product B', 20.00),</code></p><p><code>('Product C', 'Description for Product C', 30.00);</code></p><h2>Step 3: Implementing the Microservice</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In this article, we will enhance the product catalog microservice we built earlier by integrating Xdebug for profiling, specifically tailored for development in Visual Studio Code (VS Code). We will include detailed setup instructions, ensuring a smooth experience while profiling your <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a>.</p><h2>Overview</h2><p><strong>Key Components</strong></p><ol> <li><strong>PHP 8</strong>: The programming <a href="/articles/international-mother-language-day" title="Read about International Mother Language Day">language</a> for our microservice.</li> <li><strong>MySQL</strong>: The database for storing product data.</li> <li><strong>Redis</strong>: The caching layer for frequently accessed product data.</li> <li><strong>Xdebug</strong>: A profiling tool for identifying performance bottlenecks.</li> </ol><h2>Step 1: Setting Up Your <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">Environment</a> with DDEV</h2><p><strong>1. Install DDEV</strong></p><p>Ensure DDEV is installed on your machine. Follow the installation instructions&nbsp;<a href="https://ddev.readthedocs.io/en/stable/#installation" target="_blank"><u>here</u></a>.</p><p><strong>2. Create a New DDEV Project</strong></p><p>Open your terminal and create a new project directory:</p><p><code>mkdir product-catalog-microservice</code></p><p><code>cd product-catalog-microservice</code></p><p>Initialize DDEV:</p><p><code>ddev config</code></p><p>Choose "php" as the project type and select PHP 8.</p><p>Start the DDEV environment:</p><p><code>ddev start</code></p><p><strong>3. Install Composer Dependencies</strong></p><p>Inside the DDEV environment, run:</p><p><code>ddev composer require predis/predis</code></p><p>If you see isssue with predis/predis, setup redis with docker compose, refer to this article for more details.</p><h2>Step 2: Setting Up the MySQL Database</h2><p><strong>Create the Database</strong></p><p>DDEV automatically sets up a MySQL database for you. Access the MySQL shell with:</p><p><code>ddev mysql</code></p><p>Run the following commands to create the products table:</p><p><code>CREATE TABLE products (</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;name VARCHAR(255) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;description TEXT,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;price DECIMAL(10, 2) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</code></p><p><code>);</code></p><p><strong>Insert Sample Data</strong></p><p>Insert some sample products:</p><p><code>INSERT INTO products (name, description, price) VALUES</code></p><p><code>('Product A', 'Description for Product A', 10.00),</code></p><p><code>('Product B', 'Description for Product B', 20.00),</code></p><p><code>('Product C', 'Description for Product C', 30.00);</code></p><h2>Step 3: Implementing the Microservice</h2>
         
             
         
@@ -738,24 +738,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3WOZpo2" target="_blank" rel="noopener sponsored" data-product="Lavie Women's Beech Satchel Bag | Ladies Purse Handbag">
-                                <img src="https://m.media-amazon.com/images/I/61-wXlQa5kL._SY695_.jpg" alt="Lavie Women's Beech Satchel Bag | Ladies Purse Handbag">
+                            <a href="https://amzn.to/4dFncwk" target="_blank" rel="noopener sponsored" data-product="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">
+                                <img src="https://m.media-amazon.com/images/I/81fzp1uOldL._SX679_.jpg" alt="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3WOZpo2" target="_blank" rel="noopener sponsored" data-product="Lavie Women's Beech Satchel Bag | Ladies Purse Handbag">Lavie Women's Beech Satchel Bag | Ladies Purse Handbag</a>
+                                <a href="https://amzn.to/4dFncwk" target="_blank" rel="noopener sponsored" data-product="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)</a>
                             </div>
-                            <div class="discount-badge">Now 71% Off</div>
-                            <a href="https://amzn.to/3WOZpo2" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lavie Women's Beech Satchel Bag | Ladies Purse Handbag">
+                            <div class="discount-badge">Now 66% Off</div>
+                            <a href="https://amzn.to/4dFncwk" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹4499</span>
-                                    <span class="current-price">₹1299</span>
+                                    <span class="actual-price">₹880</span>
+                                    <span class="current-price">₹299</span>
                                 </span>
 
                                 <span class="product-store">
@@ -867,24 +873,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3wL1XcS" target="_blank" rel="noopener sponsored" data-product="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)">
-                                <img src="https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg" alt="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)">
+                            <a href="https://amzn.to/4m4o2ax" target="_blank" rel="noopener sponsored" data-product="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">
+                                <img src="https://m.media-amazon.com/images/I/51G4MHEo0PL._SX679_.jpg" alt="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3wL1XcS" target="_blank" rel="noopener sponsored" data-product="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)">OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)</a>
+                                <a href="https://amzn.to/4m4o2ax" target="_blank" rel="noopener sponsored" data-product="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set</a>
                             </div>
-                            <div class="discount-badge">Now 17% Off</div>
-                            <a href="https://amzn.to/3wL1XcS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)">
+                            <div class="discount-badge">Now 7% Off</div>
+                            <a href="https://amzn.to/4m4o2ax" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">
                                 <span class="product-price">
-                                    <span class="actual-price">₹19999</span>
-                                    <span class="current-price">₹16680</span>
+                                    <span class="actual-price">₹424</span>
+                                    <span class="current-price">₹394</span>
                                 </span>
 
                                 <span class="product-store">
@@ -933,7 +945,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-45e4cca8a110b84feb7105f9d0d08b0751d6cf8731ecab58335b2a8d1ad37e72">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7cca272b80fa56176c7adad70c7ae1902abf47e957a3f8bfb8e640241be5adf6">
   
     
       
@@ -967,7 +979,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -985,7 +997,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-04413bd22af600b2cfb9513838de5174e40b721fa249fa9792f9de3faa24e997">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f9b06082851719796317566d6b2ccda79fcf76015fa47825df3d4028c25e3c64">
   
     
       
@@ -1164,7 +1176,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1176,7 +1188,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

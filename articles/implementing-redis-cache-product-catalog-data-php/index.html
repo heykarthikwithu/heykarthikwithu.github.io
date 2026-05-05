@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-a-redis-cache-for-product-catalog-data-in-php.webp"
             },
             "datePublished": "2024-11-08T09:32:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Implementing a Redis Cache for Product Catalog Data in PHP</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
         
             
         <h2><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> the Redis Cache for Product Catalog Data</h2>
@@ -738,24 +738,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4alh1xG" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy Buds3 FE (Black) with Galaxy AI | ANC | 360-Audio | IP54 | 11mm Dynamic Driver">
-                                <img src="https://m.media-amazon.com/images/I/619sy14HnYL._SX679_.jpg" alt="Samsung Galaxy Buds3 FE (Black) with Galaxy AI | ANC | 360-Audio | IP54 | 11mm Dynamic Driver">
+                            <a href="https://amzn.to/3YcBzDS" target="_blank" rel="noopener sponsored" data-product="Maison &amp; Cuisine® Collapsible Wardrobe Portable Foldable Closet for Clothes Almira, 2 Hanging Space, 8 Shelves, (Non-Woven Fabric 90GSM, Metal Rod 112x38x145cm)(88230, Brown)">
+                                <img src="https://m.media-amazon.com/images/I/81EU4Fix6rL._SX679_.jpg" alt="Maison &amp; Cuisine® Collapsible Wardrobe Portable Foldable Closet for Clothes Almira, 2 Hanging Space, 8 Shelves, (Non-Woven Fabric 90GSM, Metal Rod 112x38x145cm)(88230, Brown)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4alh1xG" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy Buds3 FE (Black) with Galaxy AI | ANC | 360-Audio | IP54 | 11mm Dynamic Driver">Samsung Galaxy Buds3 FE (Black) with Galaxy AI | ANC | 360-Audio | IP54 | 11mm Dynamic Driver</a>
+                                <a href="https://amzn.to/3YcBzDS" target="_blank" rel="noopener sponsored" data-product="Maison &amp; Cuisine® Collapsible Wardrobe Portable Foldable Closet for Clothes Almira, 2 Hanging Space, 8 Shelves, (Non-Woven Fabric 90GSM, Metal Rod 112x38x145cm)(88230, Brown)">Maison &amp; Cuisine® Collapsible Wardrobe Portable Foldable Closet for Clothes Almira, 2 Hanging Space, 8 Shelves, (Non-Woven Fabric 90GSM, Metal Rod 112x38x145cm)(88230, Brown)</a>
                             </div>
-                            <div class="discount-badge">Now 13% Off</div>
-                            <a href="https://amzn.to/4alh1xG" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy Buds3 FE (Black) with Galaxy AI | ANC | 360-Audio | IP54 | 11mm Dynamic Driver">
+                            <div class="discount-badge">Now 56% Off</div>
+                            <a href="https://amzn.to/3YcBzDS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Maison &amp; Cuisine® Collapsible Wardrobe Portable Foldable Closet for Clothes Almira, 2 Hanging Space, 8 Shelves, (Non-Woven Fabric 90GSM, Metal Rod 112x38x145cm)(88230, Brown)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹14999</span>
-                                    <span class="current-price">₹12999</span>
+                                    <span class="actual-price">₹2499</span>
+                                    <span class="current-price">₹1099</span>
                                 </span>
 
                                 <span class="product-store">
@@ -792,7 +798,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ce88c8ff19861876e6c4c84bc703470e787131002ab2609fcdb8c63f1d893eb6">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-940a38f5e4019261a74f5704d4606e0346f808b30d97c8b9987a5cf8e7d0a5db">
   
     
       
@@ -826,7 +832,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -844,7 +850,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8e2fbe1de337da3686eb0f752c34bf532f1b34ed0c7e636334ca4b16e0abf7fe">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-eec35f5c1828552970f71869a3dcd559baeca7252eca17622b14c1a7ebf34a71">
   
     
       
@@ -1023,7 +1029,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1035,7 +1041,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

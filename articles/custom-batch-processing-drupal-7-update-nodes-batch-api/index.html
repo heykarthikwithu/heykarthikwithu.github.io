@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/D7install5_0.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,25 +643,25 @@
 
 <div class="pb-image-caption">Custom Batch processing in Drupal 7 to update Nodes - Batch API</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Drupal's batch API processing is very nice and provides few benifits, We can break long tasks into smaller batches and by this we will be able to prevent maximum execution time errors.</p><p>This article will show how to Build a batch routine in a custom module, its more straight forward approach, you can follow up below code, which is been explained with required comments.</p><p>Create your custom module, which contains <code>custom.info</code> and <code>custom.module</code> files</p><p>The below code put in your <code>custom.module</code> file</p><pre>function custom_menu() {<br>&nbsp;$items['admin/custom_batch'] = array(<br>&nbsp; &nbsp;'title' =&gt; 'Custom Batch',<br>&nbsp; &nbsp;'description' =&gt; 'Custom Batch Process',<br>&nbsp; &nbsp;'type' =&gt; MENU_NORMAL_ITEM,<br>&nbsp; &nbsp;'access callback' =&gt; TRUE,<br>&nbsp; &nbsp;'page callback' =&gt; 'drupal_get_form',<br>&nbsp; &nbsp;'page arguments' =&gt; array('custom_batch_form'),<br>&nbsp;);<br>&nbsp;return $items;<br>}</pre><pre>function custom_batch_form($form, $form_state) {<br>&nbsp;$form["text"]['#markup'] = "Custom batch process to update nodes.... ";<br>&nbsp;$form['submit'] = array(<br>&nbsp; &nbsp;'#type' =&gt; 'submit',<br>&nbsp; &nbsp;'#value' =&gt; t('Run Batch'),<br>&nbsp;);<br>&nbsp;return $form;<br>}</pre><pre>function custom_batch_form_submit($form, $form_state) {<br>&nbsp;batch_set(custom_batch_update_nodes());<br>}</pre><pre>function custom_batch_update_nodes() {<br>&nbsp;drupal_set_message('Updating Nodes');<br>&nbsp;$nodes = node_load_multiple(array(), array('type' =&gt; "story_song"));<br>&nbsp;$node_count = count($nodes);<br>&nbsp;foreach($nodes as $nid=&gt;$node) {<br>&nbsp; &nbsp;$operations[] = array('custom_batch_each_operation', array($node));<br>&nbsp;}<br>&nbsp;$batch = array(<br>&nbsp; &nbsp;'operations' =&gt; $operations,<br>&nbsp; &nbsp;'finished' =&gt; 'custom_batch_update_nodes_finished',<br>&nbsp;);<br>&nbsp;return $batch;<br>}</pre><pre>function custom_batch_each_operation($node, &amp;$context) {<br>&nbsp;$context['results'][] = $node→nid . ' : ' . check_plain($node→title);<br>&nbsp;$context['message'] = t('Processing node "@title"', array('@title' =&gt; $node→title));<br>&nbsp;$updated = FALSE;<br>&nbsp;if ($updated) {<br>&nbsp; &nbsp;node_save($node);<br>&nbsp; &nbsp;$path = drupal_lookup_path("alias", "node/" . $node→nid);<br>&nbsp; &nbsp;drupal_set_message("&lt;a href='/$path'&gt;" . $node→title . "&lt;/a&gt; updated.");<br>&nbsp;}<br>}</pre><pre>function custom_batch_update_nodes_finished($success, $results, $operations) {<br>&nbsp;if ($success) {<br>&nbsp; &nbsp;drupal_set_message(t('@count nodes processed.', array('@count' =&gt; count($results))));<br>&nbsp;}<br>&nbsp;else {<br>&nbsp; &nbsp;$error_operation = reset($operations);<br>&nbsp; &nbsp;drupal_set_message(t('An error occurred while processing @operation with arguments : @args', array('@operation' =&gt; $error_operation[0], '@args' =&gt; print_r($error_operation[0], TRUE))));<br>&nbsp;}<br>}</pre><p>Thank you. </p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Drupal's batch API processing is very nice and provides few benifits, We can break long tasks into smaller batches and by this we will be able to prevent maximum execution time errors.</p><p>This article will show how to Build a batch routine in a custom module, its more straight forward approach, you can follow up below code, which is been explained with required comments.</p><p>Create your custom module, which contains <code>custom.info</code> and <code>custom.module</code> files</p><p>The below code put in your <code>custom.module</code> file</p><pre>function custom_menu() {<br>&nbsp;$items['admin/custom_batch'] = array(<br>&nbsp; &nbsp;'title' =&gt; 'Custom Batch',<br>&nbsp; &nbsp;'description' =&gt; 'Custom Batch Process',<br>&nbsp; &nbsp;'type' =&gt; MENU_NORMAL_ITEM,<br>&nbsp; &nbsp;'access callback' =&gt; TRUE,<br>&nbsp; &nbsp;'page callback' =&gt; 'drupal_get_form',<br>&nbsp; &nbsp;'page arguments' =&gt; array('custom_batch_form'),<br>&nbsp;);<br>&nbsp;return $items;<br>}</pre><pre>function custom_batch_form($form, $form_state) {<br>&nbsp;$form["text"]['#markup'] = "Custom batch process to update nodes.... ";<br>&nbsp;$form['submit'] = array(<br>&nbsp; &nbsp;'#type' =&gt; 'submit',<br>&nbsp; &nbsp;'#value' =&gt; t('Run Batch'),<br>&nbsp;);<br>&nbsp;return $form;<br>}</pre><pre>function custom_batch_form_submit($form, $form_state) {<br>&nbsp;batch_set(custom_batch_update_nodes());<br>}</pre><pre>function custom_batch_update_nodes() {<br>&nbsp;drupal_set_message('Updating Nodes');<br>&nbsp;$nodes = node_load_multiple(array(), array('type' =&gt; "story_song"));<br>&nbsp;$node_count = count($nodes);<br>&nbsp;foreach($nodes as $nid=&gt;$node) {<br>&nbsp; &nbsp;$operations[] = array('custom_batch_each_operation', array($node));<br>&nbsp;}<br>&nbsp;$batch = array(<br>&nbsp; &nbsp;'operations' =&gt; $operations,<br>&nbsp; &nbsp;'finished' =&gt; 'custom_batch_update_nodes_finished',<br>&nbsp;);<br>&nbsp;return $batch;<br>}</pre><pre>function custom_batch_each_operation($node, &amp;$context) {<br>&nbsp;$context['results'][] = $node→nid . ' : ' . check_plain($node→title);<br>&nbsp;$context['message'] = t('Processing node "@title"', array('@title' =&gt; $node→title));<br>&nbsp;$updated = FALSE;<br>&nbsp;if ($updated) {<br>&nbsp; &nbsp;node_save($node);<br>&nbsp; &nbsp;$path = drupal_lookup_path("alias", "node/" . $node→nid);<br>&nbsp; &nbsp;drupal_set_message("&lt;a href='/$path'&gt;" . $node→title . "&lt;/a&gt; updated.");<br>&nbsp;}<br>}</pre><pre>function custom_batch_update_nodes_finished($success, $results, $operations) {<br>&nbsp;if ($success) {<br>&nbsp; &nbsp;drupal_set_message(t('@count nodes processed.', array('@count' =&gt; count($results))));<br>&nbsp;}<br>&nbsp;else {<br>&nbsp; &nbsp;$error_operation = reset($operations);<br>&nbsp; &nbsp;drupal_set_message(t('An error occurred while processing @operation with arguments : @args', array('@operation' =&gt; $error_operation[0], '@args' =&gt; print_r($error_operation[0], TRUE))));<br>&nbsp;}<br>}</pre><p>Thank you. </p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4fkhgdr" target="_blank" rel="noopener sponsored" data-product="Acer 100 cm (40 inches) I Pro Series Full HD Smart LED Google TV AR40FDIGU2841AT (Black)">
-                                <img src="https://m.media-amazon.com/images/I/71+89DTymuL._SX679_.jpg" alt="Acer 100 cm (40 inches) I Pro Series Full HD Smart LED Google TV AR40FDIGU2841AT (Black)">
+                            <a href="https://amzn.to/3YG2WUd" target="_blank" rel="noopener sponsored" data-product="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">
+                                <img src="https://m.media-amazon.com/images/I/51iEvATbniL._SX385_.jpg" alt="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4fkhgdr" target="_blank" rel="noopener sponsored" data-product="Acer 100 cm (40 inches) I Pro Series Full HD Smart LED Google TV AR40FDIGU2841AT (Black)">Acer 100 cm (40 inches) I Pro Series Full HD Smart LED Google TV AR40FDIGU2841AT (Black)</a>
+                                <a href="https://amzn.to/3YG2WUd" target="_blank" rel="noopener sponsored" data-product="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)</a>
                             </div>
-                            <div class="discount-badge">Now 55% Off</div>
-                            <a href="https://amzn.to/4fkhgdr" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Acer 100 cm (40 inches) I Pro Series Full HD Smart LED Google TV AR40FDIGU2841AT (Black)">
+                            <div class="discount-badge">Now 64% Off</div>
+                            <a href="https://amzn.to/3YG2WUd" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹37999</span>
-                                    <span class="current-price">₹16999</span>
+                                    <span class="actual-price">₹3500</span>
+                                    <span class="current-price">₹1273</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,12 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
+            
+                
+            
             
                 
             
@@ -774,7 +780,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-911817fe10479f0fd45af396b050f594de42bd31da02add2dd884e53b525c6d8">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7ba641aec3b34153c96ec141f096fb9d09b515fa86d7d34d40babf0e5bc1766a">
   
     
       
@@ -808,7 +814,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -826,7 +832,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-d8773a23c1645ab829ae58f0b0d96cfed019200295016307bb4601eb398c78d1">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-1ff7ca570cbac29fb52e14d7613aa2023d74d20e8c0c21a102f039aedba9f2a1">
   
     
       
@@ -1005,7 +1011,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1017,7 +1023,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

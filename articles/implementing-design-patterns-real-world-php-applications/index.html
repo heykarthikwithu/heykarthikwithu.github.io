@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-design-patterns-in-real-world-php-applications.webp"
             },
             "datePublished": "2024-10-27T20:39:00+0530",
-            "dateModified": "2026-04-18T15:02:08+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,26 +643,314 @@
 
 <div class="pb-image-caption">Implementing Design Patterns in Real-World PHP Applications</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.</p><p>In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP <a href="/articles/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a> using PHP 8.</p><h2>1. Factory Pattern</h2><p><strong>Scenario</strong></p><p>Imagine you’re developing an e-commerce application where different types of payment methods are available: Credit Card, PayPal and Bitcoin. Instead of <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">creating</a> each payment object directly, you can use the Factory Pattern.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Define the Payment Interface</p><p><code>interface PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount);</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create Concrete Payment Classes</p><p><code>class CreditCardPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a credit card payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class PayPalPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a PayPal payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class BitcoinPayment implements PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a Bitcoin payment of $$amount.";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Implement the Factory Class</p><p><code>class PaymentFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function create(string $type): PaymentMethod {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'credit_card':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new CreditCardPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'paypal':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new PayPalPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'bitcoin':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new BitcoinPayment();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown payment method");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4:</strong> Usage Example</p><p><code>$paymentMethod = PaymentFactory::create('paypal');</code></p><p><code>echo $paymentMethod→processPayment(100.00); // Outputs: Processing a PayPal payment of $100.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Decoupling</strong>: You decouple the client code from the concrete payment classes.</li> <li><strong>Scalability</strong>: Adding new payment methods becomes easier, as you only need to create a new class and update the factory.</li> </ul>
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Design patterns are proven solutions to common software design problems. They help improve code readability, maintainability and scalability.</p><p>In this article, we'll explore how to implement some of the most commonly used design patterns, Factory, Singleton and Dependency Injection, in real-world PHP <a href="/articles/usage-phpstan-github-pull-request-drupal-applications" title="Read about Usage Of Phpstan On Github Via Pull Request For Drupal Applications">applications</a> using PHP 8.</p><p><strong>1. Factory Pattern</strong></p><p><strong>Scenario</strong></p><p>Imagine you’re developing an e-commerce application where different types of payment methods are available: Credit Card, PayPal and Bitcoin. Instead of <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">creating</a> each payment object directly, you can use the Factory Pattern.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4fLr5SK" target="_blank" rel="noopener sponsored" data-product="Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)">
+                                <img src="https://m.media-amazon.com/images/I/51DWwMapWxL._SX679_.jpg" alt="Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4fLr5SK" target="_blank" rel="noopener sponsored" data-product="Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)">Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)</a>
+                            </div>
+                            <div class="discount-badge">Now 31% Off</div>
+                            <a href="https://amzn.to/4fLr5SK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Godrej 180 L 2 Star Advanced Capillary Technology, With Jumbo Vegetable Tray Direct Cool Single Door Refrigerator(2023 Model, RD EDGE 205B WRF PP BL, Pep Blue)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹17500</span>
+                                    <span class="current-price">₹11990</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h2>2. Singleton Pattern</h2>
-                    
-                        
-                    <p><strong>Scenario</strong></p><p>Let’s consider a logging mechanism for your application. You want to ensure that only one instance of the logger exists to avoid writing to multiple files or connections.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Create the Logger Class</p><p><code>class Logger {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Logger $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Private constructor to prevent instantiation</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Logger {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Logger();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function log(string $message) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// In a real application, you'd write to a file or database</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[LOG] " . $message . "\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Usage Example</p><p><code>$logger = Logger::getInstance();</code></p><p><code>$logger→log("This is a log message."); // Outputs: [LOG] This is a log message.</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Controlled Access</strong>: Only one instance is created, which saves resources.</li> <li><strong>Global Point of Access</strong>: The logger can be accessed from anywhere in the application.</li> </ul>
-                    
-                        
-                    
-        
+                
+            <p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Define the Payment Interface</p><pre><code class="language-plaintext">interface PaymentMethod {
+ &nbsp;&nbsp;&nbsp;public function processPayment(float $amount);
+}</code></pre><p><strong>Step 2:</strong> Create Concrete Payment Classes</p><pre><code class="language-plaintext">class CreditCardPayment implements PaymentMethod {
+ &nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a credit card payment of $$amount.";
+ &nbsp;&nbsp;&nbsp;}
+}
+class PayPalPayment implements PaymentMethod {
+ &nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a PayPal payment of $$amount.";
+ &nbsp;&nbsp;&nbsp;}
+}
+class BitcoinPayment implements PaymentMethod {
+ &nbsp;&nbsp;&nbsp;public function processPayment(float $amount) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Processing a Bitcoin payment of $$amount.";
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre>
             
-        <h2>3. Dependency Injection</h2><p><strong>Scenario</strong></p><p>In a web application, you might have a service that retrieves user information from a database. You want to make it easy to test this service by allowing it to receive its database dependency through a constructor.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Create the Database Class</p><p><code>class Database {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function connect() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Simulate a database connection</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Database connected";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 2:</strong> Create the User Service Class</p><p><code>class UserService {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private Database $database;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct(Database $database) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→database = $database;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function getUser(int $id) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Simulate fetching a user</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→database→connect() . " - User with ID: $id";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3:</strong> Usage Example</p><p><code>$database = new Database();</code></p><p><code>$userService = new UserService($database);</code></p><p><code>echo $userService→getUser(1); // Outputs: Database connected - User with ID: 1</code></p><p><strong>Benefits</strong></p><ul> <li><strong>Loose Coupling</strong>: UserService is not tightly coupled with the Database class.</li> <li><strong>Testability</strong>: You can easily mock the Database dependency in unit tests.</li> </ul>
-                    
-                        
-                    <h2>Conclusion</h2>
-        
+                
             
-        <p>Implementing design patterns in PHP applications can significantly enhance code <a href="/articles/vedic-sanskrit-language-structure-linguistic-significance" title="Read about Vedic Sanskrit Language And Structure">structure</a> and maintainability. The Factory Pattern allows for flexible object creation, the Singleton Pattern ensures controlled access to shared resources and Dependency Injection promotes loose coupling and testability.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4sruf3C" target="_blank" rel="noopener sponsored" data-product="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)">
+                                <img src="https://m.media-amazon.com/images/I/61aROaTU49L._SL1500_.jpg" alt="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4sruf3C" target="_blank" rel="noopener sponsored" data-product="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)">Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)</a>
+                            </div>
+                            <div class="discount-badge">Now 30% Off</div>
+                            <a href="https://amzn.to/4sruf3C" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red, Camellia Purple, Base Stand Drawer)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹22999</span>
+                                    <span class="current-price">₹15990</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p><strong>Step 3:</strong> Implement the Factory Class</p><pre><code class="language-plaintext">class PaymentFactory {
+ &nbsp;&nbsp;&nbsp;public static function create(string $type): PaymentMethod {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'credit_card':
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new CreditCardPayment();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'paypal':
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new PayPalPayment();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'bitcoin':
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new BitcoinPayment();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown payment method");
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Step 4:</strong> Usage Example</p><pre><code class="language-plaintext">$paymentMethod = PaymentFactory::create('paypal');
+echo $paymentMethod→processPayment(100.00); // Outputs: Processing a PayPal payment of $100.</code></pre><p><strong>Benefits</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/40lZDUH" target="_blank" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
+                                <img src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/40lZDUH" target="_blank" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a>
+                            </div>
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/40lZDUH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
+                                <span class="product-price">
+                                    <span class="actual-price">₹11995</span>
+                                    <span class="current-price">₹5997</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <ul><li data-list-item-id="ec0b773947dba8f020346c98976faf4da"><strong>Decoupling</strong>: You decouple the client code from the concrete payment classes.</li><li data-list-item-id="e0c74c723b60ca4fd064661ae9d7763da"><strong>Scalability</strong>: Adding new payment methods becomes easier, as you only need to create a new class and update the factory.</li></ul><p><strong>2. Singleton Pattern</strong></p><p><strong>Scenario</strong></p><p>Let’s consider a logging mechanism for your application. You want to ensure that only one instance of the logger exists to avoid writing to multiple files or connections.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Create the Logger Class</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/46sOA06" target="_blank" rel="noopener sponsored" data-product="Longway Super Dlx 700 Watt Mixer Grinder with 3 Jars for Grinding, Mixing with Powerful Motor (Black &amp; Gray, 3 Jars)">
+                                <img src="https://m.media-amazon.com/images/I/71bh+CcvKgL._SX679_.jpg" alt="Longway Super Dlx 700 Watt Mixer Grinder with 3 Jars for Grinding, Mixing with Powerful Motor (Black &amp; Gray, 3 Jars)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/46sOA06" target="_blank" rel="noopener sponsored" data-product="Longway Super Dlx 700 Watt Mixer Grinder with 3 Jars for Grinding, Mixing with Powerful Motor (Black &amp; Gray, 3 Jars)">Longway Super Dlx 700 Watt Mixer Grinder with 3 Jars for Grinding, Mixing with Powerful Motor (Black &amp; Gray, 3 Jars)</a>
+                            </div>
+                            <div class="discount-badge">Now 61% Off</div>
+                            <a href="https://amzn.to/46sOA06" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Longway Super Dlx 700 Watt Mixer Grinder with 3 Jars for Grinding, Mixing with Powerful Motor (Black &amp; Gray, 3 Jars)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹3369</span>
+                                    <span class="current-price">₹1299</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <pre><code class="language-plaintext">class Logger {
+ &nbsp;&nbsp;&nbsp;private static ?Logger $instance = null;
+ &nbsp;&nbsp;&nbsp;private function __construct() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Private constructor to prevent instantiation
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public static function getInstance(): Logger {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Logger();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function log(string $message) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// In a real application, you'd write to a file or database
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[LOG] " . $message . "\n";
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Step 2:</strong> Usage Example</p><pre><code class="language-plaintext">$logger = Logger::getInstance();
+$logger→log("This is a log message."); // Outputs: [LOG] This is a log message.</code></pre><p><strong>Benefits</strong></p><ul><li data-list-item-id="e145bb3f66dcbe7a253b1bb5e87d86e36"><strong>Controlled Access</strong>: Only one instance is created, which saves resources.</li><li data-list-item-id="eec5c3c6c20dc959e5a15f2337016dc7d"><strong>Global Point of Access</strong>: The logger can be accessed from anywhere in the application.</li></ul><p><strong>3. Dependency Injection</strong></p>
+            
+                
+            <p><strong>Scenario</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4mO4Bo9" target="_blank" rel="noopener sponsored" data-product="Noise Pro 6R AMOLED Smartwatch – GPS &amp; AI-Powered Premium Design">
+                                <img src="https://m.media-amazon.com/images/I/71PcN58hiRL._SL1500_.jpg" alt="Noise Pro 6R AMOLED Smartwatch – GPS &amp; AI-Powered Premium Design">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4mO4Bo9" target="_blank" rel="noopener sponsored" data-product="Noise Pro 6R AMOLED Smartwatch – GPS &amp; AI-Powered Premium Design">Noise Pro 6R AMOLED Smartwatch – GPS &amp; AI-Powered Premium Design</a>
+                            </div>
+                            <div class="discount-badge">Now 27% Off</div>
+                            <a href="https://amzn.to/4mO4Bo9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Noise Pro 6R AMOLED Smartwatch – GPS &amp; AI-Powered Premium Design">
+                                <span class="product-price">
+                                    <span class="actual-price">₹10999.00</span>
+                                    <span class="current-price">₹7999.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p>In a web application, you might have a service that retrieves user information from a database. You want to make it easy to test this service by allowing it to receive its database dependency through a constructor.</p><p><strong>Implementation</strong></p><p><strong>Step 1:</strong> Create the Database Class</p><pre><code class="language-plaintext">class Database {
+ &nbsp;&nbsp;&nbsp;public function connect() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Simulate a database connection
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Database connected";
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre>
+            
+                
+            <p><strong>Step 2:</strong> Create the User Service Class</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/48XhRkk" target="_blank" rel="noopener sponsored" data-product="RENRANRING 4-Tube Resistance Band Pedal Exerciser – Full Body Workout Kit">
+                                <img src="https://m.media-amazon.com/images/I/41DvwgRCxaL.jpg" alt="RENRANRING 4-Tube Resistance Band Pedal Exerciser – Full Body Workout Kit">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/48XhRkk" target="_blank" rel="noopener sponsored" data-product="RENRANRING 4-Tube Resistance Band Pedal Exerciser – Full Body Workout Kit">RENRANRING 4-Tube Resistance Band Pedal Exerciser – Full Body Workout Kit</a>
+                            </div>
+                            <div class="discount-badge">Now 92% Off</div>
+                            <a href="https://amzn.to/48XhRkk" target="_blank" class="buy-button" rel="noopener sponsored" data-product="RENRANRING 4-Tube Resistance Band Pedal Exerciser – Full Body Workout Kit">
+                                <span class="product-price">
+                                    <span class="actual-price">₹4999.00</span>
+                                    <span class="current-price">₹399.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><pre><code class="language-plaintext">class UserService {
+ &nbsp;&nbsp;&nbsp;private Database $database;
+ &nbsp;&nbsp;&nbsp;public function __construct(Database $database) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→database = $database;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function getUser(int $id) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Simulate fetching a user
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→database→connect() . " - User with ID: $id";
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Step 3:</strong> Usage Example</p><pre><code class="language-plaintext">$database = new Database();
+$userService = new UserService($database);
+echo $userService→getUser(1); // Outputs: Database connected - User with ID: 1</code></pre><p><strong>Benefits</strong></p>
+            
+                
+            <ul><li data-list-item-id="e502fe9a764e8db0eeb94772d857b6c01"><strong>Loose Coupling</strong>: UserService is not tightly coupled with the Database class.</li><li data-list-item-id="ef55da9bff171a3ed0e952d9249f26b1a"><strong>Testability</strong>: You can easily mock the Database dependency in unit tests.</li></ul><p><strong>Conclusion</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/41Go4w3" target="_blank" rel="noopener sponsored" data-product="TRAWOC GLOBETROTTER 80 Liter (70+10) Internal Metal &amp; Fiber Frame Rucksack Bag for Men &amp; Women Trekking, Hiking Travel Backpack with Detachable Daypack, Rain Cover and Shoe Compartment">
+                                <img src="https://m.media-amazon.com/images/I/81A-JmBxxiL._UX385_.jpg" alt="TRAWOC GLOBETROTTER 80 Liter (70+10) Internal Metal &amp; Fiber Frame Rucksack Bag for Men &amp; Women Trekking, Hiking Travel Backpack with Detachable Daypack, Rain Cover and Shoe Compartment">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/41Go4w3" target="_blank" rel="noopener sponsored" data-product="TRAWOC GLOBETROTTER 80 Liter (70+10) Internal Metal &amp; Fiber Frame Rucksack Bag for Men &amp; Women Trekking, Hiking Travel Backpack with Detachable Daypack, Rain Cover and Shoe Compartment">TRAWOC GLOBETROTTER 80 Liter (70+10) Internal Metal &amp; Fiber Frame Rucksack Bag for Men &amp; Women Trekking, Hiking Travel Backpack with Detachable Daypack, Rain Cover and Shoe Compartment</a>
+                            </div>
+                            <div class="discount-badge">Now 60% Off</div>
+                            <a href="https://amzn.to/41Go4w3" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TRAWOC GLOBETROTTER 80 Liter (70+10) Internal Metal &amp; Fiber Frame Rucksack Bag for Men &amp; Women Trekking, Hiking Travel Backpack with Detachable Daypack, Rain Cover and Shoe Compartment">
+                                <span class="product-price">
+                                    <span class="actual-price">₹7999</span>
+                                    <span class="current-price">₹3229</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p>Implementing design patterns in PHP applications can significantly enhance code <a href="/articles/vedic-sanskrit-language-structure-linguistic-significance" title="Read about Vedic Sanskrit Language And Structure">structure</a> and maintainability. The Factory Pattern allows for flexible object creation, the Singleton Pattern ensures controlled access to shared resources and Dependency Injection promotes loose coupling and testability.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -684,7 +972,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9bb6198d43a3755f99d7488936c15befc84b651f16625b3c4240b620c6a5042d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-2f97a097e4d921a1766ae4bf05898c95cfa417053e044888ba59db794f557c59">
   
     
       
@@ -718,7 +1006,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -736,7 +1024,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-6bb853eb47f89093f5225474c3c32c194763c6e646845e61284d1a74c54d1ba1">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-da52c9d0d72fdcae5e8f9d71a32ab83346b3a0fb8c78bd1ee3b30b8c555e4d3f">
   
     
       
@@ -915,7 +1203,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -927,7 +1215,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

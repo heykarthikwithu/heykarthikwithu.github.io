@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/fix-colima-connection-refused-error-failed-to-get-info-from-lima-colima-ha-sock-on-mac.webp"
             },
             "datePublished": "2025-11-30T16:06:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>If you use <a href="/articles/colima-similar-tool-docker-desktop-drupal-development"><strong>Colima</strong></a> on macOS for container management, you may occasionally run into the error:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like <strong>DDEV</strong>), it can completely break your workflow. The good news? The issue has a clean, repeatable fix — and this article explains exactly how to resolve it.</p><h2>Why This Colima Error Happens on macOS</h2><p>This issue usually occurs when:</p><ul> <li>You shut down or restart your Mac <strong>without stopping Colima</strong>,</li> <li>Or when dependent services (like <a href="/articles/optimizing-product-catalog-microservice-profiling-tools-php-using-ddev-and-visual-studio">DDEV</a> or Docker running under Colima) are not shut down cleanly,</li> <li>Or after some <strong>Lima</strong> upgrades.</li> </ul><p>What Is Lima and Why Does It Matter?</p><ul> <li><strong>Lima</strong> is the underlying service Colima uses.</li> <li>It launches lightweight Linux VMs on macOS and provides file sharing + port forwarding.</li> <li>Colima is essentially a layer on top of Lima.</li> </ul><p>So when Colima becomes “Broken,” it’s usually Lima that failed to stop properly, leaving behind leftover <tt>.sock</tt> and <tt>.pid</tt> files.</p><h2>How the Error Appears</h2><p>Running Colima commands often leads to:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>If you list Colima profiles, you’ll usually see something like this:</p><p><code>% colima list<br> PROFILE STATUS ARCH CPUS MEMORY DISK RUNTIME ADDRESS<br> default Broken x86_64 4 4GiB 60GiB </code></p><p>The keyword here is <strong>Broken</strong>.<br> This means the Colima VM is no longer in a valid state.</p><h2>Step-by-Step Fix for Colima “connection refused” ha.sock Error</h2><p>Follow this solution exactly — it's the safest and most reliable method.</p><h3>Step 1: Force-Stop the Lima Instance Used by Colima</h3>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>If you use <a href="/articles/colima-similar-tool-docker-desktop-drupal-development"><strong>Colima</strong></a> on macOS for container management, you may occasionally run into the error:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like <strong>DDEV</strong>), it can completely break your workflow. The good news? The issue has a clean, repeatable fix — and this article explains exactly how to resolve it.</p><h2>Why This Colima Error Happens on macOS</h2><p>This issue usually occurs when:</p><ul> <li>You shut down or restart your Mac <strong>without stopping Colima</strong>,</li> <li>Or when dependent services (like <a href="/articles/optimizing-product-catalog-microservice-profiling-tools-php-using-ddev-and-visual-studio">DDEV</a> or Docker running under Colima) are not shut down cleanly,</li> <li>Or after some <strong>Lima</strong> upgrades.</li> </ul><p>What Is Lima and Why Does It Matter?</p><ul> <li><strong>Lima</strong> is the underlying service Colima uses.</li> <li>It launches lightweight Linux VMs on macOS and provides file sharing + port forwarding.</li> <li>Colima is essentially a layer on top of Lima.</li> </ul><p>So when Colima becomes “Broken,” it’s usually Lima that failed to stop properly, leaving behind leftover <tt>.sock</tt> and <tt>.pid</tt> files.</p><h2>How the Error Appears</h2><p>Running Colima commands often leads to:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>If you list Colima profiles, you’ll usually see something like this:</p><p><code>% colima list<br> PROFILE STATUS ARCH CPUS MEMORY DISK RUNTIME ADDRESS<br> default Broken x86_64 4 4GiB 60GiB </code></p><p>The keyword here is <strong>Broken</strong>.<br> This means the Colima VM is no longer in a valid state.</p><h2>Step-by-Step Fix for Colima “connection refused” ha.sock Error</h2><p>Follow this solution exactly — it's the safest and most reliable method.</p><h3>Step 1: Force-Stop the Lima Instance Used by Colima</h3>
         
             
         
@@ -728,24 +728,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3BZSCR7" target="_blank" rel="noopener sponsored" data-product="Cinagro Plants Drip Irrigation Kit (150 Plants Kit) Watering Kit for Home Garden, Farming &amp; Agriculture Purposes">
-                                <img src="https://m.media-amazon.com/images/I/71JTGf96YaL._SX679_.jpg" alt="Cinagro Plants Drip Irrigation Kit (150 Plants Kit) Watering Kit for Home Garden, Farming &amp; Agriculture Purposes">
+                            <a href="https://amzn.to/3QDuO9X" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)">
+                                <img src="https://m.media-amazon.com/images/I/81vxWpPpgNL._SX679_.jpg" alt="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3BZSCR7" target="_blank" rel="noopener sponsored" data-product="Cinagro Plants Drip Irrigation Kit (150 Plants Kit) Watering Kit for Home Garden, Farming &amp; Agriculture Purposes">Cinagro Plants Drip Irrigation Kit (150 Plants Kit) Watering Kit for Home Garden, Farming &amp; Agriculture Purposes</a>
+                                <a href="https://amzn.to/3QDuO9X" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)">Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)</a>
                             </div>
-                            <div class="discount-badge">Now 36% Off</div>
-                            <a href="https://amzn.to/3BZSCR7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Cinagro Plants Drip Irrigation Kit (150 Plants Kit) Watering Kit for Home Garden, Farming &amp; Agriculture Purposes">
+                            <div class="discount-badge">Now 9% Off</div>
+                            <a href="https://amzn.to/3QDuO9X" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 512GB Storage)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2499</span>
-                                    <span class="current-price">₹1599</span>
+                                    <span class="actual-price">₹144999</span>
+                                    <span class="current-price">₹131999</span>
                                 </span>
 
                                 <span class="product-store">
@@ -851,24 +857,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3DNiCjh" target="_blank" rel="noopener sponsored" data-product="Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile">
-                                <img src="https://m.media-amazon.com/images/I/61AbDjbgGxL._AC_SX679_.jpg" alt="Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile">
+                            <a href="https://amzn.to/4gti7bO" target="_blank" rel="noopener sponsored" data-product="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">
+                                <img src="https://m.media-amazon.com/images/I/61Vc14MtETL._SX679_.jpg" alt="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3DNiCjh" target="_blank" rel="noopener sponsored" data-product="Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile">Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile</a>
+                                <a href="https://amzn.to/4gti7bO" target="_blank" rel="noopener sponsored" data-product="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)</a>
                             </div>
-                            <div class="discount-badge">Now 15% Off</div>
-                            <a href="https://amzn.to/3DNiCjh" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Arkim Collant Termici Donna Calze Termiche Donna invernali, collant felpati donna effetto velato trasparente collant foderati in pile">
+                            <div class="discount-badge">Now 49% Off</div>
+                            <a href="https://amzn.to/4gti7bO" target="_blank" class="buy-button" rel="noopener sponsored" data-product="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹12.99</span>
-                                    <span class="current-price">₹10.99</span>
+                                    <span class="actual-price">₹34999</span>
+                                    <span class="current-price">₹17999</span>
                                 </span>
 
                                 <span class="product-store">
@@ -926,7 +938,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4cac86eccb8dec758faeb5c62b359d3c91f928e3b03e7c6be22c98149674f414">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6028a09014183669a71be7a87005d9dbffc6e3263bd4caddbc1525f1e56b0115">
   
     
       
@@ -960,7 +972,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -978,7 +990,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8f72617a45e1410476d238065ea4c13cf26a49172524b9e3c2d0c3b094fa4661">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-24e133d856349c70a97b50c94e6b72f6b1e56ab3d1ab5c0ea0d2fd7ac2e0521d">
   
     
       
@@ -1157,7 +1169,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1169,7 +1181,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

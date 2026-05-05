@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/introduction-to-design-patterns-factory-singleton-and-dependency-injection.webp"
             },
             "datePublished": "2024-10-25T08:49:00+0530",
-            "dateModified": "2026-04-18T14:58:02+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,20 +643,252 @@
 
 <div class="pb-image-caption">Introduction to Design Patterns: Factory, Singleton and Dependency Injection</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are essential tools for developers looking to write clean, maintainable and scalable code. In PHP 8, leveraging design patterns can significantly enhance your software architecture.</p><p>This article introduces three fundamental design patterns: Factory, Singleton and Dependency Injection, explaining their purpose, use cases and providing practical examples.</p><h2>1. Factory Pattern</h2><p><strong>What is it?</strong></p><ul> <li>The Factory Pattern is a creational design pattern that defines an interface for creating objects.</li> <li>Instead of instantiating objects directly, you delegate the responsibility of creation to a factory class, which can return different subclasses based on input parameters.</li> </ul><p><strong>When to Use</strong></p><ul> <li>When the type of object to be created isn’t known until runtime.</li> <li>To encapsulate the object creation process, promoting code modularity and flexibility.</li> </ul><p><strong>Example</strong></p><p>Consider a scenario where you need to create different types of products:</p><p><code>interface Product {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function use();</code></p><p><code>}</code></p><p><code>class ConcreteProductA implements Product {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function use() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Using Product A";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ConcreteProductB implements Product {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function use() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Using Product B";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p>&nbsp;</p><p><code>class ProductFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function create(string $type): Product {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'A':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new ConcreteProductA();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'B':</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new ConcreteProductB();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown product type");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$product = ProductFactory::create('A');</code></p><p><code>echo $product→use(); // Outputs: Using Product A</code></p><p><strong>Advantages</strong></p><ul> <li>Simplifies object creation.</li> <li>Promotes adherence to the Open/Closed Principle, allowing the introduction of new products without modifying existing code.</li> </ul><h2>2. Singleton Pattern</h2>
-                    
-                        
-                    <p><strong>What is it?</strong></p><ul> <li>The Singleton Pattern restricts a class to a single instance and provides a global point of access to that instance.</li> <li>This pattern is particularly useful when you need to control access to shared resources, like a database connection.</li> </ul><p><strong>When to Use</strong></p><ul> <li>When a single instance of a class is required to coordinate actions across the system.</li> <li>To avoid the overhead of creating multiple instances for resources that are expensive to create.</li> </ul><p><strong>Example</strong></p><p>Here’s how you can implement the Singleton Pattern:</p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Private constructor to prevent direct instantiation</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function doSomething() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Doing something";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><p><code>echo $singleton→doSomething(); // Outputs: Doing something</code></p><p><strong>Advantages</strong></p><ul> <li>Ensures controlled access to resources.</li> <li>Provides a single point of <a href="/articles/configuration-management-quicksilver-pantheon" title="Read about Configuration Management Via Quicksilver On Pantheon">configuration</a> and access.</li> </ul>
-                    
-                        
-                    
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Design patterns are essential tools for developers looking to write clean, maintainable and scalable code. In PHP 8, leveraging design patterns can significantly enhance your software architecture.</p><p>This article introduces three fundamental design patterns: Factory, Singleton and Dependency Injection, explaining their purpose, use cases and providing practical examples.</p><p><strong>1. Factory Pattern</strong></p><p><strong>What is it?</strong></p><ul><li data-list-item-id="e6343d207893013c8a90ab99d44bb5247">The Factory Pattern is a creational design pattern that defines an interface for creating objects.</li><li data-list-item-id="e7adb47d58c1d97bd25b22689c19bf1b5">Instead of instantiating objects directly, you delegate the responsibility of creation to a factory class, which can return different subclasses based on input parameters.</li></ul><p><strong>When to Use</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4w1koE4" target="_blank" rel="noopener sponsored" data-product="Arihant All-in-One Mathematics Class 12 – CBSE 2025–26 Edition">
+                                <img src="https://m.media-amazon.com/images/I/71Af9d6rMsL._SL1500_.jpg" alt="Arihant All-in-One Mathematics Class 12 – CBSE 2025–26 Edition">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4w1koE4" target="_blank" rel="noopener sponsored" data-product="Arihant All-in-One Mathematics Class 12 – CBSE 2025–26 Edition">Arihant All-in-One Mathematics Class 12 – CBSE 2025–26 Edition</a>
+                            </div>
+                            <div class="discount-badge">Now 29% Off</div>
+                            <a href="https://amzn.to/4w1koE4" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Arihant All-in-One Mathematics Class 12 – CBSE 2025–26 Edition">
+                                <span class="product-price">
+                                    <span class="actual-price">₹500.00</span>
+                                    <span class="current-price">₹355.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        
-        
+                
+            <ul><li data-list-item-id="e777887c0fb8e7a4692e14f93995ae49d">When the type of object to be created isn’t known until runtime.</li><li data-list-item-id="ec6ca54e84d6a5c65baa0b0d128aa112f">To encapsulate the object creation process, promoting code modularity and flexibility.</li></ul><p><strong>Example</strong></p><p>Consider a scenario where you need to create different types of products:</p><pre><code class="language-plaintext">interface Product {
+ &nbsp;&nbsp;&nbsp;public function use();
+}
+
+class ConcreteProductA implements Product {
+ &nbsp;&nbsp;&nbsp;public function use() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Using Product A";
+ &nbsp;&nbsp;&nbsp;}
+}
+
+class ConcreteProductB implements Product {
+ &nbsp;&nbsp;&nbsp;public function use() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Using Product B";
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p>&nbsp;</p><pre><code class="language-plaintext">class ProductFactory {
+ &nbsp;&nbsp;&nbsp;public static function create(string $type): Product {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch ($type) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'A':
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new ConcreteProductA();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 'B':
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new ConcreteProductB();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new InvalidArgumentException("Unknown product type");
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;}
+}
+
+// Usage
+$product = ProductFactory::create('A');
+echo $product→use(); // Outputs: Using Product A</code></pre>
             
-        <h2>3. Dependency Injection</h2><p><strong>What is it?</strong></p><ul> <li>Dependency Injection (DI) is a design pattern that implements Inversion of Control (IoC), allowing a class to receive its dependencies from an external source rather than creating them internally.</li> <li>This leads to more modular and testable code.</li> </ul><p><strong>When to Use</strong></p><ul> <li>To improve the modularity of your code.</li> <li>To facilitate unit testing by allowing the injection of mock dependencies.</li> </ul><p><strong>Example</strong></p><p>Here’s how Dependency Injection can be applied in a service class:</p><p><code>class Database {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function connect() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Database connected";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class UserService {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private Database $database;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct(Database $database) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→database = $database;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function getUser() {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→database→connect() . " - User retrieved";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$database = new Database();</code></p><p><code>$userService = new UserService($database);</code></p><p><code>echo $userService→getUser(); // Outputs: Database connected - User retrieved</code></p><p><strong>Advantages</strong></p><ul> <li>Reduces tight coupling between classes.</li> <li>Enhances testability and maintainability of your code.</li> </ul><p><strong>Conclusion</strong></p><p>Incorporating design patterns into your PHP 8 projects can lead to more organized, maintainable and scalable code. The Factory Pattern streamlines object creation, the Singleton Pattern controls instance management and Dependency Injection promotes loose coupling and easier testing. By understanding and applying these patterns, you can improve the architecture of your applications and become a more effective developer.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+                
+            
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3O980xf" target="_blank" rel="noopener sponsored" data-product="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)">
+                                <img src="https://m.media-amazon.com/images/I/810SJkiwLZL._SX679_.jpg" alt="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3O980xf" target="_blank" rel="noopener sponsored" data-product="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)">BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)</a>
+                            </div>
+                            <div class="discount-badge">Now 64% Off</div>
+                            <a href="https://amzn.to/3O980xf" target="_blank" class="buy-button" rel="noopener sponsored" data-product="BULLAR Home Gym Set, Steel Dumbbell Set, Steel Dumbbell Plates, (10-50kg), Dumbbells, Steel Weight Plates, Home Gym Equipments for Men (30kg Steel Dumbbell for Home Gym)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹14485</span>
+                                    <span class="current-price">₹5237</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p><strong>Advantages</strong></p><ul><li data-list-item-id="e18004bf26c5c4448a3d8857c2a436677">Simplifies object creation.</li><li data-list-item-id="e025ce741802dec19ef8d265c44a26ce4">Promotes adherence to the Open/Closed Principle, allowing the introduction of new products without modifying existing code.</li></ul><p><strong>2. Singleton Pattern</strong></p><p><strong>What is it?</strong></p><ul><li data-list-item-id="e59588fe3c2f6b872e41abd57b1b7c44c">The Singleton Pattern restricts a class to a single instance and provides a global point of access to that instance.</li><li data-list-item-id="e98ff9cbeaab5e358dbaf9d32a859c10b">This pattern is particularly useful when you need to control access to shared resources, like a database connection.</li></ul><p><strong>When to Use</strong></p><ul><li data-list-item-id="e3907d76b00e91b128b717fa1b3e8be2d">When a single instance of a class is required to coordinate actions across the system.</li><li data-list-item-id="e6f6ea107dff6b9070a88cd82e39fe51a">To avoid the overhead of creating multiple instances for resources that are expensive to create.</li></ul><p><strong>Example</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3CyFQto" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI">
+                                <img src="https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg" alt="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3CyFQto" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI">Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI</a>
+                            </div>
+                            <div class="discount-badge">Now 11% Off</div>
+                            <a href="https://amzn.to/3CyFQto" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy S25+ 5G AI Smartphone (Silver Shadow, 12GB RAM, 512GB Storage), 50MP Camera with Galaxy AI">
+                                <span class="product-price">
+                                    <span class="actual-price">₹111999</span>
+                                    <span class="current-price">₹99999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <p>Here’s how you can implement the Singleton Pattern:</p><pre><code class="language-plaintext">class Singleton {
+
+ &nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;private function __construct() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Private constructor to prevent direct instantiation
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function doSomething() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Doing something";
+ &nbsp;&nbsp;&nbsp;}
+}
+
+// Usage
+$singleton = Singleton::getInstance();
+echo $singleton→doSomething(); // Outputs: Doing something</code></pre><p><strong>Advantages</strong></p><ul><li data-list-item-id="ee6c92d21085d01d331573b9ea9134cd7">Ensures controlled access to resources.</li><li data-list-item-id="e3d93ef1bbf9afbd9bf669126f00dce1d">Provides a single point of <a href="/articles/configuration-management-quicksilver-pantheon" title="Read about Configuration Management Via Quicksilver On Pantheon">configuration</a> and access.</li></ul><p><strong>3. Dependency Injection</strong></p><p><strong>What is it?</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3Q1353t" target="_blank" rel="noopener sponsored" data-product="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)">
+                                <img src="https://m.media-amazon.com/images/I/61qIChjrrYL._SY879_.jpg" alt="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3Q1353t" target="_blank" rel="noopener sponsored" data-product="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)">Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)</a>
+                            </div>
+                            <div class="discount-badge">Now 33% Off</div>
+                            <a href="https://amzn.to/3Q1353t" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 236 L, 3 Star, Digital Inverter, Frost Free Double Door Refrigerator (RT28C3053S8/HL, Silver, Elegant Inox, 2024 Model)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹37990</span>
+                                    <span class="current-price">₹25490</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <ul><li data-list-item-id="ed2636e39eedafb29b6310d14b997159b">Dependency Injection (DI) is a design pattern that implements Inversion of Control (IoC), allowing a class to receive its dependencies from an external source rather than creating them internally.</li><li data-list-item-id="e0ecc469cf81d30c1758c3992dd857c8e">This leads to more modular and testable code.</li></ul><p><strong>When to Use</strong></p><ul><li data-list-item-id="e3a0de421cf39f02e2a807eaa65d04588">To improve the modularity of your code.</li><li data-list-item-id="e47be39292a1e772fb4a837d27c538b27">To facilitate unit testing by allowing the injection of mock dependencies.</li></ul><p><strong>Example</strong></p><p>Here’s how Dependency Injection can be applied in a service class:</p><pre><code class="language-plaintext">class Database {
+ &nbsp;&nbsp;&nbsp;public function connect() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Database connected";
+ &nbsp;&nbsp;&nbsp;}
+}
+
+class UserService {
+ &nbsp;&nbsp;&nbsp;private Database $database;
+ &nbsp;&nbsp;&nbsp;public function __construct(Database $database) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→database = $database;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function getUser() {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→database→connect() . " - User retrieved";
+ &nbsp;&nbsp;&nbsp;}
+}
+
+// Usage
+$database = new Database();
+$userService = new UserService($database);
+echo $userService→getUser(); // Outputs: Database connected - User retrieved</code></pre><p><strong>Advantages</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4de5TD1" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)">
+                                <img src="https://m.media-amazon.com/images/I/81BENnbPpuL._SX679_.jpg" alt="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4de5TD1" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)">Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 33% Off</div>
+                            <a href="https://amzn.to/4de5TD1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹59900</span>
+                                    <span class="current-price">₹39990</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <ul><li data-list-item-id="e893323e7b518df71688e2fc60b9e1bf7">Reduces tight coupling between classes.</li><li data-list-item-id="ed88e73e1e8324727083838194677e884">Enhances testability and maintainability of your code.</li></ul><p><strong>Conclusion</strong></p><p>Incorporating design patterns into your PHP 8 projects can lead to more organized, maintainable and scalable code. The Factory Pattern streamlines object creation, the Singleton Pattern controls instance management and Dependency Injection promotes loose coupling and easier testing. By understanding and applying these patterns, you can improve the architecture of your applications and become a more effective developer.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -678,7 +910,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-d0cda35bbfd72560b207c3152b7e0361668ceb3c02bbdc2f81885790c1ce5bfa">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-0641d67f01877af64da3ce7a83026560a4df35cc76aaee81ef88b684503d67ef">
   
     
       
@@ -712,7 +944,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -730,7 +962,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5c1a37d46878d71618c2540bf2832d534f5d49febc91e725abf4f616e69d23af">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-e4162c0f24888f7a81f5f5b128a03c345c73eb35161f3c3447cb80c712afa0ca">
   
     
       
@@ -909,7 +1141,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -921,7 +1153,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

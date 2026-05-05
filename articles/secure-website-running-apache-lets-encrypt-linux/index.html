@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/letsencrypt_bpic.webp"
             },
             "datePublished": "2024-08-15T11:48:00+0530",
-            "dateModified": "2026-04-18T14:58:02+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,14 +643,42 @@
 
 <div class="pb-image-caption">Secure Website running on Apache with Let's Encrypt on Linux</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Website <a href="/articles/usage-local-php-security-checker-drupal-applications" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a> is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It's very complex process to install and add SSL certificate to a web server.</p><p>Let's make it easier with the help of Let's Encrypt. One can easily encrypt data of your website free of charge using Let's Encrypt.</p><ul> <li>If your Site is running on Apache, run this below one to enable ssl..</li> </ul><pre> <code>sudo a2enmode ssl</code></pre><pre> <code>sudo a2ensite default-ssl</code></pre><ul> <li>Next restart the apache webserver</li> </ul><pre> <code>sudo systemctl restart apache2</code></pre><ul> <li>If you hit your domain, you will see</li> </ul><p><code>Your Connection is not Secured</code></p><ul> <li>Download and Install Let's Encrypt</li> </ul><pre> <code>sudo git clone <a class="vglnk" href="https://github.com/letsencrypt/letsencrypt" rel="nofollow">https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</code></pre><ul> <li>Next generate the Certificate</li> </ul><pre> <code>cd /opt/letsencrypt</code></pre><pre> <code>sudo ./letsencrypt-auto --apache -d http://kkk.com</code></pre><ul> <li>During installation you will need to specify your E-mail address and also agree to the terms of service.</li> <li>Once completed, One can see&nbsp;list all of&nbsp;certificate files at&nbsp;<code>/etc/letsencrypt/live</code>&nbsp;<a href="/articles/azure-active-directory-app-registrations-complete-guide" title="Read about Understanding Azure Active Directory Azure App Registrations Key Concepts And Best Practices">directory</a>..</li> <li>And you can access <code>https://kkk.com</code></li> <li>You can also verify the status of your SSL certificate by visiting the URL&nbsp;<code>https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest</code></li> </ul>
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Website <a href="/articles/usage-local-php-security-checker-drupal-applications" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a> is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It's very complex process to install and add SSL certificate to a web server.</p><p>Let's make it easier with the help of Let's Encrypt. One can easily encrypt data of your website free of charge using Let's Encrypt.</p><ul><li data-list-item-id="ece55be7753b4ffcd7d198b97f78ffc34">If your Site is running on Apache, run this below one to enable ssl..</li></ul><pre><code class="language-plaintext">sudo a2enmode ssl</code></pre><pre><code class="language-plaintext">sudo a2ensite default-ssl</code></pre><ul><li data-list-item-id="e84ed54f8ac190ef3ef44f296095aeeae">Next restart the apache webserver</li></ul><pre><code class="language-plaintext">sudo systemctl restart apache2</code></pre><ul><li data-list-item-id="e1f4f79646075779bea38b45fcc3c2fd2">If you hit your domain, you will see</li></ul><p><code>Your Connection is not Secured</code></p><ul><li data-list-item-id="ebf86910b3ead700ad9acd911aeb4d030">Download and Install Let's Encrypt</li></ul><pre><code class="language-plaintext">sudo git clone <a href="https://github.com/letsencrypt/letsencrypt" target="_blank">https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</code></pre><ul><li data-list-item-id="e5c2a5a45c70bb6728c3de70bce9f35a5">Next generate the Certificate</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><pre><code class="language-plaintext">sudo ./letsencrypt-auto --apache -d http://kkk.com</code></pre><ul><li data-list-item-id="eebd891637fa971feedcbb7db5ed68234">During installation you will need to specify your E-mail address and also agree to the terms of service.</li><li data-list-item-id="efc51535f354ce485fc35961c76e7377f">Once completed, One can see&nbsp;list all of&nbsp;certificate files at&nbsp;<code>/etc/letsencrypt/live</code>&nbsp;<a href="/articles/azure-active-directory-app-registrations-complete-guide" title="Read about Understanding Azure Active Directory Azure App Registrations Key Concepts And Best Practices">directory</a>..</li><li data-list-item-id="edb8fac8e9fbeb53e53ba7d2de96dd4b6">And you can access <code>https://kkk.com</code></li><li data-list-item-id="ee8ccd34ecf055693a50bd416f77950c7">You can also verify the status of your SSL certificate by visiting the URL&nbsp;<code>https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest</code></li></ul><p><strong>How to Renew Lets Encrypt Certificates</strong></p><ul><li data-list-item-id="e136a330535228733371888e859dcb785">By default, SSL certificates issued by Let's Encrypt are valid for 90 days. So it is recommended to renew the certificate before the expiration date.</li><li data-list-item-id="e2ddca4fe2bebd8323efdecb96dc6b547">You can renew the SSL certificates manually</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><pre><code class="language-plaintext">sudo ./letsencrypt-auto certonly --renew-by-default -d <a href="http://kkk.com">kkk.com</a></code></pre><ul><li data-list-item-id="e36121fd5efad035921ed80207406da9a">to Automate this process, lets have the Cron job for this to do..</li></ul><pre><code class="language-plaintext">sudo nano /etc/crontab</code></pre><pre><code class="language-plaintext"> @monthly root /opt/letsencrypt/letsencrypt-auto certonly --renew-by-default -d <a href="http://kkk.com">kkk.com</a></code></pre><ul><li data-list-item-id="e8e7d9ae8dbc9e128e505f53e88d54f22">Save this file and Every month, this cron job would run..</li><li data-list-item-id="e44dd3099c03f18b835d64538a1abcbbb">Upgrade Let's Encrypt</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><ul><li data-list-item-id="edaf7ae44a65d3c79007cdd7e5fa649c8">Pull the latest changes from the git repository..</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3DQDYMX" target="_blank" rel="noopener sponsored" data-product="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">
+                                <img src="https://m.media-amazon.com/images/I/61JdCOZOmHL._AC_SY879_.jpg" alt="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3DQDYMX" target="_blank" rel="noopener sponsored" data-product="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look</a>
+                            </div>
+                            <div class="discount-badge">Now -49% Off</div>
+                            <a href="https://amzn.to/3DQDYMX" target="_blank" class="buy-button" rel="noopener sponsored" data-product="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">
+                                <span class="product-price">
+                                    <span class="actual-price">₹22.55</span>
+                                    <span class="current-price">₹33.49</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h3>How to Renew Lets Encrypt Certificates</h3>
-            
-            
-            <ul> <li>By default, SSL certificates issued by Let's Encrypt are valid for 90 days. So it is recommended to renew the certificate before the expiration date.</li> <li>You can renew the SSL certificates manually</li> </ul><pre> <code>cd /opt/letsencrypt</code></pre><pre> <code>sudo ./letsencrypt-auto certonly --renew-by-default -d <a class="vglnk" href="http://kkk.com" rel="nofollow">kkk.com</a></code></pre><ul> <li>to Automate this process, lets have the Cron job for this to do..</li> </ul><pre> <code>sudo nano /etc/crontab</code><code> @monthly root /opt/letsencrypt/letsencrypt-auto certonly --renew-by-default -d <a class="vglnk" href="http://kkk.com" rel="nofollow">kkk.com</a></code></pre><ul> <li>Save this file and Every month, this cron job would run..</li> <li>Upgrade Let's Encrypt</li> </ul><pre> <code>cd /opt/letsencrypt</code></pre><ul> <li>Pull the latest changes from the git repository..</li> </ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+                
+            </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -672,7 +700,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ce0fb90df096b3d79063d724628ad0efb2389663b7772ef752f640109ee99fd3">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3e9b51748a06dfa9450cdcaca133cba2d6b50ac7839018b2b4ed41ecf1b8e199">
   
     
       
@@ -706,7 +734,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -724,7 +752,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5a2612fd8a93ccef8e77f69e55b60ec34f8ad58bb989362218e56569a007b6e3">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f7c28b52f71b9004eef247bb5b7c94cc3bcab4852aab575a2104628ec23e6494">
   
     
       
@@ -903,7 +931,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -915,7 +943,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

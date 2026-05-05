@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/Figure1.webp"
             },
             "datePublished": "2024-11-28T18:57:00+0530",
-            "dateModified": "2026-04-18T14:58:02+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,17 +643,42 @@
 
 <div class="pb-image-caption">Filter content between Date ranges in Drupal 7</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul> <li>A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li> <li>If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li> </ul><ul> <li>The following conversation <a href="https://www.drupal.org/node/1302940">https://www.drupal.org/node/1302940</a> explains:</li> </ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul> <li>Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li> <li>To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li> <li>In this order: <ul> <li>Date - end date (field_dates:value2)</li> <li>Date - start date (field_dates)</li> </ul> </li> <li>In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li> <li>In next window: Select Exposed this filter to visitor</li> <li>Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li> <li>Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li> </ul><ul> <li>Do the same to the second filter:</li> </ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul> <li>This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li> <li>And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li> <li>Save the view.</li> </ul>
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul><li data-list-item-id="e883cbc348b7f4200ff8974df827b348c">A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li><li data-list-item-id="e1f45f51cbeea0f9790045b905844f445">If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li><li data-list-item-id="e6529e3f16ceb516de7b7479cef3f3236">The following conversation <a href="https://www.drupal.org/node/1302940" target="_blank">https://www.drupal.org/node/1302940</a> explains:</li></ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul><li data-list-item-id="ec56361d2cfec956ede5f65c067fbdd47">Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li><li data-list-item-id="ee2de4549ce440071c1229214c8f6eba8">To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li><li data-list-item-id="e52a1b3f0fc8296efa1fe0ee2b536df3f">In this order:<ul><li data-list-item-id="ecf90b7a839867ec6b9bdcc75b6976d49">Date - end date (field_dates:value2)</li><li data-list-item-id="e1b52fb23c49f156e60b8244d04795fbd">Date - start date (field_dates)</li></ul></li><li data-list-item-id="ebbd43c129131e6974b0724003f367f88">In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li><li data-list-item-id="edd6b21b039374b48e785ca3260aae6c9">In next window: Select Exposed this filter to visitor</li><li data-list-item-id="eeb9e38b54f23e642fc5efba99138f51b">Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li><li data-list-item-id="ee2c01807d55010beb1cb7e3ef07850bb">Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li><li data-list-item-id="e1dd83112c5f4a6a9cff3371601c274df">Do the same to the second filter:</li></ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul><li data-list-item-id="eb8c57902d4fc4b26f52b47b9924ba6fe">This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li><li data-list-item-id="eb44179f6457872263bb669a88d4a4d7c">And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li><li data-list-item-id="eed4e8b06bb4610cc76681337022b1ffa">Save the view.</li></ul><p><strong>Note:</strong></p><ul><li data-list-item-id="e018a8adb141ecbf2148c6cd9ddde0a47">While you are working with date module and filtering the content between dates, make sure that your Server timzone, Mysql server timezone and Drupal site timezone are same. If not you may face problems in few cases.</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3PTWLeb" target="_blank" rel="noopener sponsored" data-product="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)">
+                                <img src="https://m.media-amazon.com/images/I/61S9aVnRZDL._SX679_.jpg" alt="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3PTWLeb" target="_blank" rel="noopener sponsored" data-product="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)">Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 95% Off</div>
+                            <a href="https://amzn.to/3PTWLeb" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Fire-Boltt Ninja Call Pro Plus 46.48mm (1.83 inch) Smart Watch with Bluetooth Calling, AI Voice Assistance, 120 Sports Modes IP67 Rating, 240 * 280 Pixel High Resolution (Black)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹19999</span>
+                                    <span class="current-price">₹999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        
-        
-            
-        <h3>Note:</h3>
-            
-            
-            <ul> <li>While you are working with date module and filtering the content between dates, make sure that your Server timzone, Mysql server timezone and Drupal site timezone are same. If not you may face problems in few cases.</li> </ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+                
+            </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -675,7 +700,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-961e9d3352628e9f2de95667f570f2d6926ff6034ababa2705f75b0f9e05ac03">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6a09d54b658343c1ed93d1c6ad46d4ab6860a0baba6793bf25de739f3f8a1511">
   
     
       
@@ -709,7 +734,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -727,7 +752,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-696a62b67ca79ed70a61fe02e665fa71286c5b5ae21c362df2235760aa9c7eb5">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-309a622187d39bee2e831c8fc93b05ee9fe39b05e20a1f09410e1d8beb996499">
   
     
       
@@ -906,7 +931,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -918,7 +943,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

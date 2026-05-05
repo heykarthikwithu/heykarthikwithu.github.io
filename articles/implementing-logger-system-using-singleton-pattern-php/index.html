@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/implementing-a-logger-system-using-the-singleton-pattern-in-php.webp"
             },
             "datePublished": "2025-11-23T10:49:00+0530",
-            "dateModified": "2026-04-18T10:12:26+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,8 +643,186 @@
 
 <div class="pb-image-caption">Implementing a Logger System Using the Singleton Pattern in PHP</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In this article, we'll create a simple logger system using the Singleton Pattern in PHP.</p><p>This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a>.</p><h2>Step-by-Step Implementation</h2><p><strong>Step 1: Create the Logger Class</strong></p><p>We'll start by defining a Logger class that follows the Singleton Pattern. This class will have methods for logging messages and ensuring that only one instance exists.</p><p><code>class Logger {</code></p><p><code>    private static ?Logger $instance = null;</code></p><p><code>    private string $logFile;</code></p><p><code>    // Private constructor to prevent direct instantiation</code></p><p><code>    private function __construct() {</code></p><p><code>        $this→logFile = 'app.log'; // Define the log file</code></p><p><code>    }</code></p><p><code>    // Method to get the single instance of Logger</code></p><p><code>    public static function getInstance(): Logger {</code></p><p><code>        if (self::$instance === null) {</code></p><p><code>            self::$instance = new Logger();</code></p><p><code>        }</code></p><p><code>        return self::$instance;</code></p><p><code>    }</code></p><p><code>    // Method to log a message</code></p><p><code>    public function log(string $message): void {</code></p><p><code>        $timestamp = date('Y-m-d H:i:s');</code></p><p><code>        $formattedMessage = "[$timestamp] $message" . PHP_EOL;</code></p><p><code>        file_put_contents($this→logFile, $formattedMessage, FILE_APPEND);</code></p><p><code>    }</code></p><p><code>    // Optional: Method to read the log file (for testing purposes)</code></p><p><code>    public function readLog(): string {</code></p><p><code>        return file_get_contents($this→logFile);</code></p><p><code>    }</code></p><p><code>}</code></p><p><strong>Step 2: Usage Example</strong></p><p>Now that we have our Logger class set up, let's see how to use it in a real application scenario.</p><p><code>// Usage of the Logger</code></p><p><code>$logger = Logger::getInstance();</code></p><p><code>$logger→log("Application started.");</code></p><p><code>// Simulating some actions</code></p><p><code>$logger→log("User logged in.");</code></p><p><code>$logger→log("Error: Unable to connect to the database.");</code></p><p><code>$logger→log("Application finished.");</code></p><p><strong>Step 3: Testing the Logger</strong></p><p>You can read the log file to verify that messages are being logged correctly. Here’s a small snippet to do that:</p><p>// Displaying the log contents</p><p><code>$logger = Logger::getInstance();</code></p><p><code>echo $logger→readLog();</code></p><h2>Complete Example</h2><p>Putting everything together, here’s the complete code for the Logger system.</p><p><code>class Logger {</code></p><p><code>    private static ?Logger $instance = null;</code></p><p><code>    private string $logFile;</code></p><p><code>    private function __construct() {</code></p><p><code>        $this→logFile = 'app.log'; // Define the log file</code></p><p><code>    }</code></p><p><code>    public static function getInstance(): Logger {</code></p><p><code>        if (self::$instance === null) {</code></p><p><code>            self::$instance = new Logger();</code></p><p><code>        }</code></p><p><code>        return self::$instance;</code></p><p><code>    }</code></p><p><code>    public function log(string $message): void {</code></p><p><code>        $timestamp = date('Y-m-d H:i:s');</code></p><p><code>        $formattedMessage = "[$timestamp] $message" . PHP_EOL;</code></p><p><code>        file_put_contents($this→logFile, $formattedMessage, FILE_APPEND);</code></p><p><code>    }</code></p><p><code>    public function readLog(): string {</code></p><p><code>        return file_get_contents($this→logFile);</code></p><p><code>    }</code></p><p><code>}</code></p><p><code>// Usage of the Logger</code></p><p><code>$logger = Logger::getInstance();</code></p><p><code>$logger→log("Application started.");</code></p><p><code>$logger→log("User logged in.");</code></p><p><code>$logger→log("Error: Unable to connect to the database.");</code></p><p><code>$logger→log("Application finished.");</code></p><p><code>// Displaying the log contents</code></p><p><code>echo $logger→readLog();</code></p><p>In this hands-on exercise, we've successfully implemented a simple logger system using the Singleton Pattern in PHP. This design ensures that only one instance of the logger exists, which simplifies the logging process and avoids conflicts.</p><p>Thanks for reading the article, for more Science and <a href="/articles/advances-prosthetic-limb-technology" title="Read about Advances In Prosthetic Limb Technology">Technology</a> related articles read and subscribe to peoples blog articles.</p>
-</div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In this article, we'll create a simple logger system using the Singleton Pattern in PHP.</p><p>This logger will allow you to log messages to a file, ensuring that there is only one instance of the logger throughout your <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a>.</p><p><strong>Step-by-Step Implementation</strong></p><p><strong>Step 1: Create the Logger Class</strong></p><p>We'll start by defining a Logger class that follows the Singleton Pattern. This class will have methods for logging messages and ensuring that only one instance exists.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4bDuuBn" target="_blank" rel="noopener sponsored" data-product="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish">
+                                <img src="https://m.media-amazon.com/images/I/51naBIaCpXL.jpg" alt="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4bDuuBn" target="_blank" rel="noopener sponsored" data-product="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish">Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish</a>
+                            </div>
+                            <div class="discount-badge">Now 57% Off</div>
+                            <a href="https://amzn.to/4bDuuBn" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Mamta Furniture Solid Sheesham Wood 3 Seater Sofa Set with Attached 2 Shelf Drawers for Living Room Furniture - Brown Finish">
+                                <span class="product-price">
+                                    <span class="actual-price">₹39998</span>
+                                    <span class="current-price">₹17171</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <pre><code class="language-plaintext">class Logger {
+
+  private static ?Logger $instance = null;
+  
+  private string $logFile;
+  
+  // Private constructor to prevent direct instantiation
+  private function __construct() {
+    $this→logFile = 'app.log'; // Define the log file
+  }
+  
+  // Method to get the single instance of Logger
+  public static function getInstance(): Logger {
+    if (self::$instance === null) {
+      self::$instance = new Logger();
+    }
+    return self::$instance;
+  }
+  
+  // Method to log a message
+  public function log(string $message): void {
+    $timestamp = date('Y-m-d H:i:s');
+    $formattedMessage = "[$timestamp] $message" . PHP_EOL;
+    file_put_contents($this→logFile, $formattedMessage, FILE_APPEND);
+  }
+  
+  // Optional: Method to read the log file (for testing purposes)
+  public function readLog(): string {
+    return file_get_contents($this→logFile);
+  }
+}</code></pre><p><strong>Step 2: Usage Example</strong></p><p>Now that we have our Logger class set up, let's see how to use it in a real application scenario.</p><pre><code class="language-plaintext">// Usage of the Logger
+$logger = Logger::getInstance();
+$logger→log("Application started.");
+
+// Simulating some actions
+$logger→log("User logged in.");
+$logger→log("Error: Unable to connect to the database.");
+$logger→log("Application finished.");</code></pre><p><strong>Step 3: Testing the Logger</strong></p>
+            
+                
+            <p>You can read the log file to verify that messages are being logged correctly. Here’s a small snippet to do that:</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4vRATT9" target="_blank" rel="noopener sponsored" data-product="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">
+                                <img src="https://m.media-amazon.com/images/I/519LmnSSI7L._SL1500_.jpg" alt="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4vRATT9" target="_blank" rel="noopener sponsored" data-product="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling</a>
+                            </div>
+                            <div class="discount-badge">Now 27% Off</div>
+                            <a href="https://amzn.to/4vRATT9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">
+                                <span class="product-price">
+                                    <span class="actual-price">₹18450.00</span>
+                                    <span class="current-price">₹13490.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p>// Displaying the log contents</p><pre><code class="language-plaintext">$logger = Logger::getInstance();
+echo $logger→readLog();</code></pre><p><strong>Complete Example</strong></p><p>Putting everything together, here’s the complete code for the Logger system.</p>
+            
+                
+            <pre><code class="language-plaintext">class Logger {
+
+  private static ?Logger $instance = null;
+  
+  private string $logFile;
+
+  private function __construct() {
+    $this→logFile = 'app.log'; // Define the log file
+  }
+
+  public static function getInstance(): Logger {
+    if (self::$instance === null) {
+      self::$instance = new Logger();
+    }
+    return self::$instance;
+  }
+  
+  public function log(string $message): void {
+    $timestamp = date('Y-m-d H:i:s');
+    $formattedMessage = "[$timestamp] $message" . PHP_EOL;
+    file_put_contents($this→logFile, $formattedMessage, FILE_APPEND);
+  }
+
+  public function readLog(): string {
+    return file_get_contents($this→logFile);
+  }
+}
+
+// Usage of the Logger
+$logger = Logger::getInstance();
+$logger→log("Application started.");
+$logger→log("User logged in.");
+$logger→log("Error: Unable to connect to the database.");
+$logger→log("Application finished.");
+
+// Displaying the log contents
+echo $logger→readLog();</code></pre><p>In this hands-on exercise, we've successfully implemented a simple logger system using the Singleton Pattern in PHP. This design ensures that only one instance of the logger exists, which simplifies the logging process and avoids conflicts.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3Aqr074" target="_blank" rel="noopener sponsored" data-product="HONOR Pad X8a with Free Flip-Cover 27.94cm (11 inch) Wi-Fi Tablet, 4GB RAM 128 GB ROM Expandable Up to 1TB FHD Display 90Hz Refresh Rate, 8300mAh Battery, Quad Speakers, Snapdragon 680, Android 14">
+                                <img src="https://m.media-amazon.com/images/I/6104lCOYMJL._SX679_.jpg" alt="HONOR Pad X8a with Free Flip-Cover 27.94cm (11 inch) Wi-Fi Tablet, 4GB RAM 128 GB ROM Expandable Up to 1TB FHD Display 90Hz Refresh Rate, 8300mAh Battery, Quad Speakers, Snapdragon 680, Android 14">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3Aqr074" target="_blank" rel="noopener sponsored" data-product="HONOR Pad X8a with Free Flip-Cover 27.94cm (11 inch) Wi-Fi Tablet, 4GB RAM 128 GB ROM Expandable Up to 1TB FHD Display 90Hz Refresh Rate, 8300mAh Battery, Quad Speakers, Snapdragon 680, Android 14">HONOR Pad X8a with Free Flip-Cover 27.94cm (11 inch) Wi-Fi Tablet, 4GB RAM 128 GB ROM Expandable Up to 1TB FHD Display 90Hz Refresh Rate, 8300mAh Battery, Quad Speakers, Snapdragon 680, Android 14</a>
+                            </div>
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/3Aqr074" target="_blank" class="buy-button" rel="noopener sponsored" data-product="HONOR Pad X8a with Free Flip-Cover 27.94cm (11 inch) Wi-Fi Tablet, 4GB RAM 128 GB ROM Expandable Up to 1TB FHD Display 90Hz Refresh Rate, 8300mAh Battery, Quad Speakers, Snapdragon 680, Android 14">
+                                <span class="product-price">
+                                    <span class="actual-price">₹21999</span>
+                                    <span class="current-price">₹10999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p>Thanks for reading the article, for more Science and <a href="/articles/advances-prosthetic-limb-technology" title="Read about Advances In Prosthetic Limb Technology">Technology</a> related articles read and subscribe to peoples blog articles.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -666,7 +844,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-cc0894061a4c7fb3fd21bf1ed617dc63220a399704a357b008f5d08d5a9ed33e">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e84d8662426d4ae075e29f9760d48e6c8f6ecbbe533d4e84d0deef99994ed62b">
   
     
       
@@ -700,7 +878,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -718,7 +896,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-a831b25b863c0f218721d7592ffe83bc12847493abc5de9bd8da39567eb541a1">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-3bc4a35e368fffe02511578156575017256accb10c17f00888035c3a50320239">
   
     
       
@@ -897,7 +1075,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -909,7 +1087,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

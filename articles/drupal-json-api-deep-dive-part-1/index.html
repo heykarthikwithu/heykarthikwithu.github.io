@@ -2,17 +2,17 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability." />
+<meta name="description" content="JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests.This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/drupal-json-api-deep-dive-part-1" />
 <meta property="og:site_name" content="People&#039;s BLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/drupal-json-api-deep-dive-part-1" />
 <meta property="og:title" content="Drupal JSON API, Deep Dive - Part 1" />
-<meta property="og:description" content="JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability." />
+<meta property="og:description" content="JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests.This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability." />
 <meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/2026-04/Decoupled Drupal 8 with JSON API.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability." />
+<meta name="twitter:description" content="JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests.This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability." />
 <meta name="twitter:title" content="Drupal JSON API, Deep Dive - Part 1" />
 <meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/2026-04/Decoupled Drupal 8 with JSON API.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
@@ -25,13 +25,13 @@
         {
             "@type": "Article",
             "headline": "Drupal JSON API, Deep Dive - Part 1",
-            "description": "JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests. This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability.",
+            "description": "JSON:API module is implemented based on JSON:API Specification. Means, a specification that says how client should request the resources to be fetched or modified, and also how server should respond to such requests.This JSON:API is designed to minimize the number of requests and also minimize the amount of data transmitted between clients and servers. And such efficiency is achieved without compromising readability, flexibility, or discoverability.",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://peoplesblog.co.in/sites/default/files/2026-04/Decoupled Drupal 8 with JSON API.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-27T16:43:23+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,11 +643,42 @@
 
 <div class="pb-image-caption">Drupal JSON API, Deep Dive - Part 1</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>JSON:API module is implemented <strong>based on JSON:API Specification</strong>. Means, a specification that says <strong>how client should request</strong> the resources to be fetched or modified, and also <strong>how server should respond</strong> to such requests. This JSON:API is designed to <strong>minimize the number of requests</strong> and also minimize the amount of data transmitted between clients and servers. And <strong>such efficiency is achieved</strong> without compromising readability, flexibility, or discoverability.</p><p>Once you enable the JSON:API module, <strong>REST API for every type in Drupal application is available</strong>. JSON:API inspects the entity types and bundles so that it can dynamically provide URLs by which to access each and every one of them using the <strong>standard HTTP methods, GET, POST, PATCH and DELETE</strong>.</p><ul class="check1">                                    <li>Access control of APIs will be with Drupal Core's permissions system.</li>                                    <li>No configuration page available. Means you can get up and running with an API-driven Drupal application with minimal effort.</li>                                </ul>
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>JSON:API module is implemented <strong>based on JSON:API Specification</strong>. Means, a specification that says <strong>how client should request</strong> the resources to be fetched or modified, and also <strong>how server should respond</strong> to such requests.</p><p>This JSON:API is designed to <strong>minimize the number of requests</strong> and also minimize the amount of data transmitted between clients and servers. And <strong>such efficiency is achieved</strong> without compromising readability, flexibility, or discoverability.</p><p>Once you enable the JSON:API module, <strong>REST API for every type in Drupal application is available</strong>.</p><p>JSON:API inspects the entity types and bundles so that it can dynamically provide URLs by which to access each and every one of them using the <strong>standard HTTP methods, GET, POST, PATCH and DELETE</strong>.</p><p>Access control of APIs will be with Drupal Core's permissions system.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/46Cj0Lb" target="_blank" rel="noopener sponsored" data-product="Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)">
+                                <img src="https://m.media-amazon.com/images/I/51ZLJK6FRzL._SX679_.jpg" alt="Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/46Cj0Lb" target="_blank" rel="noopener sponsored" data-product="Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)">Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)</a>
+                            </div>
+                            <div class="discount-badge">Now 43% Off</div>
+                            <a href="https://amzn.to/46Cj0Lb" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Pigeon By Stovekraft Special Aluminium Pressure Cooker Combo with Outer Lid Gas Stove Compatible 2, 3, 5 Litre Capacity for Healthy Cooking (Silver)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹2635</span>
+                                    <span class="current-price">₹1499</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h4>Request/Response terminology</h4><ul class="check1">                                    <li>HTTP requests are made to JSON:API resources. These are different from resource objects.</li>                                    <li>The JSON object that the client receives is refered a document.</li>                                    <li>A document is always a JSON object and it has primary data under a data key.</li>                                    <li>The data under that key are called resource objects or resource identifier objects.</li>                                    <li>When you request that related data be embedded in the document, it becomes a compound document.</li>                                    <li>A compound document is one with an included key in the top-level object.</li>                                    <li>Resources that return many resource objects are called collection resources.</li>                                    <li>Resources that return one resource object are called individual resources.</li>                                    <li>Resources that return information about <a href="/articles/implement-one-many-many-many-relationships-php" title="Read about Implementing One To Many And Many To Many Relationships">relationships</a> between resource objects are called relationship resources.</li>                                    <li><strong>In Drupal terms:</strong></li>                                    <ul class="check1">                                        <li>Resource Objects → Entities</li>                                        <li>Resource Identifier Objects → Entity reference field Items</li>                                        <li>Document → Request/response JSON payload</li>                                    </ul>                                </ul><p>Let's see core <a href="/articles/azure-storage-accounts-concepts-setup-best-practices" title="Read about Understanding Azure Storage Accounts Key Concepts And Best Practices">concepts</a> and API Overview in the next part.</p>
-</div>
+                
+            <p>No configuration page available. Means you can get up and running with an API-driven Drupal application with minimal effort.</p><p><strong>Request/Response terminology</strong></p><ul class="check1"><li data-list-item-id="ed26b656ed010c60c28bebb0f98035f3c">HTTP requests are made to JSON:API resources. These are different from resource objects.</li><li data-list-item-id="e4e5eda4ebf219363067ca6a99a558206">The JSON object that the client receives is refered a document.</li><li data-list-item-id="e15bda531a5c9f1fd827164eecbb198a7">A document is always a JSON object and it has primary data under a data key.</li><li data-list-item-id="ef1ad12184ce17d4ad0e78d9e26b24d7c">The data under that key are called resource objects or resource identifier objects.</li><li data-list-item-id="e8f4f50d8604d8ee8548eee0d69ef8a01">When you request that related data be embedded in the document, it becomes a compound document.</li><li data-list-item-id="e5cdb381a917b9b007db88bbf0da71516">A compound document is one with an included key in the top-level object.</li><li data-list-item-id="e0d23eac99d7a12aa6e356625c27f13c9">Resources that return many resource objects are called collection resources.</li><li data-list-item-id="e21ee431b33d1de24ed22e5976f0373be">Resources that return one resource object are called individual resources.</li><li data-list-item-id="e37024fb17b2883fcac565790f1904511">Resources that return information about <a href="/articles/implement-one-many-many-many-relationships-php" title="Read about Implementing One To Many And Many To Many Relationships">relationships</a> between resource objects are called relationship resources.</li><li class="ck-list-marker-bold" data-list-item-id="ef04a032b5e4c8f41cb668b4d8ba8035c"><strong>In Drupal terms:</strong><ul class="check1"><li data-list-item-id="ee5541a8b6fc55a3a1561d5777b39d56f">Resource Objects → Entities</li><li data-list-item-id="e8a9de0a8b613bbac018031dd6ae21d1b">Resource Identifier Objects → Entity reference field Items</li><li data-list-item-id="ed96686d5641fe80e4889d8f2c7e691b1">Document → Request/response JSON payload</li></ul></li></ul><p>Let's see core <a href="/articles/azure-storage-accounts-concepts-setup-best-practices" title="Read about Understanding Azure Storage Accounts Key Concepts And Best Practices">concepts</a> and API Overview in the next part.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -669,7 +700,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-dad51a0b40b0bd4d4ccc76d12ce4ce4ed1a70b75d6b8af6f4f1404d75427c7be">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e4a5930394243e5a9fa4297916229651ae0b44e0cc829d8638ee52ac1212ab43">
   
     
       
@@ -703,7 +734,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -721,7 +752,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f8fec4549afaf79a794bed0823358764100c9d29328e686790d1da834d2c786f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-36a4f5731abe96443f04c043523228adcc29ebeb41936179c4c0434c10d655a8">
   
     
       
@@ -900,7 +931,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -912,7 +943,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

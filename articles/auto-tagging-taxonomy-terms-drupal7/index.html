@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/multiTaxonomy.webp"
             },
             "datePublished": "2024-08-15T11:45:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Auto Tagging of Taxonomy terms in Drupal7</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body>
                     
                         
                     <p>This article help you to create the way to implement the autotagging of the <a href="/articles/auto-tagging-taxonomy-terms-drupal7" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms based on the other field of the node page. This can be implemented by using the <code>hook_node_presave()</code>.</p><p>In our case lets consider the <code>field_tags</code> is the taxonomy field and we are autotagging based on the content present in <code>title</code> and <code>body</code> fields.</p><p>All these actions are implemented inside the <code>hook_node_presave()</code>.</p><div> <p><strong>1. First thing is getting the list of terms of the <code>field_tags</code> vocabulary, this is done in the below code.</strong></p>  <p><code>$field = field_info_field('field_tags');</code><br> // read the field information.<br> <code>$voc_name = $field["settings"]["allowed_values"][0]["vocabulary"];</code><br> // get the vocabulary name which is been <a href="/articles/improve-drupal-search-solr-locally-configured-lando" title="Read about Improve Drupal Search With Solr Locally Configured Via Lando">configured</a> for the tag field.<br> <code>$voc = taxonomy_vocabulary_machine_name_load($voc_name);</code><br> // load the vocabulary object.<br> <code>$terms = taxonomy_term_load_multiple(array(), array('vid' =&gt; $voc→vid));</code><br> // get all the terms in the vocabulary.<br> <code>$termnames = array();<br> foreach($terms as $termskey =&gt; $termsvalue) {<br> &nbsp;&nbsp;&nbsp; $termnames[$termskey] = $termsvalue→name;<br> }</code><br> // iterating the terms objects and getting out the terms names out of it.</p>
@@ -652,19 +652,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3KtYV3x" target="_blank" rel="noopener sponsored" data-product="Pepe Jeans Men Regular Fit Mid Rise Track Pant">
-                                <img src="https://m.media-amazon.com/images/I/61IPZdBKiRL._SX679_.jpg" alt="Pepe Jeans Men Regular Fit Mid Rise Track Pant">
+                            <a href="https://amzn.to/3PRg6uL" target="_blank" rel="noopener sponsored" data-product="Lifelong Mixer Grinder for Kitchen - 3 Jars 500 Watt Mixie - Chutney Jar, Dry Grinder Jar &amp; Liquidizing Jar used as Wet Grinder &amp; Blender for Milkshake, Smoothie, Puree -Stainless Steel Blades(LLMG23)">
+                                <img src="https://m.media-amazon.com/images/I/61zhqJg1bTL._SX679_.jpg" alt="Lifelong Mixer Grinder for Kitchen - 3 Jars 500 Watt Mixie - Chutney Jar, Dry Grinder Jar &amp; Liquidizing Jar used as Wet Grinder &amp; Blender for Milkshake, Smoothie, Puree -Stainless Steel Blades(LLMG23)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3KtYV3x" target="_blank" rel="noopener sponsored" data-product="Pepe Jeans Men Regular Fit Mid Rise Track Pant">Pepe Jeans Men Regular Fit Mid Rise Track Pant</a>
+                                <a href="https://amzn.to/3PRg6uL" target="_blank" rel="noopener sponsored" data-product="Lifelong Mixer Grinder for Kitchen - 3 Jars 500 Watt Mixie - Chutney Jar, Dry Grinder Jar &amp; Liquidizing Jar used as Wet Grinder &amp; Blender for Milkshake, Smoothie, Puree -Stainless Steel Blades(LLMG23)">Lifelong Mixer Grinder for Kitchen - 3 Jars 500 Watt Mixie - Chutney Jar, Dry Grinder Jar &amp; Liquidizing Jar used as Wet Grinder &amp; Blender for Milkshake, Smoothie, Puree -Stainless Steel Blades(LLMG23)</a>
                             </div>
-                            <div class="discount-badge">Now 59% Off</div>
-                            <a href="https://amzn.to/3KtYV3x" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Pepe Jeans Men Regular Fit Mid Rise Track Pant">
+                            <div class="discount-badge">Now 66% Off</div>
+                            <a href="https://amzn.to/3PRg6uL" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lifelong Mixer Grinder for Kitchen - 3 Jars 500 Watt Mixie - Chutney Jar, Dry Grinder Jar &amp; Liquidizing Jar used as Wet Grinder &amp; Blender for Milkshake, Smoothie, Puree -Stainless Steel Blades(LLMG23)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1399</span>
-                                    <span class="current-price">₹575</span>
+                                    <span class="actual-price">₹3500</span>
+                                    <span class="current-price">₹1199</span>
                                 </span>
 
                                 <span class="product-store">
@@ -681,6 +681,12 @@
             </div>
             
                 </div>
+            
+            
+                
+            
+            
+                
             
             
                 
@@ -753,19 +759,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3XEvaOT" target="_blank" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
-                                <img src="https://m.media-amazon.com/images/I/71IHKbuambL._SY385_.jpg" alt="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
+                            <a href="https://amzn.to/4gPmNc6" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">
+                                <img src="https://m.media-amazon.com/images/I/81h-r-3hioL._SX679_.jpg" alt="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3XEvaOT" target="_blank" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack</a>
+                                <a href="https://amzn.to/4gPmNc6" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)</a>
                             </div>
-                            <div class="discount-badge">Now 29% Off</div>
-                            <a href="https://amzn.to/3XEvaOT" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
+                            <div class="discount-badge">Now 41% Off</div>
+                            <a href="https://amzn.to/4gPmNc6" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 164 cm (65 inches) 4K Ultra HD AI Smart LED Google TV K-65S30B (Black)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹419</span>
-                                    <span class="current-price">₹298.30</span>
+                                    <span class="actual-price">₹164900</span>
+                                    <span class="current-price">₹96990</span>
                                 </span>
 
                                 <span class="product-store">
@@ -780,6 +786,12 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
+            
+                
+            
             
                 
             
@@ -877,7 +889,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-758c15d36b6c40b483be39d400bdbf467a6af022ff4a797860d25d51d1d712b7">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-466af2d1b281d5ebd91035a259f6fc4b76261323a3f0be86ad60db69c9e640a9">
   
     
       
@@ -911,7 +923,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -929,7 +941,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-719ba1b7c971169effc2ad9fbaf7c821fa9426d5220a365083ec2ec5444f9ea5">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-2c77cd921159f3af50969fee681d13a0c3d1584abe9aedffaea2fcd2e7d6276b">
   
     
       
@@ -1108,7 +1120,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1120,7 +1132,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

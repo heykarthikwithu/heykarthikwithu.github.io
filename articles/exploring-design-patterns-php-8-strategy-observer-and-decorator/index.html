@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/exploring-design-patterns-in-php-8-strategy-observer-and-decorator.webp"
             },
             "datePublished": "2024-10-28T16:46:00+0530",
-            "dateModified": "2026-04-18T15:02:08+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,26 +643,391 @@
 
 <div class="pb-image-caption">Exploring Design Patterns in PHP 8: Strategy, Observer and Decorator</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design <a href="/articles/implementing-design-patterns-real-world-php-applications" title="Read about Implementing Design Patterns In Real World Php Applications">patterns</a> are essential tools for software developers, providing proven solutions to common problems. In PHP 8, leveraging design patterns can lead to more maintainable, scalable and flexible code.</p><p>This article will explore three key design patterns: Strategy, Observer and Decorator. We will delve into their principles and provide practical examples to illustrate how they can be implemented in PHP 8.</p><h2>1. Strategy Pattern</h2><p>The Strategy Pattern enables the selection of an algorithm at runtime. By defining a family of algorithms, encapsulating each one and making them interchangeable, you can alter the algorithm used by a context object without modifying its code.</p><p><strong>Step 1: Define the Strategy Interface</strong></p><p>This interface declares a method that will be implemented by concrete strategies.</p><p><code>interface SortingStrategy {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function sort(array $data): array;</code></p><p><code>}</code></p><p><strong>Step 2: Create Concrete Strategies</strong></p><p>Implement different sorting algorithms as concrete strategies.</p><p><code>class QuickSort implements SortingStrategy {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function sort(array $data): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sort($data); // Simplified for illustration</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $data;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class BubbleSort implements SortingStrategy {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function sort(array $data): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Implement bubble sort logic here</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $data; // Simplified for illustration</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3: Create the Context</strong></p><p>The context class uses a strategy to execute the algorithm.</p><p><code>class Sorter {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private SortingStrategy $strategy;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct(SortingStrategy $strategy) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→strategy = $strategy;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function setStrategy(SortingStrategy $strategy): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→strategy = $strategy;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function sortData(array $data): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→strategy→sort($data);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Usage Example</strong></p><p><code>$data = [3, 2, 1];</code></p><p><code>$sorter = new Sorter(new QuickSort());</code></p><p><code>print_r($sorter→sortData($data)); // Uses QuickSort</code></p><p><code>$sorter→setStrategy(new BubbleSort());</code></p><p><code>print_r($sorter→sortData($data)); // Now uses BubbleSort</code></p><h2>2. Observer Pattern</h2>
-                    
-                        
-                    <p>The Observer Pattern defines a one-to-many <a href="/articles/water-pakistan-lifeline-dependency-geopolitical-control" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects, allowing one object (the subject) to notify others (observers) about state changes. This pattern is particularly useful in event handling and notification systems.</p><p><strong>Step 1: Define Subject and Observer Interfaces</strong></p><p><code>interface Subject {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(): void;</code></p><p><code>}</code></p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void;</code></p><p><code>}</code></p><p><strong>Step 2: Create a Concrete Subject</strong></p><p>The subject maintains a list of observers and notifies them of any changes.</p><p><code>class NewsAgency implements Subject {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers = array_filter($this→observers, fn($o) =&gt; $o !== $observer);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update("New news available!");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3: Create Concrete Observers</strong></p><p>Observers implement the update method to receive notifications.</p><p><code>class NewsSubscriber implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Received update: $event\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Usage Example</strong></p><p><code>$agency = new NewsAgency();</code></p><p><code>$subscriber = new NewsSubscriber();</code></p><p><code>$agency→attach($subscriber);</code></p><p><code>$agency→notify(); // Outputs: Received update: New news available!</code></p>
-                    
-                        
-                    
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Design <a href="/articles/implementing-design-patterns-real-world-php-applications" title="Read about Implementing Design Patterns In Real World Php Applications">patterns</a> are essential tools for software developers, providing proven solutions to common problems. In PHP 8, leveraging design patterns can lead to more maintainable, scalable and flexible code.</p><p>This article will explore three key design patterns: Strategy, Observer and Decorator. We will delve into their principles and provide practical examples to illustrate how they can be implemented in PHP 8.</p><p><strong>1. Strategy Pattern</strong></p><p>The Strategy Pattern enables the selection of an algorithm at runtime. By defining a family of algorithms, encapsulating each one and making them interchangeable, you can alter the algorithm used by a context object without modifying its code.</p><p><strong>Step 1: Define the Strategy Interface</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/45AAMxy" target="_blank" rel="noopener sponsored" data-product="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black">
+                                <img src="https://m.media-amazon.com/images/I/61BRcToMOpL._SX679_.jpg" alt="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/45AAMxy" target="_blank" rel="noopener sponsored" data-product="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black">Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black</a>
+                            </div>
+                            <div class="discount-badge">Now 76% Off</div>
+                            <a href="https://amzn.to/45AAMxy" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Safari Thorium Sharp Antiscratch 2 Pc Set 55, 66 Cms Small &amp; Medium Polycarbonate (Pc) Soft Sided 4 Spinner Wheels Luggage /Speed_Wheel Suitcase/Trolley Bag Set- Black">
+                                <span class="product-price">
+                                    <span class="actual-price">₹17705</span>
+                                    <span class="current-price">₹4299</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        
-        
+                
+            <p>This interface declares a method that will be implemented by concrete strategies.</p><pre><code class="language-plaintext">interface SortingStrategy {
+ &nbsp;&nbsp;&nbsp;public function sort(array $data): array;
+}</code></pre><p><strong>Step 2: Create Concrete Strategies</strong></p><p>Implement different sorting algorithms as concrete strategies.</p><pre><code class="language-plaintext">class QuickSort implements SortingStrategy {
+ &nbsp;&nbsp;&nbsp;public function sort(array $data): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sort($data); // Simplified for illustration
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $data;
+ &nbsp;&nbsp;&nbsp;}
+}
+
+class BubbleSort implements SortingStrategy {
+ &nbsp;&nbsp;&nbsp;public function sort(array $data): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Implement bubble sort logic here
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $data; // Simplified for illustration
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre>
             
-        <h2>3. Decorator Pattern</h2><p>The Decorator Pattern allows you to dynamically add behavior to objects. This is achieved by wrapping an object with a decorator class, enabling enhanced functionality without altering the original class.</p><p><strong>Step 1: Define the Component Interface</strong></p><p><code>interface Coffee {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function cost(): float;</code></p><p><code>}</code></p><p><strong>Step 2: Create a Concrete Component</strong></p><p>Implement the core functionality in a concrete class.</p><p><code>class SimpleCoffee implements Coffee {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function cost(): float {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 2.00;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 3: Create the Decorator Base Class</strong></p><p>The base class for decorators should implement the same interface and hold a reference to a Coffee object.</p><p><code>abstract class CoffeeDecorator implements Coffee {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;protected Coffee $coffee;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function __construct(Coffee $coffee) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→coffee = $coffee;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function cost(): float {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→coffee→cost();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Step 4: Create Concrete Decorators</strong></p><p>Implement decorators that extend the functionality of the original object.</p><p><code>class MilkDecorator extends CoffeeDecorator {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function cost(): float {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return parent::cost() + 0.50; // Adds milk cost</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class SugarDecorator extends CoffeeDecorator {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function cost(): float {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return parent::cost() + 0.25; // Adds sugar cost</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>Usage Example</strong></p><p><code>$coffee = new SimpleCoffee();</code></p><p><code>echo "Cost of simple coffee: " . $coffee→cost() . "\n";</code></p><p><code>$milkCoffee = new MilkDecorator($coffee);</code></p><p><code>echo "Cost of coffee with milk: " . $milkCoffee→cost() . "\n";</code></p><p><code>$sweetMilkCoffee = new SugarDecorator($milkCoffee);</code></p><p><code>echo "Cost of coffee with milk and sugar: " . $sweetMilkCoffee→cost() . "\n";</code></p>
-                    
-                        
-                    <h2>Conclusion</h2>
-        
+                
             
-        <p>In this article, we explored three essential design patterns: Strategy, Observer and Decorator, using PHP 8. Each pattern provides unique advantages that can significantly enhance your codebase. By applying these patterns, you can create a more modular and maintainable system, allowing for easier updates and modifications as your application evolves. Embracing design patterns is a step toward becoming a proficient PHP developer, leading to cleaner and more efficient code.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3IkwtjE" target="_blank" rel="noopener sponsored" data-product="EIO 100% Cotton Rompers Sleepsuits Jumpsuit Night Suits for Infants Newborn Baby Boys &amp; Girls">
+                                <img src="https://m.media-amazon.com/images/I/71kznnkzA5L._SX679_.jpg" alt="EIO 100% Cotton Rompers Sleepsuits Jumpsuit Night Suits for Infants Newborn Baby Boys &amp; Girls">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3IkwtjE" target="_blank" rel="noopener sponsored" data-product="EIO 100% Cotton Rompers Sleepsuits Jumpsuit Night Suits for Infants Newborn Baby Boys &amp; Girls">EIO 100% Cotton Rompers Sleepsuits Jumpsuit Night Suits for Infants Newborn Baby Boys &amp; Girls</a>
+                            </div>
+                            <div class="discount-badge">Now 67% Off</div>
+                            <a href="https://amzn.to/3IkwtjE" target="_blank" class="buy-button" rel="noopener sponsored" data-product="EIO 100% Cotton Rompers Sleepsuits Jumpsuit Night Suits for Infants Newborn Baby Boys &amp; Girls">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1499</span>
+                                    <span class="current-price">₹499</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p><strong>Step 3: Create the Context</strong></p><p>The context class uses a strategy to execute the algorithm.</p><pre><code class="language-plaintext">class Sorter {
+
+ &nbsp;&nbsp;&nbsp;private SortingStrategy $strategy;
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function __construct(SortingStrategy $strategy) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→strategy = $strategy;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function setStrategy(SortingStrategy $strategy): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→strategy = $strategy;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function sortData(array $data): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→strategy→sort($data);
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Usage Example</strong></p><pre><code class="language-plaintext">$data = [3, 2, 1];
+
+$sorter = new Sorter(new QuickSort());
+print_r($sorter→sortData($data)); // Uses QuickSort
+
+$sorter→setStrategy(new BubbleSort());
+print_r($sorter→sortData($data)); // Now uses BubbleSort</code></pre>
+            
+                
+            
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3UGaK98" target="_blank" rel="noopener sponsored" data-product="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment's 1st 48MP Sony AI Camera| Segment's 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger">
+                                <img src="https://m.media-amazon.com/images/I/61yHIxBZ6iL._SX679_.jpg" alt="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment's 1st 48MP Sony AI Camera| Segment's 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3UGaK98" target="_blank" rel="noopener sponsored" data-product="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment's 1st 48MP Sony AI Camera| Segment's 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger">TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment's 1st 48MP Sony AI Camera| Segment's 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger</a>
+                            </div>
+                            <div class="discount-badge">Now 23% Off</div>
+                            <a href="https://amzn.to/3UGaK98" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TECNO POP 9 5G Aurora Cloud, 4GB+128GB| Segment's 1st 48MP Sony AI Camera| Segment's 1st 5G with NFC | D6300 5G Processor | 4+ Year Lag Free Fluency |5000 mAh Battery |Dual Speaker |Without Charger">
+                                <span class="product-price">
+                                    <span class="actual-price">₹12999</span>
+                                    <span class="current-price">₹9999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p><strong>2. Observer Pattern</strong></p><p>The Observer Pattern defines a one-to-many <a href="/articles/water-pakistan-lifeline-dependency-geopolitical-control" title="Read about Water For Pakistan Lifeline Dependency And The Shifting Control">dependency</a> between objects, allowing one object (the subject) to notify others (observers) about state changes. This pattern is particularly useful in event handling and notification systems.</p><p><strong>Step 1: Define Subject and Observer Interfaces</strong></p><pre><code class="language-plaintext">interface Subject {
+ &nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void;
+ &nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void;
+ &nbsp;&nbsp;&nbsp;public function notify(): void;
+}
+
+interface Observer {
+ &nbsp;&nbsp;&nbsp;public function update(string $event): void;
+}</code></pre><p><strong>Step 2: Create a Concrete Subject</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3ExPbz7" target="_blank" rel="noopener sponsored" data-product="Shalimar Premium Garbage Bags (Lavender Fragrance) Size 19 X 21 Inches (Medium) 120 Bags (4 Rolls) Dustbin Bag/Trash Bag - Green Color">
+                                <img src="https://m.media-amazon.com/images/I/711biezMJwL._SX679_.jpg" alt="Shalimar Premium Garbage Bags (Lavender Fragrance) Size 19 X 21 Inches (Medium) 120 Bags (4 Rolls) Dustbin Bag/Trash Bag - Green Color">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3ExPbz7" target="_blank" rel="noopener sponsored" data-product="Shalimar Premium Garbage Bags (Lavender Fragrance) Size 19 X 21 Inches (Medium) 120 Bags (4 Rolls) Dustbin Bag/Trash Bag - Green Color">Shalimar Premium Garbage Bags (Lavender Fragrance) Size 19 X 21 Inches (Medium) 120 Bags (4 Rolls) Dustbin Bag/Trash Bag - Green Color</a>
+                            </div>
+                            <div class="discount-badge">Now 14% Off</div>
+                            <a href="https://amzn.to/3ExPbz7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Shalimar Premium Garbage Bags (Lavender Fragrance) Size 19 X 21 Inches (Medium) 120 Bags (4 Rolls) Dustbin Bag/Trash Bag - Green Color">
+                                <span class="product-price">
+                                    <span class="actual-price">₹344</span>
+                                    <span class="current-price">₹295</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <p>The subject maintains a list of observers and notifies them of any changes.</p><pre><code class="language-plaintext">class NewsAgency implements Subject {
+
+ &nbsp;&nbsp;&nbsp;private array $observers = [];
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function detach(Observer $observer): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers = array_filter($this→observers, fn($o) =&gt; $o !== $observer);
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function notify(): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update("New news available!");
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Step 3: Create Concrete Observers</strong></p><p>Observers implement the update method to receive notifications.</p><pre><code class="language-plaintext">class NewsSubscriber implements Observer {
+ &nbsp;&nbsp;&nbsp;public function update(string $event): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Received update: $event\n";
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre>
+            
+                
+            
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4oe2GJ3" target="_blank" rel="noopener sponsored" data-product="XCape FreeFlo Pump | High-Pressure Tyre Inflator Up to 120 PSI | Durable Metal Body with Foldable Base for Stability | Universal Valve Compatibility">
+                                <img src="https://m.media-amazon.com/images/I/414FmuvmunL._SX679_.jpg" alt="XCape FreeFlo Pump | High-Pressure Tyre Inflator Up to 120 PSI | Durable Metal Body with Foldable Base for Stability | Universal Valve Compatibility">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4oe2GJ3" target="_blank" rel="noopener sponsored" data-product="XCape FreeFlo Pump | High-Pressure Tyre Inflator Up to 120 PSI | Durable Metal Body with Foldable Base for Stability | Universal Valve Compatibility">XCape FreeFlo Pump | High-Pressure Tyre Inflator Up to 120 PSI | Durable Metal Body with Foldable Base for Stability | Universal Valve Compatibility</a>
+                            </div>
+                            <div class="discount-badge">Now 49% Off</div>
+                            <a href="https://amzn.to/4oe2GJ3" target="_blank" class="buy-button" rel="noopener sponsored" data-product="XCape FreeFlo Pump | High-Pressure Tyre Inflator Up to 120 PSI | Durable Metal Body with Foldable Base for Stability | Universal Valve Compatibility">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1598</span>
+                                    <span class="current-price">₹819</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p><strong>Usage Example</strong></p><pre><code class="language-plaintext">$agency = new NewsAgency();
+$subscriber = new NewsSubscriber();
+$agency→attach($subscriber);
+$agency→notify(); // Outputs: Received update: New news available!</code></pre><p><strong>3. Decorator Pattern</strong></p><p>The Decorator Pattern allows you to dynamically add behavior to objects. This is achieved by wrapping an object with a decorator class, enabling enhanced functionality without altering the original class.</p><p><strong>Step 1: Define the Component Interface</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3oDfwqN" target="_blank" rel="noopener sponsored" data-product="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">
+                                <img src="https://m.media-amazon.com/images/I/51u9vPziVfS._SX679_.jpg" alt="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3oDfwqN" target="_blank" rel="noopener sponsored" data-product="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium</a>
+                            </div>
+                            <div class="discount-badge">Now 5% Off</div>
+                            <a href="https://amzn.to/3oDfwqN" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Prestige Omega Deluxe Granite Flat Dosa Tawa, 280 MM, Black, Aluminium">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1340</span>
+                                    <span class="current-price">₹1273</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <pre><code class="language-plaintext">interface Coffee {
+ &nbsp;&nbsp;&nbsp;public function cost(): float;
+}</code></pre><p><strong>Step 2: Create a Concrete Component</strong></p><p>Implement the core functionality in a concrete class.</p><pre><code class="language-plaintext">class SimpleCoffee implements Coffee {
+ &nbsp;&nbsp;&nbsp;public function cost(): float {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 2.00;
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Step 3: Create the Decorator Base Class</strong></p>
+            
+                
+            <p>The base class for decorators should implement the same interface and hold a reference to a Coffee object.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3YyMO9N" target="_blank" rel="noopener sponsored" data-product="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White">
+                                <img src="https://m.media-amazon.com/images/I/6131fzwXapL._SX679_.jpg" alt="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3YyMO9N" target="_blank" rel="noopener sponsored" data-product="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White">V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White</a>
+                            </div>
+                            <div class="discount-badge">Now 47% Off</div>
+                            <a href="https://amzn.to/3YyMO9N" target="_blank" class="buy-button" rel="noopener sponsored" data-product="V-Guard Divino DG Geyser 15 Litre Water Heater for Home | Digital Display | 5 Star Rating | Vitreous Enamel Coating | Advanced 4 Layer Safety | Suitable for Hard Water &amp; High-rise Building | White">
+                                <span class="product-price">
+                                    <span class="actual-price">₹12500</span>
+                                    <span class="current-price">₹6639</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><pre><code class="language-plaintext">abstract class CoffeeDecorator implements Coffee {
+
+ &nbsp;&nbsp;&nbsp;protected Coffee $coffee;
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function __construct(Coffee $coffee) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→coffee = $coffee;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;public function cost(): float {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→coffee→cost();
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Step 4: Create Concrete Decorators</strong></p><p>Implement decorators that extend the functionality of the original object.</p><pre><code class="language-plaintext">class MilkDecorator extends CoffeeDecorator {
+ &nbsp;&nbsp;&nbsp;public function cost(): float {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return parent::cost() + 0.50; // Adds milk cost
+ &nbsp;&nbsp;&nbsp;}
+}
+
+class SugarDecorator extends CoffeeDecorator {
+ &nbsp;&nbsp;&nbsp;public function cost(): float {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return parent::cost() + 0.25; // Adds sugar cost
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre>
+            
+                
+            <p><strong>Usage Example</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3j5sPh0" target="_blank" rel="noopener sponsored" data-product="Mehrang Stretchable Saree Shapewear Petticoat for Women, Cotton Blended,Petticoat,Skirts for Women,Shape Wear Dress for Saree">
+                                <img src="https://m.media-amazon.com/images/I/41eKie+s2iL._UY385_.jpg" alt="Mehrang Stretchable Saree Shapewear Petticoat for Women, Cotton Blended,Petticoat,Skirts for Women,Shape Wear Dress for Saree">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3j5sPh0" target="_blank" rel="noopener sponsored" data-product="Mehrang Stretchable Saree Shapewear Petticoat for Women, Cotton Blended,Petticoat,Skirts for Women,Shape Wear Dress for Saree">Mehrang Stretchable Saree Shapewear Petticoat for Women, Cotton Blended,Petticoat,Skirts for Women,Shape Wear Dress for Saree</a>
+                            </div>
+                            <div class="discount-badge">Now 87% Off</div>
+                            <a href="https://amzn.to/3j5sPh0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Mehrang Stretchable Saree Shapewear Petticoat for Women, Cotton Blended,Petticoat,Skirts for Women,Shape Wear Dress for Saree">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1699</span>
+                                    <span class="current-price">₹229</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><pre><code class="language-plaintext">$coffee = new SimpleCoffee();
+echo "Cost of simple coffee: " . $coffee→cost() . "\n";
+
+$milkCoffee = new MilkDecorator($coffee);
+echo "Cost of coffee with milk: " . $milkCoffee→cost() . "\n";
+
+$sweetMilkCoffee = new SugarDecorator($milkCoffee);
+echo "Cost of coffee with milk and sugar: " . $sweetMilkCoffee→cost() . "\n";</code></pre><p><strong>Conclusion</strong></p><p>In this article, we explored three essential design patterns: Strategy, Observer and Decorator, using PHP 8. Each pattern provides unique advantages that can significantly enhance your codebase. By applying these patterns, you can create a more modular and maintainable system, allowing for easier updates and modifications as your application evolves. Embracing design patterns is a step toward becoming a proficient PHP developer, leading to cleaner and more efficient code.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            
+                
+            </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -684,7 +1049,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a271cac95d522961d3798fd088262f5704573496648b4acd30e1e467c592cf2f">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-8106ffe85e1e087a1bab8e5014a78d1e00b395bfaa95b67bb5668926bd0fad12">
   
     
       
@@ -718,7 +1083,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -736,7 +1101,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-468bc709bfd402b5dd26d6b59bb1704351439d9690e0bba58d51b91c20dda50e">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-e0b2643d604fb90c5465fb29554f0950691712147f04ddacbb4748d7d4ba5a49">
   
     
       
@@ -915,7 +1280,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -927,7 +1292,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

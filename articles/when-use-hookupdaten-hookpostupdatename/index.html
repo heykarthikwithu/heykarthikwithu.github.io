@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/When-to-use-hook_update_N-and-hook_post_update_NAME.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,25 +643,25 @@
 
 <div class="pb-image-caption">When to use hook_update_N &amp; hook_post_update_NAME?</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In this article, we are going to learn when to use <code>hook_update_N</code> and <code>hook_post_update_NAME</code>. In general, I was using <code>hook_update_N</code> for any <strong>database-related</strong> changes or with any <strong><a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> additions or updates</strong>. And I was using <code>hook_post_update_NAME</code> for any <strong>content <a href="/articles/cosmology-and-creation-vedas" title="Read about Cosmology And Creation In The Vedas">creation</a> or updating</strong> or for the <strong>creation or updating any <a href="/articles/auto-tagging-taxonomy-terms-drupal7" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms</strong> etc, sometimes for <strong>clearing site caches</strong> as well.</p><p>But, let’s have a check like <strong>why Drupal is offering us these two features</strong> and what is the flow of execution of these two.</p><p>I have <strong>checked few core modules</strong> and a <strong>few contributed modules</strong> and understood that In a few of the modules there is <strong>no clear separation in the usage</strong> of these two hooks and in a few of the modules <code>hook_update_N</code> is used to modify field definitions and <code>hook_post_update_NAME</code> is used for creating or updating data.</p><p>I have <strong>gone through a few of the articles and documentations</strong> and understood that within <code>hook_update_N</code> it's better to do config or database related changes and in the <code>hook_post_update_NAME</code> it's better to do entity changes or content changes or something else.</p><p>To <strong>get to know more about about</strong>, had a check in the drupal core code and found the <code>DbUpdateController</code> class, in which <code>triggerBatch</code> method is doing the stuff on running <code>https://drupal.local/update.php</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In this article, we are going to learn when to use <code>hook_update_N</code> and <code>hook_post_update_NAME</code>. In general, I was using <code>hook_update_N</code> for any <strong>database-related</strong> changes or with any <strong><a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> additions or updates</strong>. And I was using <code>hook_post_update_NAME</code> for any <strong>content <a href="/articles/cosmology-and-creation-vedas" title="Read about Cosmology And Creation In The Vedas">creation</a> or updating</strong> or for the <strong>creation or updating any <a href="/articles/auto-tagging-taxonomy-terms-drupal7" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms</strong> etc, sometimes for <strong>clearing site caches</strong> as well.</p><p>But, let’s have a check like <strong>why Drupal is offering us these two features</strong> and what is the flow of execution of these two.</p><p>I have <strong>checked few core modules</strong> and a <strong>few contributed modules</strong> and understood that In a few of the modules there is <strong>no clear separation in the usage</strong> of these two hooks and in a few of the modules <code>hook_update_N</code> is used to modify field definitions and <code>hook_post_update_NAME</code> is used for creating or updating data.</p><p>I have <strong>gone through a few of the articles and documentations</strong> and understood that within <code>hook_update_N</code> it's better to do config or database related changes and in the <code>hook_post_update_NAME</code> it's better to do entity changes or content changes or something else.</p><p>To <strong>get to know more about about</strong>, had a check in the drupal core code and found the <code>DbUpdateController</code> class, in which <code>triggerBatch</code> method is doing the stuff on running <code>https://drupal.local/update.php</code></p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/48QVZEp" target="_blank" rel="noopener sponsored" data-product="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)">
-                                <img src="https://m.media-amazon.com/images/I/619lW2YtVhL._SX679_.jpg" alt="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)">
+                            <a href="https://amzn.to/3XEvaOT" target="_blank" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
+                                <img src="https://m.media-amazon.com/images/I/71IHKbuambL._SY385_.jpg" alt="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/48QVZEp" target="_blank" rel="noopener sponsored" data-product="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)">iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)</a>
+                                <a href="https://amzn.to/3XEvaOT" target="_blank" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack</a>
                             </div>
-                            <div class="discount-badge">Now 17% Off</div>
-                            <a href="https://amzn.to/48QVZEp" target="_blank" class="buy-button" rel="noopener sponsored" data-product="iQOO 12 5G (Legend, 12GB RAM, 256GB Storage)">
+                            <div class="discount-badge">Now 29% Off</div>
+                            <a href="https://amzn.to/3XEvaOT" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Meat Up Dog Treats Biscuit Real Chicken Flavour, All Life Stages, 1Kg ,Total 2 Kg Pack">
                                 <span class="product-price">
-                                    <span class="actual-price">₹59999</span>
-                                    <span class="current-price">₹49999</span>
+                                    <span class="actual-price">₹419</span>
+                                    <span class="current-price">₹298.30</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,12 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
+            
+                
+            
             
                 
             
@@ -774,7 +780,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c95629ed95220ac2d5864367967e41e8820fe5295d32aa4d550c762bd8e068d0">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1724561b867340bb27867c5d2833c202bf1e21ad541d328575525fa24398297d">
   
     
       
@@ -808,7 +814,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -826,7 +832,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-35870d460f7c5f3aabad3fe7b92f39fef9d709aaae07f1aee50f7508f2496631">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-04b1887744136bb9ecf346a63ec2d2df609647c5e1ae422be6e5c15ed5d0beaf">
   
     
       
@@ -1005,7 +1011,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1017,7 +1023,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

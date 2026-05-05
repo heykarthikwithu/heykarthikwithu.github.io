@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/testcase.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T14:58:02+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,20 +643,182 @@
 
 <div class="pb-image-caption">Drupal7 Simple Test case in Custom Module</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Why to write test case? Very simple, in one word, Its waste of time and effort of checking something we changed in code and that effects other part and to make sure every time what change we make that should not effect any other code, so this task can be done by our test cases</p><p><strong>In this article, giving a simple test example to create a drupal test case</strong></p><ul>                                    <li>Create a new PHP class that defines a test</li>                                    <li>Provide Drupal with meta-data about your test</li>                                    <li>Run your test to see if it works</li>                                </ul><h4><strong>1. Start with creating a module</strong></h4><p>Create a module "Simple Test" inside <code>sites/all/modules/custom/simple_test</code></p><p>Create <code>simple_test.info</code> with the below content</p><pre>  name = Simple test  core = 7.x</pre><p>Create <code>simple_test.module</code> with the below content</p><pre>  &lt;?php  function simple_test_menu() {    $items = array();    $items['simple_test'] = array(      'title' =&gt; 'Simple Test',      'access callback' =&gt; TRUE,      'page callback' =&gt; 'simple_test_page',      'type' =&gt; MENU_NORMAL_ITEM,      'menu' =&gt; 'navigation',    );    return $items;  }  function simple_test_page() {    return t('Welcome to Drupal. Its simple_test..!');  }</pre><p>Goto the modules page <code>admin/modules</code> and enable the Simple Test module</p><p>Next goto the page which you created just now in the module <code>/simple_test</code>, you can see "Welcome to Drupal. Its simple_test..!" this test which you have returned.</p><p>And, this is what we will be testing now</p><h4><strong>2. Use "DrupalWebTestCase"</strong></h4>
-                    
-                        
-                    <p>A module can have one or more test cases, they can in single file or in many other files</p><p>All test files should have am extention as <code>.test</code> and should be named as <code>MODULENAME.test</code></p><p>Create your new test case <code>simple_test/tests/simple_test.test</code> file.</p><p>All functional tests in Drupal should extend the <code>DrupalWebTestCase</code> class which will provide the utility functions used to drive the test browser, helper functions for interacting with a Drupal <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> and all the assertions we will use to perform our actual tests.</p><p>Add the below code to your <code>simple_test.test</code>. </p><pre>  &lt;?php  class SimpleTest extends DrupalWebTestCase {  }</pre><p>Add a <code>getInfo()</code> method to your <code>SimpleTest</code> class. This method returns an array that provides meta-data about our test that the SimpleTest module can use when displaying our test in the UI. This method is required in order for your test to work. This <code>getInfo()</code> method looks like shown below. </p><pre>  public static function getInfo() {    return array(      'name' =&gt; 'Simple Test',      'description' =&gt; 'Tests for the Simple Test module.',      'group' =&gt; 'Simple Test Group',    );  }</pre><p>Now add a <code>setUp()</code> method to <code>SimpleTest</code>. This method is called when the system is preparing the <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a> for running our tests. In this case, we need to ensure that our module is enable during setup so that the page we want to test is available. We can do this by calling the parent classes's setUp() method and passing it an array of modules we want enabled. This <code>setUp()</code> method looks like this</p><pre>  public function setUp() {   parent::setUp(array('simple_test'));  }</pre><p>Add a <code>test*()</code> method to our class. Each test case can have one or more methods whose names are prefixed with the string test. Each of these methods will be automatically called by the SimpleTest test runner and should contain the various assertions required in order to demonstrate that this test is passing. This example will use the <code>DrupalWebTestCase::drupalGet()</code> method in order to tell the internal browser to navigate to the URL <code>/helloworld</code>. And then use the <code>DrupalWebTestCase::assertText()</code> method to verify that the string, "Hello World ...", exists somewhere in the HTML output of the page the internal browser is currently looking at.</p><pre>public function test_your_simple_test() {  $this→drupalGet('simple_test');  $this→assertText('Welcome to Drupal. Its simple_test..!', 'The page content is present.');}</pre><p>And last, we need to tell Drupal about our new test. Update your <code>simple_test.info</code> file and add the following line so that after clearing the cache the registry will contain a reference to our new <code>SimpleTest</code> class.<br>                            </p><pre>files[] = tests/helloworld.test</pre><p><br></p>
-                    
-                        
-                    
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Why to write test case? Very simple, in one word, Its waste of time and effort of checking something we changed in code and that effects other part and to make sure every time what change we make that should not effect any other code, so this task can be done by our test cases</p><p><strong>In this article, giving a simple test example to create a drupal test case</strong></p><ul><li data-list-item-id="ec845292dddfad52c56f7ba6cb91f4de8">Create a new PHP class that defines a test</li><li data-list-item-id="ece435e436ece1ce668aee76a684e42bc">Provide Drupal with meta-data about your test</li><li data-list-item-id="e4671f1309b4f395b5a3edbcf65041a8c">Run your test to see if it works</li></ul><p><strong>1. Start with creating a module</strong></p><p>Create a module "Simple Test" inside <code>sites/all/modules/custom/simple_test</code></p><p>Create <code>simple_test.info</code> with the below content</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4t9CBgS" target="_blank" rel="noopener sponsored" data-product="Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool">
+                                <img src="https://m.media-amazon.com/images/I/71SSpHadzXL._SL1500_.jpg" alt="Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4t9CBgS" target="_blank" rel="noopener sponsored" data-product="Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool">Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool</a>
+                            </div>
+                            <div class="discount-badge">Now 39% Off</div>
+                            <a href="https://amzn.to/4t9CBgS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Ganesh 14-in-1 Multipurpose Chopper – All-in-One Kitchen Cutting Tool">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1088.00</span>
+                                    <span class="current-price">₹669.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        
-        
+                
+            <pre>  name = Simple test<br>  core = 7.x</pre><p>Create <code>simple_test.module</code> with the below content</p><pre>  &lt;?php<br>  function simple_test_menu() {<br>    $items = array();<br>    $items['simple_test'] = array(<br>      'title' =&gt; 'Simple Test',<br>      'access callback' =&gt; TRUE,<br>      'page callback' =&gt; 'simple_test_page',<br>      'type' =&gt; MENU_NORMAL_ITEM,<br>      'menu' =&gt; 'navigation',<br>    );<br>    return $items;<br>  }<br>  function simple_test_page() {<br>    return t('Welcome to Drupal. Its simple_test..!');<br>  }</pre><p>Goto the modules page <code>admin/modules</code> and enable the Simple Test module</p><p>Next goto the page which you created just now in the module <code>/simple_test</code>, you can see "Welcome to Drupal. Its simple_test..!" this test which you have returned.</p><p>And, this is what we will be testing now</p><p><strong>2. Use "DrupalWebTestCase"</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4112bbf" target="_blank" rel="noopener sponsored" data-product="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">
+                                <img src="https://m.media-amazon.com/images/I/71RTL1vn6TL._SX679_.jpg" alt="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4112bbf" target="_blank" rel="noopener sponsored" data-product="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 58% Off</div>
+                            <a href="https://amzn.to/4112bbf" target="_blank" class="buy-button" rel="noopener sponsored" data-product="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹72999</span>
+                                    <span class="current-price">₹30999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h4><strong>3. Run Test.</strong></h4><p>Clear the cache so Drupal locates our new test(s). Navigate to Configuration &gt; Performance (admin/config/development/performance) in the Toolbar and then clicking the "Clear all caches" button.</p><p>Navigate to Modules (admin/modules) in the Toolbar. Enable the Testing module in the Core section.</p><p>Navigate to Configuration &gt; Testing (admin/config/development/testing).</p><p>Select the checkbox for the "SimpleTest" test to run all tests in this group, or alternately tip the drop down open and choose the individual test case you want to run.</p><p>Click the "Run tests" button.</p><p>A new page will open and display a progress bar while your tests run.</p><p>Once completed, you will be directed to a page with a table that shows the results of your tests.</p>
-</div>
+                
+            <p>A module can have one or more test cases, they can in single file or in many other files</p><p>All test files should have am extention as <code>.test</code> and should be named as <code>MODULENAME.test</code></p><p>Create your new test case <code>simple_test/tests/simple_test.test</code> file.</p><p>All functional tests in Drupal should extend the <code>DrupalWebTestCase</code> class which will provide the utility functions used to drive the test browser, helper functions for interacting with a Drupal <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> and all the assertions we will use to perform our actual tests.</p><p>Add the below code to your <code>simple_test.test</code>.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3QfW5P7" target="_blank" rel="noopener sponsored" data-product="Fujifilm Instax Mini Evo Hybrid Camera Premium Edition with 20 Shots of Stone Gray Film and 100 Different Expressions-(Black)">
+                                <img src="https://m.media-amazon.com/images/I/61tSR9mjE+L._SX679_.jpg" alt="Fujifilm Instax Mini Evo Hybrid Camera Premium Edition with 20 Shots of Stone Gray Film and 100 Different Expressions-(Black)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3QfW5P7" target="_blank" rel="noopener sponsored" data-product="Fujifilm Instax Mini Evo Hybrid Camera Premium Edition with 20 Shots of Stone Gray Film and 100 Different Expressions-(Black)">Fujifilm Instax Mini Evo Hybrid Camera Premium Edition with 20 Shots of Stone Gray Film and 100 Different Expressions-(Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 13% Off</div>
+                            <a href="https://amzn.to/3QfW5P7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Fujifilm Instax Mini Evo Hybrid Camera Premium Edition with 20 Shots of Stone Gray Film and 100 Different Expressions-(Black)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹22999</span>
+                                    <span class="current-price">₹19999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <pre>  &lt;?php  class SimpleTest extends DrupalWebTestCase {  }</pre><p>Add a <code>getInfo()</code> method to your <code>SimpleTest</code> class. This method returns an array that provides meta-data about our test that the SimpleTest module can use when displaying our test in the UI. This method is required in order for your test to work. This <code>getInfo()</code> method looks like shown below.</p><pre>  public static function getInfo() {<br>    return array(<br>      'name' =&gt; 'Simple Test',<br>      'description' =&gt; 'Tests for the Simple Test module.',<br>      'group' =&gt; 'Simple Test Group',<br>    );<br>  }</pre><p>Now add a <code>setUp()</code> method to <code>SimpleTest</code>. This method is called when the system is preparing the <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">environment</a> for running our tests. In this case, we need to ensure that our module is enable during setup so that the page we want to test is available. We can do this by calling the parent classes's setUp() method and passing it an array of modules we want enabled. This <code>setUp()</code> method looks like this</p><pre>  public function setUp() {<br>   parent::setUp(array('simple_test'));<br>  }</pre><p>Add a <code>test*()</code> method to our class. Each test case can have one or more methods whose names are prefixed with the string test. Each of these methods will be automatically called by the SimpleTest test runner and should contain the various assertions required in order to demonstrate that this test is passing. This example will use the <code>DrupalWebTestCase::drupalGet()</code> method in order to tell the internal browser to navigate to the URL <code>/helloworld</code>. And then use the <code>DrupalWebTestCase::assertText()</code> method to verify that the string, "Hello World ...", exists somewhere in the HTML output of the page the internal browser is currently looking at.</p><pre>public function test_your_simple_test() {<br>  $this→drupalGet('simple_test');<br>  $this→assertText('Welcome to Drupal. Its simple_test..!', 'The page content is present.');<br>}</pre><p>And last, we need to tell Drupal about our new test. Update your <code>simple_test.info</code> file and add the following line so that after clearing the cache the registry will contain a reference to our new <code>SimpleTest</code> class.<br>&nbsp;</p><pre>files[] = tests/helloworld.test</pre><p><strong>3. Run Test.</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4gtfG9o" target="_blank" rel="noopener sponsored" data-product="Titan Raga New You Quartz Analog Mother of Pearl Dial with Rose Quartz dial Cover Gold Stainless Steel Watch for Women-95192WM01">
+                                <img src="https://m.media-amazon.com/images/I/61HeOIyf5mL._SX679_.jpg" alt="Titan Raga New You Quartz Analog Mother of Pearl Dial with Rose Quartz dial Cover Gold Stainless Steel Watch for Women-95192WM01">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4gtfG9o" target="_blank" rel="noopener sponsored" data-product="Titan Raga New You Quartz Analog Mother of Pearl Dial with Rose Quartz dial Cover Gold Stainless Steel Watch for Women-95192WM01">Titan Raga New You Quartz Analog Mother of Pearl Dial with Rose Quartz dial Cover Gold Stainless Steel Watch for Women-95192WM01</a>
+                            </div>
+                            <div class="discount-badge">Now 30% Off</div>
+                            <a href="https://amzn.to/4gtfG9o" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Titan Raga New You Quartz Analog Mother of Pearl Dial with Rose Quartz dial Cover Gold Stainless Steel Watch for Women-95192WM01">
+                                <span class="product-price">
+                                    <span class="actual-price">₹22495</span>
+                                    <span class="current-price">₹15746</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <p>Clear the cache so Drupal locates our new test(s). Navigate to Configuration &gt; Performance (admin/config/development/performance) in the Toolbar and then clicking the "Clear all caches" button.</p><p>Navigate to Modules (admin/modules) in the Toolbar. Enable the Testing module in the Core section.</p><p>Navigate to Configuration &gt; Testing (admin/config/development/testing).</p><p>Select the checkbox for the "SimpleTest" test to run all tests in this group, or alternately tip the drop down open and choose the individual test case you want to run.</p><p>Click the "Run tests" button.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3R6GdzI" target="_blank" rel="noopener sponsored" data-product="Philips HR3705/10 300 Watt Lightweight Hand Mixer, Blender with 5 speed control settings, stainless steel accessories and 2 years warranty(black color)">
+                                <img src="https://m.media-amazon.com/images/I/41tDUmnDITL.jpg" alt="Philips HR3705/10 300 Watt Lightweight Hand Mixer, Blender with 5 speed control settings, stainless steel accessories and 2 years warranty(black color)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3R6GdzI" target="_blank" rel="noopener sponsored" data-product="Philips HR3705/10 300 Watt Lightweight Hand Mixer, Blender with 5 speed control settings, stainless steel accessories and 2 years warranty(black color)">Philips HR3705/10 300 Watt Lightweight Hand Mixer, Blender with 5 speed control settings, stainless steel accessories and 2 years warranty(black color)</a>
+                            </div>
+                            <div class="discount-badge">Now 23% Off</div>
+                            <a href="https://amzn.to/3R6GdzI" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Philips HR3705/10 300 Watt Lightweight Hand Mixer, Blender with 5 speed control settings, stainless steel accessories and 2 years warranty(black color)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹2595</span>
+                                    <span class="current-price">₹1999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <p>A new page will open and display a progress bar while your tests run.</p><p>Once completed, you will be directed to a page with a table that shows the results of your tests.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -678,7 +840,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-b213ebfd2e30f4d94d6f7d6ed1afbfbc48564f5b4aabdb9180d305f810beeb08">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-071acc6538c37cdce00aaba010b5c34a9cc7d98590f955cca767838b8dbc3201">
   
     
       
@@ -712,7 +874,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -730,7 +892,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9566868d531770c459b5dd368f50c9d5d311a57e490f842b256f1998b2c1c085">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-fdc2a575aad4f18897a614687cd2d0268b7c7fcc3f8cbe8aefb8ade5f78fe3ab">
   
     
       
@@ -909,7 +1071,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -921,7 +1083,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

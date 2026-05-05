@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/when-and-how-to-use-each-design-pattern-in-php.webp"
             },
             "datePublished": "2024-11-04T06:51:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">When and How to Use Each Design Pattern in PHP</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
                     
                         
                     <p><strong>When to Use</strong></p><ul> <li>The Observer pattern is useful when you have one-to-many relationships between objects.</li> <li>When one object changes its state, all its dependents should be notified and updated automatically, which is common in event-driven systems.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void;</code></p><p><code>}</code></p><p><code>class EventObserver implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Received event: $event\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class EventSource {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update($event);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$eventSource = new EventSource();</code></p><p><code>$observer = new EventObserver();</code></p><p><code>$eventSource→attach($observer);</code></p><p><code>$eventSource→notify('Event 1');</code></p>
@@ -740,24 +740,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3P4a2T7" target="_blank" rel="noopener sponsored" data-product="realme Pad 2 8 GB RAM 256 GB ROM 11.5 inch with Wi-Fi+4G Tablet (Inspiration Green)">
-                                <img src="https://m.media-amazon.com/images/I/81FcsTL9UOL._SL1500_.jpg" alt="realme Pad 2 8 GB RAM 256 GB ROM 11.5 inch with Wi-Fi+4G Tablet (Inspiration Green)">
+                            <a href="https://amzn.to/3ZAqNWw" target="_blank" rel="noopener sponsored" data-product="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">
+                                <img src="https://m.media-amazon.com/images/I/71VCZxocRQL._UY385_.jpg" alt="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3P4a2T7" target="_blank" rel="noopener sponsored" data-product="realme Pad 2 8 GB RAM 256 GB ROM 11.5 inch with Wi-Fi+4G Tablet (Inspiration Green)">realme Pad 2 8 GB RAM 256 GB ROM 11.5 inch with Wi-Fi+4G Tablet (Inspiration Green)</a>
+                                <a href="https://amzn.to/3ZAqNWw" target="_blank" rel="noopener sponsored" data-product="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit</a>
                             </div>
-                            <div class="discount-badge">Now 36% Off</div>
-                            <a href="https://amzn.to/3P4a2T7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="realme Pad 2 8 GB RAM 256 GB ROM 11.5 inch with Wi-Fi+4G Tablet (Inspiration Green)">
+                            <div class="discount-badge">Now 85% Off</div>
+                            <a href="https://amzn.to/3ZAqNWw" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">
                                 <span class="product-price">
-                                    <span class="actual-price">₹32999</span>
-                                    <span class="current-price">₹20999</span>
+                                    <span class="actual-price">₹1999</span>
+                                    <span class="current-price">₹309</span>
                                 </span>
 
                                 <span class="product-store">
@@ -797,7 +803,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-65e9357be37f91d354b79d6c828e922fd4e32745c13b789085fe6c9f301c3769">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-20343a9f52450b8ca84d3ab6e741909ec3bde55d0571513daa43795a9668cf72">
   
     
       
@@ -831,7 +837,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -849,7 +855,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-049bfa11ea5183aac3a7298962f420f7e8e2f3ab987a35fdf6b447bb41a36f6e">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8dfe74c149e4717836696bbd7f91624516952cb03114c75f2dc0aaf3d2587388">
   
     
       
@@ -1028,7 +1034,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1040,7 +1046,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

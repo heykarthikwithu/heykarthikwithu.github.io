@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/migrating-from-jsstream-to-vimeo-using-drupal-migration-api.webp"
             },
             "datePublished": "2024-12-13T08:43:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Migrating from JSStream to Vimeo Using Drupal Migration API</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
         
             
         <h2>Key Concepts</h2><ol> <li><strong>Drupal Migration API</strong>: This API allows importing content from external sources (like JSStream) and mapping it to Drupal entities (e.g., media entities).</li> <li><strong>Vimeo API</strong>: The Vimeo API allows programmatic interaction with Vimeo to upload videos, set metadata, and manage video privacy and settings.</li> <li><strong>Media Entities</strong>: In Drupal, media entities represent multimedia content (images, videos, etc.). We’ll use the <strong>Video media bundle</strong> to store Vimeo videos.</li> </ol><h2>Prerequisites</h2><p>Before proceeding with the migration, ensure you have the following setup:</p><ul> <li><strong>Drupal </strong>latest version&nbsp;installed.</li> <li>The required migration modules enabled: <tt>migrate</tt>, <tt>migrate_plus</tt>, <tt>migrate_tools</tt>.</li> <li>A <strong>Vimeo Developer</strong> account to get <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>Access Token</strong>.</li> <li>Video files and metadata exported from <strong>JSStream</strong> in a CSV or JSON format.</li> </ul><h2>1. Install Required Modules</h2><p>First, install the necessary modules for migration:</p><p><code>composer require drupal/migrate drupal/migrate_plus drupal/migrate_tools</code></p><p>Then enable the modules:</p><p><code>drush en migrate migrate_plus migrate_tools</code></p><h2>2. Define Migration Configuration</h2>
@@ -740,24 +740,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4ue8JQS" target="_blank" rel="noopener sponsored" data-product="OnePlus Watch 2R – Wear OS Smartwatch with 100-Hour Battery">
-                                <img src="https://m.media-amazon.com/images/I/71-fLbOw9eL._SL1500_.jpg" alt="OnePlus Watch 2R – Wear OS Smartwatch with 100-Hour Battery">
+                            <a href="https://amzn.to/3K5HHJr" target="_blank" rel="noopener sponsored" data-product="Lymio Polo T Shirt for Men || Men Casual T-Shirt || Available in Combo Packs (Polo 40 to 43)">
+                                <img src="https://m.media-amazon.com/images/I/71CV85vxClL._SX679_.jpg" alt="Lymio Polo T Shirt for Men || Men Casual T-Shirt || Available in Combo Packs (Polo 40 to 43)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4ue8JQS" target="_blank" rel="noopener sponsored" data-product="OnePlus Watch 2R – Wear OS Smartwatch with 100-Hour Battery">OnePlus Watch 2R – Wear OS Smartwatch with 100-Hour Battery</a>
+                                <a href="https://amzn.to/3K5HHJr" target="_blank" rel="noopener sponsored" data-product="Lymio Polo T Shirt for Men || Men Casual T-Shirt || Available in Combo Packs (Polo 40 to 43)">Lymio Polo T Shirt for Men || Men Casual T-Shirt || Available in Combo Packs (Polo 40 to 43)</a>
                             </div>
-                            <div class="discount-badge">Now 33% Off</div>
-                            <a href="https://amzn.to/4ue8JQS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OnePlus Watch 2R – Wear OS Smartwatch with 100-Hour Battery">
+                            <div class="discount-badge">Now 85% Off</div>
+                            <a href="https://amzn.to/3K5HHJr" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lymio Polo T Shirt for Men || Men Casual T-Shirt || Available in Combo Packs (Polo 40 to 43)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹19999.00</span>
-                                    <span class="current-price">₹13499.00</span>
+                                    <span class="actual-price">₹4999</span>
+                                    <span class="current-price">₹749</span>
                                 </span>
 
                                 <span class="product-store">
@@ -807,7 +813,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-eff999deeb003a54a1845bca2e2b1d0131d013dfda90595992fd0ed23ad8b876">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c4f92f1caf9562baa35247002f16444b98b9d3167596a0d468260905177361d6">
   
     
       
@@ -841,7 +847,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -859,7 +865,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-733edc8852de5dc8dc4924d06472d93ed468a4f0d44f7a25b452b81e119a5c01">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-b3925b341d2f706bd88134005c3054b9a2289f5d3c4930f948673dd64d94a7c6">
   
     
       
@@ -1038,7 +1044,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1050,7 +1056,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

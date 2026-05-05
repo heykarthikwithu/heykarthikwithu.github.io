@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/lando-drupal.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-04-18T14:43:34+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,14 +643,112 @@
 
 <div class="pb-image-caption">Multisite Local environment setup with Lando &amp; Drupal</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>As we have seen in the earlier article to setup the Local environment with Lando and Drupal, Now let's see how we set up the multisite with the lando.</p><p>And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection of many websites. At a high level we can say Same Code with <a href="/articles/different-spices-are-used-make-garam-masala-mix" title="Read about Different Spices Are Used To Make A Garam Masala Mix">Different</a> databases and Different Sites.</p><p>We already know Lando is a <a href="/articles/colima-similar-tool-docker-desktop-drupal-development" title="Read about Colima Similar Tool Like Docker Desktop For Drupal Development">development</a> tool (as discussed in an earlier article), which makes drupal development much quicker and easier. Lando provides an option to configure this from the <code>.lando.yml</code> file.</p><p>Let’s see in-details to set up a multisite. To setup Drupal multisite on lando you need to do below things:</p><p>In your <code>.lando.yml</code> you need to add proxies for each multisite in the appserver.</p><p>Have <code>settings.lando.php</code> file within your sub-directory (example: docroot/sites/drupal9_site_1/) which would need settings to connect to the respective <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a>.</p><h3>1. Changes in <code>.lando.yml</code> file</h3>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>As we have seen in the earlier article to setup the Local environment with Lando and Drupal, Now let's see how we set up the multisite with the lando.</p><p>And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection of many websites. At a high level we can say Same Code with <a href="/articles/different-spices-are-used-make-garam-masala-mix" title="Read about Different Spices Are Used To Make A Garam Masala Mix">Different</a> databases and Different Sites.</p><p>We already know Lando is a <a href="/articles/colima-similar-tool-docker-desktop-drupal-development" title="Read about Colima Similar Tool Like Docker Desktop For Drupal Development">development</a> tool (as discussed in an earlier article), which makes drupal development much quicker and easier. Lando provides an option to configure this from the <code>.lando.yml</code> file.</p><p>Let’s see in-details to set up a multisite. To setup Drupal multisite on lando you need to do below things:</p><p>In your <code>.lando.yml</code> you need to add proxies for each multisite in the appserver.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4851m6o" target="_blank" rel="noopener sponsored" data-product="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)">
+                                <img src="https://m.media-amazon.com/images/I/71-jKID9hgL._SY879_.jpg" alt="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4851m6o" target="_blank" rel="noopener sponsored" data-product="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)">LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 33% Off</div>
+                            <a href="https://amzn.to/4851m6o" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LG 8 Kg, 5 Star, Wi-Fi, Direct Drive Technology, Steam Wash, 6 Motion DD, Fully-Automatic Front Load Washing Machine (FHB1208Z4M, Allergy Care, In-Built Heater, Touch Panel, Middle Black)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹50490</span>
+                                    <span class="current-price">₹33990</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+                
+            <p>Have <code>settings.lando.php</code> file within your sub-directory (example: docroot/sites/drupal9_site_1/) which would need settings to connect to the respective <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a>.</p><p><strong>1. Changes in </strong><code><strong>.lando.yml</strong></code><strong> file</strong></p><p>You need to add proxies for each multisite in the appserver.</p><pre>proxy:<br>appserver:<br>- drupal9.site-1.local<br>- drupal9.site-2.local<br>services:<br>    drupal9_site_1:<br>        type: mysql<br>    drupal9_site_2:<br>        type: mysql</pre><p><strong>2. Configure each </strong><code><strong>settings.lando.php</strong></code><strong> file</strong></p><p>You need to have <code>settings.lando.php</code> file within your sub-directory and should add database connection settings on each file.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3ATAHe9" target="_blank" rel="noopener sponsored" data-product="SUNFICON Cover storage box Large Makeup Organizer Makeup Storage Tray Cosmetic Holder">
+                                <img src="https://f.media-amazon.com/images/I/718WESs286L._SX679_.jpg" alt="SUNFICON Cover storage box Large Makeup Organizer Makeup Storage Tray Cosmetic Holder">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3ATAHe9" target="_blank" rel="noopener sponsored" data-product="SUNFICON Cover storage box Large Makeup Organizer Makeup Storage Tray Cosmetic Holder">SUNFICON Cover storage box Large Makeup Organizer Makeup Storage Tray Cosmetic Holder</a>
+                            </div>
+                            <div class="discount-badge">Now 66% Off</div>
+                            <a href="https://amzn.to/3ATAHe9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="SUNFICON Cover storage box Large Makeup Organizer Makeup Storage Tray Cosmetic Holder">
+                                <span class="product-price">
+                                    <span class="actual-price">₹27299</span>
+                                    <span class="current-price">₹9387</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <p>You need to add proxies for each multisite in the appserver.</p><pre>proxy:appserver:- drupal9.site-1.local- drupal9.site-2.localservices:    drupal9_site_1:        type: mysql    drupal9_site_2:        type: mysql</pre><h3>2. Configure each <code>settings.lando.php</code> file</h3>
+                
+            <pre>$databases['default'] = array (<br>    'default' =&gt; array (<br>        'driver' =&gt; 'mysql',<br>        'database' =&gt; 'database',<br>        'username' =&gt; 'mysql',<br>        'password' =&gt; 'password',<br>        'host' =&gt; 'password',<br>        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined services above<br>        'port' =&gt; 3306,<br>    ));</pre><p>In case, if you have huge number of multisites, You can have below code in the <code>settings.php</code> of default site.</p><pre>if (@$_ENV['LANDO'] == 'ON' &amp;&amp; file_exists(dirname(__FILE__) . '/settings.lando.php')){<br>    require(dirname(__FILE__) . '/settings.lando.php');<br>}</pre><p>And include the below code in <code>settings.lando.php</code></p><pre>$sites['drupal9.site-1.local'] = 'drupal9_site_1';<br>$sites['drupal9.site-2.local'] = 'drupal9_site_2';</pre><p>And in each subsite’s <code>settings.lando.php</code>, have below code added.</p><pre>$base_url = 'https://drupal9.site-1.local';</pre><p>So, you will have both the base path and database creds in each of the subsite’s <code>settings.lando.php</code> file</p><pre>$databases['default'] = array (<br>    'default' =&gt; array (<br>        'driver' =&gt; 'mysql',<br>        'database' =&gt; 'database',<br>        'username' =&gt; 'mysql',<br>        'password' =&gt; 'password',<br>        'host' =&gt; 'password',<br>        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined service above<br>        'port' =&gt; 3306,<br>    ));<br>$base_url = 'https://drupal9.site-1.local';</pre><p>This way by configuring lando you can run drupal 9 Multisite on your local environment. And on the configuration front you can do many other things like adding a few more sites, having different configuration of each subsite as same as in default drupal etc.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4vr3LBq" target="_blank" rel="noopener sponsored" data-product="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">
+                                <img src="https://m.media-amazon.com/images/I/41kKGEM47iL.jpg" alt="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4vr3LBq" target="_blank" rel="noopener sponsored" data-product="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000</a>
+                            </div>
+                            <div class="discount-badge">Now 10% Off</div>
+                            <a href="https://amzn.to/4vr3LBq" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">
+                                <span class="product-price">
+                                    <span class="actual-price">₹17999.00</span>
+                                    <span class="current-price">₹16190.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            
-            <p>You need to have <code>settings.lando.php</code> file within your sub-directory and should add database connection settings on each file.</p><pre>$databases['default'] = array (    'default' =&gt; array (        'driver' =&gt; 'mysql',        'database' =&gt; 'database',        'username' =&gt; 'mysql',        'password' =&gt; 'password',        'host' =&gt; 'password',        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined services above        'port' =&gt; 3306,    ));</pre><p>In case, if you have huge number of multisites, You can have below code in the <code>settings.php</code> of default site.</p><pre>if (@$_ENV['LANDO'] == 'ON' &amp;&amp; file_exists(dirname(__FILE__) . '/settings.lando.php')){    require(dirname(__FILE__) . '/settings.lando.php');}</pre><p>And include the below code in <code>settings.lando.php</code></p><pre>$sites['drupal9.site-1.local'] = 'drupal9_site_1';$sites['drupal9.site-2.local'] = 'drupal9_site_2';</pre><p>And in each subsite’s <code>settings.lando.php</code>, have below code added.</p><pre>$base_url = 'https://drupal9.site-1.local';</pre><p>So, you will have both the base path and database creds in each of the subsite’s <code>settings.lando.php</code> file</p><pre>$databases['default'] = array (    'default' =&gt; array (        'driver' =&gt; 'mysql',        'database' =&gt; 'database',        'username' =&gt; 'mysql',        'password' =&gt; 'password',        'host' =&gt; 'password',        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined service above        'port' =&gt; 3306,    ));$base_url = 'https://drupal9.site-1.local';</pre><p>This way by configuring lando you can run drupal 9 Multisite on your local environment. And on the configuration front you can do many other things like adding a few more sites, having different configuration of each subsite as same as in default drupal etc.</p>
-</div>
+                
+            </div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -674,7 +772,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-8500cfde4765ba85893634826cd02e2818a5022cfa9038768f3f7c1c01c60a2c">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-98d69eb2a36b8f22a08048160c3f0e40b5ce24552aa305b77359c76d07fe489d">
   
     
       
@@ -708,7 +806,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -726,7 +824,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-1452e2b37b0ae6562d51c6d9271713877dd973297f8f54be429dd8401f0007dd">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-6b42f4eff831182af1b3adfcb115b9dafbf877064d9d0d43ac2f3cde7ada5d59">
   
     
       
@@ -905,7 +1003,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -917,7 +1015,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/mastering-dynamic-programming-in-php-a-deep-dive-into-classic-algorithms.webp"
             },
             "datePublished": "2025-11-23T09:46:00+0530",
-            "dateModified": "2026-04-18T14:58:02+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,20 +643,187 @@
 
 <div class="pb-image-caption">Mastering Dynamic Programming in PHP: A Deep Dive into Classic Algorithms</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in <a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">algorithms</a> that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculations.</p><p>In this article, we will explore the fundamentals of Dynamic Programming in PHP 8, discuss key concepts, and solve some classic problems like the <em>Knapsack Problem</em> and <em>Longest Common Subsequence</em> (LCS). We will also provide working PHP code to demonstrate these concepts.</p><h2>What is Dynamic Programming?</h2><p>Dynamic Programming is a method for solving problems by dividing them into smaller, manageable subproblems. It is a bottom-up <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> where you solve subproblems first and use their solutions to build up the final answer. DP typically involves two main techniques:</p><ol> <li><strong>Memoization (Top-Down Approach):</strong> Storing the results of already solved subproblems in a cache (usually an array) to avoid redundant work.</li> <li><strong>Tabulation (Bottom-Up Approach):</strong> Solving the problem iteratively by filling up a table with solutions to subproblems in a systematic manner.</li> </ol><p>Dynamic Programming is applied to problems where:</p><ul> <li>Overlapping subproblems exist.</li> <li>Optimal substructure is present, meaning the optimal solution to the overall problem can be constructed from optimal solutions to subproblems.</li> </ul><p><strong>Key Concepts in Dynamic Programming</strong></p><ol> <li><strong>Overlapping Subproblems:</strong> This occurs when the problem can be divided into smaller subproblems that are solved multiple times. By solving each subproblem once and storing the results, we can improve efficiency.</li> <li><strong>Optimal Substructure:</strong> This means that the solution to the overall problem can be constructed from the solutions to its subproblems. If a problem does not have this property, Dynamic Programming is not applicable.</li> <li><strong>State Representation:</strong> This is the way you represent the problem's state, typically through an array or matrix. The state transitions represent how you can move from one state to another by taking an action.</li> </ol><h2>Solving Classic DP Problems</h2>
-                    
-                        
-                    <p>Now, let’s solve some classic DP problems to better understand the technique.</p><p><strong>1. The Knapsack Problem</strong></p><ul> <li><strong>Problem Description: </strong>Given a set of items, each with a weight and a value, determine the maximum value you can carry in a knapsack with a fixed capacity.  <ul> <li><em>Items:</em> Each item has a value and weight.</li> <li><em>Knapsack capacity:</em> The maximum weight the knapsack can carry.</li> </ul> </li> <li><strong>Goal:</strong> Maximize the total value in the knapsack without exceeding the capacity.</li> <li><strong>Solution Approach:</strong> <ul> <li>We can use DP to solve this problem.</li> <li>The idea is to maintain a table where each entry <tt>dp[i][w]</tt> represents the maximum value that can be attained with the first <tt>i</tt> items and a knapsack capacity of <tt>w</tt>.</li> </ul> </li> </ul><p><strong>PHP Code for the Knapsack Problem:</strong></p><p><code>function knapsack($weights, $values, $capacity) {</code></p><p><code>    $n = count($weights);</code></p><p><code>    $dp = array_fill(0, $n + 1, array_fill(0, $capacity + 1, 0));</code></p><p><code>    // Build the DP table</code></p><p><code>    for ($i = 1; $i &lt;= $n; $i++) {</code></p><p><code>        for ($w = 1; $w &lt;= $capacity; $w++) {</code></p><p><code>            if ($weights[$i - 1] &lt;= $w) {</code></p><p><code>                $dp[$i][$w] = max($values[$i - 1] + $dp[$i - 1][$w - $weights[$i - 1]], $dp[$i - 1][$w]);</code></p><p><code>            } else {</code></p><p><code>                $dp[$i][$w] = $dp[$i - 1][$w];</code></p><p><code>            }</code></p><p><code>        }</code></p><p><code>    }</code></p><p><code>    return $dp[$n][$capacity];</code></p><p><code>}</code></p><p><code>// Example usage</code></p><p><code>$weights = [2, 3, 4, 5];</code></p><p><code>$values = [3, 4, 5, 6];</code></p><p><code>$capacity = 5;</code></p><p><code>echo "Maximum value: " . knapsack($weights, $values, $capacity);</code></p><p><strong>Explanation:</strong></p><ul> <li>We first initialize a DP table <tt>dp[i][w]</tt> where <tt>i</tt> represents the number of items considered and w represents the weight of the knapsack.</li> <li>We then iterate through the items and capacities, updating the table by either including or excluding each item.</li> <li>Finally, the answer to the problem is found at <tt>dp[n][capacity]</tt>, which contains the maximum value we can achieve with the given items and knapsack capacity.</li> </ul><p><strong>2. Longest Common Subsequence (LCS)</strong></p><ul> <li><strong>Problem Description:</strong>   <ul> <li>Given two sequences, find the longest subsequence common to both.</li> <li>A subsequence is a sequence that can be derived by deleting some or no elements without changing the order of the remaining elements.</li> </ul> </li> <li><strong>Solution Approach:</strong> <ul> <li>The LCS problem is a classic example of dynamic programming.</li> <li>We construct a 2D table <tt>dp[i][j]</tt> where <tt>i</tt> and <tt>j</tt> represent the indices of the two sequences.</li> <li>The value at <tt>dp[i][j]</tt> will be the length of the longest common subsequence of the first <tt>i</tt> characters of the first sequence and the first <tt>j</tt> characters of the second sequence.</li> </ul> </li> </ul><p><strong>PHP Code for Longest Common Subsequence:</strong></p><p><code>function longestCommonSubsequence($s1, $s2) {</code></p><p><code>    $m = strlen($s1);</code></p><p><code>    $n = strlen($s2);</code></p><p><code>    $dp = array_fill(0, $m + 1, array_fill(0, $n + 1, 0));</code></p><p><code>    // Build the DP table</code></p><p><code>    for ($i = 1; $i &lt;= $m; $i++) {</code></p><p><code>        for ($j = 1; $j &lt;= $n; $j++) {</code></p><p><code>            if ($s1[$i - 1] == $s2[$j - 1]) {</code></p><p><code>                $dp[$i][$j] = $dp[$i - 1][$j - 1] + 1;</code></p><p><code>            } else {</code></p><p><code>                $dp[$i][$j] = max($dp[$i - 1][$j], $dp[$i][$j - 1]);</code></p><p><code>            }</code></p><p><code>        }</code></p><p><code>    }</code></p><p><code>    return $dp[$m][$n];</code></p><p><code>}</code></p><p><code>// Example usage</code></p><p><code>$s1 = "ABCBDAB";</code></p><p><code>$s2 = "BDCAB";</code></p><p><code>echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s2);</code></p><p><strong>Explanation:</strong></p><ul> <li>We initialize a DP table dp[i][j] where each cell stores the length of the LCS of the first i characters of s1 and the first j characters of s2.</li> <li>We then iterate through both strings, filling the DP table based on whether the characters at s1[i-1] and s2[j-1] match. If they match, the LCS length increases by 1; otherwise, we take the maximum of excluding either the current character of s1 or s2.</li> <li>The final answer is in dp[m][n], which represents the LCS length for the two strings.</li> </ul>
-                    
-                        
-                    
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in <a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">algorithms</a> that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculations.</p><p>In this article, we will explore the fundamentals of Dynamic Programming in PHP 8, discuss key concepts, and solve some classic problems like the <em>Knapsack Problem</em> and <em>Longest Common Subsequence</em> (LCS). We will also provide working PHP code to demonstrate these concepts.</p><p><strong>What is Dynamic Programming?</strong></p><p>Dynamic Programming is a method for solving problems by dividing them into smaller, manageable subproblems. It is a bottom-up <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> where you solve subproblems first and use their solutions to build up the final answer. DP typically involves two main techniques:</p><ol><li data-list-item-id="ef18a05585c98e6049687ac6c7221ad66"><strong>Memoization (Top-Down Approach):</strong> Storing the results of already solved subproblems in a cache (usually an array) to avoid redundant work.</li><li data-list-item-id="e260bc5fa32dcb8d49d4c90dc0435c311"><strong>Tabulation (Bottom-Up Approach):</strong> Solving the problem iteratively by filling up a table with solutions to subproblems in a systematic manner.</li></ol><p>Dynamic Programming is applied to problems where:</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/45qrkfw" target="_blank" rel="noopener sponsored" data-product="Classic Mosquito Net for Double Bed | King Size Foldable Machardani | Polyester 30GSM Strong Net | PVC Coated Corrosion Resistant Steel Wire - Blue">
+                                <img src="https://m.media-amazon.com/images/I/71TBQtHYiyL._SX679_.jpg" alt="Classic Mosquito Net for Double Bed | King Size Foldable Machardani | Polyester 30GSM Strong Net | PVC Coated Corrosion Resistant Steel Wire - Blue">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/45qrkfw" target="_blank" rel="noopener sponsored" data-product="Classic Mosquito Net for Double Bed | King Size Foldable Machardani | Polyester 30GSM Strong Net | PVC Coated Corrosion Resistant Steel Wire - Blue">Classic Mosquito Net for Double Bed | King Size Foldable Machardani | Polyester 30GSM Strong Net | PVC Coated Corrosion Resistant Steel Wire - Blue</a>
+                            </div>
+                            <div class="discount-badge">Now 56% Off</div>
+                            <a href="https://amzn.to/45qrkfw" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Classic Mosquito Net for Double Bed | King Size Foldable Machardani | Polyester 30GSM Strong Net | PVC Coated Corrosion Resistant Steel Wire - Blue">
+                                <span class="product-price">
+                                    <span class="actual-price">₹2000</span>
+                                    <span class="current-price">₹889</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        
-        
+                
+            <ul><li data-list-item-id="e8176b0d446c46a225408b4c799e72230">Overlapping subproblems exist.</li><li data-list-item-id="e648af7465a332bfe5436270379c1a843">Optimal substructure is present, meaning the optimal solution to the overall problem can be constructed from optimal solutions to subproblems.</li></ul><p><strong>Key Concepts in Dynamic Programming</strong></p><ol><li data-list-item-id="edff306e5a788834a12537b55c81afbd3"><strong>Overlapping Subproblems:</strong> This occurs when the problem can be divided into smaller subproblems that are solved multiple times. By solving each subproblem once and storing the results, we can improve efficiency.</li><li data-list-item-id="ecbad0850208c64828026db848f5452ee"><strong>Optimal Substructure:</strong> This means that the solution to the overall problem can be constructed from the solutions to its subproblems. If a problem does not have this property, Dynamic Programming is not applicable.</li><li data-list-item-id="e0c0ffa6713ba77b49b4837e65f06fecb"><strong>State Representation:</strong> This is the way you represent the problem's state, typically through an array or matrix. The state transitions represent how you can move from one state to another by taking an action.</li></ol><p><strong>Solving Classic DP Problems</strong></p><p>Now, let’s solve some classic DP problems to better understand the technique.</p><p><strong>1. The Knapsack Problem</strong></p><ul><li data-list-item-id="e3cd4fa94662180902fb0a9cbc3c0b90b"><strong>Problem Description: </strong>Given a set of items, each with a weight and a value, determine the maximum value you can carry in a knapsack with a fixed capacity.<ul><li data-list-item-id="e9f595e14349856ca02228e691c28b3ec"><em>Items:</em> Each item has a value and weight.</li><li data-list-item-id="e2ada5e0258657a3e8bc1004b72cb833f"><em>Knapsack capacity:</em> The maximum weight the knapsack can carry.</li></ul></li><li data-list-item-id="edb5e3439f164ef338263086c88071a9b"><strong>Goal:</strong> Maximize the total value in the knapsack without exceeding the capacity.</li><li class="ck-list-marker-bold" data-list-item-id="ef959893db64142825ac8abcd5283035d"><strong>Solution Approach:</strong><ul><li data-list-item-id="e6b97387fb7678b428087395d8c7c041b">We can use DP to solve this problem.</li><li data-list-item-id="e68c84913dfefeb311b5445a590df9c40">The idea is to maintain a table where each entry <tt>dp[i][w]</tt> represents the maximum value that can be attained with the first <tt>i</tt> items and a knapsack capacity of <tt>w</tt>.</li></ul></li></ul><p><strong>PHP Code for the Knapsack Problem:</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4cC4yIt" target="_blank" rel="noopener sponsored" data-product="ZOLMIX Premium Bathroom Cabinet with Mirror – Wall-Mounted Storage Organizer">
+                                <img src="https://m.media-amazon.com/images/I/51zUAQny6nL._SL1024_.jpg" alt="ZOLMIX Premium Bathroom Cabinet with Mirror – Wall-Mounted Storage Organizer">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4cC4yIt" target="_blank" rel="noopener sponsored" data-product="ZOLMIX Premium Bathroom Cabinet with Mirror – Wall-Mounted Storage Organizer">ZOLMIX Premium Bathroom Cabinet with Mirror – Wall-Mounted Storage Organizer</a>
+                            </div>
+                            <div class="discount-badge">Now 57% Off</div>
+                            <a href="https://amzn.to/4cC4yIt" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ZOLMIX Premium Bathroom Cabinet with Mirror – Wall-Mounted Storage Organizer">
+                                <span class="product-price">
+                                    <span class="actual-price">₹2999.00</span>
+                                    <span class="current-price">₹1299.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h2>Conclusion</h2><p>Dynamic Programming is a versatile and powerful technique that optimizes recursive algorithms by storing intermediate results and solving problems in a bottom-up or top-down manner. By mastering concepts like overlapping subproblems and optimal substructure, developers can apply DP to a variety of real-world optimization problems.</p><p>In this article, we covered two classic DP problems, the <em>Knapsack Problem</em> and the <em>Longest Common Subsequence</em> (LCS), with complete PHP 8 implementations. These problems demonstrate the utility of Dynamic Programming in solving optimization and string-related challenges efficiently.</p><p>By applying these techniques, PHP developers can improve the <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> of algorithms that would otherwise be inefficient for larger inputs. Keep experimenting with more DP problems to deepen your <a href="/articles/azure-storage-accounts-concepts-setup-best-practices" title="Read about Understanding Azure Storage Accounts Key Concepts And Best Practices">understanding</a> and mastery of this powerful technique!</p><p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
-</div>
+                
+            <pre><code class="language-plaintext">function knapsack($weights, $values, $capacity) {
+  $n = count($weights);
+  $dp = array_fill(0, $n + 1, array_fill(0, $capacity + 1, 0));
+  // Build the DP table
+  for ($i = 1; $i &lt;= $n; $i++) {
+    for ($w = 1; $w &lt;= $capacity; $w++) {
+      if ($weights[$i - 1] &lt;= $w) {
+        $dp[$i][$w] = max($values[$i - 1] + $dp[$i - 1][$w - $weights[$i - 1]], $dp[$i - 1][$w]);
+      } else {
+        $dp[$i][$w] = $dp[$i - 1][$w];
+      }
+    }
+  }
+  return $dp[$n][$capacity];
+}
+
+// Example usage
+$weights = [2, 3, 4, 5];
+$values = [3, 4, 5, 6];
+$capacity = 5;
+echo "Maximum value: " . knapsack($weights, $values, $capacity);</code></pre><p><strong>Explanation:</strong></p><ul><li data-list-item-id="e3c50b995adf3f6a9609e92a9c043c6f9">We first initialize a DP table <tt>dp[i][w]</tt> where <tt>i</tt> represents the number of items considered and w represents the weight of the knapsack.</li><li data-list-item-id="e7d6022474451a0f441914d74b02fd3b5">We then iterate through the items and capacities, updating the table by either including or excluding each item.</li><li data-list-item-id="eb24cdbe1883d548279dd35689772b9f6">Finally, the answer to the problem is found at <tt>dp[n][capacity]</tt>, which contains the maximum value we can achieve with the given items and knapsack capacity.</li></ul><p><strong>2. Longest Common Subsequence (LCS)</strong></p><ul><li class="ck-list-marker-bold" data-list-item-id="ed4384daef506b589bfd4f154d2fad2dc"><strong>Problem Description:</strong><ul><li data-list-item-id="e15b6e447cab4897cda4ef782efd6ef4d">Given two sequences, find the longest subsequence common to both.</li><li data-list-item-id="ea2b266bd27fc7fb7e17de8b0c81f1506">A subsequence is a sequence that can be derived by deleting some or no elements without changing the order of the remaining elements.</li></ul></li><li class="ck-list-marker-bold" data-list-item-id="e7100b545d6a275e817185c65f425bb79"><strong>Solution Approach:</strong><ul><li data-list-item-id="eac2034a00f1269827be45e58393838db">The LCS problem is a classic example of dynamic programming.</li><li data-list-item-id="ed976bc19f9a680a3fe8711ad7d131a49">We construct a 2D table <tt>dp[i][j]</tt> where <tt>i</tt> and <tt>j</tt> represent the indices of the two sequences.</li><li data-list-item-id="e19828dd7dab54aa4d273e8882669cb00">The value at <tt>dp[i][j]</tt> will be the length of the longest common subsequence of the first <tt>i</tt> characters of the first sequence and the first <tt>j</tt> characters of the second sequence.</li></ul></li></ul><p><strong>PHP Code for Longest Common Subsequence:</strong></p><pre><code class="language-plaintext">function longestCommonSubsequence($s1, $s2) {
+  $m = strlen($s1);
+  $n = strlen($s2);
+  $dp = array_fill(0, $m + 1, array_fill(0, $n + 1, 0));
+  // Build the DP table
+  for ($i = 1; $i &lt;= $m; $i++) {
+    for ($j = 1; $j &lt;= $n; $j++) {
+      if ($s1[$i - 1] == $s2[$j - 1]) {
+        $dp[$i][$j] = $dp[$i - 1][$j - 1] + 1;
+      } else {
+        $dp[$i][$j] = max($dp[$i - 1][$j], $dp[$i][$j - 1]);
+      }
+    }
+  }
+  return $dp[$m][$n];
+}
+
+// Example usage
+$s1 = "ABCBDAB";
+$s2 = "BDCAB";
+echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s2);</code></pre>
+            
+                
+            <p><strong>Explanation:</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4112bbf" target="_blank" rel="noopener sponsored" data-product="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">
+                                <img src="https://m.media-amazon.com/images/I/71RTL1vn6TL._SX679_.jpg" alt="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/4112bbf" target="_blank" rel="noopener sponsored" data-product="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)</a>
+                            </div>
+                            <div class="discount-badge">Now 58% Off</div>
+                            <a href="https://amzn.to/4112bbf" target="_blank" class="buy-button" rel="noopener sponsored" data-product="acer 139 cm (55 inches) I Pro Series 4K Ultra HD LED Smart Google TV AR55UDIGU2875AT (Black)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹72999</span>
+                                    <span class="current-price">₹30999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><ul><li data-list-item-id="e5fb7c982454386e873b7e12a656e1602">We initialize a DP table dp[i][j] where each cell stores the length of the LCS of the first i characters of s1 and the first j characters of s2.</li><li data-list-item-id="ead3bd035bb03fc8785df8899a21f7509">We then iterate through both strings, filling the DP table based on whether the characters at s1[i-1] and s2[j-1] match. If they match, the LCS length increases by 1; otherwise, we take the maximum of excluding either the current character of s1 or s2.</li><li data-list-item-id="eeea836a0aa845da73e5467ee67c9c69c">The final answer is in dp[m][n], which represents the LCS length for the two strings.</li></ul><p><strong>Conclusion</strong></p><p>Dynamic Programming is a versatile and powerful technique that optimizes recursive algorithms by storing intermediate results and solving problems in a bottom-up or top-down manner. By mastering concepts like overlapping subproblems and optimal substructure, developers can apply DP to a variety of real-world optimization problems.</p><p>In this article, we covered two classic DP problems, the <em>Knapsack Problem</em> and the <em>Longest Common Subsequence</em> (LCS), with complete PHP 8 implementations. These problems demonstrate the utility of Dynamic Programming in solving optimization and string-related challenges efficiently.</p><p>By applying these techniques, PHP developers can improve the <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> of algorithms that would otherwise be inefficient for larger inputs. Keep experimenting with more DP problems to deepen your <a href="/articles/azure-storage-accounts-concepts-setup-best-practices" title="Read about Understanding Azure Storage Accounts Key Concepts And Best Practices">understanding</a> and mastery of this powerful technique!</p>
+            
+                
+            <p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/40C6s6m" target="_blank" rel="noopener sponsored" data-product="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days.">
+                                <img src="https://m.media-amazon.com/images/I/71YP0euGGIL._SX679_.jpg" alt="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days.">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/40C6s6m" target="_blank" rel="noopener sponsored" data-product="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days.">Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days.</a>
+                            </div>
+                            <div class="discount-badge">Now 38% Off</div>
+                            <a href="https://amzn.to/40C6s6m" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Liberty Men And Women Luxury Oudgold Silk Intense Limited Edition Liquid Parfum And (100Ml/3.4Oz), Crafted In France, Woody Notes, Long Lasting - Upto 3 Days.">
+                                <span class="product-price">
+                                    <span class="actual-price">₹12999</span>
+                                    <span class="current-price">₹8074.05</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -678,7 +845,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-26c23467545166aabbfeb1f2a4c8e6c32405d3a75d53e39e39b21c9ae44a4b6d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3a234abeca2681c822a536875e9918d0df7dc286b178d62537b4ed54e6bcc39e">
   
     
       
@@ -712,7 +879,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -730,7 +897,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-538acb03ced3151f1283f2ab486d165a50bee3ddaa616dddfd65f86a2390d915">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-428ab4d3a76d3094f2ae0bf66ca790525cf25362838e5c345e844ad4e5b41442">
   
     
       
@@ -909,7 +1076,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -921,7 +1088,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

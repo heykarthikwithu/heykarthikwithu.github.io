@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/advanced-sorting-and-searching-algorithms-in-php-quick-sort-merge-sort-heap-sort-and-binary-search-trees.webp"
             },
             "datePublished": "2024-11-26T07:53:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Advanced Sorting and Searching Algorithms in PHP: Quick Sort, Merge Sort, Heap Sort, and Binary Search Trees</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Sorting and searching are foundational operations in computer science. Understanding the <a href="/articles/choose-inverters-which-are-more-efficient-work-solar-panels" title="Read about Choose The Inverters Which Are More Efficient To Work With Solar Panels">efficient</a> algorithms for these tasks can significantly enhance the performance of your applications.</p><p>In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.</p><p>We’ll include clear explanations along with sample code for each algorithm. This will help you not only understand their inner workings but also implement them efficiently in your projects.</p><h2>1. Quick Sort</h2><ul> <li>Quick Sort is a divide-and-conquer algorithm that selects a pivot element and partitions the array into two subarrays, one containing elements smaller than the pivot and the other containing elements greater than the pivot.</li> <li>It recursively sorts these subarrays.</li> <li>Quick Sort is efficient, with an average time complexity of <tt>O(n log n)</tt>, though in the worst case (when the pivot is poorly chosen), it can degrade to <tt>O(n²)</tt>.</li> </ul><p><strong>Quick Sort Implementation in PHP8:</strong></p><p><code>function quickSort(array $arr): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if (count($arr) &lt; 2) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $arr; // Base case: a single element is already sorted</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$pivot = $arr[0]; // Take the first element as the pivot</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$left = $right = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Partitioning step</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;foreach (array_slice($arr, 1) as $value) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($value &lt; $pivot) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$left[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$right[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Recursively apply quickSort to the left and right subarrays, then concatenate</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return array_merge(quickSort($left), [$pivot], quickSort($right));</code></p><p><code>}</code></p><p><code>$numbers = [10, 3, 15, 7, 8, 23, 74, 18];</code></p><p><code>$sorted = quickSort($numbers);</code></p><p><code>print_r($sorted);</code></p><h2>2. Merge Sort</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Sorting and searching are foundational operations in computer science. Understanding the <a href="/articles/choose-inverters-which-are-more-efficient-work-solar-panels" title="Read about Choose The Inverters Which Are More Efficient To Work With Solar Panels">efficient</a> algorithms for these tasks can significantly enhance the performance of your applications.</p><p>In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.</p><p>We’ll include clear explanations along with sample code for each algorithm. This will help you not only understand their inner workings but also implement them efficiently in your projects.</p><h2>1. Quick Sort</h2><ul> <li>Quick Sort is a divide-and-conquer algorithm that selects a pivot element and partitions the array into two subarrays, one containing elements smaller than the pivot and the other containing elements greater than the pivot.</li> <li>It recursively sorts these subarrays.</li> <li>Quick Sort is efficient, with an average time complexity of <tt>O(n log n)</tt>, though in the worst case (when the pivot is poorly chosen), it can degrade to <tt>O(n²)</tt>.</li> </ul><p><strong>Quick Sort Implementation in PHP8:</strong></p><p><code>function quickSort(array $arr): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if (count($arr) &lt; 2) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $arr; // Base case: a single element is already sorted</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$pivot = $arr[0]; // Take the first element as the pivot</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$left = $right = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Partitioning step</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;foreach (array_slice($arr, 1) as $value) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($value &lt; $pivot) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$left[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$right[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Recursively apply quickSort to the left and right subarrays, then concatenate</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return array_merge(quickSort($left), [$pivot], quickSort($right));</code></p><p><code>}</code></p><p><code>$numbers = [10, 3, 15, 7, 8, 23, 74, 18];</code></p><p><code>$sorted = quickSort($numbers);</code></p><p><code>print_r($sorted);</code></p><h2>2. Merge Sort</h2>
                     
                         
                     <ul> <li>Merge Sort is another divide-and-conquer algorithm.</li> <li>It works by recursively dividing the array in half until each subarray has only one element.</li> <li>Then, it merges the sorted subarrays back together.</li> <li>Merge Sort has a guaranteed time complexity of <tt>O(n log n)</tt>, even in the worst case.</li> </ul><p><strong>Merge Sort Implementation in PHP8:</strong></p><p><code>function mergeSort(array $arr): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Base case: single element or empty array is already sorted</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if (count($arr) &lt; 2) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $arr;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$mid = floor(count($arr) / 2);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$left = array_slice($arr, 0, $mid);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$right = array_slice($arr, $mid);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Recursively split and merge the arrays</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return merge(mergeSort($left), mergeSort($right));</code></p><p><code>}</code></p><p><code>function merge(array $left, array $right): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$result = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;while (count($left) &gt; 0 &amp;&amp; count($right) &gt; 0) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($left[0] &lt; $right[0]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = array_shift($left);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = array_shift($right);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Append remaining elements</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return array_merge($result, $left, $right);</code></p><p><code>}</code></p><p><code>$numbers = [10, 3, 15, 7, 8, 23, 74, 18];</code></p><p><code>$sorted = mergeSort($numbers);</code></p><p><code>print_r($sorted);</code></p>
@@ -744,24 +744,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
-                                <img src="https://m.media-amazon.com/images/I/81lGxS2ZisL._SX679_.jpg" alt="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
+                            <a href="https://amzn.to/3JAU0NC" target="_blank" rel="noopener sponsored" data-product="Cadlec JarGenie 4 Jar 750 Watt Mixer Grinder | High-Power Juicer, Blender &amp; Mixer | Durable ABS Body | Multi-Function for Juicing &amp; Blending | 2-Year Warranty">
+                                <img src="https://m.media-amazon.com/images/I/715Ctz-rtQL._SX679_.jpg" alt="Cadlec JarGenie 4 Jar 750 Watt Mixer Grinder | High-Power Juicer, Blender &amp; Mixer | Durable ABS Body | Multi-Function for Juicing &amp; Blending | 2-Year Warranty">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue</a>
+                                <a href="https://amzn.to/3JAU0NC" target="_blank" rel="noopener sponsored" data-product="Cadlec JarGenie 4 Jar 750 Watt Mixer Grinder | High-Power Juicer, Blender &amp; Mixer | Durable ABS Body | Multi-Function for Juicing &amp; Blending | 2-Year Warranty">Cadlec JarGenie 4 Jar 750 Watt Mixer Grinder | High-Power Juicer, Blender &amp; Mixer | Durable ABS Body | Multi-Function for Juicing &amp; Blending | 2-Year Warranty</a>
                             </div>
-                            <div class="discount-badge">Now 0% Off</div>
-                            <a href="https://amzn.to/467L75Q" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
+                            <div class="discount-badge">Now 63% Off</div>
+                            <a href="https://amzn.to/3JAU0NC" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Cadlec JarGenie 4 Jar 750 Watt Mixer Grinder | High-Power Juicer, Blender &amp; Mixer | Durable ABS Body | Multi-Function for Juicing &amp; Blending | 2-Year Warranty">
                                 <span class="product-price">
-                                    <span class="actual-price">₹5499</span>
-                                    <span class="current-price">₹5479</span>
+                                    <span class="actual-price">₹3499</span>
+                                    <span class="current-price">₹1299</span>
                                 </span>
 
                                 <span class="product-store">
@@ -798,7 +804,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-6c2190cc07b75ad24feb7d004892e2c6fd80ef07b806ad855c6f0d01db4ad2ec">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-d1beb80bd29e31f03ee4cd42cf87a1fecbc88b9b525ca2eb86b00292059fff42">
   
     
       
@@ -832,7 +838,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -850,7 +856,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-161a934191476dcda126407dc82eb7610065984e118a5b13df1d8906d405c12a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8cd1bac5576e42d141b7d79440fffb3fd407e5b8100a314436b47c2815ffee61">
   
     
       
@@ -1029,7 +1035,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1041,7 +1047,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

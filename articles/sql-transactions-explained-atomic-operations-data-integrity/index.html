@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/sql-transactions-for-atomic-operations-ensuring-data-integrity-and-consistency.webp"
             },
             "datePublished": "2025-11-23T10:30:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">SQL Transactions Explained: Atomic Operations &amp; Data Integrity</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> transactions for atomic operations is crucial in ensuring data integrity and consistency, especially in databases and concurrent applications.</p><p>Here’s a high-level overview of how to implement transactions, focusing on the key concepts and techniques involved.</p>
         
             
         <h2>Key Concepts</h2><ol> <li><strong>Atomicity</strong>: Ensures that a series of operations either complete entirely or have no effect at all. If any operation fails, the entire transaction is rolled back.</li> <li><strong>Consistency</strong>: Guarantees that a transaction will bring the system from one valid state to another, maintaining all predefined rules, such as constraints and triggers.</li> <li><strong>Isolation</strong>: Ensures that transactions occur independently of one another. Intermediate states of a transaction should not be visible to other transactions until it is committed.</li> <li><strong>Durability</strong>: Once a transaction has been committed, its effects are permanent, even in the case of a system failure.</li> </ol><h2>Implementation Steps</h2><ol> <li><strong>Begin Transaction</strong>: Start a new transaction. This often involves setting a flag or state that indicates a transaction is in progress.</li> <li><strong>Execute Operations</strong>: Perform the desired operations (e.g., inserts, updates, deletes). Keep track of changes made during the transaction.</li> <li><strong>Validation</strong>: Check for any constraints or conditions that must be satisfied before committing the transaction.</li> <li><strong>Commit</strong>: If all operations are successful and validations are met, apply the changes permanently. This might involve writing changes to the database and clearing any transaction-related state.</li> <li><strong>Rollback</strong>: If an error occurs during execution or validation, revert all changes made during the transaction to ensure that the system remains in a consistent state.</li> </ol><p><strong>Database Setup</strong></p><p>Assume you have two tables: accounts and transactions.</p><p><code>CREATE TABLE accounts (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    balance DECIMAL(10, 2) NOT NULL</code></p><p><code>);</code></p><p><code>CREATE TABLE transactions (</code></p><p><code>    id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>    account_id INT,</code></p><p><code>    amount DECIMAL(10, 2),</code></p><p><code>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>    FOREIGN KEY (account_id) REFERENCES accounts(id)</code></p><p><code>);</code></p><p><strong>PHP Code</strong></p><p>Here's a PHP script that performs a transaction to transfer money between two accounts:</p><p><!--?php</p--></p><p><code>$host = 'localhost';</code></p><p><code>$db = 'your_database';</code></p><p><code>$user = 'your_username';</code></p><p><code>$pass = 'your_password';</code></p><p><code>try {</code></p><p><code>    // Create a new PDO instance</code></p><p><code>    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);</code></p><p><code>    $pdo→setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</code></p><p><code>    // Start a transaction</code></p><p><code>    $pdo→beginTransaction();</code></p><p><code>    // Amount to transfer</code></p><p><code>    $transferAmount = 100.00;</code></p><p><code>    $fromAccountId = 1;</code></p><p><code>    $toAccountId = 2;</code></p><p><code>    // Deduct amount from the source account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance - ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $fromAccountId]);</code></p><p><code>    // Check if the balance is sufficient</code></p><p><code>    if ($stmt→rowCount() === 0) {</code></p><p><code>        throw new Exception("Insufficient funds or account not found.");</code></p><p><code>    }</code></p><p><code>    // Add amount to the destination account</code></p><p><code>    $stmt = $pdo→prepare("UPDATE accounts SET balance = balance + ? WHERE id = ?");</code></p><p><code>    $stmt→execute([$transferAmount, $toAccountId]);</code></p><p><code>    // Log the transaction</code></p><p><code>    $stmt = $pdo→prepare("INSERT INTO transactions (account_id, amount) VALUES (?, ?)");</code></p><p><code>    $stmt→execute([$fromAccountId, -$transferAmount]);</code></p><p><code>    $stmt→execute([$toAccountId, $transferAmount]);</code></p><p><code>    // Commit the transaction</code></p><p><code>    $pdo→commit();</code></p><p><code>    echo "Transaction completed successfully.";</code></p><p><code>}</code></p><p><code>catch (Exception $e) {</code></p><p><code>    // Rollback the transaction in case of error</code></p><p><code>    $pdo→rollBack();</code></p><p><code>    echo "Transaction failed: " . $e→getMessage();</code></p><p><code>}</code></p><p><code>?&gt;</code></p>
@@ -743,24 +743,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3GQtL4Y" target="_blank" rel="noopener sponsored" data-product="FIORRA Womens Cotton Regular Fit Floral Printed A-Line Kurta">
-                                <img src="https://m.media-amazon.com/images/I/71eKfSB3vgL._SY879_.jpg" alt="FIORRA Womens Cotton Regular Fit Floral Printed A-Line Kurta">
+                            <a href="https://amzn.to/4nEZx4X" target="_blank" rel="noopener sponsored" data-product="ANT Flora Bud Digital Weighing Scale, Highly Accurate Digital Bathroom Body Scale, Precisely Measures Weight up to 180Kg LCD">
+                                <img src="https://m.media-amazon.com/images/I/61DnEIUxifL._SX679_.jpg" alt="ANT Flora Bud Digital Weighing Scale, Highly Accurate Digital Bathroom Body Scale, Precisely Measures Weight up to 180Kg LCD">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3GQtL4Y" target="_blank" rel="noopener sponsored" data-product="FIORRA Womens Cotton Regular Fit Floral Printed A-Line Kurta">FIORRA Womens Cotton Regular Fit Floral Printed A-Line Kurta</a>
+                                <a href="https://amzn.to/4nEZx4X" target="_blank" rel="noopener sponsored" data-product="ANT Flora Bud Digital Weighing Scale, Highly Accurate Digital Bathroom Body Scale, Precisely Measures Weight up to 180Kg LCD">ANT Flora Bud Digital Weighing Scale, Highly Accurate Digital Bathroom Body Scale, Precisely Measures Weight up to 180Kg LCD</a>
                             </div>
-                            <div class="discount-badge">Now 84% Off</div>
-                            <a href="https://amzn.to/3GQtL4Y" target="_blank" class="buy-button" rel="noopener sponsored" data-product="FIORRA Womens Cotton Regular Fit Floral Printed A-Line Kurta">
+                            <div class="discount-badge">Now 86% Off</div>
+                            <a href="https://amzn.to/4nEZx4X" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ANT Flora Bud Digital Weighing Scale, Highly Accurate Digital Bathroom Body Scale, Precisely Measures Weight up to 180Kg LCD">
                                 <span class="product-price">
-                                    <span class="actual-price">₹3999</span>
-                                    <span class="current-price">₹649</span>
+                                    <span class="actual-price">₹1999</span>
+                                    <span class="current-price">₹284</span>
                                 </span>
 
                                 <span class="product-store">
@@ -803,7 +809,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-112f6f50e912d4ff37d4acebd8db7ce63047c8852bbf08ead7ddceff35183bee">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-eaf5bd71ef03e96289b2aa8f5311c7042dcbc63ab8d8557b332d09207d15afc6">
   
     
       
@@ -837,7 +843,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -855,7 +861,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9879787807c81f85c3071a095ffd952d4fba40e5786e8558ec38af19c1ab9f33">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-71a107c2b73b9a29ea2a0b15e1f10ac8bc6d384d7421009fe65ea702065ab00a">
   
     
       
@@ -1034,7 +1040,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1046,7 +1052,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

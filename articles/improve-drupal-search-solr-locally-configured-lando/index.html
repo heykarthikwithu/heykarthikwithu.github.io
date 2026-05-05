@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupal-solr-lando.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,25 +643,25 @@
 
 <div class="pb-image-caption">Improve Drupal Search with Solr, Locally configured via Lando</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>In this article, we are going to learn <strong>how Drupal search can be improved with Solr</strong> which provides great <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> and is suitable even for use on large commercial <a href="/articles/how-generate-good-revenue-blogging-websites" title="Read about How To Generate Good Revenue From Blogging Websites">websites</a>. And along with this using the <code>search_api</code> and <code>search_api_solr</code> modules, helps to <strong>configure the Facets and Multilingual content</strong> can be handled in an improved manner. And let's see <strong>how we can configure this locally with the help of Lando</strong>, which provides the container for Solr locally.</p><p><strong>Assuming you already have a Drupal 9 basic setup with Lando</strong>, where you have the web server and mysql running, means you Drupal 9 site is up running with such a url - <code>drupal9.lndo.site</code></p><p><strong>To set up Solr locally</strong>, you have to add Solr related <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> in your <code>.lando.yml</code> file. Here’s the sample of the configuration.</p><pre>name: drupal9 recipe: drupal9 config:   webroot: web services:   appserver:     type: php:7.4   database:     type: mysql     healthcheck: ''   solr:     type: solr     portforward: true     core: drupal9     config:       conf: solr/conf proxy:   appserver:     - drupal9.lndo.site   solr:     - solr.lndo.site </pre><p>It will <strong>spin up a container</strong> with name <code>solr</code></p><ul class="check"> <li><code>type: solr</code> means, it will pick the latest solr version, currently it picks Solr 7.</li> <li><code>core: drupal9</code> means, Solr core name</li> <li><code>conf: utils/solr7/conf</code> means, Create a conf folder under the folder mentioned and download the conf from <code>search_api_solr</code> - <a href="https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start" target="_blank" style="border-bottom: 1px solid #064771 !important;"><strong>https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start</strong></a> and place it in the conf folder.</li> </ul><p>You can access the <strong>Admin side of Solr</strong> via <code>Solr.lndo.site</code>. By this you are done with the Solr configuration within Lando on your local machine.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In this article, we are going to learn <strong>how Drupal search can be improved with Solr</strong> which provides great <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> and is suitable even for use on large commercial <a href="/articles/how-generate-good-revenue-blogging-websites" title="Read about How To Generate Good Revenue From Blogging Websites">websites</a>. And along with this using the <code>search_api</code> and <code>search_api_solr</code> modules, helps to <strong>configure the Facets and Multilingual content</strong> can be handled in an improved manner. And let's see <strong>how we can configure this locally with the help of Lando</strong>, which provides the container for Solr locally.</p><p><strong>Assuming you already have a Drupal 9 basic setup with Lando</strong>, where you have the web server and mysql running, means you Drupal 9 site is up running with such a url - <code>drupal9.lndo.site</code></p><p><strong>To set up Solr locally</strong>, you have to add Solr related <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> in your <code>.lando.yml</code> file. Here’s the sample of the configuration.</p><pre>name: drupal9 recipe: drupal9 config:   webroot: web services:   appserver:     type: php:7.4   database:     type: mysql     healthcheck: ''   solr:     type: solr     portforward: true     core: drupal9     config:       conf: solr/conf proxy:   appserver:     - drupal9.lndo.site   solr:     - solr.lndo.site </pre><p>It will <strong>spin up a container</strong> with name <code>solr</code></p><ul class="check"> <li><code>type: solr</code> means, it will pick the latest solr version, currently it picks Solr 7.</li> <li><code>core: drupal9</code> means, Solr core name</li> <li><code>conf: utils/solr7/conf</code> means, Create a conf folder under the folder mentioned and download the conf from <code>search_api_solr</code> - <a href="https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start" target="_blank" style="border-bottom: 1px solid #064771 !important;"><strong>https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start</strong></a> and place it in the conf folder.</li> </ul><p>You can access the <strong>Admin side of Solr</strong> via <code>Solr.lndo.site</code>. By this you are done with the Solr configuration within Lando on your local machine.</p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3ZghgTH" target="_blank" rel="noopener sponsored" data-product="PrimeWorld Opera Crystal Whiskey Glasses Set of 6 pcs- 300 ml Bar Glass for Drinking Bourbon, Whisky, Scotch, Cocktails, Cognac- Old Fashioned Cocktail Tumblers">
-                                <img src="https://m.media-amazon.com/images/I/719eUa7bSeL._SX385_.jpg" alt="PrimeWorld Opera Crystal Whiskey Glasses Set of 6 pcs- 300 ml Bar Glass for Drinking Bourbon, Whisky, Scotch, Cocktails, Cognac- Old Fashioned Cocktail Tumblers">
+                            <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
+                                <img src="https://m.media-amazon.com/images/I/81lGxS2ZisL._SX679_.jpg" alt="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3ZghgTH" target="_blank" rel="noopener sponsored" data-product="PrimeWorld Opera Crystal Whiskey Glasses Set of 6 pcs- 300 ml Bar Glass for Drinking Bourbon, Whisky, Scotch, Cocktails, Cognac- Old Fashioned Cocktail Tumblers">PrimeWorld Opera Crystal Whiskey Glasses Set of 6 pcs- 300 ml Bar Glass for Drinking Bourbon, Whisky, Scotch, Cocktails, Cognac- Old Fashioned Cocktail Tumblers</a>
+                                <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue</a>
                             </div>
-                            <div class="discount-badge">Now 60% Off</div>
-                            <a href="https://amzn.to/3ZghgTH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="PrimeWorld Opera Crystal Whiskey Glasses Set of 6 pcs- 300 ml Bar Glass for Drinking Bourbon, Whisky, Scotch, Cocktails, Cognac- Old Fashioned Cocktail Tumblers">
+                            <div class="discount-badge">Now 0% Off</div>
+                            <a href="https://amzn.to/467L75Q" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1899</span>
-                                    <span class="current-price">₹755</span>
+                                    <span class="actual-price">₹5499</span>
+                                    <span class="current-price">₹5479</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,12 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
+            
+                
+            
             
                 
             
@@ -774,7 +780,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-33b213a8b06dc7971b44f468303718c49184b0072ba40efd5dd0a5748331a027">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-508727f99473c7c503a2eefcf4b0224de853117d0c712a773c8ac8f447147628">
   
     
       
@@ -808,7 +814,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -826,7 +832,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-36f25b76975576d6a796c2724ed3947d59a146f2a6ec7fb3e3f7cbe923c93dab">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ca62d5d19b102b5eb8a2962c65d51e1d53e505c1816654f7a0c8ecc11dc089fa">
   
     
       
@@ -1005,7 +1011,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1017,7 +1023,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

@@ -2,17 +2,17 @@
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:0;--color--primary-saturation:0%;--color--primary-lightness:0">
   <head>
     <meta charset="utf-8" />
-<meta name="description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford." />
+<meta name="description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.Understanding Graph Data Structures" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://peoplesblog.co.in/articles/mastering-graph-algorithms-php-implementing-traversals-and-shortest-path-algorithms" />
 <meta property="og:site_name" content="People&#039;s BLOG" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://peoplesblog.co.in/articles/mastering-graph-algorithms-php-implementing-traversals-and-shortest-path-algorithms" />
 <meta property="og:title" content="Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms" />
-<meta property="og:description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford." />
+<meta property="og:description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.Understanding Graph Data Structures" />
 <meta property="og:image" content="https://peoplesblog.co.in/sites/default/files/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford." />
+<meta name="twitter:description" content="Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.Understanding Graph Data Structures" />
 <meta name="twitter:title" content="Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms" />
 <meta name="twitter:image" content="https://peoplesblog.co.in/sites/default/files/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp" />
 <meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
@@ -25,13 +25,13 @@
         {
             "@type": "Article",
             "headline": "Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms",
-            "description": "Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.",
+            "description": "Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.Understanding Graph Data Structures",
             "image": {
                 "@type": "ImageObject",
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/mastering-graph-algorithms-in-php-implementing-traversals-and-shortest-path-algorithms.webp"
             },
             "datePublished": "2024-11-28T07:44:00+0530",
-            "dateModified": "2026-04-18T15:02:08+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,27 +643,319 @@
 
 <div class="pb-image-caption">Mastering Graph Algorithms in PHP: Implementing Traversals and Shortest Path Algorithms</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.</p><p>In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.</p><h2>Understanding Graph Data Structures</h2><p>A <strong>graph</strong> is a collection of nodes (vertices) connected by edges. There are two main types of graphs:</p><ul> <li><strong>Directed Graph</strong>: In a directed graph, the edges have a direction, meaning they go from one vertex to another.</li> <li><strong>Undirected Graph</strong>: In an undirected graph, edges don’t have a direction; they simply connect two vertices.</li> </ul><p>We can represent graphs using two common methods in programming:</p><ol> <li><strong>Adjacency Matrix</strong>: A 2D array where each cell represents an edge between two vertices.</li> <li><strong>Adjacency List</strong>: An array of lists (or hash maps) where each vertex has a list of connected vertices.</li> </ol><p>In this article, we will use an <strong>adjacency list</strong> to represent graphs because it's more efficient in terms of space for sparse graphs.</p><p><strong>Example: Graph Representation</strong></p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $adjList = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Add a vertex to the graph</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Add an edge between two vertices</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex2][] = $vertex1; // For undirected graph</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Get adjacent vertices of a given vertex</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function getAdjacencyList(string $vertex): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→adjList[$vertex] ?? [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><h2>Implementing Graph Traversals</h2>
-                    
-                        
-                    <p>Graph traversals allow you to visit every vertex in the graph in a systematic manner. There are two main traversal algorithms:</p><p><strong>1. Depth-First Search (DFS)</strong></p><p>DFS explores as far as possible along a branch before backtracking. It is often implemented using recursion or a stack.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// ... (Previous methods)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// DFS traversal</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function depthFirstSearch(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→dfsHelper($start, $visited, $result);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function dfsHelper(string $vertex, array &amp;$visited, array &amp;$result): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($visited[$vertex])) return;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited[$vertex] = true;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = $vertex;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($vertex) as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→dfsHelper($neighbor, $visited, $result);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>2. Breadth-First Search (BFS)</strong></p><p>BFS explores all neighboring nodes at the present depth before moving on to nodes at the next depth level. It is implemented using a queue.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// ... (Previous methods)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// BFS traversal</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function breadthFirstSearch(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue = [$start];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ($queue) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vertex = array_shift($queue);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($visited[$vertex])) continue;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited[$vertex] = true;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = $vertex;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($vertex) as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!isset($visited[$neighbor])) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[] = $neighbor;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p>Both DFS and BFS help in <a href="/articles/exploring-use-artificial-organs-healthcare" title="Read about Exploring The Use Of Artificial Organs In Healthcare">exploring</a> the graph’s vertices in different ways, which is useful for solving problems like finding connected components, solving puzzles, etc.</p>
-                    
-                        
-                    
-        
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Graphs are one of the most powerful and flexible data structures in computer science, widely used for solving problems like shortest path finding, network analysis, and much more. In PHP 8, developers can leverage modern language features and optimized approaches to implement and optimize graph-related algorithms.</p><p>In this article, we will explore graph data structures, common graph traversals, and two important shortest path algorithms: Dijkstra’s and Bellman-Ford.</p><p><strong>Understanding Graph Data Structures</strong></p><p>A <strong>graph</strong> is a collection of nodes (vertices) connected by edges. There are two main types of graphs:</p><ul><li data-list-item-id="e25bfe6854cdcf2b56347c5a174f19f51"><strong>Directed Graph</strong>: In a directed graph, the edges have a direction, meaning they go from one vertex to another.</li><li data-list-item-id="e913f853a280b0f6c0ec1a54bce2e4343"><strong>Undirected Graph</strong>: In an undirected graph, edges don’t have a direction; they simply connect two vertices.</li></ul><p>We can represent graphs using two common methods in programming:</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3ja3x1u" target="_blank" rel="noopener sponsored" data-product="Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar &amp; Full Sleeves (Also Available in Plus Size)">
+                                <img src="https://m.media-amazon.com/images/I/61XzMtVz3PL._SY879_.jpg" alt="Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar &amp; Full Sleeves (Also Available in Plus Size)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3ja3x1u" target="_blank" rel="noopener sponsored" data-product="Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar &amp; Full Sleeves (Also Available in Plus Size)">Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar &amp; Full Sleeves (Also Available in Plus Size)</a>
+                            </div>
+                            <div class="discount-badge">Now 75% Off</div>
+                            <a href="https://amzn.to/3ja3x1u" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar &amp; Full Sleeves (Also Available in Plus Size)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1849</span>
+                                    <span class="current-price">₹469</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        
-        
+                
+            <ol><li data-list-item-id="ed60530504ae4b12bd66e7986ffe914ef"><strong>Adjacency Matrix</strong>: A 2D array where each cell represents an edge between two vertices.</li><li data-list-item-id="e11c26e3db5086bf5bb02e06abc3af014"><strong>Adjacency List</strong>: An array of lists (or hash maps) where each vertex has a list of connected vertices.</li></ol><p>In this article, we will use an <strong>adjacency list</strong> to represent graphs because it's more efficient in terms of space for sparse graphs.</p><p><strong>Example: Graph Representation</strong></p><pre><code class="language-plaintext">class Graph {
+ &nbsp;&nbsp;&nbsp;private array $adjList = [];
+ &nbsp;&nbsp;&nbsp;// Add a vertex to the graph
+ &nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;// Add an edge between two vertices
+ &nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex2][] = $vertex1; // For undirected graph
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;// Get adjacent vertices of a given vertex
+ &nbsp;&nbsp;&nbsp;public function getAdjacencyList(string $vertex): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $this→adjList[$vertex] ?? [];
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>Implementing Graph Traversals</strong></p><p>Graph traversals allow you to visit every vertex in the graph in a systematic manner. There are two main traversal algorithms:</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/484dRgj" target="_blank" rel="noopener sponsored" data-product="amazon basics 8-Piece Non-Stick Cookware Set| 2-Way 3 Layer Non-Stick Coating | PFOA Free | High Temperature Resistant Exterior Coating, Black">
+                                <img src="https://m.media-amazon.com/images/I/71mDTOYtDSL._SX679_.jpg" alt="amazon basics 8-Piece Non-Stick Cookware Set| 2-Way 3 Layer Non-Stick Coating | PFOA Free | High Temperature Resistant Exterior Coating, Black">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/484dRgj" target="_blank" rel="noopener sponsored" data-product="amazon basics 8-Piece Non-Stick Cookware Set| 2-Way 3 Layer Non-Stick Coating | PFOA Free | High Temperature Resistant Exterior Coating, Black">amazon basics 8-Piece Non-Stick Cookware Set| 2-Way 3 Layer Non-Stick Coating | PFOA Free | High Temperature Resistant Exterior Coating, Black</a>
+                            </div>
+                            <div class="discount-badge">Now 47% Off</div>
+                            <a href="https://amzn.to/484dRgj" target="_blank" class="buy-button" rel="noopener sponsored" data-product="amazon basics 8-Piece Non-Stick Cookware Set| 2-Way 3 Layer Non-Stick Coating | PFOA Free | High Temperature Resistant Exterior Coating, Black">
+                                <span class="product-price">
+                                    <span class="actual-price">₹4699</span>
+                                    <span class="current-price">₹2469</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <h2>Shortest Path Algorithms</h2><p>Finding the shortest path between nodes is one of the most important <a href="/articles/usage-phpcs-github-pull-request-drupal-applications" title="Read about Usage Of Phpcs On Github Via Pull Request For Drupal Applications">applications</a> of graph algorithms. Two well-known algorithms for this task are <strong>Dijkstra’s Algorithm</strong> and <strong>Bellman-Ford Algorithm</strong>.</p><p><strong>1. Dijkstra’s Algorithm</strong></p><p>Dijkstra's algorithm finds the shortest path from a source vertex to all other vertices in a graph. It works only with graphs that have non-negative weights on edges.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $adjList = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $weights = []; // Store edge weights</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2, int $weight): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex2][] = $vertex1;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex1,$vertex2"] = $weight;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex2,$vertex1"] = $weight; // Undirected graph</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p>
-<p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function dijkstra(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Set initial distances to infinity</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$vertex] = INF;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev[$vertex] = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$vertex] = INF;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$start] = 0;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$start] = 0;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ($queue) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Get the vertex with the smallest distance</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asort($queue);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$minVertex = key($queue);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset($queue[$minVertex]);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Visit each neighbor</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($minVertex) as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$minVertex,$neighbor";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$alt = $dist[$minVertex] + ($this→weights[$edge] ?? INF);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($alt &lt; $dist[$neighbor]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$neighbor] = $alt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev[$neighbor] = $minVertex;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$neighbor] = $alt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['distances' =&gt; $dist, 'previous' =&gt; $prev];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><strong>2. Bellman-Ford Algorithm</strong></p><p>The Bellman-Ford algorithm is more versatile than Dijkstra’s because it can handle graphs with negative weight edges. It runs in <strong>O(VE)</strong> time complexity and can also detect negative weight cycles.</p><p><code>class Graph {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $adjList = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $weights = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2, int $weight): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex1,$vertex2"] = $weight;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function bellmanFord(string $start): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$start] = 0;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Initialize distances for all other vertices</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($vertex !== $start) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$vertex] = INF;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Relax edges repeatedly</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vertices = array_keys($this→adjList);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for ($i = 0; $i &lt; count($vertices) - 1; $i++) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($edges as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$vertex,$neighbor";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$alt = $dist[$vertex] + ($this→weights[$edge] ?? INF);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($alt &lt; $dist[$neighbor]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$neighbor] = $alt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Check for negative weight cycles</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($edges as $neighbor) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$vertex,$neighbor";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($dist[$vertex] + ($this→weights[$edge] ?? INF) &lt; $dist[$neighbor]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception("Graph contains negative weight cycle");</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $dist;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p>
-                    
-                        
-                    <h2>Conclusion</h2>
-        
+                
+            <p><strong>1. Depth-First Search (DFS)</strong></p><p>DFS explores as far as possible along a branch before backtracking. It is often implemented using recursion or a stack.</p><pre><code class="language-plaintext">class Graph {
+ &nbsp;&nbsp;&nbsp;// ... (Previous methods)
+ &nbsp;&nbsp;&nbsp;// DFS traversal
+ &nbsp;&nbsp;&nbsp;public function depthFirstSearch(string $start): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→dfsHelper($start, $visited, $result);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;private function dfsHelper(string $vertex, array &amp;$visited, array &amp;$result): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($visited[$vertex])) return;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited[$vertex] = true;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = $vertex;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($vertex) as $neighbor) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→dfsHelper($neighbor, $visited, $result);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>2. Breadth-First Search (BFS)</strong></p><p>BFS explores all neighboring nodes at the present depth before moving on to nodes at the next depth level. It is implemented using a queue.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3LRqukD" target="_blank" rel="noopener sponsored" data-product="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers">
+                                <img src="https://m.media-amazon.com/images/I/81YtQzdFkIL._SX679_.jpg" alt="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3LRqukD" target="_blank" rel="noopener sponsored" data-product="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers">OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers</a>
+                            </div>
+                            <div class="discount-badge">Now 13% Off</div>
+                            <a href="https://amzn.to/3LRqukD" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OPPO A3 Pro 5G (Moonlight Purple, 8GB RAM, 256GB Storage)|6.67” HD+ 120Hz Refresh Rate Screen | 45W SUPERVOOC|with No Cost EMI/Additional Exchange Offers">
+                                <span class="product-price">
+                                    <span class="actual-price">₹22999</span>
+                                    <span class="current-price">₹19999</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <p>Graphs are an essential part of computer science and are widely used in many fields, such as networking, routing, and data analysis. Understanding the core graph algorithms, such as traversals (DFS and BFS) and shortest path algorithms (Dijkstra's and Bellman-Ford), is critical for solving a wide range of problems.</p><p>With PHP 8’s modern features and efficient object-oriented practices, you can easily implement and optimize these algorithms for your own projects. Understanding these techniques can help you build smarter, more efficient <a href="/articles/surviving-corporate-ladder-how-software-engineers-can-manage-workplace-politics" title="Read about Surviving The Corporate Ladder How Software Engineers Can Manage Workplace Politics">software</a> that deals with complex data <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">relationships</a>.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+                
+            <pre><code class="language-plaintext">class Graph {
+ &nbsp;&nbsp;&nbsp;// ... (Previous methods)
+ &nbsp;&nbsp;&nbsp;// BFS traversal
+ &nbsp;&nbsp;&nbsp;public function breadthFirstSearch(string $start): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue = [$start];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ($queue) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vertex = array_shift($queue);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isset($visited[$vertex])) continue;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$visited[$vertex] = true;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = $vertex;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($vertex) as $neighbor) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!isset($visited[$neighbor])) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[] = $neighbor;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result;
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p>Both DFS and BFS help in <a href="/articles/exploring-use-artificial-organs-healthcare" title="Read about Exploring The Use Of Artificial Organs In Healthcare">exploring</a> the graph’s vertices in different ways, which is useful for solving problems like finding connected components, solving puzzles, etc.</p><p><strong>Shortest Path Algorithms</strong></p><p>Finding the shortest path between nodes is one of the most important <a href="/articles/usage-phpcs-github-pull-request-drupal-applications" title="Read about Usage Of Phpcs On Github Via Pull Request For Drupal Applications">applications</a> of graph algorithms. Two well-known algorithms for this task are <strong>Dijkstra’s Algorithm</strong> and <strong>Bellman-Ford Algorithm</strong>.</p><p><strong>1. Dijkstra’s Algorithm</strong></p>
+            
+                
+            <p>Dijkstra's algorithm finds the shortest path from a source vertex to all other vertices in a graph. It works only with graphs that have non-negative weights on edges.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3PutiGk" target="_blank" rel="noopener sponsored" data-product="LEVOIT Air Purifiers for Home Large Room Bedroom Up to 1110 Ft² with Air Quality and Light Sensors, Smart WiFi, Washable Filters, HEPA Sleep Mode for Pets, Allergies, Dust, Pollen, Vital 100S-P, White">
+                                <img src="https://m.media-amazon.com/images/I/71QbyJlqBPL._AC_SX679_.jpg" alt="LEVOIT Air Purifiers for Home Large Room Bedroom Up to 1110 Ft² with Air Quality and Light Sensors, Smart WiFi, Washable Filters, HEPA Sleep Mode for Pets, Allergies, Dust, Pollen, Vital 100S-P, White">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3PutiGk" target="_blank" rel="noopener sponsored" data-product="LEVOIT Air Purifiers for Home Large Room Bedroom Up to 1110 Ft² with Air Quality and Light Sensors, Smart WiFi, Washable Filters, HEPA Sleep Mode for Pets, Allergies, Dust, Pollen, Vital 100S-P, White">LEVOIT Air Purifiers for Home Large Room Bedroom Up to 1110 Ft² with Air Quality and Light Sensors, Smart WiFi, Washable Filters, HEPA Sleep Mode for Pets, Allergies, Dust, Pollen, Vital 100S-P, White</a>
+                            </div>
+                            <div class="discount-badge">Now 21% Off</div>
+                            <a href="https://amzn.to/3PutiGk" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LEVOIT Air Purifiers for Home Large Room Bedroom Up to 1110 Ft² with Air Quality and Light Sensors, Smart WiFi, Washable Filters, HEPA Sleep Mode for Pets, Allergies, Dust, Pollen, Vital 100S-P, White">
+                                <span class="product-price">
+                                    <span class="actual-price">₹139.99</span>
+                                    <span class="current-price">₹109.99</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><pre><code class="language-plaintext">class Graph {
+ &nbsp;&nbsp;&nbsp;private array $adjList = [];
+ &nbsp;&nbsp;&nbsp;private array $weights = []; // Store edge weights
+ &nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2, int $weight): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex2][] = $vertex1;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex1,$vertex2"] = $weight;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex2,$vertex1"] = $weight; // Undirected graph
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function dijkstra(string $start): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Set initial distances to infinity
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$vertex] = INF;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev[$vertex] = null;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$vertex] = INF;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$start] = 0;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$start] = 0;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ($queue) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Get the vertex with the smallest distance
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asort($queue);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$minVertex = key($queue);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset($queue[$minVertex]);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Visit each neighbor
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→getAdjacencyList($minVertex) as $neighbor) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$minVertex,$neighbor";
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$alt = $dist[$minVertex] + ($this→weights[$edge] ?? INF);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($alt &lt; $dist[$neighbor]) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$neighbor] = $alt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prev[$neighbor] = $minVertex;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$queue[$neighbor] = $alt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['distances' =&gt; $dist, 'previous' =&gt; $prev];
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre><p><strong>2. Bellman-Ford Algorithm</strong></p><p>The Bellman-Ford algorithm is more versatile than Dijkstra’s because it can handle graphs with negative weight edges. It runs in <strong>O(VE)</strong> time complexity and can also detect negative weight cycles.</p><pre><code class="language-plaintext">class Graph {
+ &nbsp;&nbsp;&nbsp;private array $adjList = [];
+ &nbsp;&nbsp;&nbsp;private array $weights = [];
+ &nbsp;&nbsp;&nbsp;public function addVertex(string $vertex): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex] = [];
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function addEdge(string $vertex1, string $vertex2, int $weight): void {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→adjList[$vertex1][] = $vertex2;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→weights["$vertex1,$vertex2"] = $weight;
+ &nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;public function bellmanFord(string $start): array {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist = [];
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$start] = 0;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Initialize distances for all other vertices
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($vertex !== $start) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$vertex] = INF;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Relax edges repeatedly
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$vertices = array_keys($this→adjList);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for ($i = 0; $i &lt; count($vertices) - 1; $i++) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($edges as $neighbor) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$vertex,$neighbor";
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$alt = $dist[$vertex] + ($this→weights[$edge] ?? INF);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($alt &lt; $dist[$neighbor]) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dist[$neighbor] = $alt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Check for negative weight cycles
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→adjList as $vertex =&gt; $edges) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($edges as $neighbor) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$edge = "$vertex,$neighbor";
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($dist[$vertex] + ($this→weights[$edge] ?? INF) &lt; $dist[$neighbor]) {
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception("Graph contains negative weight cycle");
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $dist;
+ &nbsp;&nbsp;&nbsp;}
+}</code></pre>
+            
+                
+            <p><strong>Conclusion</strong></p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/3K9B2v8" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)">
+                                <img src="https://m.media-amazon.com/images/I/81vDZyJQ-4L._SY879_.jpg" alt="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://amzn.to/3K9B2v8" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)">Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)</a>
+                            </div>
+                            <div class="discount-badge">Now 64% Off</div>
+                            <a href="https://amzn.to/3K9B2v8" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage)">
+                                <span class="product-price">
+                                    <span class="actual-price">₹74999</span>
+                                    <span class="current-price">₹27250</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><p>Graphs are an essential part of computer science and are widely used in many fields, such as networking, routing, and data analysis. Understanding the core graph algorithms, such as traversals (DFS and BFS) and shortest path algorithms (Dijkstra's and Bellman-Ford), is critical for solving a wide range of problems.</p><p>With PHP 8’s modern features and efficient object-oriented practices, you can easily implement and optimize these algorithms for your own projects. Understanding these techniques can help you build smarter, more efficient <a href="/articles/surviving-corporate-ladder-how-software-engineers-can-manage-workplace-politics" title="Read about Surviving The Corporate Ladder How Software Engineers Can Manage Workplace Politics">software</a> that deals with complex data <a href="/articles/database-design-basics-normalization-relationships-er-diagrams" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">relationships</a>.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -685,7 +977,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-dcb2839d53256e16df7bdd965d2dc06ea131c7daf133094091f876170d7379e3">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3307f2421e43b0c29b6fdabaf2c3f6712952d6d6b6cabee51c3b569b0e6626bb">
   
     
       
@@ -719,7 +1011,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -737,7 +1029,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-37a539a97d4b3acdd8406a329774cf4281b5a6f9b162c6a5580409f84e8b6796">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-123e0cc2b04c50e821f31ac7cb9f2713bdd754fdc08bc92bcba3a179b19d88d4">
   
     
       
@@ -916,7 +1208,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -928,7 +1220,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

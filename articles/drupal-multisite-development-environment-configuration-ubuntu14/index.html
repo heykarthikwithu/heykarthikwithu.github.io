@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupalconf_screenshot.webp"
             },
             "datePublished": "2024-08-15T11:43:00+0530",
-            "dateModified": "2026-05-05T14:23:18+0530",
+            "dateModified": "2026-05-05T19:23:56+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tek3ap" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Drupal Multisite development environment Configuration in Ubuntu14</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p><strong>Prerequisite:</strong></p><ul> <li>Requires a working drupal installation</li> </ul><p><strong>Set up your hosts file</strong></p><ul> <li>Add the following lines to <code>/etc/hosts</code>:</li> </ul><p><code>127.0.0.1 testsite.localhost 127.0.0.1 testsite2.localhost</code></p><h2>Set up Virtual Hosts</h2><ul> <li>Add the following code to <code>/etc/apache2/sites-available</code></li> <li>Goto to the folder <code>/etc/apache2/sites-available</code>, copy the <a href="/articles/code-profiling-and-performance-optimization-existing-php-project" title="Read about Code Profiling And Performance Optimization Of An Existing Php Project">existing</a> <code>000-default.conf</code> file to a new file <code>testsite.localhost</code> and make the changes inside the file as mentioned below.</li> </ul><p><code>&nbsp; &lt;\virtualhost&gt; DocumentRoot /var/www/drupal ServerName testsite.localhost &lt;\/virtualhost&gt;</code></p><ul> <li>Do the same thing for <code>testsite2.localhost</code> also.</li> </ul><ul> <li>After this, restart Apache.</li> </ul><p><code>sudo /etc/init.d/apache2 restart</code></p><h2>Set up your databases</h2><ul> <li>Create the two databases <code>testsite</code> and the other <code>testsite2</code>.</li> </ul><h2>Set up your sites folders</h2><ul> <li>From the command prompt, navigate to <code>/var/www/drupal/sites/</code> or wherever you have your sites folder installed.</li> <li>The default directory will serve as a <a href="/articles/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> for our other sites. Create a writable files directory in the default directory to make sure every one of your site folders get this directory:</li> </ul><p><code>sudo mkdir -pm 777 default/files</code></p><ul> <li>Copy the default directory to create your new site directories:</li> </ul><p><code>sudo cp -a default/ testsite.localhost<br> sudo cp -a default/ testsite2.localhost</code></p><ul> <li>Rename the <code>default.settings.php</code> files to <code>settings.php</code> and change the permissions to make them writable, so that the web server can access them in step 7:</li> </ul><p><code>sudo mv testsite.localhost/default.settings.php testsite.localhost/settings.php<br> sudo mv testsite2.localhost/default.settings.php testsite2.localhost/settings.php<br> sudo chmod a+w testsite.localhost/settings.php<br> sudo chmod a+w testsite2.localhost/settings.php</code></p><h2>Configure your sites to use the appropriate databases</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p><strong>Prerequisite:</strong></p><ul> <li>Requires a working drupal installation</li> </ul><p><strong>Set up your hosts file</strong></p><ul> <li>Add the following lines to <code>/etc/hosts</code>:</li> </ul><p><code>127.0.0.1 testsite.localhost 127.0.0.1 testsite2.localhost</code></p><h2>Set up Virtual Hosts</h2><ul> <li>Add the following code to <code>/etc/apache2/sites-available</code></li> <li>Goto to the folder <code>/etc/apache2/sites-available</code>, copy the <a href="/articles/code-profiling-and-performance-optimization-existing-php-project" title="Read about Code Profiling And Performance Optimization Of An Existing Php Project">existing</a> <code>000-default.conf</code> file to a new file <code>testsite.localhost</code> and make the changes inside the file as mentioned below.</li> </ul><p><code>&nbsp; &lt;\virtualhost&gt; DocumentRoot /var/www/drupal ServerName testsite.localhost &lt;\/virtualhost&gt;</code></p><ul> <li>Do the same thing for <code>testsite2.localhost</code> also.</li> </ul><ul> <li>After this, restart Apache.</li> </ul><p><code>sudo /etc/init.d/apache2 restart</code></p><h2>Set up your databases</h2><ul> <li>Create the two databases <code>testsite</code> and the other <code>testsite2</code>.</li> </ul><h2>Set up your sites folders</h2><ul> <li>From the command prompt, navigate to <code>/var/www/drupal/sites/</code> or wherever you have your sites folder installed.</li> <li>The default directory will serve as a <a href="/articles/read-data-paragraph-template-drupal-application" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> for our other sites. Create a writable files directory in the default directory to make sure every one of your site folders get this directory:</li> </ul><p><code>sudo mkdir -pm 777 default/files</code></p><ul> <li>Copy the default directory to create your new site directories:</li> </ul><p><code>sudo cp -a default/ testsite.localhost<br> sudo cp -a default/ testsite2.localhost</code></p><ul> <li>Rename the <code>default.settings.php</code> files to <code>settings.php</code> and change the permissions to make them writable, so that the web server can access them in step 7:</li> </ul><p><code>sudo mv testsite.localhost/default.settings.php testsite.localhost/settings.php<br> sudo mv testsite2.localhost/default.settings.php testsite2.localhost/settings.php<br> sudo chmod a+w testsite.localhost/settings.php<br> sudo chmod a+w testsite2.localhost/settings.php</code></p><h2>Configure your sites to use the appropriate databases</h2>
         
             
         <ul> <li>In the <code>/var/www/drupal/sites/testsite.localhost/</code> directory, edit the <code>settings.php</code> file as follows</li> </ul><pre>    $databases = array ('default' =&gt;  array (    'default' =&gt;    array (      'database' =&gt; 'testsite',      'username' =&gt; 'testuser',      'password' =&gt; 'password',      'host' =&gt; 'localhost',      'port' =&gt; '',      'driver' =&gt; 'mysql',      'prefix' =&gt; '',    ),  ),);</pre><ul> <li>Repeat for <code>/var/www/drupal/sites/testsite2.localhost/</code>, except replace <code>testsite</code> with <code>testsite2</code>.</li> </ul>
@@ -725,24 +725,30 @@
             
                 
             
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4hHaRKu" target="_blank" rel="noopener sponsored" data-product="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray">
-                                <img src="https://m.media-amazon.com/images/I/51dfURQWjOL._SX679_.jpg" alt="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray">
+                            <a href="https://amzn.to/3IUQ8aa" target="_blank" rel="noopener sponsored" data-product="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)">
+                                <img src="https://m.media-amazon.com/images/I/61XhwNKrUlL._SX679_.jpg" alt="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4hHaRKu" target="_blank" rel="noopener sponsored" data-product="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray">HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray</a>
+                                <a href="https://amzn.to/3IUQ8aa" target="_blank" rel="noopener sponsored" data-product="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)">Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)</a>
                             </div>
-                            <div class="discount-badge">Now 49% Off</div>
-                            <a href="https://amzn.to/4hHaRKu" target="_blank" class="buy-button" rel="noopener sponsored" data-product="HONOR MagicBook X16 (2024), 12th Gen Intel Core i5-12450H, 16-inch (40.64 cm) FHD IPS Anti-Glare Thin and Light Laptop (16GB/512GB PCIe SSD/Windows 11/ Full-Size Numeric Keyboard /1.68Kg), Gray">
+                            <div class="discount-badge">Now 45% Off</div>
+                            <a href="https://amzn.to/3IUQ8aa" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Crompton Amica Pro 25-L, 5 Star Rated Storage Water Heater with Superior Glassline Coated Tank, Powerful 2000W Heating Element, Rust Proof Plastic Body and Advanced 3 Level Safety (White and Blue)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹77999</span>
-                                    <span class="current-price">₹39990</span>
+                                    <span class="actual-price">₹13200</span>
+                                    <span class="current-price">₹7249</span>
                                 </span>
 
                                 <span class="product-store">
@@ -779,7 +785,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e53587812a958296854e2ae73e931ab4065a8e38ab16c24ac88df568bd35aef5">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-442eb88cbeb7823c488636afc789bce518eaf17d8d13a0c3fd40804b27f8bbb9">
   
     
       
@@ -813,7 +819,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -831,7 +837,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8a958ea81b984e5d0393bc1f87fe8ab411fef12f81a7d63f401a758f26c2ebd4">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-fd541cee94d938e83dd162982d35631025d3069873007208fb173859fc958265">
   
     
       
@@ -1010,7 +1016,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1022,7 +1028,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9b0209fcd3">
+      <div class="gform-subscribe" id="gform_69f9f69163f11">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
