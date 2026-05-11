@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/when-and-how-to-use-each-design-pattern-in-php.webp"
             },
             "datePublished": "2024-11-04T06:51:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3889" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3889" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">When and How to Use Each Design Pattern in PHP</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Design patterns are proven solutions to common problems in software design. In PHP 8, these patterns can enhance code readability, maintainability and scalability.</p><p>In this article, we’ll explore some of the most common design patterns, when to use them and how to implement them in PHP 8.</p><h2>1. Singleton Pattern</h2><p><strong>When to Use</strong></p><ul> <li>Use the Singleton pattern when you need to ensure that a class has only one instance and provide a global point of access to it.</li> <li>This is particularly useful for managing shared resources, such as database connections or <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> <a href="/articles/fix-drupal-update-manager-error-settings-already-exist" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">settings</a>.</li> </ul><p><strong>How to Implement</strong></p><p><code>class Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private static ?Singleton $instance = null;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private function __construct() {}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function getInstance(): Singleton {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (self::$instance === null) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self::$instance = new Singleton();</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self::$instance;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$singleton = Singleton::getInstance();</code></p><h2>2. Factory Pattern</h2><p><strong>When to Use</strong></p><ul> <li>The Factory pattern is beneficial when you need to create objects without specifying the exact class of the object that will be created.</li> <li>This is ideal for scenarios where you have a common interface but multiple implementations.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void;</code></p><p><code>}</code></p><p><code>class Circle implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Circle\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class Square implements Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function draw(): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Drawing a Square\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class ShapeFactory {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public static function createShape(string $type): Shape {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return match($type) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'circle' =&gt; new Circle(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'square' =&gt; new Square(),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default =&gt; throw new InvalidArgumentException("Invalid shape type"),</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$shape = ShapeFactory::createShape('circle');</code></p><p><code>$shape→draw();</code></p><h2>3. Observer Pattern</h2>
                     
                         
                     <p><strong>When to Use</strong></p><ul> <li>The Observer pattern is useful when you have one-to-many relationships between objects.</li> <li>When one object changes its state, all its dependents should be notified and updated automatically, which is common in event-driven systems.</li> </ul><p><strong>How to Implement</strong></p><p><code>interface Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void;</code></p><p><code>}</code></p><p><code>class EventObserver implements Observer {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function update(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Received event: $event\n";</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>class EventSource {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;private array $observers = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function attach(Observer $observer): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this→observers[] = $observer;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;public function notify(string $event): void {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($this→observers as $observer) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$observer→update($event);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>}</code></p><p><code>// Usage</code></p><p><code>$eventSource = new EventSource();</code></p><p><code>$observer = new EventObserver();</code></p><p><code>$eventSource→attach($observer);</code></p><p><code>$eventSource→notify('Event 1');</code></p>
@@ -746,24 +746,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3ZAqNWw" target="_blank" rel="noopener sponsored" data-product="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">
-                                <img src="https://m.media-amazon.com/images/I/71VCZxocRQL._UY385_.jpg" alt="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">
+                            <a href="https://amzn.to/40lZDUH" target="_blank" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
+                                <img src="https://m.media-amazon.com/images/I/61K8tdygvlL._SX679_.jpg" alt="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3ZAqNWw" target="_blank" rel="noopener sponsored" data-product="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit</a>
+                                <a href="https://amzn.to/40lZDUH" target="_blank" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD</a>
                             </div>
-                            <div class="discount-badge">Now 85% Off</div>
-                            <a href="https://amzn.to/3ZAqNWw" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OM SAI LATEST CREATION Women's Regular Knee Length Short Jumpsuit">
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/40lZDUH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Kenneth Cole Quartz Analog Blue Dial Blue Leather Strap Watch for Women-KCWLA0026803LD">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1999</span>
-                                    <span class="current-price">₹309</span>
+                                    <span class="actual-price">₹11995</span>
+                                    <span class="current-price">₹5997</span>
                                 </span>
 
                                 <span class="product-store">
@@ -803,7 +806,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-20343a9f52450b8ca84d3ab6e741909ec3bde55d0571513daa43795a9668cf72">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-93b16cd695a64fbd53ef051121c7761dc9947c1df81accaa2ab6169f85e03254">
   
     
       
@@ -837,7 +840,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -855,7 +858,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8dfe74c149e4717836696bbd7f91624516952cb03114c75f2dc0aaf3d2587388">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8cf236e0d53d5aeee6dd3d86424bd3f18de69f7bee2847ea669702316d878891">
   
     
       
@@ -865,6 +868,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -882,13 +891,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -906,10 +915,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1034,7 +1061,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1046,7 +1073,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

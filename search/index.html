@@ -57,6 +57,33 @@
   div#search {
     display: block;
   }
+  button.pagefind-ui__search-clear {
+    padding: 0 15px;
+    border: unset;
+  }
+  .pagefind-ui__result .pagefind-ui__result-thumb {
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+  .pagefind-ui__result {
+    position: relative;
+  }
+  .pagefind-ui__result-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+  .pagefind-ui__result {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .pagefind-ui__result:hover {
+      transform: translateY(-2px);
+      background: #f7f8f9;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+  }
 </style>
   </head>
   <body class="path-search">
@@ -514,14 +541,6 @@
           <a id="main-content" tabindex="-1"></a>
           
           <div class="main-content__container container">
-            
-
-  <div class="region region--highlighted grid-full layout--pass--content-medium">
-    <div data-drupal-messages-fallback class="hidden messages-list"></div>
-
-  </div>
-
-            
 
   <div class="region region--breadcrumb grid-full layout--pass--content-medium">
     
@@ -590,7 +609,7 @@
 </form -->
       <div class="search-form">
         <div class="container-inline form-wrapper">
-          <div class="js-form-item form-item form-type-search">
+          <div class="js-form-item form-item form-type-search" style="width: 100%;">
             <div id="search"></div>
           </div>
         </div>
@@ -749,7 +768,7 @@
     const search = new PagefindUI({
       element: "#search",
       showSubResults: true,
-      showImages: false,
+      showImages: true,
       resetStyles: false
     });
 

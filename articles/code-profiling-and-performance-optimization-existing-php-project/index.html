@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/code-profiling-and-performance-optimization-of-an-existing-php-project.webp"
             },
             "datePublished": "2024-11-13T08:36:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3893" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3893" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Code Profiling and Performance Optimization of an Existing PHP Project</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>As applications grow in complexity, ensuring optimal performance becomes critical. Code profiling and performance optimization are essential practices that help developers identify bottlenecks and improve the efficiency of their PHP applications.</p><p>In this article, we will explore the tools and techniques for code profiling and performance optimization in PHP 8.</p><h2>What is Code Profiling?</h2><p>Code profiling is the process of analyzing an application to identify areas that consume excessive resources, such as CPU time or memory. Profiling helps developers understand how their code behaves in real-world scenarios, allowing for informed optimization decisions.</p><p><strong>Benefits of Code Profiling</strong></p><ul> <li><strong>Identifies Bottlenecks</strong>: Profiling reveals which parts of the code are slow or resource-intensive.</li> <li><strong>Improves Performance</strong>: By focusing on the most critical areas, developers can achieve significant performance gains.</li> <li><strong>Guides Refactoring</strong>: Profiling provides insights into where code structure can be improved for better efficiency.</li> </ul><h2>Tools for Code Profiling in PHP 8</h2><p><strong>1. Xdebug</strong></p><ul> <li><a href="https://xdebug.org/" target="_blank"><u>Xdebug</u></a> is a powerful debugging and profiling tool for PHP.</li> <li>It provides detailed insights into code <a href="/articles/understanding-sql-query-execution-plans-and-optimizing-joins" title="Read about Understanding Sql Query Execution Plans And Optimizing Joins">execution</a>, including function call traces and memory usage.</li> </ul><p><strong>Installing Xdebug</strong></p><p>You can install Xdebug using PECL:</p><p><code>pecl install xdebug</code></p><p>Once installed, you can enable it in your <tt>php.ini</tt> file:</p><p><code>zend_extension=xdebug.so</code></p><p><strong>Using Xdebug for Profiling</strong></p><p>To profile your PHP application, you can enable the profiling feature in your <tt>php.ini</tt>:</p><p><code>xdebug.profiler_enable=1</code></p><p><code>xdebug.profiler_output_dir="/path/to/profiler/output"</code></p><p>This configuration will generate cachegrind files in the specified directory, which can be analyzed using tools like<a href="https://github.com/jokkedk/webgrind" target="_blank"> <u>Webgrind</u></a> or QCacheGrind.</p><p><strong>2. Blackfire</strong></p><ul> <li><a href="https://blackfire.io/" target="_blank"><u>Blackfire</u></a> is a commercial profiling tool designed for PHP applications.</li> <li>It provides advanced performance <a href="/articles/how-set-monitoring-system-solar-panel-your-home" title="Read about How To Set Up A Monitoring System For The Solar Panel At Your Home">monitoring</a> and profiling features, including integration with CI/CD pipelines.</li> </ul><p><strong>Setting Up Blackfire</strong></p><p>To get started, you need to install the Blackfire agent and PHP extension:</p><p><code># Install Blackfire agent</code></p><p><code>curl -sS https://get.blackfire.io/blackfire-install.sh | bash</code></p><p><code># Install Blackfire PHP extension</code></p><p><code>pecl install blackfire</code></p><p>Once installed, configure your Blackfire credentials in your <tt>php.ini</tt>:</p><p><code>blackfire.client_id="YOUR_CLIENT_ID"</code></p><p><code>blackfire.client_token="YOUR_CLIENT_TOKEN"</code></p><p><code>blackfire.server_id="YOUR_SERVER_ID"</code></p><p><strong>Profiling with Blackfire</strong></p><p>You can profile your application using the Blackfire CLI:</p><p><code>blackfire run php your-script.php</code></p><p>This command will capture performance data, which you can view on the Blackfire web interface.</p><p><strong>3. Tideways</strong></p><ul> <li><a href="https://tideways.com/" target="_blank"><u>Tideways</u></a> is another performance monitoring tool that focuses on profiling PHP applications.</li> <li>It provides insights into performance bottlenecks and includes transaction monitoring.</li> </ul><p><strong>Installing Tideways</strong></p><p>You can install the Tideways PHP extension using PECL:</p><p><code>pecl install tideways</code></p><p>Then, configure it in your <tt>php.ini</tt>:</p><p><code>extension=tideways.so</code></p><p><code>tideways.api_key="YOUR_API_KEY"</code></p><p><strong>Profiling with Tideways</strong></p><p>To profile a script with Tideways, you can use the CLI tool:</p><p><code>tideways start</code></p><p><code>php your-script.php</code></p><p><code>tideways stop</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>As applications grow in complexity, ensuring optimal performance becomes critical. Code profiling and performance optimization are essential practices that help developers identify bottlenecks and improve the efficiency of their PHP applications.</p><p>In this article, we will explore the tools and techniques for code profiling and performance optimization in PHP 8.</p><h2>What is Code Profiling?</h2><p>Code profiling is the process of analyzing an application to identify areas that consume excessive resources, such as CPU time or memory. Profiling helps developers understand how their code behaves in real-world scenarios, allowing for informed optimization decisions.</p><p><strong>Benefits of Code Profiling</strong></p><ul> <li><strong>Identifies Bottlenecks</strong>: Profiling reveals which parts of the code are slow or resource-intensive.</li> <li><strong>Improves Performance</strong>: By focusing on the most critical areas, developers can achieve significant performance gains.</li> <li><strong>Guides Refactoring</strong>: Profiling provides insights into where code structure can be improved for better efficiency.</li> </ul><h2>Tools for Code Profiling in PHP 8</h2><p><strong>1. Xdebug</strong></p><ul> <li><a href="https://xdebug.org/" target="_blank"><u>Xdebug</u></a> is a powerful debugging and profiling tool for PHP.</li> <li>It provides detailed insights into code <a href="/articles/understanding-sql-query-execution-plans-and-optimizing-joins" title="Read about Understanding Sql Query Execution Plans And Optimizing Joins">execution</a>, including function call traces and memory usage.</li> </ul><p><strong>Installing Xdebug</strong></p><p>You can install Xdebug using PECL:</p><p><code>pecl install xdebug</code></p><p>Once installed, you can enable it in your <tt>php.ini</tt> file:</p><p><code>zend_extension=xdebug.so</code></p><p><strong>Using Xdebug for Profiling</strong></p><p>To profile your PHP application, you can enable the profiling feature in your <tt>php.ini</tt>:</p><p><code>xdebug.profiler_enable=1</code></p><p><code>xdebug.profiler_output_dir="/path/to/profiler/output"</code></p><p>This configuration will generate cachegrind files in the specified directory, which can be analyzed using tools like<a href="https://github.com/jokkedk/webgrind" target="_blank"> <u>Webgrind</u></a> or QCacheGrind.</p><p><strong>2. Blackfire</strong></p><ul> <li><a href="https://blackfire.io/" target="_blank"><u>Blackfire</u></a> is a commercial profiling tool designed for PHP applications.</li> <li>It provides advanced performance <a href="/articles/how-set-monitoring-system-solar-panel-your-home" title="Read about How To Set Up A Monitoring System For The Solar Panel At Your Home">monitoring</a> and profiling features, including integration with CI/CD pipelines.</li> </ul><p><strong>Setting Up Blackfire</strong></p><p>To get started, you need to install the Blackfire agent and PHP extension:</p><p><code># Install Blackfire agent</code></p><p><code>curl -sS https://get.blackfire.io/blackfire-install.sh | bash</code></p><p><code># Install Blackfire PHP extension</code></p><p><code>pecl install blackfire</code></p><p>Once installed, configure your Blackfire credentials in your <tt>php.ini</tt>:</p><p><code>blackfire.client_id="YOUR_CLIENT_ID"</code></p><p><code>blackfire.client_token="YOUR_CLIENT_TOKEN"</code></p><p><code>blackfire.server_id="YOUR_SERVER_ID"</code></p><p><strong>Profiling with Blackfire</strong></p><p>You can profile your application using the Blackfire CLI:</p><p><code>blackfire run php your-script.php</code></p><p>This command will capture performance data, which you can view on the Blackfire web interface.</p><p><strong>3. Tideways</strong></p><ul> <li><a href="https://tideways.com/" target="_blank"><u>Tideways</u></a> is another performance monitoring tool that focuses on profiling PHP applications.</li> <li>It provides insights into performance bottlenecks and includes transaction monitoring.</li> </ul><p><strong>Installing Tideways</strong></p><p>You can install the Tideways PHP extension using PECL:</p><p><code>pecl install tideways</code></p><p>Then, configure it in your <tt>php.ini</tt>:</p><p><code>extension=tideways.so</code></p><p><code>tideways.api_key="YOUR_API_KEY"</code></p><p><strong>Profiling with Tideways</strong></p><p>To profile a script with Tideways, you can use the CLI tool:</p><p><code>tideways start</code></p><p><code>php your-script.php</code></p><p><code>tideways stop</code></p>
         
             
         <h2>Step 1: Performance Optimization Techniques</h2>
@@ -746,24 +746,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3WUB40B" target="_blank" rel="noopener sponsored" data-product="HP 680 Original Ink Advantage Cartridge (Black)| 3000+ learning worksheets worth Rs 599 Free">
-                                <img src="https://m.media-amazon.com/images/I/51AljrVmUGL._SX300_SY300_QL70_FMwebp_.jpg" alt="HP 680 Original Ink Advantage Cartridge (Black)| 3000+ learning worksheets worth Rs 599 Free">
+                            <a href="https://amzn.to/4gti7bO" target="_blank" rel="noopener sponsored" data-product="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">
+                                <img src="https://m.media-amazon.com/images/I/61Vc14MtETL._SX679_.jpg" alt="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3WUB40B" target="_blank" rel="noopener sponsored" data-product="HP 680 Original Ink Advantage Cartridge (Black)| 3000+ learning worksheets worth Rs 599 Free">HP 680 Original Ink Advantage Cartridge (Black)| 3000+ learning worksheets worth Rs 599 Free</a>
+                                <a href="https://amzn.to/4gti7bO" target="_blank" rel="noopener sponsored" data-product="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)</a>
                             </div>
-                            <div class="discount-badge">Now 4% Off</div>
-                            <a href="https://amzn.to/3WUB40B" target="_blank" class="buy-button" rel="noopener sponsored" data-product="HP 680 Original Ink Advantage Cartridge (Black)| 3000+ learning worksheets worth Rs 599 Free">
+                            <div class="discount-badge">Now 49% Off</div>
+                            <a href="https://amzn.to/4gti7bO" target="_blank" class="buy-button" rel="noopener sponsored" data-product="JBL Tour One M2 Adaptive Noise Cancelling Over-Ear Headphones, Spatial Sound, Smart Ambient,50Hrs Playtime,BT 5.3 Le, Quick Charge, Multi Point Conectivity, Built-in Alexa,2 Years Warranty (Champagne)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹886</span>
-                                    <span class="current-price">₹849</span>
+                                    <span class="actual-price">₹34999</span>
+                                    <span class="current-price">₹17999</span>
                                 </span>
 
                                 <span class="product-store">
@@ -807,7 +810,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-788a5f27f7f3d8f7220220608b9b92f6cb2413023d94af24ae4f62907f60b96c">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e7010d9a348453d63c7983b4c30b192bbecf941b2db3aee19e67b7baaef64919">
   
     
       
@@ -841,7 +844,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -859,7 +862,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-66743e3b41cc68d7ca19fd9fa4a6aef258cc6a6b0a5b7c132ff608c3ab8f0b17">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-c1b408c74f1cccb8aed0f8b8a3aefd5c2ea09750e2cd742c3f1fe3af29a0fb00">
   
     
       
@@ -869,6 +872,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -886,13 +895,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -910,10 +919,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1038,7 +1065,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1050,7 +1077,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

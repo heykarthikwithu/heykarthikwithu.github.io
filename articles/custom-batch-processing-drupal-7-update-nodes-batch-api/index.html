@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/D7install5_0.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3809" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3809" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,25 +643,25 @@
 
 <div class="pb-image-caption">Custom Batch processing in Drupal 7 to update Nodes - Batch API</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Drupal's batch API processing is very nice and provides few benifits, We can break long tasks into smaller batches and by this we will be able to prevent maximum execution time errors.</p><p>This article will show how to Build a batch routine in a custom module, its more straight forward approach, you can follow up below code, which is been explained with required comments.</p><p>Create your custom module, which contains <code>custom.info</code> and <code>custom.module</code> files</p><p>The below code put in your <code>custom.module</code> file</p><pre>function custom_menu() {<br>&nbsp;$items['admin/custom_batch'] = array(<br>&nbsp; &nbsp;'title' =&gt; 'Custom Batch',<br>&nbsp; &nbsp;'description' =&gt; 'Custom Batch Process',<br>&nbsp; &nbsp;'type' =&gt; MENU_NORMAL_ITEM,<br>&nbsp; &nbsp;'access callback' =&gt; TRUE,<br>&nbsp; &nbsp;'page callback' =&gt; 'drupal_get_form',<br>&nbsp; &nbsp;'page arguments' =&gt; array('custom_batch_form'),<br>&nbsp;);<br>&nbsp;return $items;<br>}</pre><pre>function custom_batch_form($form, $form_state) {<br>&nbsp;$form["text"]['#markup'] = "Custom batch process to update nodes.... ";<br>&nbsp;$form['submit'] = array(<br>&nbsp; &nbsp;'#type' =&gt; 'submit',<br>&nbsp; &nbsp;'#value' =&gt; t('Run Batch'),<br>&nbsp;);<br>&nbsp;return $form;<br>}</pre><pre>function custom_batch_form_submit($form, $form_state) {<br>&nbsp;batch_set(custom_batch_update_nodes());<br>}</pre><pre>function custom_batch_update_nodes() {<br>&nbsp;drupal_set_message('Updating Nodes');<br>&nbsp;$nodes = node_load_multiple(array(), array('type' =&gt; "story_song"));<br>&nbsp;$node_count = count($nodes);<br>&nbsp;foreach($nodes as $nid=&gt;$node) {<br>&nbsp; &nbsp;$operations[] = array('custom_batch_each_operation', array($node));<br>&nbsp;}<br>&nbsp;$batch = array(<br>&nbsp; &nbsp;'operations' =&gt; $operations,<br>&nbsp; &nbsp;'finished' =&gt; 'custom_batch_update_nodes_finished',<br>&nbsp;);<br>&nbsp;return $batch;<br>}</pre><pre>function custom_batch_each_operation($node, &amp;$context) {<br>&nbsp;$context['results'][] = $node→nid . ' : ' . check_plain($node→title);<br>&nbsp;$context['message'] = t('Processing node "@title"', array('@title' =&gt; $node→title));<br>&nbsp;$updated = FALSE;<br>&nbsp;if ($updated) {<br>&nbsp; &nbsp;node_save($node);<br>&nbsp; &nbsp;$path = drupal_lookup_path("alias", "node/" . $node→nid);<br>&nbsp; &nbsp;drupal_set_message("&lt;a href='/$path'&gt;" . $node→title . "&lt;/a&gt; updated.");<br>&nbsp;}<br>}</pre><pre>function custom_batch_update_nodes_finished($success, $results, $operations) {<br>&nbsp;if ($success) {<br>&nbsp; &nbsp;drupal_set_message(t('@count nodes processed.', array('@count' =&gt; count($results))));<br>&nbsp;}<br>&nbsp;else {<br>&nbsp; &nbsp;$error_operation = reset($operations);<br>&nbsp; &nbsp;drupal_set_message(t('An error occurred while processing @operation with arguments : @args', array('@operation' =&gt; $error_operation[0], '@args' =&gt; print_r($error_operation[0], TRUE))));<br>&nbsp;}<br>}</pre><p>Thank you. </p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Drupal's batch API processing is very nice and provides few benifits, We can break long tasks into smaller batches and by this we will be able to prevent maximum execution time errors.</p><p>This article will show how to Build a batch routine in a custom module, its more straight forward approach, you can follow up below code, which is been explained with required comments.</p><p>Create your custom module, which contains <code>custom.info</code> and <code>custom.module</code> files</p><p>The below code put in your <code>custom.module</code> file</p><pre>function custom_menu() {<br>&nbsp;$items['admin/custom_batch'] = array(<br>&nbsp; &nbsp;'title' =&gt; 'Custom Batch',<br>&nbsp; &nbsp;'description' =&gt; 'Custom Batch Process',<br>&nbsp; &nbsp;'type' =&gt; MENU_NORMAL_ITEM,<br>&nbsp; &nbsp;'access callback' =&gt; TRUE,<br>&nbsp; &nbsp;'page callback' =&gt; 'drupal_get_form',<br>&nbsp; &nbsp;'page arguments' =&gt; array('custom_batch_form'),<br>&nbsp;);<br>&nbsp;return $items;<br>}</pre><pre>function custom_batch_form($form, $form_state) {<br>&nbsp;$form["text"]['#markup'] = "Custom batch process to update nodes.... ";<br>&nbsp;$form['submit'] = array(<br>&nbsp; &nbsp;'#type' =&gt; 'submit',<br>&nbsp; &nbsp;'#value' =&gt; t('Run Batch'),<br>&nbsp;);<br>&nbsp;return $form;<br>}</pre><pre>function custom_batch_form_submit($form, $form_state) {<br>&nbsp;batch_set(custom_batch_update_nodes());<br>}</pre><pre>function custom_batch_update_nodes() {<br>&nbsp;drupal_set_message('Updating Nodes');<br>&nbsp;$nodes = node_load_multiple(array(), array('type' =&gt; "story_song"));<br>&nbsp;$node_count = count($nodes);<br>&nbsp;foreach($nodes as $nid=&gt;$node) {<br>&nbsp; &nbsp;$operations[] = array('custom_batch_each_operation', array($node));<br>&nbsp;}<br>&nbsp;$batch = array(<br>&nbsp; &nbsp;'operations' =&gt; $operations,<br>&nbsp; &nbsp;'finished' =&gt; 'custom_batch_update_nodes_finished',<br>&nbsp;);<br>&nbsp;return $batch;<br>}</pre><pre>function custom_batch_each_operation($node, &amp;$context) {<br>&nbsp;$context['results'][] = $node→nid . ' : ' . check_plain($node→title);<br>&nbsp;$context['message'] = t('Processing node "@title"', array('@title' =&gt; $node→title));<br>&nbsp;$updated = FALSE;<br>&nbsp;if ($updated) {<br>&nbsp; &nbsp;node_save($node);<br>&nbsp; &nbsp;$path = drupal_lookup_path("alias", "node/" . $node→nid);<br>&nbsp; &nbsp;drupal_set_message("&lt;a href='/$path'&gt;" . $node→title . "&lt;/a&gt; updated.");<br>&nbsp;}<br>}</pre><pre>function custom_batch_update_nodes_finished($success, $results, $operations) {<br>&nbsp;if ($success) {<br>&nbsp; &nbsp;drupal_set_message(t('@count nodes processed.', array('@count' =&gt; count($results))));<br>&nbsp;}<br>&nbsp;else {<br>&nbsp; &nbsp;$error_operation = reset($operations);<br>&nbsp; &nbsp;drupal_set_message(t('An error occurred while processing @operation with arguments : @args', array('@operation' =&gt; $error_operation[0], '@args' =&gt; print_r($error_operation[0], TRUE))));<br>&nbsp;}<br>}</pre><p>Thank you. </p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3YG2WUd" target="_blank" rel="noopener sponsored" data-product="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">
-                                <img src="https://m.media-amazon.com/images/I/51iEvATbniL._SX385_.jpg" alt="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">
+                            <a href="https://amzn.to/4vYVkxH" target="_blank" rel="noopener sponsored" data-product="Elica 60cm BLDC Kitchen Chimney – 1500 m³/hr, Filterless, Auto Clean">
+                                <img src="https://m.media-amazon.com/images/I/61EiCGIsLqL._SL1500_.jpg" alt="Elica 60cm BLDC Kitchen Chimney – 1500 m³/hr, Filterless, Auto Clean">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3YG2WUd" target="_blank" rel="noopener sponsored" data-product="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)</a>
+                                <a href="https://amzn.to/4vYVkxH" target="_blank" rel="noopener sponsored" data-product="Elica 60cm BLDC Kitchen Chimney – 1500 m³/hr, Filterless, Auto Clean">Elica 60cm BLDC Kitchen Chimney – 1500 m³/hr, Filterless, Auto Clean</a>
                             </div>
-                            <div class="discount-badge">Now 64% Off</div>
-                            <a href="https://amzn.to/3YG2WUd" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Mega Clothing Stand | Stylish Garment Stand | Hanging Rack | Clothes Hanger for Balcony &amp; Bedroom | 2-Tier Folding Clothes Rail Clothes Horses Drying Rack (Royal Blue)">
+                            <div class="discount-badge">Now 46% Off</div>
+                            <a href="https://amzn.to/4vYVkxH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Elica 60cm BLDC Kitchen Chimney – 1500 m³/hr, Filterless, Auto Clean">
                                 <span class="product-price">
-                                    <span class="actual-price">₹3500</span>
-                                    <span class="current-price">₹1273</span>
+                                    <span class="actual-price">₹28990.00</span>
+                                    <span class="current-price">₹15740.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -780,7 +783,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7ba641aec3b34153c96ec141f096fb9d09b515fa86d7d34d40babf0e5bc1766a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-009aab2083c110c577e46e5663cd916b39d3f78d3553f8dd7d7d0cecf78f7913">
   
     
       
@@ -814,7 +817,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -832,7 +835,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-1ff7ca570cbac29fb52e14d7613aa2023d74d20e8c0c21a102f039aedba9f2a1">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ac9cdf9b5306f3056659782987b85a33470846797a114a92070e13d0687a910b">
   
     
       
@@ -842,6 +845,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -859,13 +868,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -883,10 +892,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1011,7 +1038,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1023,7 +1050,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

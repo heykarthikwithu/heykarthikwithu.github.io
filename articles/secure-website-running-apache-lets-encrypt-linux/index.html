@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/letsencrypt_bpic.webp"
             },
             "datePublished": "2024-08-15T11:48:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3815" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3815" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,25 +643,25 @@
 
 <div class="pb-image-caption">Secure Website running on Apache with Let's Encrypt on Linux</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>Website <a href="/articles/usage-local-php-security-checker-drupal-applications" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a> is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It's very complex process to install and add SSL certificate to a web server.</p><p>Let's make it easier with the help of Let's Encrypt. One can easily encrypt data of your website free of charge using Let's Encrypt.</p><ul><li data-list-item-id="ece55be7753b4ffcd7d198b97f78ffc34">If your Site is running on Apache, run this below one to enable ssl..</li></ul><pre><code class="language-plaintext">sudo a2enmode ssl</code></pre><pre><code class="language-plaintext">sudo a2ensite default-ssl</code></pre><ul><li data-list-item-id="e84ed54f8ac190ef3ef44f296095aeeae">Next restart the apache webserver</li></ul><pre><code class="language-plaintext">sudo systemctl restart apache2</code></pre><ul><li data-list-item-id="e1f4f79646075779bea38b45fcc3c2fd2">If you hit your domain, you will see</li></ul><p><code>Your Connection is not Secured</code></p><ul><li data-list-item-id="ebf86910b3ead700ad9acd911aeb4d030">Download and Install Let's Encrypt</li></ul><pre><code class="language-plaintext">sudo git clone <a href="https://github.com/letsencrypt/letsencrypt" target="_blank">https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</code></pre><ul><li data-list-item-id="e5c2a5a45c70bb6728c3de70bce9f35a5">Next generate the Certificate</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><pre><code class="language-plaintext">sudo ./letsencrypt-auto --apache -d http://kkk.com</code></pre><ul><li data-list-item-id="eebd891637fa971feedcbb7db5ed68234">During installation you will need to specify your E-mail address and also agree to the terms of service.</li><li data-list-item-id="efc51535f354ce485fc35961c76e7377f">Once completed, One can see&nbsp;list all of&nbsp;certificate files at&nbsp;<code>/etc/letsencrypt/live</code>&nbsp;<a href="/articles/azure-active-directory-app-registrations-complete-guide" title="Read about Understanding Azure Active Directory Azure App Registrations Key Concepts And Best Practices">directory</a>..</li><li data-list-item-id="edb8fac8e9fbeb53e53ba7d2de96dd4b6">And you can access <code>https://kkk.com</code></li><li data-list-item-id="ee8ccd34ecf055693a50bd416f77950c7">You can also verify the status of your SSL certificate by visiting the URL&nbsp;<code>https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest</code></li></ul><p><strong>How to Renew Lets Encrypt Certificates</strong></p><ul><li data-list-item-id="e136a330535228733371888e859dcb785">By default, SSL certificates issued by Let's Encrypt are valid for 90 days. So it is recommended to renew the certificate before the expiration date.</li><li data-list-item-id="e2ddca4fe2bebd8323efdecb96dc6b547">You can renew the SSL certificates manually</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><pre><code class="language-plaintext">sudo ./letsencrypt-auto certonly --renew-by-default -d <a href="http://kkk.com">kkk.com</a></code></pre><ul><li data-list-item-id="e36121fd5efad035921ed80207406da9a">to Automate this process, lets have the Cron job for this to do..</li></ul><pre><code class="language-plaintext">sudo nano /etc/crontab</code></pre><pre><code class="language-plaintext"> @monthly root /opt/letsencrypt/letsencrypt-auto certonly --renew-by-default -d <a href="http://kkk.com">kkk.com</a></code></pre><ul><li data-list-item-id="e8e7d9ae8dbc9e128e505f53e88d54f22">Save this file and Every month, this cron job would run..</li><li data-list-item-id="e44dd3099c03f18b835d64538a1abcbbb">Upgrade Let's Encrypt</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><ul><li data-list-item-id="edaf7ae44a65d3c79007cdd7e5fa649c8">Pull the latest changes from the git repository..</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Website <a href="/articles/usage-local-php-security-checker-drupal-applications" title="Read about Usage Of Local Php Security Checker For Drupal Applications">security</a> is generally most complicated and expensive task for every Linux admin. Let's Encrypt is a free, automated and open certificate authority that provides free X.509 certificates for Transport Layer Security encryption via an automated process. It's very complex process to install and add SSL certificate to a web server.</p><p>Let's make it easier with the help of Let's Encrypt. One can easily encrypt data of your website free of charge using Let's Encrypt.</p><ul><li data-list-item-id="ece55be7753b4ffcd7d198b97f78ffc34">If your Site is running on Apache, run this below one to enable ssl..</li></ul><pre><code class="language-plaintext">sudo a2enmode ssl</code></pre><pre><code class="language-plaintext">sudo a2ensite default-ssl</code></pre><ul><li data-list-item-id="e84ed54f8ac190ef3ef44f296095aeeae">Next restart the apache webserver</li></ul><pre><code class="language-plaintext">sudo systemctl restart apache2</code></pre><ul><li data-list-item-id="e1f4f79646075779bea38b45fcc3c2fd2">If you hit your domain, you will see</li></ul><p><code>Your Connection is not Secured</code></p><ul><li data-list-item-id="ebf86910b3ead700ad9acd911aeb4d030">Download and Install Let's Encrypt</li></ul><pre><code class="language-plaintext">sudo git clone <a href="https://github.com/letsencrypt/letsencrypt" target="_blank">https://github.com/letsencrypt/letsencrypt</a> /opt/letsencrypt</code></pre><ul><li data-list-item-id="e5c2a5a45c70bb6728c3de70bce9f35a5">Next generate the Certificate</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><pre><code class="language-plaintext">sudo ./letsencrypt-auto --apache -d http://kkk.com</code></pre><ul><li data-list-item-id="eebd891637fa971feedcbb7db5ed68234">During installation you will need to specify your E-mail address and also agree to the terms of service.</li><li data-list-item-id="efc51535f354ce485fc35961c76e7377f">Once completed, One can see&nbsp;list all of&nbsp;certificate files at&nbsp;<code>/etc/letsencrypt/live</code>&nbsp;<a href="/articles/azure-active-directory-app-registrations-complete-guide" title="Read about Understanding Azure Active Directory Azure App Registrations Key Concepts And Best Practices">directory</a>..</li><li data-list-item-id="edb8fac8e9fbeb53e53ba7d2de96dd4b6">And you can access <code>https://kkk.com</code></li><li data-list-item-id="ee8ccd34ecf055693a50bd416f77950c7">You can also verify the status of your SSL certificate by visiting the URL&nbsp;<code>https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com&amp;latest</code></li></ul><p><strong>How to Renew Lets Encrypt Certificates</strong></p><ul><li data-list-item-id="e136a330535228733371888e859dcb785">By default, SSL certificates issued by Let's Encrypt are valid for 90 days. So it is recommended to renew the certificate before the expiration date.</li><li data-list-item-id="e2ddca4fe2bebd8323efdecb96dc6b547">You can renew the SSL certificates manually</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><pre><code class="language-plaintext">sudo ./letsencrypt-auto certonly --renew-by-default -d <a href="http://kkk.com">kkk.com</a></code></pre><ul><li data-list-item-id="e36121fd5efad035921ed80207406da9a">to Automate this process, lets have the Cron job for this to do..</li></ul><pre><code class="language-plaintext">sudo nano /etc/crontab</code></pre><pre><code class="language-plaintext"> @monthly root /opt/letsencrypt/letsencrypt-auto certonly --renew-by-default -d <a href="http://kkk.com">kkk.com</a></code></pre><ul><li data-list-item-id="e8e7d9ae8dbc9e128e505f53e88d54f22">Save this file and Every month, this cron job would run..</li><li data-list-item-id="e44dd3099c03f18b835d64538a1abcbbb">Upgrade Let's Encrypt</li></ul><pre><code class="language-plaintext">cd /opt/letsencrypt</code></pre><ul><li data-list-item-id="edaf7ae44a65d3c79007cdd7e5fa649c8">Pull the latest changes from the git repository..</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3DQDYMX" target="_blank" rel="noopener sponsored" data-product="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">
-                                <img src="https://m.media-amazon.com/images/I/61JdCOZOmHL._AC_SY879_.jpg" alt="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">
+                            <a href="https://amzn.to/46ia901" target="_blank" rel="noopener sponsored" data-product="Philips HD9363/02 1.2 L Kettle with rust free SS304 25% Thicker Stainless Steel body for longer life |Triple safe auto cut off | 1800W">
+                                <img src="https://m.media-amazon.com/images/I/61ulgKbOAQL._SX679_.jpg" alt="Philips HD9363/02 1.2 L Kettle with rust free SS304 25% Thicker Stainless Steel body for longer life |Triple safe auto cut off | 1800W">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3DQDYMX" target="_blank" rel="noopener sponsored" data-product="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look</a>
+                                <a href="https://amzn.to/46ia901" target="_blank" rel="noopener sponsored" data-product="Philips HD9363/02 1.2 L Kettle with rust free SS304 25% Thicker Stainless Steel body for longer life |Triple safe auto cut off | 1800W">Philips HD9363/02 1.2 L Kettle with rust free SS304 25% Thicker Stainless Steel body for longer life |Triple safe auto cut off | 1800W</a>
                             </div>
-                            <div class="discount-badge">Now -49% Off</div>
-                            <a href="https://amzn.to/3DQDYMX" target="_blank" class="buy-button" rel="noopener sponsored" data-product="SKYWPOJU Women's PU Leather Dress Long Sleeve Elegant Sheath Dress Pencil Dress Clubwear Dress Cocktail Party Evening Dresses in Latex Leather Patent Look">
+                            <div class="discount-badge">Now 20% Off</div>
+                            <a href="https://amzn.to/46ia901" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Philips HD9363/02 1.2 L Kettle with rust free SS304 25% Thicker Stainless Steel body for longer life |Triple safe auto cut off | 1800W">
                                 <span class="product-price">
-                                    <span class="actual-price">₹22.55</span>
-                                    <span class="current-price">₹33.49</span>
+                                    <span class="actual-price">₹1995</span>
+                                    <span class="current-price">₹1599.50</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             </div>
@@ -700,7 +703,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3e9b51748a06dfa9450cdcaca133cba2d6b50ac7839018b2b4ed41ecf1b8e199">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-688782dfc7087daf33dfcedaf7ebcebbd17b4026812118065f610fc237980bfa">
   
     
       
@@ -734,7 +737,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -752,7 +755,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f7c28b52f71b9004eef247bb5b7c94cc3bcab4852aab575a2104628ec23e6494">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-2165488c0a66732164d83178df022f86208cf082f129c1015a8f90965dbdb61f">
   
     
       
@@ -762,6 +765,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -779,13 +788,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -803,10 +812,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -931,7 +958,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -943,7 +970,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

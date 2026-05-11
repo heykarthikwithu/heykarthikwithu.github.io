@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/drupal-solr-lando.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3653" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3653" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,25 +643,25 @@
 
 <div class="pb-image-caption">Improve Drupal Search with Solr, Locally configured via Lando</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In this article, we are going to learn <strong>how Drupal search can be improved with Solr</strong> which provides great <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> and is suitable even for use on large commercial <a href="/articles/how-generate-good-revenue-blogging-websites" title="Read about How To Generate Good Revenue From Blogging Websites">websites</a>. And along with this using the <code>search_api</code> and <code>search_api_solr</code> modules, helps to <strong>configure the Facets and Multilingual content</strong> can be handled in an improved manner. And let's see <strong>how we can configure this locally with the help of Lando</strong>, which provides the container for Solr locally.</p><p><strong>Assuming you already have a Drupal 9 basic setup with Lando</strong>, where you have the web server and mysql running, means you Drupal 9 site is up running with such a url - <code>drupal9.lndo.site</code></p><p><strong>To set up Solr locally</strong>, you have to add Solr related <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> in your <code>.lando.yml</code> file. Here’s the sample of the configuration.</p><pre>name: drupal9 recipe: drupal9 config:   webroot: web services:   appserver:     type: php:7.4   database:     type: mysql     healthcheck: ''   solr:     type: solr     portforward: true     core: drupal9     config:       conf: solr/conf proxy:   appserver:     - drupal9.lndo.site   solr:     - solr.lndo.site </pre><p>It will <strong>spin up a container</strong> with name <code>solr</code></p><ul class="check"> <li><code>type: solr</code> means, it will pick the latest solr version, currently it picks Solr 7.</li> <li><code>core: drupal9</code> means, Solr core name</li> <li><code>conf: utils/solr7/conf</code> means, Create a conf folder under the folder mentioned and download the conf from <code>search_api_solr</code> - <a href="https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start" target="_blank" style="border-bottom: 1px solid #064771 !important;"><strong>https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start</strong></a> and place it in the conf folder.</li> </ul><p>You can access the <strong>Admin side of Solr</strong> via <code>Solr.lndo.site</code>. By this you are done with the Solr configuration within Lando on your local machine.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we are going to learn <strong>how Drupal search can be improved with Solr</strong> which provides great <a href="/articles/profiling-drupal-performance-webgrind-and-xdebug" title="Read about Profiling Drupal Performance With Webgrind And Xdebug">performance</a> and is suitable even for use on large commercial <a href="/articles/how-generate-good-revenue-blogging-websites" title="Read about How To Generate Good Revenue From Blogging Websites">websites</a>. And along with this using the <code>search_api</code> and <code>search_api_solr</code> modules, helps to <strong>configure the Facets and Multilingual content</strong> can be handled in an improved manner. And let's see <strong>how we can configure this locally with the help of Lando</strong>, which provides the container for Solr locally.</p><p><strong>Assuming you already have a Drupal 9 basic setup with Lando</strong>, where you have the web server and mysql running, means you Drupal 9 site is up running with such a url - <code>drupal9.lndo.site</code></p><p><strong>To set up Solr locally</strong>, you have to add Solr related <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> in your <code>.lando.yml</code> file. Here’s the sample of the configuration.</p><pre>name: drupal9 recipe: drupal9 config:   webroot: web services:   appserver:     type: php:7.4   database:     type: mysql     healthcheck: ''   solr:     type: solr     portforward: true     core: drupal9     config:       conf: solr/conf proxy:   appserver:     - drupal9.lndo.site   solr:     - solr.lndo.site </pre><p>It will <strong>spin up a container</strong> with name <code>solr</code></p><ul class="check"> <li><code>type: solr</code> means, it will pick the latest solr version, currently it picks Solr 7.</li> <li><code>core: drupal9</code> means, Solr core name</li> <li><code>conf: utils/solr7/conf</code> means, Create a conf folder under the folder mentioned and download the conf from <code>search_api_solr</code> - <a href="https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start" target="_blank" style="border-bottom: 1px solid #064771 !important;"><strong>https://git.drupalcode.org/project/search_api_solr/-/tree/4.x/jump-start</strong></a> and place it in the conf folder.</li> </ul><p>You can access the <strong>Admin side of Solr</strong> via <code>Solr.lndo.site</code>. By this you are done with the Solr configuration within Lando on your local machine.</p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
-                                <img src="https://m.media-amazon.com/images/I/81lGxS2ZisL._SX679_.jpg" alt="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
+                            <a href="https://amzn.to/4q1UJbr" target="_blank" rel="noopener sponsored" data-product="Tata 1mg Flexible Tip Digital Thermometer with One Touch Operation for Children and Adult, Plastic">
+                                <img src="https://m.media-amazon.com/images/I/516JfirlzTL._SX522_.jpg" alt="Tata 1mg Flexible Tip Digital Thermometer with One Touch Operation for Children and Adult, Plastic">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/467L75Q" target="_blank" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue</a>
+                                <a href="https://amzn.to/4q1UJbr" target="_blank" rel="noopener sponsored" data-product="Tata 1mg Flexible Tip Digital Thermometer with One Touch Operation for Children and Adult, Plastic">Tata 1mg Flexible Tip Digital Thermometer with One Touch Operation for Children and Adult, Plastic</a>
                             </div>
-                            <div class="discount-badge">Now 0% Off</div>
-                            <a href="https://amzn.to/467L75Q" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Echo Dot (5th Gen) | Smart speaker with Bigger sound, Motion Detection, Temperature Sensor, Alexa and Bluetooth| Blue">
+                            <div class="discount-badge">Now 17% Off</div>
+                            <a href="https://amzn.to/4q1UJbr" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Tata 1mg Flexible Tip Digital Thermometer with One Touch Operation for Children and Adult, Plastic">
                                 <span class="product-price">
-                                    <span class="actual-price">₹5499</span>
-                                    <span class="current-price">₹5479</span>
+                                    <span class="actual-price">₹245</span>
+                                    <span class="current-price">₹204</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -780,7 +783,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-508727f99473c7c503a2eefcf4b0224de853117d0c712a773c8ac8f447147628">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-34af3678518d8ce2af6b8641303fc26f707b4f7448921bd09da92a7c925649a1">
   
     
       
@@ -814,7 +817,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -832,7 +835,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ca62d5d19b102b5eb8a2962c65d51e1d53e505c1816654f7a0c8ecc11dc089fa">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-bbdf4a7ed930eeb960a58a05b29faec1582e2754d60579e36424d95b62571d62">
   
     
       
@@ -842,6 +845,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -859,13 +868,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -883,10 +892,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1011,7 +1038,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1023,7 +1050,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

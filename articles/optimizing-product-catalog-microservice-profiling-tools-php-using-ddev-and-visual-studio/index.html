@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/optimizing-a-product-catalog-microservice-with-profiling-tools-in-php-using-ddev-and-visual-studio-code.webp"
             },
             "datePublished": "2024-11-17T08:12:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3895" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3895" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Optimizing a Product Catalog Microservice with Profiling Tools in PHP Using DDEV and Visual Studio Code</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>In this article, we will enhance the product catalog microservice we built earlier by integrating Xdebug for profiling, specifically tailored for development in Visual Studio Code (VS Code). We will include detailed setup instructions, ensuring a smooth experience while profiling your <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a>.</p><h2>Overview</h2><p><strong>Key Components</strong></p><ol> <li><strong>PHP 8</strong>: The programming <a href="/articles/international-mother-language-day" title="Read about International Mother Language Day">language</a> for our microservice.</li> <li><strong>MySQL</strong>: The database for storing product data.</li> <li><strong>Redis</strong>: The caching layer for frequently accessed product data.</li> <li><strong>Xdebug</strong>: A profiling tool for identifying performance bottlenecks.</li> </ol><h2>Step 1: Setting Up Your <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">Environment</a> with DDEV</h2><p><strong>1. Install DDEV</strong></p><p>Ensure DDEV is installed on your machine. Follow the installation instructions&nbsp;<a href="https://ddev.readthedocs.io/en/stable/#installation" target="_blank"><u>here</u></a>.</p><p><strong>2. Create a New DDEV Project</strong></p><p>Open your terminal and create a new project directory:</p><p><code>mkdir product-catalog-microservice</code></p><p><code>cd product-catalog-microservice</code></p><p>Initialize DDEV:</p><p><code>ddev config</code></p><p>Choose "php" as the project type and select PHP 8.</p><p>Start the DDEV environment:</p><p><code>ddev start</code></p><p><strong>3. Install Composer Dependencies</strong></p><p>Inside the DDEV environment, run:</p><p><code>ddev composer require predis/predis</code></p><p>If you see isssue with predis/predis, setup redis with docker compose, refer to this article for more details.</p><h2>Step 2: Setting Up the MySQL Database</h2><p><strong>Create the Database</strong></p><p>DDEV automatically sets up a MySQL database for you. Access the MySQL shell with:</p><p><code>ddev mysql</code></p><p>Run the following commands to create the products table:</p><p><code>CREATE TABLE products (</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;name VARCHAR(255) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;description TEXT,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;price DECIMAL(10, 2) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</code></p><p><code>);</code></p><p><strong>Insert Sample Data</strong></p><p>Insert some sample products:</p><p><code>INSERT INTO products (name, description, price) VALUES</code></p><p><code>('Product A', 'Description for Product A', 10.00),</code></p><p><code>('Product B', 'Description for Product B', 20.00),</code></p><p><code>('Product C', 'Description for Product C', 30.00);</code></p><h2>Step 3: Implementing the Microservice</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>In this article, we will enhance the product catalog microservice we built earlier by integrating Xdebug for profiling, specifically tailored for development in Visual Studio Code (VS Code). We will include detailed setup instructions, ensuring a smooth experience while profiling your <a href="/articles/store-secrets-securely-pantheon-drupal-application" title="Read about Store Secrets Securely On Pantheon For Drupal Application">application</a>.</p><h2>Overview</h2><p><strong>Key Components</strong></p><ol> <li><strong>PHP 8</strong>: The programming <a href="/articles/international-mother-language-day" title="Read about International Mother Language Day">language</a> for our microservice.</li> <li><strong>MySQL</strong>: The database for storing product data.</li> <li><strong>Redis</strong>: The caching layer for frequently accessed product data.</li> <li><strong>Xdebug</strong>: A profiling tool for identifying performance bottlenecks.</li> </ol><h2>Step 1: Setting Up Your <a href="/articles/local-environment-setup-lando-drupal-10" title="Read about Local Environment Setup With Lando And Drupal">Environment</a> with DDEV</h2><p><strong>1. Install DDEV</strong></p><p>Ensure DDEV is installed on your machine. Follow the installation instructions&nbsp;<a href="https://ddev.readthedocs.io/en/stable/#installation" target="_blank"><u>here</u></a>.</p><p><strong>2. Create a New DDEV Project</strong></p><p>Open your terminal and create a new project directory:</p><p><code>mkdir product-catalog-microservice</code></p><p><code>cd product-catalog-microservice</code></p><p>Initialize DDEV:</p><p><code>ddev config</code></p><p>Choose "php" as the project type and select PHP 8.</p><p>Start the DDEV environment:</p><p><code>ddev start</code></p><p><strong>3. Install Composer Dependencies</strong></p><p>Inside the DDEV environment, run:</p><p><code>ddev composer require predis/predis</code></p><p>If you see isssue with predis/predis, setup redis with docker compose, refer to this article for more details.</p><h2>Step 2: Setting Up the MySQL Database</h2><p><strong>Create the Database</strong></p><p>DDEV automatically sets up a MySQL database for you. Access the MySQL shell with:</p><p><code>ddev mysql</code></p><p>Run the following commands to create the products table:</p><p><code>CREATE TABLE products (</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;id INT AUTO_INCREMENT PRIMARY KEY,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;name VARCHAR(255) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;description TEXT,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;price DECIMAL(10, 2) NOT NULL,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</code></p><p><code>);</code></p><p><strong>Insert Sample Data</strong></p><p>Insert some sample products:</p><p><code>INSERT INTO products (name, description, price) VALUES</code></p><p><code>('Product A', 'Description for Product A', 10.00),</code></p><p><code>('Product B', 'Description for Product B', 20.00),</code></p><p><code>('Product C', 'Description for Product C', 30.00);</code></p><h2>Step 3: Implementing the Microservice</h2>
         
             
         
@@ -744,24 +744,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4dFncwk" target="_blank" rel="noopener sponsored" data-product="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">
-                                <img src="https://m.media-amazon.com/images/I/81fzp1uOldL._SX679_.jpg" alt="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">
+                            <a href="https://amzn.to/3IscZK5" target="_blank" rel="noopener sponsored" data-product="Urban yog Hair Removal Cream Spray for Women | Painless Body Hair Removal Spray for legs, hands, underarm &amp; back (200 ML, Tulip (Blue))">
+                                <img src="https://m.media-amazon.com/images/I/71EjDBE9CdL._SX679_.jpg" alt="Urban yog Hair Removal Cream Spray for Women | Painless Body Hair Removal Spray for legs, hands, underarm &amp; back (200 ML, Tulip (Blue))">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4dFncwk" target="_blank" rel="noopener sponsored" data-product="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)</a>
+                                <a href="https://amzn.to/3IscZK5" target="_blank" rel="noopener sponsored" data-product="Urban yog Hair Removal Cream Spray for Women | Painless Body Hair Removal Spray for legs, hands, underarm &amp; back (200 ML, Tulip (Blue))">Urban yog Hair Removal Cream Spray for Women | Painless Body Hair Removal Spray for legs, hands, underarm &amp; back (200 ML, Tulip (Blue))</a>
                             </div>
-                            <div class="discount-badge">Now 66% Off</div>
-                            <a href="https://amzn.to/4dFncwk" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Plantex Self Adhesive Bathroom Shelf for Wall/Shelf Organizer/Kitchen Shelf with Magic Stickers - Pack of 1 (Black, Powder Coated)">
+                            <div class="discount-badge">Now 41% Off</div>
+                            <a href="https://amzn.to/3IscZK5" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Urban yog Hair Removal Cream Spray for Women | Painless Body Hair Removal Spray for legs, hands, underarm &amp; back (200 ML, Tulip (Blue))">
                                 <span class="product-price">
-                                    <span class="actual-price">₹880</span>
-                                    <span class="current-price">₹299</span>
+                                    <span class="actual-price">₹850</span>
+                                    <span class="current-price">₹499</span>
                                 </span>
 
                                 <span class="product-store">
@@ -879,24 +882,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4m4o2ax" target="_blank" rel="noopener sponsored" data-product="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">
-                                <img src="https://m.media-amazon.com/images/I/51G4MHEo0PL._SX679_.jpg" alt="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">
+                            <a href="https://amzn.to/4d5gaDV" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy Watch7 (44mm LTE) – Next-Gen Smartwatch with 3nm Processor">
+                                <img src="https://m.media-amazon.com/images/I/71QUv8DcRBL._SL1500_.jpg" alt="Samsung Galaxy Watch7 (44mm LTE) – Next-Gen Smartwatch with 3nm Processor">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4m4o2ax" target="_blank" rel="noopener sponsored" data-product="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set</a>
+                                <a href="https://amzn.to/4d5gaDV" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy Watch7 (44mm LTE) – Next-Gen Smartwatch with 3nm Processor">Samsung Galaxy Watch7 (44mm LTE) – Next-Gen Smartwatch with 3nm Processor</a>
                             </div>
-                            <div class="discount-badge">Now 7% Off</div>
-                            <a href="https://amzn.to/4m4o2ax" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bosch Professional 7pcs X-Line Mini Wood Drill Bit Set">
+                            <div class="discount-badge">Now 48% Off</div>
+                            <a href="https://amzn.to/4d5gaDV" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy Watch7 (44mm LTE) – Next-Gen Smartwatch with 3nm Processor">
                                 <span class="product-price">
-                                    <span class="actual-price">₹424</span>
-                                    <span class="current-price">₹394</span>
+                                    <span class="actual-price">₹39999.00</span>
+                                    <span class="current-price">₹20989.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -945,7 +951,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7cca272b80fa56176c7adad70c7ae1902abf47e957a3f8bfb8e640241be5adf6">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-73e9c72c6dfd7b55eb579dd21754789ad36d02f83491163aec74b0a164cfcfe0">
   
     
       
@@ -979,7 +985,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -997,7 +1003,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f9b06082851719796317566d6b2ccda79fcf76015fa47825df3d4028c25e3c64">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-fb6dd097e514df5d499c76c4f89c22245c6cd05a76962d4ddae1d66088247487">
   
     
       
@@ -1007,6 +1013,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -1024,13 +1036,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -1048,10 +1060,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1176,7 +1206,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1188,7 +1218,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">

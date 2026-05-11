@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/usage-of-constraints-validations-on-media-entities-in-drupal-application.webp"
             },
             "datePublished": "2023-12-01T08:00:00+0530",
-            "dateModified": "2026-05-05T19:23:56+0530",
+            "dateModified": "2026-05-11T10:02:46+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tekh8v" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?teuuth" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -622,7 +622,7 @@
       <div class="block__content">
       
 
-<article data-history-node-id="3675" class="node node--type-article grid-full node--promoted node--view-mode-full">
+<article data-history-node-id="3675" class="node node--type-article grid-full node--promoted node--view-mode-full" data-pagefind-body>
   <header class="layout--content-narrow">
     
           <div class="pb-meta">By 
@@ -643,7 +643,7 @@
 
 <div class="pb-image-caption">Usage of Constraints (Validations) on Media Entities in Drupal Application</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
                     
                         
                     <p>In this article we are going to see how drupal developers can use the Drupal Constraints to Validate the Media entities.</p><p>Basically Drupal provides Constraints to do the Validations on the Entities, where Drupal uses the Symfony’s validator and extends with Symfony’s Typed Data API for validating specific Entity field definitions.</p><p>These constraint validators can be used in different ways</p><ul> <li>Using the API.</li> <li>Adding the Constraints to Field properties definitions.</li> <li>By <a href="/articles/creating-twitter-share-block-programmatically-drupal-8" title="Read about Creating Twitter Share Block Programmatically Drupal">Creating</a> Custom Constraints.</li> </ul><p>In this article we gonna see how to Custom constraints for Media entities.</p><ol> <li>Create a <code>CustomMediaConstraint</code>.</li> <li>Create a <code>CustomMediaConstraintValidator</code></li> <li>Use <code>hook_entity_bundle_field_info_alter</code> to add the custom media constraint.</li> </ol><p>You need to create a custom module as a prerequisite, Create a module with the name <code>custom_media_constraint</code>.</p>
@@ -652,19 +652,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4nuGQkl" target="_blank" rel="noopener sponsored" data-product="Lymio Men Cargo || Men Cargo Pants Cotton || Casual Cargos Pant (Cargo-46-49)">
-                                <img src="https://m.media-amazon.com/images/I/61u5oAftaeL._SY879_.jpg" alt="Lymio Men Cargo || Men Cargo Pants Cotton || Casual Cargos Pant (Cargo-46-49)">
+                            <a href="https://amzn.to/4dVZtIM" target="_blank" rel="noopener sponsored" data-product="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White">
+                                <img src="https://m.media-amazon.com/images/I/51fWpRMV-dL._SX679_.jpg" alt="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4nuGQkl" target="_blank" rel="noopener sponsored" data-product="Lymio Men Cargo || Men Cargo Pants Cotton || Casual Cargos Pant (Cargo-46-49)">Lymio Men Cargo || Men Cargo Pants Cotton || Casual Cargos Pant (Cargo-46-49)</a>
+                                <a href="https://amzn.to/4dVZtIM" target="_blank" rel="noopener sponsored" data-product="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White">Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White</a>
                             </div>
-                            <div class="discount-badge">Now 88% Off</div>
-                            <a href="https://amzn.to/4nuGQkl" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lymio Men Cargo || Men Cargo Pants Cotton || Casual Cargos Pant (Cargo-46-49)">
+                            <div class="discount-badge">Now 55% Off</div>
+                            <a href="https://amzn.to/4dVZtIM" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 Gb Ram, 128 Gb ROM|11 Inch Screen| 90 Hz, 72% Ntsc, Fhd Display| Quad Speakers with Dolby Atmos|Octa-Core Processor |13 Mp Rear Camera,White">
                                 <span class="product-price">
-                                    <span class="actual-price">₹4999</span>
-                                    <span class="current-price">₹599</span>
+                                    <span class="actual-price">₹31000</span>
+                                    <span class="current-price">₹13999</span>
                                 </span>
 
                                 <span class="product-store">
@@ -679,6 +679,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -759,19 +762,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4npTyjS" target="_blank" rel="noopener sponsored" data-product="WILD MODA Womens Waterproof Shoulder Bag">
-                                <img src="https://m.media-amazon.com/images/I/510qfQVz0zL._SY695_.jpg" alt="WILD MODA Womens Waterproof Shoulder Bag">
+                            <a href="https://amzn.to/48S0XnZ" target="_blank" rel="noopener sponsored" data-product="Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement - Arm Circumference (22-32Cm)">
+                                <img src="https://m.media-amazon.com/images/I/51swDPamvJL._SX679_.jpg" alt="Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement - Arm Circumference (22-32Cm)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4npTyjS" target="_blank" rel="noopener sponsored" data-product="WILD MODA Womens Waterproof Shoulder Bag">WILD MODA Womens Waterproof Shoulder Bag</a>
+                                <a href="https://amzn.to/48S0XnZ" target="_blank" rel="noopener sponsored" data-product="Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement - Arm Circumference (22-32Cm)">Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement - Arm Circumference (22-32Cm)</a>
                             </div>
-                            <div class="discount-badge">Now 70% Off</div>
-                            <a href="https://amzn.to/4npTyjS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="WILD MODA Womens Waterproof Shoulder Bag">
+                            <div class="discount-badge">Now 28% Off</div>
+                            <a href="https://amzn.to/48S0XnZ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Omron HEM 7120 Fully Automatic Digital Blood Pressure Monitor With Intellisense Technology For Most Accurate Measurement - Arm Circumference (22-32Cm)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2499</span>
-                                    <span class="current-price">₹748</span>
+                                    <span class="actual-price">₹2330</span>
+                                    <span class="current-price">₹1679</span>
                                 </span>
 
                                 <span class="product-store">
@@ -786,6 +789,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -893,7 +899,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ef74afd56c889d9af13d6e1c923772909feef3eadbff5c03421c14d53f5740a6">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-752caab9ffe6c4f0e5022b226bad6e30e0c6ce2523453816262e5a78011b0cfc">
   
     
       
@@ -927,7 +933,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="toc-sticky-wrapper"><div><strong>In this article</strong></div><div id="toc-sidebar">&nbsp;</div></div></div>
       
     </div>
   </div>
@@ -945,7 +951,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-871726e41cae7a21cbaf1de8d8a1eb553df38d3c83f3c026b68f335f709f1648">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-05ed9f9d4759d36209b826248dcaec92954d8f2298cc9690cbf536e84bbbc12b">
   
     
       
@@ -955,6 +961,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/andhra-style-dum-biryani-recipe-flavorful-feast-every-occasion" title="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <img src="/sites/default/files/2026-05/andhra-style-dum-biryani-recipe-a-flavorful-feast-for-every-occasion.webp" alt="Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion">
+  <h4>Andhra Style Dum Biryani Recipe – A Flavorful Feast for Every Occasion</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are" title="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <img src="/sites/default/files/2026-05/a-simple-power-cut-made-me-realize-how-unprepared-most-indian-homes-are.webp" alt="A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are">
   <h4>A Simple Power Cut Made Me Realize How Unprepared Most Indian Homes Are</h4>
@@ -972,13 +984,13 @@
   <h4>Ahmedabad to Rann of Kutch: White Desert Adventure You Must Experience Once</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-disconnect-technology-and-reconnect-life" title="How to Disconnect from Technology and Reconnect with Life">
   <img src="/sites/default/files/2026-04/how-to-disconnect-from-technology-and-reconnect-with-life.webp" alt="How to Disconnect from Technology and Reconnect with Life">
   <h4>How to Disconnect from Technology and Reconnect with Life</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/viswanatha-satyanarayana-legendary-telugu-literary-giant" title="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <img src="/sites/default/files/2026-04/viswanatha-satyanarayana.webp" alt="Viswanatha Satyanarayana: The Legendary Telugu Literary Giant">
   <h4>Viswanatha Satyanarayana: The Legendary Telugu Literary Giant</h4>
@@ -996,10 +1008,28 @@
   <h4>Exploring the Link Between PCOS and Insulin Resistance</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bigfoot-yeti-and-search-real-evidence" title="Bigfoot, Yeti, and the Search for Real Evidence">
   <img src="/sites/default/files/2026-04/bigfoot-yeti-and-search-real-evidence.webp" alt="Bigfoot, Yeti, and the Search for Real Evidence">
   <h4>Bigfoot, Yeti, and the Search for Real Evidence</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real" title="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <img src="/sites/default/files/banners/lovetale-of-sathya-nithya-a-beautiful-school-to-engineering-love-story-that-feels-real.jpg" alt="LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real">
+  <h4>LoveTale: of Sathya &amp; Nithya – A Beautiful School to Engineering Love Story That Feels Real</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/elephant-and-friends-heartwarming-moral-story-about-friendship-kids" title="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <img src="/sites/default/files/banners/elephant-and-friends.jpeg" alt="The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids">
+  <h4>The Elephant and Friends – A Heartwarming Moral Story About Friendship for Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/bear-and-two-friends-about-true-friendship-loyalty-and-trust" title="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <img src="/sites/default/files/banners/the-bear-and-the-two-friends.jpeg" alt="The Bear and the Two Friends – About True Friendship, Loyalty, and Trust">
+  <h4>The Bear and the Two Friends – About True Friendship, Loyalty, and Trust</h4>
 </a></span></div></div>
       </div>
       </div>
@@ -1124,7 +1154,7 @@
     
       <div class="block__content">
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item" data-pagefind-body data-pagefind-body><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>People's BLOG is a platform sharing stories from travel, technology, food, and life. We write about real experiences—from motorcycle journeys to everyday thoughts that many can relate to. Our aim is to bring meaningful, practical, and thought-provoking content into your daily life.</p></div>
       
     </div>
   </div>
@@ -1136,7 +1166,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_69f9f69163f11">
+      <div class="gform-subscribe" id="gform_6a015ac212e86">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
