@@ -31,7 +31,7 @@
                 "url": "https://peoplesblog.co.in/sites/default/files/banners/understanding-sql-query-execution-plans-and-optimizing-joins.webp"
             },
             "datePublished": "2024-10-24T18:29:00+0530",
-            "dateModified": "2026-05-14T12:04:15+0530",
+            "dateModified": "2026-06-06T18:09:36+0530",
             "author": {
                 "@type": "Person",
                 "name": "Karthik Kumar D K"
@@ -65,11 +65,11 @@
 <link rel="icon" href="/sites/default/files/favicon.webp" type="image/webp" />
 
     <title>Understanding SQL Query Execution Plans and Optimizing Joins</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_x21Q1ICLZ05dTz45xipYEfKhTzaf-A6b2rPenvKJLk4.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_KtiRWcMfuEmHFmHqGfK4S1GJR2RVXXnI-7VLlkFtz_I.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rEffeFazLp5Nk8lTZRILCFOO7aku7t4EUpzcAClsdgk.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6UPToQknmrP0dH-rUepGNhcF9dbp-T6w2nzgUrpZtYI.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ea09J0MfKUZ-np54JW9IdQscGetUuM5RZZLrVpYg-Vw.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_I1gWipiand2ahxgnKYW7IN9NIJd9abV63FRoOUInaWY.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9UG2OhCAMvRDokUyByjZTqKGo4faLxiG7mc3-gb6v8GhcpaRFd6e-kMM5XtgI04FFZi-5Yq7WIcs52MjigK3WxpTjoBma7NUehKfaWCgMJcNBESpJtluhBKUN6bmnCo5xsJucWDBY16xj8a8hKAV0UAauENVsblnL3TQ83X5RfWbSPhoVT8Ad5deyEnKY1-6BE1USTl7SJrl_9w_fBzNdyeWJLtfSoFYs72jCQHDb9f83fho_qal-YUKjrddPswNFc693vs8pSdgZvwGgVbGv" />
 
     
     
@@ -77,7 +77,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tf0kth" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tg7n3e" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -649,19 +649,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4gs8aLZ" target="_blank" rel="noopener sponsored" data-product="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)">
-                                <img src="https://m.media-amazon.com/images/I/61JOYUJbhcL._SX679_.jpg" alt="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)">
+                            <a href="https://amzn.to/44K3vzl" target="_blank" rel="noopener sponsored" data-product="boAt Airdopes 141 Bluetooth Truly Wireless in Ear Ear Buds w/ 45H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)">
+                                <img src="https://m.media-amazon.com/images/I/61KNJav3S9L._SX679_.jpg" alt="boAt Airdopes 141 Bluetooth Truly Wireless in Ear Ear Buds w/ 45H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4gs8aLZ" target="_blank" rel="noopener sponsored" data-product="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)">OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)</a>
+                                <a href="https://amzn.to/44K3vzl" target="_blank" rel="noopener sponsored" data-product="boAt Airdopes 141 Bluetooth Truly Wireless in Ear Ear Buds w/ 45H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)">boAt Airdopes 141 Bluetooth Truly Wireless in Ear Ear Buds w/ 45H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)</a>
                             </div>
-                            <div class="discount-badge">Now 8% Off</div>
-                            <a href="https://amzn.to/4gs8aLZ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OnePlus Nord 4 5G (Mercurial Silver, 12GB RAM, 256GB Storage)">
+                            <div class="discount-badge">Now 79% Off</div>
+                            <a href="https://amzn.to/44K3vzl" target="_blank" class="buy-button" rel="noopener sponsored" data-product="boAt Airdopes 141 Bluetooth Truly Wireless in Ear Ear Buds w/ 45H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹35999</span>
-                                    <span class="current-price">₹32998</span>
+                                    <span class="actual-price">₹4490</span>
+                                    <span class="current-price">₹949</span>
                                 </span>
 
                                 <span class="product-store">
@@ -676,6 +676,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -690,19 +693,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3MAlUHY" target="_blank" rel="noopener sponsored" data-product="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SPZX, Shiny Steel, Convertible with Express Freeze)">
-                                <img src="https://f.media-amazon.com/images/I/617kEwIAM1L._SX679_.jpg" alt="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SPZX, Shiny Steel, Convertible with Express Freeze)">
+                            <a href="https://amzn.to/46E9et6" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger">
+                                <img src="https://m.media-amazon.com/images/I/71zOYPGqZhL._SX679_.jpg" alt="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3MAlUHY" target="_blank" rel="noopener sponsored" data-product="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SPZX, Shiny Steel, Convertible with Express Freeze)">LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SPZX, Shiny Steel, Convertible with Express Freeze)</a>
+                                <a href="https://amzn.to/46E9et6" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger">Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger</a>
                             </div>
-                            <div class="discount-badge">Now 23% Off</div>
-                            <a href="https://amzn.to/3MAlUHY" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LG 322 L 3 Star Frost-Free Smart Inverter Double Door Refrigerator (2023 Model, GL-S342SPZX, Shiny Steel, Convertible with Express Freeze)">
+                            <div class="discount-badge">Now 33% Off</div>
+                            <a href="https://amzn.to/46E9et6" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy M16 5G (Blush Pink, 6GB RAM, 128 GB Storage) | MediaTek Dimensity 6300 | AnTuTu Score 422K+ | Super Amoled Display | AI | 25W Fast Charging | 6 Gen of OS Upgrades | Without Charger">
                                 <span class="product-price">
-                                    <span class="actual-price">₹47199</span>
-                                    <span class="current-price">₹36490</span>
+                                    <span class="actual-price">₹17499</span>
+                                    <span class="current-price">₹11749</span>
                                 </span>
 
                                 <span class="product-store">
@@ -717,6 +720,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -731,19 +737,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/45pfGVD" target="_blank" rel="noopener sponsored" data-product="Safari Polypropylene Spinner Pentagon Pro 8 Wheels 66Cm Medium Size Checkin Trolley Bag, Hard Case 360º Wheeling Luggage for Men &amp; Women, Travel Bag, Suitcase for Travel, Dusk Green">
-                                <img src="https://m.media-amazon.com/images/I/61SRD2iV-BL._SX679_.jpg" alt="Safari Polypropylene Spinner Pentagon Pro 8 Wheels 66Cm Medium Size Checkin Trolley Bag, Hard Case 360º Wheeling Luggage for Men &amp; Women, Travel Bag, Suitcase for Travel, Dusk Green">
+                            <a href="https://amzn.to/49agduy" target="_blank" rel="noopener sponsored" data-product="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black">
+                                <img src="https://m.media-amazon.com/images/I/919PT-mtS0L._SX522_.jpg" alt="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/45pfGVD" target="_blank" rel="noopener sponsored" data-product="Safari Polypropylene Spinner Pentagon Pro 8 Wheels 66Cm Medium Size Checkin Trolley Bag, Hard Case 360º Wheeling Luggage for Men &amp; Women, Travel Bag, Suitcase for Travel, Dusk Green">Safari Polypropylene Spinner Pentagon Pro 8 Wheels 66Cm Medium Size Checkin Trolley Bag, Hard Case 360º Wheeling Luggage for Men &amp; Women, Travel Bag, Suitcase for Travel, Dusk Green</a>
+                                <a href="https://amzn.to/49agduy" target="_blank" rel="noopener sponsored" data-product="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black">Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1" x 60", Black</a>
                             </div>
-                            <div class="discount-badge">Now 77% Off</div>
-                            <a href="https://amzn.to/45pfGVD" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Safari Polypropylene Spinner Pentagon Pro 8 Wheels 66Cm Medium Size Checkin Trolley Bag, Hard Case 360º Wheeling Luggage for Men &amp; Women, Travel Bag, Suitcase for Travel, Dusk Green">
+                            <div class="discount-badge">Now 55% Off</div>
+                            <a href="https://amzn.to/49agduy" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Gorilla 6055001-6 Double-Sided Heavy Duty Mounting Tape (6 Pack), 1&quot; x 60&quot;, Black">
                                 <span class="product-price">
-                                    <span class="actual-price">₹10999</span>
-                                    <span class="current-price">₹2499</span>
+                                    <span class="actual-price">₹12000</span>
+                                    <span class="current-price">₹5414</span>
                                 </span>
 
                                 <span class="product-store">
@@ -758,6 +764,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -772,19 +781,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3KtYV3x" target="_blank" rel="noopener sponsored" data-product="Pepe Jeans Men Regular Fit Mid Rise Track Pant">
-                                <img src="https://m.media-amazon.com/images/I/61IPZdBKiRL._SX679_.jpg" alt="Pepe Jeans Men Regular Fit Mid Rise Track Pant">
+                            <a href="https://amzn.to/3NmW5MC" target="_blank" rel="noopener sponsored" data-product="RiverSoft PS-CDM-C PureStream Ceramic Dome and Mineral Balls, Replacement Cartridge for Gravity Water Purifiers | Non-Electric and Chemical Free | Counter Top (Pack of 1, White)">
+                                <img src="https://m.media-amazon.com/images/I/51z0SSjmtiL._SX522_.jpg" alt="RiverSoft PS-CDM-C PureStream Ceramic Dome and Mineral Balls, Replacement Cartridge for Gravity Water Purifiers | Non-Electric and Chemical Free | Counter Top (Pack of 1, White)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3KtYV3x" target="_blank" rel="noopener sponsored" data-product="Pepe Jeans Men Regular Fit Mid Rise Track Pant">Pepe Jeans Men Regular Fit Mid Rise Track Pant</a>
+                                <a href="https://amzn.to/3NmW5MC" target="_blank" rel="noopener sponsored" data-product="RiverSoft PS-CDM-C PureStream Ceramic Dome and Mineral Balls, Replacement Cartridge for Gravity Water Purifiers | Non-Electric and Chemical Free | Counter Top (Pack of 1, White)">RiverSoft PS-CDM-C PureStream Ceramic Dome and Mineral Balls, Replacement Cartridge for Gravity Water Purifiers | Non-Electric and Chemical Free | Counter Top (Pack of 1, White)</a>
                             </div>
-                            <div class="discount-badge">Now 59% Off</div>
-                            <a href="https://amzn.to/3KtYV3x" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Pepe Jeans Men Regular Fit Mid Rise Track Pant">
+                            <div class="discount-badge">Now 47% Off</div>
+                            <a href="https://amzn.to/3NmW5MC" target="_blank" class="buy-button" rel="noopener sponsored" data-product="RiverSoft PS-CDM-C PureStream Ceramic Dome and Mineral Balls, Replacement Cartridge for Gravity Water Purifiers | Non-Electric and Chemical Free | Counter Top (Pack of 1, White)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1399</span>
-                                    <span class="current-price">₹575</span>
+                                    <span class="actual-price">₹1599</span>
+                                    <span class="current-price">₹849</span>
                                 </span>
 
                                 <span class="product-store">
@@ -799,6 +808,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -829,7 +841,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-cdc14301c28a50b19ca14d4cb55ee42a96b466c225545a68165bc40fcbd0fb5d">
+      <div><div class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a099115f793c581cf1c401a7dbd268959e0bb1fda23e7b28fcba9df6acc2d4f5">
   
     
       
@@ -881,7 +893,7 @@
   
     
       <div class="block__content">
-      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5bca4c4a4d95828f27aa47d9fc35e2674350ed4af6952c2d5ee379eaba97dd6a">
+      <div><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-457d6932e1e85e1fe0b9e143ccea7f29fc9e42a7000b3570ccc8fb4569e07cfc">
   
     
       
@@ -1096,7 +1108,7 @@
     
       <div class="block__content">
       
-      <div class="gform-subscribe" id="gform_6a056d01e01fb">
+      <div class="gform-subscribe" id="gform_6a241535995f6">
 
         <form class="gform-form"
               data-action="https://docs.google.com/forms/d/e/1FAIpQLSewRpoqyq6TYnR_VU12LRPD1ahr2xP19akLcFhBjcylfPlWjw/formResponse">
@@ -1191,7 +1203,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/3914","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"6e91de7a152b52ad112c51175e40f414d036bf989d3b3052f38be5b62c618a91"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_U42jEprG6FL0qm5ikNKZ0Gv-TKJ4Cf1Ohm8otqij-zA.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
+<script src="/sites/default/files/js/js_ubfqEY13R8K-6t6n2rkTC0g70HjoYwpIv7KZHw39YGY.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxVy0EKwCAMRNELKR5J1GoIxESiFbx9LZSCuz8PBopo9f2OPSnG7ODdRghnVnFAEgPZPhYhw88cJkIYKGybYg26TIu-qPDIfH2vg3YT9p2HDkkPxSoygQ"></script>
 
   </body>
 </html>
