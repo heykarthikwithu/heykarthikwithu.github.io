@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://peoplesblog.co.in/">
+  <channel>
+    <title>Drupal Articles - PeoplesBLOG</title>
+    <link>https://peoplesblog.co.in/</link>
+    <description>Latest Drupal articles from PeoplesBLOG</description>
+    <language>en</language>
+    
+    <item>
+  <title>AI Creates Content, CMS Keeps It Under Control: Why Drupal Still Matters in the AI Era</title>
+  <link>https://peoplesblog.co.in/articles/ai-creates-content-cms-keeps-it-under-control-why-drupal-still-matters-ai-era</link>
+  <description>Artificial Intelligence has dramatically changed the way content is created. Tasks that once required hours of research and writing can now be completed in minutes. Blog posts, product descriptions, FAQs, summaries, social media content, and even long-form articles can be generated using AI-powered tools with just a few prompts.</description>
+  <pubDate>Sat, 20 Jun 2026 07:11:38 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-creates-content-cms-keeps-it-under-control-why-drupal-still-matters-ai-era</guid>
+    </item>
+<item>
+  <title>Top Drupal LMS Features You Should Look For — Guide for your Education Businesses</title>
+  <link>https://peoplesblog.co.in/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses</link>
+  <description>If you run an education business today—whether it’s an online academy, coaching platform, corporate training portal or skill-development institute—choosing the right Learning Management System (LMS) is one of the most important decisions you will make. Your LMS becomes the backbone of your teaching, course delivery, student engagement and business growth.Among the many LMS platforms available, Drupal stands out as a flexible, secure and highly customizable solution capable of powering simple online courses to large-scale e-learning ecosystems.</description>
+  <pubDate>Mon, 01 Dec 2025 17:33:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses</guid>
+    </item>
+<item>
+  <title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
+  <link>https://peoplesblog.co.in/articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved</link>
+  <description>If you use Colima on macOS for container management, you may occasionally run into the error:.lima/colima/ha.sock: connect: connection refused This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix — and this article explains exactly how to resolve it.</description>
+  <pubDate>Sun, 30 Nov 2025 16:06:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved</guid>
+    </item>
+<item>
+  <title>Secure Application Password Reset Flow: Best Practices</title>
+  <link>https://peoplesblog.co.in/articles/secure-application-password-reset-flow-best-practices</link>
+  <description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so t</description>
+  <pubDate>Sun, 23 Nov 2025 10:52:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-application-password-reset-flow-best-practices</guid>
+    </item>
+<item>
+  <title>Store Drupal Logs on AWS: A Practical Logging Guide</title>
+  <link>https://peoplesblog.co.in/articles/store-drupal-logs-aws-practical-logging-guide</link>
+  <description>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.For this todo on Drupal</description>
+  <pubDate>Sun, 23 Nov 2025 10:34:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/store-drupal-logs-aws-practical-logging-guide</guid>
+    </item>
+<item>
+  <title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
+  <link>https://peoplesblog.co.in/articles/setup-multisite-local-environment-ddev-drupal</link>
+  <description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, here’s the recipe provided by ddev.</description>
+  <pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/setup-multisite-local-environment-ddev-drupal</guid>
+    </item>
+<item>
+  <title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
+  <link>https://peoplesblog.co.in/articles/fix-drupal-update-manager-error-settings-already-exist</link>
+  <description>Generally you see this error while you try to install the update manager module via UI or via Drush command.Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.1. You can simply delete this configuration with the below command$ drush cdel update.settings</description>
+  <pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-drupal-update-manager-error-settings-already-exist</guid>
+    </item>
+<item>
+  <title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
+  <link>https://peoplesblog.co.in/articles/ai-canvas-drupal-normal-persons-point-view</link>
+  <description>If you’ve been hearing people in the Drupal world talk about “AI” and “Canvas,” you might think it’s some complicated feature only developers care about. Honestly, that’s what I assumed at first too. But the more I tried these things, the more I realised they’re not really built for developers — they’re built for the people who actually use the website daily.</description>
+  <pubDate>Wed, 19 Nov 2025 20:23:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-canvas-drupal-normal-persons-point-view</guid>
+    </item>
+<item>
+  <title>Why Choose Drupal for your Blogging Website in 2025?</title>
+  <link>https://peoplesblog.co.in/articles/why-choose-drupal-your-blogging-website-2025</link>
+  <description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.</description>
+  <pubDate>Thu, 20 Mar 2025 12:09:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/why-choose-drupal-your-blogging-website-2025</guid>
+    </item>
+<item>
+  <title>Filter content between Date ranges in Drupal 7</title>
+  <link>https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal-7</link>
+  <description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an 'end date' for the event, only a date field with the 'Collect an end date'</description>
+  <pubDate>Thu, 28 Nov 2024 18:57:00 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal-7</guid>
+    </item>
+
+  </channel>
+</rss>
