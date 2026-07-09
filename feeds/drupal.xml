@@ -15,58 +15,10 @@
     <guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-creates-content-cms-keeps-it-under-control-why-drupal-still-matters-ai-era</guid>
     </item>
 <item>
-  <title>Top Drupal LMS Features You Should Look For — Guide for your Education Businesses</title>
-  <link>https://peoplesblog.co.in/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses</link>
-  <description>If you run an education business today—whether it’s an online academy, coaching platform, corporate training portal or skill-development institute—choosing the right Learning Management System (LMS) is one of the most important decisions you will make. Your LMS becomes the backbone of your teaching, course delivery, student engagement and business growth.Among the many LMS platforms available, Drupal stands out as a flexible, secure and highly customizable solution capable of powering simple online courses to large-scale e-learning ecosystems.</description>
-  <pubDate>Mon, 01 Dec 2025 17:33:00 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/top-drupal-lms-features-you-should-look-guide-your-education-businesses</guid>
-    </item>
-<item>
-  <title>How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</title>
-  <link>https://peoplesblog.co.in/articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved</link>
-  <description>If you use Colima on macOS for container management, you may occasionally run into the error:.lima/colima/ha.sock: connect: connection refused This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like DDEV), it can completely break your workflow. The good news? The issue has a clean, repeatable fix — and this article explains exactly how to resolve it.</description>
-  <pubDate>Sun, 30 Nov 2025 16:06:00 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved</guid>
-    </item>
-<item>
-  <title>Secure Application Password Reset Flow: Best Practices</title>
-  <link>https://peoplesblog.co.in/articles/secure-application-password-reset-flow-best-practices</link>
-  <description>Generally any application framework provides users to have a flow to reset the passwords by default, It is more like, use clicking on the Reset Password link and redirects to a page where he will asked for email and reset link sent to users email, so t</description>
-  <pubDate>Sun, 23 Nov 2025 10:52:00 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/secure-application-password-reset-flow-best-practices</guid>
-    </item>
-<item>
-  <title>Store Drupal Logs on AWS: A Practical Logging Guide</title>
-  <link>https://peoplesblog.co.in/articles/store-drupal-logs-aws-practical-logging-guide</link>
-  <description>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.For this todo on Drupal</description>
-  <pubDate>Sun, 23 Nov 2025 10:34:00 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/store-drupal-logs-aws-practical-logging-guide</guid>
-    </item>
-<item>
-  <title>Setup Multisite Local Environment with DDEV &amp; Drupal</title>
-  <link>https://peoplesblog.co.in/articles/setup-multisite-local-environment-ddev-drupal</link>
-  <description>In this article we are going to see how we can set up a multisite environment with ddev on the local machine. Assuming people are aware of configuring the drupal multiple site from the drupal side of configurations.As we all know ddev is an open source tool for running local PHP development environments in minutes, which makes developer life easier during the local environment setup process, here’s the recipe provided by ddev.</description>
-  <pubDate>Sun, 23 Nov 2025 09:48:00 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/setup-multisite-local-environment-ddev-drupal</guid>
-    </item>
-<item>
-  <title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
-  <link>https://peoplesblog.co.in/articles/fix-drupal-update-manager-error-settings-already-exist</link>
-  <description>Generally you see this error while you try to install the update manager module via UI or via Drush command.Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.1. You can simply delete this configuration with the below command$ drush cdel update.settings</description>
-  <pubDate>Sun, 23 Nov 2025 09:47:00 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-drupal-update-manager-error-settings-already-exist</guid>
-    </item>
-<item>
   <title>AI + Canvas in Drupal — From a Normal Person’s Point of View</title>
   <link>https://peoplesblog.co.in/articles/ai-canvas-drupal-normal-persons-point-view</link>
   <description>If you’ve been hearing people in the Drupal world talk about “AI” and “Canvas,” you might think it’s some complicated feature only developers care about. Honestly, that’s what I assumed at first too. But the more I tried these things, the more I realised they’re not really built for developers — they’re built for the people who actually use the website daily.</description>
-  <pubDate>Wed, 19 Nov 2025 20:23:00 +0530</pubDate>
+  <pubDate>Wed, 19 Nov 2025 02:13:33 +0530</pubDate>
     <dc:creator>Karthik Kumar D K</dc:creator>
     <guid isPermaLink="true">https://peoplesblog.co.in/articles/ai-canvas-drupal-normal-persons-point-view</guid>
     </item>
@@ -74,17 +26,65 @@
   <title>Why Choose Drupal for your Blogging Website in 2025?</title>
   <link>https://peoplesblog.co.in/articles/why-choose-drupal-your-blogging-website-2025</link>
   <description>With so many blogging platforms available in 2025, why should you consider Drupal over WordPress, Ghost, or Joomla? While WordPress is widely known for personal and small-scale blogging, Drupal excels in flexibility, security, and scalability, making it an excellent choice for professional bloggers and content-heavy websites.</description>
-  <pubDate>Thu, 20 Mar 2025 12:09:00 +0530</pubDate>
+  <pubDate>Thu, 20 Mar 2025 05:41:09 +0530</pubDate>
     <dc:creator>Karthik Kumar D K</dc:creator>
     <guid isPermaLink="true">https://peoplesblog.co.in/articles/why-choose-drupal-your-blogging-website-2025</guid>
     </item>
 <item>
-  <title>Filter content between Date ranges in Drupal 7</title>
-  <link>https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal-7</link>
-  <description>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.This tutorial requires that you already have a content type with a date field . It is not necessary to have two fields to adjust an 'end date' for the event, only a date field with the 'Collect an end date'</description>
-  <pubDate>Thu, 28 Nov 2024 18:57:00 +0530</pubDate>
+  <title>Create a custom Drupal Service and Use as a Helper</title>
+  <link>https://peoplesblog.co.in/articles/create-custom-drupal-service-and-use-helper</link>
+  <description>Creating a custom Drupal service allows you to encapsulate functionality and access it wherever needed, promoting modularity and reusability within your codebase as a Helper.In this article we are sharing an example of how to create a custom Drupal service and use it as a helper.Step 1: Define the Service</description>
+  <pubDate>Thu, 25 Jan 2024 17:33:59 +0530</pubDate>
     <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/filter-content-between-date-ranges-drupal-7</guid>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/create-custom-drupal-service-and-use-helper</guid>
+    </item>
+<item>
+  <title>Imagefield Slideshow module to render Slideshow on Drupal website</title>
+  <link>https://peoplesblog.co.in/articles/imagefield-slideshow-module-render-slideshow-drupal-website</link>
+  <description>If you want to show images as a slideshow on your drupal website and want to do it quickly. Here’s the module which solves your purpose. Imagefield Slideshow is the simple module which will allow images to render as a slideshow on the drupal website at the field level.</description>
+  <pubDate>Thu, 16 Nov 2023 11:22:45 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/imagefield-slideshow-module-render-slideshow-drupal-website</guid>
+    </item>
+<item>
+  <title>Fix Drupal Update Manager Error: “Settings Already Exist”</title>
+  <link>https://peoplesblog.co.in/articles/fix-drupal-update-manager-error-settings-already-exist</link>
+  <description>Generally you see this error while you try to install the update manager module via UI or via Drush command.Not really sure how you came up with this issue. But if you are seeing this issue, you have an entry in your site's configuration saying that the update module is already installed.1. You can simply delete this configuration with the below command$ drush cdel update.settings</description>
+  <pubDate>Fri, 08 Sep 2023 13:53:04 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/fix-drupal-update-manager-error-settings-already-exist</guid>
+    </item>
+<item>
+  <title>How to run PHPUnit test cases on your local machine for Drupal</title>
+  <link>https://peoplesblog.co.in/articles/how-run-phpunit-test-cases-your-local-machine-drupal</link>
+  <description>Running PHPUnit tests helps ensure that your Drupal module behaves as expected and provides a reliable way to identify and fix issues during development.To run PHPUnit test cases on your local machine for Drupal, follow these steps:Install PHPUnit and its dependency:</description>
+  <pubDate>Sun, 27 Aug 2023 20:26:40 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-run-phpunit-test-cases-your-local-machine-drupal</guid>
+    </item>
+<item>
+  <title>API Docs, Drupal contributed module for your Developer Portal</title>
+  <link>https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-your-developer-portal</link>
+  <description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters and views.Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.Download and Enable the Module:</description>
+  <pubDate>Sat, 29 Jul 2023 21:28:51 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-your-developer-portal</guid>
+    </item>
+<item>
+  <title>How to improve drupal website performance</title>
+  <link>https://peoplesblog.co.in/articles/how-improve-drupal-website-performance</link>
+  <description>Improving the performance of a Drupal website involves optimizing various aspects of its configuration and content. There are several ways to overall complex performance related problems and improve Drupal website performance to load it quicker.Here are some tips to enhance the performance of your Drupal website:</description>
+  <pubDate>Wed, 19 Jul 2023 19:32:53 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-improve-drupal-website-performance</guid>
+    </item>
+<item>
+  <title>How to build the engaging digital experience via Drupal</title>
+  <link>https://peoplesblog.co.in/articles/how-build-engaging-digital-experience-drupal</link>
+  <description>Building an engaging digital experience using Drupal involves combining effective design, user-friendly features and content that resonates with your audience. Here are some tips to help you create an engaging digital experience using Drupal:</description>
+  <pubDate>Mon, 10 Jul 2023 19:28:39 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-build-engaging-digital-experience-drupal</guid>
     </item>
 
   </channel>
