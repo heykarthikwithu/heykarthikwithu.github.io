@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?ti93gu" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tico86" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -647,27 +647,25 @@
 <div class="pb-image-caption">Store Drupal Logs on AWS: A Practical Logging Guide</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
-                    
-                        
-                    <p>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.</p><p>For this todo on Drupal</p><ul> <li>You should use the "hook_watchdog" hook, where this hook allows modules to route log events to custom destinations.</li> <li>In our case, our custom destination will be S3.</li> <li>Initially we need to get the access to AWS and appropriate S3 bucket.</li> <li>Store the <a href="/articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved" title="Read about Fix Colima Connection Refused Error Failed To Get Info From Lima Colima Ha Sock On Mac">connection</a> <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> details of S3 buckets in the Drupal.</li> <li>In the hook_watchdog, read the S3 Auth configs.</li> <li>Create a connection to AWS S3, on success it return back with the S3 object.</li> <li>Check if any buckets exist to write the logs, of not you should create bucket on S3 for logs.</li> <li>Next, Create a log directory and log file, populate it with the data came on hook_watchdog.</li> <li>Next, Write to the S3 bucket with parameters which "putObject" expects.</li> <li>Next, Remove the log directory and file which is created in the process.</li> <li>Check the S3 bucket via S3 UI, you could see the logs</li> </ul><p>Here's the piece of code, via we log to S3.</p><pre> watchdog(    <strong>'module_2'</strong>,    t(<strong>'Info: Successfully completed.'</strong>),    <strong>array</strong>($data),    <em>WATCHDOG_INFO</em>);watchdog(    <strong>'module_3'</strong>,    t(<strong>'Error: Issue while processing.'</strong>),    <strong>array</strong>($exception, $data),    <em>WATCHDOG_ERROR</em>);</pre><p>Here, the piece of code which helps to connect and write log's to S3.</p><pre> <strong><!--?phpuse </span-->\Aws\S3\S3Client;<strong>function </strong>audit_watchdog(<strong>array </strong>$log_entry) {    <em>// Set the modules which needs to be logged to S3</em><em>    </em>$modules = <strong>array</strong>(        <strong>'module_1'</strong>,        <strong>'module_2'</strong>,        <strong>'module_3'</strong>,    );    <strong>if </strong>(<em>in_array</em>($log_entry[<strong>'type'</strong>], $modules)) {        <strong>if</strong>(<strong>isset</strong>($log_entry) &amp;&amp; !<strong>empty</strong>($log_entry)) {            <em>// Get the S3 config details</em><em>            </em>$s3_config = variable_get(<strong>"s3_config"</strong>);            $s3_bucket = $s3_config→<strong>s3_bucket</strong>;            $s3_region = $s3_config→<strong>s3_region</strong>;            $s3_key = $s3_config→<strong>s3_key</strong>;            $s3_secret = $s3_config→<strong>s3_secret</strong>;            <strong>try </strong>{                <strong>if </strong>(!<strong>empty</strong>($s3_bucket) &amp;&amp; !<strong>empty</strong>($s3_region) &amp;&amp; !<strong>empty</strong>($s3_key) &amp;&amp; !<strong>empty</strong>($s3_secret)) {                    <em>// Create AWS connection</em><em>                    </em>$s3 = create_aws_connection($s3_region, $s3_key, $s3_secret);                    <strong>if </strong>(!<strong>empty</strong>($s3) &amp;&amp; <em>is_object</em>($s3) &amp;&amp; $s3 != <strong>FALSE</strong>) {                        <strong>if </strong>($s3→doesBucketExist($s3_bucket)) {                            $log_path = <strong>'public://logs/to_aws'</strong>;                            <em>// Create log directory</em><em>                            </em>$dir_path = create_aws_log_directory($log_path);                            <em>// Create log file</em><em>                            </em>$file_path = create_aws_log_file($log_entry, $dir_path);                            <em>// Get the name of log file</em><em>                            </em>$keyname = get_keyname_for_log_file($log_entry[<strong>'severity'</strong>], $file_path);                            <em>// Store the log file to S3</em><em>                            </em>$s3→<strong>putObject</strong>([                                <strong>'Bucket' </strong>=&gt; $s3_bucket,                                <strong>'Key' </strong>=&gt; $keyname,                                <strong>'Body' </strong>=&gt; <strong>''</strong>,                                <strong>'SourceFile' </strong>=&gt; $file_path,                            ]);                            <em>// Remove the directory and file created</em><em>                            </em><strong>if </strong>(<em>is_dir</em>($dir_path)) {                                rmdir_recursive($dir_path);                                rmdir_recursive(<strong>'public://logs'</strong>);                            }                        }                    }                }            }            <strong>catch </strong>(Exception $e) {                <em>// Exception is ignored so that watchdog does not break pages during the</em><em>                // installation process or is not able to create the watchdog table during</em><em>                // installation.</em><em>            </em>}        }    }}<strong>function </strong>create_aws_connection($s3_region, $s3_key, $s3_secret) {    $s3 = <strong>new </strong>S3Client([        <strong>'version' </strong>=&gt; <strong>'latest'</strong>,        <strong>'region'  </strong>=&gt; $s3_region,        <strong>'credentials' </strong>=&gt; [            <strong>'key'    </strong>=&gt; $s3_key,            <strong>'secret' </strong>=&gt; $s3_secret,        ]    ]);    $buckets = $s3→<strong>listBuckets</strong>()→get(<strong>'Buckets'</strong>);    <strong>if </strong>(<strong>isset</strong>($buckets) &amp;&amp; !<strong>empty</strong>($buckets)) {        <strong>return </strong>$s3;    }    <strong>else </strong>{        <strong>return FALSE</strong>;    }}<strong>function </strong>create_aws_log_directory($log_path) {    <strong>if </strong>(!<em>is_dir</em>($log_path)) {        <em>mkdir</em>($log_path, 0777, <strong>true</strong>);        <em>chmod</em>($log_path, 0777);    }    <strong>return </strong>$log_path;}<strong>function </strong>create_aws_log_file($log_entry, $dir_path) {    $content = <em>json_encode</em>($log_entry);    $log_file_name = $log_entry[<strong>'type'</strong>] . <strong>'-' </strong>. <em>date</em>(<strong>"Y-m-d-H-i-s"</strong>) . <strong>'-' </strong>. <em>preg_replace</em>(<strong>"/^.*\./i"</strong>,<strong>""</strong>, <em>microtime</em>(<strong>true</strong>)) . <strong>'.log'</strong>;    $file_path = $dir_path . <strong>'/' </strong>. $log_file_name;    $log_file = <em>fopen</em>($file_path, <strong>"w"</strong>);    $write_log_file = <em>fwrite</em>($log_file, $content);    $close_log_file = <em>fclose</em>($log_file);    $chmod_log_file = <em>chmod</em>($file_path, 0777);    <strong>return </strong>$file_path;}<strong>function </strong>get_keyname_for_log_file($severity, $file_path) {    $watchdog_array = <strong>array</strong>(        <strong>"0" </strong>=&gt; <strong>"WATCHDOG_ERROR"</strong>,        <strong>"1" </strong>=&gt; <strong>"WATCHDOG_INFO"</strong>,    );    <strong>return </strong><strong>'drupal-logs/' </strong>. $watchdog_array[$severity] . <strong>'/' </strong>. <em>basename</em>($file_path);}<strong>function </strong>rmdir_recursive($dir) {    <strong>foreach</strong>(<em>scandir</em>($dir) <strong>as </strong>$file) {        <strong>if </strong>(<strong>'.' </strong>=== $file || <strong>'..' </strong>=== $file) <strong>continue</strong>;        <strong>if </strong>(<em>is_dir</em>(<strong>"</strong>$dir<strong>/</strong>$file<strong>"</strong>)) rmdir_recursive(<strong>"</strong>$dir<strong>/</strong>$file<strong>"</strong>);        <strong>else </strong><em>unlink</em>(<strong>"</strong>$dir<strong>/</strong>$file<strong>"</strong>);    }    <em>rmdir</em>($dir);}</strong></pre><p>Advantage of having Logs on S3</p>
+<html><p>Store Drupal logs on Amazon S3 via hook_watchdog, so that you can get rid of heavy logs on your drupal database and can later read from the S3.</p><p>For this todo on Drupal</p><ul> <li>You should use the "hook_watchdog" hook, where this hook allows modules to route log events to custom destinations.</li> <li>In our case, our custom destination will be S3.</li> <li>Initially we need to get the access to AWS and appropriate S3 bucket.</li> <li>Store the <a href="/articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved" title="Read about Fix Colima Connection Refused Error Failed To Get Info From Lima Colima Ha Sock On Mac">connection</a> <a href="/articles/drupal-configuration-management-local-dev-test-and-live" title="Read about Drupal Configuration Management Local Dev Test And Live">configuration</a> details of S3 buckets in the Drupal.</li> <li>In the hook_watchdog, read the S3 Auth configs.</li> <li>Create a connection to AWS S3, on success it return back with the S3 object.</li> <li>Check if any buckets exist to write the logs, of not you should create bucket on S3 for logs.</li> <li>Next, Create a log directory and log file, populate it with the data came on hook_watchdog.</li> <li>Next, Write to the S3 bucket with parameters which "putObject" expects.</li> <li>Next, Remove the log directory and file which is created in the process.</li> <li>Check the S3 bucket via S3 UI, you could see the logs</li> </ul><p>Here's the piece of code, via we log to S3.</p><pre> watchdog(    <strong>'module_2'</strong>,    t(<strong>'Info: Successfully completed.'</strong>),    <strong>array</strong>($data),    <em>WATCHDOG_INFO</em>);watchdog(    <strong>'module_3'</strong>,    t(<strong>'Error: Issue while processing.'</strong>),    <strong>array</strong>($exception, $data),    <em>WATCHDOG_ERROR</em>);</pre><p>Here, the piece of code which helps to connect and write log's to S3.</p><pre> <strong><!--?phpuse </span-->\Aws\S3\S3Client;<strong>function </strong>audit_watchdog(<strong>array </strong>$log_entry) {    <em>// Set the modules which needs to be logged to S3</em><em>    </em>$modules = <strong>array</strong>(        <strong>'module_1'</strong>,        <strong>'module_2'</strong>,        <strong>'module_3'</strong>,    );    <strong>if </strong>(<em>in_array</em>($log_entry[<strong>'type'</strong>], $modules)) {        <strong>if</strong>(<strong>isset</strong>($log_entry) &amp;&amp; !<strong>empty</strong>($log_entry)) {            <em>// Get the S3 config details</em><em>            </em>$s3_config = variable_get(<strong>"s3_config"</strong>);            $s3_bucket = $s3_config→<strong>s3_bucket</strong>;            $s3_region = $s3_config→<strong>s3_region</strong>;            $s3_key = $s3_config→<strong>s3_key</strong>;            $s3_secret = $s3_config→<strong>s3_secret</strong>;            <strong>try </strong>{                <strong>if </strong>(!<strong>empty</strong>($s3_bucket) &amp;&amp; !<strong>empty</strong>($s3_region) &amp;&amp; !<strong>empty</strong>($s3_key) &amp;&amp; !<strong>empty</strong>($s3_secret)) {                    <em>// Create AWS connection</em><em>                    </em>$s3 = create_aws_connection($s3_region, $s3_key, $s3_secret);                    <strong>if </strong>(!<strong>empty</strong>($s3) &amp;&amp; <em>is_object</em>($s3) &amp;&amp; $s3 != <strong>FALSE</strong>) {                        <strong>if </strong>($s3→doesBucketExist($s3_bucket)) {                            $log_path = <strong>'public://logs/to_aws'</strong>;                            <em>// Create log directory</em><em>                            </em>$dir_path = create_aws_log_directory($log_path);                            <em>// Create log file</em><em>                            </em>$file_path = create_aws_log_file($log_entry, $dir_path);                            <em>// Get the name of log file</em><em>                            </em>$keyname = get_keyname_for_log_file($log_entry[<strong>'severity'</strong>], $file_path);                            <em>// Store the log file to S3</em><em>                            </em>$s3→<strong>putObject</strong>([                                <strong>'Bucket' </strong>=&gt; $s3_bucket,                                <strong>'Key' </strong>=&gt; $keyname,                                <strong>'Body' </strong>=&gt; <strong>''</strong>,                                <strong>'SourceFile' </strong>=&gt; $file_path,                            ]);                            <em>// Remove the directory and file created</em><em>                            </em><strong>if </strong>(<em>is_dir</em>($dir_path)) {                                rmdir_recursive($dir_path);                                rmdir_recursive(<strong>'public://logs'</strong>);                            }                        }                    }                }            }            <strong>catch </strong>(Exception $e) {                <em>// Exception is ignored so that watchdog does not break pages during the</em><em>                // installation process or is not able to create the watchdog table during</em><em>                // installation.</em><em>            </em>}        }    }}<strong>function </strong>create_aws_connection($s3_region, $s3_key, $s3_secret) {    $s3 = <strong>new </strong>S3Client([        <strong>'version' </strong>=&gt; <strong>'latest'</strong>,        <strong>'region'  </strong>=&gt; $s3_region,        <strong>'credentials' </strong>=&gt; [            <strong>'key'    </strong>=&gt; $s3_key,            <strong>'secret' </strong>=&gt; $s3_secret,        ]    ]);    $buckets = $s3→<strong>listBuckets</strong>()→get(<strong>'Buckets'</strong>);    <strong>if </strong>(<strong>isset</strong>($buckets) &amp;&amp; !<strong>empty</strong>($buckets)) {        <strong>return </strong>$s3;    }    <strong>else </strong>{        <strong>return FALSE</strong>;    }}<strong>function </strong>create_aws_log_directory($log_path) {    <strong>if </strong>(!<em>is_dir</em>($log_path)) {        <em>mkdir</em>($log_path, 0777, <strong>true</strong>);        <em>chmod</em>($log_path, 0777);    }    <strong>return </strong>$log_path;}<strong>function </strong>create_aws_log_file($log_entry, $dir_path) {    $content = <em>json_encode</em>($log_entry);    $log_file_name = $log_entry[<strong>'type'</strong>] . <strong>'-' </strong>. <em>date</em>(<strong>"Y-m-d-H-i-s"</strong>) . <strong>'-' </strong>. <em>preg_replace</em>(<strong>"/^.*\./i"</strong>,<strong>""</strong>, <em>microtime</em>(<strong>true</strong>)) . <strong>'.log'</strong>;    $file_path = $dir_path . <strong>'/' </strong>. $log_file_name;    $log_file = <em>fopen</em>($file_path, <strong>"w"</strong>);    $write_log_file = <em>fwrite</em>($log_file, $content);    $close_log_file = <em>fclose</em>($log_file);    $chmod_log_file = <em>chmod</em>($file_path, 0777);    <strong>return </strong>$file_path;}<strong>function </strong>get_keyname_for_log_file($severity, $file_path) {    $watchdog_array = <strong>array</strong>(        <strong>"0" </strong>=&gt; <strong>"WATCHDOG_ERROR"</strong>,        <strong>"1" </strong>=&gt; <strong>"WATCHDOG_INFO"</strong>,    );    <strong>return </strong><strong>'drupal-logs/' </strong>. $watchdog_array[$severity] . <strong>'/' </strong>. <em>basename</em>($file_path);}<strong>function </strong>rmdir_recursive($dir) {    <strong>foreach</strong>(<em>scandir</em>($dir) <strong>as </strong>$file) {        <strong>if </strong>(<strong>'.' </strong>=== $file || <strong>'..' </strong>=== $file) <strong>continue</strong>;        <strong>if </strong>(<em>is_dir</em>(<strong>"</strong>$dir<strong>/</strong>$file<strong>"</strong>)) rmdir_recursive(<strong>"</strong>$dir<strong>/</strong>$file<strong>"</strong>);        <strong>else </strong><em>unlink</em>(<strong>"</strong>$dir<strong>/</strong>$file<strong>"</strong>);    }    <em>rmdir</em>($dir);}</strong></pre><p>Advantage of having Logs on S3</p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4doiRj1" target="_blank" rel="noopener sponsored" data-product="Lenovo Idea Tab Pro Review (2026) – Best 12.7-Inch 3K Android Tablet for Productivity &amp; Entertainment">
-                                <img src="https://m.media-amazon.com/images/I/71i8sUwTjoL._SL1080_.jpg" alt="Lenovo Idea Tab Pro Review (2026) – Best 12.7-Inch 3K Android Tablet for Productivity &amp; Entertainment">
+                            <a href="https://link.amazon/B00gYvtF9" target="_blank" rel="noopener sponsored" data-product="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">
+                                <img src="https://m.media-amazon.com/images/I/61B5L7kHSiL._SL1500_.jpg" alt="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4doiRj1" target="_blank" rel="noopener sponsored" data-product="Lenovo Idea Tab Pro Review (2026) – Best 12.7-Inch 3K Android Tablet for Productivity &amp; Entertainment">Lenovo Idea Tab Pro Review (2026) – Best 12.7-Inch 3K Android Tablet for Productivity &amp; Entertainment</a>
+                                <a href="https://link.amazon/B00gYvtF9" target="_blank" rel="noopener sponsored" data-product="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology</a>
                             </div>
-                            <div class="discount-badge">Now 37% Off</div>
-                            <a href="https://amzn.to/4doiRj1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lenovo Idea Tab Pro Review (2026) – Best 12.7-Inch 3K Android Tablet for Productivity &amp; Entertainment">
+                            <div class="discount-badge">Now 22% Off</div>
+                            <a href="https://link.amazon/B00gYvtF9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">
                                 <span class="product-price">
-                                    <span class="actual-price">₹48999.00</span>
-                                    <span class="current-price">₹30999.00</span>
+                                    <span class="actual-price">₹27000.00</span>
+                                    <span class="current-price">₹21190.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -682,6 +680,25 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
+            
+                
+            
+            
+                    
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
             
                 
             
@@ -832,7 +849,21 @@
         
         
             
-        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -854,7 +885,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1973dcffd1b3e7c8a52fa047ecb88d81031fccc25cb5c14c47dea9b613614873">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c128fc12d30f00250eb7abaa26360b6ba9c502961a4159a4a69a7a2dd34253b2">
   
     
       
@@ -906,7 +937,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f4f174f8cb8993af60f2a9800eeb08a5d9b9357d97a3231818646079522ae395">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ce87556d514be67ea242f47dceac3e70d542e4a49f1b0fd4cd8b32caec045b52">
   
     
       
@@ -916,6 +947,18 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed" title="How to Know What You Really Want in Bed?">
+  <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
+  <h4>How to Know What You Really Want in Bed?</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
@@ -927,7 +970,7 @@
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
@@ -939,7 +982,7 @@
   <h4>Bengaluru to Nandi Hills Sunrise Trek – A Quick Weekend Guide</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/solar-system-model-create-model-solar-system-using-household-objects" title="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <img src="/sites/default/files/2026-07/solar-system-model-create-a-model-of-the-solar-system-using-household-objects.webp" alt="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <h4>Solar System Model: Create a Model of the Solar System Using Household Objects</h4>
@@ -951,7 +994,7 @@
   <h4>The Great E20 Petrol Debate: An Honest, Data-Driven Investigation into India&#039;s New Fuel Standard</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/why-your-sexual-health-matters-more-you-think" title="Why Your Sexual Health Matters More Than You Think?">
   <img src="/sites/default/files/2026-07/why-your-sexual-health-matters-more-than-you-think.webp" alt="Why Your Sexual Health Matters More Than You Think?">
   <h4>Why Your Sexual Health Matters More Than You Think?</h4>
@@ -963,7 +1006,7 @@
   <h4>The False Human Belief – A Moral Story About Truth, Assumptions, and Wisdom</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/homemade-kazoo-create-simple-musical-instrument-explore-sound" title="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <img src="/sites/default/files/2026-06/homemade-kazoo-create-a-simple-musical-instrument-to-explore-sound.webp" alt="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <h4>Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound</h4>
@@ -973,18 +1016,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/advances-teeth-whitening-techniques-whats-new" title="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <img src="/sites/default/files/2026-06/advances-in-teeth-whitening-techniques-what-s-new.webp" alt="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <h4>Advances in Teeth Whitening Techniques: What&#039;s New?</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore" title="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <img src="/sites/default/files/2026-06/bangalore-to-savanadurga-rock-climbing-an-exciting-weekend-adventure-near-bangalore.webp" alt="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <h4>Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yelagiri-solo-ride-scenic-route-trekking-places-visit" title="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <img src="/sites/default/files/2026-06/bangalore-to-yelagiri-solo-ride-scenic-route-trekking-places-to-visit.webp" alt="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <h4>Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit</h4>
 </a></span></div></div>
       </div>
       </div>

@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?ti93gu" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tico86" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -647,27 +647,25 @@
 <div class="pb-image-caption">Auto Tagging of Taxonomy terms in Drupal7</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
-                    
-                        
-                    <p>This article help you to create the way to implement the autotagging of the <a href="/articles/auto-tagging-taxonomy-terms-drupal7" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms based on the other field of the node page. This can be implemented by using the <code>hook_node_presave()</code>.</p><p>In our case lets consider the <code>field_tags</code> is the taxonomy field and we are autotagging based on the content present in <code>title</code> and <code>body</code> fields.</p><p>All these actions are implemented inside the <code>hook_node_presave()</code>.</p><div> <p><strong>1. First thing is getting the list of terms of the <code>field_tags</code> vocabulary, this is done in the below code.</strong></p>  <p><code>$field = field_info_field('field_tags');</code><br> // read the field information.<br> <code>$voc_name = $field["settings"]["allowed_values"][0]["vocabulary"];</code><br> // get the vocabulary name which is been <a href="/articles/improve-drupal-search-solr-locally-configured-lando" title="Read about Improve Drupal Search With Solr Locally Configured Via Lando">configured</a> for the tag field.<br> <code>$voc = taxonomy_vocabulary_machine_name_load($voc_name);</code><br> // load the vocabulary object.<br> <code>$terms = taxonomy_term_load_multiple(array(), array('vid' =&gt; $voc→vid));</code><br> // get all the terms in the vocabulary.<br> <code>$termnames = array();<br> foreach($terms as $termskey =&gt; $termsvalue) {<br> &nbsp;&nbsp;&nbsp; $termnames[$termskey] = $termsvalue→name;<br> }</code><br> // iterating the terms objects and getting out the terms names out of it.</p>
+<html><p>This article help you to create the way to implement the autotagging of the <a href="/articles/auto-tagging-taxonomy-terms-drupal7" title="Read about Auto Tagging Taxonomy Terms Drupal">taxonomy</a> terms based on the other field of the node page. This can be implemented by using the <code>hook_node_presave()</code>.</p><p>In our case lets consider the <code>field_tags</code> is the taxonomy field and we are autotagging based on the content present in <code>title</code> and <code>body</code> fields.</p><p>All these actions are implemented inside the <code>hook_node_presave()</code>.</p><div> <p><strong>1. First thing is getting the list of terms of the <code>field_tags</code> vocabulary, this is done in the below code.</strong></p>  <p><code>$field = field_info_field('field_tags');</code><br> // read the field information.<br> <code>$voc_name = $field["settings"]["allowed_values"][0]["vocabulary"];</code><br> // get the vocabulary name which is been <a href="/articles/improve-drupal-search-solr-locally-configured-lando" title="Read about Improve Drupal Search With Solr Locally Configured Via Lando">configured</a> for the tag field.<br> <code>$voc = taxonomy_vocabulary_machine_name_load($voc_name);</code><br> // load the vocabulary object.<br> <code>$terms = taxonomy_term_load_multiple(array(), array('vid' =&gt; $voc→vid));</code><br> // get all the terms in the vocabulary.<br> <code>$termnames = array();<br> foreach($terms as $termskey =&gt; $termsvalue) {<br> &nbsp;&nbsp;&nbsp; $termnames[$termskey] = $termsvalue→name;<br> }</code><br> // iterating the terms objects and getting out the terms names out of it.</p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/42zWRNi" target="_blank" rel="noopener sponsored" data-product="ALYNE Saree Shapewear Petticoat Review (2026) – Comfortable Saree Shaper for Slim &amp; Elegant Draping">
-                                <img src="https://m.media-amazon.com/images/I/51NgN4Vea-L._SY879_.jpg" alt="ALYNE Saree Shapewear Petticoat Review (2026) – Comfortable Saree Shaper for Slim &amp; Elegant Draping">
+                            <a href="https://amzn.to/4fbzoJt" target="_blank" rel="noopener sponsored" data-product="Vogaan Men's T-Shirt and Shorts Set | Top &amp; Shorts Night Suits Set | Night Wear for Men">
+                                <img src="https://m.media-amazon.com/images/I/617M5PLvTiL._SY879_.jpg" alt="Vogaan Men's T-Shirt and Shorts Set | Top &amp; Shorts Night Suits Set | Night Wear for Men">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/42zWRNi" target="_blank" rel="noopener sponsored" data-product="ALYNE Saree Shapewear Petticoat Review (2026) – Comfortable Saree Shaper for Slim &amp; Elegant Draping">ALYNE Saree Shapewear Petticoat Review (2026) – Comfortable Saree Shaper for Slim &amp; Elegant Draping</a>
+                                <a href="https://amzn.to/4fbzoJt" target="_blank" rel="noopener sponsored" data-product="Vogaan Men's T-Shirt and Shorts Set | Top &amp; Shorts Night Suits Set | Night Wear for Men">Vogaan Men's T-Shirt and Shorts Set | Top &amp; Shorts Night Suits Set | Night Wear for Men</a>
                             </div>
                             <div class="discount-badge">Now 84% Off</div>
-                            <a href="https://amzn.to/42zWRNi" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ALYNE Saree Shapewear Petticoat Review (2026) – Comfortable Saree Shaper for Slim &amp; Elegant Draping">
+                            <a href="https://amzn.to/4fbzoJt" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Vogaan Men's T-Shirt and Shorts Set | Top &amp; Shorts Night Suits Set | Night Wear for Men">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1499.00</span>
-                                    <span class="current-price">₹244.00</span>
+                                    <span class="actual-price">₹2699.00</span>
+                                    <span class="current-price">₹429.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -684,6 +682,25 @@
             </div>
             
                 </div>
+            
+            
+                
+            
+            
+                    
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
             
             
                 
@@ -831,19 +848,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4emiibB" target="_blank" rel="noopener sponsored" data-product="Microtek Pearl EM4130+ AC Voltage Stabilizer – Digital Display, Wall Mount">
-                                <img src="https://m.media-amazon.com/images/I/41z4yVAk6ML._SL1000_.jpg" alt="Microtek Pearl EM4130+ AC Voltage Stabilizer – Digital Display, Wall Mount">
+                            <a href="https://amzn.to/42CpQjb" target="_blank" rel="noopener sponsored" data-product="Ambrane Aerosync Snap 10000mAh Power Bank – Magnetic Wireless Fast Charging">
+                                <img src="https://m.media-amazon.com/images/I/61H84kDDNFL._SL1500_.jpg" alt="Ambrane Aerosync Snap 10000mAh Power Bank – Magnetic Wireless Fast Charging">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4emiibB" target="_blank" rel="noopener sponsored" data-product="Microtek Pearl EM4130+ AC Voltage Stabilizer – Digital Display, Wall Mount">Microtek Pearl EM4130+ AC Voltage Stabilizer – Digital Display, Wall Mount</a>
+                                <a href="https://amzn.to/42CpQjb" target="_blank" rel="noopener sponsored" data-product="Ambrane Aerosync Snap 10000mAh Power Bank – Magnetic Wireless Fast Charging">Ambrane Aerosync Snap 10000mAh Power Bank – Magnetic Wireless Fast Charging</a>
                             </div>
-                            <div class="discount-badge">Now 34% Off</div>
-                            <a href="https://amzn.to/4emiibB" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Microtek Pearl EM4130+ AC Voltage Stabilizer – Digital Display, Wall Mount">
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/42CpQjb" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Ambrane Aerosync Snap 10000mAh Power Bank – Magnetic Wireless Fast Charging">
                                 <span class="product-price">
-                                    <span class="actual-price">₹6190.00</span>
-                                    <span class="current-price">₹4076.00</span>
+                                    <span class="actual-price">₹2999.00</span>
+                                    <span class="current-price">₹1499.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -858,6 +875,25 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
+            
+                
+            
+            
+                    
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
             
                 
             
@@ -1008,7 +1044,21 @@
         
         
             
-        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -1030,7 +1080,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f5f460197ba1fd2f0c179c6d1e9671d9d19491b9c56c088c1754d91d14930ed9">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3c30194341b52905a5acdc8f0eb5fa1c3c35a5348a4d977d5253c27ee965d2ad">
   
     
       
@@ -1082,7 +1132,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5d80cc71685f71a7e9444f0fdd11deb6768bdb1b4a3aafa87bafd763c73d30ef">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-252f8bfa8e73948603379401194034a1b1cce9aaac38132fb7daf10fa85c3e88">
   
     
       
@@ -1092,6 +1142,18 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed" title="How to Know What You Really Want in Bed?">
+  <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
+  <h4>How to Know What You Really Want in Bed?</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
@@ -1103,7 +1165,7 @@
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
@@ -1115,7 +1177,7 @@
   <h4>Bengaluru to Nandi Hills Sunrise Trek – A Quick Weekend Guide</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/solar-system-model-create-model-solar-system-using-household-objects" title="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <img src="/sites/default/files/2026-07/solar-system-model-create-a-model-of-the-solar-system-using-household-objects.webp" alt="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <h4>Solar System Model: Create a Model of the Solar System Using Household Objects</h4>
@@ -1127,7 +1189,7 @@
   <h4>The Great E20 Petrol Debate: An Honest, Data-Driven Investigation into India&#039;s New Fuel Standard</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/why-your-sexual-health-matters-more-you-think" title="Why Your Sexual Health Matters More Than You Think?">
   <img src="/sites/default/files/2026-07/why-your-sexual-health-matters-more-than-you-think.webp" alt="Why Your Sexual Health Matters More Than You Think?">
   <h4>Why Your Sexual Health Matters More Than You Think?</h4>
@@ -1139,7 +1201,7 @@
   <h4>The False Human Belief – A Moral Story About Truth, Assumptions, and Wisdom</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/homemade-kazoo-create-simple-musical-instrument-explore-sound" title="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <img src="/sites/default/files/2026-06/homemade-kazoo-create-a-simple-musical-instrument-to-explore-sound.webp" alt="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <h4>Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound</h4>
@@ -1149,18 +1211,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/advances-teeth-whitening-techniques-whats-new" title="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <img src="/sites/default/files/2026-06/advances-in-teeth-whitening-techniques-what-s-new.webp" alt="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <h4>Advances in Teeth Whitening Techniques: What&#039;s New?</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore" title="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <img src="/sites/default/files/2026-06/bangalore-to-savanadurga-rock-climbing-an-exciting-weekend-adventure-near-bangalore.webp" alt="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <h4>Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yelagiri-solo-ride-scenic-route-trekking-places-visit" title="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <img src="/sites/default/files/2026-06/bangalore-to-yelagiri-solo-ride-scenic-route-trekking-places-to-visit.webp" alt="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <h4>Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit</h4>
 </a></span></div></div>
       </div>
       </div>

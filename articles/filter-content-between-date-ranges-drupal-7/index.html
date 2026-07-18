@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?ti93gu" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tico86" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -646,25 +646,26 @@
 
 <div class="pb-image-caption">Filter content between Date ranges in Drupal 7</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul><li data-list-item-id="e883cbc348b7f4200ff8974df827b348c">A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li><li data-list-item-id="e1f45f51cbeea0f9790045b905844f445">If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li><li data-list-item-id="e6529e3f16ceb516de7b7479cef3f3236">The following conversation <a href="https://www.drupal.org/node/1302940" target="_blank">https://www.drupal.org/node/1302940</a> explains:</li></ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul><li data-list-item-id="ec56361d2cfec956ede5f65c067fbdd47">Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li><li data-list-item-id="ee2de4549ce440071c1229214c8f6eba8">To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li><li data-list-item-id="e52a1b3f0fc8296efa1fe0ee2b536df3f">In this order:<ul><li data-list-item-id="ecf90b7a839867ec6b9bdcc75b6976d49">Date - end date (field_dates:value2)</li><li data-list-item-id="e1b52fb23c49f156e60b8244d04795fbd">Date - start date (field_dates)</li></ul></li><li data-list-item-id="ebbd43c129131e6974b0724003f367f88">In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li><li data-list-item-id="edd6b21b039374b48e785ca3260aae6c9">In next window: Select Exposed this filter to visitor</li><li data-list-item-id="eeb9e38b54f23e642fc5efba99138f51b">Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li><li data-list-item-id="ee2c01807d55010beb1cb7e3ef07850bb">Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li><li data-list-item-id="e1dd83112c5f4a6a9cff3371601c274df">Do the same to the second filter:</li></ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul><li data-list-item-id="eb8c57902d4fc4b26f52b47b9924ba6fe">This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li><li data-list-item-id="eb44179f6457872263bb669a88d4a4d7c">And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li><li data-list-item-id="eed4e8b06bb4610cc76681337022b1ffa">Save the view.</li></ul><p><strong>Note:</strong></p><ul><li data-list-item-id="e018a8adb141ecbf2148c6cd9ddde0a47">While you are working with date module and filtering the content between dates, make sure that your Server timzone, Mysql server timezone and Drupal site timezone are same. If not you may face problems in few cases.</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<html><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul><li>A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li><li>If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li><li>The following conversation <a href="https://www.drupal.org/node/1302940" target="_blank">https://www.drupal.org/node/1302940</a> explains:</li></ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul><li>Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li><li>To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li><li>In this order:<ul><li>Date - end date (field_dates:value2)</li><li>Date - start date (field_dates)</li></ul></li><li>In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li><li>In next window: Select Exposed this filter to visitor</li><li>Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li><li>Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li><li>Do the same to the second filter:</li></ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul><li>This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li><li>And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li><li>Save the view.</li></ul><p><strong>Note:</strong></p><ul><li>While you are working with date module and filtering the content between dates, make sure that your Server timzone, Mysql server timezone and Drupal site timezone are same. If not you may face problems in few cases.</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4tzcdNH" target="_blank" rel="noopener sponsored" data-product="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">
-                                <img src="https://m.media-amazon.com/images/I/618lF6hCShL._SL1500_.jpg" alt="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">
+                            <a href="https://amzn.to/4utoRO1" target="_blank" rel="noopener sponsored" data-product="TCL 65-Inch QD-Mini LED 4K Smart Google TV – Premium Display, Exceptional Value">
+                                <img src="https://m.media-amazon.com/images/I/818vnFP09yL._SL1500_.jpg" alt="TCL 65-Inch QD-Mini LED 4K Smart Google TV – Premium Display, Exceptional Value">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4tzcdNH" target="_blank" rel="noopener sponsored" data-product="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine</a>
+                                <a href="https://amzn.to/4utoRO1" target="_blank" rel="noopener sponsored" data-product="TCL 65-Inch QD-Mini LED 4K Smart Google TV – Premium Display, Exceptional Value">TCL 65-Inch QD-Mini LED 4K Smart Google TV – Premium Display, Exceptional Value</a>
                             </div>
-                            <div class="discount-badge">Now 23% Off</div>
-                            <a href="https://amzn.to/4tzcdNH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">
+                            <div class="discount-badge">Now 59% Off</div>
+                            <a href="https://amzn.to/4utoRO1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TCL 65-Inch QD-Mini LED 4K Smart Google TV – Premium Display, Exceptional Value">
                                 <span class="product-price">
-                                    <span class="actual-price">₹19550.00</span>
-                                    <span class="current-price">₹14990.00</span>
+                                    <span class="actual-price">₹169990.00</span>
+                                    <span class="current-price">₹69990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -686,6 +687,7 @@
                 
             
             
+                    
                 
             
             
@@ -750,7 +752,39 @@
             
             
                 
-            </div>
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -772,7 +806,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5be91296f89f214d4b45f95448d03738a7255e721bda9d09c611e798a65fd142">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-47cc81a84cedc95b156f92d0fb140fef34c6ff024c95325eafa670bf034d8493">
   
     
       
@@ -824,7 +858,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-45fbdda60892ecef7df4e3fc76a32cf044646242ceaaf72cba428605c6229945">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8e2d55b7f14f6ad974a32c301f1e9e59cb826e9869fc515f99cb6c36cb557148">
   
     
       
@@ -834,6 +868,18 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed" title="How to Know What You Really Want in Bed?">
+  <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
+  <h4>How to Know What You Really Want in Bed?</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
@@ -845,7 +891,7 @@
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
@@ -857,7 +903,7 @@
   <h4>Bengaluru to Nandi Hills Sunrise Trek – A Quick Weekend Guide</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/solar-system-model-create-model-solar-system-using-household-objects" title="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <img src="/sites/default/files/2026-07/solar-system-model-create-a-model-of-the-solar-system-using-household-objects.webp" alt="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <h4>Solar System Model: Create a Model of the Solar System Using Household Objects</h4>
@@ -869,7 +915,7 @@
   <h4>The Great E20 Petrol Debate: An Honest, Data-Driven Investigation into India&#039;s New Fuel Standard</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/why-your-sexual-health-matters-more-you-think" title="Why Your Sexual Health Matters More Than You Think?">
   <img src="/sites/default/files/2026-07/why-your-sexual-health-matters-more-than-you-think.webp" alt="Why Your Sexual Health Matters More Than You Think?">
   <h4>Why Your Sexual Health Matters More Than You Think?</h4>
@@ -881,7 +927,7 @@
   <h4>The False Human Belief – A Moral Story About Truth, Assumptions, and Wisdom</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/homemade-kazoo-create-simple-musical-instrument-explore-sound" title="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <img src="/sites/default/files/2026-06/homemade-kazoo-create-a-simple-musical-instrument-to-explore-sound.webp" alt="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <h4>Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound</h4>
@@ -891,18 +937,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/advances-teeth-whitening-techniques-whats-new" title="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <img src="/sites/default/files/2026-06/advances-in-teeth-whitening-techniques-what-s-new.webp" alt="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <h4>Advances in Teeth Whitening Techniques: What&#039;s New?</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore" title="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <img src="/sites/default/files/2026-06/bangalore-to-savanadurga-rock-climbing-an-exciting-weekend-adventure-near-bangalore.webp" alt="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <h4>Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yelagiri-solo-ride-scenic-route-trekking-places-visit" title="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <img src="/sites/default/files/2026-06/bangalore-to-yelagiri-solo-ride-scenic-route-trekking-places-to-visit.webp" alt="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <h4>Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit</h4>
 </a></span></div></div>
       </div>
       </div>

@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?ti93gu" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tico86" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -646,7 +646,8 @@
 
 <div class="pb-image-caption">Implementing a Redis Cache for Product Catalog Data in PHP</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<html><p>Caching is a vital technique for improving <a href="/articles/usage-constraints-validations-media-entities-drupal-application" title="Read about Usage Of Constraints Validations On Media Entities In Drupal Application">application</a> performance, especially in e-commerce platforms where product catalog data is frequently accessed. By using Redis as a caching layer, you can significantly reduce database load and improve response times for users.</p><p>In this article, we’ll walk through the steps to implement a Redis cache for product catalog data in a PHP 8 application.</p><h2>What is Redis?</h2><p>Redis is an open-source, in-memory data structure store known for its speed and flexibility. It can be used as a database, cache, and message broker, making it an excellent choice for applications that require fast access to data.</p><h2>Why Use Redis for Caching?</h2><p>Redis is an in-memory data structure store known for its speed and efficiency. Its ability to handle various data types makes it an ideal choice for caching scenarios. Here are some key benefits:</p><ul> <li><strong>Fast Access</strong>: Retrieving data from Redis is significantly faster than querying a traditional database.</li> <li><strong>Reduced Database Load</strong>: By serving cached data, you minimize the number of read operations on your database.</li> <li><strong>Scalability</strong>: Redis can easily scale to handle increased load as your application grows.</li> </ul><h2>Setting Up Your Environment</h2><p><strong>Step 1: Create a New DDEV Project</strong></p><p>If you don’t have an existing DDEV project, you can create a new one. Open your terminal, navigate to your desired directory, and run:</p><p><code>mkdir my-product-catalog</code></p><p><code>cd my-product-catalog</code></p><p><code>ddev config</code></p><p>Follow the prompts to set up your project, ensuring that you specify PHP 8 as your environment. After configuration, start your DDEV environment:</p><p><code>ddev start</code></p><p><strong>Step 2: Add Redis to Your DDEV Project</strong></p><p>DDEV makes it easy to add services like Redis. To enable Redis, run:</p><p><code>ddev add-service redis</code></p><p>This command sets up Redis for your DDEV environment, making it accessible to your PHP application. If not added, alternatively you can setup using below steps</p><ol> <li>Under the&nbsp;<code>.ddev</code>&nbsp;folder, create a file with the name&nbsp;<code>docker-compose.override.yml</code>.</li> <li>Add the below code into the file&nbsp;<code>docker-compose.override.yml</code>&nbsp;and then&nbsp;run&nbsp;<code>ddev restart</code></li> </ol><p><code>version: '3.6'</code></p><p><code>services:</code></p><p><code>&nbsp;redis:</code></p><p><code>&nbsp;&nbsp;&nbsp;image: redis:latest</code></p><p><code>&nbsp;&nbsp;&nbsp;container_name: day15-ddev-php-redis</code></p><p><code>&nbsp;&nbsp;&nbsp;ports:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "6379:6379"</code></p><p><code>&nbsp;&nbsp;&nbsp;networks:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ddev_default</code></p><p><code>&nbsp;&nbsp;&nbsp;volumes:</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis_data:/data</code></p><p><code>volumes:</code></p><p><code>&nbsp;redis_data:</code></p><p><code>&nbsp;&nbsp;&nbsp;driver: local</code></p><p><strong>Step 3: Access Redis</strong></p><p>Once Redis is added, you can connect to it using the hostname redis. You can also use the Redis CLI to verify that it’s running:</p><p><code>ddev ssh</code></p><p><code>redis-cli ping</code></p><p>You should receive a response of PONG.</p><p><strong>Step 4: Install a Redis Client for PHP</strong></p><p>To interact with Redis in your PHP application, we will use the predis/predis library. Install it using Composer within your DDEV environment:</p><p><code>ddev composer require predis/predis</code></p>
         
             
         <h2><a href="/articles/implementing-redis-cache-product-catalog-data-php" title="Read about Implementing A Redis Cache For Product Catalog Data In Php">Implementing</a> the Redis Cache for Product Catalog Data</h2>
@@ -816,24 +817,43 @@
             
                 
             
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                    
+                
+            
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B01LQOxIg" target="_blank" rel="noopener sponsored" data-product="Amazon Symbol Men's Solid Cotton T-Shirt Review (2026) – Regular Fit Everyday Round Neck Tee">
-                                <img src="https://m.media-amazon.com/images/I/71rbbm-LIAL._SY879_.jpg" alt="Amazon Symbol Men's Solid Cotton T-Shirt Review (2026) – Regular Fit Everyday Round Neck Tee">
+                            <a href="https://amzn.to/43zhOs7" target="_blank" rel="noopener sponsored" data-product="Midea 560L Side-by-Side Refrigerator Review (2026) – Inverter Frost-Free Refrigerator with Water Dispenser">
+                                <img src="https://m.media-amazon.com/images/I/71iB8o2vqlL._SL1500_.jpg" alt="Midea 560L Side-by-Side Refrigerator Review (2026) – Inverter Frost-Free Refrigerator with Water Dispenser">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://link.amazon/B01LQOxIg" target="_blank" rel="noopener sponsored" data-product="Amazon Symbol Men's Solid Cotton T-Shirt Review (2026) – Regular Fit Everyday Round Neck Tee">Amazon Symbol Men's Solid Cotton T-Shirt Review (2026) – Regular Fit Everyday Round Neck Tee</a>
+                                <a href="https://amzn.to/43zhOs7" target="_blank" rel="noopener sponsored" data-product="Midea 560L Side-by-Side Refrigerator Review (2026) – Inverter Frost-Free Refrigerator with Water Dispenser">Midea 560L Side-by-Side Refrigerator Review (2026) – Inverter Frost-Free Refrigerator with Water Dispenser</a>
                             </div>
-                            <div class="discount-badge">Now 62% Off</div>
-                            <a href="https://link.amazon/B01LQOxIg" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Symbol Men's Solid Cotton T-Shirt Review (2026) – Regular Fit Everyday Round Neck Tee">
+                            <div class="discount-badge">Now 59% Off</div>
+                            <a href="https://amzn.to/43zhOs7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Midea 560L Side-by-Side Refrigerator Review (2026) – Inverter Frost-Free Refrigerator with Water Dispenser">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2097.00</span>
-                                    <span class="current-price">₹799.00</span>
+                                    <span class="actual-price">₹110990.00</span>
+                                    <span class="current-price">₹44990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -848,7 +868,21 @@
                     </div>
                 </div>
             </div><h2>Conclusion</h2><p>Implementing a Redis cache for product catalog data in a PHP 8 application using DDEV is a straightforward process that can significantly enhance your application's performance. By caching frequently accessed data, you reduce database load, improve response times, and provide a better user experience.</p><p>Using DDEV simplifies the development environment setup, allowing you to focus on building <a href="/articles/designing-efficient-schemas-web-applications" title="Read about Designing Efficient Schemas For Web Applications">efficient</a> applications. As you continue to develop your e-commerce platform, consider leveraging Redis for additional caching and data management tasks to further optimize your application.</p><p>Thanks for reading the article,&nbsp;for more Science and Technology related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -870,7 +904,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-fdb0c839a446ddf2e3b684eb8da422bd9b0be5e77a7085e08def36df71d4e435">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-358c6bf8d02155cfc2a169e902e2956940921524ccf74053246926196d06dd8c">
   
     
       
@@ -922,7 +956,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-0689392c8a5c10b0aa834aa87a08320324ec14674f2b0de20b6743f4f66a7cf5">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-4750195c5c890ca82eb9f8abec7ddd097e04a27c9028d8eb8724ac26c5207f4f">
   
     
       
@@ -932,6 +966,18 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed" title="How to Know What You Really Want in Bed?">
+  <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
+  <h4>How to Know What You Really Want in Bed?</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
@@ -943,7 +989,7 @@
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
@@ -955,7 +1001,7 @@
   <h4>Bengaluru to Nandi Hills Sunrise Trek – A Quick Weekend Guide</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/solar-system-model-create-model-solar-system-using-household-objects" title="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <img src="/sites/default/files/2026-07/solar-system-model-create-a-model-of-the-solar-system-using-household-objects.webp" alt="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <h4>Solar System Model: Create a Model of the Solar System Using Household Objects</h4>
@@ -967,7 +1013,7 @@
   <h4>The Great E20 Petrol Debate: An Honest, Data-Driven Investigation into India&#039;s New Fuel Standard</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/why-your-sexual-health-matters-more-you-think" title="Why Your Sexual Health Matters More Than You Think?">
   <img src="/sites/default/files/2026-07/why-your-sexual-health-matters-more-than-you-think.webp" alt="Why Your Sexual Health Matters More Than You Think?">
   <h4>Why Your Sexual Health Matters More Than You Think?</h4>
@@ -979,7 +1025,7 @@
   <h4>The False Human Belief – A Moral Story About Truth, Assumptions, and Wisdom</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/homemade-kazoo-create-simple-musical-instrument-explore-sound" title="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <img src="/sites/default/files/2026-06/homemade-kazoo-create-a-simple-musical-instrument-to-explore-sound.webp" alt="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <h4>Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound</h4>
@@ -989,18 +1035,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/advances-teeth-whitening-techniques-whats-new" title="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <img src="/sites/default/files/2026-06/advances-in-teeth-whitening-techniques-what-s-new.webp" alt="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <h4>Advances in Teeth Whitening Techniques: What&#039;s New?</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore" title="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <img src="/sites/default/files/2026-06/bangalore-to-savanadurga-rock-climbing-an-exciting-weekend-adventure-near-bangalore.webp" alt="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <h4>Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yelagiri-solo-ride-scenic-route-trekking-places-visit" title="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <img src="/sites/default/files/2026-06/bangalore-to-yelagiri-solo-ride-scenic-route-trekking-places-to-visit.webp" alt="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <h4>Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit</h4>
 </a></span></div></div>
       </div>
       </div>

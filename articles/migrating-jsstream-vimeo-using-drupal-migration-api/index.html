@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?ti93gu" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tico86" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -646,7 +646,8 @@
 
 <div class="pb-image-caption">Migrating from JSStream to Vimeo Using Drupal Migration API</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<html><p>Migrating video content from <strong>JSStream</strong> (a custom video streaming <a href="/articles/what-customer-data-platform-and-which-one-best-your-business" title="Read about What Is A Customer Data Platform And Which One Is Best For Your Business">platform</a>) to <strong>Vimeo</strong> can be a crucial task if you're looking for a more scalable, feature-rich platform for hosting and managing your videos. While manual migration might work for small datasets, automating the process via Drupal’s <strong>Migration API</strong> can save significant time and reduce errors, especially for larger video libraries.</p><p>In this article, we will walk through how to migrate video content (including video files, titles, descriptions, and tags) from <strong>JSStream</strong> to <strong>Vimeo</strong> using Drupal 10. The migration will leverage Drupal’s Migration API, custom migration process plugins, and the <strong>Vimeo API</strong>.</p>
         
             
         <h2>Key Concepts</h2><ol> <li><strong>Drupal Migration API</strong>: This API allows importing content from external sources (like JSStream) and mapping it to Drupal entities (e.g., media entities).</li> <li><strong>Vimeo API</strong>: The Vimeo API allows programmatic interaction with Vimeo to upload videos, set metadata, and manage video privacy and settings.</li> <li><strong>Media Entities</strong>: In Drupal, media entities represent multimedia content (images, videos, etc.). We’ll use the <strong>Video media bundle</strong> to store Vimeo videos.</li> </ol><h2>Prerequisites</h2><p>Before proceeding with the migration, ensure you have the following setup:</p><ul> <li><strong>Drupal </strong>latest version&nbsp;installed.</li> <li>The required migration modules enabled: <tt>migrate</tt>, <tt>migrate_plus</tt>, <tt>migrate_tools</tt>.</li> <li>A <strong>Vimeo Developer</strong> account to get <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>Access Token</strong>.</li> <li>Video files and metadata exported from <strong>JSStream</strong> in a CSV or JSON format.</li> </ul><h2>1. Install Required Modules</h2><p>First, install the necessary modules for migration:</p><p><code>composer require drupal/migrate drupal/migrate_plus drupal/migrate_tools</code></p><p>Then enable the modules:</p><p><code>drush en migrate migrate_plus migrate_tools</code></p><h2>2. Define Migration Configuration</h2>
@@ -818,24 +819,43 @@
             
                 
             
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                    
+                
+            
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3Pwrxff" target="_blank" rel="noopener sponsored" data-product="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">
-                                <img src="https://m.media-amazon.com/images/I/41f80Qu98zL.jpg" alt="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">
+                            <a href="https://link.amazon/B05CnmAR1" target="_blank" rel="noopener sponsored" data-product="KLOSIA Women's Printed Straight Kurta Pant Set with Dupatta Review (2026) – Elegant Ethnic Wear for Every Occasion">
+                                <img src="https://m.media-amazon.com/images/I/616i8sDpl8L._SY879_.jpg" alt="KLOSIA Women's Printed Straight Kurta Pant Set with Dupatta Review (2026) – Elegant Ethnic Wear for Every Occasion">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/3Pwrxff" target="_blank" rel="noopener sponsored" data-product="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)</a>
+                                <a href="https://link.amazon/B05CnmAR1" target="_blank" rel="noopener sponsored" data-product="KLOSIA Women's Printed Straight Kurta Pant Set with Dupatta Review (2026) – Elegant Ethnic Wear for Every Occasion">KLOSIA Women's Printed Straight Kurta Pant Set with Dupatta Review (2026) – Elegant Ethnic Wear for Every Occasion</a>
                             </div>
-                            <div class="discount-badge">Now 0% Off</div>
-                            <a href="https://amzn.to/3Pwrxff" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">
+                            <div class="discount-badge">Now 77% Off</div>
+                            <a href="https://link.amazon/B05CnmAR1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="KLOSIA Women's Printed Straight Kurta Pant Set with Dupatta Review (2026) – Elegant Ethnic Wear for Every Occasion">
                                 <span class="product-price">
-                                    <span class="actual-price">₹9999.00</span>
-                                    <span class="current-price">₹9999.00</span>
+                                    <span class="actual-price">₹2999.00</span>
+                                    <span class="current-price">₹699.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -863,7 +883,21 @@
         
             
         <p>Migrating video content from <strong>JSStream</strong> to <strong>Vimeo</strong> via <strong>Drupal 10</strong>’s <strong>Migration API</strong> provides a flexible and automated way to move large datasets with minimal manual intervention. By utilizing Drupal’s migration tools, custom process plugins, and the Vimeo API, you can easily transfer video files, along with their metadata (title, description, tags), to Vimeo.</p><p>This approach is highly scalable and <a href="/articles/choose-inverters-which-are-more-efficient-work-solar-panels" title="Read about Choose The Inverters Which Are More Efficient To Work With Solar Panels">efficient</a>, making it an ideal solution for <a href="/articles/why-drupal-chosen-large-organizations" title="Read about Why Is Drupal Chosen By Large Organizations">organizations</a> and developers who need to migrate substantial video libraries while maintaining the integrity of metadata and video playback functionality.</p><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -885,7 +919,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-0ac3efc46b77b54a4f921feb0d58d2b2dbd0b58efb9e465f493760a38452bed3">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-d0ec8d909ea0882b22cc48344118024ca007b6feb3ac95b16af7c8b2237814eb">
   
     
       
@@ -937,7 +971,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-6fcfe5b0ec25ce67757d986e58b81e3bf5f13f880d7097ae007fee4cc599421a">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-db01c5c66a2dc03f6562ec07613520cb7e150824eecca626fba556a252114b3a">
   
     
       
@@ -947,6 +981,18 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed" title="How to Know What You Really Want in Bed?">
+  <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
+  <h4>How to Know What You Really Want in Bed?</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
@@ -958,7 +1004,7 @@
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
@@ -970,7 +1016,7 @@
   <h4>Bengaluru to Nandi Hills Sunrise Trek – A Quick Weekend Guide</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/solar-system-model-create-model-solar-system-using-household-objects" title="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <img src="/sites/default/files/2026-07/solar-system-model-create-a-model-of-the-solar-system-using-household-objects.webp" alt="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <h4>Solar System Model: Create a Model of the Solar System Using Household Objects</h4>
@@ -982,7 +1028,7 @@
   <h4>The Great E20 Petrol Debate: An Honest, Data-Driven Investigation into India&#039;s New Fuel Standard</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/why-your-sexual-health-matters-more-you-think" title="Why Your Sexual Health Matters More Than You Think?">
   <img src="/sites/default/files/2026-07/why-your-sexual-health-matters-more-than-you-think.webp" alt="Why Your Sexual Health Matters More Than You Think?">
   <h4>Why Your Sexual Health Matters More Than You Think?</h4>
@@ -994,7 +1040,7 @@
   <h4>The False Human Belief – A Moral Story About Truth, Assumptions, and Wisdom</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/homemade-kazoo-create-simple-musical-instrument-explore-sound" title="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <img src="/sites/default/files/2026-06/homemade-kazoo-create-a-simple-musical-instrument-to-explore-sound.webp" alt="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <h4>Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound</h4>
@@ -1004,18 +1050,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/advances-teeth-whitening-techniques-whats-new" title="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <img src="/sites/default/files/2026-06/advances-in-teeth-whitening-techniques-what-s-new.webp" alt="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <h4>Advances in Teeth Whitening Techniques: What&#039;s New?</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore" title="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <img src="/sites/default/files/2026-06/bangalore-to-savanadurga-rock-climbing-an-exciting-weekend-adventure-near-bangalore.webp" alt="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <h4>Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yelagiri-solo-ride-scenic-route-trekking-places-visit" title="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <img src="/sites/default/files/2026-06/bangalore-to-yelagiri-solo-ride-scenic-route-trekking-places-to-visit.webp" alt="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <h4>Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit</h4>
 </a></span></div></div>
       </div>
       </div>

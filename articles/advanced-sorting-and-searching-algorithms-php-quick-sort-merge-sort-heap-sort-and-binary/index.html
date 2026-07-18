@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?ti93gu" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tico86" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -646,7 +646,8 @@
 
 <div class="pb-image-caption">Advanced Sorting and Searching Algorithms in PHP: Quick Sort, Merge Sort, Heap Sort, and Binary Search Trees</div></div>
       
-            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Sorting and searching are foundational operations in computer science. Understanding the <a href="/articles/choose-inverters-which-are-more-efficient-work-solar-panels" title="Read about Choose The Inverters Which Are More Efficient To Work With Solar Panels">efficient</a> algorithms for these tasks can significantly enhance the performance of your applications.</p><p>In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.</p><p>We’ll include clear explanations along with sample code for each algorithm. This will help you not only understand their inner workings but also implement them efficiently in your projects.</p><h2>1. Quick Sort</h2><ul> <li>Quick Sort is a divide-and-conquer algorithm that selects a pivot element and partitions the array into two subarrays, one containing elements smaller than the pivot and the other containing elements greater than the pivot.</li> <li>It recursively sorts these subarrays.</li> <li>Quick Sort is efficient, with an average time complexity of <tt>O(n log n)</tt>, though in the worst case (when the pivot is poorly chosen), it can degrade to <tt>O(n²)</tt>.</li> </ul><p><strong>Quick Sort Implementation in PHP8:</strong></p><p><code>function quickSort(array $arr): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if (count($arr) &lt; 2) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $arr; // Base case: a single element is already sorted</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$pivot = $arr[0]; // Take the first element as the pivot</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$left = $right = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Partitioning step</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;foreach (array_slice($arr, 1) as $value) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($value &lt; $pivot) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$left[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$right[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Recursively apply quickSort to the left and right subarrays, then concatenate</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return array_merge(quickSort($left), [$pivot], quickSort($right));</code></p><p><code>}</code></p><p><code>$numbers = [10, 3, 15, 7, 8, 23, 74, 18];</code></p><p><code>$sorted = quickSort($numbers);</code></p><p><code>print_r($sorted);</code></p><h2>2. Merge Sort</h2>
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<html><p>Sorting and searching are foundational operations in computer science. Understanding the <a href="/articles/choose-inverters-which-are-more-efficient-work-solar-panels" title="Read about Choose The Inverters Which Are More Efficient To Work With Solar Panels">efficient</a> algorithms for these tasks can significantly enhance the performance of your applications.</p><p>In this article, we’ll explore three advanced sorting algorithms — Quick Sort, Merge Sort, and Heap Sort — and dive into implementing Binary Search Trees (BST) in PHP 8.</p><p>We’ll include clear explanations along with sample code for each algorithm. This will help you not only understand their inner workings but also implement them efficiently in your projects.</p><h2>1. Quick Sort</h2><ul> <li>Quick Sort is a divide-and-conquer algorithm that selects a pivot element and partitions the array into two subarrays, one containing elements smaller than the pivot and the other containing elements greater than the pivot.</li> <li>It recursively sorts these subarrays.</li> <li>Quick Sort is efficient, with an average time complexity of <tt>O(n log n)</tt>, though in the worst case (when the pivot is poorly chosen), it can degrade to <tt>O(n²)</tt>.</li> </ul><p><strong>Quick Sort Implementation in PHP8:</strong></p><p><code>function quickSort(array $arr): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if (count($arr) &lt; 2) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $arr; // Base case: a single element is already sorted</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$pivot = $arr[0]; // Take the first element as the pivot</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$left = $right = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Partitioning step</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;foreach (array_slice($arr, 1) as $value) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($value &lt; $pivot) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$left[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$right[] = $value;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Recursively apply quickSort to the left and right subarrays, then concatenate</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return array_merge(quickSort($left), [$pivot], quickSort($right));</code></p><p><code>}</code></p><p><code>$numbers = [10, 3, 15, 7, 8, 23, 74, 18];</code></p><p><code>$sorted = quickSort($numbers);</code></p><p><code>print_r($sorted);</code></p><h2>2. Merge Sort</h2>
                     
                         
                     <ul> <li>Merge Sort is another divide-and-conquer algorithm.</li> <li>It works by recursively dividing the array in half until each subarray has only one element.</li> <li>Then, it merges the sorted subarrays back together.</li> <li>Merge Sort has a guaranteed time complexity of <tt>O(n log n)</tt>, even in the worst case.</li> </ul><p><strong>Merge Sort Implementation in PHP8:</strong></p><p><code>function mergeSort(array $arr): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Base case: single element or empty array is already sorted</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;if (count($arr) &lt; 2) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $arr;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$mid = floor(count($arr) / 2);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$left = array_slice($arr, 0, $mid);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$right = array_slice($arr, $mid);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Recursively split and merge the arrays</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return merge(mergeSort($left), mergeSort($right));</code></p><p><code>}</code></p><p><code>function merge(array $left, array $right): array {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;$result = [];</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;while (count($left) &gt; 0 &amp;&amp; count($right) &gt; 0) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($left[0] &lt; $right[0]) {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = array_shift($left);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] = array_shift($right);</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;// Append remaining elements</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;return array_merge($result, $left, $right);</code></p><p><code>}</code></p><p><code>$numbers = [10, 3, 15, 7, 8, 23, 74, 18];</code></p><p><code>$sorted = mergeSort($numbers);</code></p><p><code>print_r($sorted);</code></p>
@@ -822,24 +823,43 @@
             
                 
             
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                    
+                
+            
+            
+                
+            
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4oitWHC" target="_blank" rel="noopener sponsored" data-product="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">
-                                <img src="https://m.media-amazon.com/images/I/71CuV+Vse2L._SL1500_.jpg" alt="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">
+                            <a href="https://amzn.to/4te9ubK" target="_blank" rel="noopener sponsored" data-product="WZATCO Yuva Go Pro Smart Projector – Native 1080P, Fully Automatic, Rotatable Design">
+                                <img src="https://m.media-amazon.com/images/I/71kPpcyp1VL._SL1500_.jpg" alt="WZATCO Yuva Go Pro Smart Projector – Native 1080P, Fully Automatic, Rotatable Design">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://amzn.to/4oitWHC" target="_blank" rel="noopener sponsored" data-product="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink</a>
+                                <a href="https://amzn.to/4te9ubK" target="_blank" rel="noopener sponsored" data-product="WZATCO Yuva Go Pro Smart Projector – Native 1080P, Fully Automatic, Rotatable Design">WZATCO Yuva Go Pro Smart Projector – Native 1080P, Fully Automatic, Rotatable Design</a>
                             </div>
-                            <div class="discount-badge">Now 24% Off</div>
-                            <a href="https://amzn.to/4oitWHC" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">
+                            <div class="discount-badge">Now 57% Off</div>
+                            <a href="https://amzn.to/4te9ubK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="WZATCO Yuva Go Pro Smart Projector – Native 1080P, Fully Automatic, Rotatable Design">
                                 <span class="product-price">
-                                    <span class="actual-price">₹849.00</span>
-                                    <span class="current-price">₹648.00</span>
+                                    <span class="actual-price">₹29990.00</span>
+                                    <span class="current-price">₹12990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -854,7 +874,21 @@
                     </div>
                 </div>
             </div><h2>Conclusion</h2><p>Mastering advanced sorting algorithms like Quick Sort, Merge Sort, and Heap Sort, as well as data structures like Binary Search Trees (BST), will help you solve complex problems efficiently. Understanding how each algorithm works and when to apply them can lead to significant performance improvements in your applications.</p><p>By using PHP 8, which offers robust performance and modern features, you can implement these algorithms with ease and ensure your applications are optimized for speed and reliability.</p><p>Thanks for reading the article,&nbsp;for more Science and <a href="/articles/advances-prosthetic-limb-technology" title="Read about Advances In Prosthetic Limb Technology">Technology</a> related articles&nbsp;read and subscribe to peoples blog articles.</p>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></div>
       
 
 <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--tags">
@@ -876,7 +910,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-056ac08f5dae501ba7d18d592701ef744eb22c17c7fb9ecfbc75d2d5271b1134">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1624548536bcbd70fc78e764f12a1192acf4fbf554632bb5ec8fb6efc98151ae">
   
     
       
@@ -928,7 +962,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-3a609914a51c616eed4af64e7b41923ff17e66df82db6f96a45415122a1eef04">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-9746020982388a074174b4e345ac24fdec729cde529ebcb0938e5ff050539893">
   
     
       
@@ -938,6 +972,18 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
+  <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed" title="How to Know What You Really Want in Bed?">
+  <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
+  <h4>How to Know What You Really Want in Bed?</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
@@ -949,7 +995,7 @@
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
   <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
@@ -961,7 +1007,7 @@
   <h4>Bengaluru to Nandi Hills Sunrise Trek – A Quick Weekend Guide</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/solar-system-model-create-model-solar-system-using-household-objects" title="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <img src="/sites/default/files/2026-07/solar-system-model-create-a-model-of-the-solar-system-using-household-objects.webp" alt="Solar System Model: Create a Model of the Solar System Using Household Objects">
   <h4>Solar System Model: Create a Model of the Solar System Using Household Objects</h4>
@@ -973,7 +1019,7 @@
   <h4>The Great E20 Petrol Debate: An Honest, Data-Driven Investigation into India&#039;s New Fuel Standard</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/why-your-sexual-health-matters-more-you-think" title="Why Your Sexual Health Matters More Than You Think?">
   <img src="/sites/default/files/2026-07/why-your-sexual-health-matters-more-than-you-think.webp" alt="Why Your Sexual Health Matters More Than You Think?">
   <h4>Why Your Sexual Health Matters More Than You Think?</h4>
@@ -985,7 +1031,7 @@
   <h4>The False Human Belief – A Moral Story About Truth, Assumptions, and Wisdom</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/homemade-kazoo-create-simple-musical-instrument-explore-sound" title="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <img src="/sites/default/files/2026-06/homemade-kazoo-create-a-simple-musical-instrument-to-explore-sound.webp" alt="Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound">
   <h4>Homemade Kazoo: Create a Simple Musical Instrument to Explore Sound</h4>
@@ -995,18 +1041,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/advances-teeth-whitening-techniques-whats-new" title="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <img src="/sites/default/files/2026-06/advances-in-teeth-whitening-techniques-what-s-new.webp" alt="Advances in Teeth Whitening Techniques: What&#039;s New?">
   <h4>Advances in Teeth Whitening Techniques: What&#039;s New?</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore" title="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <img src="/sites/default/files/2026-06/bangalore-to-savanadurga-rock-climbing-an-exciting-weekend-adventure-near-bangalore.webp" alt="Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore">
-  <h4>Bangalore to Savanadurga Rock Climbing – An Exciting Weekend Adventure Near Bangalore</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yelagiri-solo-ride-scenic-route-trekking-places-visit" title="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <img src="/sites/default/files/2026-06/bangalore-to-yelagiri-solo-ride-scenic-route-trekking-places-to-visit.webp" alt="Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit">
-  <h4>Bangalore to Yelagiri Solo Ride - Scenic Route, Trekking &amp; Places to Visit</h4>
 </a></span></div></div>
       </div>
       </div>
