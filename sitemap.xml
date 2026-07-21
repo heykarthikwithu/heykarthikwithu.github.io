@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
  <url>
   <loc>https://peoplesblog.co.in/</loc>
-  <lastmod>2026-05-03T07:19:10+05:30</lastmod>
+  <lastmod>2026-07-21T10:16:07+05:30</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
  </url>
@@ -6750,12 +6750,6 @@
   <lastmod>2026-07-18T09:03:08+05:30</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
- </url>
- <url>
-  <loc>https://peoplesblog.co.in/peoples-blog/</loc>
-  <lastmod>2026-05-03T07:19:10+05:30</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.5</priority>
  </url>
  <url>
   <loc>https://peoplesblog.co.in/about-us/</loc>
