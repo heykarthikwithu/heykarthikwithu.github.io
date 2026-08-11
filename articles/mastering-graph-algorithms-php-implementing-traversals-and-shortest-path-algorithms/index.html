@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4tzcdNH" target="_blank" rel="noopener sponsored" data-product="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">
-                                <img src="https://m.media-amazon.com/images/I/618lF6hCShL._SL1500_.jpg" alt="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">
+                            <a href="https://link.amazon/B0djHn06j" target="_blank" rel="noopener sponsored" data-product="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">
+                                <img src="https://m.media-amazon.com/images/I/71k8K820brL._SL1500_.jpg" alt="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/whirlpool-7kg-magic-clean-5-star-fully-automatic-top-load-washing-machine/" target="_blank" rel="noopener sponsored" data-product="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine</a>
+                                <a href="https://thebestproducts.co.in/reviews/delonghi-dedica-style-ec685w-espresso-machine-review-2026-compact-italian-coffee-maker-home/" target="_blank" rel="noopener sponsored" data-product="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home</a>
                             </div>
-                            <div class="discount-badge">Now 23% Off</div>
-                            <a href="https://amzn.to/4tzcdNH" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Whirlpool 7kg Magic Clean 5-Star Fully Automatic Top Load Washing Machine">
+                            <div class="discount-badge">Now 62% Off</div>
+                            <a href="https://link.amazon/B0djHn06j" target="_blank" class="buy-button" rel="noopener sponsored" data-product="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">
                                 <span class="product-price">
-                                    <span class="actual-price">₹19550.00</span>
-                                    <span class="current-price">₹14990.00</span>
+                                    <span class="actual-price">₹44990.00</span>
+                                    <span class="current-price">₹16999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -928,19 +861,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4veWZhC" target="_blank" rel="noopener sponsored" data-product="Elica 90cm Filterless Auto-Clean Kitchen Chimney Review (2026) – 1600 m³/hr Full Grill Chimney with Motion Sensor Control">
-                                <img src="https://m.media-amazon.com/images/I/51MPn44ka9L._SL1500_.jpg" alt="Elica 90cm Filterless Auto-Clean Kitchen Chimney Review (2026) – 1600 m³/hr Full Grill Chimney with Motion Sensor Control">
+                            <a href="https://amzn.to/4uWKsj1" target="_blank" rel="noopener sponsored" data-product="My Pahadi Dukan Himalayan Sea Buckthorn Pulp Review (2026) – Cold-Pressed Omega-Rich Wellness Juice">
+                                <img src="https://m.media-amazon.com/images/I/61cyWetM2QL._SL1500_.jpg" alt="My Pahadi Dukan Himalayan Sea Buckthorn Pulp Review (2026) – Cold-Pressed Omega-Rich Wellness Juice">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/elica-90cm-filterless-auto-clean-kitchen-chimney-review-2026-1600-m3hr-full-grill-chimney/" target="_blank" rel="noopener sponsored" data-product="Elica 90cm Filterless Auto-Clean Kitchen Chimney Review (2026) – 1600 m³/hr Full Grill Chimney with Motion Sensor Control">Elica 90cm Filterless Auto-Clean Kitchen Chimney Review (2026) – 1600 m³/hr Full Grill Chimney with Motion Sensor Control</a>
+                                <a href="https://thebestproducts.co.in/reviews/my-pahadi-dukan-himalayan-sea-buckthorn-pulp-review-2026-cold-pressed-omega-rich-wellness/" target="_blank" rel="noopener sponsored" data-product="My Pahadi Dukan Himalayan Sea Buckthorn Pulp Review (2026) – Cold-Pressed Omega-Rich Wellness Juice">My Pahadi Dukan Himalayan Sea Buckthorn Pulp Review (2026) – Cold-Pressed Omega-Rich Wellness Juice</a>
                             </div>
-                            <div class="discount-badge">Now 47% Off</div>
-                            <a href="https://amzn.to/4veWZhC" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Elica 90cm Filterless Auto-Clean Kitchen Chimney Review (2026) – 1600 m³/hr Full Grill Chimney with Motion Sensor Control">
+                            <div class="discount-badge">Now 26% Off</div>
+                            <a href="https://amzn.to/4uWKsj1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="My Pahadi Dukan Himalayan Sea Buckthorn Pulp Review (2026) – Cold-Pressed Omega-Rich Wellness Juice">
                                 <span class="product-price">
-                                    <span class="actual-price">₹27990.00</span>
-                                    <span class="current-price">₹14949.00</span>
+                                    <span class="actual-price">₹899.00</span>
+                                    <span class="current-price">₹669.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -955,6 +888,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1119,19 +1055,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B05ro7I3o" target="_blank" rel="noopener sponsored" data-product="TEX-RO Stainless Steel Dish Drying Rack Review (2026) – Compact &amp; Efficient Kitchen Drainer">
-                                <img src="https://m.media-amazon.com/images/I/71ddbx5sbTL._SL1500_.jpg" alt="TEX-RO Stainless Steel Dish Drying Rack Review (2026) – Compact &amp; Efficient Kitchen Drainer">
+                            <a href="https://link.amazon/B00gYvtF9" target="_blank" rel="noopener sponsored" data-product="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">
+                                <img src="https://m.media-amazon.com/images/I/61B5L7kHSiL._SL1500_.jpg" alt="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/tex-ro-stainless-steel-dish-drying-rack-review-2026-compact-efficient-kitchen-drainer/" target="_blank" rel="noopener sponsored" data-product="TEX-RO Stainless Steel Dish Drying Rack Review (2026) – Compact &amp; Efficient Kitchen Drainer">TEX-RO Stainless Steel Dish Drying Rack Review (2026) – Compact &amp; Efficient Kitchen Drainer</a>
+                                <a href="https://thebestproducts.co.in/reviews/samsung-8kg-5-star-ecobubble-top-load-washing-machine-review-2026-smart-cleaning-ecobubble/" target="_blank" rel="noopener sponsored" data-product="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology</a>
                             </div>
-                            <div class="discount-badge">Now 50% Off</div>
-                            <a href="https://link.amazon/B05ro7I3o" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TEX-RO Stainless Steel Dish Drying Rack Review (2026) – Compact &amp; Efficient Kitchen Drainer">
+                            <div class="discount-badge">Now 22% Off</div>
+                            <a href="https://link.amazon/B00gYvtF9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 8kg 5-Star EcoBubble Top Load Washing Machine Review (2026) – Smart Cleaning with EcoBubble Technology">
                                 <span class="product-price">
-                                    <span class="actual-price">₹999.00</span>
-                                    <span class="current-price">₹498.00</span>
+                                    <span class="actual-price">₹27000.00</span>
+                                    <span class="current-price">₹21190.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1146,6 +1082,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1316,19 +1255,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4doEoYK" target="_blank" rel="noopener sponsored" data-product="Redmi Pad 2 Review (2026) – Best Budget 11-Inch Tablet with 2.5K Display &amp; 4G Connectivity">
-                                <img src="https://m.media-amazon.com/images/I/71VX-r2ovzL._SL1500_.jpg" alt="Redmi Pad 2 Review (2026) – Best Budget 11-Inch Tablet with 2.5K Display &amp; 4G Connectivity">
+                            <a href="https://amzn.to/4e6msUv" target="_blank" rel="noopener sponsored" data-product="Women’s Roll-Up Sleeve V-Neck Tunic Top Review (2026) – Casual Rayon Kurti with Pockets for Office &amp; Daily Wear">
+                                <img src="https://m.media-amazon.com/images/I/5140vuoAqrL._SY879_.jpg" alt="Women’s Roll-Up Sleeve V-Neck Tunic Top Review (2026) – Casual Rayon Kurti with Pockets for Office &amp; Daily Wear">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/redmi-pad-2-review-2026-best-budget-11-inch-tablet-25k-display-4g-connectivity/" target="_blank" rel="noopener sponsored" data-product="Redmi Pad 2 Review (2026) – Best Budget 11-Inch Tablet with 2.5K Display &amp; 4G Connectivity">Redmi Pad 2 Review (2026) – Best Budget 11-Inch Tablet with 2.5K Display &amp; 4G Connectivity</a>
+                                <a href="https://thebestproducts.co.in/reviews/womens-roll-sleeve-v-neck-tunic-top-review-2026-casual-rayon-kurti-pockets-office-daily/" target="_blank" rel="noopener sponsored" data-product="Women’s Roll-Up Sleeve V-Neck Tunic Top Review (2026) – Casual Rayon Kurti with Pockets for Office &amp; Daily Wear">Women’s Roll-Up Sleeve V-Neck Tunic Top Review (2026) – Casual Rayon Kurti with Pockets for Office &amp; Daily Wear</a>
                             </div>
-                            <div class="discount-badge">Now 26% Off</div>
-                            <a href="https://amzn.to/4doEoYK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Redmi Pad 2 Review (2026) – Best Budget 11-Inch Tablet with 2.5K Display &amp; 4G Connectivity">
+                            <div class="discount-badge">Now 79% Off</div>
+                            <a href="https://amzn.to/4e6msUv" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Women’s Roll-Up Sleeve V-Neck Tunic Top Review (2026) – Casual Rayon Kurti with Pockets for Office &amp; Daily Wear">
                                 <span class="product-price">
-                                    <span class="actual-price">₹22999.00</span>
-                                    <span class="current-price">₹16999.00</span>
+                                    <span class="actual-price">₹2949.00</span>
+                                    <span class="current-price">₹632.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1343,6 +1282,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1578,19 +1520,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4vFo11L" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy Watch6 Classic (47mm) Review (2026) – Premium Smartwatch with Rotating Bezel, ECG &amp; BP Monitoring">
-                                <img src="https://m.media-amazon.com/images/I/71hg6m6m50L._SL1500_.jpg" alt="Samsung Galaxy Watch6 Classic (47mm) Review (2026) – Premium Smartwatch with Rotating Bezel, ECG &amp; BP Monitoring">
+                            <a href="https://amzn.to/4dTb2n0" target="_blank" rel="noopener sponsored" data-product="Samsung 43-Inch Crystal UHD 4K Vision AI Smart TV Review (2026) – Smart 4K TV with Vision AI &amp; Crystal Processor">
+                                <img src="https://m.media-amazon.com/images/I/81Rd23yHDXL._SL1500_.jpg" alt="Samsung 43-Inch Crystal UHD 4K Vision AI Smart TV Review (2026) – Smart 4K TV with Vision AI &amp; Crystal Processor">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/samsung-galaxy-watch6-classic-47mm-review-2026-premium-smartwatch-rotating-bezel-ecg-bp/" target="_blank" rel="noopener sponsored" data-product="Samsung Galaxy Watch6 Classic (47mm) Review (2026) – Premium Smartwatch with Rotating Bezel, ECG &amp; BP Monitoring">Samsung Galaxy Watch6 Classic (47mm) Review (2026) – Premium Smartwatch with Rotating Bezel, ECG &amp; BP Monitoring</a>
+                                <a href="https://thebestproducts.co.in/reviews/samsung-43-inch-crystal-uhd-4k-vision-ai-smart-tv-review-2026-smart-4k-tv-vision-ai-crystal/" target="_blank" rel="noopener sponsored" data-product="Samsung 43-Inch Crystal UHD 4K Vision AI Smart TV Review (2026) – Smart 4K TV with Vision AI &amp; Crystal Processor">Samsung 43-Inch Crystal UHD 4K Vision AI Smart TV Review (2026) – Smart 4K TV with Vision AI &amp; Crystal Processor</a>
                             </div>
-                            <div class="discount-badge">Now 74% Off</div>
-                            <a href="https://amzn.to/4vFo11L" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung Galaxy Watch6 Classic (47mm) Review (2026) – Premium Smartwatch with Rotating Bezel, ECG &amp; BP Monitoring">
+                            <div class="discount-badge">Now 25% Off</div>
+                            <a href="https://amzn.to/4dTb2n0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 43-Inch Crystal UHD 4K Vision AI Smart TV Review (2026) – Smart 4K TV with Vision AI &amp; Crystal Processor">
                                 <span class="product-price">
-                                    <span class="actual-price">₹45999.00</span>
-                                    <span class="current-price">₹11999.00</span>
+                                    <span class="actual-price">₹39900.00</span>
+                                    <span class="current-price">₹29990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1605,6 +1547,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1787,6 +1732,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1809,7 +1756,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7ef3694ffd798ee5acf233b67b8cafa73e1fbc4c0bb679cc3c0c23974d7b1e4b">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-b9f2a8f5f961eef315ca5f2387f7956d69500033613b40d481be0a5409268b1e">
   
     
       
@@ -1861,7 +1808,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5714d9b0c9b5f43fb9da47a91efb3cb394e2577ecc387ac611de3dcacb01b0b0">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-79421487bb64552f451e3349ee525b8fdb9930c3832f9f6b081878e808648431">
   
     
       
@@ -1871,6 +1818,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1888,13 +1841,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1912,13 +1865,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1934,12 +1887,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

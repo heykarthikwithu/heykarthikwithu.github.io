@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4wklpq7" target="_blank" rel="noopener sponsored" data-product="LifeKrafts Magnetic Mosquito Net for Doors Review (2026) – Auto-Closing Insect Screen for Homes">
-                                <img src="https://m.media-amazon.com/images/I/71cRik9djML._SL1500_.jpg" alt="LifeKrafts Magnetic Mosquito Net for Doors Review (2026) – Auto-Closing Insect Screen for Homes">
+                            <a href="https://amzn.to/4w09yOz" target="_blank" rel="noopener sponsored" data-product="Disha UPSC Prelims PYQ Book (GS &amp; CSAT) – Topic-wise Solved Papers (1995–2025)">
+                                <img src="https://m.media-amazon.com/images/I/81EaHd6P4VL._SL1500_.jpg" alt="Disha UPSC Prelims PYQ Book (GS &amp; CSAT) – Topic-wise Solved Papers (1995–2025)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/lifekrafts-magnetic-mosquito-net-doors-review-2026-auto-closing-insect-screen-homes/" target="_blank" rel="noopener sponsored" data-product="LifeKrafts Magnetic Mosquito Net for Doors Review (2026) – Auto-Closing Insect Screen for Homes">LifeKrafts Magnetic Mosquito Net for Doors Review (2026) – Auto-Closing Insect Screen for Homes</a>
+                                <a href="https://thebestproducts.co.in/reviews/disha-upsc-prelims-pyq-book-gs-csat-topic-wise-solved-papers-1995-2025/" target="_blank" rel="noopener sponsored" data-product="Disha UPSC Prelims PYQ Book (GS &amp; CSAT) – Topic-wise Solved Papers (1995–2025)">Disha UPSC Prelims PYQ Book (GS &amp; CSAT) – Topic-wise Solved Papers (1995–2025)</a>
                             </div>
-                            <div class="discount-badge">Now 47% Off</div>
-                            <a href="https://amzn.to/4wklpq7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LifeKrafts Magnetic Mosquito Net for Doors Review (2026) – Auto-Closing Insect Screen for Homes">
+                            <div class="discount-badge">Now 39% Off</div>
+                            <a href="https://amzn.to/4w09yOz" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Disha UPSC Prelims PYQ Book (GS &amp; CSAT) – Topic-wise Solved Papers (1995–2025)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1499.00</span>
-                                    <span class="current-price">₹799.00</span>
+                                    <span class="actual-price">₹900.00</span>
+                                    <span class="current-price">₹551.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -985,19 +918,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4eyP214" target="_blank" rel="noopener sponsored" data-product="ASUS Vivobook 15 (Intel Core i5-13420H) Review (2026) – A Powerful Everyday Laptop for Work, Study &amp; Entertainment">
-                                <img src="https://m.media-amazon.com/images/I/818iNyzckGL._SL1500_.jpg" alt="ASUS Vivobook 15 (Intel Core i5-13420H) Review (2026) – A Powerful Everyday Laptop for Work, Study &amp; Entertainment">
+                            <a href="https://amzn.to/3R0uGoc" target="_blank" rel="noopener sponsored" data-product="LG UltraGear 34G600A Curved Gaming Monitor Review (2026) – Immersive Ultrawide Gaming &amp; Productivity Display">
+                                <img src="https://m.media-amazon.com/images/I/714cFAkthGL._SL1500_.jpg" alt="LG UltraGear 34G600A Curved Gaming Monitor Review (2026) – Immersive Ultrawide Gaming &amp; Productivity Display">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/asus-vivobook-15-intel-core-i5-13420h-review-2026-powerful-everyday-laptop-work-study/" target="_blank" rel="noopener sponsored" data-product="ASUS Vivobook 15 (Intel Core i5-13420H) Review (2026) – A Powerful Everyday Laptop for Work, Study &amp; Entertainment">ASUS Vivobook 15 (Intel Core i5-13420H) Review (2026) – A Powerful Everyday Laptop for Work, Study &amp; Entertainment</a>
+                                <a href="https://thebestproducts.co.in/reviews/lg-ultragear-34g600a-curved-gaming-monitor-review-2026-immersive-ultrawide-gaming/" target="_blank" rel="noopener sponsored" data-product="LG UltraGear 34G600A Curved Gaming Monitor Review (2026) – Immersive Ultrawide Gaming &amp; Productivity Display">LG UltraGear 34G600A Curved Gaming Monitor Review (2026) – Immersive Ultrawide Gaming &amp; Productivity Display</a>
                             </div>
-                            <div class="discount-badge">Now 13% Off</div>
-                            <a href="https://amzn.to/4eyP214" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ASUS Vivobook 15 (Intel Core i5-13420H) Review (2026) – A Powerful Everyday Laptop for Work, Study &amp; Entertainment">
+                            <div class="discount-badge">Now 40% Off</div>
+                            <a href="https://amzn.to/3R0uGoc" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LG UltraGear 34G600A Curved Gaming Monitor Review (2026) – Immersive Ultrawide Gaming &amp; Productivity Display">
                                 <span class="product-price">
-                                    <span class="actual-price">₹69990.00</span>
-                                    <span class="current-price">₹60990.00</span>
+                                    <span class="actual-price">₹51000.00</span>
+                                    <span class="current-price">₹30499.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1012,6 +945,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1279,6 +1215,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1299,7 +1237,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c8e1664f3d8c7c89114f334f2e62794f6a98561c61a117625287b46712310d78">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-b63ba8dca8a0cf97dc1d57fc316974be2caee17094916dc838d1c337d81777d2">
   
     
       
@@ -1351,7 +1289,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-b2b9d13247bd697b3920f36df1d4955cf9cb700208e1793eed06a5ec57adc9e9">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-d674581bb0d7c0a2c397bab42739c8e27712b254b2e8c6a2533b421bbc668432">
   
     
       
@@ -1361,6 +1299,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1378,13 +1322,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1402,13 +1346,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1424,12 +1368,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

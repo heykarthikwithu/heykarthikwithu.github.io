@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -963,24 +893,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4edecRc" target="_blank" rel="noopener sponsored" data-product="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">
-                                <img src="https://m.media-amazon.com/images/I/71ban0G0qRL._SL1500_.jpg" alt="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">
+                            <a href="https://amzn.to/4uNxAeb" target="_blank" rel="noopener sponsored" data-product="Van Heusen Solid Formal Shirt for Men Review (2026) – Premium Cotton Slim Fit Office Shirt">
+                                <img src="https://m.media-amazon.com/images/I/716-1lN-6VL._SY879_.jpg" alt="Van Heusen Solid Formal Shirt for Men Review (2026) – Premium Cotton Slim Fit Office Shirt">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/xiaomi-75-inch-x-pro-series-qled-4k-smart-google-tv-big-screen-premium-entertainment/" target="_blank" rel="noopener sponsored" data-product="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment</a>
+                                <a href="https://thebestproducts.co.in/reviews/van-heusen-solid-formal-shirt-men-review-2026-premium-cotton-slim-fit-office-shirt/" target="_blank" rel="noopener sponsored" data-product="Van Heusen Solid Formal Shirt for Men Review (2026) – Premium Cotton Slim Fit Office Shirt">Van Heusen Solid Formal Shirt for Men Review (2026) – Premium Cotton Slim Fit Office Shirt</a>
                             </div>
-                            <div class="discount-badge">Now 42% Off</div>
-                            <a href="https://amzn.to/4edecRc" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">
+                            <div class="discount-badge">Now 39% Off</div>
+                            <a href="https://amzn.to/4uNxAeb" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Van Heusen Solid Formal Shirt for Men Review (2026) – Premium Cotton Slim Fit Office Shirt">
                                 <span class="product-price">
-                                    <span class="actual-price">₹119999.00</span>
-                                    <span class="current-price">₹69999.00</span>
+                                    <span class="actual-price">₹1899.00</span>
+                                    <span class="current-price">₹1160.10</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1240,24 +1173,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0ea2lXM7" target="_blank" rel="noopener sponsored" data-product="FACES CANADA Comfy Matte Wow Liquid Lipstick Cocoa Crush 07 Review (2026) – Comfortable Long-Lasting Matte Lipstick">
-                                <img src="https://m.media-amazon.com/images/I/6128ANXX0mL._SL1500_.jpg" alt="FACES CANADA Comfy Matte Wow Liquid Lipstick Cocoa Crush 07 Review (2026) – Comfortable Long-Lasting Matte Lipstick">
+                            <a href="https://link.amazon/B03BeLURJ" target="_blank" rel="noopener sponsored" data-product="The Indian Garage Co Men's Casual Shirt Review (2026) – Trendy Slim Fit Everyday Shirt">
+                                <img src="https://m.media-amazon.com/images/I/61s0hdYdQ3L._SX679_.jpg" alt="The Indian Garage Co Men's Casual Shirt Review (2026) – Trendy Slim Fit Everyday Shirt">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/faces-canada-comfy-matte-wow-liquid-lipstick-cocoa-crush-07-review-2026-comfortable-long/" target="_blank" rel="noopener sponsored" data-product="FACES CANADA Comfy Matte Wow Liquid Lipstick Cocoa Crush 07 Review (2026) – Comfortable Long-Lasting Matte Lipstick">FACES CANADA Comfy Matte Wow Liquid Lipstick Cocoa Crush 07 Review (2026) – Comfortable Long-Lasting Matte Lipstick</a>
+                                <a href="https://thebestproducts.co.in/reviews/indian-garage-co-mens-casual-shirt-review-2026-trendy-slim-fit-everyday-shirt/" target="_blank" rel="noopener sponsored" data-product="The Indian Garage Co Men's Casual Shirt Review (2026) – Trendy Slim Fit Everyday Shirt">The Indian Garage Co Men's Casual Shirt Review (2026) – Trendy Slim Fit Everyday Shirt</a>
                             </div>
-                            <div class="discount-badge">Now 24% Off</div>
-                            <a href="https://link.amazon/B0ea2lXM7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="FACES CANADA Comfy Matte Wow Liquid Lipstick Cocoa Crush 07 Review (2026) – Comfortable Long-Lasting Matte Lipstick">
+                            <div class="discount-badge">Now 73% Off</div>
+                            <a href="https://link.amazon/B03BeLURJ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="The Indian Garage Co Men's Casual Shirt Review (2026) – Trendy Slim Fit Everyday Shirt">
                                 <span class="product-price">
-                                    <span class="actual-price">₹299.00</span>
-                                    <span class="current-price">₹227.00</span>
+                                    <span class="actual-price">₹1749.00</span>
+                                    <span class="current-price">₹472.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1325,6 +1261,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1345,7 +1283,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3fb0877c5c43ec5592516b282731ba2b7d8b2a94855aee522801ce4c40c84805">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-4a2e11f8c0e7b5d1ae5e3180961719e5584bc28cc63448d5ea9ef7cf4664aabd">
   
     
       
@@ -1397,7 +1335,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-6e70f2bb6f692901baa2483474df560adf83144e2dcbaf4ed2acbfba40ce9621">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5a56508b76d1ad6f6f0e69f054a2c7109a491efd6d2f09c4b01ab8638570caf4">
   
     
       
@@ -1407,6 +1345,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1424,13 +1368,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1448,13 +1392,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1470,12 +1414,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

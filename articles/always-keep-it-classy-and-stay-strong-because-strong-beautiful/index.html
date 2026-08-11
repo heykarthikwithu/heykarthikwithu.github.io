@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/49pZVza" target="_blank" rel="noopener sponsored" data-product="Atomberg Renesa Enzel 1200mm BLDC Ceiling Fan Review (2026) – Silent &amp; Power-Saving Premium Ceiling Fan">
-                                <img src="https://m.media-amazon.com/images/I/61chntvEEsL._SL1500_.jpg" alt="Atomberg Renesa Enzel 1200mm BLDC Ceiling Fan Review (2026) – Silent &amp; Power-Saving Premium Ceiling Fan">
+                            <a href="https://amzn.to/43hTStd" target="_blank" rel="noopener sponsored" data-product="Lumio Vision 7 55-Inch 4K QLED Google TV Review (2026) – Smart QLED TV with Dolby Vision &amp; Google TV">
+                                <img src="https://m.media-amazon.com/images/I/71USQ6vu+gL._SL1500_.jpg" alt="Lumio Vision 7 55-Inch 4K QLED Google TV Review (2026) – Smart QLED TV with Dolby Vision &amp; Google TV">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/atomberg-renesa-enzel-1200mm-bldc-ceiling-fan-review-2026-silent-power-saving-premium/" target="_blank" rel="noopener sponsored" data-product="Atomberg Renesa Enzel 1200mm BLDC Ceiling Fan Review (2026) – Silent &amp; Power-Saving Premium Ceiling Fan">Atomberg Renesa Enzel 1200mm BLDC Ceiling Fan Review (2026) – Silent &amp; Power-Saving Premium Ceiling Fan</a>
+                                <a href="https://thebestproducts.co.in/reviews/lumio-vision-7-55-inch-4k-qled-google-tv-review-2026-smart-qled-tv-dolby-vision-google-tv/" target="_blank" rel="noopener sponsored" data-product="Lumio Vision 7 55-Inch 4K QLED Google TV Review (2026) – Smart QLED TV with Dolby Vision &amp; Google TV">Lumio Vision 7 55-Inch 4K QLED Google TV Review (2026) – Smart QLED TV with Dolby Vision &amp; Google TV</a>
                             </div>
-                            <div class="discount-badge">Now 39% Off</div>
-                            <a href="https://amzn.to/49pZVza" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Atomberg Renesa Enzel 1200mm BLDC Ceiling Fan Review (2026) – Silent &amp; Power-Saving Premium Ceiling Fan">
+                            <div class="discount-badge">Now 50% Off</div>
+                            <a href="https://amzn.to/43hTStd" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lumio Vision 7 55-Inch 4K QLED Google TV Review (2026) – Smart QLED TV with Dolby Vision &amp; Google TV">
                                 <span class="product-price">
-                                    <span class="actual-price">₹6670.00</span>
-                                    <span class="current-price">₹4098.00</span>
+                                    <span class="actual-price">₹79999.00</span>
+                                    <span class="current-price">₹39999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -916,19 +849,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4uJuwzQ" target="_blank" rel="noopener sponsored" data-product="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">
-                                <img src="https://m.media-amazon.com/images/I/71HM0PeTqTL._SL1500_.jpg" alt="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">
+                            <a href="https://amzn.to/4euqfeV" target="_blank" rel="noopener sponsored" data-product="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">
+                                <img src="https://m.media-amazon.com/images/I/71eQsL8sqcL._SL1500_.jpg" alt="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/cadlec-cookxpert-2000w-induction-cooktop-review-2026-high-power-portable-stove-fast-indian/" target="_blank" rel="noopener sponsored" data-product="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking</a>
+                                <a href="https://thebestproducts.co.in/reviews/redmi-a7-pro-5g-review-2026-best-budget-5g-phone-120hz-display/" target="_blank" rel="noopener sponsored" data-product="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?</a>
                             </div>
-                            <div class="discount-badge">Now 26% Off</div>
-                            <a href="https://amzn.to/4uJuwzQ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">
+                            <div class="discount-badge">Now 25% Off</div>
+                            <a href="https://amzn.to/4euqfeV" target="_blank" class="buy-button" rel="noopener sponsored" data-product="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">
                                 <span class="product-price">
-                                    <span class="actual-price">₹3699.00</span>
-                                    <span class="current-price">₹2749.00</span>
+                                    <span class="actual-price">₹15999.00</span>
+                                    <span class="current-price">₹11999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -943,6 +876,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1134,6 +1070,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1156,7 +1094,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3b7dc0c39477e19fd0cb6d81aea7c510b029c5fecf4cc2584d30dbf16e303102">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ce29b72a81a0fecb807316e42ba86ee381655c3724d4cfef0e732603ab207492">
   
     
       
@@ -1208,7 +1146,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-4d8df45909dfcb84ab3ee71d862ef2b01f6b9acecaf7418ca8b35fcbe955eb41">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-fa97d45b1b0aae4e465e79823f3313762887017adcab10f8806467805539f67a">
   
     
       
@@ -1218,6 +1156,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1235,13 +1179,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1259,13 +1203,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1281,12 +1225,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

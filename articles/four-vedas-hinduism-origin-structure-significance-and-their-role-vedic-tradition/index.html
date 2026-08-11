@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -972,24 +902,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0i39dsZS" target="_blank" rel="noopener sponsored" data-product="Amazon Symbol Men's Cotton Casual Kurta Review (2026) – Comfortable Regular Fit Everyday Kurta">
-                                <img src="https://m.media-amazon.com/images/I/61vepFxeNNL._SY879_.jpg" alt="Amazon Symbol Men's Cotton Casual Kurta Review (2026) – Comfortable Regular Fit Everyday Kurta">
+                            <a href="https://amzn.to/4vZ9BdE" target="_blank" rel="noopener sponsored" data-product="WZATCO Yuva Bolt Smart Projector – Native 1080P, Fully Automatic, HDMI ARC">
+                                <img src="https://m.media-amazon.com/images/I/517IqdlkdnL._SL1000_.jpg" alt="WZATCO Yuva Bolt Smart Projector – Native 1080P, Fully Automatic, HDMI ARC">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/amazon-symbol-mens-cotton-casual-kurta-review-2026-comfortable-regular-fit-everyday-kurta/" target="_blank" rel="noopener sponsored" data-product="Amazon Symbol Men's Cotton Casual Kurta Review (2026) – Comfortable Regular Fit Everyday Kurta">Amazon Symbol Men's Cotton Casual Kurta Review (2026) – Comfortable Regular Fit Everyday Kurta</a>
+                                <a href="https://thebestproducts.co.in/reviews/wzatco-yuva-bolt-smart-projector-native-1080p-fully-automatic-hdmi-arc/" target="_blank" rel="noopener sponsored" data-product="WZATCO Yuva Bolt Smart Projector – Native 1080P, Fully Automatic, HDMI ARC">WZATCO Yuva Bolt Smart Projector – Native 1080P, Fully Automatic, HDMI ARC</a>
                             </div>
-                            <div class="discount-badge">Now 70% Off</div>
-                            <a href="https://link.amazon/B0i39dsZS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Symbol Men's Cotton Casual Kurta Review (2026) – Comfortable Regular Fit Everyday Kurta">
+                            <div class="discount-badge">Now 63% Off</div>
+                            <a href="https://amzn.to/4vZ9BdE" target="_blank" class="buy-button" rel="noopener sponsored" data-product="WZATCO Yuva Bolt Smart Projector – Native 1080P, Fully Automatic, HDMI ARC">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2199.00</span>
-                                    <span class="current-price">₹649.00</span>
+                                    <span class="actual-price">₹29990.00</span>
+                                    <span class="current-price">₹10990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1239,24 +1172,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4uJuwzQ" target="_blank" rel="noopener sponsored" data-product="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">
-                                <img src="https://m.media-amazon.com/images/I/71HM0PeTqTL._SL1500_.jpg" alt="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">
+                            <a href="https://link.amazon/B0djHn06j" target="_blank" rel="noopener sponsored" data-product="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">
+                                <img src="https://m.media-amazon.com/images/I/71k8K820brL._SL1500_.jpg" alt="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/cadlec-cookxpert-2000w-induction-cooktop-review-2026-high-power-portable-stove-fast-indian/" target="_blank" rel="noopener sponsored" data-product="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking</a>
+                                <a href="https://thebestproducts.co.in/reviews/delonghi-dedica-style-ec685w-espresso-machine-review-2026-compact-italian-coffee-maker-home/" target="_blank" rel="noopener sponsored" data-product="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home</a>
                             </div>
-                            <div class="discount-badge">Now 26% Off</div>
-                            <a href="https://amzn.to/4uJuwzQ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Cadlec CookXpert 2000W Induction Cooktop Review (2026) – High-Power Portable Stove for Fast Indian Cooking">
+                            <div class="discount-badge">Now 62% Off</div>
+                            <a href="https://link.amazon/B0djHn06j" target="_blank" class="buy-button" rel="noopener sponsored" data-product="De'Longhi Dedica Style EC685.W Espresso Machine Review (2026) – Compact Italian Coffee Maker for Home">
                                 <span class="product-price">
-                                    <span class="actual-price">₹3699.00</span>
-                                    <span class="current-price">₹2749.00</span>
+                                    <span class="actual-price">₹44990.00</span>
+                                    <span class="current-price">₹16999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1519,24 +1455,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3SAjGhM" target="_blank" rel="noopener sponsored" data-product="Skybags Trooper 75cm Large Hardshell Luggage Review (2026) – ABS Trolley Suitcase for Long-Distance Travel">
-                                <img src="https://m.media-amazon.com/images/I/610O9RirZKL._SL1001_.jpg" alt="Skybags Trooper 75cm Large Hardshell Luggage Review (2026) – ABS Trolley Suitcase for Long-Distance Travel">
+                            <a href="https://amzn.to/4t8DOVG" target="_blank" rel="noopener sponsored" data-product="Tecno Pova 7 Pro 5G – Best Gaming &amp; High-Storage Phone Under ₹20,000">
+                                <img src="https://m.media-amazon.com/images/I/71F7wEYKTeL._SL1280_.jpg" alt="Tecno Pova 7 Pro 5G – Best Gaming &amp; High-Storage Phone Under ₹20,000">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/skybags-trooper-75cm-large-hardshell-luggage-review-2026-abs-trolley-suitcase-long-distance/" target="_blank" rel="noopener sponsored" data-product="Skybags Trooper 75cm Large Hardshell Luggage Review (2026) – ABS Trolley Suitcase for Long-Distance Travel">Skybags Trooper 75cm Large Hardshell Luggage Review (2026) – ABS Trolley Suitcase for Long-Distance Travel</a>
+                                <a href="https://thebestproducts.co.in/reviews/tecno-pova-7-pro-5g-best-gaming-high-storage-phone-under-rs20000/" target="_blank" rel="noopener sponsored" data-product="Tecno Pova 7 Pro 5G – Best Gaming &amp; High-Storage Phone Under ₹20,000">Tecno Pova 7 Pro 5G – Best Gaming &amp; High-Storage Phone Under ₹20,000</a>
                             </div>
-                            <div class="discount-badge">Now 73% Off</div>
-                            <a href="https://amzn.to/3SAjGhM" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Skybags Trooper 75cm Large Hardshell Luggage Review (2026) – ABS Trolley Suitcase for Long-Distance Travel">
+                            <div class="discount-badge">Now 20% Off</div>
+                            <a href="https://amzn.to/4t8DOVG" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Tecno Pova 7 Pro 5G – Best Gaming &amp; High-Storage Phone Under ₹20,000">
                                 <span class="product-price">
-                                    <span class="actual-price">₹10920.00</span>
-                                    <span class="current-price">₹2899.00</span>
+                                    <span class="actual-price">₹23999.00</span>
+                                    <span class="current-price">₹19299.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1795,24 +1734,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4tRemnW" target="_blank" rel="noopener sponsored" data-product="WZATCO Yuva Vibe Smart Projector – Native 1080P, WiFi 6, Fully Automatic">
-                                <img src="https://m.media-amazon.com/images/I/61nlVSVh0mL._SL1500_.jpg" alt="WZATCO Yuva Vibe Smart Projector – Native 1080P, WiFi 6, Fully Automatic">
+                            <a href="https://amzn.to/4uM5v77" target="_blank" rel="noopener sponsored" data-product="Ambrane MiniCharge 20 Power Bank Review (2026) – Compact 20000mAh Fast Charging Pocket Power Bank">
+                                <img src="https://m.media-amazon.com/images/I/61486iNa8dL._SL1500_.jpg" alt="Ambrane MiniCharge 20 Power Bank Review (2026) – Compact 20000mAh Fast Charging Pocket Power Bank">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/wzatco-yuva-vibe-smart-projector-native-1080p-wifi-6-fully-automatic/" target="_blank" rel="noopener sponsored" data-product="WZATCO Yuva Vibe Smart Projector – Native 1080P, WiFi 6, Fully Automatic">WZATCO Yuva Vibe Smart Projector – Native 1080P, WiFi 6, Fully Automatic</a>
+                                <a href="https://thebestproducts.co.in/reviews/ambrane-minicharge-20-power-bank-review-2026-compact-20000mah-fast-charging-pocket-power/" target="_blank" rel="noopener sponsored" data-product="Ambrane MiniCharge 20 Power Bank Review (2026) – Compact 20000mAh Fast Charging Pocket Power Bank">Ambrane MiniCharge 20 Power Bank Review (2026) – Compact 20000mAh Fast Charging Pocket Power Bank</a>
                             </div>
-                            <div class="discount-badge">Now 48% Off</div>
-                            <a href="https://amzn.to/4tRemnW" target="_blank" class="buy-button" rel="noopener sponsored" data-product="WZATCO Yuva Vibe Smart Projector – Native 1080P, WiFi 6, Fully Automatic">
+                            <div class="discount-badge">Now 63% Off</div>
+                            <a href="https://amzn.to/4uM5v77" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Ambrane MiniCharge 20 Power Bank Review (2026) – Compact 20000mAh Fast Charging Pocket Power Bank">
                                 <span class="product-price">
-                                    <span class="actual-price">₹30990.00</span>
-                                    <span class="current-price">₹15990.00</span>
+                                    <span class="actual-price">₹3800.00</span>
+                                    <span class="current-price">₹1399.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1830,6 +1772,8 @@
                     
                         
                     <h2>Conclusion</h2><p>The <strong>Rigveda, Samaveda, Yajurveda and Atharvaveda</strong> are not just religious texts — they are the foundation of Hindu spirituality, ritual, culture and knowledge. Each Veda carries its own identity and purpose, yet together they create a complete and harmonious framework of Vedic tradition. Their hymns, chants, rituals and practical teachings reveal how early society viewed the universe, divinity, human life and cosmic order.</p><p>For anyone exploring Hinduism, learning about the Vedas is essential, as they illuminate the earliest ideas that continue to influence millions globally even today.</p>
+
+
 
 
 
@@ -1899,7 +1843,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-29714fda60e8cd67164c835a59e18a62d8b148918f3c252eb8401ad6c2c2e495">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c1fb4f96f552ef1e914e96c529070714de42fbd9c9df96185f7e19e3ba5e3aff">
   
     
       
@@ -1951,7 +1895,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-8b93c2b1645ad72d3e411a119413080f822c10232e7885e9cbd634ebf6ee2297">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5a48eba7bd15e395077086f7c94581c9e5f11761e42e77446d01e6a0d23c43cb">
   
     
       
@@ -1961,6 +1905,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1978,13 +1928,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -2002,13 +1952,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -2024,12 +1974,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

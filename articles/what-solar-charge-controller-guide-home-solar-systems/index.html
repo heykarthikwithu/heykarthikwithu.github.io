@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/43Ybevf" target="_blank" rel="noopener sponsored" data-product="VW 65-Inch Pro Series 4K QLED Google TV – Big-Screen Entertainment Value">
-                                <img src="https://m.media-amazon.com/images/I/81geQPxIEcL._SL1500_.jpg" alt="VW 65-Inch Pro Series 4K QLED Google TV – Big-Screen Entertainment Value">
+                            <a href="https://amzn.to/4mU8Le0" target="_blank" rel="noopener sponsored" data-product="IFB 9kg Front Load Washing Machine – 5 Star, DeepClean, AI, Wi-Fi, PowerSteam">
+                                <img src="https://m.media-amazon.com/images/I/61z4-eFQv0L._SL1500_.jpg" alt="IFB 9kg Front Load Washing Machine – 5 Star, DeepClean, AI, Wi-Fi, PowerSteam">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/vw-65-inch-pro-series-4k-qled-google-tv-big-screen-entertainment-value/" target="_blank" rel="noopener sponsored" data-product="VW 65-Inch Pro Series 4K QLED Google TV – Big-Screen Entertainment Value">VW 65-Inch Pro Series 4K QLED Google TV – Big-Screen Entertainment Value</a>
+                                <a href="https://thebestproducts.co.in/reviews/ifb-9kg-front-load-washing-machine-5-star-deepclean-ai-wi-fi-powersteam/" target="_blank" rel="noopener sponsored" data-product="IFB 9kg Front Load Washing Machine – 5 Star, DeepClean, AI, Wi-Fi, PowerSteam">IFB 9kg Front Load Washing Machine – 5 Star, DeepClean, AI, Wi-Fi, PowerSteam</a>
                             </div>
-                            <div class="discount-badge">Now 73% Off</div>
-                            <a href="https://amzn.to/43Ybevf" target="_blank" class="buy-button" rel="noopener sponsored" data-product="VW 65-Inch Pro Series 4K QLED Google TV – Big-Screen Entertainment Value">
+                            <div class="discount-badge">Now 20% Off</div>
+                            <a href="https://amzn.to/4mU8Le0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="IFB 9kg Front Load Washing Machine – 5 Star, DeepClean, AI, Wi-Fi, PowerSteam">
                                 <span class="product-price">
-                                    <span class="actual-price">₹149999.00</span>
-                                    <span class="current-price">₹39999.00</span>
+                                    <span class="actual-price">₹48490.00</span>
+                                    <span class="current-price">₹38990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -916,19 +849,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B03K5gXnR" target="_blank" rel="noopener sponsored" data-product="JUST RIDER Men's Compression Running Set Review (2026) – Quick-Dry Sportswear for Gym, Running &amp; Training">
-                                <img src="https://m.media-amazon.com/images/I/51itL9LIWlL._SX679_.jpg" alt="JUST RIDER Men's Compression Running Set Review (2026) – Quick-Dry Sportswear for Gym, Running &amp; Training">
+                            <a href="https://amzn.to/4dqsrlx" target="_blank" rel="noopener sponsored" data-product="Pigeon Stainless Steel Pressure Cooker Combo Review (2026) – Budget-Friendly 2L &amp; 3L Cooker Set for Indian Kitchens">
+                                <img src="https://m.media-amazon.com/images/I/61c4f50sQaL._SL1500_.jpg" alt="Pigeon Stainless Steel Pressure Cooker Combo Review (2026) – Budget-Friendly 2L &amp; 3L Cooker Set for Indian Kitchens">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/just-rider-mens-compression-running-set-review-2026-quick-dry-sportswear-gym-running/" target="_blank" rel="noopener sponsored" data-product="JUST RIDER Men's Compression Running Set Review (2026) – Quick-Dry Sportswear for Gym, Running &amp; Training">JUST RIDER Men's Compression Running Set Review (2026) – Quick-Dry Sportswear for Gym, Running &amp; Training</a>
+                                <a href="https://thebestproducts.co.in/reviews/pigeon-stainless-steel-pressure-cooker-combo-review-2026-budget-friendly-2l-3l-cooker-set/" target="_blank" rel="noopener sponsored" data-product="Pigeon Stainless Steel Pressure Cooker Combo Review (2026) – Budget-Friendly 2L &amp; 3L Cooker Set for Indian Kitchens">Pigeon Stainless Steel Pressure Cooker Combo Review (2026) – Budget-Friendly 2L &amp; 3L Cooker Set for Indian Kitchens</a>
                             </div>
-                            <div class="discount-badge">Now 45% Off</div>
-                            <a href="https://link.amazon/B03K5gXnR" target="_blank" class="buy-button" rel="noopener sponsored" data-product="JUST RIDER Men's Compression Running Set Review (2026) – Quick-Dry Sportswear for Gym, Running &amp; Training">
+                            <div class="discount-badge">Now 52% Off</div>
+                            <a href="https://amzn.to/4dqsrlx" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Pigeon Stainless Steel Pressure Cooker Combo Review (2026) – Budget-Friendly 2L &amp; 3L Cooker Set for Indian Kitchens">
                                 <span class="product-price">
-                                    <span class="actual-price">₹999.00</span>
-                                    <span class="current-price">₹549.00</span>
+                                    <span class="actual-price">₹3295.00</span>
+                                    <span class="current-price">₹1598.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -943,6 +876,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1093,19 +1029,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3Qw9S7H" target="_blank" rel="noopener sponsored" data-product="boAt EnergyShroom PB331 Power Bank (10000mAh) – MagSafe Wireless Charging">
-                                <img src="https://m.media-amazon.com/images/I/71a43QAR+sL._SL1500_.jpg" alt="boAt EnergyShroom PB331 Power Bank (10000mAh) – MagSafe Wireless Charging">
+                            <a href="https://amzn.to/3OQLDRa" target="_blank" rel="noopener sponsored" data-product="Oswaal CBSE Class 10 Science Question Bank – Chapter-wise Solved Papers (2017–2026)">
+                                <img src="https://m.media-amazon.com/images/I/71TmsiizbcL._SL1500_.jpg" alt="Oswaal CBSE Class 10 Science Question Bank – Chapter-wise Solved Papers (2017–2026)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/boat-energyshroom-pb331-power-bank-10000mah-magsafe-wireless-charging/" target="_blank" rel="noopener sponsored" data-product="boAt EnergyShroom PB331 Power Bank (10000mAh) – MagSafe Wireless Charging">boAt EnergyShroom PB331 Power Bank (10000mAh) – MagSafe Wireless Charging</a>
+                                <a href="https://thebestproducts.co.in/reviews/oswaal-cbse-class-10-science-question-bank-chapter-wise-solved-papers-2017-2026/" target="_blank" rel="noopener sponsored" data-product="Oswaal CBSE Class 10 Science Question Bank – Chapter-wise Solved Papers (2017–2026)">Oswaal CBSE Class 10 Science Question Bank – Chapter-wise Solved Papers (2017–2026)</a>
                             </div>
-                            <div class="discount-badge">Now 64% Off</div>
-                            <a href="https://amzn.to/3Qw9S7H" target="_blank" class="buy-button" rel="noopener sponsored" data-product="boAt EnergyShroom PB331 Power Bank (10000mAh) – MagSafe Wireless Charging">
+                            <div class="discount-badge">Now 23% Off</div>
+                            <a href="https://amzn.to/3OQLDRa" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Oswaal CBSE Class 10 Science Question Bank – Chapter-wise Solved Papers (2017–2026)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹4499.00</span>
-                                    <span class="current-price">₹1599.00</span>
+                                    <span class="actual-price">₹699.00</span>
+                                    <span class="current-price">₹539.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1120,6 +1056,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1311,6 +1250,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1333,7 +1274,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-7c690574d8893cc81ffa39b2608b00c41294d38f3eec456208bb19a1dc5e84f9">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-1126ed640988443bd4c2012a822ffa20ae56578fb74006d52b94d5d5d50f2a42">
   
     
       
@@ -1385,7 +1326,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-aeb957d6637707fc65cae7c8b1d297528be2af4410cdaed5123d38137e5a1f10">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-c8f6f65ef26a3171e23f929d5754aba6a87a7a6e2566a39e962c98a4b0f1b7b6">
   
     
       
@@ -1395,6 +1336,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1412,13 +1359,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1436,13 +1383,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1458,12 +1405,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

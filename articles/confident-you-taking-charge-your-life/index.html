@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/48Xmvil" target="_blank" rel="noopener sponsored" data-product="Samsung 28L Convection Microwave Oven – Multi-Function Cooking Appliance">
-                                <img src="https://m.media-amazon.com/images/I/71XXjl2cZhL._SL1500_.jpg" alt="Samsung 28L Convection Microwave Oven – Multi-Function Cooking Appliance">
+                            <a href="https://amzn.to/4dzQcIV" target="_blank" rel="noopener sponsored" data-product="ASUS Vivobook 15 Ryzen 7 Review (2026) – Powerful Everyday Laptop for Students &amp; Professionals">
+                                <img src="https://m.media-amazon.com/images/I/71zMooVIVAL._SL1500_.jpg" alt="ASUS Vivobook 15 Ryzen 7 Review (2026) – Powerful Everyday Laptop for Students &amp; Professionals">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/samsung-28l-convection-microwave-oven-multi-function-cooking-appliance/" target="_blank" rel="noopener sponsored" data-product="Samsung 28L Convection Microwave Oven – Multi-Function Cooking Appliance">Samsung 28L Convection Microwave Oven – Multi-Function Cooking Appliance</a>
+                                <a href="https://thebestproducts.co.in/reviews/asus-vivobook-15-ryzen-7-review-2026-powerful-everyday-laptop-students-professionals/" target="_blank" rel="noopener sponsored" data-product="ASUS Vivobook 15 Ryzen 7 Review (2026) – Powerful Everyday Laptop for Students &amp; Professionals">ASUS Vivobook 15 Ryzen 7 Review (2026) – Powerful Everyday Laptop for Students &amp; Professionals</a>
                             </div>
                             <div class="discount-badge">Now 14% Off</div>
-                            <a href="https://amzn.to/48Xmvil" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 28L Convection Microwave Oven – Multi-Function Cooking Appliance">
+                            <a href="https://amzn.to/4dzQcIV" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ASUS Vivobook 15 Ryzen 7 Review (2026) – Powerful Everyday Laptop for Students &amp; Professionals">
                                 <span class="product-price">
-                                    <span class="actual-price">₹15590.00</span>
-                                    <span class="current-price">₹13390.00</span>
+                                    <span class="actual-price">₹57990.00</span>
+                                    <span class="current-price">₹49990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -913,19 +846,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4fishPs" target="_blank" rel="noopener sponsored" data-product="KLOSIA Women's Rayon Printed Anarkali Kurta and Pant with Dupatta Set">
-                                <img src="https://m.media-amazon.com/images/I/71I53evweVL._SY879_.jpg" alt="KLOSIA Women's Rayon Printed Anarkali Kurta and Pant with Dupatta Set">
+                            <a href="https://amzn.to/4oitWHC" target="_blank" rel="noopener sponsored" data-product="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">
+                                <img src="https://m.media-amazon.com/images/I/71CuV+Vse2L._SL1500_.jpg" alt="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/klosia-womens-rayon-printed-anarkali-kurta-and-pant-dupatta-set/" target="_blank" rel="noopener sponsored" data-product="KLOSIA Women's Rayon Printed Anarkali Kurta and Pant with Dupatta Set">KLOSIA Women's Rayon Printed Anarkali Kurta and Pant with Dupatta Set</a>
+                                <a href="https://thebestproducts.co.in/reviews/ayuzera-himalayan-sea-buckthorn-pulp-concentrate-review-2026-natural-vitamin-c-antioxidant/" target="_blank" rel="noopener sponsored" data-product="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink</a>
                             </div>
-                            <div class="discount-badge">Now 78% Off</div>
-                            <a href="https://amzn.to/4fishPs" target="_blank" class="buy-button" rel="noopener sponsored" data-product="KLOSIA Women's Rayon Printed Anarkali Kurta and Pant with Dupatta Set">
+                            <div class="discount-badge">Now 24% Off</div>
+                            <a href="https://amzn.to/4oitWHC" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Ayuzera Himalayan Sea Buckthorn Pulp Concentrate Review (2026) – Natural Vitamin C &amp; Antioxidant Health Drink">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2999.00</span>
-                                    <span class="current-price">₹659.00</span>
+                                    <span class="actual-price">₹849.00</span>
+                                    <span class="current-price">₹648.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -940,6 +873,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1087,19 +1023,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/42MFj0c" target="_blank" rel="noopener sponsored" data-product="Xiaomi Pad 8 Review (2026) – Flagship Performance Tablet Under ₹35,000?">
-                                <img src="https://m.media-amazon.com/images/I/71+7HlVQhhL._SL1500_.jpg" alt="Xiaomi Pad 8 Review (2026) – Flagship Performance Tablet Under ₹35,000?">
+                            <a href="https://amzn.to/44GWTDK" target="_blank" rel="noopener sponsored" data-product="The Indus Valley Triply Stainless Steel Kadai Review (2026) – Premium 28cm Triply Kadai for Healthy Everyday Cooking">
+                                <img src="https://m.media-amazon.com/images/I/714yCvU-6IL._SL1500_.jpg" alt="The Indus Valley Triply Stainless Steel Kadai Review (2026) – Premium 28cm Triply Kadai for Healthy Everyday Cooking">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/xiaomi-pad-8-review-2026-flagship-performance-tablet-under-rs35000/" target="_blank" rel="noopener sponsored" data-product="Xiaomi Pad 8 Review (2026) – Flagship Performance Tablet Under ₹35,000?">Xiaomi Pad 8 Review (2026) – Flagship Performance Tablet Under ₹35,000?</a>
+                                <a href="https://thebestproducts.co.in/reviews/indus-valley-triply-stainless-steel-kadai-review-2026-premium-28cm-triply-kadai-healthy/" target="_blank" rel="noopener sponsored" data-product="The Indus Valley Triply Stainless Steel Kadai Review (2026) – Premium 28cm Triply Kadai for Healthy Everyday Cooking">The Indus Valley Triply Stainless Steel Kadai Review (2026) – Premium 28cm Triply Kadai for Healthy Everyday Cooking</a>
                             </div>
-                            <div class="discount-badge">Now 11% Off</div>
-                            <a href="https://amzn.to/42MFj0c" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Xiaomi Pad 8 Review (2026) – Flagship Performance Tablet Under ₹35,000?">
+                            <div class="discount-badge">Now 40% Off</div>
+                            <a href="https://amzn.to/44GWTDK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="The Indus Valley Triply Stainless Steel Kadai Review (2026) – Premium 28cm Triply Kadai for Healthy Everyday Cooking">
                                 <span class="product-price">
-                                    <span class="actual-price">₹37999.00</span>
-                                    <span class="current-price">₹33999.00</span>
+                                    <span class="actual-price">₹4529.00</span>
+                                    <span class="current-price">₹2719.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1114,6 +1050,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1261,19 +1200,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0blmnag8" target="_blank" rel="noopener sponsored" data-product="Sony ULT Field 1 Wireless Bluetooth Speaker Review (2026) – Compact 30W Speaker with Massive Bass">
-                                <img src="https://m.media-amazon.com/images/I/81nnmYys9bL._SL1500_.jpg" alt="Sony ULT Field 1 Wireless Bluetooth Speaker Review (2026) – Compact 30W Speaker with Massive Bass">
+                            <a href="https://amzn.to/4v2Mi1A" target="_blank" rel="noopener sponsored" data-product="Redmi Note 14 Pro 5G Prime Edition Review (2026) – 1.5K Curved AMOLED Smartphone with Sony Camera &amp; Dimensity 7300 Ultra">
+                                <img src="https://m.media-amazon.com/images/I/71aP0B7b7gL._SL1500_.jpg" alt="Redmi Note 14 Pro 5G Prime Edition Review (2026) – 1.5K Curved AMOLED Smartphone with Sony Camera &amp; Dimensity 7300 Ultra">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/sony-ult-field-1-wireless-bluetooth-speaker-review-2026-compact-30w-speaker-massive-bass/" target="_blank" rel="noopener sponsored" data-product="Sony ULT Field 1 Wireless Bluetooth Speaker Review (2026) – Compact 30W Speaker with Massive Bass">Sony ULT Field 1 Wireless Bluetooth Speaker Review (2026) – Compact 30W Speaker with Massive Bass</a>
+                                <a href="https://thebestproducts.co.in/reviews/redmi-note-14-pro-5g-prime-edition-review-2026-15k-curved-amoled-smartphone-sony-camera/" target="_blank" rel="noopener sponsored" data-product="Redmi Note 14 Pro 5G Prime Edition Review (2026) – 1.5K Curved AMOLED Smartphone with Sony Camera &amp; Dimensity 7300 Ultra">Redmi Note 14 Pro 5G Prime Edition Review (2026) – 1.5K Curved AMOLED Smartphone with Sony Camera &amp; Dimensity 7300 Ultra</a>
                             </div>
-                            <div class="discount-badge">Now 41% Off</div>
-                            <a href="https://link.amazon/B0blmnag8" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sony ULT Field 1 Wireless Bluetooth Speaker Review (2026) – Compact 30W Speaker with Massive Bass">
+                            <div class="discount-badge">Now 7% Off</div>
+                            <a href="https://amzn.to/4v2Mi1A" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Redmi Note 14 Pro 5G Prime Edition Review (2026) – 1.5K Curved AMOLED Smartphone with Sony Camera &amp; Dimensity 7300 Ultra">
                                 <span class="product-price">
-                                    <span class="actual-price">₹16990.00</span>
-                                    <span class="current-price">₹9990.00</span>
+                                    <span class="actual-price">₹28999.00</span>
+                                    <span class="current-price">₹26999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1288,6 +1227,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1435,19 +1377,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4eHcDMZ" target="_blank" rel="noopener sponsored" data-product="ANNI Women’s Rayon Viscose Straight Kurta with Palazzo Set Review (2026) – Sleeveless Ethnic Wear for Office &amp; Daily Use">
-                                <img src="https://m.media-amazon.com/images/I/61d-StXTK6L._SY879_.jpg" alt="ANNI Women’s Rayon Viscose Straight Kurta with Palazzo Set Review (2026) – Sleeveless Ethnic Wear for Office &amp; Daily Use">
+                            <a href="https://link.amazon/B0cekTzxz" target="_blank" rel="noopener sponsored" data-product="LG 8kg 5-Star Smart Inverter Top Load Washing Machine Review (2026) – Efficient &amp; Smart Laundry Solution">
+                                <img src="https://m.media-amazon.com/images/I/71BITpPSjML._SL1500_.jpg" alt="LG 8kg 5-Star Smart Inverter Top Load Washing Machine Review (2026) – Efficient &amp; Smart Laundry Solution">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/anni-womens-rayon-viscose-straight-kurta-palazzo-set-review-2026-sleeveless-ethnic-wear/" target="_blank" rel="noopener sponsored" data-product="ANNI Women’s Rayon Viscose Straight Kurta with Palazzo Set Review (2026) – Sleeveless Ethnic Wear for Office &amp; Daily Use">ANNI Women’s Rayon Viscose Straight Kurta with Palazzo Set Review (2026) – Sleeveless Ethnic Wear for Office &amp; Daily Use</a>
+                                <a href="https://thebestproducts.co.in/reviews/lg-8kg-5-star-smart-inverter-top-load-washing-machine-review-2026-efficient-smart-laundry/" target="_blank" rel="noopener sponsored" data-product="LG 8kg 5-Star Smart Inverter Top Load Washing Machine Review (2026) – Efficient &amp; Smart Laundry Solution">LG 8kg 5-Star Smart Inverter Top Load Washing Machine Review (2026) – Efficient &amp; Smart Laundry Solution</a>
                             </div>
-                            <div class="discount-badge">Now 81% Off</div>
-                            <a href="https://amzn.to/4eHcDMZ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ANNI Women’s Rayon Viscose Straight Kurta with Palazzo Set Review (2026) – Sleeveless Ethnic Wear for Office &amp; Daily Use">
+                            <div class="discount-badge">Now 24% Off</div>
+                            <a href="https://link.amazon/B0cekTzxz" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LG 8kg 5-Star Smart Inverter Top Load Washing Machine Review (2026) – Efficient &amp; Smart Laundry Solution">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2599.00</span>
-                                    <span class="current-price">₹482.00</span>
+                                    <span class="actual-price">₹28990.00</span>
+                                    <span class="current-price">₹21990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1462,6 +1404,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1650,6 +1595,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1672,7 +1619,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-8f60f5ac16d28cd3e25e1212edbdfa44f2c0fbec224405c839f1d33d4da8d4a7">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-43c7ffb2e1974c8b3e2bcd72b01b9e19e5335a56384f4239b5d00b63a0eab0e6">
   
     
       
@@ -1724,7 +1671,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-db0131a219f633b41be35fd006dde38126b2b4224acc62600e61efd3c6aac1a3">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-fbf44c090a85e06f1b3c3e38cf92f7a9b86ee0279cadcd5ad1fba89cda528037">
   
     
       
@@ -1734,6 +1681,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1751,13 +1704,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1775,13 +1728,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1797,12 +1750,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

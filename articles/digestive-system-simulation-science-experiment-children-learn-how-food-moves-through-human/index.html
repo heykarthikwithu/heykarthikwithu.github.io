@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -734,24 +664,27 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><div><div><section><div><div><div><div><div><div><p>How does the food we eat travel through our body? What happens to a cracker after we swallow it? How does the body turn a banana or other food into nutrients that we can use for energy?</p><p>These are fascinating questions for children, and the <strong>digestive system simulation using crackers and bananas</strong> provides a simple way to explore the answers. Instead of only reading about the stomach, small intestine, and large intestine in a textbook, children can create a hands-on model that demonstrates some of the basic mechanical processes involved in digestion.</p><p>This children's science experiment uses simple household materials and is suitable for a classroom, homeschooling activity, or science project at home. The <a href="/articles/amplify-smartphone-science-experiment-kids/" data-entity-type="node" data-entity-uuid="b1fc89bb-c48f-4a8c-8b17-7e51d091ab46" data-entity-substitution="canonical" title="Amplify a Smartphone, Science Experiment for Kids">experiment</a> is not an exact replica of human digestion, but it provides a visual and easy-to-understand model of how food is broken down as it travels through the digestive system.</p><h2>What Is the Digestive System?</h2><p>The <strong>digestive system</strong> is a group of organs that work together to process the food we eat. Its main job is to break food down into smaller substances that the body can absorb and use.</p><p>The major parts involved include:</p><ul><li>Mouth</li><li>Esophagus</li><li>Stomach</li><li>Small intestine</li><li>Large intestine</li><li>Rectum</li><li>Anus</li></ul><p>Other organs, including the liver, pancreas, and gallbladder, also help with digestion by producing or storing substances needed to break down food.</p><p>Digestion begins even before food reaches the stomach. When we chew food, our teeth physically break it into smaller pieces, while saliva begins the chemical digestion of certain nutrients.</p><h2>How Does This Experiment Work?</h2><p>The cracker and banana <a href="/articles/barometer-experiment-children-guide-understanding-air-pressure/" data-entity-type="node" data-entity-uuid="37e64f92-798b-4495-a710-e6353da7ef6e" data-entity-substitution="canonical" title="Barometer Experiment for Children: Guide to Understanding Air Pressure">experiment</a> creates a simplified model of the digestive process.</p><p>Children can use the materials to represent different stages of digestion:</p><p><strong>Mouth → Esophagus → Stomach → Small Intestine → Large Intestine</strong></p><p>The cracker represents a food that needs to be broken down, while the banana can be combined with it to demonstrate how different foods can become mixed together during digestion.</p><p>The experiment focuses mainly on <strong>mechanical breakdown and movement</strong>, rather than attempting to reproduce every chemical reaction that takes place inside the human digestive system.</p><h2>Materials Required</h2><p>You don't need expensive laboratory equipment for this activity.</p><h3>You will need:</h3><ul><li>2–3 plain crackers</li><li>½ banana</li><li>A small transparent plastic bag</li><li>A small amount of water</li><li>A bowl or container</li><li>A spoon</li><li>A pair of scissors</li><li>A transparent flexible tube or clean zip-top bag for demonstration</li><li><a href="/articles/paper-bridge-science-experiment-children-learn-engineering-simple-materials/" data-entity-type="node" data-entity-uuid="25cd6a6d-6e9f-4348-9d8a-0491a152012f" data-entity-substitution="canonical" title="Paper Bridge Science Experiment for Children: Learn Engineering with Simple Materials">Paper</a> towels</li><li>A tray to protect the working surface</li></ul><p>For younger children, an adult should supervise the activity, particularly when scissors or small objects are being used.</p>
+            
+                </div>
+            </div>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/41YAq3T" target="_blank" rel="noopener sponsored" data-product="Stuffcool Maverick Mini 20000mAh Power Bank – Built-in Cables with Fast Charging">
-                                <img src="https://m.media-amazon.com/images/I/518k-u9m9ML._SL1080_.jpg" alt="Stuffcool Maverick Mini 20000mAh Power Bank – Built-in Cables with Fast Charging">
+                            <a href="https://link.amazon/B0gwmMEEj" target="_blank" rel="noopener sponsored" data-product="TAGAS Girls’ Sleeveless Tulle Party Dress Review – Elegant Princess Frock for Baby Girls">
+                                <img src="https://m.media-amazon.com/images/I/31ZRbgHfHcL.jpg" alt="TAGAS Girls’ Sleeveless Tulle Party Dress Review – Elegant Princess Frock for Baby Girls">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/stuffcool-maverick-mini-20000mah-power-bank-built-cables-fast-charging/" target="_blank" rel="noopener sponsored" data-product="Stuffcool Maverick Mini 20000mAh Power Bank – Built-in Cables with Fast Charging">Stuffcool Maverick Mini 20000mAh Power Bank – Built-in Cables with Fast Charging</a>
+                                <a href="https://thebestproducts.co.in/reviews/tagas-girls-sleeveless-tulle-party-dress-review-elegant-princess-frock-baby-girls/" target="_blank" rel="noopener sponsored" data-product="TAGAS Girls’ Sleeveless Tulle Party Dress Review – Elegant Princess Frock for Baby Girls">TAGAS Girls’ Sleeveless Tulle Party Dress Review – Elegant Princess Frock for Baby Girls</a>
                             </div>
-                            <div class="discount-badge">Now 53% Off</div>
-                            <a href="https://amzn.to/41YAq3T" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Stuffcool Maverick Mini 20000mAh Power Bank – Built-in Cables with Fast Charging">
+                            <div class="discount-badge">Now 80% Off</div>
+                            <a href="https://link.amazon/B0gwmMEEj" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TAGAS Girls’ Sleeveless Tulle Party Dress Review – Elegant Princess Frock for Baby Girls">
                                 <span class="product-price">
-                                    <span class="actual-price">₹3999.00</span>
-                                    <span class="current-price">₹1899.00</span>
+                                    <span class="actual-price">₹1999.00</span>
+                                    <span class="current-price">₹399.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,24 +699,27 @@
                     </div>
                 </div>
             </div><h2>Step 1: Start With the Mouth</h2><p>Begin by giving children a cracker and asking them to observe it.</p><p>Ask:</p><p><strong>"What do you think happens to this cracker when you eat it?"</strong></p><p>Let the children describe what they know.</p><p>Explain that digestion begins in the <strong>mouth</strong>.</p><p>Our teeth break food into smaller pieces through chewing. Saliva also mixes with the food and begins the digestion of carbohydrates.</p><p>For the <a href="/articles/diy-mini-wind-turbine-science-experiment-kids/" data-entity-type="node" data-entity-uuid="f7786867-059f-40d1-8d48-d2a9e0f2e5ff" data-entity-substitution="canonical" title="DIY Mini Wind Turbine: Science Experiment for Kids">experiment</a>, place a cracker and a small piece of banana into a bowl.</p><p>Use a spoon to crush and mix them together.</p><p>Explain that this represents some of the physical changes that happen when we chew food.</p><p>The food doesn't simply disappear when we chew it. Instead, it becomes softer and broken into smaller pieces.</p><h2>Step 2: Understanding the Esophagus</h2><p>Once food has been chewed and swallowed, it travels through the <strong>esophagus</strong>, a muscular tube connecting the mouth to the stomach.</p><p>The esophagus doesn't simply act like an open pipe.</p><p>Muscular contractions called <strong>peristalsis</strong> help push food toward the stomach.</p><p>To demonstrate this idea, place the cracker-and-banana mixture inside a clean flexible bag or suitable tube model and gently squeeze it from one end toward the other.</p><p>Explain that the squeezing action is only a simplified demonstration.</p><p>The muscles in the digestive tract contract in coordinated waves to move food through the system.</p><h2>Step 3: Create a Model Stomach</h2><p>Now it's time for the most exciting part of the experiment—the stomach.</p><p>Place the crushed cracker and banana mixture inside a strong zip-top plastic bag.</p><p>Add a small amount of water and seal the bag securely.</p><p>Ask children to gently squeeze and knead the bag.</p><p>What happens?</p><p>The food mixture becomes softer and more blended.</p><p>This represents one aspect of what happens in the stomach.</p><p>The stomach muscles contract and mix food with <strong>gastric juices</strong>. These digestive fluids help break food down further.</p><p>Explain to children that the plastic bag isn't actually reproducing the chemistry of the stomach.</p><p>The real stomach contains acid and digestive enzymes, which are much more complex than this experiment.</p><p>The bag simply helps children visualize the <strong>mixing and mechanical breakdown</strong> of food.</p><h2>Step 4: What Happens in the Small Intestine?</h2><p>After food leaves the stomach, it enters the <strong>small intestine</strong>.</p><p>This is where much of the digestion and absorption of <a href="/articles/nutrient-foods-which-people-need-have-daily/" data-entity-type="node" data-entity-uuid="fbd4b1d2-ee62-4875-9cc8-7bdfb4168886" data-entity-substitution="canonical" title="Nutrient foods which people need to have daily">nutrients</a> takes place.</p><p>The small intestine is remarkably long and contains specialized structures called <strong>villi</strong> and <strong>microvilli</strong> that increase the surface area available for absorbing nutrients.</p><p>For the experiment, spread the softened food mixture onto a clean tray or bowl.</p><p>Explain that the body is now separating useful nutrients from the remaining material.</p><p>The nutrients produced during digestion can be absorbed through the walls of the small intestine and enter the bloodstream.</p><p>This is one of the most important stages of digestion.</p>
+            
+                </div>
+            </div>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4edecRc" target="_blank" rel="noopener sponsored" data-product="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">
-                                <img src="https://m.media-amazon.com/images/I/71ban0G0qRL._SL1500_.jpg" alt="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">
+                            <a href="https://amzn.to/4w0oY4U" target="_blank" rel="noopener sponsored" data-product="Peter England Men’s Everyday Regular Fit Solid Shirt Review (2026) – Cotton Rich Formal &amp; Casual Wear Shirt">
+                                <img src="https://m.media-amazon.com/images/I/51LBQBB5eKL._SY879_.jpg" alt="Peter England Men’s Everyday Regular Fit Solid Shirt Review (2026) – Cotton Rich Formal &amp; Casual Wear Shirt">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/xiaomi-75-inch-x-pro-series-qled-4k-smart-google-tv-big-screen-premium-entertainment/" target="_blank" rel="noopener sponsored" data-product="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment</a>
+                                <a href="https://thebestproducts.co.in/reviews/peter-england-mens-everyday-regular-fit-solid-shirt-review-2026-cotton-rich-formal-casual/" target="_blank" rel="noopener sponsored" data-product="Peter England Men’s Everyday Regular Fit Solid Shirt Review (2026) – Cotton Rich Formal &amp; Casual Wear Shirt">Peter England Men’s Everyday Regular Fit Solid Shirt Review (2026) – Cotton Rich Formal &amp; Casual Wear Shirt</a>
                             </div>
-                            <div class="discount-badge">Now 42% Off</div>
-                            <a href="https://amzn.to/4edecRc" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Xiaomi 75-Inch X Pro Series QLED 4K Smart Google TV – Big-Screen Premium Entertainment">
+                            <div class="discount-badge">Now 36% Off</div>
+                            <a href="https://amzn.to/4w0oY4U" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Peter England Men’s Everyday Regular Fit Solid Shirt Review (2026) – Cotton Rich Formal &amp; Casual Wear Shirt">
                                 <span class="product-price">
-                                    <span class="actual-price">₹119999.00</span>
-                                    <span class="current-price">₹69999.00</span>
+                                    <span class="actual-price">₹1399.00</span>
+                                    <span class="current-price">₹899.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -798,24 +734,27 @@
                     </div>
                 </div>
             </div><h2>Step 5: The Role of the Large Intestine</h2><p>After most nutrients have been absorbed in the small intestine, the remaining material moves into the <strong>large intestine</strong>.</p><p>The large intestine absorbs water and electrolytes from the remaining contents.</p><p>As water is removed, the material gradually becomes more solid.</p><p>For children, you can explain this using a simple analogy:</p><p><strong>"Imagine squeezing water out of a wet sponge. The sponge becomes less watery. Something similar happens as the large intestine absorbs water from digestive contents."</strong></p><p>The <a href="/articles/craft-stick-chain-reaction-kids-science-experiment/" data-entity-type="node" data-entity-uuid="1a0de18b-7e22-49fa-8274-87fcd2cb9b91" data-entity-substitution="canonical" title="Craft stick chain reaction, kids science experiment">experiment</a> doesn't need to physically reproduce this process. The goal is to help children understand the concept.</p><h2>What Happens to the Food After Digestion?</h2><p>By the end of digestion, useful nutrients from food have been absorbed and made available to the body.</p><p>These nutrients can provide:</p><ul><li>Energy</li><li>Building materials for growth</li><li>Vitamins and minerals</li><li>Materials needed for repairing tissues</li></ul><p>The material that the body cannot digest or absorb eventually leaves the body as waste.</p><p>This is why digestion isn't simply about "destroying" food. It is a carefully coordinated process that allows the body to obtain useful nutrients.</p><h2>What Children Can Learn From This Experiment</h2><p>This simple digestive system activity introduces several important science concepts.</p><p>Children can learn that:</p><h3>1. Digestion Begins in the Mouth</h3><p>Chewing physically breaks food into smaller pieces, while saliva begins chemical digestion.</p>
+            
+                </div>
+            </div>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4vI8kGX" target="_blank" rel="noopener sponsored" data-product="Titan Karishma Revive Analog Champagne Dial Women's Watch Review (2026) – Elegant Gold-Tone Women's Watch">
-                                <img src="https://m.media-amazon.com/images/I/410NkIE929L._SL1000_.jpg" alt="Titan Karishma Revive Analog Champagne Dial Women's Watch Review (2026) – Elegant Gold-Tone Women's Watch">
+                            <a href="https://amzn.to/3SCF2uW" target="_blank" rel="noopener sponsored" data-product="Q-RIOUS Women's Wide Leg High-Waisted Sweat Pants Review (2026) – Comfortable Baggy Lounge &amp; Athleisure Joggers">
+                                <img src="https://m.media-amazon.com/images/I/51I3kg7s4nL._SY879_.jpg" alt="Q-RIOUS Women's Wide Leg High-Waisted Sweat Pants Review (2026) – Comfortable Baggy Lounge &amp; Athleisure Joggers">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/titan-karishma-revive-analog-champagne-dial-womens-watch-review-2026-elegant-gold-tone/" target="_blank" rel="noopener sponsored" data-product="Titan Karishma Revive Analog Champagne Dial Women's Watch Review (2026) – Elegant Gold-Tone Women's Watch">Titan Karishma Revive Analog Champagne Dial Women's Watch Review (2026) – Elegant Gold-Tone Women's Watch</a>
+                                <a href="https://thebestproducts.co.in/reviews/q-rious-womens-wide-leg-high-waisted-sweat-pants-review-2026-comfortable-baggy-lounge/" target="_blank" rel="noopener sponsored" data-product="Q-RIOUS Women's Wide Leg High-Waisted Sweat Pants Review (2026) – Comfortable Baggy Lounge &amp; Athleisure Joggers">Q-RIOUS Women's Wide Leg High-Waisted Sweat Pants Review (2026) – Comfortable Baggy Lounge &amp; Athleisure Joggers</a>
                             </div>
-                            <div class="discount-badge">Now 18% Off</div>
-                            <a href="https://amzn.to/4vI8kGX" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Titan Karishma Revive Analog Champagne Dial Women's Watch Review (2026) – Elegant Gold-Tone Women's Watch">
+                            <div class="discount-badge">Now 75% Off</div>
+                            <a href="https://amzn.to/3SCF2uW" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Q-RIOUS Women's Wide Leg High-Waisted Sweat Pants Review (2026) – Comfortable Baggy Lounge &amp; Athleisure Joggers">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1995.00</span>
-                                    <span class="current-price">₹1630.00</span>
+                                    <span class="actual-price">₹1499.00</span>
+                                    <span class="current-price">₹368.10</span>
                                 </span>
 
                                 <span class="product-store">
@@ -830,24 +769,27 @@
                     </div>
                 </div>
             </div><h3>2. Food Doesn't Fall Straight Into the Stomach</h3><p>Muscular contractions help move food through the esophagus.</p><h3>3. The Stomach Mixes Food</h3><p>The stomach churns food and mixes it with digestive fluids.</p><h3>4. Most Nutrient Absorption Happens in the Small Intestine</h3><p>The small intestine is specially adapted to absorb nutrients.</p><h3>5. The Large Intestine Absorbs Water</h3><p>Water is removed from the remaining digestive material before waste is eliminated.</p>
+            
+                </section></div>
+            </div>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B02P3uVjq" target="_blank" rel="noopener sponsored" data-product="Symbol Premium Women's Fit &amp; Flare Wrap Dress Review (2026) – Elegant Midi Dress for Work &amp; Evenings">
-                                <img src="https://m.media-amazon.com/images/I/61MwxbBTeAL._SY879_.jpg" alt="Symbol Premium Women's Fit &amp; Flare Wrap Dress Review (2026) – Elegant Midi Dress for Work &amp; Evenings">
+                            <a href="https://amzn.to/4vwAwwK" target="_blank" rel="noopener sponsored" data-product="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">
+                                <img src="https://m.media-amazon.com/images/I/71LdwSEEF5L._SL1500_.jpg" alt="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/symbol-premium-womens-fit-flare-wrap-dress-review-2026-elegant-midi-dress-work-evenings/" target="_blank" rel="noopener sponsored" data-product="Symbol Premium Women's Fit &amp; Flare Wrap Dress Review (2026) – Elegant Midi Dress for Work &amp; Evenings">Symbol Premium Women's Fit &amp; Flare Wrap Dress Review (2026) – Elegant Midi Dress for Work &amp; Evenings</a>
+                                <a href="https://thebestproducts.co.in/reviews/indus-valley-stainless-steel-idli-maker-review-2026-versatile-4-1-idli-dhokla-steamer-set/" target="_blank" rel="noopener sponsored" data-product="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set</a>
                             </div>
-                            <div class="discount-badge">Now 69% Off</div>
-                            <a href="https://link.amazon/B02P3uVjq" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Symbol Premium Women's Fit &amp; Flare Wrap Dress Review (2026) – Elegant Midi Dress for Work &amp; Evenings">
+                            <div class="discount-badge">Now 43% Off</div>
+                            <a href="https://amzn.to/4vwAwwK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">
                                 <span class="product-price">
-                                    <span class="actual-price">₹3599.00</span>
-                                    <span class="current-price">₹1099.00</span>
+                                    <span class="actual-price">₹3849.00</span>
+                                    <span class="current-price">₹2198.99</span>
                                 </span>
 
                                 <span class="product-store">
@@ -861,7 +803,9 @@
                         </div>
                     </div>
                 </div>
-            </div><h2>Questions to Ask Children</h2><p>Turn the activity into an interactive science lesson by asking questions throughout the experiment.</p><p>Try asking:</p><ol><li><strong>Where does digestion begin?</strong></li><li><strong>Why do we need to chew </strong><a href="/articles/effects-acidic-foods-teeth/" data-entity-type="node" data-entity-uuid="b97b0dd7-c18c-4d4b-871e-6bb550f9a958" data-entity-substitution="canonical" title="The Effects of Acidic Foods on Teeth"><strong>food</strong></a><strong>?</strong></li><li><strong>What does the stomach do?</strong></li><li><strong>Why is the stomach muscular?</strong></li><li><strong>Where are most nutrients absorbed?</strong></li><li><strong>What is the job of the large intestine?</strong></li><li><strong>Why does the body need nutrients?</strong></li><li><strong>What happens to material the body cannot use?</strong></li></ol><p>Encourage children to explain their answers rather than simply giving them the correct response.</p><h2>Important Safety Tips</h2><p>This is a simple activity, but adult supervision is recommended.</p><ul><li>Use clean materials.</li><li>Wash hands before and after the experiment.</li><li>Don't allow children to taste experimental mixtures after handling them.</li><li>Use food that has not been contaminated by non-food materials.</li><li>Supervise young children when using scissors.</li><li>Clean the working surface after the activity.</li><li>Do not use actual stomach acid or household chemicals to imitate digestive juices.</li></ul><p>The experiment should demonstrate digestion safely without trying to recreate the actual chemical environment inside the human body.</p><h2>Why Hands-On Science Experiments Are Useful for Children</h2><p>Children often understand complicated concepts more easily when they can see or physically demonstrate them.</p><p>A digestive system experiment transforms an abstract biology lesson into something tangible.</p><p>Instead of simply memorizing:</p><p><strong>Mouth → Esophagus → Stomach → Small Intestine → Large Intestine</strong></p><p>children can visualize what each stage is responsible for.</p><p>Hands-on activities can also encourage children to ask questions, make <a href="/articles/ant-farm-observation-science-experiment-children/" data-entity-type="node" data-entity-uuid="684b5d6f-f49c-46e9-a58c-f08bddb479c5" data-entity-substitution="canonical" title="Ant Farm Observation, science experiment for children">observations</a>, and explain what they see. These are important skills in scientific thinking.</p><h2>Conclusion</h2><p>The <strong>digestive system simulation using crackers and bananas</strong> is an easy and engaging science experiment for children who want to understand how digestion works. Using familiar foods and simple household materials, the activity demonstrates important concepts such as chewing, food movement, stomach mixing, nutrient absorption, and water absorption.</p><p>However, children should understand that the model is only a simplified representation. Real digestion involves complex mechanical and chemical processes involving digestive enzymes, stomach acid, bile, the pancreas, and specialized structures throughout the digestive tract.</p><p>That's what makes this experiment a useful starting point rather than a complete model of human digestion. It gives <a href="/articles/grow-crystals-science-experiment-children/" data-entity-type="node" data-entity-uuid="ee511eb0-c824-4df5-b8d3-0942b3e71f6a" data-entity-substitution="canonical" title="Grow crystals, science experiment for children">children</a> a simple visual framework that they can build upon as they learn more about human biology.</p><p>Most importantly, the activity turns a topic that can seem complicated in a textbook into an enjoyable <strong>hands-on children's science experiment</strong>. With a few crackers, a banana, and some curiosity, children can begin exploring one of the body's most fascinating systems—and discover what really happens to food after we eat it.</p></div></div></div></div></div></div></section></div></div>
+            </div><h2>Questions to Ask Children</h2><p>Turn the activity into an interactive science lesson by asking questions throughout the experiment.</p><p>Try asking:</p><ol><li><strong>Where does digestion begin?</strong></li><li><strong>Why do we need to chew </strong><a href="/articles/effects-acidic-foods-teeth/" data-entity-type="node" data-entity-uuid="b97b0dd7-c18c-4d4b-871e-6bb550f9a958" data-entity-substitution="canonical" title="The Effects of Acidic Foods on Teeth"><strong>food</strong></a><strong>?</strong></li><li><strong>What does the stomach do?</strong></li><li><strong>Why is the stomach muscular?</strong></li><li><strong>Where are most nutrients absorbed?</strong></li><li><strong>What is the job of the large intestine?</strong></li><li><strong>Why does the body need nutrients?</strong></li><li><strong>What happens to material the body cannot use?</strong></li></ol><p>Encourage children to explain their answers rather than simply giving them the correct response.</p><h2>Important Safety Tips</h2><p>This is a simple activity, but adult supervision is recommended.</p><ul><li>Use clean materials.</li><li>Wash hands before and after the experiment.</li><li>Don't allow children to taste experimental mixtures after handling them.</li><li>Use food that has not been contaminated by non-food materials.</li><li>Supervise young children when using scissors.</li><li>Clean the working surface after the activity.</li><li>Do not use actual stomach acid or household chemicals to imitate digestive juices.</li></ul><p>The experiment should demonstrate digestion safely without trying to recreate the actual chemical environment inside the human body.</p><h2>Why Hands-On Science Experiments Are Useful for Children</h2><p>Children often understand complicated concepts more easily when they can see or physically demonstrate them.</p><p>A digestive system experiment transforms an abstract biology lesson into something tangible.</p><p>Instead of simply memorizing:</p><p><strong>Mouth → Esophagus → Stomach → Small Intestine → Large Intestine</strong></p><p>children can visualize what each stage is responsible for.</p><p>Hands-on activities can also encourage children to ask questions, make <a href="/articles/ant-farm-observation-science-experiment-children/" data-entity-type="node" data-entity-uuid="684b5d6f-f49c-46e9-a58c-f08bddb479c5" data-entity-substitution="canonical" title="Ant Farm Observation, science experiment for children">observations</a>, and explain what they see. These are important skills in scientific thinking.</p><h2>Conclusion</h2><p>The <strong>digestive system simulation using crackers and bananas</strong> is an easy and engaging science experiment for children who want to understand how digestion works. Using familiar foods and simple household materials, the activity demonstrates important concepts such as chewing, food movement, stomach mixing, nutrient absorption, and water absorption.</p><p>However, children should understand that the model is only a simplified representation. Real digestion involves complex mechanical and chemical processes involving digestive enzymes, stomach acid, bile, the pancreas, and specialized structures throughout the digestive tract.</p><p>That's what makes this experiment a useful starting point rather than a complete model of human digestion. It gives <a href="/articles/grow-crystals-science-experiment-children/" data-entity-type="node" data-entity-uuid="ee511eb0-c824-4df5-b8d3-0942b3e71f6a" data-entity-substitution="canonical" title="Grow crystals, science experiment for children">children</a> a simple visual framework that they can build upon as they learn more about human biology.</p><p>Most importantly, the activity turns a topic that can seem complicated in a textbook into an enjoyable <strong>hands-on children's science experiment</strong>. With a few crackers, a banana, and some curiosity, children can begin exploring one of the body's most fascinating systems—and discover what really happens to food after we eat it.</p>
+
+
 
 
 </html></div>
@@ -887,7 +831,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-476a85dc691c5bc4497598adc476581903b741ba4929abeb22d9c9a8e3c2e2a9">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a87545cd55efc7d445374bd06983f5a266deaaf914c85c78e8ec76f406975ae3">
   
     
       
@@ -939,7 +883,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-761f73959fd390c38ce97e41bc7e1a73be398c6106d36ed6a2a6391639623109">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-1710d0a6ba438ea5be1dff794b81954703e77670b2a3d0e8b50a2c0a5c3e60ec">
   
     
       
@@ -949,6 +893,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips/" title="Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips">
   <img src="/sites/default/files/2026-08/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips.webp" alt="Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips">
   <h4>Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips</h4>
@@ -966,13 +916,13 @@
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-mouse/" title="The Little Mouse">
   <img src="/sites/default/files/2026-07/the-little-mouse.webp" alt="The Little Mouse">
   <h4>The Little Mouse</h4>
@@ -990,13 +940,13 @@
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-know-what-you-really-want-bed/" title="How to Know What You Really Want in Bed?">
   <img src="/sites/default/files/2026-07/how-to-know-what-you-really-want-in-bed-understanding-your-sexual-needs-and-desires.webp" alt="How to Know What You Really Want in Bed?">
   <h4>How to Know What You Really Want in Bed?</h4>
@@ -1012,12 +962,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
   <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
   <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson/" title="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
-  <img src="/sites/default/files/2026-07/seek-revenge-or-choose-forgiveness-a-moral-story-with-a-powerful-life-lesson.webp" alt="Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson">
-  <h4>Seek Revenge or Choose Forgiveness? – A Moral Story with a Powerful Life Lesson</h4>
 </a></span></div></div>
       </div>
       </div>

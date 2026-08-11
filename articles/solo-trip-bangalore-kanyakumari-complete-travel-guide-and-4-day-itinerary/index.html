@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -966,24 +896,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3P7yZ0d" target="_blank" rel="noopener sponsored" data-product="Educart CBSE Sample Papers Class 10 (Set of 4) – 2025–26 Edition">
-                                <img src="https://m.media-amazon.com/images/I/81X48cCPKoL._SL1500_.jpg" alt="Educart CBSE Sample Papers Class 10 (Set of 4) – 2025–26 Edition">
+                            <a href="https://link.amazon/B08PZ2pSQ" target="_blank" rel="noopener sponsored" data-product="Samsung 65-inch OLED 4K Vision AI Smart TV (QA65S85HAELXL) Review (2026) – Premium OLED Entertainment Experience">
+                                <img src="https://m.media-amazon.com/images/I/81h13TgaIdL._SL1500_.jpg" alt="Samsung 65-inch OLED 4K Vision AI Smart TV (QA65S85HAELXL) Review (2026) – Premium OLED Entertainment Experience">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/educart-cbse-sample-papers-class-10-set-4-2025-26-edition/" target="_blank" rel="noopener sponsored" data-product="Educart CBSE Sample Papers Class 10 (Set of 4) – 2025–26 Edition">Educart CBSE Sample Papers Class 10 (Set of 4) – 2025–26 Edition</a>
+                                <a href="https://thebestproducts.co.in/reviews/samsung-65-inch-oled-4k-vision-ai-smart-tv-qa65s85haelxl-review-2026-premium-oled/" target="_blank" rel="noopener sponsored" data-product="Samsung 65-inch OLED 4K Vision AI Smart TV (QA65S85HAELXL) Review (2026) – Premium OLED Entertainment Experience">Samsung 65-inch OLED 4K Vision AI Smart TV (QA65S85HAELXL) Review (2026) – Premium OLED Entertainment Experience</a>
                             </div>
                             <div class="discount-badge">Now 18% Off</div>
-                            <a href="https://amzn.to/3P7yZ0d" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Educart CBSE Sample Papers Class 10 (Set of 4) – 2025–26 Edition">
+                            <a href="https://link.amazon/B08PZ2pSQ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 65-inch OLED 4K Vision AI Smart TV (QA65S85HAELXL) Review (2026) – Premium OLED Entertainment Experience">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1796.00</span>
-                                    <span class="current-price">₹1475.00</span>
+                                    <span class="actual-price">₹189900.00</span>
+                                    <span class="current-price">₹154990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1246,24 +1179,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B04OtB1Tn" target="_blank" rel="noopener sponsored" data-product="Janasya Women's Navy Blue Pure Cotton Geometric Straight Kurta Review (2026) – Stylish Everyday Cotton Kurta">
-                                <img src="https://m.media-amazon.com/images/I/71sEH9G-QGL._SY879_.jpg" alt="Janasya Women's Navy Blue Pure Cotton Geometric Straight Kurta Review (2026) – Stylish Everyday Cotton Kurta">
+                            <a href="https://amzn.to/4nn3Rq9" target="_blank" rel="noopener sponsored" data-product="LOOM &amp; NEEDLES Dual Comfort Pocket Spring Mattress Review (2026) – Orthopedic Spring Mattress for Back Support &amp; Comfort">
+                                <img src="https://m.media-amazon.com/images/I/71m-5ko2AHL._SL1500_.jpg" alt="LOOM &amp; NEEDLES Dual Comfort Pocket Spring Mattress Review (2026) – Orthopedic Spring Mattress for Back Support &amp; Comfort">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/janasya-womens-navy-blue-pure-cotton-geometric-straight-kurta-review-2026-stylish-everyday/" target="_blank" rel="noopener sponsored" data-product="Janasya Women's Navy Blue Pure Cotton Geometric Straight Kurta Review (2026) – Stylish Everyday Cotton Kurta">Janasya Women's Navy Blue Pure Cotton Geometric Straight Kurta Review (2026) – Stylish Everyday Cotton Kurta</a>
+                                <a href="https://thebestproducts.co.in/reviews/loom-needles-dual-comfort-pocket-spring-mattress-review-2026-orthopedic-spring-mattress/" target="_blank" rel="noopener sponsored" data-product="LOOM &amp; NEEDLES Dual Comfort Pocket Spring Mattress Review (2026) – Orthopedic Spring Mattress for Back Support &amp; Comfort">LOOM &amp; NEEDLES Dual Comfort Pocket Spring Mattress Review (2026) – Orthopedic Spring Mattress for Back Support &amp; Comfort</a>
                             </div>
-                            <div class="discount-badge">Now 73% Off</div>
-                            <a href="https://link.amazon/B04OtB1Tn" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Janasya Women's Navy Blue Pure Cotton Geometric Straight Kurta Review (2026) – Stylish Everyday Cotton Kurta">
+                            <div class="discount-badge">Now 63% Off</div>
+                            <a href="https://amzn.to/4nn3Rq9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LOOM &amp; NEEDLES Dual Comfort Pocket Spring Mattress Review (2026) – Orthopedic Spring Mattress for Back Support &amp; Comfort">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1659.00</span>
-                                    <span class="current-price">₹449.00</span>
+                                    <span class="actual-price">₹26398.00</span>
+                                    <span class="current-price">₹9750.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1519,24 +1455,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0am4JgUy" target="_blank" rel="noopener sponsored" data-product="Tokyo Talkies Women's Jeans Review (2026) – Stylish Everyday Denim for Casual Wear">
-                                <img src="https://m.media-amazon.com/images/I/711YKVWLDXL._SY879_.jpg" alt="Tokyo Talkies Women's Jeans Review (2026) – Stylish Everyday Denim for Casual Wear">
+                            <a href="https://amzn.to/4vr3LBq" target="_blank" rel="noopener sponsored" data-product="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">
+                                <img src="https://m.media-amazon.com/images/I/41kKGEM47iL.jpg" alt="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/tokyo-talkies-womens-jeans-review-2026-stylish-everyday-denim-casual-wear/" target="_blank" rel="noopener sponsored" data-product="Tokyo Talkies Women's Jeans Review (2026) – Stylish Everyday Denim for Casual Wear">Tokyo Talkies Women's Jeans Review (2026) – Stylish Everyday Denim for Casual Wear</a>
+                                <a href="https://thebestproducts.co.in/reviews/motorola-g57-power-5g-best-clean-ui-battery-phone-under-rs20000/" target="_blank" rel="noopener sponsored" data-product="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000</a>
                             </div>
-                            <div class="discount-badge">Now 72% Off</div>
-                            <a href="https://link.amazon/B0am4JgUy" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Tokyo Talkies Women's Jeans Review (2026) – Stylish Everyday Denim for Casual Wear">
+                            <div class="discount-badge">Now 10% Off</div>
+                            <a href="https://amzn.to/4vr3LBq" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Motorola G57 Power 5G – Best Clean UI &amp; Battery Phone Under ₹20,000">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2099.00</span>
-                                    <span class="current-price">₹579.00</span>
+                                    <span class="actual-price">₹17999.00</span>
+                                    <span class="current-price">₹16190.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1798,24 +1737,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4doiPrt" target="_blank" rel="noopener sponsored" data-product="Pivalo XUV500 Waterproof Car Cover Review (2026) – Heavy-Duty Protection for Mahindra XUV500">
-                                <img src="https://m.media-amazon.com/images/I/81zEut0Fc6L._SL1500_.jpg" alt="Pivalo XUV500 Waterproof Car Cover Review (2026) – Heavy-Duty Protection for Mahindra XUV500">
+                            <a href="https://amzn.to/4e4eX0s" target="_blank" rel="noopener sponsored" data-product="Blackstar ZEO Mag Magnetic Phone Holder Review (2026) – 540° Rotating Car &amp; Bike Mobile Mount">
+                                <img src="https://m.media-amazon.com/images/I/413voSU8IuL._SL1080_.jpg" alt="Blackstar ZEO Mag Magnetic Phone Holder Review (2026) – 540° Rotating Car &amp; Bike Mobile Mount">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/pivalo-xuv500-waterproof-car-cover-review-2026-heavy-duty-protection-mahindra-xuv500/" target="_blank" rel="noopener sponsored" data-product="Pivalo XUV500 Waterproof Car Cover Review (2026) – Heavy-Duty Protection for Mahindra XUV500">Pivalo XUV500 Waterproof Car Cover Review (2026) – Heavy-Duty Protection for Mahindra XUV500</a>
+                                <a href="https://thebestproducts.co.in/reviews/blackstar-zeo-mag-magnetic-phone-holder-review-2026-540deg-rotating-car-bike-mobile-mount/" target="_blank" rel="noopener sponsored" data-product="Blackstar ZEO Mag Magnetic Phone Holder Review (2026) – 540° Rotating Car &amp; Bike Mobile Mount">Blackstar ZEO Mag Magnetic Phone Holder Review (2026) – 540° Rotating Car &amp; Bike Mobile Mount</a>
                             </div>
-                            <div class="discount-badge">Now 43% Off</div>
-                            <a href="https://amzn.to/4doiPrt" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Pivalo XUV500 Waterproof Car Cover Review (2026) – Heavy-Duty Protection for Mahindra XUV500">
+                            <div class="discount-badge">Now 81% Off</div>
+                            <a href="https://amzn.to/4e4eX0s" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Blackstar ZEO Mag Magnetic Phone Holder Review (2026) – 540° Rotating Car &amp; Bike Mobile Mount">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2199.00</span>
-                                    <span class="current-price">₹1250.00</span>
+                                    <span class="actual-price">₹3499.00</span>
+                                    <span class="current-price">₹649.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1839,6 +1781,8 @@
             
             
             <p>Both Madurai and Kanyakumari offer a mix of vegetarian, non-vegetarian, coastal, and South Indian cuisine at reasonable prices.</p><p>If you enjoy planning road trips from Bangalore, you might find our guides on <a href="/articles/bangalore-hampi-solo-trip-plan-historic-route-guide/">Hampi</a>, <a href="/articles/bangalore-srikalahasti-solo-trip-guide-route-temple-timings-itinerary/">Srikalahasti</a>, <a href="/articles/bangalore-trivandrum-solo-trip-itinerary-travel-tips/">Trivandrum</a> and other South India routes helpful. Each article covers practical tips, distances and experiences you can expect along the way.</p>
+
+
 
 
 
@@ -1912,7 +1856,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-f1e2837d0e52625ed749e531b2b18914935c582bfb05682fdd1111178f743988">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-41dfbdf4f373680742d901f9d16eeec5ce2256a216be50ac5fefa1bd25902695">
   
     
       
@@ -1964,7 +1908,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-ef4e5b362c25fb9e9912dfb07a541861c4e674cb222400ff81fe0b3458294f7d">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-3577bf5deeb874a0207a408b1960cd334a473249f17bd735a67b9b1644e2c080">
   
     
       
@@ -1974,6 +1918,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1991,13 +1941,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -2015,13 +1965,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -2037,12 +1987,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

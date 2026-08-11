@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4e3Dbb0" target="_blank" rel="noopener sponsored" data-product="TCL 55-Inch T8C 4K QLED Google TV Review (2026) – Smart QLED TV with Google TV &amp; Dolby Vision">
-                                <img src="https://m.media-amazon.com/images/I/81eJWtsCRkL._SL1500_.jpg" alt="TCL 55-Inch T8C 4K QLED Google TV Review (2026) – Smart QLED TV with Google TV &amp; Dolby Vision">
+                            <a href="https://amzn.to/4uM6S5L" target="_blank" rel="noopener sponsored" data-product="The Indian Garage Co Men’s Slim Fit Checkered Shirt Review (2026) – Stylish Casual Full Sleeve Cotton Shirt">
+                                <img src="https://m.media-amazon.com/images/I/61rG+UIslgL._SX679_.jpg" alt="The Indian Garage Co Men’s Slim Fit Checkered Shirt Review (2026) – Stylish Casual Full Sleeve Cotton Shirt">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/tcl-55-inch-t8c-4k-qled-google-tv-review-2026-smart-qled-tv-google-tv-dolby-vision/" target="_blank" rel="noopener sponsored" data-product="TCL 55-Inch T8C 4K QLED Google TV Review (2026) – Smart QLED TV with Google TV &amp; Dolby Vision">TCL 55-Inch T8C 4K QLED Google TV Review (2026) – Smart QLED TV with Google TV &amp; Dolby Vision</a>
+                                <a href="https://thebestproducts.co.in/reviews/indian-garage-co-mens-slim-fit-checkered-shirt-review-2026-stylish-casual-full-sleeve/" target="_blank" rel="noopener sponsored" data-product="The Indian Garage Co Men’s Slim Fit Checkered Shirt Review (2026) – Stylish Casual Full Sleeve Cotton Shirt">The Indian Garage Co Men’s Slim Fit Checkered Shirt Review (2026) – Stylish Casual Full Sleeve Cotton Shirt</a>
                             </div>
-                            <div class="discount-badge">Now 61% Off</div>
-                            <a href="https://amzn.to/4e3Dbb0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TCL 55-Inch T8C 4K QLED Google TV Review (2026) – Smart QLED TV with Google TV &amp; Dolby Vision">
+                            <div class="discount-badge">Now 75% Off</div>
+                            <a href="https://amzn.to/4uM6S5L" target="_blank" class="buy-button" rel="noopener sponsored" data-product="The Indian Garage Co Men’s Slim Fit Checkered Shirt Review (2026) – Stylish Casual Full Sleeve Cotton Shirt">
                                 <span class="product-price">
-                                    <span class="actual-price">₹109990.00</span>
-                                    <span class="current-price">₹42990.00</span>
+                                    <span class="actual-price">₹1749.00</span>
+                                    <span class="current-price">₹437.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -913,19 +846,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4eNfCDz" target="_blank" rel="noopener sponsored" data-product="Nivia Hand Grip 2.0 Review (2026) – Adjustable Hand Gripper for Forearm &amp; Grip Strength Training">
-                                <img src="https://m.media-amazon.com/images/I/61o9Fy++tpL._SL1500_.jpg" alt="Nivia Hand Grip 2.0 Review (2026) – Adjustable Hand Gripper for Forearm &amp; Grip Strength Training">
+                            <a href="https://amzn.to/3OUc1tp" target="_blank" rel="noopener sponsored" data-product="Crossbeats Lumex Solis Smart Projector – Native 1080P, 1000 ANSI, Google TV">
+                                <img src="https://m.media-amazon.com/images/I/813xq8nqC9L._SL1500_.jpg" alt="Crossbeats Lumex Solis Smart Projector – Native 1080P, 1000 ANSI, Google TV">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/nivia-hand-grip-20-review-2026-adjustable-hand-gripper-forearm-grip-strength-training/" target="_blank" rel="noopener sponsored" data-product="Nivia Hand Grip 2.0 Review (2026) – Adjustable Hand Gripper for Forearm &amp; Grip Strength Training">Nivia Hand Grip 2.0 Review (2026) – Adjustable Hand Gripper for Forearm &amp; Grip Strength Training</a>
+                                <a href="https://thebestproducts.co.in/reviews/crossbeats-lumex-solis-smart-projector-native-1080p-1000-ansi-google-tv/" target="_blank" rel="noopener sponsored" data-product="Crossbeats Lumex Solis Smart Projector – Native 1080P, 1000 ANSI, Google TV">Crossbeats Lumex Solis Smart Projector – Native 1080P, 1000 ANSI, Google TV</a>
                             </div>
-                            <div class="discount-badge">Now 49% Off</div>
-                            <a href="https://amzn.to/4eNfCDz" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Nivia Hand Grip 2.0 Review (2026) – Adjustable Hand Gripper for Forearm &amp; Grip Strength Training">
+                            <div class="discount-badge">Now 60% Off</div>
+                            <a href="https://amzn.to/3OUc1tp" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Crossbeats Lumex Solis Smart Projector – Native 1080P, 1000 ANSI, Google TV">
                                 <span class="product-price">
-                                    <span class="actual-price">₹299.00</span>
-                                    <span class="current-price">₹151.00</span>
+                                    <span class="actual-price">₹49999.00</span>
+                                    <span class="current-price">₹19999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -940,6 +873,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1130,19 +1066,19 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4diVLu3" target="_blank" rel="noopener sponsored" data-product="American Tourister Liftoff+ Large Trolley Bag Review (2026) – Spacious &amp; Durable Check-in Luggage for Long Trips">
-                                <img src="https://m.media-amazon.com/images/I/61Bbdp75S7L._SL1500_.jpg" alt="American Tourister Liftoff+ Large Trolley Bag Review (2026) – Spacious &amp; Durable Check-in Luggage for Long Trips">
+                            <a href="https://amzn.to/4ep57oM" target="_blank" rel="noopener sponsored" data-product="Sekyo Carepal Pro 4G Kids Smart Watch Review (2026) – GPS, Video Calling &amp; Safety-Focused Smartwatch for Kids">
+                                <img src="https://m.media-amazon.com/images/I/71t3V0P4UGL._SL1500_.jpg" alt="Sekyo Carepal Pro 4G Kids Smart Watch Review (2026) – GPS, Video Calling &amp; Safety-Focused Smartwatch for Kids">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/american-tourister-liftoff-large-trolley-bag-review-2026-spacious-durable-check-luggage/" target="_blank" rel="noopener sponsored" data-product="American Tourister Liftoff+ Large Trolley Bag Review (2026) – Spacious &amp; Durable Check-in Luggage for Long Trips">American Tourister Liftoff+ Large Trolley Bag Review (2026) – Spacious &amp; Durable Check-in Luggage for Long Trips</a>
+                                <a href="https://thebestproducts.co.in/reviews/sekyo-carepal-pro-4g-kids-smart-watch-review-2026-gps-video-calling-safety-focused/" target="_blank" rel="noopener sponsored" data-product="Sekyo Carepal Pro 4G Kids Smart Watch Review (2026) – GPS, Video Calling &amp; Safety-Focused Smartwatch for Kids">Sekyo Carepal Pro 4G Kids Smart Watch Review (2026) – GPS, Video Calling &amp; Safety-Focused Smartwatch for Kids</a>
                             </div>
-                            <div class="discount-badge">Now 64% Off</div>
-                            <a href="https://amzn.to/4diVLu3" target="_blank" class="buy-button" rel="noopener sponsored" data-product="American Tourister Liftoff+ Large Trolley Bag Review (2026) – Spacious &amp; Durable Check-in Luggage for Long Trips">
+                            <div class="discount-badge">Now 16% Off</div>
+                            <a href="https://amzn.to/4ep57oM" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sekyo Carepal Pro 4G Kids Smart Watch Review (2026) – GPS, Video Calling &amp; Safety-Focused Smartwatch for Kids">
                                 <span class="product-price">
-                                    <span class="actual-price">₹9800.00</span>
-                                    <span class="current-price">₹3499.00</span>
+                                    <span class="actual-price">₹6999.00</span>
+                                    <span class="current-price">₹5880.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1157,6 +1093,9 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1304,19 +1243,19 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4elR971" target="_blank" rel="noopener sponsored" data-product="Nermosa Women Printed Anarkali Kurta Set Review (2026) – Cotton Anarkali Suit with Pants &amp; Dupatta">
-                                <img src="https://m.media-amazon.com/images/I/61aSZzT1YfL._SY879_.jpg" alt="Nermosa Women Printed Anarkali Kurta Set Review (2026) – Cotton Anarkali Suit with Pants &amp; Dupatta">
+                            <a href="https://link.amazon/B02B2BqSt" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">
+                                <img src="https://m.media-amazon.com/images/I/81I2HBFYwsL._SL1500_.jpg" alt="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/nermosa-women-printed-anarkali-kurta-set-review-2026-cotton-anarkali-suit-pants-dupatta/" target="_blank" rel="noopener sponsored" data-product="Nermosa Women Printed Anarkali Kurta Set Review (2026) – Cotton Anarkali Suit with Pants &amp; Dupatta">Nermosa Women Printed Anarkali Kurta Set Review (2026) – Cotton Anarkali Suit with Pants &amp; Dupatta</a>
+                                <a href="https://thebestproducts.co.in/reviews/sony-bravia-3-series-65-inch-4k-ai-smart-led-google-tv-review-2026-premium-picture-sony/" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing</a>
                             </div>
-                            <div class="discount-badge">Now 73% Off</div>
-                            <a href="https://amzn.to/4elR971" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Nermosa Women Printed Anarkali Kurta Set Review (2026) – Cotton Anarkali Suit with Pants &amp; Dupatta">
+                            <div class="discount-badge">Now 40% Off</div>
+                            <a href="https://link.amazon/B02B2BqSt" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2999.00</span>
-                                    <span class="current-price">₹798.00</span>
+                                    <span class="actual-price">₹164900.00</span>
+                                    <span class="current-price">₹98990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1331,6 +1270,9 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1516,6 +1458,8 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
 
 
 
+
+
 </html></div>
       
 
@@ -1538,7 +1482,7 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-aac0ec4d60d156bfe3b69c5d6c7bbebc0565fb8dfbbdf1a183af13e110352a4c">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-8e77a2129c6fc99caa10cca203cf1745b92747b2558f008a0aa9f5330023f594">
   
     
       
@@ -1590,7 +1534,7 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-92aaef7887453440bea4e91fbe4e86fa949586d10316fe6d7a38faebd00ee7d3">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-32739dbe02705321173c15b2d1b4c25ca56c6cb38c25523f7b74ab7567b14abd">
   
     
       
@@ -1600,6 +1544,12 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1617,13 +1567,13 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1641,13 +1591,13 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1663,12 +1613,6 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

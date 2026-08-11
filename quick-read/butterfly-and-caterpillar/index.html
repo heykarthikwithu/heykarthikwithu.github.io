@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0g8JlMs9" target="_blank" rel="noopener sponsored" data-product="Samsung 653L SmartThings Wi-Fi Side-by-Side Refrigerator Review – AI Inverter Refrigerator with Spacious Storage">
-                                <img src="https://m.media-amazon.com/images/I/61h8EE6fCEL._SL1500_.jpg" alt="Samsung 653L SmartThings Wi-Fi Side-by-Side Refrigerator Review – AI Inverter Refrigerator with Spacious Storage">
+                            <a href="https://amzn.to/42YDSfb" target="_blank" rel="noopener sponsored" data-product="Gerber 8-Pack Onesies Bodysuit Set Review (2026) – Comfortable Everyday Baby Wear for Indian Parents">
+                                <img src="https://m.media-amazon.com/images/I/61qqSm+KtgL._SX679_.jpg" alt="Gerber 8-Pack Onesies Bodysuit Set Review (2026) – Comfortable Everyday Baby Wear for Indian Parents">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/samsung-653l-smartthings-wi-fi-side-side-refrigerator-review-ai-inverter-refrigerator/" target="_blank" rel="noopener sponsored" data-product="Samsung 653L SmartThings Wi-Fi Side-by-Side Refrigerator Review – AI Inverter Refrigerator with Spacious Storage">Samsung 653L SmartThings Wi-Fi Side-by-Side Refrigerator Review – AI Inverter Refrigerator with Spacious Storage</a>
+                                <a href="https://thebestproducts.co.in/reviews/gerber-8-pack-onesies-bodysuit-set-review-2026-comfortable-everyday-baby-wear-indian/" target="_blank" rel="noopener sponsored" data-product="Gerber 8-Pack Onesies Bodysuit Set Review (2026) – Comfortable Everyday Baby Wear for Indian Parents">Gerber 8-Pack Onesies Bodysuit Set Review (2026) – Comfortable Everyday Baby Wear for Indian Parents</a>
                             </div>
-                            <div class="discount-badge">Now 43% Off</div>
-                            <a href="https://link.amazon/B0g8JlMs9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 653L SmartThings Wi-Fi Side-by-Side Refrigerator Review – AI Inverter Refrigerator with Spacious Storage">
+                            <div class="discount-badge">Now 47% Off</div>
+                            <a href="https://amzn.to/42YDSfb" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Gerber 8-Pack Onesies Bodysuit Set Review (2026) – Comfortable Everyday Baby Wear for Indian Parents">
                                 <span class="product-price">
-                                    <span class="actual-price">₹137490.00</span>
-                                    <span class="current-price">₹77990.00</span>
+                                    <span class="actual-price">₹3999.00</span>
+                                    <span class="current-price">₹2139.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -985,19 +918,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4vRATT9" target="_blank" rel="noopener sponsored" data-product="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">
-                                <img src="https://m.media-amazon.com/images/I/519LmnSSI7L._SL1500_.jpg" alt="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">
+                            <a href="https://link.amazon/B0e10nRHS" target="_blank" rel="noopener sponsored" data-product="L LIVILON Wall Mount Kitchen Utensil Rack Review (2026) – Stainless Steel Wall-Mounted Dish Drying Rack">
+                                <img src="https://m.media-amazon.com/images/I/513UnVowrdL.jpg" alt="L LIVILON Wall Mount Kitchen Utensil Rack Review (2026) – Stainless Steel Wall-Mounted Dish Drying Rack">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/ifb-187l-direct-cool-single-door-refrigerator-compact-efficient-cooling/" target="_blank" rel="noopener sponsored" data-product="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling</a>
+                                <a href="https://thebestproducts.co.in/reviews/l-livilon-wall-mount-kitchen-utensil-rack-review-2026-stainless-steel-wall-mounted-dish/" target="_blank" rel="noopener sponsored" data-product="L LIVILON Wall Mount Kitchen Utensil Rack Review (2026) – Stainless Steel Wall-Mounted Dish Drying Rack">L LIVILON Wall Mount Kitchen Utensil Rack Review (2026) – Stainless Steel Wall-Mounted Dish Drying Rack</a>
                             </div>
-                            <div class="discount-badge">Now 27% Off</div>
-                            <a href="https://amzn.to/4vRATT9" target="_blank" class="buy-button" rel="noopener sponsored" data-product="IFB 187L Direct-Cool Single Door Refrigerator – Compact &amp; Efficient Cooling">
+                            <div class="discount-badge">Now 69% Off</div>
+                            <a href="https://link.amazon/B0e10nRHS" target="_blank" class="buy-button" rel="noopener sponsored" data-product="L LIVILON Wall Mount Kitchen Utensil Rack Review (2026) – Stainless Steel Wall-Mounted Dish Drying Rack">
                                 <span class="product-price">
-                                    <span class="actual-price">₹18450.00</span>
-                                    <span class="current-price">₹13490.00</span>
+                                    <span class="actual-price">₹4999.00</span>
+                                    <span class="current-price">₹1568.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1012,6 +945,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1279,6 +1215,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1299,7 +1237,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3354e890310009ffa117f49b2d5dbad5e7c1669171786312edb853724aa18d8a">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-61ff06cc07187cdaca0981203f39d602f0f8199dfb289e683198590f9c69f3a5">
   
     
       
@@ -1351,7 +1289,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-3b947509d42daa2a05e05ae7b4ed5ca1fd31970106846719cd59f60e981b862d">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-92a5d818814d6cda3446db52f5e3471ab548da0d69452447a10c570f849b8aeb">
   
     
       
@@ -1361,6 +1299,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1378,13 +1322,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1402,13 +1346,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1424,12 +1368,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

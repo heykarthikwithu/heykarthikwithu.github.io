@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -964,24 +894,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0dDjLqUD" target="_blank" rel="noopener sponsored" data-product="Kuvings B1700 Cold Press Juicer Review (2026) – Premium Slow Juicer for Healthy Living">
-                                <img src="https://m.media-amazon.com/images/I/61V7QKqCERL._SL1500_.jpg" alt="Kuvings B1700 Cold Press Juicer Review (2026) – Premium Slow Juicer for Healthy Living">
+                            <a href="https://amzn.to/4e2YwA1" target="_blank" rel="noopener sponsored" data-product="TEX-RO 3 Layer Expandable Clothes Drying Stand Review (2026) – Foldable Stainless Steel Laundry Rack with Wheels">
+                                <img src="https://m.media-amazon.com/images/I/71mTC2pe25L._SL1500_.jpg" alt="TEX-RO 3 Layer Expandable Clothes Drying Stand Review (2026) – Foldable Stainless Steel Laundry Rack with Wheels">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/kuvings-b1700-cold-press-juicer-review-2026-premium-slow-juicer-healthy-living/" target="_blank" rel="noopener sponsored" data-product="Kuvings B1700 Cold Press Juicer Review (2026) – Premium Slow Juicer for Healthy Living">Kuvings B1700 Cold Press Juicer Review (2026) – Premium Slow Juicer for Healthy Living</a>
+                                <a href="https://thebestproducts.co.in/reviews/tex-ro-3-layer-expandable-clothes-drying-stand-review-2026-foldable-stainless-steel-laundry/" target="_blank" rel="noopener sponsored" data-product="TEX-RO 3 Layer Expandable Clothes Drying Stand Review (2026) – Foldable Stainless Steel Laundry Rack with Wheels">TEX-RO 3 Layer Expandable Clothes Drying Stand Review (2026) – Foldable Stainless Steel Laundry Rack with Wheels</a>
                             </div>
-                            <div class="discount-badge">Now 39% Off</div>
-                            <a href="https://link.amazon/B0dDjLqUD" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Kuvings B1700 Cold Press Juicer Review (2026) – Premium Slow Juicer for Healthy Living">
+                            <div class="discount-badge">Now 34% Off</div>
+                            <a href="https://amzn.to/4e2YwA1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="TEX-RO 3 Layer Expandable Clothes Drying Stand Review (2026) – Foldable Stainless Steel Laundry Rack with Wheels">
                                 <span class="product-price">
-                                    <span class="actual-price">₹35900.00</span>
-                                    <span class="current-price">₹21999.00</span>
+                                    <span class="actual-price">₹3999.00</span>
+                                    <span class="current-price">₹2628.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1238,24 +1171,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/48kJpQt" target="_blank" rel="noopener sponsored" data-product="Titan Karishma Analog Women’s Watch (Champagne Dial) – NM2598YM01">
-                                <img src="https://m.media-amazon.com/images/I/71hC1byRyKL._SL1500_.jpg" alt="Titan Karishma Analog Women’s Watch (Champagne Dial) – NM2598YM01">
+                            <a href="https://amzn.to/4di1CQi" target="_blank" rel="noopener sponsored" data-product="LG UltraGear 24G411A Gaming Monitor Review (2026) – Affordable 144Hz IPS Gaming Monitor for Indian Gamers">
+                                <img src="https://m.media-amazon.com/images/I/71sdHtcSB3L._SL1500_.jpg" alt="LG UltraGear 24G411A Gaming Monitor Review (2026) – Affordable 144Hz IPS Gaming Monitor for Indian Gamers">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/titan-karishma-analog-womens-watch-champagne-dial-nm2598ym01/" target="_blank" rel="noopener sponsored" data-product="Titan Karishma Analog Women’s Watch (Champagne Dial) – NM2598YM01">Titan Karishma Analog Women’s Watch (Champagne Dial) – NM2598YM01</a>
+                                <a href="https://thebestproducts.co.in/reviews/lg-ultragear-24g411a-gaming-monitor-review-2026-affordable-144hz-ips-gaming-monitor-indian/" target="_blank" rel="noopener sponsored" data-product="LG UltraGear 24G411A Gaming Monitor Review (2026) – Affordable 144Hz IPS Gaming Monitor for Indian Gamers">LG UltraGear 24G411A Gaming Monitor Review (2026) – Affordable 144Hz IPS Gaming Monitor for Indian Gamers</a>
                             </div>
-                            <div class="discount-badge">Now 10% Off</div>
-                            <a href="https://amzn.to/48kJpQt" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Titan Karishma Analog Women’s Watch (Champagne Dial) – NM2598YM01">
+                            <div class="discount-badge">Now 62% Off</div>
+                            <a href="https://amzn.to/4di1CQi" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LG UltraGear 24G411A Gaming Monitor Review (2026) – Affordable 144Hz IPS Gaming Monitor for Indian Gamers">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1995.00</span>
-                                    <span class="current-price">₹1795.00</span>
+                                    <span class="actual-price">₹20000.00</span>
+                                    <span class="current-price">₹7699.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1274,6 +1210,8 @@
                     
                         
                     <h4>10. Collaborative Care for Better Outcomes</h4><p>The link between <a href="/articles/everest-base-camp-trek-start-trekking-salleri-and-back-salleri/">oral health</a> and kidney health highlights the importance of collaborative care between dental and medical professionals. By working together, healthcare providers can develop comprehensive care plans that address both oral and systemic health needs. This integrated approach ensures better management of chronic conditions and overall health improvement.</p><p>In conclusion, the connection between oral health and kidney health underscores the importance of maintaining good oral hygiene and managing systemic conditions effectively. By understanding and addressing this link, individuals can reduce the risk of complications and improve their overall well-being. Regular check-ups, preventive measures and a holistic approach to health are essential for achieving optimal outcomes in both oral and kidney health.</p><p>Thanks for reading the dentofacts article, for more such articles read our PeoplesBLOG.</p>
+
+
 
 
 
@@ -1343,7 +1281,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9539e10029835b8696f8fd3286eaca20309b361d5222dcc2cc4be9af6a993a95">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-c6a0f19515440a7ef80c9d98f6d15f1a48361c1a91af9beeb0b149699070ac27">
   
     
       
@@ -1395,7 +1333,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f4e7f4574471b01b3b0e2c3888d0b912c3f361d1fa0bfbd2b8effb868a7006f4">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-eb5a8c9ad450d5356ec2c161ddf7b7404f80371874d2d1b79c55fbe3241078d7">
   
     
       
@@ -1405,6 +1343,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1422,13 +1366,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1446,13 +1390,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1468,12 +1412,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

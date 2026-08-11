@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -970,24 +900,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B06JlvqC1" target="_blank" rel="noopener sponsored" data-product="EUROWRAP Food Wrapping Paper 500g Review (2026) – Greaseproof Butter Paper for Everyday Kitchen Use">
-                                <img src="https://m.media-amazon.com/images/I/714nA7kX6GL._SL1500_.jpg" alt="EUROWRAP Food Wrapping Paper 500g Review (2026) – Greaseproof Butter Paper for Everyday Kitchen Use">
+                            <a href="https://link.amazon/B0eQE94Dp" target="_blank" rel="noopener sponsored" data-product="Nutricook Smart Pot 2 Review (2026) – 9-in-1 Stainless Steel Electric Pressure Cooker">
+                                <img src="https://m.media-amazon.com/images/I/61YwpwVzRSL._SL1500_.jpg" alt="Nutricook Smart Pot 2 Review (2026) – 9-in-1 Stainless Steel Electric Pressure Cooker">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/eurowrap-food-wrapping-paper-500g-review-2026-greaseproof-butter-paper-everyday-kitchen-use/" target="_blank" rel="noopener sponsored" data-product="EUROWRAP Food Wrapping Paper 500g Review (2026) – Greaseproof Butter Paper for Everyday Kitchen Use">EUROWRAP Food Wrapping Paper 500g Review (2026) – Greaseproof Butter Paper for Everyday Kitchen Use</a>
+                                <a href="https://thebestproducts.co.in/reviews/nutricook-smart-pot-2-review-2026-9-1-stainless-steel-electric-pressure-cooker/" target="_blank" rel="noopener sponsored" data-product="Nutricook Smart Pot 2 Review (2026) – 9-in-1 Stainless Steel Electric Pressure Cooker">Nutricook Smart Pot 2 Review (2026) – 9-in-1 Stainless Steel Electric Pressure Cooker</a>
                             </div>
-                            <div class="discount-badge">Now 63% Off</div>
-                            <a href="https://link.amazon/B06JlvqC1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="EUROWRAP Food Wrapping Paper 500g Review (2026) – Greaseproof Butter Paper for Everyday Kitchen Use">
+                            <div class="discount-badge">Now 62% Off</div>
+                            <a href="https://link.amazon/B0eQE94Dp" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Nutricook Smart Pot 2 Review (2026) – 9-in-1 Stainless Steel Electric Pressure Cooker">
                                 <span class="product-price">
-                                    <span class="actual-price">₹398.00</span>
-                                    <span class="current-price">₹149.00</span>
+                                    <span class="actual-price">₹20999.00</span>
+                                    <span class="current-price">₹7999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1245,24 +1178,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/42o9ZF1" target="_blank" rel="noopener sponsored" data-product="realme Narzo 100 Lite 5G Review (2026) – Best Budget 5G Phone with Massive Battery?">
-                                <img src="https://m.media-amazon.com/images/I/81vHnwGKVSL._SL1500_.jpg" alt="realme Narzo 100 Lite 5G Review (2026) – Best Budget 5G Phone with Massive Battery?">
+                            <a href="https://link.amazon/B02B2BqSt" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">
+                                <img src="https://m.media-amazon.com/images/I/81I2HBFYwsL._SL1500_.jpg" alt="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/realme-narzo-100-lite-5g-review-2026-best-budget-5g-phone-massive-battery/" target="_blank" rel="noopener sponsored" data-product="realme Narzo 100 Lite 5G Review (2026) – Best Budget 5G Phone with Massive Battery?">realme Narzo 100 Lite 5G Review (2026) – Best Budget 5G Phone with Massive Battery?</a>
+                                <a href="https://thebestproducts.co.in/reviews/sony-bravia-3-series-65-inch-4k-ai-smart-led-google-tv-review-2026-premium-picture-sony/" target="_blank" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing</a>
                             </div>
-                            <div class="discount-badge">Now 46% Off</div>
-                            <a href="https://amzn.to/42o9ZF1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="realme Narzo 100 Lite 5G Review (2026) – Best Budget 5G Phone with Massive Battery?">
+                            <div class="discount-badge">Now 40% Off</div>
+                            <a href="https://link.amazon/B02B2BqSt" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sony BRAVIA 3 Series 65-inch 4K AI Smart LED Google TV Review (2026) – Premium Picture with Sony Processing">
                                 <span class="product-price">
-                                    <span class="actual-price">₹24999.00</span>
-                                    <span class="current-price">₹13499.00</span>
+                                    <span class="actual-price">₹164900.00</span>
+                                    <span class="current-price">₹98990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1280,6 +1216,8 @@
                     
                         
                     <h4>10. A Balanced Diet for Optimal Gum Health</h4><p>Overall, a balanced diet that includes a variety of nutrients supports optimal gum health. Focusing on nutrient-rich foods and maintaining good oral hygiene practices can prevent gum disease and promote overall oral well-being. Regular dental check-ups and professional cleanings are also essential to complement a healthy diet and ensure comprehensive gum care.</p><p>In conclusion, nutrition plays a vital role in maintaining healthy gums and preventing gum disease. By incorporating essential vitamins, minerals and other nutrients into your diet, you can support gum health, reduce <a href="/articles/how-handle-dental-emergencies-home/">inflammation</a> and enhance overall <a href="/articles/have-you-noticed-tongue-tie-children/">oral health</a>. Prioritizing a balanced diet and practicing good oral hygiene are key components of achieving and maintaining healthy gums.</p><p>Thanks for reading the dentofacts article, for more such articles read our PeoplesBLOG.</p>
+
+
 
 
 
@@ -1349,7 +1287,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a3f78fe4316a2b03630a5442441f4f2d2bab3a2b444d7fced5decb7f60b346f4">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-3e743e51228dc08f9670c50c9b7b71fb9e894285253363ebe3d967c7afd30874">
   
     
       
@@ -1401,7 +1339,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-1309fae9c4dc7d7ecdd4b40a9e7b23e68dc2bfac80a626306e694d0a1e07d074">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-58dca1f2067a8552fc564ce5cc52aa1e5d92ec430fbbe3f6967ad2a55af4b7a4">
   
     
       
@@ -1411,6 +1349,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1428,13 +1372,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1452,13 +1396,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1474,12 +1418,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

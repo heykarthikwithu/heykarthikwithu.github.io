@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -972,24 +902,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4a32kjK" target="_blank" rel="noopener sponsored" data-product="KAFF K-Series KEC 60A Filterless Auto-Clean Kitchen Chimney Review (2026) – 60cm Curved Glass Chimney for Modern Kitchens">
-                                <img src="https://m.media-amazon.com/images/I/51BV81FpwHL._SL1500_.jpg" alt="KAFF K-Series KEC 60A Filterless Auto-Clean Kitchen Chimney Review (2026) – 60cm Curved Glass Chimney for Modern Kitchens">
+                            <a href="https://amzn.to/4wnGm4j" target="_blank" rel="noopener sponsored" data-product="Philips OneChef Smart All in One Cooking Device Review: Smart 33-in-1 Cooking Appliance for Modern Indian Kitchens">
+                                <img src="https://m.media-amazon.com/images/I/71bzQG8e8RL._SL1500_.jpg" alt="Philips OneChef Smart All in One Cooking Device Review: Smart 33-in-1 Cooking Appliance for Modern Indian Kitchens">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/kaff-k-series-kec-60a-filterless-auto-clean-kitchen-chimney-review-2026-60cm-curved-glass/" target="_blank" rel="noopener sponsored" data-product="KAFF K-Series KEC 60A Filterless Auto-Clean Kitchen Chimney Review (2026) – 60cm Curved Glass Chimney for Modern Kitchens">KAFF K-Series KEC 60A Filterless Auto-Clean Kitchen Chimney Review (2026) – 60cm Curved Glass Chimney for Modern Kitchens</a>
+                                <a href="https://thebestproducts.co.in/reviews/philips-onechef-smart-all-one-cooking-device-review-smart-33-1-cooking-appliance-modern/" target="_blank" rel="noopener sponsored" data-product="Philips OneChef Smart All in One Cooking Device Review: Smart 33-in-1 Cooking Appliance for Modern Indian Kitchens">Philips OneChef Smart All in One Cooking Device Review: Smart 33-in-1 Cooking Appliance for Modern Indian Kitchens</a>
                             </div>
-                            <div class="discount-badge">Now 62% Off</div>
-                            <a href="https://amzn.to/4a32kjK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="KAFF K-Series KEC 60A Filterless Auto-Clean Kitchen Chimney Review (2026) – 60cm Curved Glass Chimney for Modern Kitchens">
+                            <div class="discount-badge">Now 3% Off</div>
+                            <a href="https://amzn.to/4wnGm4j" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Philips OneChef Smart All in One Cooking Device Review: Smart 33-in-1 Cooking Appliance for Modern Indian Kitchens">
                                 <span class="product-price">
-                                    <span class="actual-price">₹26590.00</span>
-                                    <span class="current-price">₹9989.00</span>
+                                    <span class="actual-price">₹19995.00</span>
+                                    <span class="current-price">₹19495.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1233,24 +1166,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B06XnKZiA" target="_blank" rel="noopener sponsored" data-product="Pantene Bond Repair Conditioner Review (2026) – Strengthening Conditioner for Damaged Hair">
-                                <img src="https://m.media-amazon.com/images/I/51SiDkxsn0L._SL1500_.jpg" alt="Pantene Bond Repair Conditioner Review (2026) – Strengthening Conditioner for Damaged Hair">
+                            <a href="https://amzn.to/4tGXlgc" target="_blank" rel="noopener sponsored" data-product="Lumio Arc 5 Smart Portable Projector – 1080P, Google TV, Dolby Audio">
+                                <img src="https://m.media-amazon.com/images/I/719ChY6aQ6L._SL1500_.jpg" alt="Lumio Arc 5 Smart Portable Projector – 1080P, Google TV, Dolby Audio">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/pantene-bond-repair-conditioner-review-2026-strengthening-conditioner-damaged-hair/" target="_blank" rel="noopener sponsored" data-product="Pantene Bond Repair Conditioner Review (2026) – Strengthening Conditioner for Damaged Hair">Pantene Bond Repair Conditioner Review (2026) – Strengthening Conditioner for Damaged Hair</a>
+                                <a href="https://thebestproducts.co.in/reviews/lumio-arc-5-smart-portable-projector-1080p-google-tv-dolby-audio/" target="_blank" rel="noopener sponsored" data-product="Lumio Arc 5 Smart Portable Projector – 1080P, Google TV, Dolby Audio">Lumio Arc 5 Smart Portable Projector – 1080P, Google TV, Dolby Audio</a>
                             </div>
-                            <div class="discount-badge">Now 41% Off</div>
-                            <a href="https://link.amazon/B06XnKZiA" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Pantene Bond Repair Conditioner Review (2026) – Strengthening Conditioner for Damaged Hair">
+                            <div class="discount-badge">Now 44% Off</div>
+                            <a href="https://amzn.to/4tGXlgc" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Lumio Arc 5 Smart Portable Projector – 1080P, Google TV, Dolby Audio">
                                 <span class="product-price">
-                                    <span class="actual-price">₹375.00</span>
-                                    <span class="current-price">₹221.00</span>
+                                    <span class="actual-price">₹35999.00</span>
+                                    <span class="current-price">₹19989.97</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1271,6 +1207,8 @@
         
             
         <ul>     <li>Leaving options open.</li>     <li>Flexible with rules and deadlines.</li>     <li>Make and improvise as you go on.</li>     <li>Spontaneous and happy with new things.</li> </ul><p>Now, you would have got four letters from the above four questions.</p><p>Check your overall personality type in the table given below.</p><img>
+
+
 
 
 
@@ -1340,7 +1278,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-046075153d87fb3c2ba66ee63158cc635adf26cd8fc182cba550abf0fc35e487">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-a3fcb90305014ba7e34e9ad6cddec730d4661a89a6c384c54a3197e4185d3303">
   
     
       
@@ -1392,7 +1330,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-de7d3a7b5e9431b4a12debf6107afb8f4420d9a90fa55c34dfb963b3fc019282">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-76528793fd1a079089ef02889bddf64a0bfca69039943130a78b6ba15019f6b0">
   
     
       
@@ -1402,6 +1340,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1419,13 +1363,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1443,13 +1387,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1465,12 +1409,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

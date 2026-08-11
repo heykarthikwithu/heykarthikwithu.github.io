@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/3Pwrxff" target="_blank" rel="noopener sponsored" data-product="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">
-                                <img src="https://m.media-amazon.com/images/I/41f80Qu98zL.jpg" alt="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">
+                            <a href="https://amzn.to/4uPYN0d" target="_blank" rel="noopener sponsored" data-product="Bajaj DMH 90 Neo Desert Air Cooler Review (2026) – High Air Throw Cooler for Large Rooms">
+                                <img src="https://m.media-amazon.com/images/I/51FR4bUi-cL._SL1500_.jpg" alt="Bajaj DMH 90 Neo Desert Air Cooler Review (2026) – High Air Throw Cooler for Large Rooms">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/amazon-echo-4th-gen-premium-sound-powered-dolby-and-alexa-black/" target="_blank" rel="noopener sponsored" data-product="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)</a>
+                                <a href="https://thebestproducts.co.in/reviews/bajaj-dmh-90-neo-desert-air-cooler-review-2026-high-air-throw-cooler-large-rooms/" target="_blank" rel="noopener sponsored" data-product="Bajaj DMH 90 Neo Desert Air Cooler Review (2026) – High Air Throw Cooler for Large Rooms">Bajaj DMH 90 Neo Desert Air Cooler Review (2026) – High Air Throw Cooler for Large Rooms</a>
                             </div>
-                            <div class="discount-badge">Now 0% Off</div>
-                            <a href="https://amzn.to/3Pwrxff" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amazon Echo (4th Gen) | Premium sound powered by Dolby and Alexa (Black)">
+                            <div class="discount-badge">Now 35% Off</div>
+                            <a href="https://amzn.to/4uPYN0d" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bajaj DMH 90 Neo Desert Air Cooler Review (2026) – High Air Throw Cooler for Large Rooms">
                                 <span class="product-price">
-                                    <span class="actual-price">₹9999.00</span>
-                                    <span class="current-price">₹9999.00</span>
+                                    <span class="actual-price">₹16990.00</span>
+                                    <span class="current-price">₹10999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -913,19 +846,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B03NKoIV1" target="_blank" rel="noopener sponsored" data-product="Coocaa 55MINI75Q 55-Inch Mini LED QLED Google TV Review (2026) – Premium Picture Quality at a Competitive Price">
-                                <img src="https://m.media-amazon.com/images/I/81+oa7eQb1L._SL1500_.jpg" alt="Coocaa 55MINI75Q 55-Inch Mini LED QLED Google TV Review (2026) – Premium Picture Quality at a Competitive Price">
+                            <a href="https://amzn.to/4vwAwwK" target="_blank" rel="noopener sponsored" data-product="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">
+                                <img src="https://m.media-amazon.com/images/I/71LdwSEEF5L._SL1500_.jpg" alt="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/coocaa-55mini75q-55-inch-mini-led-qled-google-tv-review-2026-premium-picture-quality/" target="_blank" rel="noopener sponsored" data-product="Coocaa 55MINI75Q 55-Inch Mini LED QLED Google TV Review (2026) – Premium Picture Quality at a Competitive Price">Coocaa 55MINI75Q 55-Inch Mini LED QLED Google TV Review (2026) – Premium Picture Quality at a Competitive Price</a>
+                                <a href="https://thebestproducts.co.in/reviews/indus-valley-stainless-steel-idli-maker-review-2026-versatile-4-1-idli-dhokla-steamer-set/" target="_blank" rel="noopener sponsored" data-product="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set</a>
                             </div>
-                            <div class="discount-badge">Now 52% Off</div>
-                            <a href="https://link.amazon/B03NKoIV1" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Coocaa 55MINI75Q 55-Inch Mini LED QLED Google TV Review (2026) – Premium Picture Quality at a Competitive Price">
+                            <div class="discount-badge">Now 43% Off</div>
+                            <a href="https://amzn.to/4vwAwwK" target="_blank" class="buy-button" rel="noopener sponsored" data-product="The Indus Valley Stainless Steel Idli Maker Review (2026) – Versatile 4-in-1 Idli, Dhokla &amp; Steamer Set">
                                 <span class="product-price">
-                                    <span class="actual-price">₹64999.00</span>
-                                    <span class="current-price">₹31499.00</span>
+                                    <span class="actual-price">₹3849.00</span>
+                                    <span class="current-price">₹2198.99</span>
                                 </span>
 
                                 <span class="product-store">
@@ -940,6 +873,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1087,19 +1023,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4bgldQB" target="_blank" rel="noopener sponsored" data-product="Dell G15 (Intel Core i5-13450HX &amp; RTX 3050) Review (2026) – Powerful Gaming Laptop for Work and Play">
-                                <img src="https://m.media-amazon.com/images/I/61ko2a0owDL._SL1080_.jpg" alt="Dell G15 (Intel Core i5-13450HX &amp; RTX 3050) Review (2026) – Powerful Gaming Laptop for Work and Play">
+                            <a href="https://amzn.to/4uepRpP" target="_blank" rel="noopener sponsored" data-product="URBN 10000mAh MagSafe Wireless Power Bank Review (2026) – Compact Magnetic Fast Charging Power Bank">
+                                <img src="https://m.media-amazon.com/images/I/71KTxUO6S3L._SL1500_.jpg" alt="URBN 10000mAh MagSafe Wireless Power Bank Review (2026) – Compact Magnetic Fast Charging Power Bank">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/dell-g15-intel-core-i5-13450hx-rtx-3050-review-2026-powerful-gaming-laptop-work-and-play/" target="_blank" rel="noopener sponsored" data-product="Dell G15 (Intel Core i5-13450HX &amp; RTX 3050) Review (2026) – Powerful Gaming Laptop for Work and Play">Dell G15 (Intel Core i5-13450HX &amp; RTX 3050) Review (2026) – Powerful Gaming Laptop for Work and Play</a>
+                                <a href="https://thebestproducts.co.in/reviews/urbn-10000mah-magsafe-wireless-power-bank-review-2026-compact-magnetic-fast-charging-power/" target="_blank" rel="noopener sponsored" data-product="URBN 10000mAh MagSafe Wireless Power Bank Review (2026) – Compact Magnetic Fast Charging Power Bank">URBN 10000mAh MagSafe Wireless Power Bank Review (2026) – Compact Magnetic Fast Charging Power Bank</a>
                             </div>
-                            <div class="discount-badge">Now 20% Off</div>
-                            <a href="https://amzn.to/4bgldQB" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Dell G15 (Intel Core i5-13450HX &amp; RTX 3050) Review (2026) – Powerful Gaming Laptop for Work and Play">
+                            <div class="discount-badge">Now 68% Off</div>
+                            <a href="https://amzn.to/4uepRpP" target="_blank" class="buy-button" rel="noopener sponsored" data-product="URBN 10000mAh MagSafe Wireless Power Bank Review (2026) – Compact Magnetic Fast Charging Power Bank">
                                 <span class="product-price">
-                                    <span class="actual-price">₹105398.00</span>
-                                    <span class="current-price">₹83990.00</span>
+                                    <span class="actual-price">₹3999.00</span>
+                                    <span class="current-price">₹1299.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1114,6 +1050,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1302,6 +1241,8 @@
 
 
 
+
+
 </html></div>
       
 
@@ -1324,7 +1265,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-5ac7df4a778ee2d376ed4020af4c8085d7909064ef4e685ed7a4448421b69070">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e883aa4c1fa692c5a16e5092b72d6c5e8eadad0ec83e86974da517c71d11ec5b">
   
     
       
@@ -1376,7 +1317,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-86c299f011ff49f9ca73fecbea53235f4de8ecd01496cc8f99172935bb8e3878">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-656d0f516dd5ee80b59ebe451070c2ccd9589aeca50595bb86822e20f1716e6c">
   
     
       
@@ -1386,6 +1327,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1403,13 +1350,13 @@
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1427,13 +1374,13 @@
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1449,12 +1396,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>

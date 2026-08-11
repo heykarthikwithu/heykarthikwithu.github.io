@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-oK7Jf_V-ZeoYFiVY2aSiNrY6YKiaiZsX9Rs-4gIejQ.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjjaul" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjl6uy" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -654,77 +654,7 @@
           <path d="M15.4 6.5 8.6 10.5"></path>
         </svg>
       </a>
-            <script>
-        const STORAGE_KEY = "bookmarks";
-        const PAGE = "https://peoplesblog.co.in" + location.pathname;
-
-        function sharePage(e) {
-          e.preventDefault();
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: location.href
-            });
-          }
-        }
-
-        function getBookmarks() {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        }
-
-        function saveBookmarks(bookmarks) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
-        }
-
-        function updateBookmarkIcon() {
-          const bookmarked = getBookmarks().some(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          document
-            .getElementById("bookmark-icon")
-            .setAttribute("fill", bookmarked ? "currentColor" : "none");
-        }
-
-        function toggleBookmark(e) {
-          e.preventDefault();
-
-          let bookmarks = getBookmarks();
-
-          const index = bookmarks.findIndex(bookmark =>
-            typeof bookmark === "string"
-              ? bookmark === PAGE
-              : bookmark.url === PAGE
-          );
-
-          if (index > -1) {
-            bookmarks.splice(index, 1);
-          } else {
-            bookmarks.push({
-              title: document.title,
-              url: PAGE,
-              published:
-                document.querySelector(".pb-meta")
-                  ?.textContent.match(/Published:\s*(.*)$/)?.[1]
-                  ?.trim() || "",
-              bookmarked: new Date().toISOString(),
-              image:
-                document.querySelector('meta[property="og:image"]')
-                  ?.content || "",
-              summary:
-                document.querySelector('meta[name="description"]')
-                  ?.content || ""
-            });
-          }
-
-          saveBookmarks(bookmarks);
-          updateBookmarkIcon();
-        }
-
-        updateBookmarkIcon();
-      </script>
+            <script src="/modules/custom/pb_frontend/js/share-bookmark.js"></script>
           </header>
   <div class="node__content layout--content-narrow">
         
@@ -739,19 +669,19 @@
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4pdCrEl" target="_blank" rel="noopener sponsored" data-product="OnePlus Pad Go 2 Review (2026) – Large 2.8K 120Hz 5G Tablet for Entertainment, Productivity &amp; Learning">
-                                <img src="https://m.media-amazon.com/images/I/615bUsxJQHL._SL1500_.jpg" alt="OnePlus Pad Go 2 Review (2026) – Large 2.8K 120Hz 5G Tablet for Entertainment, Productivity &amp; Learning">
+                            <a href="https://amzn.to/3QWtNNg" target="_blank" rel="noopener sponsored" data-product="Godrej 223L Frost Free Double Door Refrigerator Review (2026) – Smart Cooling for Modern Indian Families">
+                                <img src="https://m.media-amazon.com/images/I/61fwabSRkWL._SL1500_.jpg" alt="Godrej 223L Frost Free Double Door Refrigerator Review (2026) – Smart Cooling for Modern Indian Families">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/oneplus-pad-go-2-review-2026-large-28k-120hz-5g-tablet-entertainment-productivity-learning/" target="_blank" rel="noopener sponsored" data-product="OnePlus Pad Go 2 Review (2026) – Large 2.8K 120Hz 5G Tablet for Entertainment, Productivity &amp; Learning">OnePlus Pad Go 2 Review (2026) – Large 2.8K 120Hz 5G Tablet for Entertainment, Productivity &amp; Learning</a>
+                                <a href="https://thebestproducts.co.in/reviews/godrej-223l-frost-free-double-door-refrigerator-review-2026-smart-cooling-modern-indian/" target="_blank" rel="noopener sponsored" data-product="Godrej 223L Frost Free Double Door Refrigerator Review (2026) – Smart Cooling for Modern Indian Families">Godrej 223L Frost Free Double Door Refrigerator Review (2026) – Smart Cooling for Modern Indian Families</a>
                             </div>
-                            <div class="discount-badge">Now 3% Off</div>
-                            <a href="https://amzn.to/4pdCrEl" target="_blank" class="buy-button" rel="noopener sponsored" data-product="OnePlus Pad Go 2 Review (2026) – Large 2.8K 120Hz 5G Tablet for Entertainment, Productivity &amp; Learning">
+                            <div class="discount-badge">Now 0% Off</div>
+                            <a href="https://amzn.to/3QWtNNg" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Godrej 223L Frost Free Double Door Refrigerator Review (2026) – Smart Cooling for Modern Indian Families">
                                 <span class="product-price">
-                                    <span class="actual-price">₹35999.00</span>
-                                    <span class="current-price">₹34999.00</span>
+                                    <span class="actual-price">₹21490.00</span>
+                                    <span class="current-price">₹21490.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -766,6 +696,9 @@
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -932,19 +865,19 @@ catch (PDOException $e) {
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4eM3nYA" target="_blank" rel="noopener sponsored" data-product="ASUS TUF A15 (2026) Review – Budget Gaming Laptop with Ryzen 7 &amp; RTX 3050 Performance">
-                                <img src="https://m.media-amazon.com/images/I/81nPkLHN3vL._SL1500_.jpg" alt="ASUS TUF A15 (2026) Review – Budget Gaming Laptop with Ryzen 7 &amp; RTX 3050 Performance">
+                            <a href="https://amzn.to/4tnZ49h" target="_blank" rel="noopener sponsored" data-product="Ninja Air Fryer MAX PRO 6.2L (AF180IN) Review: Powerful 6-in-1 Air Fryer with Max Crisp Technology">
+                                <img src="https://m.media-amazon.com/images/I/51dlx59fRNL._SL1500_.jpg" alt="Ninja Air Fryer MAX PRO 6.2L (AF180IN) Review: Powerful 6-in-1 Air Fryer with Max Crisp Technology">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/asus-tuf-a15-2026-review-budget-gaming-laptop-ryzen-7-rtx-3050-performance/" target="_blank" rel="noopener sponsored" data-product="ASUS TUF A15 (2026) Review – Budget Gaming Laptop with Ryzen 7 &amp; RTX 3050 Performance">ASUS TUF A15 (2026) Review – Budget Gaming Laptop with Ryzen 7 &amp; RTX 3050 Performance</a>
+                                <a href="https://thebestproducts.co.in/reviews/ninja-air-fryer-max-pro-62l-af180in-review-powerful-6-1-air-fryer-max-crisp-technology/" target="_blank" rel="noopener sponsored" data-product="Ninja Air Fryer MAX PRO 6.2L (AF180IN) Review: Powerful 6-in-1 Air Fryer with Max Crisp Technology">Ninja Air Fryer MAX PRO 6.2L (AF180IN) Review: Powerful 6-in-1 Air Fryer with Max Crisp Technology</a>
                             </div>
-                            <div class="discount-badge">Now 19% Off</div>
-                            <a href="https://amzn.to/4eM3nYA" target="_blank" class="buy-button" rel="noopener sponsored" data-product="ASUS TUF A15 (2026) Review – Budget Gaming Laptop with Ryzen 7 &amp; RTX 3050 Performance">
+                            <div class="discount-badge">Now 27% Off</div>
+                            <a href="https://amzn.to/4tnZ49h" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Ninja Air Fryer MAX PRO 6.2L (AF180IN) Review: Powerful 6-in-1 Air Fryer with Max Crisp Technology">
                                 <span class="product-price">
-                                    <span class="actual-price">₹83990.00</span>
-                                    <span class="current-price">₹67990.00</span>
+                                    <span class="actual-price">₹14990.00</span>
+                                    <span class="current-price">₹10999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -959,6 +892,9 @@ catch (PDOException $e) {
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1145,19 +1081,19 @@ public class Main {
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4oppab7" target="_blank" rel="noopener sponsored" data-product="GoSriKi Cotton Blend Embroidered A-Line Kurta Set Review (2026) – Elegant Kurta with Palazzo for Ethnic &amp; Casual Wear">
-                                <img src="https://m.media-amazon.com/images/I/714qY-UavkL._SY879_.jpg" alt="GoSriKi Cotton Blend Embroidered A-Line Kurta Set Review (2026) – Elegant Kurta with Palazzo for Ethnic &amp; Casual Wear">
+                            <a href="https://amzn.to/48QSe4N" target="_blank" rel="noopener sponsored" data-product="Daikin 1.5 Ton 3 Star, New Star rated, Inverter Split AC (Copper, PM2.5 Filter, MTKL50XV16, White)">
+                                <img src="https://m.media-amazon.com/images/I/61aNUgUz6EL._SL1500_.jpg" alt="Daikin 1.5 Ton 3 Star, New Star rated, Inverter Split AC (Copper, PM2.5 Filter, MTKL50XV16, White)">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/gosriki-cotton-blend-embroidered-line-kurta-set-review-2026-elegant-kurta-palazzo-ethnic/" target="_blank" rel="noopener sponsored" data-product="GoSriKi Cotton Blend Embroidered A-Line Kurta Set Review (2026) – Elegant Kurta with Palazzo for Ethnic &amp; Casual Wear">GoSriKi Cotton Blend Embroidered A-Line Kurta Set Review (2026) – Elegant Kurta with Palazzo for Ethnic &amp; Casual Wear</a>
+                                <a href="https://thebestproducts.co.in/reviews/daikin-15-ton-3-star-new-star-rated-inverter-split-ac-copper-pm25-filter-mtkl50xv16-white/" target="_blank" rel="noopener sponsored" data-product="Daikin 1.5 Ton 3 Star, New Star rated, Inverter Split AC (Copper, PM2.5 Filter, MTKL50XV16, White)">Daikin 1.5 Ton 3 Star, New Star rated, Inverter Split AC (Copper, PM2.5 Filter, MTKL50XV16, White)</a>
                             </div>
-                            <div class="discount-badge">Now 72% Off</div>
-                            <a href="https://amzn.to/4oppab7" target="_blank" class="buy-button" rel="noopener sponsored" data-product="GoSriKi Cotton Blend Embroidered A-Line Kurta Set Review (2026) – Elegant Kurta with Palazzo for Ethnic &amp; Casual Wear">
+                            <div class="discount-badge">Now 34% Off</div>
+                            <a href="https://amzn.to/48QSe4N" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Daikin 1.5 Ton 3 Star, New Star rated, Inverter Split AC (Copper, PM2.5 Filter, MTKL50XV16, White)">
                                 <span class="product-price">
-                                    <span class="actual-price">₹2599.00</span>
-                                    <span class="current-price">₹719.00</span>
+                                    <span class="actual-price">₹56100.00</span>
+                                    <span class="current-price">₹36990.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1172,6 +1108,9 @@ public class Main {
                     </div>
                 </div>
             </div>
+            
+                
+            
             
                 
             
@@ -1357,6 +1296,8 @@ public class Main {
 
 
 
+
+
 </html></div>
       
 
@@ -1379,7 +1320,7 @@ public class Main {
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-259ca12bc86511111dba60b8f9dd73a2f145a238e0ebe0ea7868cd0c2c6e7aa0">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-546a5b9756a24c3ae1362ca55aca3fa361f395318d96cf532e1322f07e96cc85">
   
     
       
@@ -1431,7 +1372,7 @@ public class Main {
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-076a4d1e5c018e40f6cf01bee5b654fadc6eedbd015be0333e164e7961a0e8ed">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-4dffe3c1b7f3a35f2efd2aa9e3f8404d2a9760d71f13c63efefe85338d6deadf">
   
     
       
@@ -1441,6 +1382,12 @@ public class Main {
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/egg-fried-rice-south-indian-style-easy-spicy-and-flavorful-homemade-recipe/" title="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <img src="/sites/default/files/2026-08/egg-fried-rice-south-indian-style.webp" alt="Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe">
+  <h4>Egg Fried Rice South Indian Style: Easy, Spicy and Flavorful Homemade Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/digestive-system-simulation-science-experiment-children-learn-how-food-moves-through-human/" title="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <img src="/sites/default/files/2026-08/digestive-system-simulation-science-experiment-for-children-to-learn-how-food-moves-through-the-human-body.webp" alt="Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body">
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
@@ -1458,13 +1405,13 @@ public class Main {
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/how-ai-changing-software-development-2026-future-every-developer-should-understand/" title="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <img src="/sites/default/files/2026-08/how-ai-is-changing-software-development-in-2026-the-future-every-developer-should-understand.webp" alt="How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand">
   <h4>How AI Is Changing Software Development in 2026: The Future Every Developer Should Understand</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
@@ -1482,13 +1429,13 @@ public class Main {
   <h4>Why Good Sex Requires a Healthy Nervous System</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengaluru/" title="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <img src="/sites/default/files/2026-07/bangalore-to-yercaud.webp" alt="Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru">
   <h4>Bangalore to Yercaud Scenic Drive – The Perfect Weekend Road Trip from Bengaluru</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/some-most-common-passive-aggressive-phrases-youre-probably-using-your-kids/" title="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <img src="/sites/default/files/2026-07/some-of-the-most-common-passive-aggressive-phrases-you-re-probably-using-with-your-kids.webp" alt="Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids">
   <h4>Some of the Most Common Passive-Aggressive Phrases You&#039;re Probably Using with Your Kids</h4>
@@ -1504,12 +1451,6 @@ public class Main {
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/right-way-store-leftovers-so-they-last-longer/" title="The Right Way to Store Leftovers So They Last Longer">
   <img src="/sites/default/files/2026-07/guide-to-keeping-leftover-food-fresh-safe-and-delicious.webp" alt="The Right Way to Store Leftovers So They Last Longer">
   <h4>The Right Way to Store Leftovers So They Last Longer</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/anjali-gupta-indian-air-force-officer-biography-career-controversy-and-legacy/" title="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <img src="/sites/default/files/2026-07/anjali-gupta-indian-air-force-officer.webp" alt="Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy">
-  <h4>Anjali Gupta (Indian Air Force Officer): Biography, Career, Controversy, and Legacy</h4>
 </a></span></div></div>
       </div>
       </div>
