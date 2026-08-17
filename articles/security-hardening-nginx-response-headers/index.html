@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1az67oNL6tzCDzPDFiVSm_PQHjnhRtCwYTwR8ZeW4J0.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjugee" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjwao6" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -672,7 +672,39 @@
         <h3>HTTP Header Vulnerable vs Secured..?</h3>
             
             
-            <p>To note, the less information you expose on the Internet, the less data a penetration tester or real malicious attacker will find.</p><p>Let's look at two examples, a vulnerable HTTP header vs a hardened HTTP header.</p><h5>1. Vulnerable HTTP Header example</h5><pre>$ curl -I http://drupal.localHTTP/1.1 200 OKServer: nginx/1.18.0Content-Type: text/html; charset=UTF-8</pre><p>You can see a few headers vulnerable like, nginx server version is exposed as 1.18.0.</p><h5>2. Hardened HTTP header example</h5><p>Lets see the example of hardened headers below, where the server version is hidden and other headers like content-security-policy, x-frame-options etc are set.</p><pre>$ curl -I https://www.drupal.orgHTTP/2 200server: nginxcontent-type: text/html; charset=utf-8x-drupal-cache: MISSx-ua-compatible: IE=edgefastly-restarts: 1x-content-type-options: nosniffx-frame-options: SAMEORIGINcontent-security-policy: frame-ancestors 'self'permissions-policy: interest-cohort=()strict-transport-security: max-age=15552000; includeSubDomains; preloadcontent-length: 100930</pre><h3>Tips to Secure and Harden HTTP Response Headers!</h3>
+            <p>To note, the less information you expose on the Internet, the less data a penetration tester or real malicious attacker will find.</p><p>Let's look at two examples, a vulnerable HTTP header vs a hardened HTTP header.</p><h5>1. Vulnerable HTTP Header example</h5><pre>$ curl -I http://drupal.localHTTP/1.1 200 OKServer: nginx/1.18.0Content-Type: text/html; charset=UTF-8</pre><p>You can see a few headers vulnerable like, nginx server version is exposed as 1.18.0.</p><h5>2. Hardened HTTP header example</h5><p>Lets see the example of hardened headers below, where the server version is hidden and other headers like content-security-policy, x-frame-options etc are set.</p><pre>$ curl -I https://www.drupal.orgHTTP/2 200server: nginxcontent-type: text/html; charset=utf-8x-drupal-cache: MISSx-ua-compatible: IE=edgefastly-restarts: 1x-content-type-options: nosniffx-frame-options: SAMEORIGINcontent-security-policy: frame-ancestors 'self'permissions-policy: interest-cohort=()strict-transport-security: max-age=15552000; includeSubDomains; preloadcontent-length: 100930</pre>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/4nrmzx0" target="_blank" rel="noopener sponsored" data-product="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">
+                                <img src="https://m.media-amazon.com/images/I/41uhq+RCm7L._SL1080_.jpg" alt="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://thebestproducts.co.in/reviews/american-tourister-ivy-20-medium-trolley-bag-review-2026-durable-stylish-travel-suitcase/" target="_blank" rel="noopener sponsored" data-product="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers</a>
+                            </div>
+                            <div class="discount-badge">Now 67% Off</div>
+                            <a href="https://amzn.to/4nrmzx0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">
+                                <span class="product-price">
+                                    <span class="actual-price">₹8450.00</span>
+                                    <span class="current-price">₹2799.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><h3>Tips to Secure and Harden HTTP Response Headers!</h3>
         
             
         
@@ -920,24 +952,27 @@
             
                 
             
+            
+                
+            <h4>1. Hide PHP version</h4><p>The PHP version can be disabled by altering PHP <a href="/articles/fix-drupal-update-manager-error-settings-already-exist/" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> i.e by modifying the expose_php variable from the php.ini file.</p><p><code>expose_php = Off</code></p><h4>2. Hide Nginx server version</h4><p>The server_tokens variable allows you to hide the nginx version in the response headers.</p><p><code>ServerTokens off</code></p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/4ovWOMk" target="_blank" rel="noopener sponsored" data-product="CHKOKKO Women’s Dry Fit Gym T-Shirt Review (2026) – Lightweight Activewear for Workout, Running &amp; Yoga">
-                                <img src="https://m.media-amazon.com/images/I/51NKq-dfo9L._SY879_.jpg" alt="CHKOKKO Women’s Dry Fit Gym T-Shirt Review (2026) – Lightweight Activewear for Workout, Running &amp; Yoga">
+                            <a href="https://link.amazon/B08tRDS6D" target="_blank" rel="noopener sponsored" data-product="Bosch TrueMixx Pro MGM8642BIN Mixer Grinder Review (2026) – Powerful 750W Kitchen Companion">
+                                <img src="https://m.media-amazon.com/images/I/71nBpK+0uJL._SL1500_.jpg" alt="Bosch TrueMixx Pro MGM8642BIN Mixer Grinder Review (2026) – Powerful 750W Kitchen Companion">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/chkokko-womens-dry-fit-gym-t-shirt-review-2026-lightweight-activewear-workout-running-yoga/" target="_blank" rel="noopener sponsored" data-product="CHKOKKO Women’s Dry Fit Gym T-Shirt Review (2026) – Lightweight Activewear for Workout, Running &amp; Yoga">CHKOKKO Women’s Dry Fit Gym T-Shirt Review (2026) – Lightweight Activewear for Workout, Running &amp; Yoga</a>
+                                <a href="https://thebestproducts.co.in/reviews/bosch-truemixx-pro-mgm8642bin-mixer-grinder-review-2026-powerful-750w-kitchen-companion/" target="_blank" rel="noopener sponsored" data-product="Bosch TrueMixx Pro MGM8642BIN Mixer Grinder Review (2026) – Powerful 750W Kitchen Companion">Bosch TrueMixx Pro MGM8642BIN Mixer Grinder Review (2026) – Powerful 750W Kitchen Companion</a>
                             </div>
-                            <div class="discount-badge">Now 80% Off</div>
-                            <a href="https://amzn.to/4ovWOMk" target="_blank" class="buy-button" rel="noopener sponsored" data-product="CHKOKKO Women’s Dry Fit Gym T-Shirt Review (2026) – Lightweight Activewear for Workout, Running &amp; Yoga">
+                            <div class="discount-badge">Now 38% Off</div>
+                            <a href="https://link.amazon/B08tRDS6D" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bosch TrueMixx Pro MGM8642BIN Mixer Grinder Review (2026) – Powerful 750W Kitchen Companion">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1999.00</span>
-                                    <span class="current-price">₹398.00</span>
+                                    <span class="actual-price">₹9840.00</span>
+                                    <span class="current-price">₹6099.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -951,7 +986,7 @@
                         </div>
                     </div>
                 </div>
-            </div><h4>1. Hide PHP version</h4><p>The PHP version can be disabled by altering PHP <a href="/articles/fix-drupal-update-manager-error-settings-already-exist/" title="Read about Unable To Install Update Manager Update Settings Already Exists In Active Configuration">configuration</a> i.e by modifying the expose_php variable from the php.ini file.</p><p><code>expose_php = Off</code></p><h4>2. Hide Nginx server version</h4><p>The server_tokens variable allows you to hide the nginx version in the response headers.</p><p><code>ServerTokens off</code></p><h4>3. Enable Content Security Policy (CSP)</h4><p>Content Security Policy defines which resources from your websites can be loaded by any remote web browser, including Javascript and CSS files.</p><p><code>Content-Security-Policy: default-src 'self' \*.drupal.local</code><br>                                    <code>Content-Security-Policy: script-src 'self' https://www.google-analytics.com</code>                                    <br><br>                                    <code>add_header Content-Security-Policy-Report-Only: "default-src 'self'; script-src *.drupal.local";</code></p><h4>4. Enable HTTP Strict Transport Security</h4>
+            </div><h4>3. Enable Content Security Policy (CSP)</h4><p>Content Security Policy defines which resources from your websites can be loaded by any remote web browser, including Javascript and CSS files.</p><p><code>Content-Security-Policy: default-src 'self' \*.drupal.local</code><br>                                    <code>Content-Security-Policy: script-src 'self' https://www.google-analytics.com</code>                                    <br><br>                                    <code>add_header Content-Security-Policy-Report-Only: "default-src 'self'; script-src *.drupal.local";</code></p><h4>4. Enable HTTP Strict Transport Security</h4>
         
             
         <p>You can reduce the chances of becoming a victim to a man-in-the-middle attack by enabling HTTP Strict Transport Security.</p><pre>server {    listen 443 ssl    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;}</pre>
@@ -1199,24 +1234,27 @@
             
                 
             
+            
+                
+            <h4>5. Enable X-Content-Type-Options</h4><p>You can ensure the browser will render the data as original and not as any other by adding the X-Content-Type-Options.</p><p><code>add_header X-Content-Type-Options "nosniff" always;</code></p>
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B0baDdy8X" target="_blank" rel="noopener sponsored" data-product="Sheesham Wood Queen Size Bed Review (2026) – Solid Wooden Double Bed with Elegant Teak Finish">
-                                <img src="https://m.media-amazon.com/images/I/810BM6prPHL._SL1500_.jpg" alt="Sheesham Wood Queen Size Bed Review (2026) – Solid Wooden Double Bed with Elegant Teak Finish">
+                            <a href="https://amzn.to/3SJjfC2" target="_blank" rel="noopener sponsored" data-product="Xiaomi FX Pro 43-Inch QLED 4K Fire TV Review (2026) – Feature-Packed Smart TV for Everyday Entertainment">
+                                <img src="https://m.media-amazon.com/images/I/81O3Otf3bPL._SL1500_.jpg" alt="Xiaomi FX Pro 43-Inch QLED 4K Fire TV Review (2026) – Feature-Packed Smart TV for Everyday Entertainment">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/sheesham-wood-queen-size-bed-review-2026-solid-wooden-double-bed-elegant-teak-finish/" target="_blank" rel="noopener sponsored" data-product="Sheesham Wood Queen Size Bed Review (2026) – Solid Wooden Double Bed with Elegant Teak Finish">Sheesham Wood Queen Size Bed Review (2026) – Solid Wooden Double Bed with Elegant Teak Finish</a>
+                                <a href="https://thebestproducts.co.in/reviews/xiaomi-fx-pro-43-inch-qled-4k-fire-tv-review-2026-feature-packed-smart-tv-everyday/" target="_blank" rel="noopener sponsored" data-product="Xiaomi FX Pro 43-Inch QLED 4K Fire TV Review (2026) – Feature-Packed Smart TV for Everyday Entertainment">Xiaomi FX Pro 43-Inch QLED 4K Fire TV Review (2026) – Feature-Packed Smart TV for Everyday Entertainment</a>
                             </div>
-                            <div class="discount-badge">Now 47% Off</div>
-                            <a href="https://link.amazon/B0baDdy8X" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Sheesham Wood Queen Size Bed Review (2026) – Solid Wooden Double Bed with Elegant Teak Finish">
+                            <div class="discount-badge">Now 41% Off</div>
+                            <a href="https://amzn.to/3SJjfC2" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Xiaomi FX Pro 43-Inch QLED 4K Fire TV Review (2026) – Feature-Packed Smart TV for Everyday Entertainment">
                                 <span class="product-price">
-                                    <span class="actual-price">₹25198.00</span>
-                                    <span class="current-price">₹13247.00</span>
+                                    <span class="actual-price">₹44999.00</span>
+                                    <span class="current-price">₹26499.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1230,7 +1268,7 @@
                         </div>
                     </div>
                 </div>
-            </div><h4>5. Enable X-Content-Type-Options</h4><p>You can ensure the browser will render the data as original and not as any other by adding the X-Content-Type-Options.</p><p><code>add_header X-Content-Type-Options "nosniff" always;</code></p><h4>6. Enable X-Frame-Options</h4><p>In case, if Iframes are used then clickjacking attacks can be done, with this sensitive data from users can be stolen. So to reduce this risk, have the X-Frame-Options in headers.</p><p><code>add_header X-Frame-Options "SAMEORIGIN" always;</code></p><h4>7. Enable Referrer Policy</h4>
+            </div><h4>6. Enable X-Frame-Options</h4><p>In case, if Iframes are used then clickjacking attacks can be done, with this sensitive data from users can be stolen. So to reduce this risk, have the X-Frame-Options in headers.</p><p><code>add_header X-Frame-Options "SAMEORIGIN" always;</code></p><h4>7. Enable Referrer Policy</h4>
                     
                         
                     <p>Referrer Policy allows you to control what information can be included in the Referrer header while navigating from pages on your site. By doing this makes it impossible to track these requests while navigating away from your site.</p><p><code>add_header Referrer-Policy "origin-when-cross-origin" always;</code></p>
@@ -1487,24 +1525,27 @@
             
                 
             
+            
+                
+            
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B02l3AcuR" target="_blank" rel="noopener sponsored" data-product="MARS Edge of Desire Lip Liner 14 Choco Butter Review (2026) – Smooth &amp; Long-Lasting Lip Pencil">
-                                <img src="https://m.media-amazon.com/images/I/61DdcIqIN3L._SX679_.jpg" alt="MARS Edge of Desire Lip Liner 14 Choco Butter Review (2026) – Smooth &amp; Long-Lasting Lip Pencil">
+                            <a href="https://amzn.to/3QuzzG0" target="_blank" rel="noopener sponsored" data-product="Philips 65-Inch QD-Mini LED 4K Smart Google TV – Premium Picture Quality Upgrade">
+                                <img src="https://m.media-amazon.com/images/I/81b5WyRiUnL._SL1500_.jpg" alt="Philips 65-Inch QD-Mini LED 4K Smart Google TV – Premium Picture Quality Upgrade">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/mars-edge-desire-lip-liner-14-choco-butter-review-2026-smooth-long-lasting-lip-pencil/" target="_blank" rel="noopener sponsored" data-product="MARS Edge of Desire Lip Liner 14 Choco Butter Review (2026) – Smooth &amp; Long-Lasting Lip Pencil">MARS Edge of Desire Lip Liner 14 Choco Butter Review (2026) – Smooth &amp; Long-Lasting Lip Pencil</a>
+                                <a href="https://thebestproducts.co.in/reviews/philips-65-inch-qd-mini-led-4k-smart-google-tv-premium-picture-quality-upgrade/" target="_blank" rel="noopener sponsored" data-product="Philips 65-Inch QD-Mini LED 4K Smart Google TV – Premium Picture Quality Upgrade">Philips 65-Inch QD-Mini LED 4K Smart Google TV – Premium Picture Quality Upgrade</a>
                             </div>
-                            <div class="discount-badge">Now 20% Off</div>
-                            <a href="https://link.amazon/B02l3AcuR" target="_blank" class="buy-button" rel="noopener sponsored" data-product="MARS Edge of Desire Lip Liner 14 Choco Butter Review (2026) – Smooth &amp; Long-Lasting Lip Pencil">
+                            <div class="discount-badge">Now 42% Off</div>
+                            <a href="https://amzn.to/3QuzzG0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Philips 65-Inch QD-Mini LED 4K Smart Google TV – Premium Picture Quality Upgrade">
                                 <span class="product-price">
-                                    <span class="actual-price">₹69.00</span>
-                                    <span class="current-price">₹55.00</span>
+                                    <span class="actual-price">₹99999.00</span>
+                                    <span class="current-price">₹57999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1519,6 +1560,8 @@
                     </div>
                 </div>
             </div><h4>9. Configure SSL and Cipher Suites</h4><p>Default configuration of nginx will use insecure old versions of the TLS protocol. This may lead to attacks such as the BEAST attack. So you can configure nginx to have TLSv1.2 or v1.3.</p><p>Additionally, you should specify cipher suites to make sure that no vulnerable suites are supported.</p><pre>ssl_protocols TLSv1.2 TLSv1.3;ssl_prefer_server_ciphers on;</pre><p>So, by having such response headers configured on the web server, we can make sure the website is not prone to vulnerabilities and be safe from attacks.</p>
+
+
 
 
 
@@ -1601,7 +1644,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-ea6d470e971e206fa934133261421bf15a7bcde8b9fe4bc8afe59af6519e153a">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-faaf287ef739aa4f434beda59e30f87398149d8acbb18498d4c0ece6f94f8581">
   
     
       
@@ -1653,7 +1696,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-e8ffabcd6823bce4c161f1fa92b72dbb9e530efce102b6cf4e129a34a758b275">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-853684033d593ded5cf9c5ae3aa9530239d94e922e0b49ad9fa060989e712404">
   
     
       
@@ -1663,6 +1706,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-somanathapura-temple-one-day-solo-trip/" title="Bangalore to Somanathapura Temple One-Day Solo Trip">
+  <img src="/sites/default/files/2026-08/bangalore-to-somanathapura-temple-one-day-solo-trip.webp" alt="Bangalore to Somanathapura Temple One-Day Solo Trip">
+  <h4>Bangalore to Somanathapura Temple One-Day Solo Trip</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/what-happens-when-me-time-becomes-we-time-joy-exploring-together/" title="What Happens When “Me-Time” Becomes “We-Time”? The Joy of Exploring Together">
   <img src="/sites/default/files/2026-08/what-happens-when-me-time-becomes-we-time-the-joy-of-exploring-together.webp" alt="What Happens When “Me-Time” Becomes “We-Time”? The Joy of Exploring Together">
   <h4>What Happens When “Me-Time” Becomes “We-Time”? The Joy of Exploring Together</h4>
@@ -1680,13 +1729,13 @@
   <h4>Why Celebrating Small Achievements Can Improve Motivation, Confidence, and Everyday Happiness</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/four-friends-moral-story-about-friendship-unity-and-teamwork/" title="The Four Friends: A Moral Story About Friendship, Unity, and Teamwork">
   <img src="/sites/default/files/2026-08/the-four-friends-a-moral-story-about-friendship-unity-and-teamwork.webp" alt="The Four Friends: A Moral Story About Friendship, Unity, and Teamwork">
   <h4>The Four Friends: A Moral Story About Friendship, Unity, and Teamwork</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rangeya-raghav-biography-literary-works-philosophy-and-legacy/" title="Rangeya Raghav: Biography, Literary Works, Philosophy, and Legacy">
   <img src="/sites/default/files/2026-08/rangeya-raghav.webp" alt="Rangeya Raghav: Biography, Literary Works, Philosophy, and Legacy">
   <h4>Rangeya Raghav: Biography, Literary Works, Philosophy, and Legacy</h4>
@@ -1704,13 +1753,13 @@
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips/" title="Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips">
   <img src="/sites/default/files/2026-08/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips.webp" alt="Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips">
   <h4>Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/tenali-rama-and-trader-timeless-moral-story-about-honesty-intelligence-and-value-truth/" title="Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth">
   <img src="/sites/default/files/2026-08/tenali-rama-and-the-trader-a-timeless-moral-story-about-honesty-intelligence-and-the-value-of-truth.webp" alt="Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth">
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
@@ -1726,12 +1775,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-mouse/" title="The Little Mouse">
-  <img src="/sites/default/files/2026-07/the-little-mouse.webp" alt="The Little Mouse">
-  <h4>The Little Mouse</h4>
 </a></span></div></div>
       </div>
       </div>

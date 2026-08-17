@@ -72,11 +72,11 @@
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_J2c2uPaspYoZ44hv9crJX8vDUff89mbczGcRN1fGmpo.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/v4-shims.min.css" />
 <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css__XcQLh0eGk9G3xOsBraCg2iu9kejxlATxoU8wqvFKtI.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1az67oNL6tzCDzPDFiVSm_PQHjnhRtCwYTwR8ZeW4J0.css?delta=3&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjugee" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tjwao6" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -663,7 +663,39 @@
 <div class="pb-image-caption">How to Fix the “.lima/colima/ha.sock: connect: connection refused” Error on macOS (Colima Issue Resolved)</div></div>
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
-<html><p>If you use <a href="/articles/colima-similar-tool-docker-desktop-drupal-development/"><strong>Colima</strong></a> on macOS for container management, you may occasionally run into the error:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like <strong>DDEV</strong>), it can completely break your workflow. The good news? The issue has a clean, repeatable fix — and this article explains exactly how to resolve it.</p><h2>Why This Colima Error Happens on macOS</h2><p>This issue usually occurs when:</p><ul> <li>You shut down or restart your Mac <strong>without stopping Colima</strong>,</li> <li>Or when dependent services (like <a href="/articles/optimizing-product-catalog-microservice-profiling-tools-php-using-ddev-and-visual-studio/">DDEV</a> or Docker running under Colima) are not shut down cleanly,</li> <li>Or after some <strong>Lima</strong> upgrades.</li> </ul><p>What Is Lima and Why Does It Matter?</p><ul> <li><strong>Lima</strong> is the underlying service Colima uses.</li> <li>It launches lightweight Linux VMs on macOS and provides file sharing + port forwarding.</li> <li>Colima is essentially a layer on top of Lima.</li> </ul><p>So when Colima becomes “Broken,” it’s usually Lima that failed to stop properly, leaving behind leftover <tt>.sock</tt> and <tt>.pid</tt> files.</p><h2>How the Error Appears</h2><p>Running Colima commands often leads to:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>If you list Colima profiles, you’ll usually see something like this:</p><p><code>% colima list<br> PROFILE STATUS ARCH CPUS MEMORY DISK RUNTIME ADDRESS<br> default Broken x86_64 4 4GiB 60GiB </code></p><p>The keyword here is <strong>Broken</strong>.<br> This means the Colima VM is no longer in a valid state.</p><h2>Step-by-Step Fix for Colima “connection refused” ha.sock Error</h2><p>Follow this solution exactly — it's the safest and most reliable method.</p><h3>Step 1: Force-Stop the Lima Instance Used by Colima</h3>
+<html><p>If you use <a href="/articles/colima-similar-tool-docker-desktop-drupal-development/"><strong>Colima</strong></a> on macOS for container management, you may occasionally run into the error:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>This error appears simple, but for developers who rely on Colima for daily local development (especially with tools like <strong>DDEV</strong>), it can completely break your workflow. The good news? The issue has a clean, repeatable fix — and this article explains exactly how to resolve it.</p><h2>Why This Colima Error Happens on macOS</h2><p>This issue usually occurs when:</p><ul> <li>You shut down or restart your Mac <strong>without stopping Colima</strong>,</li> <li>Or when dependent services (like <a href="/articles/optimizing-product-catalog-microservice-profiling-tools-php-using-ddev-and-visual-studio/">DDEV</a> or Docker running under Colima) are not shut down cleanly,</li> <li>Or after some <strong>Lima</strong> upgrades.</li> </ul><p>What Is Lima and Why Does It Matter?</p><ul> <li><strong>Lima</strong> is the underlying service Colima uses.</li> <li>It launches lightweight Linux VMs on macOS and provides file sharing + port forwarding.</li> <li>Colima is essentially a layer on top of Lima.</li> </ul><p>So when Colima becomes “Broken,” it’s usually Lima that failed to stop properly, leaving behind leftover <tt>.sock</tt> and <tt>.pid</tt> files.</p><h2>How the Error Appears</h2><p>Running Colima commands often leads to:</p><p><code>.lima/colima/ha.sock: connect: connection refused </code></p><p>If you list Colima profiles, you’ll usually see something like this:</p><p><code>% colima list<br> PROFILE STATUS ARCH CPUS MEMORY DISK RUNTIME ADDRESS<br> default Broken x86_64 4 4GiB 60GiB </code></p><p>The keyword here is <strong>Broken</strong>.<br> This means the Colima VM is no longer in a valid state.</p><h2>Step-by-Step Fix for Colima “connection refused” ha.sock Error</h2><p>Follow this solution exactly — it's the safest and most reliable method.</p>
+            <div class="tbp-ad-wrapper">
+                <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
+                <div class="product-card tbp-ad">
+                    <div class="product-layout">
+                        <div class="product-image">
+                            <a href="https://amzn.to/48MIus6" target="_blank" rel="noopener sponsored" data-product="Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp; Bike Maintenance Tool">
+                                <img src="https://m.media-amazon.com/images/I/7118r6AH+ML._SL1500_.jpg" alt="Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp; Bike Maintenance Tool">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <a href="https://thebestproducts.co.in/reviews/grand-pitstop-paddock-stand-wheel-roller-easy-chain-cleaning-bike-maintenance-tool/" target="_blank" rel="noopener sponsored" data-product="Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp; Bike Maintenance Tool">Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp; Bike Maintenance Tool</a>
+                            </div>
+                            <div class="discount-badge">Now 29% Off</div>
+                            <a href="https://amzn.to/48MIus6" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Grand Pitstop Paddock Stand Wheel Roller – Easy Chain Cleaning &amp; Bike Maintenance Tool">
+                                <span class="product-price">
+                                    <span class="actual-price">₹1199.00</span>
+                                    <span class="current-price">₹849.00</span>
+                                </span>
+
+                                <span class="product-store">
+                                    <span>Amazon</span>
+                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
+                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                        <path d="M5 5h5V3H3v7h2V5z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><h3>Step 1: Force-Stop the Lima Instance Used by Colima</h3>
         
             
         
@@ -911,24 +943,34 @@
             
                 
             
+            
+                
+            <h3>Step 2: Start Colima Normally</h3>
+            
+            
+            <p>Once Lima has been cleaned up, start Colima again:</p><p><code>% colima start </code></p><p>Typical output:</p><p><code>INFO[0000] starting colima<br> INFO[0000] runtime: docker<br> INFO[0000] preparing network ... context=vm<br> INFO[0001] starting ... context=vm<br> INFO[0032] provisioning ... context=docker<br> INFO[0033] starting ... context=docker<br> INFO[0039] done </code></p><p>Your Colima instance should now be up and running without errors.</p>
+        
+            
+        <h2>Your Colima is Now Working Again</h2><p>After restarting, running <tt>colima list</tt> should show a healthy status:</p><p><code>PROFILE STATUS ...<br> default Running </code></p><p>This confirms that the <tt>.sock</tt> corruption issue is resolved.</p>
+
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://amzn.to/42uomro" target="_blank" rel="noopener sponsored" data-product="Allen Solly Men’s Polo T-Shirt Review (2026) – Stylish Everyday Polo for Smart Casual Wear">
-                                <img src="https://m.media-amazon.com/images/I/51A+Pymmh1L._SY879_.jpg" alt="Allen Solly Men’s Polo T-Shirt Review (2026) – Stylish Everyday Polo for Smart Casual Wear">
+                            <a href="https://amzn.to/4nrmzx0" target="_blank" rel="noopener sponsored" data-product="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">
+                                <img src="https://m.media-amazon.com/images/I/41uhq+RCm7L._SL1080_.jpg" alt="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/allen-solly-mens-polo-t-shirt-review-2026-stylish-everyday-polo-smart-casual-wear/" target="_blank" rel="noopener sponsored" data-product="Allen Solly Men’s Polo T-Shirt Review (2026) – Stylish Everyday Polo for Smart Casual Wear">Allen Solly Men’s Polo T-Shirt Review (2026) – Stylish Everyday Polo for Smart Casual Wear</a>
+                                <a href="https://thebestproducts.co.in/reviews/american-tourister-ivy-20-medium-trolley-bag-review-2026-durable-stylish-travel-suitcase/" target="_blank" rel="noopener sponsored" data-product="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers</a>
                             </div>
-                            <div class="discount-badge">Now 47% Off</div>
-                            <a href="https://amzn.to/42uomro" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Allen Solly Men’s Polo T-Shirt Review (2026) – Stylish Everyday Polo for Smart Casual Wear">
+                            <div class="discount-badge">Now 67% Off</div>
+                            <a href="https://amzn.to/4nrmzx0" target="_blank" class="buy-button" rel="noopener sponsored" data-product="American Tourister Ivy 2.0 Medium Trolley Bag Review (2026) – Durable &amp; Stylish Travel Suitcase for Frequent Travelers">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1099.00</span>
-                                    <span class="current-price">₹579.00</span>
+                                    <span class="actual-price">₹8450.00</span>
+                                    <span class="current-price">₹2799.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -942,14 +984,7 @@
                         </div>
                     </div>
                 </div>
-            </div><h3>Step 2: Start Colima Normally</h3>
-            
-            
-            <p>Once Lima has been cleaned up, start Colima again:</p><p><code>% colima start </code></p><p>Typical output:</p><p><code>INFO[0000] starting colima<br> INFO[0000] runtime: docker<br> INFO[0000] preparing network ... context=vm<br> INFO[0001] starting ... context=vm<br> INFO[0032] provisioning ... context=docker<br> INFO[0033] starting ... context=docker<br> INFO[0039] done </code></p><p>Your Colima instance should now be up and running without errors.</p>
-        
-            
-        <h2>Your Colima is Now Working Again</h2><p>After restarting, running <tt>colima list</tt> should show a healthy status:</p><p><code>PROFILE STATUS ...<br> default Running </code></p><p>This confirms that the <tt>.sock</tt> corruption issue is resolved.</p>
-<h2>Additional Notes and Tips</h2><h3>1. Lima Upgrades Can Also Cause This Issue</h3>
+            </div><h2>Additional Notes and Tips</h2><h3>1. Lima Upgrades Can Also Cause This Issue</h3>
         
             
         
@@ -1197,24 +1232,39 @@
             
                 
             
+            
+                
+            <h3>2. You Can Also Try Stopping Colima Directly</h3>
+                    
+                        
+                    
+            
+            
+            <p>Colima has its own force-stop command:</p><p><code>% colima stop -f </code></p><p>If this works, great — but if it <strong>fails</strong>, it means the VM is corrupted, and you should use the Lima command mentioned earlier.</p>
+                    
+                        
+                    
+        
+            
+        
             <div class="tbp-ad-wrapper">
                 <div class="tbp-ad-label">Advertisement - Continue Reading Below</div>
                 <div class="product-card tbp-ad">
                     <div class="product-layout">
                         <div class="product-image">
-                            <a href="https://link.amazon/B00Teefud" target="_blank" rel="noopener sponsored" data-product="Peter England Men's Everyday Solid Slim Fit Formal Shirt Review (2026) – Cotton-Rich Office Wear Essential">
-                                <img src="https://m.media-amazon.com/images/I/61vV0iAChcL._SY879_.jpg" alt="Peter England Men's Everyday Solid Slim Fit Formal Shirt Review (2026) – Cotton-Rich Office Wear Essential">
+                            <a href="https://amzn.to/4euqfeV" target="_blank" rel="noopener sponsored" data-product="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">
+                                <img src="https://m.media-amazon.com/images/I/71eQsL8sqcL._SL1500_.jpg" alt="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">
                             </a>
                         </div>
                         <div class="product-content">
                             <div class="product-title">
-                                <a href="https://thebestproducts.co.in/reviews/peter-england-mens-everyday-solid-slim-fit-formal-shirt-review-2026-cotton-rich-office-wear/" target="_blank" rel="noopener sponsored" data-product="Peter England Men's Everyday Solid Slim Fit Formal Shirt Review (2026) – Cotton-Rich Office Wear Essential">Peter England Men's Everyday Solid Slim Fit Formal Shirt Review (2026) – Cotton-Rich Office Wear Essential</a>
+                                <a href="https://thebestproducts.co.in/reviews/redmi-a7-pro-5g-review-2026-best-budget-5g-phone-120hz-display/" target="_blank" rel="noopener sponsored" data-product="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?</a>
                             </div>
-                            <div class="discount-badge">Now 54% Off</div>
-                            <a href="https://link.amazon/B00Teefud" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Peter England Men's Everyday Solid Slim Fit Formal Shirt Review (2026) – Cotton-Rich Office Wear Essential">
+                            <div class="discount-badge">Now 25% Off</div>
+                            <a href="https://amzn.to/4euqfeV" target="_blank" class="buy-button" rel="noopener sponsored" data-product="REDMI A7 Pro 5G Review (2026) – Best Budget 5G Phone with 120Hz Display?">
                                 <span class="product-price">
-                                    <span class="actual-price">₹1399.00</span>
-                                    <span class="current-price">₹643.00</span>
+                                    <span class="actual-price">₹15999.00</span>
+                                    <span class="current-price">₹11999.00</span>
                                 </span>
 
                                 <span class="product-store">
@@ -1228,25 +1278,15 @@
                         </div>
                     </div>
                 </div>
-            </div><h3>2. You Can Also Try Stopping Colima Directly</h3>
-                    
-                        
-                    
-            
-            
-            <p>Colima has its own force-stop command:</p><p><code>% colima stop -f </code></p><p>If this works, great — but if it <strong>fails</strong>, it means the VM is corrupted, and you should use the Lima command mentioned earlier.</p>
-                    
-                        
-                    
-        
-            
-        <h3>3. Don’t Shut Down macOS While Colima Is Running</h3>
+            </div><h3>3. Don’t Shut Down macOS While Colima Is Running</h3>
             
             
             <p>Avoid hard shutdowns while Colima or <a href="/articles/setup-multisite-local-environment-ddev-drupal/">DDEV</a> is running.<br> Always stop services first to prevent <tt>.sock</tt> corruption.</p>
                     
                         
                     <h2>Conclusion</h2><p>The <strong>“failed to get Info from .lima/colima/ha.sock: connect: connection refused”</strong> error in Colima is common on macOS, especially after improper shutdowns or upgrades. Thankfully, the fix is easy:</p><ol> <li>Force-stop Lima using <code>limactl stop -f colima</code></li> <li>Restart Colima using <code>colima start</code></li> </ol><p>With these steps, you can get Colima back to a working state quickly and avoid recreating your environment from scratch.</p><p>Thanks for reading! For more quick troubleshooting guides and Drupal-related articles, continue exploring PeoplesBLOG</p>
+
+
 
 
 
@@ -1331,7 +1371,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-12f9c9199b3a3518a0214a14c86554e732771f44a297d42e481d57c2cbd72ebb">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-757ae9f6a1e9c0cb585f6447cb5b2d37f6bcd210409b9ab2e73a4ff6a20b9068">
   
     
       
@@ -1383,7 +1423,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-283f1a22aec3d700a4368df9b04ae382c7fad3fc5234c0dcbe20c90c078b7e95">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-607943c4a04e8307014a3fea6288ce76414262c70544f08d303e811aeee4f9ba">
   
     
       
@@ -1393,6 +1433,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/bangalore-somanathapura-temple-one-day-solo-trip/" title="Bangalore to Somanathapura Temple One-Day Solo Trip">
+  <img src="/sites/default/files/2026-08/bangalore-to-somanathapura-temple-one-day-solo-trip.webp" alt="Bangalore to Somanathapura Temple One-Day Solo Trip">
+  <h4>Bangalore to Somanathapura Temple One-Day Solo Trip</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/what-happens-when-me-time-becomes-we-time-joy-exploring-together/" title="What Happens When “Me-Time” Becomes “We-Time”? The Joy of Exploring Together">
   <img src="/sites/default/files/2026-08/what-happens-when-me-time-becomes-we-time-the-joy-of-exploring-together.webp" alt="What Happens When “Me-Time” Becomes “We-Time”? The Joy of Exploring Together">
   <h4>What Happens When “Me-Time” Becomes “We-Time”? The Joy of Exploring Together</h4>
@@ -1410,13 +1456,13 @@
   <h4>Why Celebrating Small Achievements Can Improve Motivation, Confidence, and Everyday Happiness</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/four-friends-moral-story-about-friendship-unity-and-teamwork/" title="The Four Friends: A Moral Story About Friendship, Unity, and Teamwork">
   <img src="/sites/default/files/2026-08/the-four-friends-a-moral-story-about-friendship-unity-and-teamwork.webp" alt="The Four Friends: A Moral Story About Friendship, Unity, and Teamwork">
   <h4>The Four Friends: A Moral Story About Friendship, Unity, and Teamwork</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rangeya-raghav-biography-literary-works-philosophy-and-legacy/" title="Rangeya Raghav: Biography, Literary Works, Philosophy, and Legacy">
   <img src="/sites/default/files/2026-08/rangeya-raghav.webp" alt="Rangeya Raghav: Biography, Literary Works, Philosophy, and Legacy">
   <h4>Rangeya Raghav: Biography, Literary Works, Philosophy, and Legacy</h4>
@@ -1434,13 +1480,13 @@
   <h4>Digestive System Simulation: Science Experiment for Children to Learn How Food Moves Through the Human Body</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips/" title="Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips">
   <img src="/sites/default/files/2026-08/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips.webp" alt="Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips">
   <h4>Managing Dental Pain: Common Causes, Effective Treatments, and Prevention Tips</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/tenali-rama-and-trader-timeless-moral-story-about-honesty-intelligence-and-value-truth/" title="Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth">
   <img src="/sites/default/files/2026-08/tenali-rama-and-the-trader-a-timeless-moral-story-about-honesty-intelligence-and-the-value-of-truth.webp" alt="Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth">
   <h4>Tenali Rama and the Trader - A Timeless Moral Story About Honesty, Intelligence, and the Value of Truth</h4>
@@ -1456,12 +1502,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/vinoba-bhave-philosopher-who-walked-peace-land-reform-and-social-justice/" title="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <img src="/sites/default/files/2026-07/vinoba-bhave-the-philosopher-who-walked-for-peace-land-reform-and-social-justice.webp" alt="Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice">
   <h4>Vinoba Bhave: The Philosopher Who Walked for Peace, Land Reform, and Social Justice</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-mouse/" title="The Little Mouse">
-  <img src="/sites/default/files/2026-07/the-little-mouse.webp" alt="The Little Mouse">
-  <h4>The Little Mouse</h4>
 </a></span></div></div>
       </div>
       </div>
