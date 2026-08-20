@@ -246,6 +246,7 @@ Allow: /articles/few-relationship-events-life-those-change-peoples-personality/
 Allow: /articles/fighting-couples-relationship-normal/
 Allow: /articles/film-canister-rocket-science-experiment-children/
 Allow: /articles/filter-content-between-date-ranges-drupal-7/
+Allow: /articles/final-outbreak-how-science-surveillance-and-solidarity-eradicated-smallpox/
 Allow: /articles/finding-joy-everyday-moments/
 Allow: /articles/five-exercises-naturally-increase-penis-size/
 Allow: /articles/five-most-common-mind-games-people-play-you/
