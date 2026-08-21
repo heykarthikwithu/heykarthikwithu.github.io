@@ -472,6 +472,7 @@ Allow: /articles/locally-setup-and-scan-your-docker-images-clair/
 Allow: /articles/look-deep-nature-how-it-reveals-lifes-truths/
 Allow: /articles/lotus-position-guide-enhance-your-pleasure-flexibility/
 Allow: /articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real/
+Allow: /articles/maddur-vada-recipe-how-make-crispy-karnataka-style-maddur-vade-home/
 Allow: /articles/magnetic-hill-illusion-ladakh/
 Allow: /articles/magnetic-slime-experiment-kids-fun-way-learn-about-magnetism-chemistry/
 Allow: /articles/make-compass-science-experiment-children/
