@@ -1279,6 +1279,7 @@ Allow: /quick-read/wise-old-owl/
 Allow: /quick-read/wise-parrot/
 Allow: /quick-read/wolf-and-crane/
 Allow: /quick-read/wolf-and-shepherds/
+Allow: /quick-read/wooden-bowl-moral-story-about-respect-and-kindness/
 Allow: /quick-read/woodpecker-and-lion/
 Allow: /quick-read/young-crab-and-his-mother/
 Allow: /quotes/
