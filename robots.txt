@@ -1005,6 +1005,7 @@ Allow: /great-people/srinivasa-ramanujan/
 Allow: /great-people/subhash-chandra-bose/
 Allow: /great-people/subhash-mukherjee/
 Allow: /great-people/subrahmanyan-chandrasekhar/
+Allow: /great-people/subramania-bharati-poet-who-used-words-weapon-freedom-and-social-change/
 Allow: /great-people/subramania-satyamurti/
 Allow: /great-people/suhasini-maniratnam-biography-actress-filmmaker-philanthropist/
 Allow: /great-people/sukanta-bhattacharya/
