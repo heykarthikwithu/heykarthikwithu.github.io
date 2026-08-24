@@ -82,6 +82,7 @@ Allow: /articles/bangalore-nagarahole-solo-trip-plan/
 Allow: /articles/bangalore-ooty-3-day-trip-plan-best-itinerary-couples-families/
 Allow: /articles/bangalore-pondicherry-solo-trip-plan/
 Allow: /articles/bangalore-rameswaram-trip-plan-3-day-itinerary-tips/
+Allow: /articles/bangalore-ranganathittu-bird-sanctuary-perfect-one-day-bird-watching-trip/
 Allow: /articles/bangalore-sakleshpur-solo-trip-complete-travel-guide/
 Allow: /articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-near-bangalore/
 Allow: /articles/bangalore-shravanabelagola-jain-pilgrimage-peaceful-one-day-spiritual-journey/
