@@ -7,6 +7,14 @@
     <language>en</language>
     
     <item>
+  <title>If AI Can Build an Application, Why Do We Still Need Software Developers?</title>
+  <link>https://peoplesblog.co.in/articles/if-ai-can-build-application-why-do-we-still-need-software-developers</link>
+  <description>If AI can build an application from a simple description, why do we still need software developers?It is a question I have been thinking about recently. AI can now generate code, create interfaces, work with databases, connect APIs and turn an idea into a working prototype surprisingly quickly. I use AI in my own development work, and it has changed the way I build things. Tasks that once took hours can often be completed much faster, and experimenting with new ideas has become much easier.</description>
+  <pubDate>Tue, 25 Aug 2026 09:39:45 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/if-ai-can-build-application-why-do-we-still-need-software-developers</guid>
+    </item>
+<item>
   <title>AI Creates Content, CMS Keeps It Under Control: Why Drupal Still Matters in the AI Era</title>
   <link>https://peoplesblog.co.in/articles/ai-creates-content-cms-keeps-it-under-control-why-drupal-still-matters-ai-era</link>
   <description>Artificial Intelligence has dramatically changed the way content is created. Tasks that once required hours of research and writing can now be completed in minutes. Blog posts, product descriptions, FAQs, summaries, social media content, and even long-form articles can be generated using AI-powered tools with just a few prompts.</description>
@@ -77,14 +85,6 @@
   <pubDate>Wed, 19 Jul 2023 19:32:53 +0530</pubDate>
     <dc:creator>Karthik Kumar D K</dc:creator>
     <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-improve-drupal-website-performance</guid>
-    </item>
-<item>
-  <title>How to build the engaging digital experience via Drupal</title>
-  <link>https://peoplesblog.co.in/articles/how-build-engaging-digital-experience-drupal</link>
-  <description>Building an engaging digital experience using Drupal involves combining effective design, user-friendly features and content that resonates with your audience. Here are some tips to help you create an engaging digital experience using Drupal:</description>
-  <pubDate>Mon, 10 Jul 2023 19:28:39 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-build-engaging-digital-experience-drupal</guid>
     </item>
 
   </channel>

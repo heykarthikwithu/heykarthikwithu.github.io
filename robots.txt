@@ -409,6 +409,7 @@ Allow: /articles/how-understand-love-and-hate-after-cheating/
 Allow: /articles/how-work-drupal-paragraphs/
 Allow: /articles/how-work-twig-templates-drupal/
 Allow: /articles/hydropower-experiment-science-experiment-children/
+Allow: /articles/if-ai-can-build-application-why-do-we-still-need-software-developers/
 Allow: /articles/if-farmers-have-greater-choice-sell-whoever-wherever-why-still-farmers-are-protesting/
 Allow: /articles/if-you-lose-or-remove-your-teeth-what-do-next/
 Allow: /articles/im-sorry-why-apologizing-so-difficult/
