@@ -405,6 +405,7 @@ Allow: /articles/how-simplify-your-life-mindful-consumption/
 Allow: /articles/how-spot-early-signs-gum-disease/
 Allow: /articles/how-tackle-emotional-resilience/
 Allow: /articles/how-treat-and-prevent-oral-sores/
+Allow: /articles/how-turn-your-home-relaxing-sanctuary-simple-ways-create-peaceful-space/
 Allow: /articles/how-understand-love-and-hate-after-cheating/
 Allow: /articles/how-work-drupal-paragraphs/
 Allow: /articles/how-work-twig-templates-drupal/
