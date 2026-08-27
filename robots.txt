@@ -268,6 +268,7 @@ Allow: /articles/growing-enough-food-feed-family-year-round-yourself/
 Allow: /articles/growing-enough-onions-feed-family-yourself/
 Allow: /articles/growing-enough-pudina-feed-family-yourself/
 Allow: /articles/growing-enough-tomatoes-feed-family-yourself/
+Allow: /articles/gum-disease-and-heart-health-what-connection/
 Allow: /articles/gummy-bear-osmosis-science-experiment-children/
 Allow: /articles/habits-can-improve-persons-life/
 Allow: /articles/hardest-truths-life-we-all-have-face/
