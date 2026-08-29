@@ -1221,6 +1221,7 @@ Allow: /quick-read/july-23rd-national-broadcasting-day/
 Allow: /quick-read/july-26th-kargil-vijay-diwas/
 Allow: /quick-read/keep-good-company-if-you-want-be-good-person/
 Allow: /quick-read/king-and-spider/
+Allow: /quick-read/kings-painting-moral-story-about-perfection-honesty-and-perspective/
 Allow: /quick-read/legislative-assistants-members-parliament-lamp-fellowship/
 Allow: /quick-read/lesson-hastening-judgment/
 Allow: /quick-read/lion-and-mouse/
