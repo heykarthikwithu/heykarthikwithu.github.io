@@ -1011,6 +1011,7 @@ Allow: /great-people/subhash-mukherjee/
 Allow: /great-people/subrahmanyan-chandrasekhar/
 Allow: /great-people/subramania-bharati-poet-who-used-words-weapon-freedom-and-social-change/
 Allow: /great-people/subramania-satyamurti/
+Allow: /great-people/subramanian-swamy-biography-education-political-career-economic-ideas-and-legacy/
 Allow: /great-people/suhasini-maniratnam-biography-actress-filmmaker-philanthropist/
 Allow: /great-people/sukanta-bhattacharya/
 Allow: /great-people/sukhdev-thapar-early-life-role-hsra-martyrdom-legacy/
