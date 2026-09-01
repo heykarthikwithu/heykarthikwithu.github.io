@@ -179,6 +179,7 @@ Allow: /articles/crushing-can-experiment-science-experiment-children/
 Allow: /articles/curiosity-how-will-change-peoples-life/
 Allow: /articles/custom-batch-processing-drupal-7-update-nodes-batch-api/
 Allow: /articles/dal-bhat-recipe-nepali-style/
+Allow: /articles/dancing-rice-fun-science-experiment-explore-sound-vibrations/
 Allow: /articles/data-structures-php-stacks-queues-linked-lists-spl/
 Allow: /articles/database-design-basics-normalization-relationships-er-diagrams/
 Allow: /articles/dealing-uncertainty-be-happier-and-less-anxious/
