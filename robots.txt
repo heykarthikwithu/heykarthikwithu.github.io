@@ -104,6 +104,7 @@ Allow: /articles/bangalore-yercaud-scenic-drive-perfect-weekend-road-trip-bengal
 Allow: /articles/banking-dental-stem-cells-important-today/
 Allow: /articles/barometer-experiment-children-guide-understanding-air-pressure/
 Allow: /articles/bdsm-role-play-explained-how-it-works-why-people-do-it/
+Allow: /articles/bedroom-building-connection-leads-better-sex/
 Allow: /articles/benefits-aloe-vera-oral-health/
 Allow: /articles/benefits-comprehensive-dental-care-plans/
 Allow: /articles/benefits-custom-fitted-dental-appliances/
