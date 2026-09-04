@@ -317,6 +317,7 @@ Allow: /articles/how-choose-right-mouthguard/
 Allow: /articles/how-choose-solar-panels-which-are-more-efficient/
 Allow: /articles/how-community-health-campaigns-save-lives/
 Allow: /articles/how-cook-lemon-rice-home-lemon-rice-recipe/
+Allow: /articles/how-cook-mysore-masala-dosa-home-easy-mysore-masala-dosa-recipe/
 Allow: /articles/how-cook-onion-rava-dosa-home-onion-rava-dosa-recipe/
 Allow: /articles/how-cook-using-solar-power-home-diy-solar-cooking-guide/
 Allow: /articles/how-create-document-library-sharepoint-and-configure-content-types-terms-user-groups-and/
