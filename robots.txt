@@ -1261,6 +1261,7 @@ Allow: /quick-read/rooster-and-pearl/
 Allow: /quick-read/seek-revenge-or-choose-forgiveness-moral-story-powerful-life-lesson/
 Allow: /quick-read/selfish-elephant/
 Allow: /quick-read/selfish-giant/
+Allow: /quick-read/shepherd-boy-and-wolf-moral-story-about-honesty/
 Allow: /quick-read/snow-white/
 Allow: /quick-read/stolen-crown/
 Allow: /quick-read/stork-and-crab/
