@@ -485,6 +485,7 @@ Allow: /articles/magnetic-hill-illusion-ladakh/
 Allow: /articles/magnetic-slime-experiment-kids-fun-way-learn-about-magnetism-chemistry/
 Allow: /articles/make-compass-science-experiment-children/
 Allow: /articles/make-invisible-ink-changes-color-kids-science-activity/
+Allow: /articles/make-moon-phases-cookies-fun-science-experiment-kids/
 Allow: /articles/malaysia-airlines-flight-mh370-still-no-answers/
 Allow: /articles/managing-dental-pain-common-causes-effective-treatments-and-prevention-tips/
 Allow: /articles/managing-oral-health-during-pregnancy-tips-expecting-mothers/
