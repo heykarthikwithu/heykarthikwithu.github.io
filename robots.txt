@@ -604,6 +604,7 @@ Allow: /articles/store-drupal-logs-aws-practical-logging-guide/
 Allow: /articles/store-secrets-securely-pantheon-drupal-application/
 Allow: /articles/studies-estimate-long-covid-19-has-over-two-hundred-symptoms/
 Allow: /articles/stuff-people-should-never-do-their-life/
+Allow: /articles/subhas-chandra-bose-death-mystery-who-gained-and-who-lost/
 Allow: /articles/sunscreen-test-science-experiment-children/
 Allow: /articles/surviving-corporate-ladder-how-software-engineers-can-manage-workplace-politics/
 Allow: /articles/technical-information-know-about-solar-energy-setup-your-home/
