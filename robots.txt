@@ -643,6 +643,7 @@ Allow: /articles/understanding-dental-treatments-sleep-apnea/
 Allow: /articles/understanding-different-types-braces/
 Allow: /articles/understanding-how-artificial-intelligence-helping-doctors-find-cancer-earlier/
 Allow: /articles/understanding-need-dental-sealants/
+Allow: /articles/understanding-root-canals-procedures-and-aftercare/
 Allow: /articles/understanding-sharepoint-document-libraries-content-types-terms-user-groups-and/
 Allow: /articles/understanding-sharepoint-documents-vs-document-sets-key-differences-and-use-cases/
 Allow: /articles/understanding-sql-query-execution-plans-and-optimizing-joins/
