@@ -725,6 +725,7 @@ Allow: /articles/why-do-people-worship/
 Allow: /articles/why-dont-introverts-fall-love-easily-psychological-perspectives/
 Allow: /articles/why-drupal-best-choice-non-profit-websites/
 Allow: /articles/why-drupal-chosen-large-organizations/
+Allow: /articles/why-eating-nutrients-doesnt-always-mean-absorbing-them/
 Allow: /articles/why-good-sex-requires-healthy-nervous-system/
 Allow: /articles/why-have-green-roof-or-eco-friendly-roof-building/
 Allow: /articles/why-living-healthy-lifestyle-important/
