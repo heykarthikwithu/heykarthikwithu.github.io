@@ -1158,6 +1158,7 @@ Allow: /quick-read/boy-who-cried-tiger/
 Allow: /quick-read/boy-who-cried-wolf/
 Allow: /quick-read/brahmins-dream/
 Allow: /quick-read/brave-little-tailor/
+Allow: /quick-read/broken-pencil-moral-story-about-learning-mistakes/
 Allow: /quick-read/butterfly-and-caterpillar/
 Allow: /quick-read/caged-bird-and-free-bird/
 Allow: /quick-read/camel-and-baby/
