@@ -866,6 +866,7 @@ Allow: /great-people/great-khali-renowned-indian-professional-wrestler-actor-and
 Allow: /great-people/gulzar/
 Allow: /great-people/gulzarilal-nanda-contributions-political-career-legacy-indias-interim-prime-minister/
 Allow: /great-people/gunturu-seshendra-sarma/
+Allow: /great-people/gurbaksh-singh-dhillon-inspiring-story-indian-freedom-fighter/
 Allow: /great-people/guru-amar-das/
 Allow: /great-people/guy-gibson/
 Allow: /great-people/hakam-sufi/
