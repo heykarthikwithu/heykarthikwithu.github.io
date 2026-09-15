@@ -1310,6 +1310,7 @@ Allow: /sakleshpur/
 Allow: /salem/
 Allow: /salleri/
 Allow: /science-tech/
+Allow: /science-tech/osteoporosis-affects-millions-could-modified-cells-rebuild-their-bones/
 Allow: /security/
 Allow: /self/
 Allow: /sexual-health/
