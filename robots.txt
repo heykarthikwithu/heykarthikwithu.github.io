@@ -734,6 +734,7 @@ Allow: /articles/why-living-healthy-lifestyle-important/
 Allow: /articles/why-madanapalle-should-be-annamayya-district-hq-key-reasons/
 Allow: /articles/why-spinach-called-superfood/
 Allow: /articles/why-traveling-so-important-life/
+Allow: /articles/why-your-second-heart-your-legs-calf-muscle-pump-explained/
 Allow: /articles/why-your-sexual-health-matters-more-you-think/
 Allow: /articles/work-home-good-employees/
 Allow: /articles/working-out-time-can-help-manage-blood-sugar/
