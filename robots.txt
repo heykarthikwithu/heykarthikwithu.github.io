@@ -274,6 +274,7 @@ Allow: /articles/growing-enough-pudina-feed-family-yourself/
 Allow: /articles/growing-enough-tomatoes-feed-family-yourself/
 Allow: /articles/gum-disease-and-heart-health-what-connection/
 Allow: /articles/gummy-bear-osmosis-science-experiment-children/
+Allow: /articles/gutthi-vankaya-recipe-how-make-andhra-style-stuffed-brinjal-curry-home/
 Allow: /articles/habits-can-improve-persons-life/
 Allow: /articles/hardest-truths-life-we-all-have-face/
 Allow: /articles/harsh-truth-life-you-learn-your-bad-time/
