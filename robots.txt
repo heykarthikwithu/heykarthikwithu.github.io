@@ -1255,6 +1255,7 @@ Allow: /quick-read/monkey-and-cap-seller/
 Allow: /quick-read/monkey-and-crocodile/
 Allow: /quick-read/mouse-and-bull/
 Allow: /quick-read/oak-tree-and-reeds/
+Allow: /quick-read/old-shoes-moral-story-about-gratitude-and-contentment/
 Allow: /quick-read/olympics-paralympics-history-spirit-values-and-global-impact-worlds-greatest-sporting/
 Allow: /quick-read/other-side-wall/
 Allow: /quick-read/patty-milkmaid/
