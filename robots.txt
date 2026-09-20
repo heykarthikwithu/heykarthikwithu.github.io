@@ -1054,6 +1054,7 @@ Allow: /great-people/vaidyanath-mishra-life-works-poems-ideology-legacy-radical-
 Allow: /great-people/vallabhbhai-patel/
 Allow: /great-people/varghese-payyappilly/
 Allow: /great-people/vasantrao-naik-life-reforms-and-legacy/
+Allow: /great-people/vasudev-balwant-phadke-revolutionary-who-dreamed-swaraj-it-became-national-slogan/
 Allow: /great-people/verghese-kurien/
 Allow: /great-people/vikram-batra/
 Allow: /great-people/vikram-sarabhai/
