@@ -574,6 +574,7 @@ Allow: /articles/secure-application-password-reset-flow-best-practices/
 Allow: /articles/secure-website-running-apache-lets-encrypt-linux/
 Allow: /articles/security-checklist-drupal-application/
 Allow: /articles/security-hardening-nginx-response-headers/
+Allow: /articles/seed-dispersal-explore-how-seeds-travel-wind-water-and-animals/
 Allow: /articles/seed-germination-science-experiment-children/
 Allow: /articles/self-inflating-balloon-science-experiment-children/
 Allow: /articles/send-mail-custom-email-template-dynamic-values-drupal-mail-service/
