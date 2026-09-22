@@ -7,9 +7,10 @@ xdebug_enabled: false
 additional_hostnames:
   - peoplesblog.co.in-public
 additional_fqdns: []
-database:
-    type: mariadb
-    version: "10.11"
+# database:
+#     type: mariadb
+#     version: "10.11"
+omit_containers: [db]
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
