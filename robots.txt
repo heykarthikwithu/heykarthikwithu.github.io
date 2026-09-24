@@ -745,6 +745,7 @@ Allow: /articles/working-out-time-can-help-manage-blood-sugar/
 Allow: /articles/world-cancer-day-february-4th-early-detection-cancer-can-lead-improved-outcomes-cure/
 Allow: /articles/world-wildlife-day/
 Allow: /articles/writing-secure-sql-queries-use-prepared-statements-php/
+Allow: /articles/your-dentist-gives-you-treatment-plan-what-should-you-actually-look/
 Allow: /articles/your-oral-health-your-total-health/
 Allow: /arunachal-pradesh/
 Allow: /auli/
