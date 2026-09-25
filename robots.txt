@@ -285,6 +285,7 @@ Allow: /articles/having-good-sex-any-age-it-really-possible/
 Allow: /articles/healing-after-tooth-extraction-key-precautions-ensure-smooth-recovery/
 Allow: /articles/health-benefits-bananas-and-why-people-need-consume-them/
 Allow: /articles/healthy-diet-keep-your-teeth-healthy/
+Allow: /articles/healthy-eating-budget-tips-and-tricks-indian-families/
 Allow: /articles/heartwarming-gestures-people-love-receive-simple-ways-make-someones-day/
 Allow: /articles/heat-waves-india-and-current-temperature-status-and-warning-next-five-days/
 Allow: /articles/help-people-recognize-physical-signs-stress-and-manage-stress/
