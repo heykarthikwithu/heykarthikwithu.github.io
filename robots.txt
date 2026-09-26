@@ -1199,6 +1199,7 @@ Allow: /quick-read/elephants-and-king-mice/
 Allow: /quick-read/elephants-child/
 Allow: /quick-read/emperor-and-nightingale/
 Allow: /quick-read/emperors-new-clothes/
+Allow: /quick-read/empty-lunchbox-moral-story-about-kindness-and-sharing/
 Allow: /quick-read/false-human-belief-moral-story-about-truth-assumptions-and-wisdom/
 Allow: /quick-read/farmer-and-golden-eggs/
 Allow: /quick-read/farmer-and-snake/
