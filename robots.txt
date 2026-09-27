@@ -861,6 +861,7 @@ Allow: /great-people/dhyan-chand/
 Allow: /great-people/dilip-sardesai-life-career-achievements-1971-records-and-legacy/
 Allow: /great-people/dinanath-gopal-tendulkar/
 Allow: /great-people/dr-jeppiaar-life-legacy-and-contributions-indian-education/
+Allow: /great-people/durgawati-devi-durga-bhabhi-fearless-revolutionary-who-helped-bhagat-singh/
 Allow: /great-people/fakhruddin-ali-ahmed/
 Allow: /great-people/firaq-gorakhpuri-life-legacy-and-contribution-urdu-literature/
 Allow: /great-people/francis-younghusband/
