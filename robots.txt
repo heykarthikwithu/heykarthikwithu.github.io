@@ -236,6 +236,7 @@ Allow: /articles/everything-you-need-know-about-blood-pressure/
 Allow: /articles/evolution-dental-materials-traditional-modern/
 Allow: /articles/evolution-hiv-treatment-over-decades/
 Allow: /articles/expectations-and-freedom-relationship/
+Allow: /articles/explore-taste-buds-fun-science-experiment-investigate-sweet-salty-sour-and-bitter-tastes/
 Allow: /articles/exploring-cultural-traditions-enrich-your-life/
 Allow: /articles/exploring-design-patterns-php-8-strategy-observer-and-decorator/
 Allow: /articles/exploring-impact-oral-health-speech-development/
