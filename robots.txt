@@ -1015,6 +1015,7 @@ Allow: /great-people/sarvepalli-radhakrishnan/
 Allow: /great-people/satyajit-ray/
 Allow: /great-people/satyendra-nath-bose/
 Allow: /great-people/satyendranath-dutta-works-poems-and-legacy-bengali-master-metre/
+Allow: /great-people/savitribai-phule-woman-who-opened-door-education-girls-india/
 Allow: /great-people/shakeel-badayuni/
 Allow: /great-people/sharad-joshi/
 Allow: /great-people/sher-shah-suri/
