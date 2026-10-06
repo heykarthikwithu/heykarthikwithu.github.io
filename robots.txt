@@ -211,6 +211,7 @@ Allow: /articles/dream-small-information-it/
 Allow: /articles/droupadi-murmu-new-president-india/
 Allow: /articles/drupal-10-coming-few-days/
 Allow: /articles/drupal-7-drupal-89-audits/
+Allow: /articles/drupal-already-manages-content-so-what-does-ai-actually-add/
 Allow: /articles/drupal-cache-clear-cache-rebuild/
 Allow: /articles/drupal-configuration-management-local-dev-test-and-live/
 Allow: /articles/drupal-json-api-deep-dive-part-1/

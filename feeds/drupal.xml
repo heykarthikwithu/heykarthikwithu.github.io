@@ -7,6 +7,14 @@
     <language>en</language>
     
     <item>
+  <title>Drupal Already Manages Content. So What Does AI Actually Add?</title>
+  <link>https://peoplesblog.co.in/articles/drupal-already-manages-content-so-what-does-ai-actually-add/</link>
+  <description>AI is becoming part of almost every software platform, and content management systems are no exception. Drupal is no different. But there is an important question that often gets lost in the excitement around AI: if Drupal already manages content so well, what exactly does AI add?</description>
+  <pubDate>Tue, 06 Oct 2026 08:11:43 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-already-manages-content-so-what-does-ai-actually-add/</guid>
+    </item>
+<item>
   <title>If AI Can Build an Application, Why Do We Still Need Software Developers?</title>
   <link>https://peoplesblog.co.in/articles/if-ai-can-build-application-why-do-we-still-need-software-developers/</link>
   <description>If AI can build an application from a simple description, why do we still need software developers?It is a question I have been thinking about recently. AI can now generate code, create interfaces, work with databases, connect APIs and turn an idea into a working prototype surprisingly quickly. I use AI in my own development work, and it has changed the way I build things. Tasks that once took hours can often be completed much faster, and experimenting with new ideas has become much easier.</description>
@@ -77,14 +85,6 @@
   <pubDate>Sat, 29 Jul 2023 21:28:51 +0530</pubDate>
     <dc:creator>Karthik Kumar D K</dc:creator>
     <guid isPermaLink="true">https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-your-developer-portal/</guid>
-    </item>
-<item>
-  <title>How to improve drupal website performance</title>
-  <link>https://peoplesblog.co.in/articles/how-improve-drupal-website-performance/</link>
-  <description>Improving the performance of a Drupal website involves optimizing various aspects of its configuration and content. There are several ways to overall complex performance related problems and improve Drupal website performance to load it quicker.Here are some tips to enhance the performance of your Drupal website:</description>
-  <pubDate>Wed, 19 Jul 2023 19:32:53 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-improve-drupal-website-performance/</guid>
     </item>
 
   </channel>
