@@ -726,6 +726,7 @@ Allow: /articles/why-celebrating-small-achievements-can-improve-motivation-confi
 Allow: /articles/why-chant-hare-rama-hare-krishna-benefits-philosophy/
 Allow: /articles/why-choose-drupal-your-blogging-website-2025/
 Allow: /articles/why-corporate-life-feels-challenging-key-reasons-advice/
+Allow: /articles/why-couples-should-talk-about-money-marriage/
 Allow: /articles/why-dental-implants/
 Allow: /articles/why-do-dentists-suggest-clear-aligners-invisalign/
 Allow: /articles/why-do-i-apologize-everything-and-how-avoid-doing-it/
