@@ -345,6 +345,7 @@ Allow: /articles/how-express-thoughts-without-hurting-other-people/
 Allow: /articles/how-find-out-your-partner-has-toxic-personality/
 Allow: /articles/how-fix-limacolimahasock-connect-connection-refused-error-macos-colima-issue-resolved/
 Allow: /articles/how-generate-good-revenue-blogging-websites/
+Allow: /articles/how-give-sexual-feedback-without-hurting-your-partners-feelings/
 Allow: /articles/how-handle-dental-emergencies-home/
 Allow: /articles/how-handle-dental-fillings-and-cavities/
 Allow: /articles/how-have-better-sex/
