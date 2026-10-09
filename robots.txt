@@ -467,6 +467,7 @@ Allow: /articles/jonna-roti-chili-chutney-andhra-style/
 Allow: /articles/journey-self-soul/
 Allow: /articles/karma-vs-dharma-understanding-your-duty-destiny/
 Allow: /articles/karnataka-editors-jail-sentence-sparks-allegations-intimidation/
+Allow: /articles/karnataka-style-vegetable-sagu-recipe-delicious-south-indian-curry-poori-dosa-and-idli/
 Allow: /articles/know-why-symfony-framework-was-picked-drupal/
 Allow: /articles/laymans-terms-services-dependency-injection-drupal/
 Allow: /articles/leaf-breathing-experiment-teach-kids-about-photosynthesis/
