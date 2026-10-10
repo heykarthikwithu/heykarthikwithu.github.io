@@ -1305,6 +1305,7 @@ Allow: /quick-read/two-frogs/
 Allow: /quick-read/ugly-duckling/
 Allow: /quick-read/union-strength/
 Allow: /quick-read/vikram-misri-new-deputy-national-security-advisor/
+Allow: /quick-read/village-without-leader-moral-story-about-shared-responsibility/
 Allow: /quick-read/virtual-quad-meet-12th-august-2021/
 Allow: /quick-read/weaver-and-princess/
 Allow: /quick-read/wet-pants/
