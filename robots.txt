@@ -268,6 +268,7 @@ Allow: /articles/fluffy-slime-science-experiment-children/
 Allow: /articles/four-vedas-heart-and-soul-hinduism-explained/
 Allow: /articles/four-vedas-hinduism-origin-structure-significance-and-their-role-vedic-tradition/
 Allow: /articles/get-know-ones-personality-type/
+Allow: /articles/gongura-pachadi-recipe-how-make-andhra-style-sorrel-leaves-chutney-home/
 Allow: /articles/gongura-pappu-recipe-authentic-andhra-style-lentil-dish/
 Allow: /articles/great-e20-petrol-debate-honest-data-driven-investigation-indias-new-fuel-standard/
 Allow: /articles/grow-avocado-tree-science-experiment-children/
