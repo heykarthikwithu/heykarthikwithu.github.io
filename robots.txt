@@ -1185,6 +1185,7 @@ Allow: /quick-read/broken-pencil-moral-story-about-learning-mistakes/
 Allow: /quick-read/butterfly-and-caterpillar/
 Allow: /quick-read/caged-bird-and-free-bird/
 Allow: /quick-read/camel-and-baby/
+Allow: /quick-read/candle-storm-moral-story-about-power-small-acts/
 Allow: /quick-read/cat-and-parrot/
 Allow: /quick-read/cat-boots/
 Allow: /quick-read/cats-judgement/
