@@ -921,6 +921,7 @@ Allow: /great-people/kirpal-singh/
 Allow: /great-people/kishore-kumar/
 Allow: /great-people/krishna-reddy/
 Allow: /great-people/kshudiram-bose/
+Allow: /great-people/kuvempu-life-literary-works-and-vision-vishwamanava/
 Allow: /great-people/lala-amarnath-indias-first-test-captain-career-records-and-legacy/
 Allow: /great-people/laxmanrao-kirloskar/
 Allow: /great-people/leela-dube/
