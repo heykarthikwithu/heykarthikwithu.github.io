@@ -79,6 +79,7 @@ Allow: /articles/bangalore-mangalore-solo-trip-plan/
 Allow: /articles/bangalore-mekedatu-gorge-solo-adventure-trip-guide/
 Allow: /articles/bangalore-munnar-solo-trip-plan/
 Allow: /articles/bangalore-murdeshwar-gokarna-goa-and-dandeli-solo-trip-plan/
+Allow: /articles/bangalore-muthyala-maduvu-one-day-trip-pearl-valley/
 Allow: /articles/bangalore-mysore-solo-trip-plan/
 Allow: /articles/bangalore-nagarahole-solo-trip-plan/
 Allow: /articles/bangalore-ooty-3-day-trip-plan-best-itinerary-couples-families/
