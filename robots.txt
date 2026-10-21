@@ -491,6 +491,7 @@ Allow: /articles/local-environment-setup-lando-drupal/
 Allow: /articles/locally-setup-and-scan-your-docker-images-clair/
 Allow: /articles/look-deep-nature-how-it-reveals-lifes-truths/
 Allow: /articles/lotus-position-guide-enhance-your-pleasure-flexibility/
+Allow: /articles/love-marriage-vs-arranged-marriage-what-actually-matters-after-wedding/
 Allow: /articles/lovetale-sathya-nithya-beautiful-school-engineering-love-story-feels-real/
 Allow: /articles/maddur-vada-recipe-how-make-crispy-karnataka-style-maddur-vade-home/
 Allow: /articles/magnetic-hill-illusion-ladakh/
