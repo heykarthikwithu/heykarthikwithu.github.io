@@ -705,6 +705,7 @@ Allow: /articles/what-do-dark-cavities-teeth/
 Allow: /articles/what-do-when-your-kids-teeth-are-broken/
 Allow: /articles/what-does-friend-really-mean-thoughtful-reflection/
 Allow: /articles/what-drupal-offers-responsive-web-design-within-core/
+Allow: /articles/what-guided-implant-surgery-how-it-works-and-what-patients-can-expect/
 Allow: /articles/what-happened-wedding-real-stories-emotional-reflections/
 Allow: /articles/what-happens-if-people-are-having-milk-everyday/
 Allow: /articles/what-happens-when-me-time-becomes-we-time-joy-exploring-together/
