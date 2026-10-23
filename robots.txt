@@ -152,6 +152,7 @@ Allow: /articles/cartesian-diver-science-experiment-children/
 Allow: /articles/chain-snatching-prevention-tips-stay-safe-public/
 Allow: /articles/checklist-building-eco-friendly-home/
 Allow: /articles/chennai-vedanthangal-solo-bird-sanctuary-trip-guide/
+Allow: /articles/chole-bhature-recipe-how-make-punjabi-style-chole-bhature-home/
 Allow: /articles/choose-inverters-which-are-more-efficient-work-solar-panels/
 Allow: /articles/cloud-bottle-fun-science-experiment-kids/
 Allow: /articles/code-profiling-and-performance-optimization-existing-php-project/
