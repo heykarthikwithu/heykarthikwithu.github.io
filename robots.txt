@@ -1010,6 +1010,7 @@ Allow: /great-people/rituparno-ghosh/
 Allow: /great-people/robin-jackman/
 Allow: /great-people/rohinton-fali-nariman/
 Allow: /great-people/ronald-ross/
+Allow: /great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/
 Allow: /great-people/ruskin-bond-books-awards-literary-legacy-indias-beloved-author/
 Allow: /great-people/s-janaki-legendary-voice-who-touched-millions-hearts/
 Allow: /great-people/s-v-ranga-rao-timeless-legend-indian-cinema/
@@ -1266,6 +1267,7 @@ Allow: /quick-read/kings-painting-moral-story-about-perfection-honesty-and-persp
 Allow: /quick-read/legislative-assistants-members-parliament-lamp-fellowship/
 Allow: /quick-read/lesson-hastening-judgment/
 Allow: /quick-read/lion-and-mouse/
+Allow: /quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/
 Allow: /quick-read/little-engine-could/
 Allow: /quick-read/little-match-girl/
 Allow: /quick-read/little-mermaid/
