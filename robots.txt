@@ -71,6 +71,7 @@ Allow: /articles/bangalore-kollur-solo-trip-plan-complete-travel-guide/
 Allow: /articles/bangalore-kudremukh-solo-trip-travel-guide-tips/
 Allow: /articles/bangalore-kukke-subramanya-trip-plan-complete-travel-guide/
 Allow: /articles/bangalore-lepakshi-solo-trip-plan-temple-guide/
+Allow: /articles/bangalore-madhugiri-one-day-fort-trek-and-travel-guide/
 Allow: /articles/bangalore-madurai-solo-trip-travel-itinerary-tips/
 Allow: /articles/bangalore-mahabalipuram-solo-trip-plan/
 Allow: /articles/bangalore-makalidurga-trek-one-day-trekking-guide-couples-friends-and-families/
