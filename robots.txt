@@ -207,6 +207,7 @@ Allow: /articles/diy-math-board-games-educational-fun-kids/
 Allow: /articles/diy-mini-wind-turbine-science-experiment-kids/
 Allow: /articles/diy-potato-battery-build-homemade-power-source-kids/
 Allow: /articles/diy-pulley-system-science-experiment-kids/
+Allow: /articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/
 Allow: /articles/diy-volcano-experiment-baking-soda-vinegar-fun-kids/
 Allow: /articles/diy-water-fountain-fun-science-experiment-using-air-pressure/
 Allow: /articles/does-truth-always-come-out-deep-look-why-truth-reveals-itself-and-why-it-sometimes-doesnt/
