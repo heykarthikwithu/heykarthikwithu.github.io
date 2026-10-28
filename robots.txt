@@ -489,6 +489,7 @@ Allow: /articles/life-skills-are-important-future-stability/
 Allow: /articles/life-worth-living-without-marriage-perspectives-insights/
 Allow: /articles/lifestyle-changes-enhance-your-mood-and-mental-health/
 Allow: /articles/lines-worth-reading-how-do-we-identify-ourselves/
+Allow: /articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/
 Allow: /articles/local-environment-setup-lando-drupal-10/
 Allow: /articles/local-environment-setup-lando-drupal/
 Allow: /articles/locally-setup-and-scan-your-docker-images-clair/
