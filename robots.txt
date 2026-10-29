@@ -584,6 +584,7 @@ Allow: /articles/salt-crystal-garden-science-experiment-children/
 Allow: /articles/samosas-snack-indian-subcontinent/
 Allow: /articles/saving-vegetable-seeds-your-backyard-gardening/
 Allow: /articles/scientists-have-created-hexagonal-salt-first-time-ever/
+Allow: /articles/secret-better-sex-collaboration-and-communication/
 Allow: /articles/secure-application-password-reset-flow-best-practices/
 Allow: /articles/secure-website-running-apache-lets-encrypt-linux/
 Allow: /articles/security-checklist-drupal-application/
