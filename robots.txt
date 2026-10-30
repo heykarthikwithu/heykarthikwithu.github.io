@@ -25,6 +25,7 @@ Allow: /articles/ahmedabad-rann-kutch-white-desert-adventure-you-must-experience
 Allow: /articles/ahmedabad-shamlaji-temple-distance-best-route-timings-and-travel-guide/
 Allow: /articles/ai-canvas-drupal-normal-persons-point-view/
 Allow: /articles/ai-creates-content-cms-keeps-it-under-control-why-drupal-still-matters-ai-era/
+Allow: /articles/aloo-paratha-homemade-curd-delicious-indian-breakfast-recipe/
 Allow: /articles/alum-crystal-geodes-science-experiment-children/
 Allow: /articles/always-keep-it-classy-and-stay-strong-because-strong-beautiful/
 Allow: /articles/amplify-smartphone-science-experiment-kids/
