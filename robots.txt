@@ -1283,6 +1283,7 @@ Allow: /quick-read/magic-carpet/
 Allow: /quick-read/magic-fish/
 Allow: /quick-read/magic-fountain/
 Allow: /quick-read/magic-pot/
+Allow: /quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/
 Allow: /quick-read/milkmaid-and-her-pail/
 Allow: /quick-read/monkey-and-cap-seller/
 Allow: /quick-read/monkey-and-crocodile/
