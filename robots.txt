@@ -835,6 +835,7 @@ Allow: /great-people/atul-chitnis/
 Allow: /great-people/b-k-s-iyengar/
 Allow: /great-people/b-vittalacharya-legendary-filmmaker-who-shaped-kannada-cinema/
 Allow: /great-people/baburao-painter-pioneer-who-shaped-early-indian-cinema/
+Allow: /great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/
 Allow: /great-people/bal-gangadhar-tilak/
 Allow: /great-people/balasaraswati/
 Allow: /great-people/baldev-upadhyaya/
