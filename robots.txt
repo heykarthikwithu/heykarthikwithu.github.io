@@ -621,6 +621,7 @@ Allow: /articles/some-stuff-people-realize-when-they-get-mature/
 Allow: /articles/some-unwritten-social-rules-everyone-should-know/
 Allow: /articles/south-indian-hindu-marriage-andhra-style-traditions-rituals/
 Allow: /articles/sql-transactions-explained-atomic-operations-data-integrity/
+Allow: /articles/static-electricity-butterfly-create-butterfly-flutters-static-electricity/
 Allow: /articles/sticky-ice-science-experiment-children/
 Allow: /articles/stop-overthinking-your-thoughts-future/
 Allow: /articles/store-drupal-logs-aws-practical-logging-guide/
