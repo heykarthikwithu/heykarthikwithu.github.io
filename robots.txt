@@ -460,6 +460,7 @@ Allow: /articles/indian-style-spanish-omelette-egg-potato-onion/
 Allow: /articles/indian-vs-foreign-housewife-key-differences-explained/
 Allow: /articles/indian-youth-what-should-you-know-about-nambi-narayanan/
 Allow: /articles/ins-vikrant-delivered-indian-navy-indias-first-indigenous-aircraft-carrier/
+Allow: /articles/inside-bermuda-triangle-century-missing-ships-vanished-aircraft-and-unanswered-questions/
 Allow: /articles/instant-hot-ice-science-experiment-children/
 Allow: /articles/integrating-codeception-drupal-have-added-support-tdd/
 Allow: /articles/international-mother-language-day/
