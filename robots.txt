@@ -577,6 +577,7 @@ Allow: /articles/rheumatoid-arthritis-symptoms-causes-diagnosis-treatment-recove
 Allow: /articles/right-way-store-leftovers-so-they-last-longer/
 Allow: /articles/rock-candy-crystal-sticks-science-experiment-children/
 Allow: /articles/role-dental-care-managing-autoimmune-diseases/
+Allow: /articles/role-exercise-improving-mental-health/
 Allow: /articles/role-nutrition-oral-health/
 Allow: /articles/role-vedas-hindu-philosophy-deep-wisdom-unveiled/
 Allow: /articles/role-vitamin-d-dental-health/
