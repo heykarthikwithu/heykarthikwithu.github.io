@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to0gbb" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to29ue" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -665,38 +665,9 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><p>As we have seen in the earlier article to setup the Local environment with Lando and Drupal, Now let's see how we set up the multisite with the lando.</p><p>And hope you are already aware of Drupal Multisite. If not, It is a feature of Drupal that allows you to run multiple Drupal installs off of a common codebase. This allows you to share themes and modules between a collection of many websites. At a high level we can say Same Code with <a href="/articles/different-spices-are-used-make-garam-masala-mix/" title="Read about Different Spices Are Used To Make A Garam Masala Mix">Different</a> databases and Different Sites.</p><p>We already know Lando is a <a href="/articles/colima-similar-tool-docker-desktop-drupal-development/" title="Read about Colima Similar Tool Like Docker Desktop For Drupal Development">development</a> tool (as discussed in an earlier article), which makes drupal development much quicker and easier. Lando provides an option to configure this from the <code>.lando.yml</code> file.</p><p>Let’s see in-details to set up a multisite. To setup Drupal multisite on lando you need to do below things:</p><p>In your <code>.lando.yml</code> you need to add proxies for each multisite in the appserver.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/kitchen/mr-tru-smart-instant-egg-boiler-review/" target="_blank" rel="noopener sponsored" data-product="Mr. TRU Smart Instant Egg Boiler Review">
-                                <img src="https://m.media-amazon.com/images/I/61+T0+-SDZL._SL1500_.jpg" alt="Mr. TRU Smart Instant Egg Boiler Review">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/kitchen/mr-tru-smart-instant-egg-boiler-review/" target="_blank" rel="noopener sponsored" data-product="Mr. TRU Smart Instant Egg Boiler Review">Mr. TRU Smart Instant Egg Boiler Review</a>
-                            </div>
-                            <div class="discount-badge">53% Off</div>
-                            <a href="https://link.amazon/B0gHI74at" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Mr. TRU Smart Instant Egg Boiler Review">
-                                <span class="product-price">
-                                    <span class="actual-price">₹899.00</span>
-                                    <span class="current-price">₹419.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1094,38 +1065,9 @@
             
                 
             <p>Have <code>settings.lando.php</code> file within your sub-directory (example: docroot/sites/drupal9_site_1/) which would need settings to connect to the respective <a href="/articles/database-design-basics-normalization-relationships-er-diagrams/" title="Read about Basics Of Database Design Normalization Relationships And Er Diagrams">database</a>.</p><p><strong>1. Changes in </strong><code><strong>.lando.yml</strong></code><strong> file</strong></p><p>You need to add proxies for each multisite in the appserver.</p><pre>proxy:<br>appserver:<br>- drupal9.site-1.local<br>- drupal9.site-2.local<br>services:<br>    drupal9_site_1:<br>        type: mysql<br>    drupal9_site_2:<br>        type: mysql</pre><p><strong>2. Configure each </strong><code><strong>settings.lando.php</strong></code><strong> file</strong></p><p>You need to have <code>settings.lando.php</code> file within your sub-directory and should add database connection settings on each file.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/washing-machine/haier-7-kg-5-star-fully-automatic-top-load-washing-machine-hwm70-aen/" target="_blank" rel="noopener sponsored" data-product="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61eH5s890WL._SL1500_.jpg" alt="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/washing-machine/haier-7-kg-5-star-fully-automatic-top-load-washing-machine-hwm70-aen/" target="_blank" rel="noopener sponsored" data-product="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN</a>
-                            </div>
-                            <div class="discount-badge">37% Off</div>
-                            <a href="https://link.amazon/B059z3cI4" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">
-                                <span class="product-price">
-                                    <span class="actual-price">₹25000.00</span>
-                                    <span class="current-price">₹15690.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1523,38 +1465,9 @@
             
                 
             <pre>$databases['default'] = array (<br>    'default' =&gt; array (<br>        'driver' =&gt; 'mysql',<br>        'database' =&gt; 'database',<br>        'username' =&gt; 'mysql',<br>        'password' =&gt; 'password',<br>        'host' =&gt; 'password',<br>        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined services above<br>        'port' =&gt; 3306,<br>    ));</pre><p>In case, if you have huge number of multisites, You can have below code in the <code>settings.php</code> of default site.</p><pre>if (@$_ENV['LANDO'] == 'ON' &amp;&amp; file_exists(dirname(__FILE__) . '/settings.lando.php')){<br>    require(dirname(__FILE__) . '/settings.lando.php');<br>}</pre><p>And include the below code in <code>settings.lando.php</code></p><pre>$sites['drupal9.site-1.local'] = 'drupal9_site_1';<br>$sites['drupal9.site-2.local'] = 'drupal9_site_2';</pre><p>And in each subsite’s <code>settings.lando.php</code>, have below code added.</p><pre>$base_url = 'https://drupal9.site-1.local';</pre><p>So, you will have both the base path and database creds in each of the subsite’s <code>settings.lando.php</code> file</p><pre>$databases['default'] = array (<br>    'default' =&gt; array (<br>        'driver' =&gt; 'mysql',<br>        'database' =&gt; 'database',<br>        'username' =&gt; 'mysql',<br>        'password' =&gt; 'password',<br>        'host' =&gt; 'password',<br>        'prefix' =&gt; 'drupal9_site_1', // make sure host is matching with defined service above<br>        'port' =&gt; 3306,<br>    ));<br>$base_url = 'https://drupal9.site-1.local';</pre><p>This way by configuring lando you can run drupal 9 Multisite on your local environment. And on the configuration front you can do many other things like adding a few more sites, having different configuration of each subsite as same as in default drupal etc.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/women-clothing/alan-jones-clothing-womens-solid-zipper-hooded-sweatshirt-review/" target="_blank" rel="noopener sponsored" data-product="Alan Jones Clothing Women's Solid Zipper Hooded Sweatshirt Review">
-                                <img src="https://m.media-amazon.com/images/I/81f56tEEbJL._SY879_.jpg" alt="Alan Jones Clothing Women's Solid Zipper Hooded Sweatshirt Review">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/women-clothing/alan-jones-clothing-womens-solid-zipper-hooded-sweatshirt-review/" target="_blank" rel="noopener sponsored" data-product="Alan Jones Clothing Women's Solid Zipper Hooded Sweatshirt Review">Alan Jones Clothing Women's Solid Zipper Hooded Sweatshirt Review</a>
-                            </div>
-                            <div class="discount-badge">64% Off</div>
-                            <a href="https://link.amazon/B08IMzAGQ" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Alan Jones Clothing Women's Solid Zipper Hooded Sweatshirt Review">
-                                <span class="product-price">
-                                    <span class="actual-price">₹1799.00</span>
-                                    <span class="current-price">₹651.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -2173,6 +2086,7 @@
 
 
 
+
 </html></div>
       
 
@@ -2197,7 +2111,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-0873cf58fdcd3d8b0709d446ed5329dbcbfb4bac81e2b06f7d7f4ede5f51d7ba">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-dc4d02f2e687f54af1064029136eeeccd1e1072029a351a89b00d6f36ddf2b1b">
   
     
       
@@ -2249,7 +2163,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-693c4d76f71b519523f1a27dce52f365a7cd45f28c88d819e96f563b5532fb5b">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-cf929fe413332eda31ca1b7d2590086feef0296ec98dbb9b182a3047ee80e518">
   
     
       
@@ -2259,6 +2173,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/" title="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <img src="/sites/default/files/2026-11/pulihora-andhra-tamarind-rice-a-traditional-south-indian-recipe.webp" alt="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <h4>Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/role-exercise-improving-mental-health/" title="The Role of Exercise in Improving Mental Health">
   <img src="/sites/default/files/2026-11/the-role-of-exercise-in-improving-mental-health.webp" alt="The Role of Exercise in Improving Mental Health">
   <h4>The Role of Exercise in Improving Mental Health</h4>
@@ -2276,13 +2196,13 @@
   <h4>Static Electricity Butterfly: Create a Butterfly That Flutters with Static Electricity</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/" title="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <img src="/sites/default/files/2026-11/bagha-jatin-the-fearless-indian-revolutionary-who-challenged-british-rule.webp" alt="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <h4>Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/" title="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <img src="/sites/default/files/2026-10/the-mango-tree-and-the-axe-a-moral-story-about-kindness-and-generosity.webp" alt="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <h4>The Mango Tree and the Axe – A Moral Story About Kindness and Generosity</h4>
@@ -2300,13 +2220,13 @@
   <h4>The Secret to Better Sex: Collaboration and Communication</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/" title="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <img src="/sites/default/files/2026-10/living-beyond-your-means-can-debt-status-and-social-pressure-lead-to-crime.webp" alt="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <h4>Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/" title="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <img src="/sites/default/files/2026-10/diy-straw-rockets-build-and-launch-your-own-paper-rockets.webp" alt="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <h4>DIY Straw Rockets: Build and Launch Your Own Paper Rockets</h4>
@@ -2322,12 +2242,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/" title="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <img src="/sites/default/files/2026-10/rukmini-devi-arundale-the-woman-who-transformed-bharatanatyam-and-indian-classical-arts.webp" alt="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <h4>Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/" title="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <img src="/sites/default/files/2026-10/the-little-ant-s-shortcut-a-moral-story-about-thinking-for-yourself.webp" alt="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <h4>The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself</h4>
 </a></span></div></div>
       </div>
       </div>

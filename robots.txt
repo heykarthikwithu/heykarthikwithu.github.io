@@ -558,6 +558,7 @@ Allow: /articles/profiling-drupal-performance-webgrind-and-xdebug/
 Allow: /articles/project-vs-product-plan-and-delivery-agile-characteristics/
 Allow: /articles/psychological-facts-about-attracting-people-what-really-makes-someone-drawn-you/
 Allow: /articles/pudina-chutney-recipe-andhra-style/
+Allow: /articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/
 Allow: /articles/questions-ask-dentist-dental-implant/
 Allow: /articles/quick-reference-code-reviews-drupal-application/
 Allow: /articles/ragi-roti-tomato-chutney-andhra-style/

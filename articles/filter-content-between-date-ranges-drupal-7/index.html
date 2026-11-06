@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to0gbb" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to29ue" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -665,38 +665,9 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><p>It is tempting to believe that using the is between on a date fields will work. However, this option is used only in the case of events Starting on a range of date.</p><p>This tutorial requires that you already have a content type with a date field . It is not <a href="/articles/feedback-really-necessary-persons-life/" title="Read about Is Feedback Really Necessary In Persons Life">necessary</a> to have two fields to adjust an '<strong>end date</strong>' for the event, only a date field with the '<strong>Collect an end date</strong>'</p><p>This part (which seems '<em>logical</em>' to start - but it is not so much) is the basis of this discussion.</p><ul><li>A search filter between the 11th and 31th of July should provide us the events A, B, C and D (shaded area) and Exclude E and F.</li><li>If we have a filter with a Date field (based on the Start date) using the option 'is between' will only show B and C since their '<strong>start date</strong>' is between those dates, but will exclude events A and D since their '<strong>start date</strong>' is before the desired search. This is not the desired result, we want to include them in the results.</li><li>The following conversation <a href="https://www.drupal.org/node/1302940" target="_blank">https://www.drupal.org/node/1302940</a> explains:</li></ul><pre>        event end date &gt;= user start date    AND    event start date &lt;= user end date</pre><ul><li>Following this, we must swap the '<strong>Start date</strong>' and '<strong>End date</strong>' to the users. Users will not notice but it is crucial to obtaining the desired results.</li><li>To include events A and D in this search, we will need two filters exposed to our Views (again: based on the same field and not two separate fields)</li><li>In this order:<ul><li>Date - end date (field_dates:value2)</li><li>Date - start date (field_dates)</li></ul></li><li>In ' <strong>Date - end date (field_dates:value2)</strong>', Select popup as form element,</li><li>In next window: Select Exposed this filter to visitor</li><li>Even though this label says '<strong>End date</strong>', we are going to make believe this is the '<strong>Start date</strong>', so change this label to '<strong>Start Date</strong>' instead.</li><li>Change the operator to '<strong>Is greater than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event end date &gt;= user start date)</li><li>Do the same to the second filter:</li></ul><pre>     Date - start date (field_dates)  - change this label to 'End Date',  - Select popup as form element,  - Exposed this filter to visitor</pre><ul><li>This time Change to operator to '<strong>Is less than or equal to</strong>', leave the '<strong>Select a date</strong>' as is. (event start date &lt;= user end date)</li><li>And one more thing, Make sure that you have '<strong>AND</strong>' between those two operators.</li><li>Save the view.</li></ul><p><strong>Note:</strong></p><ul><li>While you are working with date module and filtering the content between dates, make sure that your Server timzone, Mysql server timezone and Drupal site timezone are same. If not you may face problems in few cases.</li></ul><p>Thanks for reading the article,&nbsp;for more drupal related articles&nbsp;read and subscribe to peoples blog articles.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/women-clothing/amayra-womens-pure-cotton-line-kurta-set-palazzo-pants-dupatta/" target="_blank" rel="noopener sponsored" data-product="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81LWX3c50zL._SY879_.jpg" alt="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/women-clothing/amayra-womens-pure-cotton-line-kurta-set-palazzo-pants-dupatta/" target="_blank" rel="noopener sponsored" data-product="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta</a>
-                            </div>
-                            <div class="discount-badge">55% Off</div>
-                            <a href="https://link.amazon/B0dnAGVlh" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">
-                                <span class="product-price">
-                                    <span class="actual-price">₹1999.00</span>
-                                    <span class="current-price">₹897.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1315,6 +1286,7 @@
 
 
 
+
 </html></div>
       
 
@@ -1337,7 +1309,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-53ef07b0eab534c2850bc58be34e85000309c38526353b85e20c751bee94ad61">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-53b20b7221e9a18aa03325c8b539bccde42842b8a681a6153bddd59467099751">
   
     
       
@@ -1389,7 +1361,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-6388b12af99477f267955f03870bbbc468797b10f46f3c6073c9f8e04b1c0438">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-d748aaa3b098acc00f1e0c847f935cac925e008587b9214e2ea0daa05571e146">
   
     
       
@@ -1399,6 +1371,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/" title="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <img src="/sites/default/files/2026-11/pulihora-andhra-tamarind-rice-a-traditional-south-indian-recipe.webp" alt="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <h4>Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/role-exercise-improving-mental-health/" title="The Role of Exercise in Improving Mental Health">
   <img src="/sites/default/files/2026-11/the-role-of-exercise-in-improving-mental-health.webp" alt="The Role of Exercise in Improving Mental Health">
   <h4>The Role of Exercise in Improving Mental Health</h4>
@@ -1416,13 +1394,13 @@
   <h4>Static Electricity Butterfly: Create a Butterfly That Flutters with Static Electricity</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/" title="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <img src="/sites/default/files/2026-11/bagha-jatin-the-fearless-indian-revolutionary-who-challenged-british-rule.webp" alt="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <h4>Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/" title="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <img src="/sites/default/files/2026-10/the-mango-tree-and-the-axe-a-moral-story-about-kindness-and-generosity.webp" alt="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <h4>The Mango Tree and the Axe – A Moral Story About Kindness and Generosity</h4>
@@ -1440,13 +1418,13 @@
   <h4>The Secret to Better Sex: Collaboration and Communication</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/" title="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <img src="/sites/default/files/2026-10/living-beyond-your-means-can-debt-status-and-social-pressure-lead-to-crime.webp" alt="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <h4>Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/" title="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <img src="/sites/default/files/2026-10/diy-straw-rockets-build-and-launch-your-own-paper-rockets.webp" alt="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <h4>DIY Straw Rockets: Build and Launch Your Own Paper Rockets</h4>
@@ -1462,12 +1440,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/" title="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <img src="/sites/default/files/2026-10/rukmini-devi-arundale-the-woman-who-transformed-bharatanatyam-and-indian-classical-arts.webp" alt="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <h4>Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/" title="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <img src="/sites/default/files/2026-10/the-little-ant-s-shortcut-a-moral-story-about-thinking-for-yourself.webp" alt="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <h4>The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself</h4>
 </a></span></div></div>
       </div>
       </div>

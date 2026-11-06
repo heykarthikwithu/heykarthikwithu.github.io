@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to0gbb" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to29ue" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -665,38 +665,9 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><p>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems. It is particularly useful for optimization problems, where the goal is to find the best solution under given constraints. DP is often seen in <a href="/articles/advanced-sorting-and-searching-algorithms-php-quick-sort-merge-sort-heap-sort-and-binary/" title="Read about Advanced Sorting And Searching Algorithms In Php Quick Sort Merge Sort Heap Sort And Binary Search Trees">algorithms</a> that require making decisions at multiple steps, where solutions to subproblems are reused to avoid redundant calculations.</p><p>In this article, we will explore the fundamentals of Dynamic Programming in PHP 8, discuss key concepts, and solve some classic problems like the <em>Knapsack Problem</em> and <em>Longest Common Subsequence</em> (LCS). We will also provide working PHP code to demonstrate these concepts.</p><p><strong>What is Dynamic Programming?</strong></p><p>Dynamic Programming is a method for solving problems by dividing them into smaller, manageable subproblems. It is a bottom-up <a href="/articles/how-can-people-approach-unconscious-bias-towards-other-people/" title="Read about How Can People Approach Unconscious Bias Towards Other People">approach</a> where you solve subproblems first and use their solutions to build up the final answer. DP typically involves two main techniques:</p><ol><li><strong>Memoization (Top-Down Approach):</strong> Storing the results of already solved subproblems in a cache (usually an array) to avoid redundant work.</li><li><strong>Tabulation (Bottom-Up Approach):</strong> Solving the problem iteratively by filling up a table with solutions to subproblems in a systematic manner.</li></ol><p>Dynamic Programming is applied to problems where:</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/television/samsung-32-inch-hd-smart-led-tv-ua32h4550fuxxl/" target="_blank" rel="noopener sponsored" data-product="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71XA+N8Xj1L._SL1500_.jpg" alt="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/television/samsung-32-inch-hd-smart-led-tv-ua32h4550fuxxl/" target="_blank" rel="noopener sponsored" data-product="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL</a>
-                            </div>
-                            <div class="discount-badge">3% Off</div>
-                            <a href="https://link.amazon/B08JWa1CY" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">
-                                <span class="product-price">
-                                    <span class="actual-price">₹17900.00</span>
-                                    <span class="current-price">₹17400.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1094,38 +1065,9 @@
             
                 
             <ul><li>Overlapping subproblems exist.</li><li>Optimal substructure is present, meaning the optimal solution to the overall problem can be constructed from optimal solutions to subproblems.</li></ul><p><strong>Key Concepts in Dynamic Programming</strong></p><ol><li><strong>Overlapping Subproblems:</strong> This occurs when the problem can be divided into smaller subproblems that are solved multiple times. By solving each subproblem once and storing the results, we can improve efficiency.</li><li><strong>Optimal Substructure:</strong> This means that the solution to the overall problem can be constructed from the solutions to its subproblems. If a problem does not have this property, Dynamic Programming is not applicable.</li><li><strong>State Representation:</strong> This is the way you represent the problem's state, typically through an array or matrix. The state transitions represent how you can move from one state to another by taking an action.</li></ol><p><strong>Solving Classic DP Problems</strong></p><p>Now, let’s solve some classic DP problems to better understand the technique.</p><p><strong>1. The Knapsack Problem</strong></p><ul><li><strong>Problem Description: </strong>Given a set of items, each with a weight and a value, determine the maximum value you can carry in a knapsack with a fixed capacity.<ul><li><em>Items:</em> Each item has a value and weight.</li><li><em>Knapsack capacity:</em> The maximum weight the knapsack can carry.</li></ul></li><li><strong>Goal:</strong> Maximize the total value in the knapsack without exceeding the capacity.</li><li><strong>Solution Approach:</strong><ul><li>We can use DP to solve this problem.</li><li>The idea is to maintain a table where each entry <tt>dp[i][w]</tt> represents the maximum value that can be attained with the first <tt>i</tt> items and a knapsack capacity of <tt>w</tt>.</li></ul></li></ul><p><strong>PHP Code for the Knapsack Problem:</strong></p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/women-clothing/mokosh-womens-silk-embroidery-anarkali-kurta-pant-dupatta-review/" target="_blank" rel="noopener sponsored" data-product="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">
-                                <img src="https://m.media-amazon.com/images/I/61AZSCVB8cL._SY879_.jpg" alt="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/women-clothing/mokosh-womens-silk-embroidery-anarkali-kurta-pant-dupatta-review/" target="_blank" rel="noopener sponsored" data-product="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review</a>
-                            </div>
-                            <div class="discount-badge">74% Off</div>
-                            <a href="https://link.amazon/B0ey53Mri" target="_blank" class="buy-button" rel="noopener sponsored" data-product="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">
-                                <span class="product-price">
-                                    <span class="actual-price">₹4999.00</span>
-                                    <span class="current-price">₹1323.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1566,38 +1508,9 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
             
                 
             <p><strong>Explanation:</strong></p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/refrigerator/lg-185-l-4-star-smart-inverter-single-door-refrigerator-gld1945zose/" target="_blank" rel="noopener sponsored" data-product="LG 185 L 4 Star Smart Inverter Single Door Refrigerator – GLD1945ZOSE">
-                                <img src="https://m.media-amazon.com/images/I/71Ebtspx0jL._SL1500_.jpg" alt="LG 185 L 4 Star Smart Inverter Single Door Refrigerator – GLD1945ZOSE">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/refrigerator/lg-185-l-4-star-smart-inverter-single-door-refrigerator-gld1945zose/" target="_blank" rel="noopener sponsored" data-product="LG 185 L 4 Star Smart Inverter Single Door Refrigerator – GLD1945ZOSE">LG 185 L 4 Star Smart Inverter Single Door Refrigerator – GLD1945ZOSE</a>
-                            </div>
-                            <div class="discount-badge">31% Off</div>
-                            <a href="https://link.amazon/B08cBqMzk" target="_blank" class="buy-button" rel="noopener sponsored" data-product="LG 185 L 4 Star Smart Inverter Single Door Refrigerator – GLD1945ZOSE">
-                                <span class="product-price">
-                                    <span class="actual-price">₹24490.00</span>
-                                    <span class="current-price">₹16890.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1995,38 +1908,9 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
             
                 
             <p>Thanks for reading the article, for more Science and Technology related articles read and subscribe to peoples blog articles.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/women-clothing/amayra-womens-pure-cotton-line-kurta-set-palazzo-pants-dupatta/" target="_blank" rel="noopener sponsored" data-product="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81LWX3c50zL._SY879_.jpg" alt="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/women-clothing/amayra-womens-pure-cotton-line-kurta-set-palazzo-pants-dupatta/" target="_blank" rel="noopener sponsored" data-product="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta</a>
-                            </div>
-                            <div class="discount-badge">55% Off</div>
-                            <a href="https://link.amazon/B0dnAGVlh" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Amayra Women’s Pure Cotton A-Line Kurta Set with Palazzo Pants &amp; Dupatta">
-                                <span class="product-price">
-                                    <span class="actual-price">₹1999.00</span>
-                                    <span class="current-price">₹897.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -2642,6 +2526,7 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
 
 
 
+
 </html></div>
       
 
@@ -2664,7 +2549,7 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-0e05f4b5d84788348cf0bc72a507d1b33134b64599afdf4ee39b7a3850e765b2">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-591670358b1b878ad17b4c2e7869cf5717e06b6348525a5541c553613013755c">
   
     
       
@@ -2716,7 +2601,7 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-6e3d2c850c872a965082f36bdb8c5cc130a6aaa9fdfc80c760dc2beae55b40ed">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-206f4afba819f6e09e9b3ac32fc616a87b268395af21a5d4aed3122455eef579">
   
     
       
@@ -2726,6 +2611,12 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/" title="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <img src="/sites/default/files/2026-11/pulihora-andhra-tamarind-rice-a-traditional-south-indian-recipe.webp" alt="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <h4>Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/role-exercise-improving-mental-health/" title="The Role of Exercise in Improving Mental Health">
   <img src="/sites/default/files/2026-11/the-role-of-exercise-in-improving-mental-health.webp" alt="The Role of Exercise in Improving Mental Health">
   <h4>The Role of Exercise in Improving Mental Health</h4>
@@ -2743,13 +2634,13 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   <h4>Static Electricity Butterfly: Create a Butterfly That Flutters with Static Electricity</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/" title="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <img src="/sites/default/files/2026-11/bagha-jatin-the-fearless-indian-revolutionary-who-challenged-british-rule.webp" alt="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <h4>Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/" title="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <img src="/sites/default/files/2026-10/the-mango-tree-and-the-axe-a-moral-story-about-kindness-and-generosity.webp" alt="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <h4>The Mango Tree and the Axe – A Moral Story About Kindness and Generosity</h4>
@@ -2767,13 +2658,13 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
   <h4>The Secret to Better Sex: Collaboration and Communication</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/" title="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <img src="/sites/default/files/2026-10/living-beyond-your-means-can-debt-status-and-social-pressure-lead-to-crime.webp" alt="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <h4>Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/" title="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <img src="/sites/default/files/2026-10/diy-straw-rockets-build-and-launch-your-own-paper-rockets.webp" alt="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <h4>DIY Straw Rockets: Build and Launch Your Own Paper Rockets</h4>
@@ -2789,12 +2680,6 @@ echo "Length of Longest Common Subsequence: " . longestCommonSubsequence($s1, $s
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/" title="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <img src="/sites/default/files/2026-10/rukmini-devi-arundale-the-woman-who-transformed-bharatanatyam-and-indian-classical-arts.webp" alt="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <h4>Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/" title="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <img src="/sites/default/files/2026-10/the-little-ant-s-shortcut-a-moral-story-about-thinking-for-yourself.webp" alt="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <h4>The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself</h4>
 </a></span></div></div>
       </div>
       </div>

@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to0gbb" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to29ue" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -665,38 +665,9 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><p>In this article we are going to see how to read the dynamic data of the node or entity or field values to the template file, which are specific to the paragraph template.</p><p>Generally while the Paragraph module is used, default template suggestions given by the paragraph module or the template suggestions provided by the hooks are used and further template design is done. Here’s the article which helps to write the template suggestions.</p><p>In few cases, there will be a need to read the actual values of the node fields or the entity data like for example media. And in some cases there will be unlimited values stored and need to read such data to paragraph template files.</p><p>In this article, I will share the possible ways of reading the data to the template file and few of them might not be the best approach but it's the decision to be taken for what type of project you are working with.</p><p>Let's see now the possible ways to read the data to the paragraph template file.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/women-clothing/mokosh-womens-silk-embroidery-anarkali-kurta-pant-dupatta-review/" target="_blank" rel="noopener sponsored" data-product="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">
-                                <img src="https://m.media-amazon.com/images/I/61AZSCVB8cL._SY879_.jpg" alt="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/women-clothing/mokosh-womens-silk-embroidery-anarkali-kurta-pant-dupatta-review/" target="_blank" rel="noopener sponsored" data-product="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review</a>
-                            </div>
-                            <div class="discount-badge">74% Off</div>
-                            <a href="https://link.amazon/B0ey53Mri" target="_blank" class="buy-button" rel="noopener sponsored" data-product="MOKOSH Women’s Silk Embroidery Anarkali Kurta Pant with Dupatta Review">
-                                <span class="product-price">
-                                    <span class="actual-price">₹4999.00</span>
-                                    <span class="current-price">₹1323.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1166,38 +1137,9 @@
         
             
         <ul> <li>To read the <strong>Url</strong> of the current node, just you can use the below code, in the <code>paragraph.html.twig</code> file or in display of <code>paragraph–&lt;display&gt;.html.twig</code></li> </ul><p><code>{{ url("&lt;current&gt;") }}</code></p><ul> <li>To read the <strong>Title</strong> of the node, you can use the preprocess hooks like <code>theme_preprocess_paragraph</code> and read the node title and store it into a variable. And the variable data can be printed in the <code>paragraph.html.twig</code> file or in the display of <code>paragraph–&lt;display&gt;.html.twig</code>.</li> </ul><p><code>function bartik_preprocess_paragraph(&amp;$variables) {<br> &nbsp;&nbsp;&nbsp;$node = Drupal::request()→attributes→get("node");<br> &nbsp;&nbsp;&nbsp;$variables["node_title"] = $node→getTitle();<br> }</code></p><p><code>{{ node_title }}</code></p><ul> <li>To read the <strong>field</strong> value (for example text)</li> </ul><p>paragraph.field_text.entity.name.value</p><ul> <li>To read the <strong>Image</strong> (created via <strong>Media type</strong> or with just <strong>Image type</strong>), you can use the below <a href="/articles/69-position-guide-tips-enhance-intimacy-connection/" title="Read about Different Ways To Get More Out Of Six Nine Position">different</a> types.</li> </ul><p><code>{% if paragraph.field_media_image is not empty %}<br> &nbsp;&nbsp;{{ file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri) }}<br> {% endif %}</code></p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/bags/fur-jaden-anti-theft-backpack-review-2026-secure-laptop-backpack-usb-charging-port/" target="_blank" rel="noopener sponsored" data-product="FUR JADEN Anti-Theft Backpack Review (2026) – Secure Laptop Backpack with USB Charging Port">
-                                <img src="https://m.media-amazon.com/images/I/61egMfcDWlL._SX679_.jpg" alt="FUR JADEN Anti-Theft Backpack Review (2026) – Secure Laptop Backpack with USB Charging Port">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/bags/fur-jaden-anti-theft-backpack-review-2026-secure-laptop-backpack-usb-charging-port/" target="_blank" rel="noopener sponsored" data-product="FUR JADEN Anti-Theft Backpack Review (2026) – Secure Laptop Backpack with USB Charging Port">FUR JADEN Anti-Theft Backpack Review (2026) – Secure Laptop Backpack with USB Charging Port</a>
-                            </div>
-                            <div class="discount-badge">75% Off</div>
-                            <a href="https://amzn.to/4oyd9QL" target="_blank" class="buy-button" rel="noopener sponsored" data-product="FUR JADEN Anti-Theft Backpack Review (2026) – Secure Laptop Backpack with USB Charging Port">
-                                <span class="product-price">
-                                    <span class="actual-price">₹2000.00</span>
-                                    <span class="current-price">₹498.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1667,38 +1609,9 @@
         
             
         <p><code>{{ file_url(paragraph.field_just_image.entity.uri.value) }}</code></p><ul> <li>If you want to read the <strong>Image</strong> (created via <strong>Media type</strong>) values in a <strong>custom</strong> approach or write some preprocess, then below code will help you. You can write the below code in the theme_preprocess_paragraph or other preprocess functions, then store into a variable and Render the stored variable in the paragraph template.</li> </ul><p><code>$paragraph = $term→get("field_custom_paragraph")→referencedEntities();<br> if ($paragraph) {<br> &nbsp;&nbsp;$paragraph = reset($paragraph);<br> &nbsp;&nbsp;$field_media_image = $paragraph&gt;get("field_media_image");<br> &nbsp;&nbsp;if ($field_media_image[0] &amp;&amp; $field_media_image[0]→entity) {<br> &nbsp;&nbsp;&nbsp;&nbsp;$build = Drupal::entityTypeManager()→getViewBuilder("media")→view($field_media_image[0]→entity);<br> &nbsp;&nbsp;&nbsp;&nbsp;$variables["content"]["field_media_image"] = $build;<br> &nbsp;&nbsp;}<br> }</code></p><p><code>{{ content.field_media_image }}</code></p><p>These are few possible ways to render read the data to the paragraph templates.</p><p><strong>Ideally the best approach is not to tweak</strong> the data or reading of the data at the rendering layer, because this will have some impact on the performance. I suggest to not tweak the data in the preprocess or reload the same paragraph value in the preprocess, And suggest to only use, if the case you don’t have any other possibility during the development process of drupal <a href="/articles/security-checklist-drupal-application/" title="Read about Security Checklist For Drupal Application">application</a>.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/refrigerator/haier-190-l-3-star-direct-cool-single-door-refrigerator-hed-203tdsa-n/" target="_blank" rel="noopener sponsored" data-product="Haier 190 L 3 Star Direct Cool Single Door Refrigerator – HED-203TDSA-N">
-                                <img src="https://m.media-amazon.com/images/I/61-zx2tKnnL._SL1500_.jpg" alt="Haier 190 L 3 Star Direct Cool Single Door Refrigerator – HED-203TDSA-N">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/refrigerator/haier-190-l-3-star-direct-cool-single-door-refrigerator-hed-203tdsa-n/" target="_blank" rel="noopener sponsored" data-product="Haier 190 L 3 Star Direct Cool Single Door Refrigerator – HED-203TDSA-N">Haier 190 L 3 Star Direct Cool Single Door Refrigerator – HED-203TDSA-N</a>
-                            </div>
-                            <div class="discount-badge">33% Off</div>
-                            <a href="https://link.amazon/B0dxLD1bj" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Haier 190 L 3 Star Direct Cool Single Door Refrigerator – HED-203TDSA-N">
-                                <span class="product-price">
-                                    <span class="actual-price">₹21990.00</span>
-                                    <span class="current-price">₹14690.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -2396,6 +2309,7 @@
 
 
 
+
 </html></div>
       
 
@@ -2420,7 +2334,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-176691936a02d4ec4590924d0bf125c07f4c172603e8134fe600f36b284c64da">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-9541c54e628a22091acdd2d1013241d834417af709183a0e7c6584af606fa986">
   
     
       
@@ -2472,7 +2386,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-388e12f2109b5a053e19c73a5e91f614a27b048089722de7ff8a0c34b6c30fd0">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-5edb36899c22645d77ce78d8fb6695b10441ccc94ad0b537aead821abb771ccc">
   
     
       
@@ -2482,6 +2396,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/" title="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <img src="/sites/default/files/2026-11/pulihora-andhra-tamarind-rice-a-traditional-south-indian-recipe.webp" alt="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <h4>Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/role-exercise-improving-mental-health/" title="The Role of Exercise in Improving Mental Health">
   <img src="/sites/default/files/2026-11/the-role-of-exercise-in-improving-mental-health.webp" alt="The Role of Exercise in Improving Mental Health">
   <h4>The Role of Exercise in Improving Mental Health</h4>
@@ -2499,13 +2419,13 @@
   <h4>Static Electricity Butterfly: Create a Butterfly That Flutters with Static Electricity</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/" title="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <img src="/sites/default/files/2026-11/bagha-jatin-the-fearless-indian-revolutionary-who-challenged-british-rule.webp" alt="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <h4>Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/" title="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <img src="/sites/default/files/2026-10/the-mango-tree-and-the-axe-a-moral-story-about-kindness-and-generosity.webp" alt="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <h4>The Mango Tree and the Axe – A Moral Story About Kindness and Generosity</h4>
@@ -2523,13 +2443,13 @@
   <h4>The Secret to Better Sex: Collaboration and Communication</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/" title="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <img src="/sites/default/files/2026-10/living-beyond-your-means-can-debt-status-and-social-pressure-lead-to-crime.webp" alt="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <h4>Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/" title="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <img src="/sites/default/files/2026-10/diy-straw-rockets-build-and-launch-your-own-paper-rockets.webp" alt="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <h4>DIY Straw Rockets: Build and Launch Your Own Paper Rockets</h4>
@@ -2545,12 +2465,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/" title="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <img src="/sites/default/files/2026-10/rukmini-devi-arundale-the-woman-who-transformed-bharatanatyam-and-indian-classical-arts.webp" alt="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <h4>Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/" title="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <img src="/sites/default/files/2026-10/the-little-ant-s-shortcut-a-moral-story-about-thinking-for-yourself.webp" alt="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <h4>The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself</h4>
 </a></span></div></div>
       </div>
       </div>

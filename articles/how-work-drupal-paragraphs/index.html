@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to0gbb" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to29ue" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -665,38 +665,9 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><p>Paragraphs can be used as a way for Content Creation in Drupal. It actually allows the site builders to do their stuff a bit cleanly and for the end users this will be pretty easy to manage the content, meaning people get more control on the Editing side.</p><p>Paragraphs is one of the&nbsp; popular modules in Drupal, for handling content. It is more or less very similar to the fields and will provide a wide range of options for layout and grouping of content as people need.</p><p>Ideally having all the content via WYSIWYG editor, people can have paragraphs to manage the content on Drupal, basically Site editors can provide a proper structure for a certain feature via the Paragraph and Theme the paragraph well, it means controlling the appearance for the particular component can be done.</p><p>Speaking of Components, building the features in a component based approach via the Paragraph, will help Site editore to attach such reusable components in <a href="/articles/create-related-content-different-content-types-through-taxonomy-drupal7/" title="Read about Create Related Content Different Content Types Through Taxonomy Drupal">different</a> content node or entities, for example</p><ol> <li>Quote (with couple of different views)</li> <li>Slideshow (with couple of different views)</li> <li>Gallery (with couple of different views)</li> </ol><p>List grows like this based on the needs of the users or customers.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/washing-machine/haier-7-kg-5-star-fully-automatic-top-load-washing-machine-hwm70-aen/" target="_blank" rel="noopener sponsored" data-product="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61eH5s890WL._SL1500_.jpg" alt="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/washing-machine/haier-7-kg-5-star-fully-automatic-top-load-washing-machine-hwm70-aen/" target="_blank" rel="noopener sponsored" data-product="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN</a>
-                            </div>
-                            <div class="discount-badge">37% Off</div>
-                            <a href="https://link.amazon/B059z3cI4" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Haier 7 Kg 5 Star Fully Automatic Top Load Washing Machine – HWM70-AEN">
-                                <span class="product-price">
-                                    <span class="actual-price">₹25000.00</span>
-                                    <span class="current-price">₹15690.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1166,38 +1137,9 @@
         
             
         <p>Lets see, how one can Setup the paragraphs module and Template it at the very basic level.</p><p><strong>Prerequisite</strong>&nbsp;</p><p>One needs to have a Drupal core and we are proceeding with composer based installation of Paragraph, so people to make sure, Drupal is set up with composer, And if you are using Docker or Lando, make sure to install the composer library within them.</p><p><strong>1. Install Paragraph module</strong></p><ul> <li>You can download the module from this link <a href="https://www.drupal.org/project/paragraphs">https://www.drupal.org/project/paragraphs</a>, Currently, I'm using Lando for local setup, so I have run composer with lando.</li> </ul><p><code>$ lando composer require 'drupal/paragraphs:^1.14'<br> ./composer.json has been updated<br> Running composer update drupal/paragraphs<br> Loading composer repositories with package information<br> Updating dependencies<br> Lock file operations: 2 installs, 0 updates, 0 removals<br> &nbsp;&nbsp;- Locking drupal/entity_reference_revisions (1.9.0)<br> &nbsp;&nbsp;- Locking drupal/paragraphs (1.14.0)<br> Writing lock file<br> Installing dependencies from lock file (including require-dev)<br> Package operations: 2 installs, 0 updates, 0 removals<br> &nbsp;&nbsp;- Downloading drupal/entity_reference_revisions (1.9.0)<br> &nbsp;&nbsp;- Downloading drupal/paragraphs (1.14.0)<br> &nbsp;&nbsp;- Installing drupal/entity_reference_revisions (1.9.0): Extracting archive<br> &nbsp;&nbsp;- Installing drupal/paragraphs (1.14.0): Extracting archive<br> 1 package suggestions were added by new dependencies, use `composer suggest` to see details.<br> Generating autoload files<br> Hardening vendor directory with .htaccess and web.config files.<br> 48 packages you are using are looking for funding.<br> Use the `composer fund` command to find out more!</code></p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/washing-machine/bosch-12-kg-5-star-front-load-washing-machine-wga27400in/" target="_blank" rel="noopener sponsored" data-product="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61PygXhsJFL._SX679_.jpg" alt="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/washing-machine/bosch-12-kg-5-star-front-load-washing-machine-wga27400in/" target="_blank" rel="noopener sponsored" data-product="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN</a>
-                            </div>
-                            <div class="discount-badge">45% Off</div>
-                            <a href="https://link.amazon/B0dcKVznj" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">
-                                <span class="product-price">
-                                    <span class="actual-price">₹85990.00</span>
-                                    <span class="current-price">₹47430.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1667,38 +1609,9 @@
         
             
         <p><strong>2. Enable the module</strong></p><ul> <li>As any other module enable this module via module page and on higher environments enable this via configuration sync (Learn more how to manage configurations in Drupal from this link)</li> </ul><p><strong>3. Create Paragraph Type</strong></p><ul> <li>Create a paragraph type via this path (<code>/admin/structure/paragraphs_type</code>), this form will ask for Label, Icon and Description, Fill all details and Click on Save and Manage fields.</li> <li>Add the needed fields to the Paragraph type, for example Quote and Author field.</li> </ul><p><strong>4. Attach Paragraph type to Node or Entity</strong></p><ul> <li>Create an <code>Entity Reference Revisions</code> field on the node/entity type, Select <code>Paragraphs</code> at the field Type and select an unlimited for the Allowed number of values option.</li> <li>Under <a href="/articles/quick-reference-code-reviews-drupal-application/" title="Read about Quick Reference Of Code Reviews For Drupal Application">Reference</a> method, Select Default value, And under the Paragraph types select the needed paragraph types. Then Click on Save settings button.</li> <li>Under Manage Form Display, have the default value as <code>Paragraph (Stable)</code>, then Click on Save.</li> <li>Under Manage Display, have the default value as <code>Rendered Entity</code>, then Click on Save.</li> </ul><p>Now you can use this paragraph from the Admin side by creating content via the Node or Entity the paragraph is attached to. And now lets see how we can design for the User.</p><p>By default, the Paragraph module will provide a default template file paragraph.html.twig within the module. One can use this file within the custom theme and proceed with the design stuff. Or can you make template suggestions and create specific template files for a specific display, for more on how to work with template suggestions read this article.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/television/samsung-32-inch-hd-smart-led-tv-ua32h4550fuxxl/" target="_blank" rel="noopener sponsored" data-product="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71XA+N8Xj1L._SL1500_.jpg" alt="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/television/samsung-32-inch-hd-smart-led-tv-ua32h4550fuxxl/" target="_blank" rel="noopener sponsored" data-product="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL</a>
-                            </div>
-                            <div class="discount-badge">3% Off</div>
-                            <a href="https://link.amazon/B08JWa1CY" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Samsung 32 Inch HD Smart LED TV – UA32H4550FUXXL">
-                                <span class="product-price">
-                                    <span class="actual-price">₹17900.00</span>
-                                    <span class="current-price">₹17400.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -2396,6 +2309,7 @@
 
 
 
+
 </html></div>
       
 
@@ -2420,7 +2334,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e27778b42f610864214e34596d1434fce9284a7e29a84a4b2453a72089603882">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-e618a3ac625da885d2aab152b81b5f548d7cb1bed88f5e1e567b499d2ecc9733">
   
     
       
@@ -2472,7 +2386,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-eb69e93286f50e4d7f4c8e099e4dc98c88696dabc0e68987e3d6a1f140e7d1f4">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-7e2773b8e62a1cdc8fddde54638dbad693ab4536b5c3fcba1962ee4d8ca702f7">
   
     
       
@@ -2482,6 +2396,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/" title="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <img src="/sites/default/files/2026-11/pulihora-andhra-tamarind-rice-a-traditional-south-indian-recipe.webp" alt="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <h4>Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/role-exercise-improving-mental-health/" title="The Role of Exercise in Improving Mental Health">
   <img src="/sites/default/files/2026-11/the-role-of-exercise-in-improving-mental-health.webp" alt="The Role of Exercise in Improving Mental Health">
   <h4>The Role of Exercise in Improving Mental Health</h4>
@@ -2499,13 +2419,13 @@
   <h4>Static Electricity Butterfly: Create a Butterfly That Flutters with Static Electricity</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/" title="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <img src="/sites/default/files/2026-11/bagha-jatin-the-fearless-indian-revolutionary-who-challenged-british-rule.webp" alt="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <h4>Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/" title="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <img src="/sites/default/files/2026-10/the-mango-tree-and-the-axe-a-moral-story-about-kindness-and-generosity.webp" alt="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <h4>The Mango Tree and the Axe – A Moral Story About Kindness and Generosity</h4>
@@ -2523,13 +2443,13 @@
   <h4>The Secret to Better Sex: Collaboration and Communication</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/" title="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <img src="/sites/default/files/2026-10/living-beyond-your-means-can-debt-status-and-social-pressure-lead-to-crime.webp" alt="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <h4>Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/" title="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <img src="/sites/default/files/2026-10/diy-straw-rockets-build-and-launch-your-own-paper-rockets.webp" alt="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <h4>DIY Straw Rockets: Build and Launch Your Own Paper Rockets</h4>
@@ -2545,12 +2465,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/" title="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <img src="/sites/default/files/2026-10/rukmini-devi-arundale-the-woman-who-transformed-bharatanatyam-and-indian-classical-arts.webp" alt="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <h4>Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/" title="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <img src="/sites/default/files/2026-10/the-little-ant-s-shortcut-a-moral-story-about-thinking-for-yourself.webp" alt="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <h4>The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself</h4>
 </a></span></div></div>
       </div>
       </div>

@@ -76,7 +76,7 @@
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EQ55vv0onZd_x6XbYsxKLlsWqcmm-5X3RiW3PqLW7vo.css?delta=4&amp;language=en&amp;theme=olivero&amp;include=eJx9kWGOxCAIhS-k9kgNKu2QohilbXr7dZuO2c1s9o_ix3uAKkwHVpmCZMWs1iPLaeShK4sHtk0vprwOzHDJrvYgPJtdK8WRyXDQCkqSbamUoF4j9exOwTMOWuTEitH6y3qWsI1Eo4ge6jgrrM0UPy_1njQ-s_1CPWZqPTTtJVXDrqPrGzgPYSs9Nk0CAXdD3uaFkOO09DJwYpOELkgqkvuL_KH7IO7bOT_WeZGaQBXr25owEtzy9n-Pn8JP5PSFCU27-g3T5KGhuX9guleXJO6MX9nFtwI" />
 
     
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to0gbb" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?to29ue" />
 </noscript>
     <script>
         if (window.location.hostname === "peoplesblog.co.in") {
@@ -665,38 +665,9 @@
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item">
 <html><p>Sending an email works with defining an email <a href="/articles/read-data-paragraph-template-drupal-application/" title="Read about Read Data To Paragraph Template In Drupal Application">template</a> (subject, text and possibly email headers) and the replacement values to use in the appropriate places in the template. Processed email <a href="/articles/how-work-twig-templates-drupal/" title="Read about How To Work With Twig Templates In Drupal">templates</a> are requested from <code>hook_mail()</code> from the module sending the email. Any module can modify the composed email message array using <code>hook_mail_alter()</code>. Finally <code>\Drupal::service('plugin.manager.mail')→mail()</code> sends the email, which can be reused if the exact same composed email is to be sent to multiple recipients.</p><p>Below function's <code>triggerMail</code> code, can be written in any submit handlers or post actions in Drupal.</p><pre>function triggerMail() {<br>&nbsp;&nbsp;$module = "x_module";<br>&nbsp;&nbsp;$key = "x_mail";<br>&nbsp;&nbsp;$to = "example@gmail.com";<br>&nbsp;&nbsp;$langcode = 'en';<br>&nbsp;&nbsp;\Drupal::service('plugin.manager.mail')→mail($module, $key, $to, $langcode);<br>}</pre><p>Below is the <code>hook_mail()</code> usage, written in <code>x_module.module</code> file.</p><pre>function x_module_mail($key, &amp;$message, $params) {<br>&nbsp;&nbsp;switch($key) {<br>&nbsp;&nbsp;&nbsp;&nbsp;// To Trigger email on x_mail key.<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'x_mail':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['headers'] = [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'content-type' =&gt; 'text/html'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['subject'] = t('X Mail subject');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message['body'][] = (string) getXMailMessageBody();<br>&nbsp;&nbsp;}<br>}</pre><p>Below is the helper function <code>getXMailMessageBody()</code> which can pull the dynamic data from the system and pass it through.</p><pre>function getXMailMessageBody() {<br>&nbsp;&nbsp;// Get Dynamic values.. then pass to twig file..<br>&nbsp;&nbsp;return twig_render_template(<br>&nbsp;&nbsp;&nbsp;&nbsp;drupal_get_path('module', 'x_module') . '/templates/x-mail.html.twig',<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'theme_hook_original' =&gt; 'not-applicable',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key1' =&gt; "{value1}",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'dynamic_key2' =&gt; "{value2}<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;);<br>}</pre><p>Create a twig template file <code>x-mail.html.twig</code> in the module folder within templates folder.</p>
-            <div class="tbp-ad-wrapper">
-                <div class="tbp-ad-label">Recommended by <a href="https://thebestproducts.co.in" target="_blank" rel="noopener sponsored">TheBestProducts</a></div>
-                <div class="product-card tbp-ad">
-                    <div class="product-layout">
-                        <div class="product-image">
-                            <a href="https://thebestproducts.co.in/washing-machine/bosch-12-kg-5-star-front-load-washing-machine-wga27400in/" target="_blank" rel="noopener sponsored" data-product="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">
-                                <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61PygXhsJFL._SX679_.jpg" alt="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-title">
-                                <a href="https://thebestproducts.co.in/washing-machine/bosch-12-kg-5-star-front-load-washing-machine-wga27400in/" target="_blank" rel="noopener sponsored" data-product="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN</a>
-                            </div>
-                            <div class="discount-badge">45% Off</div>
-                            <a href="https://link.amazon/B0dcKVznj" target="_blank" class="buy-button" rel="noopener sponsored" data-product="Bosch 12 kg 5 Star Front Load Washing Machine – WGA27400IN">
-                                <span class="product-price">
-                                    <span class="actual-price">₹85990.00</span>
-                                    <span class="current-price">₹47430.00</span>
-                                </span>
-
-                                <span class="product-store">
-                                    <span>View on Amazon</span>
-                                    <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24">
-                                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
-                                        <path d="M5 5h5V3H3v7h2V5z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+                
+            
             
                 
             
@@ -1391,6 +1362,7 @@
 
 
 
+
 </html></div>
       
 
@@ -1413,7 +1385,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-938bf8c43245fd79750592676d5f1e4838645ddc038295a7241c729149fcd20c">
+      <div class="views-element-container"><div id="author-card" class="view view-articles view-id-articles view-display-id-block_8 js-view-dom-id-276d1f6f50594ef034328314a2d93ed10c4e4c3415536e7cd705a5e3fdeda646">
   
     
       
@@ -1465,7 +1437,7 @@
   
     
       <div class="block__content">
-      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-a805d497242efc7f5956ed04ccdf41887b8225f991263b1a3177a2151ca775a7">
+      <div class="views-element-container"><div class="view view-articles view-id-articles view-display-id-block_5 js-view-dom-id-f932f9aa30b797fd804029f20fec88c0d389805d4ddcc462adad726eb32e9c35">
   
     
       
@@ -1475,6 +1447,12 @@
 
 <div class="views-view-grid views-view-grid--horizontal" style="--views-grid--column-count: 4">
             <div class="views-view-grid__item">
+        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/pulihora-andhra-tamarind-rice-traditional-south-indian-recipe/" title="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <img src="/sites/default/files/2026-11/pulihora-andhra-tamarind-rice-a-traditional-south-indian-recipe.webp" alt="Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe">
+  <h4>Pulihora – Andhra Tamarind Rice: A Traditional South Indian Recipe</h4>
+</a></span></div></div>
+      </div>
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/role-exercise-improving-mental-health/" title="The Role of Exercise in Improving Mental Health">
   <img src="/sites/default/files/2026-11/the-role-of-exercise-in-improving-mental-health.webp" alt="The Role of Exercise in Improving Mental Health">
   <h4>The Role of Exercise in Improving Mental Health</h4>
@@ -1492,13 +1470,13 @@
   <h4>Static Electricity Butterfly: Create a Butterfly That Flutters with Static Electricity</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/bagha-jatin-fearless-indian-revolutionary-who-challenged-british-rule/" title="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <img src="/sites/default/files/2026-11/bagha-jatin-the-fearless-indian-revolutionary-who-challenged-british-rule.webp" alt="Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule">
   <h4>Bagha Jatin: The Fearless Indian Revolutionary Who Challenged British Rule</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/mango-tree-and-axe-moral-story-about-kindness-and-generosity/" title="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <img src="/sites/default/files/2026-10/the-mango-tree-and-the-axe-a-moral-story-about-kindness-and-generosity.webp" alt="The Mango Tree and the Axe – A Moral Story About Kindness and Generosity">
   <h4>The Mango Tree and the Axe – A Moral Story About Kindness and Generosity</h4>
@@ -1516,13 +1494,13 @@
   <h4>The Secret to Better Sex: Collaboration and Communication</h4>
 </a></span></div></div>
       </div>
-          <div class="views-view-grid__item">
+                <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/living-beyond-your-means-can-debt-status-and-social-pressure-lead-crime/" title="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <img src="/sites/default/files/2026-10/living-beyond-your-means-can-debt-status-and-social-pressure-lead-to-crime.webp" alt="Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?">
   <h4>Living Beyond Your Means: Can Debt, Status and Social Pressure Lead to Crime?</h4>
 </a></span></div></div>
       </div>
-                <div class="views-view-grid__item">
+          <div class="views-view-grid__item">
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/articles/diy-straw-rockets-build-and-launch-your-own-paper-rockets/" title="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <img src="/sites/default/files/2026-10/diy-straw-rockets-build-and-launch-your-own-paper-rockets.webp" alt="DIY Straw Rockets: Build and Launch Your Own Paper Rockets">
   <h4>DIY Straw Rockets: Build and Launch Your Own Paper Rockets</h4>
@@ -1538,12 +1516,6 @@
         <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/great-people/rukmini-devi-arundale-woman-who-transformed-bharatanatyam-and-indian-classical-arts/" title="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <img src="/sites/default/files/2026-10/rukmini-devi-arundale-the-woman-who-transformed-bharatanatyam-and-indian-classical-arts.webp" alt="Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts">
   <h4>Rukmini Devi Arundale: The Woman Who Transformed Bharatanatyam and Indian Classical Arts</h4>
-</a></span></div></div>
-      </div>
-          <div class="views-view-grid__item">
-        <div class="views-view-grid__item-inner"><div class="views-field views-field-title"><span class="field-content"><a href="/quick-read/little-ants-shortcut-moral-story-about-thinking-yourself/" title="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <img src="/sites/default/files/2026-10/the-little-ant-s-shortcut-a-moral-story-about-thinking-for-yourself.webp" alt="The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself">
-  <h4>The Little Ant’s Shortcut: A Moral Story About Thinking for Yourself</h4>
 </a></span></div></div>
       </div>
       </div>
