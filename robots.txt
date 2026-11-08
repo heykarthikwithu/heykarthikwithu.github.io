@@ -896,6 +896,7 @@ Allow: /great-people/giridharilal-kedia/
 Allow: /great-people/gopal-krishna-gokhale/
 Allow: /great-people/gopinath-kaviraj/
 Allow: /great-people/gostha-pal/
+Allow: /great-people/govind-ballabh-pant-freedom-fighter-who-helped-shape-modern-india/
 Allow: /great-people/great-khali-renowned-indian-professional-wrestler-actor-and-former-wwe-world/
 Allow: /great-people/gulzar/
 Allow: /great-people/gulzarilal-nanda-contributions-political-career-legacy-indias-interim-prime-minister/
