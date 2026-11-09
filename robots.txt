@@ -93,6 +93,7 @@ Allow: /articles/bangalore-savanadurga-rock-climbing-exciting-weekend-adventure-
 Allow: /articles/bangalore-shivagange-one-day-trek-temple-and-hill-guide/
 Allow: /articles/bangalore-shivanasamudra-falls-one-day-waterfall-trip-guide/
 Allow: /articles/bangalore-shravanabelagola-jain-pilgrimage-peaceful-one-day-spiritual-journey/
+Allow: /articles/bangalore-skandagiri-sunrise-trek-and-one-day-travel-guide/
 Allow: /articles/bangalore-somanathapura-temple-one-day-solo-trip/
 Allow: /articles/bangalore-srikalahasti-solo-trip-guide-route-temple-timings-itinerary/
 Allow: /articles/bangalore-srisailam-solo-trip-plan-route-temples-tips/
