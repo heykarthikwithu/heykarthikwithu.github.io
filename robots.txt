@@ -336,6 +336,7 @@ Allow: /articles/how-cook-lemon-rice-home-lemon-rice-recipe/
 Allow: /articles/how-cook-mysore-masala-dosa-home-easy-mysore-masala-dosa-recipe/
 Allow: /articles/how-cook-onion-rava-dosa-home-onion-rava-dosa-recipe/
 Allow: /articles/how-cook-using-solar-power-home-diy-solar-cooking-guide/
+Allow: /articles/how-couples-can-disagree-without-turning-every-argument-fight/
 Allow: /articles/how-create-document-library-sharepoint-and-configure-content-types-terms-user-groups-and/
 Allow: /articles/how-cure-pcod-or-pcos-have-better-lifestyle/
 Allow: /articles/how-deal-people-who-talk-too-much/
