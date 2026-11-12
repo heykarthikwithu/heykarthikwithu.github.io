@@ -238,6 +238,7 @@ Allow: /articles/eight-things-will-tell-you-you-are-not-happy-your-salary/
 Allow: /articles/eight-vegetables-can-be-grown-home/
 Allow: /articles/elephant-toothpaste-science-experiment-children/
 Allow: /articles/emotional-intelligence-examples-how-build-eq-daily-life/
+Allow: /articles/endometer-dentistry-working-principle-types-uses-and-clinical-applications/
 Allow: /articles/epsom-salt-crystal-shapes-science-experiment-children/
 Allow: /articles/essential-lessons-every-teacher-should-share-students/
 Allow: /articles/everest-base-camp-trek-start-trekking-salleri-and-back-salleri/
