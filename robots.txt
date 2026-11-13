@@ -650,6 +650,7 @@ Allow: /articles/ten-rules-life/
 Allow: /articles/ten-things-stop-have-good-life/
 Allow: /articles/ten-ugly-truths-about-job-careers/
 Allow: /articles/tesselation-art-science-experiment-children/
+Allow: /articles/thepla-curd-and-pickle-traditional-gujarati-breakfast-makes-perfect-everyday-meal/
 Allow: /articles/things-know-about-proofreading/
 Allow: /articles/things-know-you-go-registration-plot-or-property-bangalore/
 Allow: /articles/things-you-should-always-keep-secret-wisdom-privacy/
