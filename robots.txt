@@ -1252,6 +1252,7 @@ Allow: /quick-read/fox-and-leopard/
 Allow: /quick-read/fox-and-rabbit/
 Allow: /quick-read/fox-and-stork/
 Allow: /quick-read/frog-and-scorpion/
+Allow: /quick-read/garden-second-chances-beautiful-moral-story-about-patience-hope-and-new-beginnings/
 Allow: /quick-read/giant-turnip/
 Allow: /quick-read/gingerbread-man/
 Allow: /quick-read/golden-egg/
