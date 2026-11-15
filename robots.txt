@@ -963,6 +963,7 @@ Allow: /great-people/maqbool-fida-husain/
 Allow: /great-people/margaret-abbott-first-american-woman-win-olympic-event/
 Allow: /great-people/master-c-v-v/
 Allow: /great-people/masti-venkatesha-iyengar/
+Allow: /great-people/matangini-hazra-fearless-woman-freedom-fighter-who-faced-british-bullets-indian-flag/
 Allow: /great-people/meena-kumari-timeless-tragedy-queen-indian-cinema/
 Allow: /great-people/michael-madhusudan-dutt/
 Allow: /great-people/minoo-masani/
