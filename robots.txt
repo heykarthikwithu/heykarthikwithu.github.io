@@ -49,6 +49,7 @@ Allow: /articles/bangalore-alleppey-solo-trip-backwaters-travel-guide/
 Allow: /articles/bangalore-anamudi-solo-trip-complete-itinerary-tips/
 Allow: /articles/bangalore-avalabetta-quiet-one-day-road-trip-bangalore/
 Allow: /articles/bangalore-bheemeshwari-solo-nature-trip-fishing-guide/
+Allow: /articles/bangalore-bhoga-nandeeshwara-temple-one-day-heritage-trip/
 Allow: /articles/bangalore-bylakuppe-tibetan-settlement-solo-tour-one-day-or-two-day-road-trip-guide/
 Allow: /articles/bangalore-chikmagalur-solo-trip-plan/
 Allow: /articles/bangalore-chitradurga-solo-trip-plan-complete-itinerary/
