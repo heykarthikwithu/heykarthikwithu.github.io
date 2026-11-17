@@ -7,6 +7,14 @@
     <language>en</language>
     
     <item>
+  <title>Drupal 6 and 7 Websites: What Drupal 12 Means for Your Business Upgrade Plans</title>
+  <link>https://peoplesblog.co.in/articles/drupal-6-and-7-websites-what-drupal-12-means-your-business-upgrade-plans/</link>
+  <description>A business website may continue working for years without requiring major changes. Customers can visit pages, read information, submit enquiries and access services. From the outside, everything may appear normal. However, the technology supporting a website also evolves, and businesses that continue using older platforms may eventually face challenges when they need improvements, maintenance or new features.</description>
+  <pubDate>Tue, 17 Nov 2026 10:08:20 +0530</pubDate>
+    <dc:creator>Karthik Kumar D K</dc:creator>
+    <guid isPermaLink="true">https://peoplesblog.co.in/articles/drupal-6-and-7-websites-what-drupal-12-means-your-business-upgrade-plans/</guid>
+    </item>
+<item>
   <title>Drupal Already Manages Content. So What Does AI Actually Add?</title>
   <link>https://peoplesblog.co.in/articles/drupal-already-manages-content-so-what-does-ai-actually-add/</link>
   <description>AI is becoming part of almost every software platform, and content management systems are no exception. Drupal is no different. But there is an important question that often gets lost in the excitement around AI: if Drupal already manages content so well, what exactly does AI add?</description>
@@ -77,14 +85,6 @@
   <pubDate>Sun, 27 Aug 2023 20:26:40 +0530</pubDate>
     <dc:creator>Karthik Kumar D K</dc:creator>
     <guid isPermaLink="true">https://peoplesblog.co.in/articles/how-run-phpunit-test-cases-your-local-machine-drupal/</guid>
-    </item>
-<item>
-  <title>API Docs, Drupal contributed module for your Developer Portal</title>
-  <link>https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-your-developer-portal/</link>
-  <description>This module will provide API Docs to your Developer Portal, It is powered by Drupal content type, custom field formatters and views.Here's a step-by-step guide to help you to download, enable, configure and use the module for your developer portal.Download and Enable the Module:</description>
-  <pubDate>Sat, 29 Jul 2023 21:28:51 +0530</pubDate>
-    <dc:creator>Karthik Kumar D K</dc:creator>
-    <guid isPermaLink="true">https://peoplesblog.co.in/articles/api-docs-drupal-contributed-module-your-developer-portal/</guid>
     </item>
 
   </channel>
