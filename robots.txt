@@ -528,6 +528,7 @@ Allow: /articles/monitoring-web-application-elk-stack/
 Allow: /articles/monkeypox-outbreak-around-world-2022/
 Allow: /articles/multisite-local-environment-setup-lando-drupal/
 Allow: /articles/my-husband-loves-me-clearly-fancies-woman-work-how-can-i-manage-my-jealousy/
+Allow: /articles/mysore-pak-recipe-how-make-traditional-karnataka-sweet-home/
 Allow: /articles/myths-tooth-cleaning/
 Allow: /articles/national-education-policy-2020-government-india-nep-2020/
 Allow: /articles/natural-home-remedies-constipation-easy-effective/
