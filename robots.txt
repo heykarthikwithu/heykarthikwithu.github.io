@@ -1261,6 +1261,7 @@ Allow: /quick-read/frog-and-scorpion/
 Allow: /quick-read/garden-second-chances-beautiful-moral-story-about-patience-hope-and-new-beginnings/
 Allow: /quick-read/giant-turnip/
 Allow: /quick-read/gingerbread-man/
+Allow: /quick-read/girl-and-broken-nest-heartwarming-moral-story-about-kindness-animals/
 Allow: /quick-read/golden-egg/
 Allow: /quick-read/golden-goose/
 Allow: /quick-read/golden-touch-midas/
